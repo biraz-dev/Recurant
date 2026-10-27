@@ -1,7 +1,7 @@
 //! Scripted input for headless smoke tests and screenshots.
 //!
 //! `ZRPG_AUTOPILOT="w w e shot d shot quit"` presses one action per tick
-//! (`w s a d q e r`), saves `zrpg-N.png` on `shot`, and exits on `quit`.
+//! (`w s a d q e r`), idles on `wait`, saves `zrpg-N.png` on `shot`, and exits on `quit`.
 //! Does nothing when the variable is unset.
 
 use std::collections::VecDeque;
@@ -70,6 +70,7 @@ fn tick(
                 .observe(save_to_disk(path));
             return;
         }
+        "wait" => return,
         "quit" => {
             exit.write(AppExit::Success);
             return;

@@ -23,7 +23,7 @@ feature only when something needs it.
 Debian/Ubuntu:
 
 ```sh
-sudo apt-get install -y pkg-config libasound2-dev libudev-dev libwayland-dev libxkbcommon-dev
+sudo apt-get install -y pkg-config libasound2-dev libudev-dev libwayland-dev libxkbcommon-dev libxkbcommon-x11-0
 ```
 
 `libasound2-dev` is not needed by our feature set today, but you will want it

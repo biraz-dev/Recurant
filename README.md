@@ -7,6 +7,8 @@ the spirit of Dungeon Hack, Lands of Lore, Eye of the Beholder and Anvil of
 Dawn: grid movement, 90° turns, real-time combat, and endless seeded floors.
 Pick it up, play a floor, put it down.
 
+![Floor 1, seed 7](docs/screenshot.png)
+
 Built with Rust and [Bevy](https://bevy.org). Renders at 320×240, scaled up
 with crisp pixels. Linux first; Android handhelds and WebAssembly next.
 
