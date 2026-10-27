@@ -26,6 +26,9 @@ android {
 }
 
 dependencies {
+    // AndroidX pulls in kotlin-stdlib 1.8 alongside the old split jdk7/jdk8
+    // artifacts (1.6), which duplicate its classes. The BOM aligns them.
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.core:core:1.13.1")
     // Must match the GameActivity version supported by the `android-activity`
