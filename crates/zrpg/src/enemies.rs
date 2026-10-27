@@ -7,6 +7,7 @@ use std::f32::consts::PI;
 use bevy::prelude::*;
 use zrpg_core::{EnemyId, Event};
 
+use crate::atmosphere::{GradedMaterial, graded};
 use crate::level::cell_center;
 use crate::view::PlayerCamera;
 use crate::{Frame, GameEvent, Run, textures};
@@ -57,7 +58,7 @@ struct EnemySprite {
     dying: Option<f32>,
     /// Steps taken so far; alternates the lurch from side to side.
     steps: u32,
-    material: Handle<StandardMaterial>,
+    material: Handle<GradedMaterial>,
 }
 
 impl EnemySprite {
@@ -89,7 +90,7 @@ fn sync_roster(
     mut commands: Commands,
     run: Res<Run>,
     assets: Res<EnemyAssets>,
-    mut materials: ResMut<Assets<StandardMaterial>>,
+    mut materials: ResMut<Assets<GradedMaterial>>,
     sprites: Query<Entity, With<EnemySprite>>,
     mut roster: Local<Roster>,
 ) {
@@ -103,7 +104,7 @@ fn sync_roster(
     }
     for enemy in &run.enemies {
         // One material each so hit flashes tint only the enemy that was hit.
-        let material = materials.add(StandardMaterial {
+        let material = materials.add(graded(StandardMaterial {
             base_color_texture: Some(assets.texture.clone()),
             alpha_mode: AlphaMode::Mask(0.5),
             // Lit like the walls: zombies loom out of the dark as torchlight
@@ -113,7 +114,7 @@ fn sync_roster(
             perceptual_roughness: 0.9,
             cull_mode: None,
             ..default()
-        });
+        }));
         let at = cell_center(enemy.pos);
         commands.spawn((
             EnemySprite {
@@ -168,7 +169,7 @@ fn animate(
     run: Res<Run>,
     cams: Query<&Transform, (With<PlayerCamera>, Without<EnemySprite>)>,
     mut sprites: Query<(Entity, &mut EnemySprite, &mut Transform)>,
-    mut materials: ResMut<Assets<StandardMaterial>>,
+    mut materials: ResMut<Assets<GradedMaterial>>,
     assets: Res<EnemyAssets>,
 ) {
     let Ok(cam) = cams.single() else {
@@ -237,10 +238,10 @@ fn animate(
             )
         };
         if let Some(mut m) = materials.get_mut(&s.material)
-            && (m.base_color != color || m.emissive != glow)
+            && (m.base.base_color != color || m.base.emissive != glow)
         {
-            m.base_color = color;
-            m.emissive = glow;
+            m.base.base_color = color;
+            m.base.emissive = glow;
         }
     }
 }

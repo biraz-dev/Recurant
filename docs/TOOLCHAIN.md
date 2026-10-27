@@ -24,7 +24,8 @@ it is the part that has to survive ports (Android, WebAssembly, and someday N64)
 Bevy's default features are off. `crates/zrpg/Cargo.toml` lists exactly what
 we use: windowing (winit, X11, Wayland), keyboard, gamepads (gilrs), the core
 3D pipeline with lit `StandardMaterial`s (normal + roughness maps, point
-lights, no shadow maps), Reinhard tonemapping (needs no LUTs) and distance fog, sprites (to
+lights, no shadow maps) extended with a small depth-grading shader, Reinhard
+tonemapping (needs no LUTs) and distance fog, sprites (to
 present the low-res frame), UI/text (for the HUD), PNG (embedded sprites and
 screenshots), and WebGL2 (browser builds; inert elsewhere). The Android crate
 adds `android-game-activity`.

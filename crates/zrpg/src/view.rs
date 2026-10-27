@@ -5,10 +5,11 @@
 use std::f32::consts::{FRAC_PI_2, PI};
 
 use bevy::core_pipeline::tonemapping::Tonemapping;
-use bevy::pbr::{DistanceFog, FogFalloff};
+use bevy::pbr::DistanceFog;
 use bevy::prelude::*;
 use zrpg_core::{Command, Event, Facing, GridPos, Step, Turn};
 
+use crate::atmosphere;
 use crate::auto::AutoMode;
 use crate::input::{Action, Actions};
 use crate::level::{WALL_HEIGHT, cell_center, grid_dir};
@@ -32,10 +33,8 @@ pub const EYE_HEIGHT: f32 = WALL_HEIGHT * 0.5;
 /// cell stay in view, as in the classics.
 const EYE_BACK: f32 = 0.25;
 const FOV_DEGREES: f32 = 60.0;
-const FOG_START: f32 = 0.5;
-const FOG_END: f32 = 5.5;
-/// What distance fades into: the dark beyond the torchlight.
-const DARKNESS: Color = Color::srgb(0.035, 0.036, 0.045);
+/// Nothing beyond this is visible through the haze anyway.
+const VIEW_DISTANCE: f32 = 9.0;
 
 pub struct ViewPlugin;
 
@@ -200,14 +199,14 @@ fn spawn_camera(mut commands: Commands, target: Res<LowResTarget>, run: Res<Run>
         Camera3d::default(),
         Camera {
             order: 0,
-            clear_color: ClearColorConfig::Custom(DARKNESS),
+            clear_color: ClearColorConfig::Custom(atmosphere::FOG_COLOR),
             ..default()
         },
         world_target(&target),
         Projection::Perspective(PerspectiveProjection {
             fov: FOV_DEGREES.to_radians(),
             near: 0.05,
-            far: FOG_END + 1.0,
+            far: VIEW_DISTANCE,
             ..default()
         }),
         // Compress torch highlights instead of clipping them (needs no LUTs).
@@ -221,11 +220,8 @@ fn spawn_camera(mut commands: Commands, target: Res<LowResTarget>, run: Res<Run>
             ..default()
         },
         DistanceFog {
-            color: DARKNESS,
-            falloff: FogFalloff::Linear {
-                start: FOG_START,
-                end: FOG_END,
-            },
+            color: atmosphere::FOG_COLOR,
+            falloff: atmosphere::FOG,
             ..default()
         },
         anim.transform(0.0),

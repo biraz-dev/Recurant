@@ -18,6 +18,7 @@ use zrpg_core::rng::mix64;
 use zrpg_core::{Facing, GridPos, Map, Tile};
 
 use crate::Run;
+use crate::atmosphere::{GradedMaterial, graded};
 use crate::lighting::{self, TorchAssets};
 use crate::textures::{self, Maps, env};
 
@@ -52,6 +53,35 @@ const TORCH_SPACING: i32 = 4;
 const SCONCE_SIZE: Vec2 = Vec2::new(0.2, 0.3);
 const SCONCE_BOTTOM: f32 = 0.42;
 
+/// Trim profiles, as (distance out from the wall, height) from the bottom up:
+/// a chamfered skirting block where wall meets floor...
+const BASEBOARD: [Vec2; 4] = [
+    Vec2::new(0.035, 0.0),
+    Vec2::new(0.035, 0.065),
+    Vec2::new(0.02, 0.085),
+    Vec2::new(0.0, 0.085),
+];
+/// ...and a stepped cornice with a cove where wall meets ceiling.
+const CROWN: [Vec2; 5] = [
+    Vec2::new(0.0, 0.86),
+    Vec2::new(0.022, 0.86),
+    Vec2::new(0.022, 0.9),
+    Vec2::new(0.05, 0.95),
+    Vec2::new(0.05, 1.0),
+];
+
+/// How a strip of trim ends at the edge of its wall.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+enum TrimEnd {
+    /// The wall carries on into the next cell, or the trim stops against a
+    /// wall that has none.
+    Flush,
+    /// Outside corner: run on, to meet the other wall's trim in a mitre.
+    Extend,
+    /// Inside corner: stop short, to meet the other wall's trim in a mitre.
+    Shorten,
+}
+
 /// A wall torch: where its flame burns and which way its wall faces.
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub struct Torch {
@@ -70,14 +100,15 @@ impl Plugin for LevelPlugin {
 
 #[derive(Resource)]
 struct LevelMaterials {
-    walls: [Handle<StandardMaterial>; WALL_KINDS],
-    floors: [Handle<StandardMaterial>; FLOOR_KINDS],
-    ceiling: Handle<StandardMaterial>,
-    stairs: Handle<StandardMaterial>,
-    arch: Handle<StandardMaterial>,
-    vines: Handle<StandardMaterial>,
-    fern: Handle<StandardMaterial>,
-    sconce: Handle<StandardMaterial>,
+    walls: [Handle<GradedMaterial>; WALL_KINDS],
+    floors: [Handle<GradedMaterial>; FLOOR_KINDS],
+    ceiling: Handle<GradedMaterial>,
+    stairs: Handle<GradedMaterial>,
+    arch: Handle<GradedMaterial>,
+    trim: Handle<GradedMaterial>,
+    vines: Handle<GradedMaterial>,
+    fern: Handle<GradedMaterial>,
+    sconce: Handle<GradedMaterial>,
 }
 
 /// Parent of all geometry for the current floor.
@@ -90,13 +121,13 @@ struct LevelRoot {
 fn load_materials(
     mut commands: Commands,
     mut images: ResMut<Assets<Image>>,
-    mut materials: ResMut<Assets<StandardMaterial>>,
+    mut materials: ResMut<Assets<GradedMaterial>>,
 ) {
     // Cutouts (vines, ferns, sconces) are alpha-masked and visible from both
     // sides. The ORM map serves as both occlusion and roughness (glTF packing).
     let mut make = |maps: Maps, cutout: bool| {
         let orm = images.add(textures::embedded_linear(maps.orm));
-        materials.add(StandardMaterial {
+        materials.add(graded(StandardMaterial {
             base_color_texture: Some(images.add(textures::embedded(maps.color))),
             normal_map_texture: Some(images.add(textures::embedded_linear(maps.normal))),
             metallic_roughness_texture: Some(orm.clone()),
@@ -115,7 +146,7 @@ fn load_materials(
                 Some(bevy::render::render_resource::Face::Back)
             },
             ..default()
-        })
+        }))
     };
     commands.insert_resource(LevelMaterials {
         walls: env::WALLS.map(|maps| make(maps, false)),
@@ -123,6 +154,7 @@ fn load_materials(
         ceiling: make(env::CEILING, false),
         stairs: make(env::STAIRS, false),
         arch: make(env::ARCH, false),
+        trim: make(env::TRIM, false),
         vines: make(env::VINES, true),
         fern: make(env::FERN, true),
         sconce: make(env::SCONCE, true),
@@ -168,6 +200,7 @@ fn rebuild_level(
                     (geo.ceilings, &mats.ceiling),
                     (geo.stairs, &mats.stairs),
                     (geo.arch, &mats.arch),
+                    (geo.trims, &mats.trim),
                     (geo.vines, &mats.vines),
                     (geo.ferns, &mats.fern),
                     (geo.sconces, &mats.sconce),
@@ -303,6 +336,8 @@ struct LevelGeometry {
     stairs: QuadBuilder,
     /// The wall the stairs lead under.
     arch: QuadBuilder,
+    /// Baseboards and crown molding.
+    trims: QuadBuilder,
     vines: QuadBuilder,
     ferns: QuadBuilder,
     sconces: QuadBuilder,
@@ -365,6 +400,16 @@ impl LevelGeometry {
                 let (l, r) = (center - right * 0.5, center + right * 0.5);
                 let light = 1.0;
                 let wall = [l, r, r + Vec3::Y * h, l + Vec3::Y * h];
+                // Crown molding runs along every wall; baseboards along every
+                // wall but the arch the stairs lead under.
+                let has_baseboard =
+                    |q: GridPos, d: Facing| !(map.get(q) == Tile::StairsDown && d == stairs_dir);
+                let crown_ends = trim_ends(map, p, dir, |_, _| true);
+                geo.add_trim(p, dir, &CROWN, crown_ends, crown_shade);
+                if has_baseboard(p, dir) {
+                    let ends = trim_ends(map, p, dir, has_baseboard);
+                    geo.add_trim(p, dir, &BASEBOARD, ends, baseboard_shade);
+                }
                 if stairs && dir == stairs_dir {
                     let (foot, top) = (light * WALL_FOOT_SHADE, light * WALL_TOP_SHADE);
                     geo.arch.quad_shaded(wall, UV, [foot, foot, top, top]);
@@ -412,6 +457,49 @@ impl LevelGeometry {
             }
         }
         geo
+    }
+
+    /// Extrude a trim `profile` along the wall of cell `p` facing `dir`.
+    fn add_trim(
+        &mut self,
+        p: GridPos,
+        dir: Facing,
+        profile: &[Vec2],
+        ends: [TrimEnd; 2],
+        shade: fn(f32) -> f32,
+    ) {
+        let (f, r) = (grid_dir(dir), grid_dir(dir.right()));
+        let wall = cell_center(p) + f * 0.5;
+        // Where a profile point ends along the wall (-0.5 left .. 0.5 right).
+        // Mitres move each point by its own distance from the wall.
+        let reach = |pt: Vec2, end: TrimEnd, side: f32| {
+            side * match end {
+                TrimEnd::Flush => 0.5,
+                TrimEnd::Extend => 0.5 + pt.x,
+                TrimEnd::Shorten => 0.5 - pt.x,
+            }
+        };
+        let at = |pt: Vec2, s: f32| wall - f * pt.x + Vec3::Y * pt.y + r * s;
+        let mut arc = 0.0;
+        for seg in profile.windows(2) {
+            let (a, b) = (seg[0], seg[1]);
+            let (al, ar) = (reach(a, ends[0], -1.0), reach(a, ends[1], 1.0));
+            let (bl, br) = (reach(b, ends[0], -1.0), reach(b, ends[1], 1.0));
+            // Texture: U along the wall, V along the profile, 1 unit = 1 tile.
+            let len = (b - a).length();
+            let (va, vb) = (0.5 - arc, 0.5 - arc - len);
+            self.trims.quad_shaded(
+                [at(a, al), at(a, ar), at(b, br), at(b, bl)],
+                [
+                    [al + 0.5, va],
+                    [ar + 0.5, va],
+                    [br + 0.5, vb],
+                    [bl + 0.5, vb],
+                ],
+                [shade(a.y), shade(a.y), shade(b.y), shade(b.y)],
+            );
+            arc += len;
+        }
     }
 
     /// A sconce on the wall of cell `p` facing `dir`, and its flame.
@@ -519,6 +607,48 @@ impl LevelGeometry {
             ],
             0.0,
         );
+    }
+}
+
+/// How the trim on the wall of `p` facing `dir` should end on each side
+/// (left, right). `has_trim` says whether a wall face carries the same trim.
+fn trim_ends(
+    map: &Map,
+    p: GridPos,
+    dir: Facing,
+    has_trim: impl Fn(GridPos, Facing) -> bool,
+) -> [TrimEnd; 2] {
+    [dir.left(), dir.right()].map(|side| {
+        let beside = p + side;
+        if !map.is_walkable(beside) {
+            // Inside corner: the wall on that side meets this one.
+            if has_trim(p, side) {
+                TrimEnd::Shorten
+            } else {
+                TrimEnd::Flush
+            }
+        } else if map.is_walkable(beside + dir) {
+            // Outside corner: this wall ends and turns away.
+            TrimEnd::Extend
+        } else {
+            TrimEnd::Flush
+        }
+    })
+}
+
+/// Baked contact shadow on trim: dark where the baseboard meets the floor
+/// and under the cornice.
+fn baseboard_shade(y: f32) -> f32 {
+    if y < 0.01 { 0.72 } else { 1.0 }
+}
+
+fn crown_shade(y: f32) -> f32 {
+    if y < 0.87 {
+        0.7
+    } else if y > 0.99 {
+        0.8
+    } else {
+        0.92
     }
 }
 
@@ -667,6 +797,71 @@ mod tests {
             total >= 40,
             "rooms should usually get torches ({total} in 40 floors)"
         );
+    }
+
+    #[test]
+    fn trim_mitres_inside_and_outside_corners() {
+        // An L of three cells: (1,1) and (2,1) along the top, (1,2) below.
+        //   # # # #
+        //   # . . #
+        //   # . # #
+        //   # # # #
+        let mut map = Map::filled(4, 4, Tile::Wall);
+        for (x, y) in [(1, 1), (2, 1), (1, 2)] {
+            map.set(GridPos::new(x, y), Tile::Floor);
+        }
+        let any = |_: GridPos, _: Facing| true;
+        use TrimEnd::*;
+        // North wall of (1,1): inside corner with the west wall on its left;
+        // on its right the wall carries on over (2,1).
+        assert_eq!(
+            trim_ends(&map, GridPos::new(1, 1), Facing::North, any),
+            [Shorten, Flush]
+        );
+        // South wall of (2,1): its left (east) is solid, an inside corner; on
+        // its right (west) the cell (1,1) is open and so is (1,2) below it:
+        // the wall block (2,2) has an outside corner there.
+        assert_eq!(
+            trim_ends(&map, GridPos::new(2, 1), Facing::South, any),
+            [Shorten, Extend]
+        );
+        // A wall without trim (like the stairs arch) gets a flush end instead.
+        let none_west = |_: GridPos, d: Facing| d != Facing::West;
+        assert_eq!(
+            trim_ends(&map, GridPos::new(1, 1), Facing::North, none_west),
+            [Flush, Flush]
+        );
+    }
+
+    #[test]
+    fn trim_stays_in_the_room_and_faces_out_of_the_wall() {
+        let mut map = Map::filled(3, 3, Tile::Wall);
+        map.set(GridPos::new(1, 1), Tile::Floor);
+        let geo = LevelGeometry::build(&map, Facing::North, 1);
+        assert!(!geo.trims.is_empty());
+        let center = cell_center(GridPos::new(1, 1));
+        for (ps, ns) in geo
+            .trims
+            .positions
+            .chunks(4)
+            .zip(geo.trims.normals.chunks(4))
+        {
+            let n = Vec3::from(ns[0]);
+            for p in ps {
+                // Enclosed cell: every mitre is cut short, nothing pokes out.
+                assert!(
+                    (1.0..=2.0).contains(&p[0]) && (1.0..=2.0).contains(&p[2]),
+                    "{p:?}"
+                );
+            }
+            // Faces point into the room, or straight up or down.
+            let mid = ps.iter().map(|p| Vec3::from(*p)).sum::<Vec3>() / 4.0;
+            let inward = (center - mid).with_y(0.0);
+            assert!(
+                n.y.abs() > 0.99 || n.dot(inward) > 0.0,
+                "trim face turned into the wall"
+            );
+        }
     }
 
     #[test]

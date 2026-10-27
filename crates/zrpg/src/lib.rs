@@ -5,6 +5,7 @@
 //! can wrap it in its own entry point: `main.rs` on desktop and the web,
 //! `zrpg_android` on Android.
 
+mod atmosphere;
 mod auto;
 mod enemies;
 mod hud;
@@ -73,6 +74,7 @@ pub fn app() -> App {
     .add_plugins((
         screen::ScreenPlugin,
         input::InputPlugin,
+        atmosphere::AtmospherePlugin,
         level::LevelPlugin,
         lighting::LightingPlugin,
         view::ViewPlugin,

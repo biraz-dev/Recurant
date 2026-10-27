@@ -109,10 +109,15 @@ Art is made from the references in `art/` (see [art/README.md](art/README.md)):
 - `make_textures.py` samples colour ramps from the environment reference's
   texture palette and generates seamless 64×64 tiles from them: sandstone
   walls (plain, mossy, cracked, carved), diamond floor tiles, ceiling slabs,
-  steps, the stairs archway, vine and fern cutouts, and wall torches. Each
+  dressed stone for trim, steps, the stairs archway, vine and fern cutouts,
+  and wall torches. Each
   texture comes with a height field, from which it derives a **normal map**
   and an **ORM map** (ambient occlusion + roughness): matte sandstone, worn
   glossy floor tiles, damp moss.
+
+Walls carry real trim: a chamfered baseboard where they meet the floor and a
+stepped crown molding with a cove under the ceiling, extruded along every
+wall and mitred at inside and outside corners.
 
 Everything is embedded in the binary, so no platform loads files at
 runtime. Floors are dressed per seed (which walls are mossy or carved, where
@@ -127,6 +132,13 @@ surroundings. Materials are lit (PBR) with normal and roughness maps, so
 block edges, joints, carvings and floor bevels catch the light as you move.
 Shadows are cool, torchlight is warm. It stays cheap: no shadow maps, a
 handful of point lights, Reinhard tonemapping, all at 320×240.
+
+Distance does three things (tunable in `crates/zrpg/src/atmosphere.rs`):
+colours **desaturate** toward a cool grey, surfaces **darken** beyond what
+the light falloff does, and a dusty **haze** (exponential-squared fog)
+swallows the far end of a corridor. The first two are a small shader that
+extends Bevy's standard material (`depth_grade.wgsl`); torch flames skip it
+all and burn through the dark.
 
 ## Status
 

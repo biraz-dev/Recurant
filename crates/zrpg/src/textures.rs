@@ -41,6 +41,7 @@ pub mod env {
     pub const CEILING: Maps = maps!("ceiling");
     pub const STAIRS: Maps = maps!("stairs");
     pub const ARCH: Maps = maps!("arch");
+    pub const TRIM: Maps = maps!("trim");
     pub const VINES: Maps = maps!("vines");
     pub const FERN: Maps = maps!("fern");
     pub const SCONCE: Maps = maps!("sconce");

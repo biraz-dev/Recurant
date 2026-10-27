@@ -25,7 +25,7 @@ const WALL_TORCH_RANGE: f32 = 4.5;
 /// a grazing angle, which shows the stonework best.
 const WALL_TORCH_STANDOFF: f32 = 0.15;
 /// Cool shadows against warm torchlight.
-pub const AMBIENT_COLOR: Color = Color::srgb(0.62, 0.72, 0.9);
+pub const AMBIENT_COLOR: Color = Color::srgb(0.72, 0.78, 0.88);
 pub const AMBIENT_BRIGHTNESS: f32 = 60.0;
 const FLAME_SIZE: Vec2 = Vec2::new(0.11, 0.17);
 

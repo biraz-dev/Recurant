@@ -323,6 +323,22 @@ def ceiling(r, seed):
     return Tex(albedo, height, np.full((SIZE, SIZE), 0.9))
 
 
+def trim(r, seed):
+    """Dressed stone for baseboards and crown molding: smoother and paler
+    than the walls, with a joint every half cell."""
+    rng = np.random.default_rng(seed)
+    x = np.arange(SIZE)[None, :] + np.zeros((SIZE, 1))
+    joint = (x % 32 == 0)
+    edge = bevel(distance_to(joint), 2.0)
+    grain = chunky_noise(rng) - 0.5
+    t = 0.62 + (tile_noise(rng, 8, 2) - 0.5) * 0.2 + grain * 0.08 + (edge - 1) * 0.1
+    albedo = shade(r["sandstone"], t)
+    albedo[joint] = r["stone"][1]
+    height = 0.3 + 0.7 * edge + grain * 0.04
+    height[joint] = 0.0
+    return Tex(albedo, height, np.full((SIZE, SIZE), 0.7))
+
+
 def stairs(r, seed):
     """Four steps of 16 px each: a rounded nosing at the front edge (row 15)
     and a crease at the back where the next riser meets the tread."""
@@ -521,6 +537,7 @@ def main():
         "ceiling": ceiling(r, 31),
         "stairs": stairs(r, 41),
         "arch": arch(r, 11),
+        "trim": trim(r, 81),
         "vines": vines(r, 51),
         "fern": fern(r, 61),
         "sconce": sconce(r, 71),
