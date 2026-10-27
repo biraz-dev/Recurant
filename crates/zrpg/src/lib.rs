@@ -10,6 +10,7 @@ mod enemies;
 mod hud;
 mod input;
 mod level;
+mod lighting;
 mod platform;
 mod screen;
 mod script;
@@ -73,6 +74,7 @@ pub fn app() -> App {
         screen::ScreenPlugin,
         input::InputPlugin,
         level::LevelPlugin,
+        lighting::LightingPlugin,
         view::ViewPlugin,
         enemies::EnemiesPlugin,
         auto::AutoPlugin,

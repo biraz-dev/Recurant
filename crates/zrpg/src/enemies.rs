@@ -106,7 +106,11 @@ fn sync_roster(
         let material = materials.add(StandardMaterial {
             base_color_texture: Some(assets.texture.clone()),
             alpha_mode: AlphaMode::Mask(0.5),
-            unlit: true,
+            // Lit like the walls: zombies loom out of the dark as torchlight
+            // finds them. The wind-up and hit tells also glow (emissive), so
+            // they read even outside the light.
+            reflectance: 0.2,
+            perceptual_roughness: 0.9,
             cull_mode: None,
             ..default()
         });
@@ -220,16 +224,23 @@ fn animate(
             .with_rotation(rotation)
             .with_scale(Vec3::new(sx, sy, 1.0));
 
-        // Tint: red on hit, hot orange while winding up.
-        let color = if s.flash > 0.0 {
-            Color::srgb(1.0, 0.35, 0.3)
+        // Tint and glow: red on hit, hot orange while winding up.
+        let (color, glow) = if s.flash > 0.0 {
+            (
+                Color::srgb(1.0, 0.35, 0.3),
+                LinearRgba::rgb(0.14, 0.02, 0.01),
+            )
         } else {
-            Color::srgb(1.0, 1.0 - 0.25 * s.wind, 1.0 - 0.55 * s.wind)
+            (
+                Color::srgb(1.0, 1.0 - 0.25 * s.wind, 1.0 - 0.55 * s.wind),
+                LinearRgba::rgb(0.11, 0.045, 0.005) * s.wind,
+            )
         };
         if let Some(mut m) = materials.get_mut(&s.material)
-            && m.base_color != color
+            && (m.base_color != color || m.emissive != glow)
         {
             m.base_color = color;
+            m.emissive = glow;
         }
     }
 }

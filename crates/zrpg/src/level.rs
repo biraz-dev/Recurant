@@ -4,9 +4,12 @@
 //! World layout: grid cell `(x, y)` spans `x..x+1` on X and `y..y+1` on Z,
 //! floor at height 0, ceiling at `WALL_HEIGHT`.
 //!
-//! Dressing (which walls are mossy, cracked or carved, where vines hang and
-//! ferns grow) is picked from a hash of the floor seed and the cell, so a
-//! floor always looks the same.
+//! Dressing (which walls are mossy, cracked or carved, where vines hang, ferns
+//! grow and torches burn) is picked from a hash of the floor seed and the
+//! cell, so a floor always looks the same.
+//!
+//! Surfaces are lit (see `lighting.rs`): every material has a normal map and a
+//! roughness map, and the meshes carry tangents so the normal maps line up.
 
 use bevy::asset::RenderAssetUsages;
 use bevy::mesh::{Indices, PrimitiveTopology};
@@ -15,7 +18,8 @@ use zrpg_core::rng::mix64;
 use zrpg_core::{Facing, GridPos, Map, Tile};
 
 use crate::Run;
-use crate::textures::{self, env};
+use crate::lighting::{self, TorchAssets};
+use crate::textures::{self, Maps, env};
 
 pub const WALL_HEIGHT: f32 = 1.0;
 /// Stairs: a pit of steps going down under the far wall.
@@ -39,6 +43,21 @@ const VINES_BOTTOM: f32 = 0.35;
 const DECAL_OFFSET: f32 = 0.004;
 const FERN: f32 = 0.2;
 const FERN_SIZE: f32 = 0.42;
+/// Wall torches: candidates per wall face, how many per floor at most, and
+/// how far apart (in cells) they must be.
+const TORCH: f32 = 0.1;
+const MAX_TORCHES: usize = 4;
+const TORCH_SPACING: i32 = 4;
+/// The sconce (bracket and torch) on the wall: size and height of its foot.
+const SCONCE_SIZE: Vec2 = Vec2::new(0.2, 0.3);
+const SCONCE_BOTTOM: f32 = 0.42;
+
+/// A wall torch: where its flame burns and which way its wall faces.
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct Torch {
+    pub flame: Vec3,
+    pub facing: Vec3,
+}
 
 pub struct LevelPlugin;
 
@@ -58,6 +77,7 @@ struct LevelMaterials {
     arch: Handle<StandardMaterial>,
     vines: Handle<StandardMaterial>,
     fern: Handle<StandardMaterial>,
+    sconce: Handle<StandardMaterial>,
 }
 
 /// Parent of all geometry for the current floor.
@@ -72,11 +92,18 @@ fn load_materials(
     mut images: ResMut<Assets<Image>>,
     mut materials: ResMut<Assets<StandardMaterial>>,
 ) {
-    // Cutouts (vines, ferns) are alpha-masked and visible from both sides.
-    let mut make = |png: &[u8], cutout: bool| {
+    // Cutouts (vines, ferns, sconces) are alpha-masked and visible from both
+    // sides. The ORM map serves as both occlusion and roughness (glTF packing).
+    let mut make = |maps: Maps, cutout: bool| {
+        let orm = images.add(textures::embedded_linear(maps.orm));
         materials.add(StandardMaterial {
-            base_color_texture: Some(images.add(textures::embedded(png))),
-            unlit: true,
+            base_color_texture: Some(images.add(textures::embedded(maps.color))),
+            normal_map_texture: Some(images.add(textures::embedded_linear(maps.normal))),
+            metallic_roughness_texture: Some(orm.clone()),
+            occlusion_texture: Some(orm),
+            perceptual_roughness: 1.0,
+            metallic: 0.0,
+            reflectance: 0.3,
             alpha_mode: if cutout {
                 AlphaMode::Mask(0.5)
             } else {
@@ -91,13 +118,14 @@ fn load_materials(
         })
     };
     commands.insert_resource(LevelMaterials {
-        walls: env::WALLS.map(|png| make(png, false)),
-        floors: env::FLOORS.map(|png| make(png, false)),
+        walls: env::WALLS.map(|maps| make(maps, false)),
+        floors: env::FLOORS.map(|maps| make(maps, false)),
         ceiling: make(env::CEILING, false),
         stairs: make(env::STAIRS, false),
         arch: make(env::ARCH, false),
         vines: make(env::VINES, true),
         fern: make(env::FERN, true),
+        sconce: make(env::SCONCE, true),
     });
 }
 
@@ -106,6 +134,7 @@ fn rebuild_level(
     run: Res<Run>,
     roots: Query<(Entity, &LevelRoot)>,
     mats: Res<LevelMaterials>,
+    torch_assets: Res<TorchAssets>,
     mut meshes: ResMut<Assets<Mesh>>,
 ) {
     let current = roots
@@ -141,6 +170,7 @@ fn rebuild_level(
                     (geo.arch, &mats.arch),
                     (geo.vines, &mats.vines),
                     (geo.ferns, &mats.fern),
+                    (geo.sconces, &mats.sconce),
                 ]);
             for (builder, material) in parts {
                 if !builder.is_empty() {
@@ -150,17 +180,13 @@ fn rebuild_level(
                     ));
                 }
             }
+            for (i, torch) in geo.torches.iter().enumerate() {
+                lighting::spawn_wall_torch(parent, &torch_assets, torch, i as f32 * 2.3);
+            }
         });
 }
 
-/// Classic crawler shading: faces lit by direction instead of by lights.
-fn face_brightness(normal_dir: Facing) -> f32 {
-    match normal_dir {
-        Facing::North | Facing::South => 1.0,
-        Facing::East | Facing::West => 0.8,
-    }
-}
-const FLOOR_BRIGHTNESS: f32 = 0.95;
+const FLOOR_BRIGHTNESS: f32 = 1.0;
 const CEILING_BRIGHTNESS: f32 = 0.85;
 
 /// Baked ambient occlusion: wall tops sit in the ceiling's shadow, and the
@@ -191,6 +217,7 @@ fn roll(seed: u64, p: GridPos, salt: u64) -> f32 {
 struct QuadBuilder {
     positions: Vec<[f32; 3]>,
     normals: Vec<[f32; 3]>,
+    tangents: Vec<[f32; 4]>,
     uvs: Vec<[f32; 2]>,
     colors: Vec<[f32; 4]>,
     indices: Vec<u32>,
@@ -219,10 +246,12 @@ impl QuadBuilder {
         let normal = (corners[1] - corners[0])
             .cross(corners[2] - corners[0])
             .normalize();
+        let tangent = quad_tangent(corners, uvs, normal);
         let base = self.positions.len() as u32;
         for ((corner, uv), b) in corners.iter().zip(uvs).zip(shade) {
             self.positions.push(corner.to_array());
             self.normals.push(normal.to_array());
+            self.tangents.push(tangent.to_array());
             self.uvs.push(uv);
             self.colors.push([b, b, b, 1.0]);
         }
@@ -237,10 +266,33 @@ impl QuadBuilder {
         )
         .with_inserted_attribute(Mesh::ATTRIBUTE_POSITION, self.positions)
         .with_inserted_attribute(Mesh::ATTRIBUTE_NORMAL, self.normals)
+        .with_inserted_attribute(Mesh::ATTRIBUTE_TANGENT, self.tangents)
         .with_inserted_attribute(Mesh::ATTRIBUTE_UV_0, self.uvs)
         .with_inserted_attribute(Mesh::ATTRIBUTE_COLOR, self.colors)
         .with_inserted_indices(Indices::U32(self.indices))
     }
+}
+
+/// Tangent for a flat quad, from how its UVs run across it: `xyz` points
+/// along increasing U; `w` makes Bevy's bitangent (`w * normal x tangent`)
+/// point to the top of the texture (decreasing V), matching the normal maps'
+/// OpenGL convention (+Y up the image).
+fn quad_tangent(corners: [Vec3; 4], uvs: [[f32; 2]; 4], normal: Vec3) -> Vec4 {
+    let (e1, e2) = (corners[1] - corners[0], corners[3] - corners[0]);
+    let (du1, dv1) = (uvs[1][0] - uvs[0][0], uvs[1][1] - uvs[0][1]);
+    let (du2, dv2) = (uvs[3][0] - uvs[0][0], uvs[3][1] - uvs[0][1]);
+    let det = du1 * dv2 - du2 * dv1;
+    if det.abs() < 1e-8 {
+        return Vec4::new(1.0, 0.0, 0.0, 1.0);
+    }
+    let along_u = ((e1 * dv2 - e2 * dv1) / det).normalize();
+    let along_v = (e2 * du1 - e1 * du2) / det;
+    let w = if normal.cross(along_u).dot(-along_v) >= 0.0 {
+        1.0
+    } else {
+        -1.0
+    };
+    along_u.extend(w)
 }
 
 #[derive(Default)]
@@ -253,12 +305,15 @@ struct LevelGeometry {
     arch: QuadBuilder,
     vines: QuadBuilder,
     ferns: QuadBuilder,
+    sconces: QuadBuilder,
+    torches: Vec<Torch>,
 }
 
 impl LevelGeometry {
     fn build(map: &Map, stairs_dir: Facing, seed: u64) -> Self {
         let mut geo = LevelGeometry::default();
         let h = WALL_HEIGHT;
+        let mut torch_spots: Vec<(f32, GridPos, Facing)> = Vec::new();
         for p in map.positions().filter(|&p| map.is_walkable(p)) {
             let (x0, z0) = (p.x as f32, p.y as f32);
             let (x1, z1) = (x0 + 1.0, z0 + 1.0);
@@ -308,7 +363,7 @@ impl LevelGeometry {
                 let right = grid_dir(dir.right());
                 let center = cell_center(p) + forward * 0.5;
                 let (l, r) = (center - right * 0.5, center + right * 0.5);
-                let light = face_brightness(dir);
+                let light = 1.0;
                 let wall = [l, r, r + Vec3::Y * h, l + Vec3::Y * h];
                 if stairs && dir == stairs_dir {
                     let (foot, top) = (light * WALL_FOOT_SHADE, light * WALL_TOP_SHADE);
@@ -325,6 +380,10 @@ impl LevelGeometry {
                 let foot = light * WALL_FOOT_SHADE;
                 let top = light * WALL_TOP_SHADE;
                 geo.walls[kind].quad_shaded(wall, UV, [foot, foot, top, top]);
+                let t = roll(seed, p, salt + 30);
+                if t < TORCH {
+                    torch_spots.push((t, p, dir));
+                }
                 if roll(seed, p, salt + 10) < VINES {
                     let lift = -forward * DECAL_OFFSET;
                     let (l, r) = (l + lift, r + lift);
@@ -342,7 +401,34 @@ impl LevelGeometry {
                 geo.add_fern(map, p, seed);
             }
         }
+        // Torches: the luckiest candidates, kept well apart.
+        torch_spots.sort_by(|a, b| a.0.total_cmp(&b.0));
+        let mut placed: Vec<GridPos> = Vec::new();
+        for (_, p, dir) in torch_spots {
+            if placed.len() < MAX_TORCHES && placed.iter().all(|q| q.manhattan(p) >= TORCH_SPACING)
+            {
+                placed.push(p);
+                geo.add_torch(p, dir);
+            }
+        }
         geo
+    }
+
+    /// A sconce on the wall of cell `p` facing `dir`, and its flame.
+    fn add_torch(&mut self, p: GridPos, dir: Facing) {
+        let (f, r) = (grid_dir(dir), grid_dir(dir.right()));
+        let wall = cell_center(p) + f * (0.5 - DECAL_OFFSET * 2.0);
+        let (half, up) = (r * SCONCE_SIZE.x * 0.5, Vec3::Y * SCONCE_SIZE.y);
+        let foot = wall + Vec3::Y * SCONCE_BOTTOM;
+        self.sconces.quad(
+            [foot - half, foot + half, foot + half + up, foot - half + up],
+            1.0,
+        );
+        self.torches.push(Torch {
+            // Just above the sconce's cup, standing a little off the wall.
+            flame: foot + up * 0.88 - f * 0.05,
+            facing: -f,
+        });
     }
 
     /// A fern tucked against one of the cell's walls: two quads crossed at
@@ -401,7 +487,7 @@ impl LevelGeometry {
                 [[0., v1], [1., v1], [1., v1 - 0.1], [0., v1 - 0.1]],
                 light * 0.7,
             );
-            let side = face_brightness(dir.right()) * light;
+            let side = light;
             self.walls[0].quad_uv(
                 [
                     at(a0, -0.5, y),
@@ -520,6 +606,67 @@ mod tests {
             assert!(p[1] >= 0.0 && p[1] <= FERN_SIZE + 1e-5);
             assert!(p[0] > 1.0 && p[0] < 11.0 && p[2] > 1.0 && p[2] < 11.0);
         }
+    }
+
+    #[test]
+    fn tangents_follow_the_uvs() {
+        // A wall facing +Z: U runs along +X and the texture's top is up.
+        let corners = [
+            Vec3::new(0., 0., 0.),
+            Vec3::new(1., 0., 0.),
+            Vec3::new(1., 1., 0.),
+            Vec3::new(0., 1., 0.),
+        ];
+        let n = Vec3::Z;
+        let bitangent = |t: Vec4| t.w * n.cross(t.truncate());
+        let t = quad_tangent(corners, UV, n);
+        assert_eq!(t, Vec4::new(1., 0., 0., 1.));
+        assert!(
+            bitangent(t).dot(Vec3::Y) > 0.99,
+            "bitangent must point up the texture"
+        );
+        // Mirrored UVs (as on one pit wall) flip the tangent, not the bitangent.
+        let mirrored = [[1., 1.], [0., 1.], [0., 0.], [1., 0.]];
+        let t = quad_tangent(corners, mirrored, n);
+        assert_eq!(t.truncate(), Vec3::NEG_X);
+        assert!(bitangent(t).dot(Vec3::Y) > 0.99);
+    }
+
+    #[test]
+    fn torches_are_few_and_spread_out() {
+        let mut map = Map::filled(12, 12, Tile::Wall);
+        for y in 1..11 {
+            for x in 1..11 {
+                map.set(GridPos::new(x, y), Tile::Floor);
+            }
+        }
+        let mut total = 0;
+        for seed in 0..40 {
+            let geo = LevelGeometry::build(&map, Facing::North, seed);
+            assert!(geo.torches.len() <= MAX_TORCHES);
+            total += geo.torches.len();
+            let cells: Vec<GridPos> = geo
+                .torches
+                .iter()
+                .map(|t| {
+                    let p = t.flame + t.facing * 0.2;
+                    GridPos::new(p.x.floor() as i32, p.z.floor() as i32)
+                })
+                .collect();
+            for (i, a) in cells.iter().enumerate() {
+                assert!(map.is_walkable(*a), "seed {seed}: torch outside the room");
+                for b in &cells[i + 1..] {
+                    assert!(
+                        a.manhattan(*b) >= TORCH_SPACING,
+                        "seed {seed}: torches too close"
+                    );
+                }
+            }
+        }
+        assert!(
+            total >= 40,
+            "rooms should usually get torches ({total} in 40 floors)"
+        );
     }
 
     #[test]

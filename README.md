@@ -109,11 +109,24 @@ Art is made from the references in `art/` (see [art/README.md](art/README.md)):
 - `make_textures.py` samples colour ramps from the environment reference's
   texture palette and generates seamless 64×64 tiles from them: sandstone
   walls (plain, mossy, cracked, carved), diamond floor tiles, ceiling slabs,
-  steps, the stairs archway, and vine and fern cutouts.
+  steps, the stairs archway, vine and fern cutouts, and wall torches. Each
+  texture comes with a height field, from which it derives a **normal map**
+  and an **ORM map** (ambient occlusion + roughness): matte sandstone, worn
+  glossy floor tiles, damp moss.
 
 Everything is embedded in the binary, so no platform loads files at
 runtime. Floors are dressed per seed (which walls are mossy or carved, where
-vines and ferns grow), and shadows are baked into vertex colours.
+vines and ferns grow, where torches burn), and contact shadows are baked into
+vertex colours.
+
+## Light
+
+The player carries a flickering torch, held up and to the right so its light
+rakes across the stonework; up to four wall torches per floor light their
+surroundings. Materials are lit (PBR) with normal and roughness maps, so
+block edges, joints, carvings and floor bevels catch the light as you move.
+Shadows are cool, torchlight is warm. It stays cheap: no shadow maps, a
+handful of point lights, Reinhard tonemapping, all at 320×240.
 
 ## Status
 

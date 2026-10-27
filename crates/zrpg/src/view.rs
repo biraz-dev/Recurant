@@ -34,8 +34,8 @@ const EYE_BACK: f32 = 0.25;
 const FOV_DEGREES: f32 = 60.0;
 const FOG_START: f32 = 0.5;
 const FOG_END: f32 = 5.5;
-/// What distance fades into: a warm dark, as if the torchlight gives out.
-const DARKNESS: Color = Color::srgb(0.06, 0.042, 0.026);
+/// What distance fades into: the dark beyond the torchlight.
+const DARKNESS: Color = Color::srgb(0.035, 0.036, 0.045);
 
 pub struct ViewPlugin;
 
@@ -210,8 +210,16 @@ fn spawn_camera(mut commands: Commands, target: Res<LowResTarget>, run: Res<Run>
             far: FOG_END + 1.0,
             ..default()
         }),
-        Tonemapping::None,
+        // Compress torch highlights instead of clipping them (needs no LUTs).
+        Tonemapping::ReinhardLuminance,
         Msaa::Off,
+        // Torchlit interiors: lights are tuned for indoor exposure.
+        bevy::camera::Exposure { ev100: 6.4 },
+        AmbientLight {
+            color: crate::lighting::AMBIENT_COLOR,
+            brightness: crate::lighting::AMBIENT_BRIGHTNESS,
+            ..default()
+        },
         DistanceFog {
             color: DARKNESS,
             falloff: FogFalloff::Linear {
