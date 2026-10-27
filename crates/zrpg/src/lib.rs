@@ -1,14 +1,18 @@
 //! ZRPG - an RPG for busy people.
 //!
 //! Bevy front-end. All rules live in `zrpg_core`; this crate turns them into
-//! pixels and turns buttons into commands.
+//! pixels and turns buttons into commands. It is a library so each platform
+//! can wrap it in its own entry point: `main.rs` on desktop and the web,
+//! `zrpg_android` on Android.
 
-mod autopilot;
+mod auto;
 mod enemies;
 mod hud;
 mod input;
 mod level;
+mod platform;
 mod screen;
+mod script;
 mod textures;
 mod view;
 
@@ -42,61 +46,47 @@ pub enum Frame {
     Present,
 }
 
-fn main() {
-    let seed = run_seed();
-    App::new()
-        .add_plugins(
-            DefaultPlugins
-                .set(WindowPlugin {
-                    primary_window: Some(Window {
-                        title: "ZRPG".into(),
-                        resolution: WindowResolution::new(screen::WIDTH * 3, screen::HEIGHT * 3),
-                        ..default()
-                    }),
-                    ..default()
-                })
-                .set(ImagePlugin::default_nearest()),
-        )
-        .insert_resource(ClearColor(Color::BLACK))
-        .insert_resource(Run::new(seed))
-        .add_message::<GameEvent>()
-        .configure_sets(
-            Update,
-            (Frame::Command, Frame::Simulate, Frame::Present).chain(),
-        )
-        .add_plugins((
-            screen::ScreenPlugin,
-            input::InputPlugin,
-            level::LevelPlugin,
-            view::ViewPlugin,
-            enemies::EnemiesPlugin,
-            hud::HudPlugin,
-            autopilot::AutopilotPlugin,
-        ))
-        .add_systems(
-            Update,
-            (
-                restart.before(Frame::Command),
-                simulate.in_set(Frame::Simulate),
-            ),
-        )
-        .run();
-}
-
-/// Seed from `--seed N`, else `ZRPG_SEED`, else the clock.
-fn run_seed() -> u64 {
-    let mut args = std::env::args().skip_while(|a| a != "--seed").skip(1);
-    args.next()
-        .or_else(|| std::env::var("ZRPG_SEED").ok())
-        .and_then(|s| s.parse().ok())
-        .unwrap_or_else(clock_seed)
-}
-
-fn clock_seed() -> u64 {
-    std::time::SystemTime::now()
-        .duration_since(std::time::UNIX_EPOCH)
-        .map(|d| d.as_nanos() as u64)
-        .unwrap_or(0)
+/// The whole game, ready to `run()`.
+pub fn app() -> App {
+    let seed = platform::seed_override().unwrap_or_else(platform::clock_seed);
+    let mut app = App::new();
+    app.add_plugins(
+        DefaultPlugins
+            .set(WindowPlugin {
+                primary_window: Some(Window {
+                    title: "ZRPG".into(),
+                    resolution: WindowResolution::new(screen::WIDTH * 3, screen::HEIGHT * 3),
+                    ..platform::window()
+                }),
+                ..default()
+            })
+            .set(ImagePlugin::default_nearest()),
+    )
+    .insert_resource(ClearColor(Color::BLACK))
+    .insert_resource(Run::new(seed))
+    .add_message::<GameEvent>()
+    .configure_sets(
+        Update,
+        (Frame::Command, Frame::Simulate, Frame::Present).chain(),
+    )
+    .add_plugins((
+        screen::ScreenPlugin,
+        input::InputPlugin,
+        level::LevelPlugin,
+        view::ViewPlugin,
+        enemies::EnemiesPlugin,
+        auto::AutoPlugin,
+        hud::HudPlugin,
+        script::ScriptPlugin,
+    ))
+    .add_systems(
+        Update,
+        (
+            restart.before(Frame::Command),
+            simulate.in_set(Frame::Simulate),
+        ),
+    );
+    app
 }
 
 /// Forward core events to Bevy, emptying `buf`.
@@ -118,17 +108,26 @@ fn simulate(
 
 /// Seconds of death before Attack restarts, so a held button can't skip it.
 const DEATH_LINGER: f32 = 0.8;
+/// In auto mode the game picks itself up after this long.
+const AUTO_RESTART: f32 = 2.5;
 
-/// Instant restart on a fresh seed: any time with Restart, or with Attack
-/// once dead.
-fn restart(time: Res<Time>, actions: Res<Actions>, mut run: ResMut<Run>, mut dead_for: Local<f32>) {
+/// Instant restart on a fresh seed: any time with Restart, with Attack once
+/// dead, or by itself in auto mode.
+fn restart(
+    time: Res<Time>,
+    actions: Res<Actions>,
+    auto: Res<auto::AutoMode>,
+    mut run: ResMut<Run>,
+    mut dead_for: Local<f32>,
+) {
     *dead_for = if run.player.is_alive() {
         0.0
     } else {
         *dead_for + time.delta_secs()
     };
-    let rise = *dead_for > DEATH_LINGER && actions.just_pressed(Action::Attack);
+    let rise = (*dead_for > DEATH_LINGER && actions.just_pressed(Action::Attack))
+        || (auto.0 && *dead_for > AUTO_RESTART);
     if actions.just_pressed(Action::Restart) || rise {
-        *run = Run::new(zrpg_core::rng::mix64(run.run_seed ^ clock_seed()));
+        *run = Run::new(zrpg_core::rng::mix64(run.run_seed ^ platform::clock_seed()));
     }
 }

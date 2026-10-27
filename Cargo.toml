@@ -1,6 +1,8 @@
 [workspace]
 resolver = "3"
-members = ["crates/zrpg_core", "crates/zrpg"]
+members = ["crates/zrpg_core", "crates/zrpg", "crates/zrpg_android"]
+# The Android crate is only built for Android (see android/README.md).
+default-members = ["crates/zrpg_core", "crates/zrpg"]
 
 # Keep debug builds playable: optimize dependencies (Bevy), lightly optimize ours.
 [profile.dev]
@@ -8,7 +10,16 @@ opt-level = 1
 
 [profile.dev.package."*"]
 opt-level = 3
+# Nobody steps through Bevy's internals; this keeps target/ small and links fast.
+debug = false
 
 [profile.release]
 codegen-units = 1
 lto = "thin"
+
+# Browser builds: smaller download, still fast.
+[profile.web-release]
+inherits = "release"
+opt-level = "s"
+lto = "fat"
+strip = "debuginfo"

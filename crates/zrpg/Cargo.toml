@@ -9,6 +9,11 @@ description = "ZRPG - an RPG for busy people. Bevy front-end."
 [dependencies]
 zrpg_core = { path = "../zrpg_core" }
 
+# Already in Bevy's web dependency tree; we use them for the clock and URL.
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+js-sys = "0.3"
+web-sys = { version = "0.3", features = ["Window", "Location"] }
+
 # Bevy features are hand-picked to keep compile times, binary size and
 # runtime overhead small. See docs/TOOLCHAIN.md before adding more.
 [dependencies.bevy]
@@ -44,4 +49,5 @@ features = [
   "bevy_ui_render",
   "default_font",
   "png",
+  "webgl2",
 ]

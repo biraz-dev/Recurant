@@ -7,6 +7,7 @@ use std::f32::consts::PI;
 use bevy::prelude::*;
 use zrpg_core::Event;
 
+use crate::auto::AutoMode;
 use crate::view::{PlayerCamera, ScreenFade};
 use crate::{Frame, GameEvent, Run, textures};
 
@@ -37,7 +38,12 @@ impl Plugin for HudPlugin {
             .add_systems(PostStartup, spawn_hud)
             .add_systems(
                 Update,
-                (react_to_events, update_hud, update_transition)
+                (
+                    react_to_events,
+                    update_hud,
+                    update_transition,
+                    update_auto_label,
+                )
                     .chain()
                     .in_set(Frame::Present),
             );
@@ -66,6 +72,8 @@ struct DeathScreen;
 struct FadeOverlay;
 #[derive(Component)]
 struct FloorBanner;
+#[derive(Component)]
+struct AutoLabel;
 
 fn spawn_hud(
     mut commands: Commands,
@@ -116,6 +124,22 @@ fn spawn_hud(
             });
 
             root.spawn((HurtFlash, full(), BackgroundColor(Color::NONE)));
+            root.spawn((
+                AutoLabel,
+                Text::new("AUTO"),
+                TextFont {
+                    font_size: FontSize::Px(10.0),
+                    ..default()
+                },
+                TextColor(Color::srgb(0.95, 0.75, 0.2)),
+                Node {
+                    position_type: PositionType::Absolute,
+                    right: px(6),
+                    top: px(4),
+                    ..default()
+                },
+                Visibility::Hidden,
+            ));
             root.spawn((FadeOverlay, full(), BackgroundColor(Color::NONE)));
             root.spawn(Node {
                 justify_content: JustifyContent::Center,
@@ -284,5 +308,21 @@ fn update_transition(
             text.0 = label;
         }
         color.0 = Color::srgba(0.9, 0.85, 0.75, alpha);
+    }
+}
+
+fn update_auto_label(
+    time: Res<Time>,
+    auto: Res<AutoMode>,
+    mut label: Query<(&mut Visibility, &mut TextColor), With<AutoLabel>>,
+) {
+    for (mut v, mut color) in &mut label {
+        *v = if auto.0 {
+            Visibility::Inherited
+        } else {
+            Visibility::Hidden
+        };
+        let pulse = 0.65 + 0.35 * (time.elapsed_secs() * 3.0).sin().abs();
+        color.0 = Color::srgba(0.95, 0.75, 0.2, pulse);
     }
 }

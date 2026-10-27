@@ -9,6 +9,7 @@ use bevy::pbr::{DistanceFog, FogFalloff};
 use bevy::prelude::*;
 use zrpg_core::{Command, Event, Facing, GridPos, Step, Turn};
 
+use crate::auto::AutoMode;
 use crate::input::{Action, Actions};
 use crate::level::{WALL_HEIGHT, cell_center, grid_dir};
 use crate::screen::{LowResTarget, world_target};
@@ -230,13 +231,14 @@ fn command_for(a: Action) -> Option<Command> {
         Action::StrafeRight => Command::Step(Step::StrafeRight),
         Action::TurnLeft => Command::Turn(Turn::Left),
         Action::TurnRight => Command::Turn(Turn::Right),
-        Action::Attack | Action::Restart => return None,
+        Action::Attack | Action::Restart | Action::Auto => return None,
     })
 }
 
 fn drive_player(
     time: Res<Time>,
     actions: Res<Actions>,
+    auto: Res<AutoMode>,
     mut run: ResMut<Run>,
     mut cams: Query<&mut Animator, With<PlayerCamera>>,
     mut writer: MessageWriter<GameEvent>,
@@ -273,6 +275,13 @@ fn drive_player(
         return;
     }
 
+    // In auto mode the bot decides, through the same paths as a player.
+    let bot = if auto.0 {
+        zrpg_core::auto::next_command(&run)
+    } else {
+        None
+    };
+
     // Attacks don't wait for movement: swinging mid-step feels right.
     // A press is remembered briefly; holding the button keeps swinging.
     if actions.just_pressed(Action::Attack) {
@@ -282,7 +291,8 @@ fn drive_player(
     let ready = run.player.attack_cooldown <= 0.0;
     if ready
         && (anim.attack_buffer > 0.0
-            || (actions.pressed(Action::Attack) && run.player.can_attack()))
+            || (actions.pressed(Action::Attack) && run.player.can_attack())
+            || bot == Some(Command::Attack))
     {
         anim.attack_buffer = 0.0;
         run.apply(Command::Attack, &mut buf);
@@ -300,13 +310,21 @@ fn drive_player(
 
     if !anim.busy() {
         // Holding a direction keeps walking.
-        let next = anim.queued.take().map(|c| (c, false)).or_else(|| {
-            Action::ALL
-                .into_iter()
-                .filter(|a| actions.pressed(*a))
-                .find_map(command_for)
-                .map(|c| (c, true))
-        });
+        let next = anim
+            .queued
+            .take()
+            .map(|c| (c, false))
+            .or_else(|| {
+                Action::ALL
+                    .into_iter()
+                    .filter(|a| actions.pressed(*a))
+                    .find_map(command_for)
+                    .map(|c| (c, true))
+            })
+            .or_else(|| {
+                bot.filter(|c| matches!(c, Command::Step(_) | Command::Turn(_)))
+                    .map(|c| (c, false))
+            });
         if let Some((cmd, from_hold)) = next {
             let first = buf.len();
             run.apply(cmd, &mut buf);

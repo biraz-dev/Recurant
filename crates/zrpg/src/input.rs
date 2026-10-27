@@ -3,6 +3,25 @@
 
 use bevy::prelude::*;
 
+/// Android delivers controller buttons (built-in handheld pads included) as
+/// key events with raw `android.view.KeyEvent` codes; its D-pad arrives as
+/// the arrow keys.
+mod android {
+    use bevy::input::keyboard::{KeyCode, NativeKeyCode};
+
+    const fn code(c: u32) -> KeyCode {
+        KeyCode::Unidentified(NativeKeyCode::Android(c))
+    }
+
+    pub const A: KeyCode = code(96);
+    pub const X: KeyCode = code(99);
+    pub const Y: KeyCode = code(100);
+    pub const L1: KeyCode = code(102);
+    pub const R1: KeyCode = code(103);
+    pub const R2: KeyCode = code(105);
+    pub const SELECT: KeyCode = code(109);
+}
+
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Action {
     Forward,
@@ -13,10 +32,12 @@ pub enum Action {
     TurnRight,
     Attack,
     Restart,
+    /// Toggle auto mode.
+    Auto,
 }
 
 impl Action {
-    pub const ALL: [Action; 8] = [
+    pub const ALL: [Action; 9] = [
         Action::Forward,
         Action::Back,
         Action::StrafeLeft,
@@ -25,6 +46,7 @@ impl Action {
         Action::TurnRight,
         Action::Attack,
         Action::Restart,
+        Action::Auto,
     ];
 
     fn keys(self) -> &'static [KeyCode] {
@@ -32,12 +54,21 @@ impl Action {
         match self {
             Action::Forward => &[KeyW, ArrowUp, Numpad8],
             Action::Back => &[KeyS, ArrowDown, Numpad2],
-            Action::StrafeLeft => &[KeyA, Numpad4],
-            Action::StrafeRight => &[KeyD, Numpad6],
+            Action::StrafeLeft => &[KeyA, Numpad4, android::L1],
+            Action::StrafeRight => &[KeyD, Numpad6, android::R1],
             Action::TurnLeft => &[KeyQ, ArrowLeft, Numpad7],
             Action::TurnRight => &[KeyE, ArrowRight, Numpad9],
-            Action::Attack => &[Space, KeyF, Numpad5, Numpad0],
-            Action::Restart => &[KeyR],
+            Action::Attack => &[
+                Space,
+                KeyF,
+                Numpad5,
+                Numpad0,
+                android::A,
+                android::X,
+                android::R2,
+            ],
+            Action::Restart => &[KeyR, android::SELECT],
+            Action::Auto => &[Tab, android::Y],
         }
     }
 
@@ -52,6 +83,7 @@ impl Action {
             Action::TurnRight => &[DPadRight],
             Action::Attack => &[South, West, RightTrigger2],
             Action::Restart => &[Select],
+            Action::Auto => &[North],
         }
     }
 
@@ -65,7 +97,7 @@ impl Action {
             Action::TurnRight => Some((LeftStickX, 1.0)),
             Action::StrafeLeft => Some((RightStickX, -1.0)),
             Action::StrafeRight => Some((RightStickX, 1.0)),
-            Action::Attack | Action::Restart => None,
+            Action::Attack | Action::Restart | Action::Auto => None,
         }
     }
 }
@@ -79,7 +111,7 @@ const STICK_RELEASE: f32 = 0.4;
 pub struct Actions {
     held: [bool; Action::ALL.len()],
     just: [bool; Action::ALL.len()],
-    /// Action injected by code (autopilot, touch UI later) for one frame.
+    /// Action injected by code (scripts, touch UI later) for one frame.
     injected: Option<Action>,
 }
 

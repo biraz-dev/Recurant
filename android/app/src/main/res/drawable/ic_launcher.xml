@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Placeholder icon: the stairs archway on a dark wall. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path android:fillColor="#3A2E26" android:pathData="M0,0h48v48h-48z" />
+    <path android:fillColor="#8A7864" android:pathData="M11,44V22a13,13 0,0 1,26 0V44z" />
+    <path android:fillColor="#0B0908" android:pathData="M15,44V22a9,9 0,0 1,18 0V44z" />
+    <path android:fillColor="#5E5650" android:pathData="M15,40h18v4h-18z" />
+    <path android:fillColor="#3B3632" android:pathData="M17,36h14v4h-14z" />
+</vector>

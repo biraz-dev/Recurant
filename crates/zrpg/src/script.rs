@@ -1,6 +1,7 @@
-//! Scripted input for headless smoke tests and screenshots.
+//! Scripted input for headless smoke tests and screenshots. (Not to be
+//! confused with auto mode, which plays the game for real.)
 //!
-//! `ZRPG_AUTOPILOT="w w e shot d shot quit"` presses one action per tick
+//! `ZRPG_SCRIPT="w w e shot d shot quit"` presses one action per tick
 //! (`w s a d q e f r`), idles on `wait`, saves `zrpg-N.png` on `shot`, and exits on `quit`.
 //! Does nothing when the variable is unset.
 
@@ -13,13 +14,13 @@ use crate::input::{Action, Actions};
 
 const TICK_SECS: f32 = 0.4;
 
-pub struct AutopilotPlugin;
+pub struct ScriptPlugin;
 
-impl Plugin for AutopilotPlugin {
+impl Plugin for ScriptPlugin {
     fn build(&self, app: &mut App) {
-        if let Ok(script) = std::env::var("ZRPG_AUTOPILOT") {
+        if let Ok(script) = std::env::var("ZRPG_SCRIPT") {
             let steps = script.split_whitespace().map(str::to_owned).collect();
-            app.insert_resource(Autopilot {
+            app.insert_resource(Script {
                 steps,
                 timer: Timer::from_seconds(TICK_SECS, TimerMode::Repeating),
                 shots: 0,
@@ -30,7 +31,7 @@ impl Plugin for AutopilotPlugin {
 }
 
 #[derive(Resource)]
-struct Autopilot {
+struct Script {
     steps: VecDeque<String>,
     timer: Timer,
     shots: u32,
@@ -39,7 +40,7 @@ struct Autopilot {
 fn tick(
     mut commands: Commands,
     time: Res<Time>,
-    mut pilot: ResMut<Autopilot>,
+    mut pilot: ResMut<Script>,
     mut actions: ResMut<Actions>,
     mut exit: MessageWriter<AppExit>,
     run: Res<crate::Run>,
@@ -58,11 +59,12 @@ fn tick(
         "q" => Action::TurnLeft,
         "e" => Action::TurnRight,
         "f" => Action::Attack,
+        "auto" => Action::Auto,
         "r" => Action::Restart,
         "shot" => {
             let path = format!("zrpg-{}.png", pilot.shots);
             info!(
-                "autopilot: {path} at {:?} facing {:?}",
+                "script: {path} at {:?} facing {:?}",
                 run.player.pos, run.player.facing
             );
             pilot.shots += 1;
@@ -77,7 +79,7 @@ fn tick(
             return;
         }
         other => {
-            warn!("autopilot: unknown step {other:?}");
+            warn!("script: unknown step {other:?}");
             return;
         }
     };

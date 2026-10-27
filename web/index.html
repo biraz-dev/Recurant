@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZRPG</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #000; }
+    main { position: fixed; inset: 0; }
+    canvas { display: block; width: 100%; height: 100%; outline: none; }
+    #status {
+      position: absolute; inset: 0; display: grid; place-items: center;
+      color: #c9bfae; font: 16px/1.4 monospace; pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <canvas id="zrpg" tabindex="0"></canvas>
+    <div id="status">Loading…</div>
+  </main>
+  <script type="module">
+    import init from "./zrpg.js";
+
+    const canvas = document.getElementById("zrpg");
+    const status = document.getElementById("status");
+    // Keyboard input goes to the canvas, so keep it focused.
+    canvas.addEventListener("pointerdown", () => canvas.focus());
+    canvas.focus();
+
+    try {
+      await init();
+      status.remove();
+    } catch (e) {
+      // winit leaves its startup via a deliberate exception once the game
+      // loop is running; that one means success.
+      if (String(e).includes("Using exceptions for control flow")) {
+        status.remove();
+      } else {
+        status.textContent = "ZRPG could not start: " + e;
+        throw e;
+      }
+    }
+  </script>
+</body>
+</html>

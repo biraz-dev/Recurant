@@ -10,7 +10,10 @@
 #![no_std]
 
 extern crate alloc;
+#[cfg(test)]
+extern crate std;
 
+pub mod auto;
 pub mod dungeon;
 pub mod enemy;
 pub mod game;
