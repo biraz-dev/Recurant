@@ -130,45 +130,6 @@ pub fn arch() -> Image {
     })
 }
 
-/// A slime: a squat dome with a highlight, two eyes and a mouth.
-pub fn slime() -> Image {
-    build_rgba(SIZE, SIZE, 7, |x, y, n| {
-        let (fx, fy) = (x as f32 + 0.5, y as f32 + 0.5);
-        // Dome: half-ellipse sitting on the bottom edge.
-        let (dx, dy) = ((fx - 16.0) / 14.0, (fy - 31.0) / 22.0);
-        let r = dx * dx + dy * dy;
-        if r > 1.0 || fy > 31.0 {
-            return None;
-        }
-        let eye = |cx: f32| {
-            let d = (fx - cx).powi(2) + (fy - 18.0).powi(2);
-            if d < 2.0 {
-                Some([10, 14, 10])
-            } else if d < 7.0 {
-                Some([236, 240, 220])
-            } else {
-                None
-            }
-        };
-        if let Some(c) = eye(11.0).or_else(|| eye(21.0)) {
-            return Some(c);
-        }
-        if (fy - 24.5).abs() < 1.0 && (fx - 16.0).abs() < 4.0 {
-            return Some([20, 40, 18]);
-        }
-        let highlight = (fx - 10.0).powi(2) + (fy - 13.0).powi(2) < 6.0;
-        let rim = r > 0.82;
-        let k = if highlight {
-            1.5
-        } else if rim {
-            0.6
-        } else {
-            1.0 + n * 0.06
-        };
-        Some(shade([84, 168, 72], k * (0.8 + (1.0 - fy / 32.0) * 0.4)))
-    })
-}
-
 /// The player's sword, held point-up, for the first-person hand overlay.
 pub const SWORD_SIZE: (u32, u32) = (16, 48);
 

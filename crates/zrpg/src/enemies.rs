@@ -4,14 +4,20 @@
 
 use std::f32::consts::PI;
 
+use bevy::asset::RenderAssetUsages;
+use bevy::image::{CompressedImageFormats, ImageSampler, ImageType};
 use bevy::prelude::*;
 use zrpg_core::{EnemyId, Event};
 
 use crate::level::cell_center;
 use crate::view::PlayerCamera;
-use crate::{Frame, GameEvent, Run, textures};
+use crate::{Frame, GameEvent, Run};
 
-const SPRITE_SIZE: f32 = 0.7;
+/// The zombie, made from `art/zombie-reference.png` by `tools/make_sprite.py`.
+/// Embedded so no platform has to load files at runtime.
+const ZOMBIE_PNG: &[u8] = include_bytes!("../assets/zombie.png");
+/// Standing height in world units (walls are 1.0).
+const SPRITE_HEIGHT: f32 = 0.95;
 /// Slightly longer than the core's step interval would allow, so motion
 /// reads as a deliberate shuffle rather than a teleport.
 const STEP_ANIM_SECS: f32 = 0.3;
@@ -36,6 +42,7 @@ impl Plugin for EnemiesPlugin {
 struct EnemyAssets {
     mesh: Handle<Mesh>,
     texture: Handle<Image>,
+    height: f32,
 }
 
 #[derive(Component)]
@@ -50,6 +57,8 @@ struct EnemySprite {
     flash: f32,
     lunge: f32,
     dying: Option<f32>,
+    /// Steps taken so far; alternates the lurch from side to side.
+    steps: u32,
     material: Handle<StandardMaterial>,
 }
 
@@ -69,9 +78,20 @@ fn load_assets(
     mut meshes: ResMut<Assets<Mesh>>,
     mut images: ResMut<Assets<Image>>,
 ) {
+    let image = Image::from_buffer(
+        ZOMBIE_PNG,
+        ImageType::Extension("png"),
+        CompressedImageFormats::NONE,
+        true,
+        ImageSampler::Default,
+        RenderAssetUsages::RENDER_WORLD,
+    )
+    .expect("embedded zombie sprite is a valid PNG");
+    let aspect = image.width() as f32 / image.height() as f32;
     commands.insert_resource(EnemyAssets {
-        mesh: meshes.add(Rectangle::new(SPRITE_SIZE, SPRITE_SIZE)),
-        texture: images.add(textures::slime()),
+        mesh: meshes.add(Rectangle::new(SPRITE_HEIGHT * aspect, SPRITE_HEIGHT)),
+        texture: images.add(image),
+        height: SPRITE_HEIGHT,
     });
 }
 
@@ -111,6 +131,7 @@ fn sync_roster(
                 flash: 0.0,
                 lunge: 0.0,
                 dying: None,
+                steps: 0,
                 material: material.clone(),
             },
             Mesh3d(assets.mesh.clone()),
@@ -137,6 +158,7 @@ fn react_to_events(mut events: MessageReader<GameEvent>, mut sprites: Query<&mut
                 s.from = s.ground();
                 s.to = cell_center(to);
                 s.move_t = 0.0;
+                s.steps += 1;
             }
             Event::EnemyHurt { .. } => s.flash = FLASH_SECS,
             Event::EnemyStruck { .. } => s.lunge = LUNGE_SECS,
@@ -153,6 +175,7 @@ fn animate(
     cams: Query<&Transform, (With<PlayerCamera>, Without<EnemySprite>)>,
     mut sprites: Query<(Entity, &mut EnemySprite, &mut Transform)>,
     mut materials: ResMut<Assets<StandardMaterial>>,
+    assets: Res<EnemyAssets>,
 ) {
     let Ok(cam) = cams.single() else {
         return;
@@ -178,25 +201,33 @@ fn animate(
         let ground = s.ground();
         let toward = (player - ground).normalize_or_zero();
         let lunge = (s.lunge / LUNGE_SECS * PI).sin().max(0.0);
-        // Idle squish, wind-up swell, strike lunge.
-        let phase = now * 4.0 + s.id as f32 * 1.7;
-        let mut sy = 1.0 + 0.05 * phase.sin() + 0.15 * s.wind;
-        let mut sx = 1.0 - 0.04 * phase.sin() + 0.1 * s.wind;
-        let mut pos = ground + toward * (0.08 * s.wind + 0.3 * lunge);
+        // A slow sway, a lurch to alternating sides on each step, rearing up
+        // during the wind-up, and a lunge when the blow lands.
+        let phase = now * 1.6 + s.id as f32 * 1.7;
+        let step_t = (s.move_t / STEP_ANIM_SECS).min(1.0);
+        let side = if s.steps % 2 == 0 { 1.0 } else { -1.0 };
+        let mut roll = 0.035 * phase.sin() + side * 0.09 * (step_t * PI).sin();
+        let mut sy = 1.0 + 0.012 * (phase * 2.0).sin() + 0.07 * s.wind;
+        let mut sx = 1.0 + 0.04 * s.wind;
+        let feet = ground + toward * (0.06 * s.wind + 0.3 * lunge);
 
         if let Some(d) = s.dying.as_mut() {
             *d += dt;
             let k = (*d / DIE_SECS).min(1.0);
-            sy *= 1.0 - k;
-            sx *= 1.0 + 0.6 * k;
+            // Collapse into a heap of bones.
+            sy *= 1.0 - k * k;
+            sx *= 1.0 + 0.35 * k;
+            roll *= 1.0 - k;
             if k >= 1.0 {
                 commands.entity(entity).despawn();
                 continue;
             }
         }
-        pos.y = SPRITE_SIZE * 0.5 * sy;
-        *t = Transform::from_translation(pos)
-            .with_rotation(facing)
+        // Pivot at the feet so swaying never lifts them off the floor.
+        let rotation = facing * Quat::from_rotation_z(roll);
+        let center = feet + rotation * Vec3::Y * (assets.height * 0.5 * sy);
+        *t = Transform::from_translation(center)
+            .with_rotation(rotation)
             .with_scale(Vec3::new(sx, sy, 1.0));
 
         // Tint: red on hit, hot orange while winding up.
