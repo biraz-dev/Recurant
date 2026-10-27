@@ -13,6 +13,9 @@ use crate::Run;
 use crate::textures;
 
 pub const WALL_HEIGHT: f32 = 1.0;
+/// Stairs: a pit of steps going down under the far wall.
+const STAIR_STEPS: usize = 4;
+const STAIR_DROP: f32 = 0.1;
 
 pub struct LevelPlugin;
 
@@ -29,6 +32,7 @@ struct LevelMaterials {
     floor: Handle<StandardMaterial>,
     ceiling: Handle<StandardMaterial>,
     stairs: Handle<StandardMaterial>,
+    arch: Handle<StandardMaterial>,
 }
 
 /// Parent of all geometry for the current floor.
@@ -55,6 +59,7 @@ fn load_materials(
         floor: make(textures::floor()),
         ceiling: make(textures::ceiling()),
         stairs: make(textures::stairs()),
+        arch: make(textures::arch()),
     });
 }
 
@@ -75,7 +80,7 @@ fn rebuild_level(
         commands.entity(entity).despawn();
     }
 
-    let geo = LevelGeometry::build(&run.floor.map);
+    let geo = LevelGeometry::build(&run.floor.map, run.floor.stairs_dir);
     commands
         .spawn((
             LevelRoot {
@@ -91,6 +96,7 @@ fn rebuild_level(
                 (geo.floors, &mats.floor),
                 (geo.ceilings, &mats.ceiling),
                 (geo.stairs, &mats.stairs),
+                (geo.arch, &mats.arch),
             ] {
                 if !builder.is_empty() {
                     parent.spawn((
@@ -127,11 +133,21 @@ impl QuadBuilder {
     /// Corners counter-clockwise as seen from the front:
     /// bottom-left, bottom-right, top-right, top-left.
     fn quad(&mut self, corners: [Vec3; 4], brightness: f32) {
+        self.quad_uv(
+            corners,
+            [[0., 1.], [1., 1.], [1., 0.], [0., 0.]],
+            brightness,
+        );
+    }
+
+    /// Like [`quad`](Self::quad) with explicit texture coordinates, so thin
+    /// faces (steps, risers) show a slice of the texture instead of a squash.
+    fn quad_uv(&mut self, corners: [Vec3; 4], uvs: [[f32; 2]; 4], brightness: f32) {
         let normal = (corners[1] - corners[0])
             .cross(corners[2] - corners[0])
             .normalize();
         let base = self.positions.len() as u32;
-        for (corner, uv) in corners.iter().zip([[0., 1.], [1., 1.], [1., 0.], [0., 0.]]) {
+        for (corner, uv) in corners.iter().zip(uvs) {
             self.positions.push(corner.to_array());
             self.normals.push(normal.to_array());
             self.uvs.push(uv);
@@ -160,10 +176,12 @@ struct LevelGeometry {
     floors: QuadBuilder,
     ceilings: QuadBuilder,
     stairs: QuadBuilder,
+    /// The wall the stairs lead under.
+    arch: QuadBuilder,
 }
 
 impl LevelGeometry {
-    fn build(map: &Map) -> Self {
+    fn build(map: &Map, stairs_dir: Facing) -> Self {
         let mut geo = LevelGeometry::default();
         let h = WALL_HEIGHT;
         for p in map.positions().filter(|&p| map.is_walkable(p)) {
@@ -177,7 +195,7 @@ impl LevelGeometry {
                 Vec3::new(x0, 0., z0),
             ];
             match map.get(p) {
-                Tile::StairsDown => geo.stairs.quad(floor, 1.0),
+                Tile::StairsDown => geo.add_stairs(p, stairs_dir),
                 _ => geo.floors.quad(floor, 1.0),
             }
             geo.ceilings.quad(
@@ -199,13 +217,87 @@ impl LevelGeometry {
                 let right = grid_dir(dir.right());
                 let center = cell_center(p) + forward * 0.5;
                 let (l, r) = (center - right * 0.5, center + right * 0.5);
-                geo.walls.quad(
+                let builder = if map.get(p) == Tile::StairsDown && dir == stairs_dir {
+                    &mut geo.arch
+                } else {
+                    &mut geo.walls
+                };
+                builder.quad(
                     [l, r, r + Vec3::Y * h, l + Vec3::Y * h],
                     face_brightness(dir),
                 );
             }
         }
         geo
+    }
+
+    /// Steps descending along `dir`, with pit walls on both sides and a
+    /// black opening at the bottom.
+    fn add_stairs(&mut self, p: GridPos, dir: Facing) {
+        let (f, r) = (grid_dir(dir), grid_dir(dir.right()));
+        let c = cell_center(p);
+        // Cell-local point: `along` runs -0.5 (entry) to 0.5 (far edge).
+        let at = |along: f32, side: f32, y: f32| c + f * along + r * side + Vec3::Y * y;
+        let n = STAIR_STEPS as f32;
+        for k in 0..STAIR_STEPS {
+            let (a0, a1) = (k as f32 / n - 0.5, (k + 1) as f32 / n - 0.5);
+            let (v0, v1) = (k as f32 / n, (k + 1) as f32 / n);
+            let top = -(k as f32) * STAIR_DROP;
+            let y = top - STAIR_DROP;
+            // Deeper steps are darker, as if the light gives out.
+            let light = 1.0 - 0.18 * k as f32;
+            self.stairs.quad_uv(
+                [
+                    at(a0, -0.5, y),
+                    at(a0, 0.5, y),
+                    at(a1, 0.5, y),
+                    at(a1, -0.5, y),
+                ],
+                [[0., v1], [1., v1], [1., v0], [0., v0]],
+                light,
+            );
+            self.stairs.quad_uv(
+                [
+                    at(a0, -0.5, y),
+                    at(a0, 0.5, y),
+                    at(a0, 0.5, top),
+                    at(a0, -0.5, top),
+                ],
+                [[0., v1], [1., v1], [1., v1 - 0.1], [0., v1 - 0.1]],
+                light * 0.7,
+            );
+            let side = face_brightness(dir.right()) * light;
+            self.walls.quad_uv(
+                [
+                    at(a0, -0.5, y),
+                    at(a1, -0.5, y),
+                    at(a1, -0.5, 0.),
+                    at(a0, -0.5, 0.),
+                ],
+                [[v0, -y], [v1, -y], [v1, 0.], [v0, 0.]],
+                side,
+            );
+            self.walls.quad_uv(
+                [
+                    at(a1, 0.5, y),
+                    at(a0, 0.5, y),
+                    at(a0, 0.5, 0.),
+                    at(a1, 0.5, 0.),
+                ],
+                [[v1, -y], [v0, -y], [v0, 0.], [v1, 0.]],
+                side,
+            );
+        }
+        let bottom = -n * STAIR_DROP;
+        self.stairs.quad(
+            [
+                at(0.5, -0.5, bottom),
+                at(0.5, 0.5, bottom),
+                at(0.5, 0.5, 0.),
+                at(0.5, -0.5, 0.),
+            ],
+            0.0,
+        );
     }
 }
 
@@ -228,7 +320,7 @@ mod tests {
     fn wall_faces_point_into_their_cell() {
         let mut map = Map::filled(3, 3, Tile::Wall);
         map.set(GridPos::new(1, 1), Tile::Floor);
-        let geo = LevelGeometry::build(&map);
+        let geo = LevelGeometry::build(&map, Facing::North);
         assert_eq!(geo.walls.indices.len(), 4 * 6);
         let center = cell_center(GridPos::new(1, 1)) + Vec3::Y * 0.5;
         for quad in 0..4 {
@@ -239,5 +331,37 @@ mod tests {
         }
         assert_eq!(geo.floors.normals[0], [0.0, 1.0, 0.0]);
         assert_eq!(geo.ceilings.normals[0], [0.0, -1.0, 0.0]);
+    }
+
+    #[test]
+    fn stairs_lead_away_and_replace_the_floor() {
+        // A dead end entered from the south: the steps go down northwards.
+        let mut map = Map::filled(3, 4, Tile::Wall);
+        map.set(GridPos::new(1, 1), Tile::StairsDown);
+        map.set(GridPos::new(1, 2), Tile::Floor);
+        let geo = LevelGeometry::build(&map, Facing::North);
+        assert_eq!(
+            geo.floors.indices.len(),
+            6,
+            "only the corridor cell has a floor"
+        );
+        // Treads face up; risers face back towards the entrance (+Z).
+        assert_eq!(geo.stairs.normals[0], [0.0, 1.0, 0.0]);
+        assert_eq!(geo.stairs.normals[4], [0.0, 0.0, 1.0]);
+        let lowest = geo
+            .stairs
+            .positions
+            .iter()
+            .map(|p| p[1])
+            .fold(0.0, f32::min);
+        assert!((lowest + STAIR_STEPS as f32 * STAIR_DROP).abs() < 1e-5);
+        assert_eq!(geo.arch.indices.len(), 6, "an arch on the north wall");
+        assert_eq!(geo.arch.normals[0], [0.0, 0.0, 1.0]);
+        // Every pit wall faces into the stairs cell.
+        let center = cell_center(GridPos::new(1, 1));
+        for (pos, n) in geo.walls.positions.iter().zip(&geo.walls.normals) {
+            let to_center = center - Vec3::from(*pos);
+            assert!(Vec3::from(*n).dot(to_center) > 0.0);
+        }
     }
 }

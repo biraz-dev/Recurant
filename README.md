@@ -50,6 +50,13 @@ glows orange) before it strikes:
 Health (red bar) does not regenerate. Reach zero and you die; press Attack to
 rise again in a fresh dungeon.
 
+## Going deeper
+
+Every floor has one staircase, as far from the start as the floor allows,
+marked by an archway over steps leading down. Walk onto it to descend; there
+is no button to press. Each new floor heals 5 Health. Floors never run out,
+and a seed always produces the same sequence of floors.
+
 ## Layout
 
 ```
@@ -74,7 +81,7 @@ cargo run -p zrpg_core --example ascii 7     # print generated floors as ASCII
 ZRPG_AUTOPILOT="w e shot quit" cargo run     # scripted input + screenshot (zrpg-0.png)
 ```
 
-## Status: Vertical Slice 0.1
+## Status: Vertical Slice 0.1 (complete)
 
 - [x] Connected, seeded 12×12 floors (rooms + corridors)
 - [x] First-person walls, floors, ceilings at 320×240
@@ -82,7 +89,7 @@ ZRPG_AUTOPILOT="w e shot quit" cargo run     # scripted input + screenshot (zrpg
 - [x] Keyboard and gamepad
 - [x] Billboard enemy that approaches and attacks
 - [x] Player attack, Health and Energy HUD
-- [ ] Stairs to the next floor (stairs are generated and drawn, not yet usable)
+- [x] Stairs to the next floor
 - [x] Death and instant restart
 
 ## License

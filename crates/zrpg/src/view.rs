@@ -23,6 +23,9 @@ const ATTACK_BUFFER_SECS: f32 = 0.25;
 const SHAKE_SECS: f32 = 0.25;
 const SHAKE_SIZE: f32 = 0.04;
 const DEATH_SECS: f32 = 0.7;
+/// Fade to black while sinking down the stairs, then fade the new floor in.
+const DESCEND_SECS: f32 = 0.45;
+const ARRIVE_SECS: f32 = 0.4;
 pub const EYE_HEIGHT: f32 = WALL_HEIGHT * 0.5;
 /// Stand a little behind the cell centre so the side walls of the current
 /// cell stay in view, as in the classics.
@@ -36,6 +39,7 @@ pub struct ViewPlugin;
 impl Plugin for ViewPlugin {
     fn build(&self, app: &mut App) {
         app.add_systems(Startup, spawn_camera)
+            .init_resource::<ScreenFade>()
             .add_systems(Update, drive_player.in_set(Frame::Command))
             .add_systems(
                 Update,
@@ -48,6 +52,10 @@ impl Plugin for ViewPlugin {
 
 #[derive(Component)]
 pub struct PlayerCamera;
+
+/// How black the screen is (0 = clear, 1 = black), for floor transitions.
+#[derive(Resource, Default)]
+pub struct ScreenFade(pub f32);
 
 /// Camera pose: position on the grid plane and yaw in radians (unwrapped, so
 /// turning never takes the long way round).
@@ -91,6 +99,10 @@ struct Animator {
     shake: f32,
     /// Seconds since death, if dead.
     dead_for: Option<f32>,
+    /// Seconds into the walk down the stairs, if taking them.
+    descending: Option<f32>,
+    /// Seconds since this floor (or run) began.
+    arrived_for: f32,
     /// Which run/floor `rest` belongs to; a mismatch snaps the camera.
     synced_to: (u64, u32),
 }
@@ -106,6 +118,8 @@ impl Animator {
             attack_buffer: 0.0,
             shake: 0.0,
             dead_for: None,
+            descending: None,
+            arrived_for: 0.0,
             synced_to,
         }
     }
@@ -138,6 +152,12 @@ impl Animator {
         }
     }
 
+    fn fade(&self) -> f32 {
+        let out = self.descending.map_or(0.0, |d| d / DESCEND_SECS);
+        let arrive = 1.0 - self.arrived_for / ARRIVE_SECS;
+        out.max(arrive).clamp(0.0, 1.0)
+    }
+
     fn transform(&self, time: f32) -> Transform {
         let pose = self.pose();
         let yaw = Quat::from_rotation_y(pose.yaw);
@@ -152,6 +172,12 @@ impl Animator {
             let e = ease((d / DEATH_SECS).min(1.0));
             eye.y -= EYE_HEIGHT * 0.7 * e;
             rot *= Quat::from_rotation_z(0.5 * e) * Quat::from_rotation_x(-0.25 * e);
+        }
+        // Descending: sink and look down the steps.
+        if let Some(d) = self.descending {
+            let e = ease((d / DESCEND_SECS).min(1.0));
+            eye.y -= EYE_HEIGHT * 0.6 * e;
+            rot *= Quat::from_rotation_x(-0.4 * e);
         }
         Transform::from_translation(eye).with_rotation(rot)
     }
@@ -228,6 +254,22 @@ fn drive_player(
         return;
     }
     if !run.player.is_alive() {
+        anim.descending = None;
+        return;
+    }
+
+    anim.elapsed += dt;
+    if anim.busy() && anim.elapsed >= anim.duration {
+        anim.motion = Motion::Idle;
+    }
+
+    // On the stairs: input is ignored until the fade completes, then down.
+    if let Some(d) = anim.descending.as_mut() {
+        *d += dt;
+        if *d >= DESCEND_SECS {
+            run.apply(Command::Descend, &mut buf);
+            publish(&mut buf, &mut writer);
+        }
         return;
     }
 
@@ -256,10 +298,6 @@ fn drive_player(
         anim.queued = Some(cmd);
     }
 
-    anim.elapsed += dt;
-    if anim.busy() && anim.elapsed >= anim.duration {
-        anim.motion = Motion::Idle;
-    }
     if !anim.busy() {
         // Holding a direction keeps walking.
         let next = anim.queued.take().map(|c| (c, false)).or_else(|| {
@@ -273,6 +311,10 @@ fn drive_player(
             let first = buf.len();
             run.apply(cmd, &mut buf);
             start_motion(&mut anim, &buf[first..], from_hold);
+            // Stepping onto the stairs takes them; no extra button needed.
+            if run.on_stairs() {
+                anim.descending = Some(0.0);
+            }
         }
     }
     publish(&mut buf, &mut writer);
@@ -327,6 +369,7 @@ fn react_to_events(
     };
     let dt = time.delta_secs();
     anim.shake = (anim.shake - dt).max(0.0);
+    anim.arrived_for += dt;
     if let Some(d) = anim.dead_for.as_mut() {
         *d += dt;
     }
@@ -341,9 +384,11 @@ fn react_to_events(
 
 fn animate_camera(
     time: Res<Time>,
+    mut fade: ResMut<ScreenFade>,
     mut cams: Query<(&Animator, &mut Transform), With<PlayerCamera>>,
 ) {
     for (anim, mut t) in &mut cams {
         *t = anim.transform(time.elapsed_secs());
+        fade.0 = anim.fade();
     }
 }

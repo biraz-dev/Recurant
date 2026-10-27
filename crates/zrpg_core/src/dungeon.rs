@@ -61,6 +61,9 @@ pub struct Floor {
     pub start: GridPos,
     pub start_facing: Facing,
     pub stairs: GridPos,
+    /// The way the steps lead down: the direction you face when walking onto
+    /// them from the side nearest the start.
+    pub stairs_dir: Facing,
     /// Where this floor's enemies start. Never the start or stairs cell.
     pub enemy_spawns: Vec<GridPos>,
 }
@@ -100,6 +103,7 @@ pub fn generate(seed: u64, params: &GenParams) -> Floor {
     let start = rooms[0].center();
     let stairs = farthest_cell(&map, start);
     map.set(stairs, Tile::StairsDown);
+    let stairs_dir = approach_dir(&map, start, stairs);
     let start_facing = most_open_facing(&map, start);
     let enemy_spawns = pick_enemy_spawns(&map, &mut rng, start, stairs, params.enemies);
 
@@ -108,6 +112,7 @@ pub fn generate(seed: u64, params: &GenParams) -> Floor {
         start,
         start_facing,
         stairs,
+        stairs_dir,
         enemy_spawns,
     }
 }
@@ -173,6 +178,17 @@ fn farthest_cell(map: &Map, from: GridPos) -> GridPos {
         .max_by_key(|&(d, p)| (d, -p.y, -p.x))
         .map(|(_, p)| p)
         .unwrap_or(from)
+}
+
+/// Direction of travel when entering `to` from its neighbour closest to `from`.
+fn approach_dir(map: &Map, from: GridPos, to: GridPos) -> Facing {
+    let dist = map.distances(from);
+    Facing::ALL
+        .into_iter()
+        .filter_map(|d| dist[map.index(to + d.back())].map(|n| (n, d)))
+        .min_by_key(|&(n, d)| (n, d as i32))
+        .map(|(_, d)| d)
+        .unwrap_or_default()
 }
 
 /// Spawn cells a fair walk from the start: the player gets a moment to
@@ -265,6 +281,11 @@ mod tests {
             );
             assert!(walkable_count(m) >= 8, "seed {seed}: floor too cramped");
             assert_eq!(f.enemy_spawns.len(), 1, "seed {seed}");
+            let entry = f.stairs + f.stairs_dir.back();
+            assert!(
+                m.is_walkable(entry),
+                "seed {seed}: stairs entered from a wall"
+            );
             for &e in &f.enemy_spawns {
                 assert!(
                     m.is_walkable(e) && e != f.start && e != f.stairs,

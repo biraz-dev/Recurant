@@ -7,7 +7,7 @@ use std::f32::consts::PI;
 use bevy::prelude::*;
 use zrpg_core::Event;
 
-use crate::view::PlayerCamera;
+use crate::view::{PlayerCamera, ScreenFade};
 use crate::{Frame, GameEvent, Run, textures};
 
 const BAR_WIDTH: f32 = 64.0;
@@ -18,6 +18,8 @@ const EXHAUSTED_COLOR: Color = Color::srgb(1.0, 1.0, 1.0);
 const SWING_SECS: f32 = 0.22;
 const HURT_FLASH_SECS: f32 = 0.3;
 const EXHAUSTED_FLASH_SECS: f32 = 0.3;
+/// How long the "FLOOR N" banner stays up after descending.
+const BANNER_SECS: f32 = 1.6;
 /// Sword rest position (from the bottom-right corner), in low-res pixels.
 const SWORD_RIGHT: f32 = 36.0;
 const SWORD_BOTTOM: f32 = -60.0;
@@ -35,7 +37,9 @@ impl Plugin for HudPlugin {
             .add_systems(PostStartup, spawn_hud)
             .add_systems(
                 Update,
-                (react_to_events, update_hud).chain().in_set(Frame::Present),
+                (react_to_events, update_hud, update_transition)
+                    .chain()
+                    .in_set(Frame::Present),
             );
     }
 }
@@ -45,6 +49,7 @@ struct HudFx {
     swing: f32,
     hurt: f32,
     exhausted: f32,
+    banner: f32,
 }
 
 #[derive(Component)]
@@ -57,6 +62,10 @@ struct Sword;
 struct HurtFlash;
 #[derive(Component)]
 struct DeathScreen;
+#[derive(Component)]
+struct FadeOverlay;
+#[derive(Component)]
+struct FloorBanner;
 
 fn spawn_hud(
     mut commands: Commands,
@@ -107,6 +116,23 @@ fn spawn_hud(
             });
 
             root.spawn((HurtFlash, full(), BackgroundColor(Color::NONE)));
+            root.spawn((FadeOverlay, full(), BackgroundColor(Color::NONE)));
+            root.spawn(Node {
+                justify_content: JustifyContent::Center,
+                top: px(40),
+                ..full()
+            })
+            .with_children(|row| {
+                row.spawn((
+                    FloorBanner,
+                    Text::new(""),
+                    TextFont {
+                        font_size: FontSize::Px(16.0),
+                        ..default()
+                    },
+                    TextColor(Color::NONE),
+                ));
+            });
 
             root.spawn((
                 DeathScreen,
@@ -173,6 +199,7 @@ fn react_to_events(mut events: MessageReader<GameEvent>, mut fx: ResMut<HudFx>) 
             Event::Swung { .. } => fx.swing = SWING_SECS,
             Event::EnemyStruck { damage, .. } if *damage > 0 => fx.hurt = HURT_FLASH_SECS,
             Event::Exhausted => fx.exhausted = EXHAUSTED_FLASH_SECS,
+            Event::Descended { .. } => fx.banner = BANNER_SECS,
             _ => {}
         }
     }
@@ -234,5 +261,28 @@ fn update_hud(
         } else {
             Visibility::Inherited
         };
+    }
+}
+
+fn update_transition(
+    time: Res<Time>,
+    run: Res<Run>,
+    fade: Res<ScreenFade>,
+    mut fx: ResMut<HudFx>,
+    mut overlay: Query<&mut BackgroundColor, With<FadeOverlay>>,
+    mut banner: Query<(&mut Text, &mut TextColor), With<FloorBanner>>,
+) {
+    fx.banner = (fx.banner - time.delta_secs()).max(0.0);
+    for mut c in &mut overlay {
+        c.0 = Color::srgba(0.0, 0.0, 0.0, fade.0);
+    }
+    // Hold, then fade out over the last half second.
+    let alpha = (fx.banner / 0.5).min(1.0);
+    for (mut text, mut color) in &mut banner {
+        let label = format!("FLOOR {}", run.depth);
+        if text.0 != label {
+            text.0 = label;
+        }
+        color.0 = Color::srgba(0.9, 0.85, 0.75, alpha);
     }
 }

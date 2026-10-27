@@ -86,16 +86,47 @@ pub fn ceiling() -> Image {
     })
 }
 
-/// Steps descending into darkness, drawn on the floor.
+/// Dressed stone for steps: four 8-pixel courses, each with a worn bright
+/// nosing and a shadowed back edge.
 pub fn stairs() -> Image {
-    build(6, |_x, y, n| {
-        let step = y / 5; // 0 = far end (darkest)
-        if step >= 6 {
-            return shade([78, 76, 82], 0.9 + n * 0.08);
+    build(6, |x, y, n| {
+        let course = y / 8;
+        let block = noise(9, (x + course * 8) / 16, course);
+        let k = match y % 8 {
+            7 => 1.35,
+            0 => 0.6,
+            _ => 1.0,
+        };
+        let seam = if (x + course * 8) % 16 == 0 { 0.7 } else { 1.0 };
+        shade([104, 98, 92], (0.9 + block * 0.08 + n * 0.06) * k * seam)
+    })
+}
+
+/// The wall the stairs lead under: bricks around a dark arched passage.
+pub fn arch() -> Image {
+    let bricks = wall();
+    let data = bricks.data.as_deref().unwrap_or_default();
+    build(10, |x, y, n| {
+        // Opening: 20px wide, straight sides up to y=14, round top above.
+        let (fx, fy) = (x as f32 + 0.5 - 16.0, y as f32 + 0.5);
+        let r = (fx * fx + (fy - 14.0).powi(2)).sqrt();
+        let inside = fx.abs() < 10.0 && (fy > 14.0 || r < 10.0);
+        let ring = !inside && fx.abs() < 13.0 && (fy > 14.0 || r < 13.0);
+        if inside {
+            // Darker towards the middle and bottom: the passage drops away.
+            let depth = (1.0 - fx.abs() / 10.0) * 0.6 + fy / 32.0 * 0.4;
+            return shade([40, 34, 30], (1.0 - depth) * 0.5 + n * 0.03);
         }
-        let lit = step as f32 / 6.0;
-        let lip = if y % 5 == 4 { 1.3 } else { 1.0 };
-        shade([96, 90, 84], (0.15 + lit * 0.7) * lip + n * 0.04)
+        if ring {
+            let k = if r > 12.0 || fx.abs() > 12.0 {
+                0.6
+            } else {
+                1.0
+            };
+            return shade([138, 120, 100], k + n * 0.06);
+        }
+        let i = ((y * SIZE + x) * 4) as usize;
+        [data[i], data[i + 1], data[i + 2]]
     })
 }
 

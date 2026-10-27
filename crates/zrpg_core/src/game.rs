@@ -9,6 +9,7 @@ use alloc::vec::Vec;
 use crate::dungeon::{Floor, GenParams};
 use crate::enemy::{Enemy, EnemyId, EnemyState, tuning as enemy_tuning};
 use crate::grid::{Facing, GridPos, Step, Turn};
+use crate::map::Tile;
 use crate::rng::{Rng, mix64};
 
 /// Player tuning, in seconds, hit points and energy points.
@@ -21,6 +22,8 @@ pub mod tuning {
     pub const ATTACK_COOLDOWN: f32 = 0.5;
     pub const DAMAGE_MIN: i32 = 2;
     pub const DAMAGE_MAX: i32 = 4;
+    /// Health restored on reaching a new floor: a small reward for pressing on.
+    pub const DESCEND_HEAL: i32 = 5;
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -28,6 +31,8 @@ pub enum Command {
     Step(Step),
     Turn(Turn),
     Attack,
+    /// Take the stairs down. Only works while standing on them.
+    Descend,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -78,6 +83,10 @@ pub enum Event {
         at: GridPos,
     },
     PlayerDied,
+    /// Arrived on a freshly generated floor.
+    Descended {
+        depth: u32,
+    },
 }
 
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -147,6 +156,22 @@ impl Game {
         }
     }
 
+    pub fn on_stairs(&self) -> bool {
+        self.floor.map.get(self.player.pos) == Tile::StairsDown
+    }
+
+    /// Generate the next floor and place the player at its start. Health,
+    /// Energy and the run's RNG carry over.
+    fn descend(&mut self) {
+        self.depth += 1;
+        self.floor = Floor::for_depth(self.run_seed, self.depth, &self.params);
+        self.enemies = spawn_enemies(&self.floor);
+        let p = &mut self.player;
+        p.pos = self.floor.start;
+        p.facing = self.floor.start_facing;
+        p.hp = (p.hp + tuning::DESCEND_HEAL).min(p.max_hp);
+    }
+
     pub fn enemy_at(&self, p: GridPos) -> Option<&Enemy> {
         self.enemies.iter().find(|e| e.pos == p)
     }
@@ -182,6 +207,12 @@ impl Game {
                 });
             }
             Command::Attack => self.attack(out),
+            Command::Descend => {
+                if self.on_stairs() {
+                    self.descend();
+                    out.push(Event::Descended { depth: self.depth });
+                }
+            }
         }
     }
 
@@ -287,6 +318,8 @@ impl Game {
                     .into_iter()
                     .map(|d| from + d)
                     .filter(|&n| n != player_pos && self.is_open(n))
+                    // Stairs are for the player; enemies stay on solid ground.
+                    .filter(|&n| map.get(n) != Tile::StairsDown)
                     .filter_map(|n| dist[map.index(n)].map(|d| (d, n)))
                     .filter(|&(d, _)| walk_dist.is_none_or(|w| d < w))
                     .min_by_key(|&(d, _)| d);
@@ -338,7 +371,7 @@ fn spawn_enemies(floor: &Floor) -> Vec<Enemy> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::map::{Map, Tile};
+    use crate::map::Map;
 
     const DT: f32 = 1.0 / 60.0;
 
@@ -397,6 +430,7 @@ mod tests {
                 for e in &g.enemies {
                     assert!(g.floor.map.is_walkable(e.pos));
                     assert_ne!(e.pos, g.player.pos, "seed {seed}: enemy on player");
+                    assert_ne!(g.floor.map.get(e.pos), Tile::StairsDown, "seed {seed}");
                 }
             }
         }
@@ -520,5 +554,68 @@ mod tests {
         g.apply(Command::Step(Step::Forward), &mut out);
         g.tick(1.0, &mut out);
         assert!(out.is_empty());
+    }
+}
+
+#[cfg(test)]
+mod stairs_tests {
+    use super::*;
+
+    /// Walk the shortest path to the stairs, one step at a time.
+    fn walk_to_stairs(g: &mut Game) {
+        let mut out = Vec::new();
+        g.enemies.clear(); // no interruptions
+        let dist = g.floor.map.distances(g.floor.stairs);
+        while !g.on_stairs() {
+            let here = dist[g.floor.map.index(g.player.pos)].unwrap();
+            let dir = Facing::ALL
+                .into_iter()
+                .find(|&d| dist[g.floor.map.index(g.player.pos + d)].is_some_and(|n| n < here))
+                .unwrap();
+            while g.player.facing != dir {
+                g.apply(Command::Turn(Turn::Right), &mut out);
+            }
+            g.apply(Command::Step(Step::Forward), &mut out);
+        }
+    }
+
+    #[test]
+    fn descend_only_from_the_stairs() {
+        let mut g = Game::new(11);
+        let mut out = Vec::new();
+        g.apply(Command::Descend, &mut out);
+        assert!(out.is_empty());
+        assert_eq!(g.depth, 1);
+        walk_to_stairs(&mut g);
+        g.apply(Command::Descend, &mut out);
+        assert_eq!(out, [Event::Descended { depth: 2 }]);
+        assert_eq!(g.depth, 2);
+        assert_eq!(g.player.pos, g.floor.start);
+        assert_eq!(g.enemies.len(), 1);
+    }
+
+    #[test]
+    fn floors_are_endless_and_reproducible() {
+        let mut a = Game::new(5);
+        let mut b = Game::new(5);
+        for depth in 2..=100 {
+            walk_to_stairs(&mut a);
+            walk_to_stairs(&mut b);
+            let mut out = Vec::new();
+            a.apply(Command::Descend, &mut out);
+            b.apply(Command::Descend, &mut out);
+            assert_eq!(a.depth, depth);
+            assert_eq!(a.floor.stairs, b.floor.stairs);
+            assert_eq!(a.floor.start, b.floor.start);
+        }
+    }
+
+    #[test]
+    fn descending_heals_a_little() {
+        let mut g = Game::new(2);
+        g.player.hp = 3;
+        walk_to_stairs(&mut g);
+        g.apply(Command::Descend, &mut Vec::new());
+        assert_eq!(g.player.hp, 3 + tuning::DESCEND_HEAL);
     }
 }
