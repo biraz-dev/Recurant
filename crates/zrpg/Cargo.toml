@@ -1,0 +1,47 @@
+[package]
+name = "zrpg"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+license = "MIT OR Apache-2.0"
+description = "ZRPG - an RPG for busy people. Bevy front-end."
+
+[dependencies]
+zrpg_core = { path = "../zrpg_core" }
+
+# Bevy features are hand-picked to keep compile times, binary size and
+# runtime overhead small. See docs/TOOLCHAIN.md before adding more.
+[dependencies.bevy]
+version = "0.19.1"
+default-features = false
+features = [
+  "std",
+  "multi_threaded",
+  "async_executor",
+  "bevy_asset",
+  "bevy_log",
+  "bevy_state",
+  "bevy_window",
+  "bevy_winit",
+  "x11",
+  "wayland",
+  "keyboard",
+  "bevy_gilrs",
+  "bevy_render",
+  "bevy_core_pipeline",
+  "bevy_camera",
+  "bevy_color",
+  "bevy_image",
+  "bevy_mesh",
+  "bevy_shader",
+  "bevy_material",
+  "bevy_light",
+  "bevy_pbr",
+  "bevy_sprite",
+  "bevy_sprite_render",
+  "bevy_text",
+  "bevy_ui",
+  "bevy_ui_render",
+  "default_font",
+  "png",
+]
