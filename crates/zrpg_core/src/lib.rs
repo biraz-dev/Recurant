@@ -12,13 +12,15 @@
 extern crate alloc;
 
 pub mod dungeon;
+pub mod enemy;
 pub mod game;
 pub mod grid;
 pub mod map;
 pub mod rng;
 
 pub use dungeon::{Floor, GenParams};
-pub use game::{Command, Event, Game};
+pub use enemy::{Enemy, EnemyId, EnemyState};
+pub use game::{Command, Event, Game, Player};
 pub use grid::{Facing, GridPos, Step, Turn};
 pub use map::{Map, Tile};
 pub use rng::Rng;

@@ -16,6 +16,7 @@ pub struct GenParams {
     pub max_rooms: usize,
     pub room_min: i32,
     pub room_max: i32,
+    pub enemies: usize,
 }
 
 impl Default for GenParams {
@@ -26,6 +27,7 @@ impl Default for GenParams {
             max_rooms: 5,
             room_min: 2,
             room_max: 4,
+            enemies: 1,
         }
     }
 }
@@ -59,6 +61,8 @@ pub struct Floor {
     pub start: GridPos,
     pub start_facing: Facing,
     pub stairs: GridPos,
+    /// Where this floor's enemies start. Never the start or stairs cell.
+    pub enemy_spawns: Vec<GridPos>,
 }
 
 impl Floor {
@@ -97,12 +101,14 @@ pub fn generate(seed: u64, params: &GenParams) -> Floor {
     let stairs = farthest_cell(&map, start);
     map.set(stairs, Tile::StairsDown);
     let start_facing = most_open_facing(&map, start);
+    let enemy_spawns = pick_enemy_spawns(&map, &mut rng, start, stairs, params.enemies);
 
     Floor {
         map,
         start,
         start_facing,
         stairs,
+        enemy_spawns,
     }
 }
 
@@ -169,6 +175,42 @@ fn farthest_cell(map: &Map, from: GridPos) -> GridPos {
         .unwrap_or(from)
 }
 
+/// Spawn cells a fair walk from the start: the player gets a moment to
+/// look around before anything arrives.
+fn pick_enemy_spawns(
+    map: &Map,
+    rng: &mut Rng,
+    start: GridPos,
+    stairs: GridPos,
+    count: usize,
+) -> Vec<GridPos> {
+    const MIN_DISTANCE: u32 = 4;
+    let dist = map.distances(start);
+    let mut candidates: Vec<(u32, GridPos)> = map
+        .positions()
+        .filter(|&p| p != start && p != stairs)
+        .filter_map(|p| dist[map.index(p)].map(|d| (d, p)))
+        .collect();
+    let far: Vec<GridPos> = candidates
+        .iter()
+        .filter(|(d, _)| *d >= MIN_DISTANCE)
+        .map(|&(_, p)| p)
+        .collect();
+    // Tiny floors: fall back to the farthest cells available.
+    let mut pool = if far.len() >= count {
+        far
+    } else {
+        candidates.sort_by_key(|&(d, _)| core::cmp::Reverse(d));
+        candidates.into_iter().map(|(_, p)| p).collect()
+    };
+    let mut spawns = Vec::new();
+    while spawns.len() < count && !pool.is_empty() {
+        let i = rng.range(0, pool.len() as i32 - 1) as usize;
+        spawns.push(pool.swap_remove(i));
+    }
+    spawns
+}
+
 /// The facing with the longest clear line of sight: a nice first view.
 fn most_open_facing(map: &Map, from: GridPos) -> Facing {
     let sight = |dir: Facing| {
@@ -222,6 +264,17 @@ mod tests {
                 "seed {seed}: facing a wall"
             );
             assert!(walkable_count(m) >= 8, "seed {seed}: floor too cramped");
+            assert_eq!(f.enemy_spawns.len(), 1, "seed {seed}");
+            for &e in &f.enemy_spawns {
+                assert!(
+                    m.is_walkable(e) && e != f.start && e != f.stairs,
+                    "seed {seed}"
+                );
+                assert!(
+                    dist[m.index(e)].unwrap() >= 4,
+                    "seed {seed}: enemy spawns too close"
+                );
+            }
         }
     }
 

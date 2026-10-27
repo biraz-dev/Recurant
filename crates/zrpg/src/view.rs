@@ -2,23 +2,28 @@
 //! module eases the camera from the old pose to the new one, buffering one
 //! command so quick taps are never dropped.
 
-use std::f32::consts::FRAC_PI_2;
+use std::f32::consts::{FRAC_PI_2, PI};
 
 use bevy::core_pipeline::tonemapping::Tonemapping;
 use bevy::pbr::{DistanceFog, FogFalloff};
 use bevy::prelude::*;
 use zrpg_core::{Command, Event, Facing, GridPos, Step, Turn};
 
-use crate::Run;
 use crate::input::{Action, Actions};
 use crate::level::{WALL_HEIGHT, cell_center, grid_dir};
 use crate::screen::{LowResTarget, world_target};
+use crate::{Frame, GameEvent, Run, publish};
 
 const STEP_SECS: f32 = 0.16;
 const TURN_SECS: f32 = 0.13;
 const BUMP_SECS: f32 = 0.14;
 const BUMP_DEPTH: f32 = 0.08;
-const EYE_HEIGHT: f32 = WALL_HEIGHT * 0.5;
+/// How long an attack press is remembered while the swing is cooling down.
+const ATTACK_BUFFER_SECS: f32 = 0.25;
+const SHAKE_SECS: f32 = 0.25;
+const SHAKE_SIZE: f32 = 0.04;
+const DEATH_SECS: f32 = 0.7;
+pub const EYE_HEIGHT: f32 = WALL_HEIGHT * 0.5;
 /// Stand a little behind the cell centre so the side walls of the current
 /// cell stay in view, as in the classics.
 const EYE_BACK: f32 = 0.25;
@@ -31,7 +36,13 @@ pub struct ViewPlugin;
 impl Plugin for ViewPlugin {
     fn build(&self, app: &mut App) {
         app.add_systems(Startup, spawn_camera)
-            .add_systems(Update, (drive_player, animate_camera).chain());
+            .add_systems(Update, drive_player.in_set(Frame::Command))
+            .add_systems(
+                Update,
+                (react_to_events, animate_camera)
+                    .chain()
+                    .in_set(Frame::Present),
+            );
     }
 }
 
@@ -52,12 +63,6 @@ impl Pose {
             pos: cell_center(cell),
             yaw: yaw_of(facing),
         }
-    }
-
-    fn transform(self) -> Transform {
-        let rot = Quat::from_rotation_y(self.yaw);
-        let back = rot * Vec3::Z * EYE_BACK;
-        Transform::from_translation(self.pos + back + Vec3::Y * EYE_HEIGHT).with_rotation(rot)
     }
 }
 
@@ -81,11 +86,30 @@ struct Animator {
     /// Pose once the current motion finishes.
     rest: Pose,
     queued: Option<Command>,
+    attack_buffer: f32,
+    /// Remaining hit-shake time.
+    shake: f32,
+    /// Seconds since death, if dead.
+    dead_for: Option<f32>,
     /// Which run/floor `rest` belongs to; a mismatch snaps the camera.
     synced_to: (u64, u32),
 }
 
 impl Animator {
+    fn new(rest: Pose, synced_to: (u64, u32)) -> Self {
+        Self {
+            motion: Motion::Idle,
+            elapsed: 0.0,
+            duration: 1.0,
+            rest,
+            queued: None,
+            attack_buffer: 0.0,
+            shake: 0.0,
+            dead_for: None,
+            synced_to,
+        }
+    }
+
     fn busy(&self) -> bool {
         self.motion != Motion::Idle
     }
@@ -108,10 +132,28 @@ impl Animator {
                 }
             }
             Motion::Bump { base, dir } => Pose {
-                pos: base.pos + dir * BUMP_DEPTH * (t * std::f32::consts::PI).sin(),
+                pos: base.pos + dir * BUMP_DEPTH * (t * PI).sin(),
                 yaw: base.yaw,
             },
         }
+    }
+
+    fn transform(&self, time: f32) -> Transform {
+        let pose = self.pose();
+        let yaw = Quat::from_rotation_y(pose.yaw);
+        let mut eye = pose.pos + yaw * Vec3::Z * EYE_BACK + Vec3::Y * EYE_HEIGHT;
+        let mut rot = yaw;
+        if self.shake > 0.0 {
+            let k = SHAKE_SIZE * self.shake / SHAKE_SECS;
+            eye += Vec3::new((time * 71.0).sin(), (time * 53.0).cos(), 0.0) * k;
+        }
+        // Dying: slump to the floor and keel over sideways.
+        if let Some(d) = self.dead_for {
+            let e = ease((d / DEATH_SECS).min(1.0));
+            eye.y -= EYE_HEIGHT * 0.7 * e;
+            rot *= Quat::from_rotation_z(0.5 * e) * Quat::from_rotation_x(-0.25 * e);
+        }
+        Transform::from_translation(eye).with_rotation(rot)
     }
 }
 
@@ -120,7 +162,10 @@ fn ease(t: f32) -> f32 {
 }
 
 fn spawn_camera(mut commands: Commands, target: Res<LowResTarget>, run: Res<Run>) {
-    let rest = Pose::at(run.player.pos, run.player.facing);
+    let anim = Animator::new(
+        Pose::at(run.player.pos, run.player.facing),
+        (run.run_seed, run.depth),
+    );
     commands.spawn((
         PlayerCamera,
         Camera3d::default(),
@@ -146,15 +191,8 @@ fn spawn_camera(mut commands: Commands, target: Res<LowResTarget>, run: Res<Run>
             },
             ..default()
         },
-        rest.transform(),
-        Animator {
-            motion: Motion::Idle,
-            elapsed: 0.0,
-            duration: 1.0,
-            rest,
-            queued: None,
-            synced_to: (run.run_seed, run.depth),
-        },
+        anim.transform(0.0),
+        anim,
     ));
 }
 
@@ -166,7 +204,7 @@ fn command_for(a: Action) -> Option<Command> {
         Action::StrafeRight => Command::Step(Step::StrafeRight),
         Action::TurnLeft => Command::Turn(Turn::Left),
         Action::TurnRight => Command::Turn(Turn::Right),
-        Action::Restart => return None,
+        Action::Attack | Action::Restart => return None,
     })
 }
 
@@ -175,22 +213,41 @@ fn drive_player(
     actions: Res<Actions>,
     mut run: ResMut<Run>,
     mut cams: Query<&mut Animator, With<PlayerCamera>>,
+    mut writer: MessageWriter<GameEvent>,
+    mut buf: Local<Vec<Event>>,
 ) {
     let Ok(mut anim) = cams.single_mut() else {
         return;
     };
+    let dt = time.delta_secs();
 
     // A new floor or a restart: snap to the new start, forget pending input.
     let floor_id = (run.run_seed, run.depth);
     if anim.synced_to != floor_id {
-        anim.synced_to = floor_id;
-        anim.rest = Pose::at(run.player.pos, run.player.facing);
-        anim.motion = Motion::Idle;
-        anim.queued = None;
+        *anim = Animator::new(Pose::at(run.player.pos, run.player.facing), floor_id);
+        return;
+    }
+    if !run.player.is_alive() {
         return;
     }
 
-    // Fresh presses are buffered (latest wins) so taps during motion count.
+    // Attacks don't wait for movement: swinging mid-step feels right.
+    // A press is remembered briefly; holding the button keeps swinging.
+    if actions.just_pressed(Action::Attack) {
+        anim.attack_buffer = ATTACK_BUFFER_SECS;
+    }
+    anim.attack_buffer = (anim.attack_buffer - dt).max(0.0);
+    let ready = run.player.attack_cooldown <= 0.0;
+    if ready
+        && (anim.attack_buffer > 0.0
+            || (actions.pressed(Action::Attack) && run.player.can_attack()))
+    {
+        anim.attack_buffer = 0.0;
+        run.apply(Command::Attack, &mut buf);
+    }
+
+    // Fresh movement presses are buffered (latest wins) so taps during
+    // motion count.
     if let Some(cmd) = Action::ALL
         .into_iter()
         .filter(|a| actions.just_pressed(*a))
@@ -199,65 +256,94 @@ fn drive_player(
         anim.queued = Some(cmd);
     }
 
-    anim.elapsed += time.delta_secs();
+    anim.elapsed += dt;
     if anim.busy() && anim.elapsed >= anim.duration {
         anim.motion = Motion::Idle;
     }
-    if anim.busy() {
-        return;
+    if !anim.busy() {
+        // Holding a direction keeps walking.
+        let next = anim.queued.take().map(|c| (c, false)).or_else(|| {
+            Action::ALL
+                .into_iter()
+                .filter(|a| actions.pressed(*a))
+                .find_map(command_for)
+                .map(|c| (c, true))
+        });
+        if let Some((cmd, from_hold)) = next {
+            let first = buf.len();
+            run.apply(cmd, &mut buf);
+            start_motion(&mut anim, &buf[first..], from_hold);
+        }
     }
+    publish(&mut buf, &mut writer);
+}
 
-    // Holding a direction keeps walking.
-    let (cmd, from_hold) = match anim.queued.take() {
-        Some(cmd) => (cmd, false),
-        None => match Action::ALL
-            .into_iter()
-            .filter(|a| actions.pressed(*a))
-            .find_map(command_for)
-        {
-            Some(cmd) => (cmd, true),
-            None => return,
-        },
-    };
-
+fn start_motion(anim: &mut Animator, events: &[Event], from_hold: bool) {
     let from = anim.rest;
-    match run.apply(cmd) {
-        Event::Moved { to, .. } => {
-            let to = Pose {
-                pos: cell_center(to),
-                yaw: from.yaw,
-            };
-            anim.rest = to;
-            anim.start(Motion::Glide { from, to }, STEP_SECS);
+    for event in events {
+        match *event {
+            Event::Moved { to, .. } => {
+                let to = Pose {
+                    pos: cell_center(to),
+                    yaw: from.yaw,
+                };
+                anim.rest = to;
+                anim.start(Motion::Glide { from, to }, STEP_SECS);
+            }
+            Event::Turned { turn, .. } => {
+                let delta = match turn {
+                    Turn::Left => FRAC_PI_2,
+                    Turn::Right => -FRAC_PI_2,
+                };
+                let to = Pose {
+                    pos: from.pos,
+                    yaw: from.yaw + delta,
+                };
+                anim.rest = to;
+                anim.start(Motion::Glide { from, to }, TURN_SECS);
+            }
+            // Bump only on deliberate presses; holding into a wall stays calm.
+            Event::Bumped { dir, .. } if !from_hold => {
+                anim.start(
+                    Motion::Bump {
+                        base: from,
+                        dir: grid_dir(dir),
+                    },
+                    BUMP_SECS,
+                );
+            }
+            _ => {}
         }
-        Event::Turned { turn, .. } => {
-            let delta = match turn {
-                Turn::Left => FRAC_PI_2,
-                Turn::Right => -FRAC_PI_2,
-            };
-            let to = Pose {
-                pos: from.pos,
-                yaw: from.yaw + delta,
-            };
-            anim.rest = to;
-            anim.start(Motion::Glide { from, to }, TURN_SECS);
-        }
-        // Bump only on deliberate presses; holding into a wall stays calm.
-        Event::Bumped { dir, .. } if !from_hold => {
-            anim.start(
-                Motion::Bump {
-                    base: from,
-                    dir: grid_dir(dir),
-                },
-                BUMP_SECS,
-            );
-        }
-        Event::Bumped { .. } => {}
     }
 }
 
-fn animate_camera(mut cams: Query<(&Animator, &mut Transform), With<PlayerCamera>>) {
+fn react_to_events(
+    time: Res<Time>,
+    mut events: MessageReader<GameEvent>,
+    mut cams: Query<&mut Animator, With<PlayerCamera>>,
+) {
+    let Ok(mut anim) = cams.single_mut() else {
+        return;
+    };
+    let dt = time.delta_secs();
+    anim.shake = (anim.shake - dt).max(0.0);
+    if let Some(d) = anim.dead_for.as_mut() {
+        *d += dt;
+    }
+    for GameEvent(event) in events.read() {
+        match event {
+            Event::EnemyStruck { damage, .. } if *damage > 0 => anim.shake = SHAKE_SECS,
+            Event::PlayerDied => anim.dead_for = Some(0.0),
+            _ => {}
+        }
+    }
+}
+
+fn animate_camera(
+    time: Res<Time>,
+    mut cams: Query<(&Animator, &mut Transform), With<PlayerCamera>>,
+) {
     for (anim, mut t) in &mut cams {
-        *t = anim.pose().transform();
+        *t = anim.transform(time.elapsed_secs());
     }
 }

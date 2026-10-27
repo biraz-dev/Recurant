@@ -11,17 +11,19 @@ pub enum Action {
     StrafeRight,
     TurnLeft,
     TurnRight,
+    Attack,
     Restart,
 }
 
 impl Action {
-    pub const ALL: [Action; 7] = [
+    pub const ALL: [Action; 8] = [
         Action::Forward,
         Action::Back,
         Action::StrafeLeft,
         Action::StrafeRight,
         Action::TurnLeft,
         Action::TurnRight,
+        Action::Attack,
         Action::Restart,
     ];
 
@@ -34,6 +36,7 @@ impl Action {
             Action::StrafeRight => &[KeyD, Numpad6],
             Action::TurnLeft => &[KeyQ, ArrowLeft, Numpad7],
             Action::TurnRight => &[KeyE, ArrowRight, Numpad9],
+            Action::Attack => &[Space, KeyF, Numpad5, Numpad0],
             Action::Restart => &[KeyR],
         }
     }
@@ -47,6 +50,7 @@ impl Action {
             Action::StrafeRight => &[RightTrigger],
             Action::TurnLeft => &[DPadLeft],
             Action::TurnRight => &[DPadRight],
+            Action::Attack => &[South, West, RightTrigger2],
             Action::Restart => &[Select],
         }
     }
@@ -61,7 +65,7 @@ impl Action {
             Action::TurnRight => Some((LeftStickX, 1.0)),
             Action::StrafeLeft => Some((RightStickX, -1.0)),
             Action::StrafeRight => Some((RightStickX, 1.0)),
-            Action::Restart => None,
+            Action::Attack | Action::Restart => None,
         }
     }
 }
