@@ -4,14 +4,12 @@
 
 use std::f32::consts::PI;
 
-use bevy::asset::RenderAssetUsages;
-use bevy::image::{CompressedImageFormats, ImageSampler, ImageType};
 use bevy::prelude::*;
 use zrpg_core::{EnemyId, Event};
 
 use crate::level::cell_center;
 use crate::view::PlayerCamera;
-use crate::{Frame, GameEvent, Run};
+use crate::{Frame, GameEvent, Run, textures};
 
 /// The zombie, made from `art/zombie-reference.png` by `tools/make_sprite.py`.
 /// Embedded so no platform has to load files at runtime.
@@ -78,15 +76,7 @@ fn load_assets(
     mut meshes: ResMut<Assets<Mesh>>,
     mut images: ResMut<Assets<Image>>,
 ) {
-    let image = Image::from_buffer(
-        ZOMBIE_PNG,
-        ImageType::Extension("png"),
-        CompressedImageFormats::NONE,
-        true,
-        ImageSampler::Default,
-        RenderAssetUsages::RENDER_WORLD,
-    )
-    .expect("embedded zombie sprite is a valid PNG");
+    let image = textures::embedded(ZOMBIE_PNG);
     let aspect = image.width() as f32 / image.height() as f32;
     commands.insert_resource(EnemyAssets {
         mesh: meshes.add(Rectangle::new(SPRITE_HEIGHT * aspect, SPRITE_HEIGHT)),

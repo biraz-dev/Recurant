@@ -1,21 +1,44 @@
 //! Turns a `zrpg_core::Map` into geometry: one mesh per material, so a whole
-//! floor costs four draw calls.
+//! floor costs about a dozen draw calls.
 //!
 //! World layout: grid cell `(x, y)` spans `x..x+1` on X and `y..y+1` on Z,
 //! floor at height 0, ceiling at `WALL_HEIGHT`.
+//!
+//! Dressing (which walls are mossy, cracked or carved, where vines hang and
+//! ferns grow) is picked from a hash of the floor seed and the cell, so a
+//! floor always looks the same.
 
 use bevy::asset::RenderAssetUsages;
 use bevy::mesh::{Indices, PrimitiveTopology};
 use bevy::prelude::*;
+use zrpg_core::rng::mix64;
 use zrpg_core::{Facing, GridPos, Map, Tile};
 
 use crate::Run;
-use crate::textures;
+use crate::textures::{self, env};
 
 pub const WALL_HEIGHT: f32 = 1.0;
 /// Stairs: a pit of steps going down under the far wall.
 const STAIR_STEPS: usize = 4;
 const STAIR_DROP: f32 = 0.1;
+
+/// Wall variants, in the order of `env::WALLS`: plain, mossy, cracked, carved.
+const WALL_KINDS: usize = 4;
+/// Chance of each wall variant except plain (cumulative order: carved,
+/// cracked, mossy).
+const CARVED: f32 = 0.04;
+const CRACKED: f32 = 0.12;
+const MOSSY_WALL: f32 = 0.22;
+/// Floor variants, in the order of `env::FLOORS`: plain, mossy.
+const FLOOR_KINDS: usize = 2;
+const MOSSY_FLOOR: f32 = 0.3;
+const VINES: f32 = 0.28;
+/// Vines hang from the ceiling down to this height.
+const VINES_BOTTOM: f32 = 0.35;
+/// Decals sit this far in front of the wall so they never flicker.
+const DECAL_OFFSET: f32 = 0.004;
+const FERN: f32 = 0.2;
+const FERN_SIZE: f32 = 0.42;
 
 pub struct LevelPlugin;
 
@@ -28,11 +51,13 @@ impl Plugin for LevelPlugin {
 
 #[derive(Resource)]
 struct LevelMaterials {
-    wall: Handle<StandardMaterial>,
-    floor: Handle<StandardMaterial>,
+    walls: [Handle<StandardMaterial>; WALL_KINDS],
+    floors: [Handle<StandardMaterial>; FLOOR_KINDS],
     ceiling: Handle<StandardMaterial>,
     stairs: Handle<StandardMaterial>,
     arch: Handle<StandardMaterial>,
+    vines: Handle<StandardMaterial>,
+    fern: Handle<StandardMaterial>,
 }
 
 /// Parent of all geometry for the current floor.
@@ -47,19 +72,32 @@ fn load_materials(
     mut images: ResMut<Assets<Image>>,
     mut materials: ResMut<Assets<StandardMaterial>>,
 ) {
-    let mut make = |image: Image| {
+    // Cutouts (vines, ferns) are alpha-masked and visible from both sides.
+    let mut make = |png: &[u8], cutout: bool| {
         materials.add(StandardMaterial {
-            base_color_texture: Some(images.add(image)),
+            base_color_texture: Some(images.add(textures::embedded(png))),
             unlit: true,
+            alpha_mode: if cutout {
+                AlphaMode::Mask(0.5)
+            } else {
+                AlphaMode::Opaque
+            },
+            cull_mode: if cutout {
+                None
+            } else {
+                Some(bevy::render::render_resource::Face::Back)
+            },
             ..default()
         })
     };
     commands.insert_resource(LevelMaterials {
-        wall: make(textures::wall()),
-        floor: make(textures::floor()),
-        ceiling: make(textures::ceiling()),
-        stairs: make(textures::stairs()),
-        arch: make(textures::arch()),
+        walls: env::WALLS.map(|png| make(png, false)),
+        floors: env::FLOORS.map(|png| make(png, false)),
+        ceiling: make(env::CEILING, false),
+        stairs: make(env::STAIRS, false),
+        arch: make(env::ARCH, false),
+        vines: make(env::VINES, true),
+        fern: make(env::FERN, true),
     });
 }
 
@@ -80,7 +118,8 @@ fn rebuild_level(
         commands.entity(entity).despawn();
     }
 
-    let geo = LevelGeometry::build(&run.floor.map, run.floor.stairs_dir);
+    let seed = mix64(run.run_seed ^ mix64(run.depth as u64));
+    let geo = LevelGeometry::build(&run.floor.map, run.floor.stairs_dir, seed);
     commands
         .spawn((
             LevelRoot {
@@ -91,13 +130,19 @@ fn rebuild_level(
             Visibility::default(),
         ))
         .with_children(|parent| {
-            for (builder, material) in [
-                (geo.walls, &mats.wall),
-                (geo.floors, &mats.floor),
-                (geo.ceilings, &mats.ceiling),
-                (geo.stairs, &mats.stairs),
-                (geo.arch, &mats.arch),
-            ] {
+            let parts = geo
+                .walls
+                .into_iter()
+                .zip(&mats.walls)
+                .chain(geo.floors.into_iter().zip(&mats.floors))
+                .chain([
+                    (geo.ceilings, &mats.ceiling),
+                    (geo.stairs, &mats.stairs),
+                    (geo.arch, &mats.arch),
+                    (geo.vines, &mats.vines),
+                    (geo.ferns, &mats.fern),
+                ]);
+            for (builder, material) in parts {
                 if !builder.is_empty() {
                     parent.spawn((
                         Mesh3d(meshes.add(builder.into_mesh())),
@@ -112,8 +157,34 @@ fn rebuild_level(
 fn face_brightness(normal_dir: Facing) -> f32 {
     match normal_dir {
         Facing::North | Facing::South => 1.0,
-        Facing::East | Facing::West => 0.78,
+        Facing::East | Facing::West => 0.8,
     }
+}
+const FLOOR_BRIGHTNESS: f32 = 0.95;
+const CEILING_BRIGHTNESS: f32 = 0.85;
+
+/// Baked ambient occlusion: wall tops sit in the ceiling's shadow, and the
+/// floor and ceiling darken where they meet walls. Free at runtime, and the
+/// main source of depth in an unlit renderer.
+const WALL_TOP_SHADE: f32 = 0.72;
+const WALL_FOOT_SHADE: f32 = 0.9;
+const CORNER_SHADE: f32 = 0.16;
+const UV: [[f32; 2]; 4] = [[0., 1.], [1., 1.], [1., 0.], [0., 0.]];
+
+/// How lit a floor or ceiling corner at grid point `(x, z)` is: darker for
+/// each of the four cells meeting there that is solid.
+fn corner_shade(map: &Map, x: i32, z: i32) -> f32 {
+    let solid = [(x - 1, z - 1), (x, z - 1), (x - 1, z), (x, z)]
+        .into_iter()
+        .filter(|&(cx, cz)| !map.is_walkable(GridPos::new(cx, cz)))
+        .count();
+    1.0 - CORNER_SHADE * solid as f32
+}
+
+/// Stable pseudo-random number in `0..1` for a cell and a purpose.
+fn roll(seed: u64, p: GridPos, salt: u64) -> f32 {
+    let h = mix64(seed ^ ((p.x as u64) << 40) ^ ((p.y as u64) << 20) ^ salt);
+    (h >> 40) as f32 / (1u64 << 24) as f32
 }
 
 #[derive(Default)]
@@ -133,25 +204,27 @@ impl QuadBuilder {
     /// Corners counter-clockwise as seen from the front:
     /// bottom-left, bottom-right, top-right, top-left.
     fn quad(&mut self, corners: [Vec3; 4], brightness: f32) {
-        self.quad_uv(
-            corners,
-            [[0., 1.], [1., 1.], [1., 0.], [0., 0.]],
-            brightness,
-        );
+        self.quad_uv(corners, UV, brightness);
     }
 
     /// Like [`quad`](Self::quad) with explicit texture coordinates, so thin
     /// faces (steps, risers) show a slice of the texture instead of a squash.
     fn quad_uv(&mut self, corners: [Vec3; 4], uvs: [[f32; 2]; 4], brightness: f32) {
+        self.quad_shaded(corners, uvs, [brightness; 4]);
+    }
+
+    /// Full control: a brightness per corner, interpolated across the face.
+    /// That is how the baked shadows (see [`corner_shade`]) are drawn.
+    fn quad_shaded(&mut self, corners: [Vec3; 4], uvs: [[f32; 2]; 4], shade: [f32; 4]) {
         let normal = (corners[1] - corners[0])
             .cross(corners[2] - corners[0])
             .normalize();
         let base = self.positions.len() as u32;
-        for (corner, uv) in corners.iter().zip(uvs) {
+        for ((corner, uv), b) in corners.iter().zip(uvs).zip(shade) {
             self.positions.push(corner.to_array());
             self.normals.push(normal.to_array());
             self.uvs.push(uv);
-            self.colors.push([brightness, brightness, brightness, 1.0]);
+            self.colors.push([b, b, b, 1.0]);
         }
         self.indices
             .extend_from_slice(&[base, base + 1, base + 2, base, base + 2, base + 3]);
@@ -172,16 +245,18 @@ impl QuadBuilder {
 
 #[derive(Default)]
 struct LevelGeometry {
-    walls: QuadBuilder,
-    floors: QuadBuilder,
+    walls: [QuadBuilder; WALL_KINDS],
+    floors: [QuadBuilder; FLOOR_KINDS],
     ceilings: QuadBuilder,
     stairs: QuadBuilder,
     /// The wall the stairs lead under.
     arch: QuadBuilder,
+    vines: QuadBuilder,
+    ferns: QuadBuilder,
 }
 
 impl LevelGeometry {
-    fn build(map: &Map, stairs_dir: Facing) -> Self {
+    fn build(map: &Map, stairs_dir: Facing, seed: u64) -> Self {
         let mut geo = LevelGeometry::default();
         let h = WALL_HEIGHT;
         for p in map.positions().filter(|&p| map.is_walkable(p)) {
@@ -194,18 +269,34 @@ impl LevelGeometry {
                 Vec3::new(x1, 0., z0),
                 Vec3::new(x0, 0., z0),
             ];
-            match map.get(p) {
-                Tile::StairsDown => geo.add_stairs(p, stairs_dir),
-                _ => geo.floors.quad(floor, 1.0),
+            // Shade at the cell's corners: (x0,z0), (x1,z0), (x1,z1), (x0,z1).
+            let ao = |x: i32, z: i32| corner_shade(map, x, z);
+            let (nw, ne, se, sw) = (
+                ao(p.x, p.y),
+                ao(p.x + 1, p.y),
+                ao(p.x + 1, p.y + 1),
+                ao(p.x, p.y + 1),
+            );
+            let stairs = map.get(p) == Tile::StairsDown;
+            if stairs {
+                geo.add_stairs(p, stairs_dir);
+            } else {
+                let kind = usize::from(roll(seed, p, 1) < MOSSY_FLOOR);
+                geo.floors[kind].quad_shaded(
+                    floor,
+                    UV,
+                    [sw, se, ne, nw].map(|s| s * FLOOR_BRIGHTNESS),
+                );
             }
-            geo.ceilings.quad(
+            geo.ceilings.quad_shaded(
                 [
                     Vec3::new(x0, h, z0),
                     Vec3::new(x1, h, z0),
                     Vec3::new(x1, h, z1),
                     Vec3::new(x0, h, z1),
                 ],
-                1.0,
+                UV,
+                [nw, ne, se, sw].map(|s| s * CEILING_BRIGHTNESS),
             );
 
             for dir in Facing::ALL {
@@ -217,18 +308,62 @@ impl LevelGeometry {
                 let right = grid_dir(dir.right());
                 let center = cell_center(p) + forward * 0.5;
                 let (l, r) = (center - right * 0.5, center + right * 0.5);
-                let builder = if map.get(p) == Tile::StairsDown && dir == stairs_dir {
-                    &mut geo.arch
-                } else {
-                    &mut geo.walls
+                let light = face_brightness(dir);
+                let wall = [l, r, r + Vec3::Y * h, l + Vec3::Y * h];
+                if stairs && dir == stairs_dir {
+                    let (foot, top) = (light * WALL_FOOT_SHADE, light * WALL_TOP_SHADE);
+                    geo.arch.quad_shaded(wall, UV, [foot, foot, top, top]);
+                    continue;
+                }
+                let salt = 10 + dir as u64;
+                let kind = match roll(seed, p, salt) {
+                    r if r < CARVED => 3,
+                    r if r < CARVED + CRACKED => 2,
+                    r if r < CARVED + CRACKED + MOSSY_WALL => 1,
+                    _ => 0,
                 };
-                builder.quad(
-                    [l, r, r + Vec3::Y * h, l + Vec3::Y * h],
-                    face_brightness(dir),
-                );
+                let foot = light * WALL_FOOT_SHADE;
+                let top = light * WALL_TOP_SHADE;
+                geo.walls[kind].quad_shaded(wall, UV, [foot, foot, top, top]);
+                if roll(seed, p, salt + 10) < VINES {
+                    let lift = -forward * DECAL_OFFSET;
+                    let (l, r) = (l + lift, r + lift);
+                    let bottom = Vec3::Y * VINES_BOTTOM;
+                    let mid = light * (WALL_FOOT_SHADE + WALL_TOP_SHADE) * 0.5;
+                    let top = light * WALL_TOP_SHADE;
+                    geo.vines.quad_shaded(
+                        [l + bottom, r + bottom, r + Vec3::Y * h, l + Vec3::Y * h],
+                        UV,
+                        [mid, mid, top, top],
+                    );
+                }
+            }
+            if !stairs && roll(seed, p, 30) < FERN {
+                geo.add_fern(map, p, seed);
             }
         }
         geo
+    }
+
+    /// A fern tucked against one of the cell's walls: two quads crossed at
+    /// right angles, the classic way to fake a bush.
+    fn add_fern(&mut self, map: &Map, p: GridPos, seed: u64) {
+        let walls: Vec<Facing> = Facing::ALL
+            .into_iter()
+            .filter(|&d| !map.is_walkable(p + d))
+            .collect();
+        if walls.is_empty() {
+            return;
+        }
+        let dir = walls[(roll(seed, p, 31) * walls.len() as f32) as usize % walls.len()];
+        let (f, r) = (grid_dir(dir), grid_dir(dir.right()));
+        let base = cell_center(p) + f * 0.3 + r * ((roll(seed, p, 32) - 0.5) * 0.5);
+        let half = FERN_SIZE * 0.5;
+        for axis in [(f + r).normalize(), (f - r).normalize()] {
+            let (a, b) = (base - axis * half, base + axis * half);
+            let up = Vec3::Y * FERN_SIZE;
+            self.ferns.quad([a, b, b + up, a + up], 0.9);
+        }
     }
 
     /// Steps descending along `dir`, with pit walls on both sides and a
@@ -267,7 +402,7 @@ impl LevelGeometry {
                 light * 0.7,
             );
             let side = face_brightness(dir.right()) * light;
-            self.walls.quad_uv(
+            self.walls[0].quad_uv(
                 [
                     at(a0, -0.5, y),
                     at(a1, -0.5, y),
@@ -277,7 +412,7 @@ impl LevelGeometry {
                 [[v0, -y], [v1, -y], [v1, 0.], [v0, 0.]],
                 side,
             );
-            self.walls.quad_uv(
+            self.walls[0].quad_uv(
                 [
                     at(a1, 0.5, y),
                     at(a0, 0.5, y),
@@ -316,21 +451,75 @@ pub fn cell_center(p: GridPos) -> Vec3 {
 mod tests {
     use super::*;
 
+    /// Every quad of every wall variant, as (centre, normal).
+    fn wall_quads(geo: &LevelGeometry) -> Vec<(Vec3, Vec3)> {
+        geo.walls
+            .iter()
+            .flat_map(|b| {
+                b.positions
+                    .chunks(4)
+                    .zip(b.normals.chunks(4))
+                    .map(|(ps, ns)| {
+                        let center = ps.iter().map(|p| Vec3::from(*p)).sum::<Vec3>() / 4.0;
+                        (center, Vec3::from(ns[0]))
+                    })
+            })
+            .collect()
+    }
+
     #[test]
     fn wall_faces_point_into_their_cell() {
         let mut map = Map::filled(3, 3, Tile::Wall);
         map.set(GridPos::new(1, 1), Tile::Floor);
-        let geo = LevelGeometry::build(&map, Facing::North);
-        assert_eq!(geo.walls.indices.len(), 4 * 6);
-        let center = cell_center(GridPos::new(1, 1)) + Vec3::Y * 0.5;
-        for quad in 0..4 {
-            let i = quad * 4;
-            let pos = Vec3::from(geo.walls.positions[i]);
-            let n = Vec3::from(geo.walls.normals[i]);
-            assert!(n.dot(center - pos) > 0.0, "wall {quad} faces outwards");
+        for seed in 0..20 {
+            let geo = LevelGeometry::build(&map, Facing::North, seed);
+            let quads = wall_quads(&geo);
+            assert_eq!(quads.len(), 4);
+            let center = cell_center(GridPos::new(1, 1)) + Vec3::Y * 0.5;
+            for (pos, n) in quads {
+                assert!(n.dot(center - pos) > 0.0, "a wall faces outwards");
+            }
+            let floor = geo.floors.iter().find(|b| !b.is_empty()).unwrap();
+            assert_eq!(floor.normals[0], [0.0, 1.0, 0.0]);
+            assert_eq!(geo.ceilings.normals[0], [0.0, -1.0, 0.0]);
         }
-        assert_eq!(geo.floors.normals[0], [0.0, 1.0, 0.0]);
-        assert_eq!(geo.ceilings.normals[0], [0.0, -1.0, 0.0]);
+    }
+
+    #[test]
+    fn dressing_varies_but_stays_put() {
+        let mut map = Map::filled(12, 12, Tile::Wall);
+        for y in 1..11 {
+            for x in 1..11 {
+                map.set(GridPos::new(x, y), Tile::Floor);
+            }
+        }
+        let a = LevelGeometry::build(&map, Facing::North, 7);
+        let b = LevelGeometry::build(&map, Facing::North, 7);
+        let counts = |g: &LevelGeometry| g.walls.each_ref().map(|w| w.indices.len());
+        assert_eq!(counts(&a), counts(&b), "same seed, same walls");
+        assert!(
+            counts(&a).iter().all(|&n| n > 0),
+            "every wall variant appears"
+        );
+        assert!(!a.vines.is_empty() && !a.ferns.is_empty());
+        // Vines sit just in front of their wall, facing into the room.
+        for (p, n) in a.vines.positions.iter().zip(&a.vines.normals).step_by(4) {
+            let (p, n) = (Vec3::from(*p), Vec3::from(*n));
+            let wall_plane = if n.x != 0.0 { p.x.round() } else { p.z.round() };
+            let offset = if n.x != 0.0 {
+                p.x - wall_plane
+            } else {
+                p.z - wall_plane
+            };
+            let along = if n.x != 0.0 { n.x } else { n.z };
+            assert!((offset.abs() - DECAL_OFFSET).abs() < 1e-4);
+            assert_eq!(offset.signum(), along.signum(), "vines behind their wall");
+        }
+        // Ferns stand on the floor, inside the room.
+        for p in &a.ferns.positions {
+            assert!(p[1] >= 0.0 && p[1] <= FERN_SIZE + 1e-5);
+            assert!(p[0] > 1.0 && p[0] < 11.0 && p[2] > 1.0 && p[2] < 11.0);
+        }
     }
 
     #[test]
@@ -339,12 +528,9 @@ mod tests {
         let mut map = Map::filled(3, 4, Tile::Wall);
         map.set(GridPos::new(1, 1), Tile::StairsDown);
         map.set(GridPos::new(1, 2), Tile::Floor);
-        let geo = LevelGeometry::build(&map, Facing::North);
-        assert_eq!(
-            geo.floors.indices.len(),
-            6,
-            "only the corridor cell has a floor"
-        );
+        let geo = LevelGeometry::build(&map, Facing::North, 3);
+        let floors: usize = geo.floors.iter().map(|b| b.indices.len()).sum();
+        assert_eq!(floors, 6, "only the corridor cell has a floor");
         // Treads face up; risers face back towards the entrance (+Z).
         assert_eq!(geo.stairs.normals[0], [0.0, 1.0, 0.0]);
         assert_eq!(geo.stairs.normals[4], [0.0, 0.0, 1.0]);
@@ -357,11 +543,10 @@ mod tests {
         assert!((lowest + STAIR_STEPS as f32 * STAIR_DROP).abs() < 1e-5);
         assert_eq!(geo.arch.indices.len(), 6, "an arch on the north wall");
         assert_eq!(geo.arch.normals[0], [0.0, 0.0, 1.0]);
-        // Every pit wall faces into the stairs cell.
-        let center = cell_center(GridPos::new(1, 1));
-        for (pos, n) in geo.walls.positions.iter().zip(&geo.walls.normals) {
-            let to_center = center - Vec3::from(*pos);
-            assert!(Vec3::from(*n).dot(to_center) > 0.0);
+        // Every wall (pit walls included) faces into its own cell.
+        for (center, n) in wall_quads(&geo) {
+            let cell = cell_center(GridPos::new(1, if center.z > 2.0 { 2 } else { 1 }));
+            assert!(n.dot(cell - center) > 0.0, "wall at {center} faces out");
         }
     }
 }

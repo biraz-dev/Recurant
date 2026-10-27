@@ -7,7 +7,7 @@ the spirit of Dungeon Hack, Lands of Lore, Eye of the Beholder and Anvil of
 Dawn: grid movement, 90° turns, real-time combat, and endless seeded floors.
 Pick it up, play a floor, put it down.
 
-![A zombie shambles down the corridor (seed 7)](docs/screenshot.png)
+![A zombie shambles down a sandstone corridor (seed 7)](docs/screenshot.png)
 
 Built with Rust and [Bevy](https://bevy.org). Renders at 320×240, scaled up
 with crisp pixels. Runs on Linux, in the browser, and on Android handhelds.
@@ -98,17 +98,27 @@ cargo test                                   # rules, bot, mesh sanity checks
 cargo run -p zrpg_core --example ascii 7     # print generated floors as ASCII
 ZRPG_SCRIPT="w e shot quit" cargo run        # scripted input + screenshot (zrpg-0.png)
 python3 tools/make_sprite.py art/zombie-reference.png crates/zrpg/assets/zombie.png --height 64
+python3 tools/make_textures.py --preview sheet.png   # regenerate the environment textures
 ```
 
-`make_sprite.py` turns a large reference on a black background into a
-game sprite: background removed, narrow gaps closed, downscaled to a small
-palette with binary alpha and a dark outline. Sprites are embedded in the
-binary, so no platform loads files at runtime.
+Art is made from the references in `art/` (see [art/README.md](art/README.md)):
+
+- `make_sprite.py` turns a large reference on a black background into a
+  game sprite: background removed, narrow gaps closed, downscaled to a small
+  palette with binary alpha and a dark outline.
+- `make_textures.py` samples colour ramps from the environment reference's
+  texture palette and generates seamless 64×64 tiles from them: sandstone
+  walls (plain, mossy, cracked, carved), diamond floor tiles, ceiling slabs,
+  steps, the stairs archway, and vine and fern cutouts.
+
+Everything is embedded in the binary, so no platform loads files at
+runtime. Floors are dressed per seed (which walls are mossy or carved, where
+vines and ferns grow), and shadows are baked into vertex colours.
 
 ## Status
 
 Vertical Slice 0.1 is complete; since then: web and Android builds, auto mode,
-and the zombie.
+the zombie, and the sandstone-temple look.
 
 ### Vertical Slice 0.1
 

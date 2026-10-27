@@ -34,6 +34,8 @@ const EYE_BACK: f32 = 0.25;
 const FOV_DEGREES: f32 = 60.0;
 const FOG_START: f32 = 0.5;
 const FOG_END: f32 = 5.5;
+/// What distance fades into: a warm dark, as if the torchlight gives out.
+const DARKNESS: Color = Color::srgb(0.06, 0.042, 0.026);
 
 pub struct ViewPlugin;
 
@@ -198,7 +200,7 @@ fn spawn_camera(mut commands: Commands, target: Res<LowResTarget>, run: Res<Run>
         Camera3d::default(),
         Camera {
             order: 0,
-            clear_color: ClearColorConfig::Custom(Color::BLACK),
+            clear_color: ClearColorConfig::Custom(DARKNESS),
             ..default()
         },
         world_target(&target),
@@ -211,7 +213,7 @@ fn spawn_camera(mut commands: Commands, target: Res<LowResTarget>, run: Res<Run>
         Tonemapping::None,
         Msaa::Off,
         DistanceFog {
-            color: Color::BLACK,
+            color: DARKNESS,
             falloff: FogFalloff::Linear {
                 start: FOG_START,
                 end: FOG_END,
