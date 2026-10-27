@@ -26,6 +26,8 @@ python3 -m http.server --directory target/web 8000  # then open http://localhost
 - URL options: `?seed=42`, `?auto`, or both (`?seed=42&auto`).
 - Gamepads work through the browser's Gamepad API (press a button first;
   browsers hide pads until then).
+- Sound starts on the first click, tap or key press: browsers keep audio
+  suspended until then, and the page resumes it.
 - Size: about 26 MB, about 6.5 MB gzipped (most of it is Bevy's renderer and
   text stack). Serve it compressed. Don't run Ubuntu's old `wasm-opt`
   (binaryen 108) on it; it breaks wasm-bindgen's reference table.
@@ -59,5 +61,6 @@ adb install -r android/app/build/outputs/apk/debug/app-debug.apk
   bound. **Analog sticks are not read on Android yet** (winit doesn't expose
   joystick axes); most handhelds can map the left stick to the D-pad.
 - No touch controls yet.
+- Sound goes through AAudio (Android 8+), with no extra native libraries.
 - CI (`.github/workflows/ci.yml`) builds the APK on every push and uploads
   it as the `zrpg-android` artifact.

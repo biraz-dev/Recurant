@@ -27,9 +27,10 @@ we use: windowing (winit, X11, Wayland), keyboard, gamepads (gilrs), the core
 lights, no shadow maps) extended with a small depth-grading shader, Reinhard
 tonemapping (needs no LUTs) and distance fog, sprites (to
 present the low-res frame), UI/text (for the HUD), PNG (embedded sprites and
-screenshots), and WebGL2 (browser builds; inert elsewhere). The Android crate
+screenshots), WebGL2 (browser builds; inert elsewhere), and audio with WAV
+decoding (for the synthesized sounds). The Android crate
 adds `android-game-activity`.
-No glTF, audio, animation, picking, scenes or post-processing yet. Add a
+No glTF, animation, picking, scenes or post-processing yet. Add a
 feature only when something needs it.
 
 ## Linux build dependencies
@@ -40,8 +41,8 @@ Debian/Ubuntu:
 sudo apt-get install -y pkg-config libasound2-dev libudev-dev libwayland-dev libxkbcommon-dev libxkbcommon-x11-0
 ```
 
-`libasound2-dev` is not needed by our feature set today, but you will want it
-the day audio lands. A Vulkan or GL driver is required to run the game
+`libasound2-dev` is needed for sound (ALSA). Without a sound card the game
+still runs, silently. A Vulkan or GL driver is required to run the game
 (Mesa is fine; `mesa-vulkan-drivers` provides a software fallback).
 
 ## Build profiles

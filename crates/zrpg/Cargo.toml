@@ -50,4 +50,6 @@ features = [
   "default_font",
   "png",
   "webgl2",
+  "bevy_audio",
+  "wav",
 ]

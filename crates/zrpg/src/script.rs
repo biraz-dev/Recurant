@@ -60,6 +60,7 @@ fn tick(
         "e" => Action::TurnRight,
         "f" => Action::Attack,
         "auto" => Action::Auto,
+        "mute" => Action::Mute,
         "r" => Action::Restart,
         "shot" => {
             let path = format!("zrpg-{}.png", pilot.shots);

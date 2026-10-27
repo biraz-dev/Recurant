@@ -22,6 +22,24 @@
   <script type="module">
     import init from "./zrpg.js";
 
+    // Browsers keep audio suspended until the player interacts with the
+    // page. Track every AudioContext the game creates and resume them on the
+    // first click, tap or key press.
+    const contexts = [];
+    const NativeAudioContext = window.AudioContext || window.webkitAudioContext;
+    if (NativeAudioContext) {
+      window.AudioContext = class extends NativeAudioContext {
+        constructor(...args) {
+          super(...args);
+          contexts.push(this);
+        }
+      };
+      const resume = () => contexts.forEach(c => c.state === "suspended" && c.resume());
+      for (const e of ["pointerdown", "keydown", "touchstart"]) {
+        window.addEventListener(e, resume, { capture: true });
+      }
+    }
+
     const canvas = document.getElementById("zrpg");
     const status = document.getElementById("status");
     // Keyboard input goes to the canvas, so keep it focused.

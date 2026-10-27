@@ -64,7 +64,7 @@ impl Flicker {
 }
 
 #[derive(Component)]
-struct Flame {
+pub struct Flame {
     phase: f32,
 }
 

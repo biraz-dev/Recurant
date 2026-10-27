@@ -237,7 +237,7 @@ fn command_for(a: Action) -> Option<Command> {
         Action::StrafeRight => Command::Step(Step::StrafeRight),
         Action::TurnLeft => Command::Turn(Turn::Left),
         Action::TurnRight => Command::Turn(Turn::Right),
-        Action::Attack | Action::Restart | Action::Auto => return None,
+        Action::Attack | Action::Restart | Action::Auto | Action::Mute => return None,
     })
 }
 

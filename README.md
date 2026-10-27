@@ -38,6 +38,7 @@ See [docs/PLATFORMS.md](docs/PLATFORMS.md) for web and Android details and
 | Strafe right  | D                 | RB, right stick →    |
 | Attack        | Space / F         | A, X, RT             |
 | Auto mode on/off | Tab            | Y                    |
+| Sound on/off  | M                 |                      |
 | Restart (new seed) | R (or Attack once dead) | Select / Back |
 
 Hold a direction to keep walking; hold Attack to keep swinging. Taps made
@@ -62,6 +63,18 @@ Every floor has one staircase, as far from the start as the floor allows,
 marked by an archway over steps leading down. Walk onto it to descend; there
 is no button to press. Each new floor heals 5 Health. Floors never run out,
 and a seed always produces the same sequence of floors.
+
+## Sound
+
+Every sound is synthesized in code at startup, from oscillators, noise and
+filters (`crates/zrpg/src/synth.rs`); no audio files ship with the game.
+Footsteps on stone, the sword's whoosh and its impact on bone, a tired breath
+when you're out of energy, footsteps echoing down the stairs, a low room tone
+with distant drips, and torches that crackle. Zombie sounds come from where
+the zombie is (panned, fading with distance): a hiss when one notices you, a
+shuffle as it comes, and a rasping groan for exactly as long as its wind-up,
+so you can dodge by ear. `cargo run -p zrpg --example sfx` writes them all to
+`target/sfx/` to listen to.
 
 ## Auto mode
 
@@ -97,6 +110,7 @@ Gameplay never touches Bevy; Bevy never decides gameplay.
 cargo test                                   # rules, bot, mesh sanity checks
 cargo run -p zrpg_core --example ascii 7     # print generated floors as ASCII
 ZRPG_SCRIPT="w e shot quit" cargo run        # scripted input + screenshot (zrpg-0.png)
+cargo run -p zrpg --example sfx              # write every sound effect to target/sfx/
 python3 tools/make_sprite.py art/zombie-reference.png crates/zrpg/assets/zombie.png --height 64
 python3 tools/make_textures.py --preview sheet.png   # regenerate the environment textures
 ```
@@ -143,7 +157,8 @@ all and burn through the dark.
 ## Status
 
 Vertical Slice 0.1 is complete; since then: web and Android builds, auto mode,
-the zombie, and the sandstone-temple look.
+the zombie, the sandstone-temple look with torchlight and atmosphere, and
+synthesized sound.
 
 ### Vertical Slice 0.1
 

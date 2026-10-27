@@ -6,6 +6,7 @@
 //! `zrpg_android` on Android.
 
 mod atmosphere;
+mod audio;
 mod auto;
 mod enemies;
 mod hud;
@@ -15,6 +16,7 @@ mod lighting;
 mod platform;
 mod screen;
 mod script;
+pub mod synth;
 mod textures;
 mod view;
 
@@ -75,6 +77,7 @@ pub fn app() -> App {
         screen::ScreenPlugin,
         input::InputPlugin,
         atmosphere::AtmospherePlugin,
+        audio::SoundPlugin,
         level::LevelPlugin,
         lighting::LightingPlugin,
         view::ViewPlugin,

@@ -34,10 +34,12 @@ pub enum Action {
     Restart,
     /// Toggle auto mode.
     Auto,
+    /// Toggle sound.
+    Mute,
 }
 
 impl Action {
-    pub const ALL: [Action; 9] = [
+    pub const ALL: [Action; 10] = [
         Action::Forward,
         Action::Back,
         Action::StrafeLeft,
@@ -47,6 +49,7 @@ impl Action {
         Action::Attack,
         Action::Restart,
         Action::Auto,
+        Action::Mute,
     ];
 
     fn keys(self) -> &'static [KeyCode] {
@@ -69,6 +72,7 @@ impl Action {
             ],
             Action::Restart => &[KeyR, android::SELECT],
             Action::Auto => &[Tab, android::Y],
+            Action::Mute => &[KeyM],
         }
     }
 
@@ -84,6 +88,7 @@ impl Action {
             Action::Attack => &[South, West, RightTrigger2],
             Action::Restart => &[Select],
             Action::Auto => &[North],
+            Action::Mute => &[],
         }
     }
 
@@ -97,7 +102,7 @@ impl Action {
             Action::TurnRight => Some((LeftStickX, 1.0)),
             Action::StrafeLeft => Some((RightStickX, -1.0)),
             Action::StrafeRight => Some((RightStickX, 1.0)),
-            Action::Attack | Action::Restart | Action::Auto => None,
+            Action::Attack | Action::Restart | Action::Auto | Action::Mute => None,
         }
     }
 }
