@@ -53,6 +53,8 @@ pub struct LootAssets {
     item_mesh: Handle<Mesh>,
     /// One icon per item, in `Item::ALL` order (also used by the HUD).
     pub icons: Vec<Handle<Image>>,
+    /// Arrows lying about.
+    arrows_icon: Handle<Image>,
 }
 
 /// A pool of gold, at a cell.
@@ -61,6 +63,9 @@ struct Pool(GridPos);
 /// An item lying at a cell.
 #[derive(Component)]
 struct Lying(GridPos, Item);
+/// Arrows lying at a cell.
+#[derive(Component)]
+struct Arrows(GridPos);
 
 fn load(
     mut commands: Commands,
@@ -76,6 +81,9 @@ fn load(
         pool_texture: images.add(pool_image()),
         item_mesh: meshes.add(item_mesh),
         icons: Item::ALL.iter().map(|&i| images.add(icon(i))).collect(),
+        arrows_icon: images.add(crate::textures::embedded(include_bytes!(
+            "../assets/items/arrows.png"
+        ))),
     });
 }
 
@@ -167,6 +175,7 @@ fn use_items(
 struct LootMaterials {
     pool: Handle<GradedMaterial>,
     items: Vec<Handle<GradedMaterial>>,
+    arrows: Handle<GradedMaterial>,
     look: (zrpg_core::Place, Option<zrpg_core::Theme>),
 }
 
@@ -180,6 +189,7 @@ fn sync(
     mut materials: ResMut<Assets<GradedMaterial>>,
     pools: Query<(Entity, &Pool)>,
     lying: Query<(Entity, &Lying)>,
+    bundles: Query<(Entity, &Arrows)>,
     mut cached: Local<Option<LootMaterials>>,
 ) {
     // Graded like their floor, so loot sits in the same light and haze.
@@ -204,6 +214,7 @@ fn sync(
                 .iter()
                 .map(|i| make(i, ITEM_GLINT, 0.0))
                 .collect(),
+            arrows: make(&assets.arrows_icon, ITEM_GLINT, 0.2),
             look: key,
         });
     }
@@ -227,6 +238,12 @@ fn sync(
             commands.entity(entity).despawn();
         }
     }
+    let arrows_at = |p: GridPos| run.drops.iter().any(|d| d.pos == p && d.arrows > 0);
+    for (entity, b) in &bundles {
+        if !arrows_at(b.0) {
+            commands.entity(entity).despawn();
+        }
+    }
     for drop in &run.drops {
         let at = cell_center(drop.pos);
         let floor = at + Vec3::Y * ground.at(at);
@@ -236,6 +253,16 @@ fn sync(
                 Mesh3d(assets.pool_mesh.clone()),
                 MeshMaterial3d(mats.pool.clone()),
                 Transform::from_translation(floor),
+                NotShadowCaster,
+            ));
+        }
+        // Arrows lie to one side.
+        if drop.arrows > 0 && !bundles.iter().any(|(_, b)| b.0 == drop.pos) {
+            commands.spawn((
+                Arrows(drop.pos),
+                Mesh3d(assets.item_mesh.clone()),
+                MeshMaterial3d(mats.arrows.clone()),
+                Transform::from_translation(floor + Vec3::new(0.16, 0.01, -0.02)),
                 NotShadowCaster,
             ));
         }
@@ -260,8 +287,16 @@ fn sync(
 /// Loot turns to face you, like everything else drawn flat.
 #[allow(clippy::type_complexity)]
 fn turn_to_camera(
-    cams: Query<&Transform, (With<PlayerCamera>, Without<Pool>, Without<Lying>)>,
-    mut sprites: Query<&mut Transform, Or<(With<Pool>, With<Lying>)>>,
+    cams: Query<
+        &Transform,
+        (
+            With<PlayerCamera>,
+            Without<Pool>,
+            Without<Lying>,
+            Without<Arrows>,
+        ),
+    >,
+    mut sprites: Query<&mut Transform, Or<(With<Pool>, With<Lying>, With<Arrows>)>>,
 ) {
     let Ok(cam) = cams.single() else {
         return;

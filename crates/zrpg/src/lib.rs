@@ -5,6 +5,7 @@
 //! can wrap it in its own entry point: `main.rs` on desktop and the web,
 //! `zrpg_android` on Android.
 
+mod archery;
 mod atmosphere;
 mod audio;
 mod auto;
@@ -155,6 +156,7 @@ fn build(saves: bool) -> App {
         spells::SpellsPlugin,
         equipment::EquipmentPlugin,
         motes::MotesPlugin,
+        archery::ArcheryPlugin,
     ))
     .add_systems(
         Update,

@@ -6,6 +6,7 @@
 
 use alloc::vec::Vec;
 
+use crate::archery::{Flight, tuning as arrow_tuning};
 use crate::dungeon::{Floor, GenParams, Place};
 use crate::enemy::{Enemy, EnemyId, EnemyKind, EnemyState, tuning as enemy_tuning};
 use crate::equipment::Equipment;
@@ -62,6 +63,8 @@ pub enum Command {
     UseItem(Item),
     /// Cast a spell.
     Cast(Spell),
+    /// Loose an arrow straight ahead.
+    Shoot,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -169,6 +172,32 @@ pub enum Event {
     SpellFizzled {
         spell: Spell,
     },
+    /// An arrow left the bow (see `Game::flights`).
+    ArrowLoosed {
+        id: u32,
+        from: GridPos,
+        dir: Facing,
+    },
+    /// An arrow struck an enemy at `at`.
+    ArrowHit {
+        id: u32,
+        enemy: EnemyId,
+        at: GridPos,
+    },
+    /// An arrow fell at `at`: against a wall (`wall`), or spent. `kept` if
+    /// it lies there whole, to be picked up.
+    ArrowLanded {
+        id: u32,
+        at: GridPos,
+        wall: bool,
+        kept: bool,
+    },
+    /// Tried to shoot with an empty quiver.
+    OutOfArrows,
+    /// Picked up arrows.
+    ArrowsTaken {
+        amount: u32,
+    },
 }
 
 /// A pool of gold, and perhaps items, where something vanished.
@@ -177,6 +206,7 @@ pub struct Drop {
     pub pos: GridPos,
     pub gold: u32,
     pub items: Bag,
+    pub arrows: u32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -200,6 +230,9 @@ pub struct Player {
     pub bag: Bag,
     /// What you wear and hold.
     pub equipment: Equipment,
+    /// Arrows in the quiver, and seconds until the bow can shoot again.
+    pub arrows: u32,
+    pub bow_cooldown: f32,
     /// Seconds until each spell can be cast again, in `Spell::ALL` order.
     pub spell_cooldowns: [f32; Spell::ALL.len()],
     /// Seconds towards the next Health from Regeneration.
@@ -222,6 +255,8 @@ impl Player {
             gold: 0,
             bag: Bag::default(),
             equipment: Equipment::starting_kit(),
+            arrows: arrow_tuning::START_ARROWS,
+            bow_cooldown: 0.0,
             spell_cooldowns: [0.0; Spell::ALL.len()],
             regen: 0.0,
         }
@@ -284,6 +319,9 @@ pub struct Game {
     /// Level-ups waiting for an ability to be chosen, oldest first: each is
     /// the three abilities on offer.
     pub pending: Vec<Vec<Perk>>,
+    /// Arrows in the air.
+    pub flights: Vec<Flight>,
+    pub(crate) next_flight: u32,
     pub(crate) rng: Rng,
 }
 
@@ -305,6 +343,8 @@ impl Game {
             enemies,
             drops: Vec::new(),
             pending: Vec::new(),
+            flights: Vec::new(),
+            next_flight: 0,
             rng: Rng::new(mix64(run_seed ^ 0xC0FF_EE00)),
         }
     }
@@ -319,8 +359,9 @@ impl Game {
         self.depth += 1;
         self.floor = Floor::for_depth(self.run_seed, self.depth, &self.params);
         self.enemies = spawn_enemies(&self.floor, self.run_seed, self.depth);
-        // Gold left behind stays behind.
+        // Gold left behind stays behind, as do arrows in the air.
         self.drops.clear();
+        self.flights.clear();
         let p = &mut self.player;
         p.pos = self.floor.start;
         p.facing = self.floor.start_facing;
@@ -371,6 +412,13 @@ impl Game {
             self.player.gold += amount;
             out.push(Event::GoldTaken { at, amount });
         }
+        let room = arrow_tuning::MAX_ARROWS.saturating_sub(self.player.arrows);
+        let amount = drop.arrows.min(room);
+        if amount > 0 {
+            drop.arrows -= amount;
+            self.player.arrows += amount;
+            out.push(Event::ArrowsTaken { amount });
+        }
         for item in Item::ALL {
             while drop.items.count(item) > 0 && self.player.bag.add(item) {
                 drop.items.take(item);
@@ -378,7 +426,7 @@ impl Game {
             }
         }
         // What the bag can't hold stays where it lies.
-        if drop.gold == 0 && drop.items.is_empty() {
+        if drop.gold == 0 && drop.items.is_empty() && drop.arrows == 0 {
             self.drops.swap_remove(i);
         }
     }
@@ -487,6 +535,7 @@ impl Game {
             Command::Choose(n) => self.choose(n as usize, out),
             Command::UseItem(item) => self.use_item(item, out),
             Command::Cast(spell) => self.cast(spell, out),
+            Command::Shoot => self.shoot(out),
         }
     }
 
@@ -561,27 +610,145 @@ impl Game {
                 items.add(item);
             }
         }
-        match self.drops.iter_mut().find(|d| d.pos == at) {
-            Some(d) => {
-                d.gold += amount;
-                for (item, n) in items.items() {
-                    for _ in 0..n {
-                        d.items.add(item);
-                    }
-                }
-            }
-            None => self.drops.push(Drop {
-                pos: at,
-                gold: amount,
-                items,
-            }),
-        }
+        let arrows = if self.rng.chance(arrow_tuning::DROP_PERCENT) {
+            self.rng
+                .range(arrow_tuning::DROP_MIN, arrow_tuning::DROP_MAX) as u32
+        } else {
+            0
+        };
+        self.leave(Drop {
+            pos: at,
+            gold: amount,
+            items,
+            arrows,
+        });
         out.push(Event::GoldDropped { at, amount });
         let p = &mut self.player;
         let heal = perk_tuning::BLOODTHIRST_HEAL * p.stacks(Perk::Bloodthirst) as i32;
         p.hp = (p.hp + heal).min(p.max_hp);
         self.gain_xp(progression::xp_for_kill(kind, self.depth), out);
         true
+    }
+
+    /// Add `drop` to whatever already lies at its cell.
+    fn leave(&mut self, drop: Drop) {
+        match self.drops.iter_mut().find(|d| d.pos == drop.pos) {
+            Some(d) => {
+                d.gold += drop.gold;
+                d.arrows += drop.arrows;
+                for (item, n) in drop.items.items() {
+                    for _ in 0..n {
+                        d.items.add(item);
+                    }
+                }
+            }
+            None => self.drops.push(drop),
+        }
+    }
+
+    /// Loose an arrow, if the bow is ready and there is an arrow.
+    fn shoot(&mut self, out: &mut Vec<Event>) {
+        let p = &mut self.player;
+        if p.bow_cooldown > 0.0 || p.equipment.get(crate::Slot::Bow).is_none() {
+            return;
+        }
+        if p.arrows == 0 {
+            out.push(Event::OutOfArrows);
+            return;
+        }
+        p.arrows -= 1;
+        p.bow_cooldown = arrow_tuning::COOLDOWN;
+        let (from, dir) = (p.pos, p.facing);
+        let id = self.next_flight;
+        self.next_flight = self.next_flight.wrapping_add(1);
+        self.flights.push(Flight::new(id, from, dir));
+        out.push(Event::ArrowLoosed { id, from, dir });
+    }
+
+    /// The first enemy an arrow loosed now would meet, if it stood still.
+    pub fn arrow_target(&self) -> Option<&Enemy> {
+        let map = &self.floor.map;
+        let (mut at, dir) = (self.player.pos, self.player.facing);
+        for _ in 0..arrow_tuning::RANGE {
+            if !map.can_step(at, dir) {
+                return None;
+            }
+            at = at + dir;
+            if let Some(e) = self.enemy_at(at) {
+                return Some(e);
+            }
+        }
+        None
+    }
+
+    /// Move every arrow in the air on by `dt`: into the next cells, until
+    /// it meets an enemy, a wall or the end of its range.
+    fn fly_arrows(&mut self, dt: f32, out: &mut Vec<Event>) {
+        let mut i = 0;
+        while i < self.flights.len() {
+            let mut f = self.flights[i];
+            f.dist += arrow_tuning::SPEED * dt;
+            let mut done = false;
+            while !done && f.entered < f.cells_reached() {
+                if !self.floor.map.can_step(f.cell, f.dir) {
+                    self.arrow_falls(f.id, f.cell, true, out);
+                    done = true;
+                    continue;
+                }
+                f.cell = f.cell + f.dir;
+                f.entered += 1;
+                if let Some(e) = self.enemies.iter().position(|e| e.pos == f.cell) {
+                    let id = self.enemies[e].id;
+                    out.push(Event::ArrowHit {
+                        id: f.id,
+                        enemy: id,
+                        at: f.cell,
+                    });
+                    let damage = self
+                        .rng
+                        .range(arrow_tuning::DAMAGE_MIN, arrow_tuning::DAMAGE_MAX)
+                        + spells::level_bonus(self.player.level);
+                    self.hurt_enemy(e, damage, out);
+                    if self.rng.chance(arrow_tuning::KEPT_HIT_PERCENT) {
+                        self.leave(Drop {
+                            pos: f.cell,
+                            gold: 0,
+                            items: Bag::default(),
+                            arrows: 1,
+                        });
+                    }
+                    done = true;
+                } else if f.entered >= arrow_tuning::RANGE {
+                    self.arrow_falls(f.id, f.cell, false, out);
+                    done = true;
+                }
+            }
+            if done {
+                self.flights.remove(i);
+            } else {
+                self.flights[i] = f;
+                i += 1;
+            }
+        }
+    }
+
+    /// An arrow comes down at `at`, whole or broken.
+    fn arrow_falls(&mut self, id: u32, at: GridPos, wall: bool, out: &mut Vec<Event>) {
+        let kept = self.rng.chance(arrow_tuning::KEPT_MISS_PERCENT);
+        if kept {
+            self.leave(Drop {
+                pos: at,
+                gold: 0,
+                items: Bag::default(),
+                arrows: 1,
+            });
+        }
+        out.push(Event::ArrowLanded { id, at, wall, kept });
+        // Shot point-blank into a wall: it falls at your feet, and you take
+        // it back.
+        if at == self.player.pos {
+            self.pick_up(at, out);
+        }
     }
 
     /// The enemies a spell would strike, in order, and where its line
@@ -713,6 +880,7 @@ impl Game {
         }
         let p = &mut self.player;
         p.attack_cooldown = (p.attack_cooldown - dt).max(0.0);
+        p.bow_cooldown = (p.bow_cooldown - dt).max(0.0);
         for c in p.spell_cooldowns.iter_mut() {
             *c = (*c - dt).max(0.0);
         }
@@ -724,6 +892,11 @@ impl Game {
                 p.regen -= perk_tuning::REGEN_SECS;
                 p.hp += 1;
             }
+        }
+
+        self.fly_arrows(dt, out);
+        if !self.player.is_alive() {
+            return;
         }
 
         if self.enemies.is_empty() {
@@ -1311,6 +1484,95 @@ mod tests {
         for e in &g.enemies {
             assert!(stage.theme.kinds().contains(&e.kind) || e.kind.first_depth() <= 2);
         }
+    }
+
+    #[test]
+    fn an_arrow_flies_before_it_strikes() {
+        let mut g = corridor(5);
+        let hp = g.enemies[0].hp;
+        let mut out = Vec::new();
+        g.apply(Command::Shoot, &mut out);
+        assert!(matches!(out[0], Event::ArrowLoosed { .. }));
+        assert_eq!(g.player.arrows, arrow_tuning::START_ARROWS - 1);
+        assert!(g.enemies[0].hp == hp && g.flights.len() == 1, "not yet");
+        let out = run(&mut g, 0.6);
+        assert!(
+            out.iter()
+                .any(|e| matches!(e, Event::ArrowHit { enemy: 7, .. }))
+        );
+        assert!(g.enemies.first().is_none_or(|e| e.hp < hp));
+        assert!(g.flights.is_empty());
+    }
+
+    #[test]
+    fn a_miss_falls_at_the_wall_and_can_be_picked_up() {
+        let mut g = corridor(5);
+        g.enemies.clear();
+        g.player.pos = GridPos::new(5, 1);
+        let mut out = Vec::new();
+        g.apply(Command::Shoot, &mut out);
+        let out = run(&mut g, 1.0);
+        let landed = out.iter().find_map(|e| match e {
+            Event::ArrowLanded { at, wall, kept, .. } => Some((*at, *wall, *kept)),
+            _ => None,
+        });
+        let (at, wall, kept) = landed.expect("it came down");
+        assert_eq!((at, wall), (GridPos::new(10, 1), true));
+        let before = g.player.arrows;
+        g.player.pos = GridPos::new(9, 1);
+        let mut out = Vec::new();
+        g.apply(Command::Step(Step::Forward), &mut out);
+        let taken = u32::from(kept);
+        assert_eq!(g.player.arrows, before + taken);
+        assert!(g.drops.is_empty());
+    }
+
+    #[test]
+    fn a_point_blank_miss_comes_straight_back() {
+        let mut g = corridor(5);
+        g.enemies.clear();
+        g.player.facing = Facing::North;
+        let mut out = Vec::new();
+        g.apply(Command::Shoot, &mut out);
+        let out = run(&mut g, 0.3);
+        let kept = out
+            .iter()
+            .any(|e| matches!(e, Event::ArrowLanded { kept: true, .. }));
+        let expect = arrow_tuning::START_ARROWS - u32::from(!kept);
+        assert_eq!(g.player.arrows, expect);
+        assert!(g.drops.is_empty(), "nothing left under your feet");
+    }
+
+    #[test]
+    fn arrows_run_out() {
+        let mut g = corridor(5);
+        g.player.arrows = 0;
+        let mut out = Vec::new();
+        g.apply(Command::Shoot, &mut out);
+        assert_eq!(out, [Event::OutOfArrows]);
+        assert!(g.flights.is_empty());
+    }
+
+    #[test]
+    fn a_spent_arrow_falls_at_the_end_of_its_range() {
+        let mut g = Game::new(0);
+        let mut map = Map::filled(20, 3, Tile::Wall);
+        for x in 1..19 {
+            map.set(GridPos::new(x, 1), Tile::Floor);
+        }
+        g.floor.map = map;
+        g.player = Player::new(GridPos::new(1, 1), Facing::East);
+        g.enemies.clear();
+        let mut out = Vec::new();
+        g.apply(Command::Shoot, &mut out);
+        let out = run(&mut g, 1.5);
+        let at = out.iter().find_map(|e| match e {
+            Event::ArrowLanded {
+                at, wall: false, ..
+            } => Some(*at),
+            _ => None,
+        });
+        assert_eq!(at, Some(GridPos::new(1 + arrow_tuning::RANGE as i32, 1)));
     }
 }
 

@@ -6,11 +6,13 @@
 //! The format is versioned little-endian bytes. A save that doesn't parse,
 //! or comes from an unknown version, is ignored rather than trusted.
 //! Version 2 added gold, version 3 six creature items, version 4 kept only
-//! the Health Potion; older saves still load, with
-//! what they lack left empty.
+//! the Health Potion, version 5 arrows (in the quiver, lying about and in
+//! the air); older saves still load, with what they lack left empty (and a
+//! full starting quiver).
 
 use alloc::vec::Vec;
 
+use crate::archery::{Flight, tuning as arrow_tuning};
 use crate::dungeon::Floor;
 use crate::enemy::{Enemy, EnemyKind, EnemyState};
 use crate::game::{Drop, Game, Player};
@@ -19,7 +21,8 @@ use crate::items::{Bag, Item};
 use crate::progression::{MAX_LEVEL, Perk, Perks};
 use crate::rng::Rng;
 
-const MAGIC: &[u8; 4] = b"ZRS4";
+const MAGIC: &[u8; 4] = b"ZRS5";
+const MAGIC_V4: &[u8; 4] = b"ZRS4";
 const MAGIC_V3: &[u8; 4] = b"ZRS3";
 /// Version 3 carried six kinds of item (none of them potions), a ward and
 /// empowered hits; their bytes are read and set aside.
@@ -53,12 +56,27 @@ impl Game {
         w.extend(Perk::ALL.map(|perk| p.perks.count(perk)));
         put_u32(&mut w, p.gold);
         w.extend(p.bag.counts());
+        put_u32(&mut w, p.arrows);
+        put_f32(&mut w, p.bow_cooldown);
         put_u32(&mut w, self.drops.len() as u32);
         for d in &self.drops {
             put_i32(&mut w, d.pos.x);
             put_i32(&mut w, d.pos.y);
             put_u32(&mut w, d.gold);
             w.extend(d.items.counts());
+            put_u32(&mut w, d.arrows);
+        }
+        put_u32(&mut w, self.next_flight);
+        put_u32(&mut w, self.flights.len() as u32);
+        for f in &self.flights {
+            put_u32(&mut w, f.id);
+            put_i32(&mut w, f.from.x);
+            put_i32(&mut w, f.from.y);
+            w.push(f.dir as u8);
+            put_f32(&mut w, f.dist);
+            put_i32(&mut w, f.cell.x);
+            put_i32(&mut w, f.cell.y);
+            put_u32(&mut w, f.entered);
         }
 
         put_u32(&mut w, self.pending.len() as u32);
@@ -92,7 +110,8 @@ impl Game {
     pub fn load(bytes: &[u8]) -> Option<Game> {
         let mut r = Reader { bytes, at: 0 };
         let version = match r.take(4)? {
-            m if m == MAGIC => 4,
+            m if m == MAGIC => 5,
+            m if m == MAGIC_V4 => 4,
             m if m == MAGIC_V3 => 3,
             m if m == MAGIC_V2 => 2,
             m if m == MAGIC_V1 => 1,
@@ -131,6 +150,8 @@ impl Game {
             bag: Bag::default(),
             // Gear can't change yet, so it isn't saved.
             equipment: crate::Equipment::starting_kit(),
+            arrows: arrow_tuning::START_ARROWS,
+            bow_cooldown: 0.0,
             spell_cooldowns: [0.0; crate::spells::Spell::ALL.len()],
             regen: r.f32()?,
         };
@@ -143,6 +164,10 @@ impl Game {
             player.gold = r.u32()?;
             if version >= 4 {
                 player.bag = Bag::from_counts(r.bag()?);
+                if version >= 5 {
+                    player.arrows = r.u32()?.min(arrow_tuning::MAX_ARROWS);
+                    player.bow_cooldown = r.f32()?;
+                }
             } else if version == 3 {
                 r.take(V3_ITEMS + 2)?;
             }
@@ -158,12 +183,33 @@ impl Game {
                     }
                     _ => Bag::default(),
                 };
+                let arrows = if version >= 5 { r.u32()? } else { 0 };
                 if !game.floor.map.is_walkable(pos) {
                     return None;
                 }
-                drops.push(Drop { pos, gold, items });
+                drops.push(Drop {
+                    pos,
+                    gold,
+                    items,
+                    arrows,
+                });
             }
             game.drops = drops;
+            if version >= 5 {
+                game.next_flight = r.u32()?;
+                let mut flights = Vec::new();
+                for _ in 0..r.u32()?.min(64) {
+                    let id = r.u32()?;
+                    let from = GridPos::new(r.i32()?, r.i32()?);
+                    let dir = *Facing::ALL.get(r.u8()? as usize)?;
+                    let mut f = Flight::new(id, from, dir);
+                    f.dist = r.f32()?;
+                    f.cell = GridPos::new(r.i32()?, r.i32()?);
+                    f.entered = r.u32()?;
+                    flights.push(f);
+                }
+                game.flights = flights;
+            }
         }
         game.player = player;
 
@@ -335,8 +381,11 @@ mod tests {
         // Rewrite as version 1: old magic, no gold or drops after the perks.
         v1[..4].copy_from_slice(MAGIC_V1);
         let perks_end = 4 + 8 + 4 + 2 + 8 + 4 * 2 + 1 + 4 * 5 + 4 * 2 + 4 + Perk::ALL.len();
-        // Gold and the bag, then the drops with their items.
-        let gold_and_drops = 4 + Item::ALL.len() + 4 + (12 + Item::ALL.len()) * g.drops.len();
+        // Gold, the bag and the quiver, then the drops with their items
+        // and arrows, then the arrows in the air.
+        let flights = 4 + 4 + 29 * g.flights.len();
+        let gold_and_drops =
+            4 + Item::ALL.len() + 8 + 4 + (16 + Item::ALL.len()) * g.drops.len() + flights;
         v1.drain(perks_end..perks_end + gold_and_drops);
         let back = Game::load(&v1).expect("version 1 loads");
         assert_eq!(back.player.gold, 0);

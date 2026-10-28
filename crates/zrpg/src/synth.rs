@@ -650,6 +650,84 @@ pub fn bolt(seed: u64) -> Vec<f32> {
     finish(buf)
 }
 
+/// A plucked string (Karplus-Strong): a delay line of noise, averaged as
+/// it recirculates, rings at `freq` and dulls as it fades.
+fn pluck(noise: &mut Noise, freq: f32, len: f32, damping: f32) -> Vec<f32> {
+    let period = (RATE as f32 / freq) as usize;
+    let mut line: Vec<f32> = (0..period).map(|_| noise.next()).collect();
+    (0..samples(len))
+        .map(|i| {
+            let k = i % period;
+            let next = line[(k + 1) % period];
+            let out = line[k];
+            line[k] = (out + next) * 0.5 * damping;
+            out
+        })
+        .collect()
+}
+
+/// Loosing an arrow: the bowstring's low twang and the hiss of the shaft
+/// leaving.
+pub fn twang(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let mut buf = pluck(&mut noise, 98.0, 0.45, 0.996);
+    let mut band = BandPass::new(1.0);
+    let hiss: Vec<f32> = (0..samples(0.18))
+        .map(|i| {
+            let t = time(i);
+            band.run(noise.next(), 2500.0 + 3000.0 * t) * bell(t, 0.18)
+        })
+        .collect();
+    mix_in(&mut buf, &hiss, 0.01, 0.5);
+    finish(buf)
+}
+
+/// An arrow striking stone: a hard wooden knock and a short rattle.
+pub fn thunk(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let (mut osc, mut band) = (Osc::default(), BandPass::new(0.5));
+    let mut buf: Vec<f32> = (0..samples(0.3))
+        .map(|i| {
+            let t = time(i);
+            let knock = osc.sine(320.0 - 200.0 * t) * decay(t, 0.025);
+            let crack = band.run(noise.next(), 1600.0) * decay(t, 0.012);
+            knock + 0.8 * crack
+        })
+        .collect();
+    echo(&mut buf, 0.07, 0.25);
+    finish(buf)
+}
+
+/// A spent arrow skittering along the floor.
+pub fn clatter(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let mut buf = vec![0.0; samples(0.4)];
+    for k in 0..4 {
+        let mut band = BandPass::new(0.4);
+        let centre = 1400.0 + 500.0 * noise.unit();
+        let tap: Vec<f32> = (0..samples(0.05))
+            .map(|i| band.run(noise.next(), centre) * decay(time(i), 0.01))
+            .collect();
+        mix_in(&mut buf, &tap, 0.02 + k as f32 * 0.07, 1.0 - 0.2 * k as f32);
+    }
+    finish(buf)
+}
+
+/// Reaching for an arrow and finding none: fingers brushing an empty
+/// quiver, two dry clicks.
+pub fn empty_quiver(_seed: u64) -> Vec<f32> {
+    let click: Vec<f32> = (0..samples(0.06))
+        .map(|i| {
+            let t = time(i);
+            (TAU * 900.0 * t).sin() * decay(t, 0.012) + (TAU * 1700.0 * t).sin() * decay(t, 0.006)
+        })
+        .collect();
+    let mut buf = vec![0.0; samples(0.16)];
+    mix_in(&mut buf, &click, 0.0, 1.0);
+    mix_in(&mut buf, &click, 0.07, 0.7);
+    finish(buf)
+}
+
 /// A spell with nothing to strike: a dry little fizz.
 pub fn fizzle(seed: u64) -> Vec<f32> {
     let mut noise = Noise::new(seed);
@@ -712,6 +790,10 @@ pub fn all() -> Vec<(&'static str, Vec<f32>)> {
         ("chain", chain(23)),
         ("bolt", bolt(24)),
         ("fizzle", fizzle(25)),
+        ("twang", twang(26)),
+        ("thunk", thunk(27)),
+        ("clatter", clatter(28)),
+        ("empty_quiver", empty_quiver(29)),
     ]
 }
 

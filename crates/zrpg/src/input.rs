@@ -49,10 +49,12 @@ pub enum Action {
     Spell3,
     /// Open or close the equipment screen.
     Gear,
+    /// Loose an arrow.
+    Shoot,
 }
 
 impl Action {
-    pub const ALL: [Action; 16] = [
+    pub const ALL: [Action; 17] = [
         Action::Forward,
         Action::Back,
         Action::StrafeLeft,
@@ -69,6 +71,7 @@ impl Action {
         Action::Spell2,
         Action::Spell3,
         Action::Gear,
+        Action::Shoot,
     ];
 
     /// The item slots, in order.
@@ -85,15 +88,7 @@ impl Action {
             Action::StrafeRight => &[KeyD, Numpad6, android::R1],
             Action::TurnLeft => &[KeyQ, ArrowLeft, Numpad7],
             Action::TurnRight => &[KeyE, ArrowRight, Numpad9],
-            Action::Attack => &[
-                Space,
-                KeyF,
-                Numpad5,
-                Numpad0,
-                android::A,
-                android::X,
-                android::R2,
-            ],
+            Action::Attack => &[Space, KeyF, Numpad5, Numpad0, android::A, android::R2],
             Action::Restart => &[KeyR, android::SELECT],
             Action::Auto => &[KeyP, android::Y],
             Action::Mute => &[KeyM],
@@ -103,6 +98,7 @@ impl Action {
             Action::Spell2 => &[KeyX],
             Action::Spell3 => &[KeyC],
             Action::Gear => &[KeyI, android::START],
+            Action::Shoot => &[KeyV, android::X],
         }
     }
 
@@ -115,13 +111,14 @@ impl Action {
             Action::StrafeRight => &[RightTrigger],
             Action::TurnLeft => &[DPadLeft],
             Action::TurnRight => &[DPadRight],
-            Action::Attack => &[South, West, RightTrigger2],
+            Action::Attack => &[South, RightTrigger2],
             Action::Restart => &[Select],
             Action::Auto => &[North],
             Action::Mute => &[],
             Action::Map => &[LeftTrigger2],
             Action::Spell1 => &[East],
             Action::Gear => &[Start],
+            Action::Shoot => &[West],
             Action::Item1 | Action::Spell2 | Action::Spell3 => &[],
         }
     }

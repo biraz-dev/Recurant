@@ -1,6 +1,7 @@
 //! Equipment: what you wear and hold, one piece per slot. For now you start
-//! with the sword in your right hand and the torch in your left, and
-//! nothing else drops; the slots are ready for more.
+//! with the sword in your right hand, the torch in your left, and a bow and
+//! quiver on your back; nothing else drops yet. The slots are ready for
+//! more.
 //!
 //! Gear doesn't change yet, so it isn't saved: a resumed run starts with
 //! the same kit.
@@ -18,10 +19,12 @@ pub enum Slot {
     Belt,
     RingRight,
     RingLeft,
+    Bow,
+    Quiver,
 }
 
 impl Slot {
-    pub const ALL: [Slot; 9] = [
+    pub const ALL: [Slot; 11] = [
         Slot::Helmet,
         Slot::Necklace,
         Slot::Armor,
@@ -31,6 +34,8 @@ impl Slot {
         Slot::Belt,
         Slot::RingRight,
         Slot::RingLeft,
+        Slot::Bow,
+        Slot::Quiver,
     ];
 
     pub fn index(self) -> usize {
@@ -48,6 +53,8 @@ impl Slot {
             Slot::Belt => "BELT",
             Slot::RingRight => "RING",
             Slot::RingLeft => "RING",
+            Slot::Bow => "BOW",
+            Slot::Quiver => "QUIVER",
         }
     }
 }
@@ -57,10 +64,12 @@ impl Slot {
 pub enum Gear {
     Sword,
     Torch,
+    HuntingBow,
+    Quiver,
 }
 
 impl Gear {
-    pub const ALL: [Gear; 2] = [Gear::Sword, Gear::Torch];
+    pub const ALL: [Gear; 4] = [Gear::Sword, Gear::Torch, Gear::HuntingBow, Gear::Quiver];
 
     pub fn index(self) -> usize {
         Gear::ALL.iter().position(|&g| g == self).unwrap_or(0)
@@ -70,6 +79,8 @@ impl Gear {
         match self {
             Gear::Sword => "WORN SWORD",
             Gear::Torch => "TORCH",
+            Gear::HuntingBow => "HUNTING BOW",
+            Gear::Quiver => "QUIVER",
         }
     }
 
@@ -77,6 +88,8 @@ impl Gear {
         match self {
             Gear::Sword => "Nicked, but it holds an edge.",
             Gear::Torch => "Keeps the dark a few steps back.",
+            Gear::HuntingBow => "Ash and gut. Reaches eight cells down a straight line.",
+            Gear::Quiver => "Holds up to sixty arrows.",
         }
     }
 
@@ -85,6 +98,8 @@ impl Gear {
         match self {
             Gear::Sword => Slot::RightHand,
             Gear::Torch => Slot::LeftHand,
+            Gear::HuntingBow => Slot::Bow,
+            Gear::Quiver => Slot::Quiver,
         }
     }
 }
@@ -101,11 +116,12 @@ impl Equipment {
         slots: [None; Slot::ALL.len()],
     };
 
-    /// What every run starts with: sword and torch.
+    /// What every run starts with: sword, torch, bow and quiver.
     pub fn starting_kit() -> Equipment {
         let mut kit = Equipment::EMPTY;
-        kit.wear(Gear::Sword);
-        kit.wear(Gear::Torch);
+        for gear in Gear::ALL {
+            kit.wear(gear);
+        }
         kit
     }
 
@@ -135,12 +151,14 @@ mod tests {
     use super::*;
 
     #[test]
-    fn you_start_with_sword_and_torch() {
+    fn you_start_with_sword_torch_and_bow() {
         let kit = Equipment::starting_kit();
         assert_eq!(kit.get(Slot::RightHand), Some(Gear::Sword));
         assert_eq!(kit.get(Slot::LeftHand), Some(Gear::Torch));
+        assert_eq!(kit.get(Slot::Bow), Some(Gear::HuntingBow));
+        assert_eq!(kit.get(Slot::Quiver), Some(Gear::Quiver));
         let worn = Slot::ALL.iter().filter(|&&s| kit.get(s).is_some()).count();
-        assert_eq!(worn, 2);
+        assert_eq!(worn, 4);
     }
 
     #[test]

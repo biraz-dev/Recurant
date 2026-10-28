@@ -36,7 +36,8 @@ See [docs/PLATFORMS.md](docs/PLATFORMS.md) for web and Android details and
 | Turn right    | E / →             | D-pad →, left stick → |
 | Strafe left   | A                 | LB, right stick ←    |
 | Strafe right  | D                 | RB, right stick →    |
-| Attack        | Space / F         | A, X, RT             |
+| Attack        | Space / F         | A, RT                |
+| Shoot an arrow | V                | X                    |
 | Auto mode on/off | P              | Y                    |
 | Map: corner, full, hidden | Tab | LT                  |
 | Spark / Chain Lightning / Lightning Bolt | Z / X / C | B (Spark) |
@@ -102,17 +103,35 @@ stills).
 ## Equipment
 
 Press I (gamepad: Start) for the equipment screen, an old paper doll: your
-figure in a lit alcove, ringed by nine slots (helmet, necklace, armor, right
-and left hand, gloves, belt and two rings), with your stats beside it. The
-arrows move between slots and show what each holds; the world holds still
-until you close it. You start with the sword in your right hand and the
-torch in your left; the other slots wait for gear (none drops yet).
+figure in a lit alcove, ringed by eleven slots (bow, helmet, quiver,
+necklace, armor, right and left hand, gloves, belt and two rings), with
+your stats beside it. The arrows move between slots and show what each
+holds; the world holds still until you close it. You start with the sword
+in your right hand, the torch in your left, and a hunting bow and quiver;
+the other slots wait for gear (none drops yet).
 
 The rules are in `zrpg_core::equipment`; the screen is
 `crates/zrpg/src/equipment.rs`. Its art (the stone backdrop, the figure,
 the slot frame, a faint outline for each empty slot and the sword and torch
 icons) is placeholder pixel art from `tools/make_equipment_art.py`, in
 `crates/zrpg/assets/equipment`; repaint any of it at the same size.
+
+## Archery
+
+Press V (gamepad: X) to loose an arrow down your line of sight. It really
+flies (fourteen cells a second, up to eight cells), so a creature can step
+into its path or out of it, and it strikes the first one it meets for 3 to
+5 (more with level). Shooting costs no Chi, only arrows: you start with 15
+and the quiver holds 60. An arrow that misses falls where it stops,
+against a wall or spent, and usually lies there whole to be picked up
+(walk over it); one that hits sometimes drops out of its target; kills
+sometimes leave a few. The bow's slot, left of the spells, shows the
+arrows left and shades while you nock the next. Auto mode shoots at
+anything coming down the line ahead.
+
+The rules are in `zrpg_core::archery`; the arrow in the air is drawn from
+simple shapes in `crates/zrpg/src/archery.rs`; the bow, quiver and lying
+arrows are placeholder art from `tools/make_archery_art.py`.
 
 ## The ruins and what lives below
 
@@ -221,6 +240,7 @@ cargo run -p zrpg --example bestiary         # parade every creature (--shots DI
 cargo run -p zrpg --example spellbook        # cast every spell at a row of creatures
 python3 tools/make_spell_art.py              # placeholder spell and potion art
 python3 tools/make_equipment_art.py          # placeholder equipment screen art
+python3 tools/make_archery_art.py            # placeholder bow, quiver and arrows
 python3 tools/extract_asset_kits.py          # unpack art/kits/archives (needed by the two below)
 python3 tools/make_ruins.py                  # ruins kit -> assets/ruins + zrpg_core/src/ruins.map
 python3 tools/make_creatures.py              # creature kits -> assets/creatures + src/sheets.rs

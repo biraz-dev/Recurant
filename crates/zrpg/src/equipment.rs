@@ -1,6 +1,6 @@
 //! The equipment screen: an old paper doll. A figure stands in a lit
-//! alcove, ringed by the nine slots it can wear (helmet, necklace, armor,
-//! both hands, gloves, belt, two rings); beside it, your stats and what the
+//! alcove, ringed by the eleven slots it can wear (helmet, necklace, armor,
+//! both hands, gloves, belt, two rings, bow and quiver); beside it, your stats and what the
 //! chosen slot holds. I (gamepad Start) opens and closes it; the world holds
 //! still while it is open. Arrows (or WASD) move between slots.
 //!
@@ -21,7 +21,7 @@ const SLOT_PNG: &[u8] = include_bytes!("../assets/equipment/slot.png");
 
 /// Top-left corner of each slot on the 320 x 240 screen, in `Slot::ALL`
 /// order. Your right hand is on the left, as when facing someone.
-const SLOTS: [(f32, f32); 9] = [
+const SLOTS: [(f32, f32); 11] = [
     (92.0, 8.0),    // helmet
     (160.0, 52.0),  // necklace
     (24.0, 52.0),   // armor
@@ -31,6 +31,8 @@ const SLOTS: [(f32, f32); 9] = [
     (160.0, 132.0), // belt
     (24.0, 172.0),  // ring (right hand)
     (160.0, 172.0), // ring (left hand)
+    (24.0, 12.0),   // bow
+    (160.0, 12.0),  // quiver
 ];
 const SLOT_SIZE: f32 = 20.0;
 const FIGURE_AT: (f32, f32) = (60.0, 34.0);
@@ -104,6 +106,8 @@ fn empty_png(slot: Slot) -> &'static [u8] {
         Slot::Gloves => include_bytes!("../assets/equipment/empty/gloves.png"),
         Slot::Belt => include_bytes!("../assets/equipment/empty/belt.png"),
         Slot::RingRight | Slot::RingLeft => include_bytes!("../assets/equipment/empty/ring.png"),
+        Slot::Bow => include_bytes!("../assets/equipment/empty/bow.png"),
+        Slot::Quiver => include_bytes!("../assets/equipment/empty/quiver.png"),
     }
 }
 
@@ -111,6 +115,8 @@ fn gear_png(gear: Gear) -> &'static [u8] {
     match gear {
         Gear::Sword => include_bytes!("../assets/equipment/gear/sword.png"),
         Gear::Torch => include_bytes!("../assets/equipment/gear/torch.png"),
+        Gear::HuntingBow => include_bytes!("../assets/equipment/gear/bow.png"),
+        Gear::Quiver => include_bytes!("../assets/equipment/gear/quiver.png"),
     }
 }
 
@@ -332,13 +338,15 @@ fn show(
 
     let (low, high) = p.swing_damage();
     let stats = format!(
-        "LEVEL {}\nHEALTH {} / {}\nCHI {} / {}\nGOLD {}\nSWING {}-{}\nSPELLS +{}\nABILITIES {}",
+        "LEVEL {}\nHEALTH {} / {}\nCHI {} / {}\nGOLD {}\nARROWS {} / {}\nSWING {}-{}\nSPELLS +{}\nABILITIES {}",
         p.level,
         p.hp,
         p.max_hp,
         p.energy.floor() as i32,
         p.max_energy as i32,
         p.gold,
+        p.arrows,
+        zrpg_core::archery::tuning::MAX_ARROWS,
         low,
         high,
         zrpg_core::spells::level_bonus(p.level),
@@ -374,7 +382,7 @@ mod tests {
 
     #[test]
     fn arrows_reach_every_slot() {
-        // From the helmet, walking the screen reaches all nine slots.
+        // From the helmet, walking the screen reaches every slot.
         let mut seen = vec![false; SLOTS.len()];
         let mut stack = vec![0];
         while let Some(i) = stack.pop() {
@@ -393,7 +401,8 @@ mod tests {
         let armor = Slot::Armor.index();
         assert_eq!(neighbour(armor, Vec2::X), Slot::Necklace.index());
         assert_eq!(neighbour(armor, Vec2::Y), Slot::RightHand.index());
-        assert_eq!(neighbour(armor, Vec2::NEG_Y), Slot::Helmet.index());
+        assert_eq!(neighbour(armor, Vec2::NEG_Y), Slot::Bow.index());
+        assert_eq!(neighbour(Slot::Bow.index(), Vec2::X), Slot::Helmet.index());
         assert_eq!(neighbour(armor, Vec2::NEG_X), armor);
     }
 }

@@ -48,6 +48,10 @@ mod mix {
     pub const CHAIN: f32 = 0.55;
     pub const BOLT: f32 = 0.7;
     pub const FIZZLE: f32 = 0.3;
+    pub const TWANG: f32 = 0.55;
+    pub const THUNK: f32 = 0.7;
+    pub const CLATTER: f32 = 0.45;
+    pub const EMPTY_QUIVER: f32 = 0.4;
 }
 
 /// Rodio fades spatial sounds with the inverse square of distance, which is
@@ -105,6 +109,10 @@ struct Sounds {
     /// One per spell, in `Spell::ALL` order.
     spells: Vec<Handle<AudioSource>>,
     fizzle: Handle<AudioSource>,
+    twang: Handle<AudioSource>,
+    thunk: Handle<AudioSource>,
+    clatter: Handle<AudioSource>,
+    empty_quiver: Handle<AudioSource>,
 }
 
 fn synthesize(mut commands: Commands, mut sources: ResMut<Assets<AudioSource>>) {
@@ -143,6 +151,10 @@ fn synthesize(mut commands: Commands, mut sources: ResMut<Assets<AudioSource>>) 
             add(synth::bolt(24)),
         ],
         fizzle: add(synth::fizzle(25)),
+        twang: add(synth::twang(26)),
+        thunk: add(synth::thunk(27)),
+        clatter: add(synth::clatter(28)),
+        empty_quiver: add(synth::empty_quiver(29)),
     });
 }
 
@@ -277,6 +289,17 @@ fn play_event_sounds(
             // Each strike already sounds through `EnemyHurt`.
             Event::SpellHit { .. } => {}
             Event::SpellFizzled { .. } => sfx(&sounds.fizzle, mix::FIZZLE, None),
+            Event::ArrowLoosed { .. } => sfx(&sounds.twang, mix::TWANG, None),
+            // The strike itself sounds through `EnemyHurt`.
+            Event::ArrowHit { .. } => {}
+            Event::ArrowLanded { at, wall: true, .. } => {
+                sfx(&sounds.thunk, mix::THUNK, Some(ear_level(at)))
+            }
+            Event::ArrowLanded { at, .. } => {
+                sfx(&sounds.clatter, mix::CLATTER, Some(ear_level(at)))
+            }
+            Event::OutOfArrows => sfx(&sounds.empty_quiver, mix::EMPTY_QUIVER, None),
+            Event::ArrowsTaken { .. } => sfx(&sounds.pickup, mix::PICKUP, None),
             Event::GoldDropped { at, .. } => {
                 sfx(&sounds.coin_drop, mix::COIN_DROP, Some(ear_level(at)))
             }

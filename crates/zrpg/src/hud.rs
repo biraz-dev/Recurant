@@ -168,10 +168,13 @@ fn spawn_hud(
                 Sword,
                 ImageNode::from_atlas_image(sword, TextureAtlas { layout, index: 0 }),
                 full(),
+                // Beneath every other piece of the HUD (spell bar and bow slot
+                // included), with the vignette just above it.
+                GlobalZIndex(-2),
             ));
             // Darkened corners draw the eye down the corridor; the HUD sits
             // on top.
-            root.spawn((Vignette, ImageNode::new(vignette), full()));
+            root.spawn((Vignette, ImageNode::new(vignette), full(), GlobalZIndex(-1)));
 
             root.spawn(Node {
                 position_type: PositionType::Absolute,

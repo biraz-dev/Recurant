@@ -13,6 +13,7 @@ extern crate alloc;
 #[cfg(test)]
 extern crate std;
 
+pub mod archery;
 pub mod auto;
 pub mod dungeon;
 pub mod enemy;
@@ -28,6 +29,7 @@ pub mod save;
 pub mod spells;
 pub mod stage;
 
+pub use archery::Flight;
 pub use dungeon::{Floor, GenParams, Place};
 pub use enemy::{Enemy, EnemyId, EnemyKind, EnemyState};
 pub use equipment::{Equipment, Gear, Slot};

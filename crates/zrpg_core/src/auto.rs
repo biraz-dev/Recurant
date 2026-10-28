@@ -5,7 +5,8 @@
 //!
 //! The bot's habits, in priority order:
 //! 0. Drink a potion when badly hurt; cast lightning when it pays (see
-//!    [`spell_to_cast`]).
+//!    [`spell_to_cast`]); loose an arrow at something coming down the line
+//!    ahead.
 //! 1. On the stairs: go down.
 //! 2. Enemy next to it: face it and swing. When the enemy winds up, hit it to
 //!    stagger it, or step out of reach if a swing isn't ready.
@@ -41,6 +42,9 @@ pub fn next_command(game: &Game) -> Option<Command> {
     if let Some(spell) = spell_to_cast(game) {
         return Some(Command::Cast(spell));
     }
+    if worth_a_shot(game) {
+        return Some(Command::Shoot);
+    }
     let map = &game.floor.map;
     if let Some(enemy) = game.enemies.iter().find(|e| map.within_reach(e.pos, p.pos)) {
         return fight(game, enemy);
@@ -56,7 +60,8 @@ pub fn next_command(game: &Game) -> Option<Command> {
         game.drops
             .iter()
             .filter_map(|d| dist[map.index(d.pos)].map(|n| (n, d.pos)))
-            .filter(|&(n, _)| n <= GOLD_DETOUR)
+            // Loot under its own feet is already as close as it gets.
+            .filter(|&(n, _)| n > 0 && n <= GOLD_DETOUR)
             .min_by_key(|&(n, _)| n)
             .map(|(_, pos)| pos)
     };
@@ -101,6 +106,16 @@ fn spell_to_cast(game: &Game) -> Option<Spell> {
     };
     (affordable(Spell::Spark) && spark.first().is_some_and(|&id| awake(id) && near(id)))
         .then_some(Spell::Spark)
+}
+
+/// Something awake straight ahead and not yet in reach, and an arrow.
+fn worth_a_shot(game: &Game) -> bool {
+    let p = &game.player;
+    p.arrows > 0
+        && p.bow_cooldown <= 0.0
+        && game.arrow_target().is_some_and(|e| {
+            e.state != crate::enemy::EnemyState::Dormant && e.pos.manhattan(p.pos) >= 2
+        })
 }
 
 fn fight(game: &Game, enemy: &Enemy) -> Option<Command> {
