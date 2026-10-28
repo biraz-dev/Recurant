@@ -18422,6 +18422,2384 @@
           "git_blob_sha": "352614dc12c0f72c501c710df74789a05e6011a4"
         }
       ]
+    },
+    {
+      "kit": "first-person-sword-v02",
+      "volume": 1,
+      "volume_count": 1,
+      "archive": "art/kits/archives/first-person-sword-v02.volume-001.zip",
+      "bytes": 1897768,
+      "sha256": "06f9e9ca8739188f427b7d0c5f48472e3ae8e55dc5b0966244f3ba989bfde8f6",
+      "git_blob_sha": "b774507a0b3338e3d27dcff486569ed469f5228b",
+      "content_root": "art/kits/first-person-sword-v02",
+      "file_count": 29,
+      "uncompressed_bytes": 1995177,
+      "files": [
+        {
+          "path": "art/kits/first-person-sword-v02/README.md",
+          "bytes": 4515,
+          "sha256": "292d9822b77e049fe8b4a82f7a1acd482a69777b7c4cf510a8b6abf09054053c",
+          "git_blob_sha": "edba10aa78d14c33013bfed8031e45b0220b4c4a"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/build_sword_v02.py",
+          "bytes": 9259,
+          "sha256": "fff2defa1a1bafa397950218580ae73c9b1cf82c58c3dd394085e5e3862cf56c",
+          "git_blob_sha": "d2309a1f7b85ba409b86d31e9fcdf7fea7c055ca"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/docs/PROVENANCE.md",
+          "bytes": 2395,
+          "sha256": "8391082c13bdb2894946504100e65433fa0f7ad34b0f2138a9642d2d98f3d4ec",
+          "git_blob_sha": "85090fb134e4c83d8c4691d590801b650b4efbb6"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/docs/prompt-01.txt",
+          "bytes": 4292,
+          "sha256": "693512fb7267d65620501a7fb74ca3bf04928bd877dedcd0856b69a4e27ef7bf",
+          "git_blob_sha": "0e10dd56f13d88166a1030c7f48d9b95513602d2"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/docs/qa-report.json",
+          "bytes": 5434,
+          "sha256": "c6ecd7fb2d7e9924ae1497d042f123eb67c3eff11e5f267019ce5fbdf7dd474f",
+          "git_blob_sha": "7048aa61dc58848f8026e6eb84e1149d52583827"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/frames/sword_v02_00_idle.png",
+          "bytes": 23518,
+          "sha256": "f074a91e229ca3e27430d8e5ddc28a75d58564ec607bcbfea037155548c432e7",
+          "git_blob_sha": "f255c0e42ee8e0fe42d0a5e049a2fa9a320984b3"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/frames/sword_v02_01_draw_back.png",
+          "bytes": 23368,
+          "sha256": "6d7b939e7ba6a78cf44418d344595e5b9b823a41869ce7b300399fc62e484172",
+          "git_blob_sha": "1ad088e004e0bd006a7a58e179d88849cc336ce8"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/frames/sword_v02_02_maximum_windup.png",
+          "bytes": 17220,
+          "sha256": "8f79389c8127d6254f69d8d9bfdc6d58642731890c8f288b9b3aed2dc70d0fb1",
+          "git_blob_sha": "d2e50cb5770f9e56c3ff15eb133cfa469dff2f5c"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/frames/sword_v02_03_release.png",
+          "bytes": 27276,
+          "sha256": "a541103a4d38ec5f2aff556c0a8c9b75ab48608a8c497ee1526a07b4ebbefd5e",
+          "git_blob_sha": "584c0e9e008b4a916806f46a00e28469bb9bc559"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/frames/sword_v02_04_contact.png",
+          "bytes": 28294,
+          "sha256": "e5d674f460dbad96374c5687e68f57e3d03f5f0f3f4132982e37bf3c237cb62a",
+          "git_blob_sha": "c6796d462d2df0116c5d561c6c09e258ac6f074e"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/frames/sword_v02_05_wide_follow_through.png",
+          "bytes": 21588,
+          "sha256": "393bd1c53051d2f488b6960850089d89ce98460335226199175c33d16a3ada78",
+          "git_blob_sha": "8e62dabc255d5a73745a2fdc57418975b926e15d"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/frames/sword_v02_06_finish_offscreen.png",
+          "bytes": 5715,
+          "sha256": "2916526a6a598578c85fd7d10cbf26624323a84a94570c0b6a33b1bf6b550a63",
+          "git_blob_sha": "571a8572b9a038693e75881186107e6b3142b944"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/frames/sword_v02_07_lowered_reset.png",
+          "bytes": 2414,
+          "sha256": "6e35383f35bc448314e35d3ed4c35625b0dc087f742a0ecd5247c66eabd21729",
+          "git_blob_sha": "549d26700e631c4b220141e9dedd3979fdf0ac79"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/frames/sword_v02_08_return_low.png",
+          "bytes": 15069,
+          "sha256": "4741142fed3f804b533363f2e60b170d5a7c74eae1ed1ff15e0f48f7b0906178",
+          "git_blob_sha": "b7233c4425b8277ff4bbb9077698e5fd6db6b711"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/frames/sword_v02_09_raise.png",
+          "bytes": 20683,
+          "sha256": "b1ddcff5ee242f3c85eea20a516d8a0e899840136b2f3cd0beee4aef8d9edfd2",
+          "git_blob_sha": "5b7b9394e8a974e9f76540ac7186fde6b6f7d96a"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/frames/sword_v02_10_settle.png",
+          "bytes": 24315,
+          "sha256": "029eea7bb9822a9e57affc9c7e1b6a5ee41a1df691ddff61a56258f7fc49cc90",
+          "git_blob_sha": "536d93714e70a3a3f27cb2e6c2c1a54552d1d782"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/frames/sword_v02_11_idle_return.png",
+          "bytes": 23518,
+          "sha256": "f074a91e229ca3e27430d8e5ddc28a75d58564ec607bcbfea037155548c432e7",
+          "git_blob_sha": "f255c0e42ee8e0fe42d0a5e049a2fa9a320984b3"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/previews/sword_v02_attack_320x240.gif",
+          "bytes": 93888,
+          "sha256": "5e4f562c64b5162b60216f1406573e53eef9bdd67723f41efd09394665af3e99",
+          "git_blob_sha": "b4b99737a6c7c6c93a232f3db704a56ae6ca4f35"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/previews/sword_v02_attack_3x_nearest.gif",
+          "bytes": 356229,
+          "sha256": "caf5a0170f37025d37f5a94e5ee5fa9b14154df2e0bbfe8fe3587c939e3e149e",
+          "git_blob_sha": "0b0d4d41ea2feb54e3eb20dd44db94934fc86d60"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/previews/sword_v02_attack_transparent.webp",
+          "bytes": 152110,
+          "sha256": "d3bb626a83dfc82db967baa97daf6604a7932ed53ca6bf7c0010f7c900fd2ae6",
+          "git_blob_sha": "8bf4ec079c3fdcdf84bfcd976091bba97ffd6c67"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/previews/sword_v02_contact_3x.png",
+          "bytes": 43730,
+          "sha256": "98808b8beba3627f7015feac6776f1c6a50af8ff38ff10b9c62bdec2e43d4e16",
+          "git_blob_sha": "5c53caed46f39d73df357e6e2da11e7dc5344301"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/previews/sword_v02_contact_sheet.png",
+          "bytes": 168115,
+          "sha256": "15f12023fbb2965906bad132f402da7ca9de0c285d8b5b91d6745553f21c994c",
+          "git_blob_sha": "b6a38a77ab7610c54cc873433ad9958e10564c3d"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/previews/sword_v02_idle_3x.png",
+          "bytes": 37808,
+          "sha256": "dd36270869a464e2e090cac3100cba77e9a2c283f27b4acea3a24c9f3fad81cf",
+          "git_blob_sha": "450012297680939d331d840fd0acb22cff0f74c3"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/source/sword-broad-swing-source-v01.png",
+          "bytes": 562638,
+          "sha256": "6312796a493314d2e2221ca4fd700b4664af6e694cd830c17a2e42b2d4c34a3e",
+          "git_blob_sha": "402865ed6bf1b9820cb20e0f669607ab81c0f627"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/source/v01-idle-design-reference.png",
+          "bytes": 22727,
+          "sha256": "35bf028107be780fce2842098bcd080df60c8322650d47a4f28da492ea5f141f",
+          "git_blob_sha": "f5a6c6de1b8a27d256ee3b3ce175859879bd7100"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/sword_v02_animation.json",
+          "bytes": 14039,
+          "sha256": "04fb8f05a613266c4f387752099785366673ed4c6d6df1f2c113fde83281ffb5",
+          "git_blob_sha": "51a7de3bee98f5e647658cf7e2cc1d6f1734b14a"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/sword_v02_atlas_4x3.png",
+          "bytes": 233208,
+          "sha256": "cfc087601beecbd4c479860aeebc571bd30368fa488fc48c8479be6ded1faf0b",
+          "git_blob_sha": "e3735da18e205f4c7adcfef4a9ab1f72ba95cca0"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/sword_v02_contact.png",
+          "bytes": 28294,
+          "sha256": "e5d674f460dbad96374c5687e68f57e3d03f5f0f3f4132982e37bf3c237cb62a",
+          "git_blob_sha": "c6796d462d2df0116c5d561c6c09e258ac6f074e"
+        },
+        {
+          "path": "art/kits/first-person-sword-v02/sword_v02_idle.png",
+          "bytes": 23518,
+          "sha256": "f074a91e229ca3e27430d8e5ddc28a75d58564ec607bcbfea037155548c432e7",
+          "git_blob_sha": "f255c0e42ee8e0fe42d0a5e049a2fa9a320984b3"
+        }
+      ]
+    },
+    {
+      "kit": "royal-mummy-v1",
+      "volume": 1,
+      "volume_count": 12,
+      "archive": "art/kits/archives/royal-mummy-v1.volume-001.zip",
+      "bytes": 2403497,
+      "sha256": "e8333180e0b210f74f432914ea348ccde488d1eb6fa88024ac64d62ca4601869",
+      "git_blob_sha": "447801b1de0b132cb17cd43bf17c2e9f432c7e5f",
+      "content_root": "art/kits/royal-mummy-v1",
+      "file_count": 6,
+      "uncompressed_bytes": 2452640,
+      "files": [
+        {
+          "path": "art/kits/royal-mummy-v1/CHECKSUMS.sha256",
+          "bytes": 35302,
+          "sha256": "e800a7597c8172489e8e1b9f2b1ec822415005063b4dc6527fecbb0dd7fe7d3e",
+          "git_blob_sha": "84f087cac4ee8ba70e9decf2cb97ab6a65ce559d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/PROVENANCE.json",
+          "bytes": 2469,
+          "sha256": "01719c7df1eaddd98595804b1defc745665a8ea6558e2afa6c1fd88c0cda20f2",
+          "git_blob_sha": "e18f3a80e1408a9c9e34c341d3fd1919ff771afd"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/QA.json",
+          "bytes": 5207,
+          "sha256": "dc2b844e41105dd3cf41a48cdc474ac6f1e51c556bd883d856d8fc1dbef4623e",
+          "git_blob_sha": "e48425b3b497717fd8ebdaf1319cd1a01c9d0566"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/README.md",
+          "bytes": 5842,
+          "sha256": "26f5576610633f1437b9be47be410be6296c6b5813e7cc4c1d4c0756dce69926",
+          "git_blob_sha": "888efdf52fd0e93e11d78e5d7fdaea8c85673e0f"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/art/back-source-v1.png",
+          "bytes": 2390147,
+          "sha256": "950d70043ee217e4fd393f7430877fe835d67dfe90243e913ead7a116c1cd30f",
+          "git_blob_sha": "3987e64561dc6d2809f91b2bfe5a0c7ed99f1e5a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/art/extract_align.py",
+          "bytes": 13673,
+          "sha256": "b2dc8b219b1766f610ad40239f65382f7ee8499c8800ed48376d129e49de4442",
+          "git_blob_sha": "460e5b0aa8537e124850d75d56002351ef9560ad"
+        }
+      ]
+    },
+    {
+      "kit": "royal-mummy-v1",
+      "volume": 2,
+      "volume_count": 12,
+      "archive": "art/kits/archives/royal-mummy-v1.volume-002.zip",
+      "bytes": 2472864,
+      "sha256": "cef4069a8cc9c3a1490fe50657f27665014f0a860ef9200f69afcf40a0e2154b",
+      "git_blob_sha": "8c071da9cb8b107b32fae021ad772a709a4841d7",
+      "content_root": "art/kits/royal-mummy-v1",
+      "file_count": 1,
+      "uncompressed_bytes": 2485473,
+      "files": [
+        {
+          "path": "art/kits/royal-mummy-v1/art/front-source-v1.png",
+          "bytes": 2485473,
+          "sha256": "17c498fd2fcaf99dca65989cbc2a87b64ade4ef53d55b0d8ade0175978a35674",
+          "git_blob_sha": "974f86969ca20bc84211f11226632aada520b9b8"
+        }
+      ]
+    },
+    {
+      "kit": "royal-mummy-v1",
+      "volume": 3,
+      "volume_count": 12,
+      "archive": "art/kits/archives/royal-mummy-v1.volume-003.zip",
+      "bytes": 2493933,
+      "sha256": "dc374daee26181401c86cdb231f78d9643306e9778f4b598f0cf25920a203c52",
+      "git_blob_sha": "63f7213f1eb197d0f9314d61c461d773f1a8c046",
+      "content_root": "art/kits/royal-mummy-v1",
+      "file_count": 6,
+      "uncompressed_bytes": 2560084,
+      "files": [
+        {
+          "path": "art/kits/royal-mummy-v1/art/left-source-v1.png",
+          "bytes": 2491560,
+          "sha256": "2ba05d6f0f16676da03498fba21762996c79d01623397323a727eb302cd54309",
+          "git_blob_sha": "1369a371182a9d2dfc0d68e22ec6f6920971a2b7"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/art/prompts/back.txt",
+          "bytes": 3199,
+          "sha256": "f4bce70e62d1753d3d3888dad398ee5d0d435e9ed235d3c3832b820e98c205f4",
+          "git_blob_sha": "70f3f0963402d0f08b018dddf41dbec8ca38736d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/art/prompts/front.txt",
+          "bytes": 2820,
+          "sha256": "1aef952e130184e5c18cb5b1607c6a02732f9bee1c54689b7a5e13e15d4c2ad2",
+          "git_blob_sha": "142f7469ab5810467dbb94161d372ed8ce662263"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/art/prompts/left.txt",
+          "bytes": 2984,
+          "sha256": "82b762c1b062589d0e4d6c705ca3bc8983f1aee33a57fdf7bd91e2819690cbec",
+          "git_blob_sha": "b2db278b4924f0fc6057bf7d75b1e21ca3be028a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/art/prompts/right.txt",
+          "bytes": 2986,
+          "sha256": "02de13621eb7d735f22351ce4780446d4feede707057c730b27c786515432f9a",
+          "git_blob_sha": "556e4a5548153c483219d7b95d6691577a482580"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/art/raw_analysis.json",
+          "bytes": 56535,
+          "sha256": "b322d3555cf29cc224830ef7c62614d30c613396fe6c3927f701b11c5711a07b",
+          "git_blob_sha": "40fdfcc22f4efa99b947eb8d992b73624ed26491"
+        }
+      ]
+    },
+    {
+      "kit": "royal-mummy-v1",
+      "volume": 4,
+      "volume_count": 12,
+      "archive": "art/kits/archives/royal-mummy-v1.volume-004.zip",
+      "bytes": 2558923,
+      "sha256": "803e6c437496f77b88dcf9bcbeca09a62c20123b5e0508e1248678c4f5be2201",
+      "git_blob_sha": "12b6d090df673d4e68668ac7926e02983a5aaedf",
+      "content_root": "art/kits/royal-mummy-v1",
+      "file_count": 1,
+      "uncompressed_bytes": 2570639,
+      "files": [
+        {
+          "path": "art/kits/royal-mummy-v1/art/right-source-v1.png",
+          "bytes": 2570639,
+          "sha256": "2c5cb315d6a96a5ea8f95587db73a8247d22e3865d2bbd67a29086c930fbe3ae",
+          "git_blob_sha": "43822bfe0e22041b644667a7d14c0f6fcf6d2fda"
+        }
+      ]
+    },
+    {
+      "kit": "royal-mummy-v1",
+      "volume": 5,
+      "volume_count": 12,
+      "archive": "art/kits/archives/royal-mummy-v1.volume-005.zip",
+      "bytes": 2316549,
+      "sha256": "22b8bc5dc3aa64b5fda34f346de54567677e8cd89dabff3348d19d2221140cc7",
+      "git_blob_sha": "90e7e10e4c2e7afb7b5c6c1d0dd157b3d3ff68c0",
+      "content_root": "art/kits/royal-mummy-v1",
+      "file_count": 9,
+      "uncompressed_bytes": 2340991,
+      "files": [
+        {
+          "path": "art/kits/royal-mummy-v1/art/sources.json",
+          "bytes": 118,
+          "sha256": "1b359d4a4904367bf529f4c203265e8b40b84f2d8b9163d017b5de16df1dfb97",
+          "git_blob_sha": "c6a6db3b7d71f760b15b9a9ae76cf1d8495c107c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/art/validate_package.py",
+          "bytes": 3134,
+          "sha256": "e7f072e580b7c0e7461492f3bd791ece620d9481cdd7d70f1a6f52a54e171d60",
+          "git_blob_sha": "9c06ee63a30b4f03f7418f3e4a511deac1ed6622"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/atlases128/back.png",
+          "bytes": 156457,
+          "sha256": "2719fbe513bdde2ff9371aaf15b5ec49c17519ef256d1446e4b2293adbec9308",
+          "git_blob_sha": "58dff198a0d3a8ab00f06d72f4815025078fbe6b"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/atlases128/front.png",
+          "bytes": 163582,
+          "sha256": "f70c4ec6461b30ed5e01be1119fca2babaa72f17a11843fbc6455e24651bfca7",
+          "git_blob_sha": "9676f7f999e7a49916d65f4e872c9fe89383d855"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/atlases128/left.png",
+          "bytes": 169250,
+          "sha256": "65ddb3487ac7d3e162287a8e63b735b3334840745c58b791b49b09a5dca43987",
+          "git_blob_sha": "ebb421e203de6392c60e18e03de781651f242fb7"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/atlases128/right.png",
+          "bytes": 177096,
+          "sha256": "1ec6d8483b210d62783b039d89a7922346893f2bec49c89d3c805a44e0bdf73c",
+          "git_blob_sha": "fe80705ac7742739634dd690c3074b0c561aedf1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/atlases256/back.png",
+          "bytes": 530846,
+          "sha256": "33c03302c596df1fef43678acebdc4a3298615e5de7f7c022e1941a15ce8d301",
+          "git_blob_sha": "22f25abe90b2101d123cc117a58add6862a72a97"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/atlases256/front.png",
+          "bytes": 566464,
+          "sha256": "dfc52d14d42dcbc24db5b2941f10c976af660132a586975863da401a84f3298e",
+          "git_blob_sha": "bcdc7f80e6c7f397e7501351d2545a35a65ddb53"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/atlases256/left.png",
+          "bytes": 574044,
+          "sha256": "27ae68d991c19014b377379ddbf6e9ecb3ec68025f26297f643cfb7b4d91886b",
+          "git_blob_sha": "4282a6e215f8f0d5e338bf6d72b7e5e01f418897"
+        }
+      ]
+    },
+    {
+      "kit": "royal-mummy-v1",
+      "volume": 6,
+      "volume_count": 12,
+      "archive": "art/kits/archives/royal-mummy-v1.volume-006.zip",
+      "bytes": 2478569,
+      "sha256": "5569e2dca7b01ceda5db98711d669d261c5ca0246eb3260602d9254c81e8d884",
+      "git_blob_sha": "7cb172c679a5ec725c9d0ac5dadffbf2bf853757",
+      "content_root": "art/kits/royal-mummy-v1",
+      "file_count": 148,
+      "uncompressed_bytes": 2495624,
+      "files": [
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/atlases256/right.png",
+          "bytes": 606093,
+          "sha256": "4c5d13d58e429dd4679bb995f6a707821dfe6171ae002d65a89bdff1dd9e8ae9",
+          "git_blob_sha": "34d6ab317d04f27e127009351e5ed5e88891e262"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/extraction_qa.json",
+          "bytes": 23913,
+          "sha256": "c2299cdf32d94e5281ddd4acf34a12d5944d605ec76c948c2e6eca4249ae1efc",
+          "git_blob_sha": "03fb8d3749ce3fc4f36df6a4b514f7e702effea7"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_claw_swipe_00.png",
+          "bytes": 6902,
+          "sha256": "a3893305a7336e36eaa8274cdc13e3f0fb3ad51b7a9c7477904bfd14427c376a",
+          "git_blob_sha": "729eda84b2d3129aebd2fb76a3e187e388bf4a73"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_claw_swipe_01.png",
+          "bytes": 7432,
+          "sha256": "d6f7e686c5c71faceaf4c6a1f49978a128b468f2e287a5cf4997b9fe97a3fedf",
+          "git_blob_sha": "6daa6c173f6139fa9476d10e0090787a8d5a2f25"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_claw_swipe_02.png",
+          "bytes": 6801,
+          "sha256": "2a4ef480d0e40e112976ad948bb95ad3efb092da07dff76ac35bb79c1b83a5a3",
+          "git_blob_sha": "f0a30ad416a531754d54d35e513f9148d2f9881d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_claw_swipe_03.png",
+          "bytes": 7305,
+          "sha256": "54f4ada983cdb44b5cb78d21864b0a763831ad77cc01fe71113ee2e5acd81ee6",
+          "git_blob_sha": "be0a628b0034f6bb6caa381ee2292710e14f5b2f"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_claw_swipe_04.png",
+          "bytes": 7430,
+          "sha256": "1f955ba92100c89bff6e93231c8c0d776f314cbc989141cd89e28fd4c860f490",
+          "git_blob_sha": "a38d8b3b8aa73ea7f0591c066a1c37d9c7b26481"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_claw_swipe_05.png",
+          "bytes": 6719,
+          "sha256": "1a500e31fda153eeb1bb5dcf3f6ca64bae92bc06963379baf8f072057cc4065b",
+          "git_blob_sha": "a8692504b48f5443f3555b9680d12281a2d5cd84"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_lunge_00.png",
+          "bytes": 6864,
+          "sha256": "a15be3be28d079be98d688c6d153cff43f5efac0678bbfc2b347b7f5cc89efb2",
+          "git_blob_sha": "5c7b9a1e67f7054442b495a418113a2e3c442a7c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_lunge_01.png",
+          "bytes": 6427,
+          "sha256": "07434c3e57f15ae11d3710eab36dfa4528f9fb11ad86d53786f26d98424e0df8",
+          "git_blob_sha": "8db64a800042af3427479b430d9470a5d34803bc"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_lunge_02.png",
+          "bytes": 6387,
+          "sha256": "54353050e98082f6d724832c17a096bd3b6888f1cb0860a35b534c38c80a6575",
+          "git_blob_sha": "f83e3d8899d712d5a1323b405849b6637b23f2ae"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_lunge_03.png",
+          "bytes": 5555,
+          "sha256": "22347c1d8fdd33e27e831d754475ff59cb3eabd6a4ee3fb8149f966582e393ea",
+          "git_blob_sha": "a1da7d8c3afc4f1818608d55a7f6afb557f9e924"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_lunge_04.png",
+          "bytes": 6358,
+          "sha256": "9fc4bec44dfa0c2e5771fd3246ec918bf7f87652e93de14fbee7db743123a945",
+          "git_blob_sha": "a9e3e69f8d04d495965be3836727db6db64075bd"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_lunge_05.png",
+          "bytes": 6999,
+          "sha256": "5078f3e509ec4083d9b6e3e7d19f935d3a585d9e9b3bddbbfd4d0e1eafa2b75e",
+          "git_blob_sha": "01de96503a0f7d882c20a4a7ac05a6b3e2b94719"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_two_hand_slam_00.png",
+          "bytes": 7024,
+          "sha256": "06b4621c03ad38c23e0942a598886d2a963293cb0fe22805b8b46a6e0acfd419",
+          "git_blob_sha": "c8ce6c8b06248b21b415d871f9f5dfc9f888ed14"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_two_hand_slam_01.png",
+          "bytes": 7359,
+          "sha256": "d2abe3b12bebb35560ec3b98532e2977dccff188c7c8a37d6f1334b511a5b7dd",
+          "git_blob_sha": "1976c94bf4792bb3d0eb83bb0c4040f939fbee20"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_two_hand_slam_02.png",
+          "bytes": 7098,
+          "sha256": "feedce2ada67e8636ce69ac4d34824ce18a0605fc53e2f1751e83df3a68dc947",
+          "git_blob_sha": "22c9ee2d2587cda8b55e420e91172b88b3f2a9d1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_two_hand_slam_03.png",
+          "bytes": 6522,
+          "sha256": "f9c4d0bb7ad2e302c0134af40f4b576394c8e920890987e56e4bf6bedaf1ea72",
+          "git_blob_sha": "2ba76db062da087315293bae345a6d45b3c2469d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_two_hand_slam_04.png",
+          "bytes": 5911,
+          "sha256": "d67d007f9b2486ba7926a5ce5926374c1a99d497be0fbe3a88dc95aedd275261",
+          "git_blob_sha": "a239c8ad608b622a8b11cd8dfd0622169845b035"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_two_hand_slam_05.png",
+          "bytes": 7142,
+          "sha256": "e67f1dd5dd4d847022827ba4c1cf93720690ca3a502e0c8d1debcc80614ba3c2",
+          "git_blob_sha": "d9600d9f031c4d09e12635f775effa892a8eaa96"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_walk_00.png",
+          "bytes": 7093,
+          "sha256": "01684d06bd0b98f83a7ec625e28267295f7d1bfcb7442057e7ff425ff6642fed",
+          "git_blob_sha": "1d4ce5f990dfb360465b843d3ce426ed66c924b5"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_walk_01.png",
+          "bytes": 6849,
+          "sha256": "1319226b487a9a4fafeadb22290146c5577dfadc313c80ed18c733c5f6dd8ac9",
+          "git_blob_sha": "5d215f0f7c61c197a6eee5c419937c208449dffb"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_walk_02.png",
+          "bytes": 6888,
+          "sha256": "1d4bb6bc8d31a3c8dfda59df799f12dcb90dd5f9b0c238c60deec14d79961fe3",
+          "git_blob_sha": "ecc0c670a3dfeedeee22dc2ba7f3d4ad16d186b0"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_walk_03.png",
+          "bytes": 6980,
+          "sha256": "796be11e26d3641ab93bb6f1ce7565a48d731e12ec6c756c5682a3e875e8ac75",
+          "git_blob_sha": "5a8e8de7273c8a833a54df91ef6dfa82e11ea176"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_walk_04.png",
+          "bytes": 6875,
+          "sha256": "e216f51027a71cfb924234236b2769a18c03f19939096825313c765d890daf1a",
+          "git_blob_sha": "6a34654012dcd97fb03d06e0eefc338d2413f843"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/back_walk_05.png",
+          "bytes": 6958,
+          "sha256": "ad72b91c271d4897964f9a11880368ee962559e05323bd4d3e4348d05879bde5",
+          "git_blob_sha": "755aa1eb2a26e4ca94d0d4fa64ca54cd2a477eac"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_claw_swipe_00.png",
+          "bytes": 7146,
+          "sha256": "1a4a90b8867e5138a1bc4d839dfadc4f8ede17b169e8412423f2b228dcb051df",
+          "git_blob_sha": "8cc338af9054d1dd5b1ef1cf5647f59623d73bb6"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_claw_swipe_01.png",
+          "bytes": 8157,
+          "sha256": "4b560e9556b0976bfbe6b2611587b5829c9f7cb2175a4af9ab73eebb6accc519",
+          "git_blob_sha": "9787cfd48252ce61aea2345984751ff022f29456"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_claw_swipe_02.png",
+          "bytes": 6338,
+          "sha256": "00ca58fb0cd59f9baa36c9e5fcda4411be1b4cbe5cfae3cce0d5f7e95d31e662",
+          "git_blob_sha": "a49e3dfa6780daea7b89f89c828dca2d7b8e550c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_claw_swipe_03.png",
+          "bytes": 7493,
+          "sha256": "e5dcb04ce1ae3296d67d635cf26d5e8faef8e21ced5021a44cdc38ebc8d0ebf5",
+          "git_blob_sha": "f419f12d20e6872ad854523e94edcd0642435aaa"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_claw_swipe_04.png",
+          "bytes": 7476,
+          "sha256": "36b931b104164a1dcc8fb630145c6cd2ed06bd207dbce471a6e497bf28149ef7",
+          "git_blob_sha": "5a5a13faf6429c8a1b451e17bcc84ab6e9eb6a44"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_claw_swipe_05.png",
+          "bytes": 7104,
+          "sha256": "c1fe02dcd400799fe9d0349d9ff8e2467d2d508fbda6e0205ca6e97c0dca893b",
+          "git_blob_sha": "3a17a7e204a6dd4064dc13ab97b7f2766495d685"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_lunge_00.png",
+          "bytes": 7210,
+          "sha256": "b0cc50e9f415f207ac107da17270f4c8b74c340490660677b40c160ba886a7fb",
+          "git_blob_sha": "30ef2269e54c997d896cab6d3dcb2187bbe8b318"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_lunge_01.png",
+          "bytes": 6053,
+          "sha256": "947ff33dc36b70ba26cec41b24556d42693d9e1ba3781804088c63f7e49c1023",
+          "git_blob_sha": "ad50cb035486885b371e0193019e52865ed951e8"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_lunge_02.png",
+          "bytes": 6334,
+          "sha256": "2d6dc59a615cf595a92ea9ada510a345eb122e51dec74bfefb3ecca74fa8bfa0",
+          "git_blob_sha": "6cb4c9bf5a75cf70094429dab2ba85160b79d49c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_lunge_03.png",
+          "bytes": 7091,
+          "sha256": "db4fc48462c060dc1eb6d717b534158ef1ffea280bc4415cfcfdbef05002515e",
+          "git_blob_sha": "62ea91399de3d81b5f95a8dc7d3f2be3fdbfcb34"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_lunge_04.png",
+          "bytes": 7333,
+          "sha256": "4b286dff4353b95aacd384306e28cae69320e7f969a7b219253b71764d9a5632",
+          "git_blob_sha": "1e6cd8646f0346b2cc8bef3dc162dffaef2acee9"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_lunge_05.png",
+          "bytes": 7129,
+          "sha256": "d1cd6e23dc574e0d50e8b2889be2275815d3b5380f051d0dae65aaa297e5aa55",
+          "git_blob_sha": "a4bfd6b455c19410cf684239dd35061208d950e1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_two_hand_slam_00.png",
+          "bytes": 7306,
+          "sha256": "453d4a961d007533fc155d2c455645605a4d8204c534ee5333654525923d640d",
+          "git_blob_sha": "8b27be91b055f9b361b28cc9c901048e4182839d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_two_hand_slam_01.png",
+          "bytes": 7828,
+          "sha256": "b0a42c19af836b5e4a98ce64a3fed549c534a6e60eb61f90c219eb3ea90feb15",
+          "git_blob_sha": "141ecea1065aa474a0c2481373c8fe92ee831fa6"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_two_hand_slam_02.png",
+          "bytes": 7903,
+          "sha256": "de8a30ef6657e1e49a0842ea98e34c1181c180f3c9b98369fe467150963394d8",
+          "git_blob_sha": "ba61fca561746a2b9bb38b41bec9df89bbf98740"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_two_hand_slam_03.png",
+          "bytes": 6567,
+          "sha256": "b96d1213e5cfe7b86ff8073c38e7fbdd39f935ee46314a05abe55641de50afdd",
+          "git_blob_sha": "dd02ba2e0df7f26780ab667003144d7324864a42"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_two_hand_slam_04.png",
+          "bytes": 6983,
+          "sha256": "de1c993353beeb06ff70496ec49797e0d471d43846eed3e337ddf1b638344cec",
+          "git_blob_sha": "6c34c38a4588a2f0fcb3734a699e41e0da2b968e"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_two_hand_slam_05.png",
+          "bytes": 7298,
+          "sha256": "662bd17b34bebf4e6a51924af0d478e52129c9009c0844d42264627ba050b82c",
+          "git_blob_sha": "3af1b1fd3191a8232e69eec70d7d946a8e051491"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_walk_00.png",
+          "bytes": 7260,
+          "sha256": "a2839e03bf8dc2e16f3db6c39cba011210c50b13c96cf8b673c0ceee206f40b5",
+          "git_blob_sha": "2fb54e9d2db445cf8dc00e3a4cd04c456f6b7820"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_walk_01.png",
+          "bytes": 6928,
+          "sha256": "d54b2787dfe24e08ee9204281c6ef8c21a8641d3c63de375cc5efa545bc21e13",
+          "git_blob_sha": "c77a2a9638b6b17379f0c2f154eec3446eebf73d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_walk_02.png",
+          "bytes": 6975,
+          "sha256": "bef33740f5d771bc0526d772b682d7f8943b255012e409f49ef4b83ab9408bea",
+          "git_blob_sha": "f76af5458ec2f130dc5a49fc027f729fbd9d0156"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_walk_03.png",
+          "bytes": 7077,
+          "sha256": "5cfb7fb616637b8abc18ce3a2a893725966fd0962672d9f5734e78002c9313b0",
+          "git_blob_sha": "ebffc1c1c5878377510b07e8b2bd0ef53f645db6"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_walk_04.png",
+          "bytes": 7315,
+          "sha256": "77413f90ee7146e08b0f44769f8cbc01f9087fc600ca35eabc52d54b780ba4de",
+          "git_blob_sha": "ea9fce53adc88d409471a9393eb5edb0f3ece1ff"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/front_walk_05.png",
+          "bytes": 6964,
+          "sha256": "3d89f4d8ec382c58c0668d148d531592f2748ca7580fd8f6262c3ef7e726e8e5",
+          "git_blob_sha": "5879f3ec20a2b8353a10b5f26fadff6af77f063d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_claw_swipe_00.png",
+          "bytes": 7097,
+          "sha256": "e6a19f31371d1d9ff994397e8b4c6635e4d708301f2af3bc910f5099ec7ebb65",
+          "git_blob_sha": "ba12f709f5b9483c0d1046a5210be13d65b827c4"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_claw_swipe_01.png",
+          "bytes": 8211,
+          "sha256": "eb3c4a4c5fdcf6822e91f735c4a995d9d42136510791c960fc92f3c4373f82ab",
+          "git_blob_sha": "5f3d11e85a131e2fa00f95856dc3783d46f7fcc5"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_claw_swipe_02.png",
+          "bytes": 8230,
+          "sha256": "c72755e183d799d378030369f78f3a294baed352927d12c8717902f089d45a1a",
+          "git_blob_sha": "31cc78f3a40810b3edd2e0b1af3aaca6e921cae3"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_claw_swipe_03.png",
+          "bytes": 8605,
+          "sha256": "02a590c3557b364a763a4bc36517e17e978cc08f61fe23af892e605b749b0a3a",
+          "git_blob_sha": "8733c78c4f49c2d4b7f689994819a3e0a964f2fb"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_claw_swipe_04.png",
+          "bytes": 8090,
+          "sha256": "e93dbd67bd2f5e8c4a8be0418f8b07bf59b39ae3828552a94a473cdef20d2211",
+          "git_blob_sha": "c2ac6574fe0da9fb9bdb3bc74163cce525756743"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_claw_swipe_05.png",
+          "bytes": 6969,
+          "sha256": "7dffedee89f851e49eb4f478b379c7a186313343013049083d7be15f5a7889fa",
+          "git_blob_sha": "931a595ccaca8e02cc1c12be106c2cfd1a2030ca"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_lunge_00.png",
+          "bytes": 6653,
+          "sha256": "3f078ef863bbb8872bba38a589859ea28534c21f0face04cef026827df7c817a",
+          "git_blob_sha": "6c7dfcbbe693a61abdafdf2acbaece11f44077dd"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_lunge_01.png",
+          "bytes": 6396,
+          "sha256": "f53e7d18bd7795f24fd14324c1bee7c307cd35f35622a5486ac89a0f6aeb65af",
+          "git_blob_sha": "177949660b4fed70294bf99ccf4d664a931c0794"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_lunge_02.png",
+          "bytes": 7758,
+          "sha256": "692973b493e48346729e152507aa066f995aef25dc19e9fd3a6b43b756e70df7",
+          "git_blob_sha": "fb47d88d759dd3c6fef28f6f0fcb9cc7927aafe1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_lunge_03.png",
+          "bytes": 8429,
+          "sha256": "d125a6a8d67084512c25250eb5846c0a1cba4e005bced5dafab51b9d18de06a4",
+          "git_blob_sha": "5c3bafc8d51421f0e05bca919fce8034dc6daec3"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_lunge_04.png",
+          "bytes": 7695,
+          "sha256": "1f1275d07825017337a02e54c911a93a7b1bba7bb1df9ff01536562c7b304593",
+          "git_blob_sha": "fbab27b228dd1ce6a5524afe426999bced53237d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_lunge_05.png",
+          "bytes": 6659,
+          "sha256": "8255042bd2a8444a128ba5131538df7cedd1057ce2933fddd0988de0a7c8484c",
+          "git_blob_sha": "0e94c233bbc5f9587202046f2e5e6e582d144406"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_two_hand_slam_00.png",
+          "bytes": 7380,
+          "sha256": "14fba1700d26941fee45926506e5b6789b195a9004a07e4a9eaef3270989b838",
+          "git_blob_sha": "2c452d415005d964b53313fd5301cdee14dd8539"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_two_hand_slam_01.png",
+          "bytes": 7754,
+          "sha256": "67c3c9431547672831e92dc0041d20fc8dfbff0899ceb8df0863f8b1660da12e",
+          "git_blob_sha": "7f05eb690518868413ef7ca8e82a89aa5b0b3518"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_two_hand_slam_02.png",
+          "bytes": 7547,
+          "sha256": "254dbf1d04123cf411d03af0533b6a13cd5608b128a8f0074eee841d30b5a265",
+          "git_blob_sha": "e86e65a56e2e76c2a6f90e1db19052d0ea334409"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_two_hand_slam_03.png",
+          "bytes": 7482,
+          "sha256": "82fc396552eeb830dd1c3c26864e610af90a4c858a3fc04658e814109fae76b9",
+          "git_blob_sha": "12bf903332cc531bf1b143613256c8e781cecc61"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_two_hand_slam_04.png",
+          "bytes": 6470,
+          "sha256": "a2848e9e054c65f51487e2f6749dde1770b3bb1e44c74d9c54dc626f6a931ebe",
+          "git_blob_sha": "83818c955f2f8ba9b176c57037e69fa22161f060"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_two_hand_slam_05.png",
+          "bytes": 7333,
+          "sha256": "42acff624760e278180ce68928649d20b9fe7578291294f3c32fe33b2d5476d5",
+          "git_blob_sha": "731c5292c83952349d9d5577575f95e267bcdede"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_walk_00.png",
+          "bytes": 7170,
+          "sha256": "181394705a736f11ed28d0148a54e67d33cc497563806d3247d395081cce3d93",
+          "git_blob_sha": "e582d3df5b23490c3df1388218a17c9f5a056446"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_walk_01.png",
+          "bytes": 6516,
+          "sha256": "1e4e87fff32a15e5538605c0b13e60b1b4204db20569cb8827f130f5f8bba8ae",
+          "git_blob_sha": "d29529ea28e425b07fb85ad315ee88405a0279fd"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_walk_02.png",
+          "bytes": 6841,
+          "sha256": "78270708b3c1203c3c41e2429bc5af2b4be5b0d746720f157528941e94a5fe2e",
+          "git_blob_sha": "5a95359dc4d0b5ba4e8324716c9e62a65b84d973"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_walk_03.png",
+          "bytes": 7287,
+          "sha256": "17d525ee2c6e16ef897c7b9f3bdc8605cd34c1c41f9e48788ed5553a6c6baa9d",
+          "git_blob_sha": "4316800030668f8db2b4011fec44cb7360245adc"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_walk_04.png",
+          "bytes": 6749,
+          "sha256": "80cb423dbda2bc8c4f5dc4801672a56beece1d2b4736eece5afa1f190e43fb16",
+          "git_blob_sha": "da370f0b799e02e1126506047bb0aade91cfe225"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/left_walk_05.png",
+          "bytes": 7320,
+          "sha256": "b03d54b3de2102cd626b7ef07020698ea97b123d78914611cd0d654453541c70",
+          "git_blob_sha": "6716d392c9d827e6a1a7cc3a2d280bb2254e1d45"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_claw_swipe_00.png",
+          "bytes": 7194,
+          "sha256": "91f33873ebaadfff425afcfb5224390b48d2c50b13004abeb9cf2dcd2642c270",
+          "git_blob_sha": "c766bf305f16ad9d1c7fdc6b3990446ba73a40fb"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_claw_swipe_01.png",
+          "bytes": 8622,
+          "sha256": "a9be5431eaba515f436e5248b8632af92f25ac88931e3bd8c893e608ff486301",
+          "git_blob_sha": "e119708bd434db16aeda6bacafda1b08f73ddcfe"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_claw_swipe_02.png",
+          "bytes": 8652,
+          "sha256": "3c7e96861dc5c4775591a00a80b56d78b8f4eeb5c835dd5e641b82012d000397",
+          "git_blob_sha": "1311491b4d98d5e96d72a53f7325dc8340b690f8"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_claw_swipe_03.png",
+          "bytes": 8729,
+          "sha256": "81bc1d428da49efa4a25d809ff030232461a3eeb8b2bf5f129172dbba6c77c11",
+          "git_blob_sha": "8415d2d699d6fbd1b8e156558cb76951997a114a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_claw_swipe_04.png",
+          "bytes": 8291,
+          "sha256": "dc06bb14207168e8213f2b00f1cd52ae83cc911e3962c3ed2e9ee4915ff83d8a",
+          "git_blob_sha": "6fc59a6d9e4e10ee8667e6296ff9dfb5da00bdb5"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_claw_swipe_05.png",
+          "bytes": 7177,
+          "sha256": "70a9c80164bb4978c51c4c1fba36879a8ac2034be97b3e653fc777606e209009",
+          "git_blob_sha": "8d712611624395bb59d02b4b94f6aeae9f826380"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_lunge_00.png",
+          "bytes": 7290,
+          "sha256": "cd387149b1b4bc24e89fe4d79b2e748602da5a9b3f65dd21b43678e0f8dbe1ea",
+          "git_blob_sha": "f5f314814663abe0d8a9995b8b9246c61dc1ac3f"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_lunge_01.png",
+          "bytes": 6462,
+          "sha256": "323bf28ffb9666df2e687c54c26d4061c8dbf0fc4a1d4fc293873504165eb005",
+          "git_blob_sha": "e68e8a4b0ecbb11d415629bb9e681dbafc5c4918"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_lunge_02.png",
+          "bytes": 8404,
+          "sha256": "fb2d61bc034c75439d3fb922f10bffe88a49662d0898fa45d70414c91f759530",
+          "git_blob_sha": "faff67a6e035a6d054439d5be257bcf0515dd919"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_lunge_03.png",
+          "bytes": 9112,
+          "sha256": "1b08fb9226ab07f3e51214ca6caa3619da69e38af831fd19c8e7f073bf1b7a47",
+          "git_blob_sha": "1a638dfb4e83761e79789724bb050b596c576f5b"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_lunge_04.png",
+          "bytes": 7716,
+          "sha256": "fa1dc69f7241ca14a8c4c2dcb5531bcf9f30a8f3e2e2fa1f45f81e8bcf1511ef",
+          "git_blob_sha": "3d6f63c613f57eeaccf2ee58cd695edd7c03890c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_lunge_05.png",
+          "bytes": 7278,
+          "sha256": "77b0ac77f87e1ad378f46c6e240d33342144015661b45c8c25d4485e81cfe5d4",
+          "git_blob_sha": "400ab8768402a2952ac5e8822d17bdfab4ac5bc0"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_two_hand_slam_00.png",
+          "bytes": 7220,
+          "sha256": "6dd07286a42f38c956aac65c464ae5d7a8ffb3c87d4f5de491a97570defa512c",
+          "git_blob_sha": "888ba503fdb87e3b6aace9a0d92ef4c720835c8f"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_two_hand_slam_01.png",
+          "bytes": 7778,
+          "sha256": "df9b00dc6f16d68635fd62ed789ae8b630561fdbdd7064d0e93d2bbeba12cedf",
+          "git_blob_sha": "3308bc3546d72e462f8e65b8dc9dfbaa52a55525"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_two_hand_slam_02.png",
+          "bytes": 7965,
+          "sha256": "f38515c153c334149b5678ee195e65a2a424ef2540c4996627569804d3b19878",
+          "git_blob_sha": "77d5d05b68a17e6e74741e4930f9f3a7a933b813"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_two_hand_slam_03.png",
+          "bytes": 7460,
+          "sha256": "1b93d4874650b8df602dc3f2a5a01477d3257c2a29f00f054e95d0a2bc07c4d4",
+          "git_blob_sha": "8bde85d1a160cc98e1cead370f99317664d96700"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_two_hand_slam_04.png",
+          "bytes": 6884,
+          "sha256": "f0493f274ce873bbc15f7e12b3331577a705afb3849df4c2d4e61c43d00f02ed",
+          "git_blob_sha": "9e4e78481ea3daebfd14a6984ea190d8c9da5d61"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_two_hand_slam_05.png",
+          "bytes": 7629,
+          "sha256": "b941787afeed4f6cf06635ad07986cd1fc321a12595db70dda04455eef7cd8e9",
+          "git_blob_sha": "c9502bb26ab090d70a2f63e2d41c95829a33a943"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_walk_00.png",
+          "bytes": 7668,
+          "sha256": "5d144065099b5c66bd441155e107d4712fdfd340c5c84e4c7e491a47957c9e01",
+          "git_blob_sha": "4a959f2e4720a347864dc750e01f3008effbbc98"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_walk_01.png",
+          "bytes": 7722,
+          "sha256": "8a260f8d0247159bd9d474514f78fc5487628f99d55f6f35749912efa691c221",
+          "git_blob_sha": "fe503b9830a13666145078c05afc1aecb5694b06"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_walk_02.png",
+          "bytes": 6932,
+          "sha256": "ac000e27573bec5b36064f623e79093c0783240aab9f078282ea99cbe6595878",
+          "git_blob_sha": "57100822c974405f17e85ae0a5b92c45f25b94c1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_walk_03.png",
+          "bytes": 7521,
+          "sha256": "2308bbee61ee5e1410a988bb7c1cffab2d0a304b3ef7e434d8a15dd47f118e4e",
+          "git_blob_sha": "1b137fd5d65439fb913d1e6a12f69325708dfc0b"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_walk_04.png",
+          "bytes": 7525,
+          "sha256": "81b1fd32f1486cfb73d5d621a526d88b1f7201c8f2f4b28c2dca2400f33473c1",
+          "git_blob_sha": "8fb2ce862b70dbdc280e0f3fd49f6fe6350b3094"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames128/right_walk_05.png",
+          "bytes": 7030,
+          "sha256": "8e22d903a38153b98d5f187f26af41f33fbf7e9a92db2a9bc2a389ddf095cb3e",
+          "git_blob_sha": "49ad58a006128a3c7f9baf9f3609742dd8af67e6"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_claw_swipe_00.png",
+          "bytes": 22798,
+          "sha256": "1e743970b180fbc25cad37c358d92399814c3bd7ebc61df00921b80a89e64eef",
+          "git_blob_sha": "86b6e0f73a26420c9e3131a02fea2e98054d0539"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_claw_swipe_01.png",
+          "bytes": 24172,
+          "sha256": "66116de61f0ea69156c8e338af43692824d7a2eb563c54668aab6634fb3b760b",
+          "git_blob_sha": "c68795d862e00cae444fa9af7564f4261c84dc5c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_claw_swipe_02.png",
+          "bytes": 22271,
+          "sha256": "6c7e57a4b8deedc2898acd78d1d5cd397391e47a07db51012b2c7c045bf8ddad",
+          "git_blob_sha": "09f606f6c510b425b2d873c0d7a9256da17adf95"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_claw_swipe_03.png",
+          "bytes": 23709,
+          "sha256": "0fc0acf3658a75c7d2dfd522f1a2bb2a6d5a5ed0cbebb3930ede4ca153887f13",
+          "git_blob_sha": "cf1d590850e746026d3292eb32a8eec8c97e8faf"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_claw_swipe_04.png",
+          "bytes": 24627,
+          "sha256": "4c3f1307b1b01ca3caa71106666a1b56da3cf8327bf76cd2d4eb98166b9fba45",
+          "git_blob_sha": "fdb713647dd548222a9a9a2b7e4e4e3a04ff092b"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_claw_swipe_05.png",
+          "bytes": 22197,
+          "sha256": "1b66f63d26996ab3450080473d988297cebd0adfb8058b415f052d5238900c0f",
+          "git_blob_sha": "e1d0737230ea3beefbc4dc8ac84fcbb753ea2f4c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_lunge_00.png",
+          "bytes": 23013,
+          "sha256": "614f5480aa45f70ec41bb42b05208505f096b0194535876686706f2528ab6f41",
+          "git_blob_sha": "b37f654d23d749fee6d4333ba4e9d83824cc4f6c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_lunge_01.png",
+          "bytes": 21531,
+          "sha256": "35d20c3e4c4a07f89682e7819d9c6155a609d52d63961e9b0cb0d994da07bb11",
+          "git_blob_sha": "cad6c972e021ae0fa0081b1ed8d6aa091aa53efe"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_lunge_02.png",
+          "bytes": 20688,
+          "sha256": "b7207366f379effa73a0f2de5d886d8cd22601b1fadd8f7356a486be5c1793ce",
+          "git_blob_sha": "b88ffcb8a138d9df33b1920cc2e3f6d725bcc9a4"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_lunge_03.png",
+          "bytes": 18087,
+          "sha256": "61ef29971cc7a582a36eb25a1c6606f38b58ccabf52c77f9a6c636346704dcae",
+          "git_blob_sha": "0c36f0c622155ef4d56938bacf44b59ec89f76d1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_lunge_04.png",
+          "bytes": 20803,
+          "sha256": "b7509ef6b38bbfdce23074edb7dd336c8860db02bd5fe39469eebb4d089f430b",
+          "git_blob_sha": "e361605d98b57ed75743d09df9c08ffe24590c1a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_lunge_05.png",
+          "bytes": 23115,
+          "sha256": "ed2a1d6399711d11301ba5e32121864697af344b58bcb6fe60ce5cb36533f05f",
+          "git_blob_sha": "454e3eaa729c44b33d7dd9ed8b9b832e4b85ea63"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_two_hand_slam_00.png",
+          "bytes": 22939,
+          "sha256": "298b8010e01444f01d71143419515ca3757a21f2053f943aa0904b999964af0d",
+          "git_blob_sha": "cf5fdd60e4a16f5f3e6d49d876ce2a2ff2a2d56d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_two_hand_slam_01.png",
+          "bytes": 23960,
+          "sha256": "c199470fba1fb3976fecb1739ab3ec1837fca9c2135c2d6ae559463fe792117b",
+          "git_blob_sha": "b8a0cae8722717594b115e92ab12c109d50551e9"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_two_hand_slam_02.png",
+          "bytes": 23399,
+          "sha256": "790a34b10a9bb48b894eaccb8e9faeac869a55e3eb7f632ba7086ec62b0c769f",
+          "git_blob_sha": "d5b83a19aec5aeafb34beb572f47e6d0ddc20050"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_two_hand_slam_03.png",
+          "bytes": 21688,
+          "sha256": "325b04d1c28cdbf8e8382b52fe8565ad4414c348c4e6d6350d8614818c262d02",
+          "git_blob_sha": "9d9d0cb1e76808f5fe22409b1032be37a44726c4"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_two_hand_slam_04.png",
+          "bytes": 19634,
+          "sha256": "34a1f5313ad203e76de5c111a33ba3fa77a2ca5b68ca0aeb2677db6434ab41fa",
+          "git_blob_sha": "b296a67a9f0b1f28f0d7e3d7ccd6b643bd5c61bc"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_two_hand_slam_05.png",
+          "bytes": 23455,
+          "sha256": "fcb18710cc99e262d74ea639fe281fb911d5ae76388cfb55ad014e9d529c3f9a",
+          "git_blob_sha": "81c4f373739dfc3acf3c09db95ab2e0f1c3231a9"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_walk_00.png",
+          "bytes": 24188,
+          "sha256": "dce681c01dab915ed19db20fe123491a0de1157342a55e0c52ec080bf53e8dca",
+          "git_blob_sha": "4181eb34775f7058066f8e70466803d690e06416"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_walk_01.png",
+          "bytes": 22752,
+          "sha256": "19f250b542f4426a2ad30919c4d21cffc505e6af11daf50ab5ad29b9d1e0e1f4",
+          "git_blob_sha": "bb1a037f901f57674b9fb6112fffeee2f0cbf219"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_walk_02.png",
+          "bytes": 22937,
+          "sha256": "397fdeb8bd891852cfebdedd996bc124ccef3995e2d139c6756a40d1056cec29",
+          "git_blob_sha": "39958ec160633e8de8aab375db68a96198f0757a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_walk_03.png",
+          "bytes": 23295,
+          "sha256": "f7b84c159c17ab0fd171225e848ce4c6bc69e5df43979cbaf0f31d17aeee8c74",
+          "git_blob_sha": "76a3a33173317adcd6185a117720ad2ba8287a92"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_walk_04.png",
+          "bytes": 22925,
+          "sha256": "e7f07bb5709e52cfa0a369d13ce731ae0e41649e0f7ff50b2f2b04a2172b84c8",
+          "git_blob_sha": "3ef6db1979ad3d9b4001f63af5271cc75cf69f70"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/back_walk_05.png",
+          "bytes": 23129,
+          "sha256": "c1fdbfd80c900cdf5cae064e83d7c18fc80d16f96e5c9262bf07e7679339cef7",
+          "git_blob_sha": "f4ab528a2b169fa927cd796f023ccd79edac4162"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_claw_swipe_00.png",
+          "bytes": 24165,
+          "sha256": "3079932e70f9319881d401e7af8c247ea657dcd29281fcb6f97f6f674fcea380",
+          "git_blob_sha": "ac47ee5ba5e989979d627a79903cae2fe7a94ab3"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_claw_swipe_01.png",
+          "bytes": 26928,
+          "sha256": "44b09c3d19fda5d17392faa0a8f369bb9f4d1be608c83dffc8d1f6c4d92e832f",
+          "git_blob_sha": "333a15309b24b54d0ac794b99befb55d737f6db4"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_claw_swipe_02.png",
+          "bytes": 20956,
+          "sha256": "ae48157e00f45f1c778f2af0a8d62f56626678fd6992d5116c394f96a98a9ffb",
+          "git_blob_sha": "28054385fb96c7f34a4c7a2a7ac3fccb09fb8bb1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_claw_swipe_03.png",
+          "bytes": 24962,
+          "sha256": "277b6b8548c83adc9551c7c4be0fd8b71d87c927af48349740b484b698bc3afb",
+          "git_blob_sha": "ddcfd0f32224f6f5e9c113d9391a7954b1f2009e"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_claw_swipe_04.png",
+          "bytes": 24645,
+          "sha256": "522644ea6c3557aba5f584333a61f903e968e7c30f6b7b9f96849c834ea9ef93",
+          "git_blob_sha": "46dd3516dae3a36fb5298d9ae2be14bcaa11c88e"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_claw_swipe_05.png",
+          "bytes": 24088,
+          "sha256": "83af64a5c8bcf80e09e83ce5c9b358aa34a17564b1bcaf31fb342ebdadefa736",
+          "git_blob_sha": "c433822c7918c16e8aa0856cb55b9a82b0bc468d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_lunge_00.png",
+          "bytes": 24472,
+          "sha256": "0e5b878581bcdbffa78bc9823cf4e5f30caae06b7af44e845896fe19c0b156e0",
+          "git_blob_sha": "3c5450e05c8ad0a27c0d2d4f104d2a41182dfb19"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_lunge_01.png",
+          "bytes": 20365,
+          "sha256": "0c1482531e15c5af4b02aa06d5966ac033b12b849e519706a4b43b89adf2f7c2",
+          "git_blob_sha": "c568307104b7d778e690e39e0c0c750566d54cb1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_lunge_02.png",
+          "bytes": 20985,
+          "sha256": "244200af49602a45260567d2f403b1c1a999b5e367dfded4d7a8a01d5c4589e0",
+          "git_blob_sha": "583ab4d06100aacd51425cfdc74925989a07d83c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_lunge_03.png",
+          "bytes": 23726,
+          "sha256": "deb9fa812fc77c1facbd851ab931cf3f199c248116cb32cdb8410d70a896b8e2",
+          "git_blob_sha": "0c40841019eca02d0adb3d4956b370def9c80ff9"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_lunge_04.png",
+          "bytes": 24470,
+          "sha256": "b07ec56939f69a4b0b3d985601d8b13d8b2d2e3909ffce760972c806f3eb185e",
+          "git_blob_sha": "28ab1e71a474b783c362b484924c7e3acc284152"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_lunge_05.png",
+          "bytes": 24339,
+          "sha256": "595c3fd3f8db3c2e162632b748e17978c286152c2ae5fafe1b1b1591b39a4e36",
+          "git_blob_sha": "35d3b41155a8d83a85c9d28618084cc00baac3f9"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_two_hand_slam_00.png",
+          "bytes": 24591,
+          "sha256": "9915c203992235e9cbf19948d999583123b8102ed9e6b69a4f99df3e88bc302c",
+          "git_blob_sha": "2a57ebff0fd5f0b9f7357a86d21c71ca094082d6"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_two_hand_slam_01.png",
+          "bytes": 26155,
+          "sha256": "2ba779df971b8cf23d2892689768057344d3c001271af7b9ac4740c2e0be8547",
+          "git_blob_sha": "3d34ceb8c734392273c656f5d251b1b22b359c3b"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_two_hand_slam_02.png",
+          "bytes": 26544,
+          "sha256": "bebad9e8d6841261bf00148d69bdb3b578f3eb5a026e8e7b776b08ffe3bb2356",
+          "git_blob_sha": "f93cf48720536ea12abe49272238aec268e9f74d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_two_hand_slam_03.png",
+          "bytes": 22114,
+          "sha256": "72c6d77cc8027046c0104e45e3d52b35bbdf690eb1550abe9b38f591a75bb6a5",
+          "git_blob_sha": "7ae31324eb3918197615321b23c8bdd1781a1a04"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_two_hand_slam_04.png",
+          "bytes": 24415,
+          "sha256": "05954fa10d0baa039dc7e9a4552f83b264be621c9d697cdea553926c934f2ffb",
+          "git_blob_sha": "f09cdf33c5f4d8eb31a452f03d1b0acb6f29dfdb"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_two_hand_slam_05.png",
+          "bytes": 24645,
+          "sha256": "81e7c6770911f07dad82f8345c9bd3ae9378911c2de169e446a413f221a45f26",
+          "git_blob_sha": "ed808b6c467ff04e9723b80fc95945db56dee985"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_walk_00.png",
+          "bytes": 24849,
+          "sha256": "19240b132789b1303a784ffc2c26aafb51331918fb5956c6b35736d4e51a9e5f",
+          "git_blob_sha": "e468b81d1217f8ffd0d094ee2cb0de811f4060c2"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_walk_01.png",
+          "bytes": 23732,
+          "sha256": "80fc859162107aa34b7a90475dd37619d7a0a6be6389ab92c55a3ebfc0ddc691",
+          "git_blob_sha": "d9fd8b95758d7750cbfc72b2ed330ac47dfa3fd1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_walk_02.png",
+          "bytes": 23684,
+          "sha256": "71da9e657831eed42537f6e1dbab6989c4069dd2454087e3045c87d395665e01",
+          "git_blob_sha": "2e3ffb59106579a37f392264f93f75ee0982d575"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_walk_03.png",
+          "bytes": 23955,
+          "sha256": "3c04516285fe714561243caead6d72a0d81f83305be7ebc99a2505f82ca4871d",
+          "git_blob_sha": "f9ee2b2d75a884297bad8265167254db995d012a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_walk_04.png",
+          "bytes": 24989,
+          "sha256": "3d0a9306460b46bf36d1227e10a092f89cad42797547daf6cad66060d5d931fe",
+          "git_blob_sha": "91f5af1cbb3f962c3fe2bd71b2e73843884d286d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/front_walk_05.png",
+          "bytes": 23667,
+          "sha256": "31c13893d695e4ae3b9f38ef00394e1f982e0537d0973c10ab64918552192290",
+          "git_blob_sha": "5fa8e62e2f29f27cc4b2b0bff64e876fdfd702f5"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_claw_swipe_00.png",
+          "bytes": 23457,
+          "sha256": "7f6fbe912ea8ad972d5b22b1cff0a0469b4decc0e0daa8b6d87252c288208f34",
+          "git_blob_sha": "0e61dbb52de08a9fd6410a8962090d9584d88841"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_claw_swipe_01.png",
+          "bytes": 27360,
+          "sha256": "b3d66c9a1bf652211ef1e9f2dd1f56e0cadd7abe7da8b959ed6e1bf8299f5b30",
+          "git_blob_sha": "6c1262e083ee9eeb6cf496235438899d6e87016d"
+        }
+      ]
+    },
+    {
+      "kit": "royal-mummy-v1",
+      "volume": 7,
+      "volume_count": 12,
+      "archive": "art/kits/archives/royal-mummy-v1.volume-007.zip",
+      "bytes": 2497277,
+      "sha256": "de32c2a1cc037a8f333b568d0a6ddf576f5d3339f33399f0c855a36d8c75d6cf",
+      "git_blob_sha": "ffdd13ffe827d7ade7f8a56b564df7234ee59ef5",
+      "content_root": "art/kits/royal-mummy-v1",
+      "file_count": 68,
+      "uncompressed_bytes": 2593998,
+      "files": [
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_claw_swipe_02.png",
+          "bytes": 27382,
+          "sha256": "f5470ed4b2f333eab926e3dbbe3ec6a8ceddd48d14743d94346af490396d48a7",
+          "git_blob_sha": "4a08b807a1f681e31a4ed9fe7db89bb6bd3e4389"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_claw_swipe_03.png",
+          "bytes": 28161,
+          "sha256": "a61073158aef4b764a72922de129e023cc560bfa9ef9174cba8b3531de852af9",
+          "git_blob_sha": "66c889398938e0b71f2b06bba15c40a1ae0948cc"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_claw_swipe_04.png",
+          "bytes": 26676,
+          "sha256": "d512ed0149567c953e24bd9ea3d530d5845c399ea3979289a50bb1eb366264ac",
+          "git_blob_sha": "9f788d99b7ac2333d0e2738bc7de62b511c7548b"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_claw_swipe_05.png",
+          "bytes": 23378,
+          "sha256": "753809c88f1857c9348b304c4c798e7c7475fb238239e48131a3e3ca89df23ae",
+          "git_blob_sha": "817efaf1f83f7bdd9a9c5d7ec9a873afeffc7c12"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_lunge_00.png",
+          "bytes": 21967,
+          "sha256": "58adddbbdfebaaa1a4be5c81e26e40b3c63de42d7fc73f78c3981bcc36052bd0",
+          "git_blob_sha": "7629a4be3d4a40e29a33e7f6ba2f050eec6532f1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_lunge_01.png",
+          "bytes": 21237,
+          "sha256": "e4b43a66ab0e22fedf7e5af16f0878daa2478ee0c4d8132b86314b9c8dd64553",
+          "git_blob_sha": "d4c16347e8b7845eafbbc8816b86ec54b27ab541"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_lunge_02.png",
+          "bytes": 25705,
+          "sha256": "1ae65cda68b9aee2140cf82a57584a7f5a00f8711c31d3c15094290d4bdef523",
+          "git_blob_sha": "296ad363b7df6383aac51cbd81154519e680282a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_lunge_03.png",
+          "bytes": 27862,
+          "sha256": "cd987001aa0d5a7df15c0867e480c43f80df764ca92318f61c71751e82a009a0",
+          "git_blob_sha": "a1866ea003bac983a890673f5230249a4af8b2b2"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_lunge_04.png",
+          "bytes": 25422,
+          "sha256": "98cc90ae4ca9956e313fdf2269673815dee30c3f90a0c7fb694d1f84ba175c63",
+          "git_blob_sha": "9b82275097e65c3bd081ff178277bcbe7db53f8a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_lunge_05.png",
+          "bytes": 21847,
+          "sha256": "99c8a65561d05f05ab05c25d6ef98f763aa87c408971b3aedf97b0c86174c362",
+          "git_blob_sha": "f2782eef804ca2471a9331ae04fa525708898b6d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_two_hand_slam_00.png",
+          "bytes": 24484,
+          "sha256": "a2640c50faa17638e9bc4b75f404ebe13bdf0ed35e313be508756cf1a9d3dfa0",
+          "git_blob_sha": "6e7ca1e9c4aee1019b05b010f77c7ec95e279f6b"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_two_hand_slam_01.png",
+          "bytes": 25555,
+          "sha256": "f48566fc64116614c82c717bc6ff4813eb66c200772d461aa3582bb8b81c162d",
+          "git_blob_sha": "b02e77e9bcacc82ed6561f21fc7cc53ea06a72b7"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_two_hand_slam_02.png",
+          "bytes": 25024,
+          "sha256": "b67323b6c9153be42e242b9f7a28f980df9f7618f865f8bb8756dd505f24d0bc",
+          "git_blob_sha": "173d41c20212d1a9da4dd321aa58cf46c7012d5d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_two_hand_slam_03.png",
+          "bytes": 24841,
+          "sha256": "4897995bb8c9e70c45c7b597f5c05bf61b21969df74f6fe33af1d09473289efb",
+          "git_blob_sha": "2eb7258efc3176323c463903de57d965cde3116b"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_two_hand_slam_04.png",
+          "bytes": 22105,
+          "sha256": "b44dc13ff3354fdc0d8b1d8b741d0f33f9c0bdd1ec6d348f7107e537adde665f",
+          "git_blob_sha": "5af567760ffb0be7a4481a8afaa9bc5e2a58cbf8"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_two_hand_slam_05.png",
+          "bytes": 24205,
+          "sha256": "b585b30986392680f08d09e2d7844984d824daef670f8594a9e2ef0a2b645532",
+          "git_blob_sha": "1f47b5b38ab4e1ff626d9a52aa534c2640e09c5e"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_walk_00.png",
+          "bytes": 23886,
+          "sha256": "2a4c8f648806edc8ff095e354f84e840ff70072887e8abf21dbb5fca576b4229",
+          "git_blob_sha": "7401cc47a6852dc54f6c4c2c30fc356f371c1dcc"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_walk_01.png",
+          "bytes": 21316,
+          "sha256": "fb628f113904fb5318f20b95bf649133c17dae84c4307cb4e061612fb48530be",
+          "git_blob_sha": "5d5ec5345da971c73f44169595f7d8da4fdb7c1c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_walk_02.png",
+          "bytes": 22540,
+          "sha256": "a9aa220437485ff673a6aebb02ce1ccab7f56d7e7299f3a7d5c5fd50651dcd70",
+          "git_blob_sha": "6ee4243e4942e7031979d00f8fd504ee21a1e794"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_walk_03.png",
+          "bytes": 24180,
+          "sha256": "75659c2a117affc0909cd00c63bc72324d653e6788f8b0efe021e238ccca4bdf",
+          "git_blob_sha": "eddf9757d0fdf3747d448251bd3f48c8a866c3d7"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_walk_04.png",
+          "bytes": 22148,
+          "sha256": "fd9cf5c7abb54918b923fc1f7edaca69216a6b4a0793ebea20f3c268981b0e17",
+          "git_blob_sha": "c93f0b5751342ca78d42e28a95aa6e94e5fde5fe"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/left_walk_05.png",
+          "bytes": 24064,
+          "sha256": "de9171adc7b9a9ba0a9ee8bae4287106e66559c47cd7f8e1aa9f7f13a8db3c9e",
+          "git_blob_sha": "7569135e799fdc43fe63fb1d69cde479a4f38fa0"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_claw_swipe_00.png",
+          "bytes": 23775,
+          "sha256": "81f11a11e097597c381c8b3f4b5b6ca0d137071c87d8a134b662654373275d89",
+          "git_blob_sha": "b4ff03dc59bb8f39def4b9ffe16cc47c46c96399"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_claw_swipe_01.png",
+          "bytes": 28743,
+          "sha256": "cbad804e1a84cce0d75d3af5e1d16eb232c03c4cc66b5af8e46355bd27f41e05",
+          "git_blob_sha": "a90afe04cbe498556bc7f0f5240fd0c8b852115c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_claw_swipe_02.png",
+          "bytes": 28653,
+          "sha256": "e248f9627a58d7c013be7243d9d1c3f2c02069a626a34716d77c4a67eecdb726",
+          "git_blob_sha": "14e44dce2e5b55f2b65b3771605212d8e3db309e"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_claw_swipe_03.png",
+          "bytes": 28825,
+          "sha256": "3fcf6d5f16f26abfded29889143fcdfd39945090d655ae216f6cbbcee16a2ddb",
+          "git_blob_sha": "4cc33fbadbe72f2f79c325054f4e0652bdd25316"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_claw_swipe_04.png",
+          "bytes": 27241,
+          "sha256": "82b924878af48814d32acb52cf84cf0a0835868db627d7b5898c4965710761dc",
+          "git_blob_sha": "8c3d90465c2763f73b75debd033431e363684232"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_claw_swipe_05.png",
+          "bytes": 23898,
+          "sha256": "d10afa5319d848cba7c81fccec7b975a2cfa3d15d4c7ab5165ff594cfe50362f",
+          "git_blob_sha": "349d2d85e12651e9920725b9619c4519b3edf8bb"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_lunge_00.png",
+          "bytes": 24518,
+          "sha256": "563757eb8e0a604c21e5063316d20c4be3c4a7dcee67684cce3385b7ea26950a",
+          "git_blob_sha": "ec613e82933732520ca656878812f37ad239229a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_lunge_01.png",
+          "bytes": 21882,
+          "sha256": "545caf39e23a82ead353d458c6ea8a7cdf5fdd1abdb60f47ebf84cdc61e8019b",
+          "git_blob_sha": "52ed036b025fa5482134e0b01f707390de7ee94f"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_lunge_02.png",
+          "bytes": 28018,
+          "sha256": "f0e1331703aa4560807934821602bf3c2852e8436e03cd4eae0666b14f018d11",
+          "git_blob_sha": "cc8d0031d5c861bdec190f0b6b046b2fadb607e7"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_lunge_03.png",
+          "bytes": 30908,
+          "sha256": "1cc89ea6d5634bfcda9672c452892317485ec5e9609a52c29af8e8e90c5f241e",
+          "git_blob_sha": "63f5da6d661f6c5310afaf4f595f3a2710300317"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_lunge_04.png",
+          "bytes": 25715,
+          "sha256": "742cc97111faab244eb0a05d63e7be9a471f581c3c0e4f1ff393df7b954f7cc7",
+          "git_blob_sha": "dec215696dbc74726f1e8d6522cc20397fa8c289"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_lunge_05.png",
+          "bytes": 24292,
+          "sha256": "291cd186c9963ab48bacd6b977e43811612dbd0a590a3bbf14501ef8361fa83d",
+          "git_blob_sha": "7d90c85628a9dcc15f620b17fdd8d62229d9b6a2"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_two_hand_slam_00.png",
+          "bytes": 24353,
+          "sha256": "11291b0db41e309e6b45a28e032b8a541738ba35ef92e394ad120353d69faa0e",
+          "git_blob_sha": "2e9f76b49a12833a2296d476531b69c57871b525"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_two_hand_slam_01.png",
+          "bytes": 26119,
+          "sha256": "eb0de02199ad4138e571d7fad3f578eb7ab535d8241038a3a34d66fce72e7b3b",
+          "git_blob_sha": "7eb63da2eb781a9c887355e1973ea87973a6c8a5"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_two_hand_slam_02.png",
+          "bytes": 26934,
+          "sha256": "636d8872b92ca83ac7f7cefe8a991075679e3be2a48d3d30714129557392e199",
+          "git_blob_sha": "27afba22d89b987100d3bb53cb78d7e615df0f3b"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_two_hand_slam_03.png",
+          "bytes": 25499,
+          "sha256": "41f906fe5ad154a982b907756660e299cafc16c5aef07f84599fbd966a5ea6a7",
+          "git_blob_sha": "59b6f8dbe1dbc58210c7280a907cbd067e01a5b1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_two_hand_slam_04.png",
+          "bytes": 23892,
+          "sha256": "929b1e9edf9622e358186e53f76d28f9f5ed686b3839d01de8abd8a284b1e79c",
+          "git_blob_sha": "2a20e59d945236664d4f3f70f2694329580b580d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_two_hand_slam_05.png",
+          "bytes": 25225,
+          "sha256": "df770e8c54877109130f634e1fb8d8ec77a834018b718ef936a07cf3e6102502",
+          "git_blob_sha": "ca1a66b32b122dc7bdd2d38188d91c1243c77107"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_walk_00.png",
+          "bytes": 25487,
+          "sha256": "2dd5d8538d60c73665654f83f5e228cf47914db9851af32d0979a57ce1aebce8",
+          "git_blob_sha": "28a77926e5f326e50ebfd176528b76f425043bec"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_walk_01.png",
+          "bytes": 25765,
+          "sha256": "d8576b7c60f49960b9fd1c28ee7e48af30b82bf096f2ef976e75410ec36f0a28",
+          "git_blob_sha": "c074ec8921c5407f26744250329717e59dd39ccd"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_walk_02.png",
+          "bytes": 22979,
+          "sha256": "a3fb6d7e94adfd04f6444a9fc050b794f59455adcaaa6d646095cf09d58e94ab",
+          "git_blob_sha": "df2392ab82eecd77becac94c8cf8a67e01f74f66"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_walk_03.png",
+          "bytes": 25152,
+          "sha256": "a5e2fe4a65aa91a47516a18d03c5982c0b231ec3856a7491fe6a3ed1b6136cbe",
+          "git_blob_sha": "5ae27b70710fd028cef2734f3c7ab9a9a447c91b"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_walk_04.png",
+          "bytes": 25080,
+          "sha256": "526c3102752303951688b826969dd606ff099fa2d59643c3877b272bd8f47cb3",
+          "git_blob_sha": "ad80217b88f7f919a813364c35b35073b99aa82d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/frames256/right_walk_05.png",
+          "bytes": 23265,
+          "sha256": "15c2a482f0774152601bab22e40b7bf1ef23b9313e1ba3cf666093fb477665ac",
+          "git_blob_sha": "0854e0fc22ae91b65b82f8fe0d2689036ae99166"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/manifest.json",
+          "bytes": 105758,
+          "sha256": "d6568fc92a602afc2c92b0c58686208ec13e885556f0fc1f780c5edcd8c90d6c",
+          "git_blob_sha": "1cfc85e1c708ad7490931672acfc3236105bc371"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/claw_swipe/00.png",
+          "bytes": 64687,
+          "sha256": "6b96682a4aff4b0b979337ac035898ca137f1f32758a3816ad5a21ab1a24ea0e",
+          "git_blob_sha": "ba688709afe19f1cd4b30740863dbea7e44202ff"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/claw_swipe/01.png",
+          "bytes": 68882,
+          "sha256": "6ce73ec2da5e0d60a3cf7e43a3f6b282bb3b820aea8075bee2922501e3a29054",
+          "git_blob_sha": "764966b3c6068759107309114ec2d82f2c3e5df9"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/claw_swipe/02.png",
+          "bytes": 63368,
+          "sha256": "57af51c6ec9924111803a11f3280de13c88bebb19673d6de1bac963f6f3702e1",
+          "git_blob_sha": "a8fe4a4dcb55fe2d00aa6321c80e94483156fc1a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/claw_swipe/03.png",
+          "bytes": 68024,
+          "sha256": "358ec30c9ee6da12a70d61e85cfdc36ade2291aec23be86ee45942641aeffd5f",
+          "git_blob_sha": "2e78abde051884d04faa55c2af9aa1840f36598a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/claw_swipe/04.png",
+          "bytes": 69813,
+          "sha256": "66b1330182f27a76c172ab21bae44622ef6c2a684960c880980d76ecadde37f1",
+          "git_blob_sha": "016cc54c043c0450b3e5d6aa6e427b918304f8c7"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/claw_swipe/05.png",
+          "bytes": 62533,
+          "sha256": "4330684eb323d3bcda41bcff927ed869de065ab2c99f82c577b4b6eb219ea5a2",
+          "git_blob_sha": "d4c65a049660abc26cd928ee7cd2f08ac790c8b6"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/lunge/00.png",
+          "bytes": 64485,
+          "sha256": "99c68b697849d182f28fdec0b6607cdaa50feab1bd1560f9e46f3985cf2f63fa",
+          "git_blob_sha": "ba600728c53746f9db136e0933f9e4364e58e22f"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/lunge/01.png",
+          "bytes": 60433,
+          "sha256": "0f4fac5102fc3b6d8e4984a84fb5dc4ff79ec9ae961b02a42fddcfb516731fa3",
+          "git_blob_sha": "5895eb2c56b6bbc797570eb5f4758ad0aceb3b17"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/lunge/02.png",
+          "bytes": 59255,
+          "sha256": "6a5fa5657f2bc31e6cc6c716301714b9706fc735f6c0e423effd002d1045b54e",
+          "git_blob_sha": "8576f77297b1a95f15ffc532ec723f04a1a11a7c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/lunge/03.png",
+          "bytes": 51420,
+          "sha256": "d12642d52d2d217cebadf4797be073ba5e553ced647f5907cc11ecdbf5a325a1",
+          "git_blob_sha": "1bae80f0589d9d3fd4325745604555136a365abe"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/lunge/04.png",
+          "bytes": 58766,
+          "sha256": "8e0409c9681d643d555ba6e62d378bf5bf5ede5c245e3a00faf61ab40a952e65",
+          "git_blob_sha": "fcc62e292ad382a1429b6c8cb27ab69337c2ca83"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/lunge/05.png",
+          "bytes": 65271,
+          "sha256": "9479b2f8ff4f24a40ee9a89c6dcfe0dd51b31da6a552be4aad7fb187f796f02b",
+          "git_blob_sha": "506cf0daf34919cae48b90fce10dcd2c5628364a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/two_hand_slam/00.png",
+          "bytes": 65463,
+          "sha256": "6f91341bc8d964b2e20008ba996845f7bfe51b78e0eda9d3bb418698471ed879",
+          "git_blob_sha": "d6d49d84ee65f56be92396ff11182499b6670d72"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/two_hand_slam/01.png",
+          "bytes": 67920,
+          "sha256": "dd9ceb01c290eea7a1f276f1f194c6a460d8b25608569eae48c8b3384ea7dd65",
+          "git_blob_sha": "b85a237b8be5f26b9aa4544de8cf21b22bcffd49"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/two_hand_slam/02.png",
+          "bytes": 66709,
+          "sha256": "2043cb755b8d039bc5a968c938d3f30e0be7cdefafe5115ada780b27eaf771de",
+          "git_blob_sha": "1ec0f70dcd05d4d642031d9a0b64c14188619238"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/two_hand_slam/03.png",
+          "bytes": 61593,
+          "sha256": "95b4c2b93ef94e7e6f15ee60259d7237e6b591579a656fa843849e528cfc4c6f",
+          "git_blob_sha": "f6411bb0311ef651a22d07a53fa6a87a6ca3b130"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/two_hand_slam/04.png",
+          "bytes": 55914,
+          "sha256": "d754fa30cc8da5464987fb4908a0a2d64a5601e3c88afd1df4a0953df836675f",
+          "git_blob_sha": "654fd1ae98ca35c296dac1ef33463aede975ab66"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/two_hand_slam/05.png",
+          "bytes": 66319,
+          "sha256": "5a8ee5169604f297fe744711fc3ae06d119884c653f053d6c3638fd933cec252",
+          "git_blob_sha": "91aa556c5a5542d174c18e60d2e50ec927f67790"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/walk/00.png",
+          "bytes": 67840,
+          "sha256": "dcc6974fe212ed1156df9564f8877633df55064f4b8075a6fd3592d12425859c",
+          "git_blob_sha": "0e4b597e1b51751732c740feb658cb1c8b828e2d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/walk/01.png",
+          "bytes": 64610,
+          "sha256": "a076f79cdeee2363753c8f5862ea35425b2f36b5aac19d7fbed2ff8adbda628c",
+          "git_blob_sha": "57da68d013a9b47e9ad8da5e07b175ceeace50f9"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/walk/02.png",
+          "bytes": 64732,
+          "sha256": "617d4bc8ff5c3654cabefcbc1c46b5f253760c974341e282a74b2d9633df82bc",
+          "git_blob_sha": "f26c2abd9f8d8b5b246f628debe5ee49e64ab475"
+        }
+      ]
+    },
+    {
+      "kit": "royal-mummy-v1",
+      "volume": 8,
+      "volume_count": 12,
+      "archive": "art/kits/archives/royal-mummy-v1.volume-008.zip",
+      "bytes": 2486963,
+      "sha256": "aaf701a3b3551b245c61e76b35d81ad41c06c26fc5d53c8b2da5dd2a927b0f53",
+      "git_blob_sha": "345eee6bcff1f124c4da68dc199e22b6bde7d92b",
+      "content_root": "art/kits/royal-mummy-v1",
+      "file_count": 36,
+      "uncompressed_bytes": 2478938,
+      "files": [
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/walk/03.png",
+          "bytes": 65735,
+          "sha256": "30eb650527318047a4c6607dd1d0cef8fb69ff2be6884ff723babca3c29cc36f",
+          "git_blob_sha": "cf375fe048d6e101c5f364899be4ad85af4c5b71"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/walk/04.png",
+          "bytes": 65496,
+          "sha256": "343255791b6b4290a999229742c9b02d1115ba85177f9c6f36d11f4e6d34f942",
+          "git_blob_sha": "549cbb0d0f23ff0f22c8e54527a9f804402376c8"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/back/walk/05.png",
+          "bytes": 65743,
+          "sha256": "7d72e35fee7cb95b6e931cfc8ee43d30f884b7ebc7711bab54f7b59294ccecff",
+          "git_blob_sha": "7c36ad6db19c8e548a4e78c27fd0cf1cccab7f2a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/claw_swipe/00.png",
+          "bytes": 68117,
+          "sha256": "190ddcb411870fa21de5139aeed8f385b783d5f5792c25c2c1ec99c0b52b237d",
+          "git_blob_sha": "7effa6bff7c8a68e2723f55a3f53f4d9c56a6677"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/claw_swipe/01.png",
+          "bytes": 77735,
+          "sha256": "cac013724d1ac2dfdb629f381a2cad1738929c96592f36ea56d79bbe7d29b311",
+          "git_blob_sha": "6c705fd48a975f0efb436a89858c779fb0f95db3"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/claw_swipe/02.png",
+          "bytes": 60495,
+          "sha256": "91cee48050a1c3402467c829dfe8dd339bcc8b6506a9ba6f5c9568820a18b002",
+          "git_blob_sha": "711bca8b34b894de22d86e45827be56dedd90a0f"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/claw_swipe/03.png",
+          "bytes": 71444,
+          "sha256": "8276422323992ad8578100a882a8f2c4bf2029c77f884460afbe377c51c6c70a",
+          "git_blob_sha": "8b6f815510551134ec59509e64ea25d0ee456795"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/claw_swipe/04.png",
+          "bytes": 70535,
+          "sha256": "80915034b5cb96b7ef799d8948f1419f13b4dc4fb54fcda2b563b81869c5cfb7",
+          "git_blob_sha": "27e0bb5333259d808ee4b40f5ad475b597926580"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/claw_swipe/05.png",
+          "bytes": 68279,
+          "sha256": "f384e5505850688137fc1c5dab77e683199a77be0ef587f68a4907d5a49e71be",
+          "git_blob_sha": "16d8efa46e4c1435695719a50ebd96cdf4cd7563"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/lunge/00.png",
+          "bytes": 69854,
+          "sha256": "6dfac94b04419a236baa0c54cb6240af7935ccfeea47b1867d95fc0dc8a9fcbe",
+          "git_blob_sha": "93d52f9f387019ffd12c511d28997576c1d3671e"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/lunge/01.png",
+          "bytes": 57995,
+          "sha256": "5ae69f2765bcc799dde4b22bbd652868e0d24fb3cccc24a9e4b1e6a8849e367d",
+          "git_blob_sha": "65c6d83cdcb7768b3f6c17bf4b47ae3920bf9833"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/lunge/02.png",
+          "bytes": 59740,
+          "sha256": "0e092b7c5958236de67d6708c8cf0534a1e82b7f44ded0c82b5385a7eea97a48",
+          "git_blob_sha": "1a1dc2f79ba4f1311348a59de43c4c30ef941b15"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/lunge/03.png",
+          "bytes": 67987,
+          "sha256": "d01e7e728a20c829c99dd2815ae4721d701715d85097b721e1b46580418b2f75",
+          "git_blob_sha": "8f4aa7847e1614418480e47f23cc8923d50be3fc"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/lunge/04.png",
+          "bytes": 70046,
+          "sha256": "c2ccc7dd09a9fac26196bd5f0bbd96036110282a0369e0c7b6b162a68ac08408",
+          "git_blob_sha": "703dbdc31c03c674072d3c290a445b79619ca0e0"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/lunge/05.png",
+          "bytes": 69018,
+          "sha256": "f726f2c3b051cbdc96e11ce448b659176ab5bd4da0921eb45c83585f6dce5867",
+          "git_blob_sha": "6551eba03897414bc9f946ba4d0637e120147d1d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/two_hand_slam/00.png",
+          "bytes": 70265,
+          "sha256": "e24e5d53f52b227c0fa278a2f62d85c03e77518a6617f326deddd6105a069375",
+          "git_blob_sha": "fd2c7bfa8abc17c6d8bb3be2937009f2d23a3598"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/two_hand_slam/01.png",
+          "bytes": 74256,
+          "sha256": "5c5f98a75e0bd87fde622476eff55b7b870379ca6a6d8ca191b7eff36d02ba35",
+          "git_blob_sha": "35600b8e29029a52de6f70739913102c90848115"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/two_hand_slam/02.png",
+          "bytes": 74729,
+          "sha256": "13c857a5dd4be03fe0c12432915db143aaf6c77cc9ebe54d3542fa4c956385c7",
+          "git_blob_sha": "8b03e277c042f85d59c2601c9694f063adc9f7f7"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/two_hand_slam/03.png",
+          "bytes": 63299,
+          "sha256": "00c573510738eb323c59cf8e3b93246ad743feb00cf405d0ac619337846153c5",
+          "git_blob_sha": "21a4ad1565b5fc0bcf1f84b1d1190e87e1ac16ee"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/two_hand_slam/04.png",
+          "bytes": 69873,
+          "sha256": "f31e6e45fc114a4800dc34ec07e37e6efa6fe8ff6edae2de6e1d66453b23fcde",
+          "git_blob_sha": "03f8e3bb02f3f726da046c73e375e7daf8253914"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/two_hand_slam/05.png",
+          "bytes": 70222,
+          "sha256": "37a9873b65aacfd072d2dc00022304c4c9eb0730dedff5f9ba51d603b3f7a6ad",
+          "git_blob_sha": "a2b7d94e58147599e34db2b937a97260ef25f4cb"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/walk/00.png",
+          "bytes": 70670,
+          "sha256": "01ebeba1c8687dfca144d7b5526203a137a060d4b56ba370a821002a34e4efc3",
+          "git_blob_sha": "2d491954622de4349eb3bec19057a51170477231"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/walk/01.png",
+          "bytes": 68365,
+          "sha256": "20941995c233c8e3c9a79714e0b96f57630838128cefd2405160c13e726af081",
+          "git_blob_sha": "c7ebd42cbab0eed7cea8461160fac8703fbd5ab7"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/walk/02.png",
+          "bytes": 67153,
+          "sha256": "362da9ba54dd7a2002a88ffc9d8a184d187c25ab79abf2074f3ca85add12d335",
+          "git_blob_sha": "ff96736c5aa278b76e5150ac972185e747d3eacb"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/walk/03.png",
+          "bytes": 68126,
+          "sha256": "b99d2dfe1259917411b87eda637caecbc8e4c327503cf02c9d27305d3ee1e6c9",
+          "git_blob_sha": "3494309c687954aa06bf399947228e993eb4501d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/walk/04.png",
+          "bytes": 71191,
+          "sha256": "c2f6a8eb3830aa49ddb1fee08e8b3ca1ceeec2f25e503167faca45d99e20de77",
+          "git_blob_sha": "fff2b6503f852d3fbac9facdd411fbe79851f9c6"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/front/walk/05.png",
+          "bytes": 67210,
+          "sha256": "44596a8c2341067166a080d0cf6dd675783cf3970ff5b9658b7a6e1d50effd3f",
+          "git_blob_sha": "ee9aa037e47bfe1823cee34bab6f640badd92d89"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/claw_swipe/00.png",
+          "bytes": 65532,
+          "sha256": "010ea5eb89166455777b191178d83f4ff350f372ff75834a0aa8a761a0c8c75b",
+          "git_blob_sha": "0faefcdb42103669ccf392acb7a237d1682ed8ea"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/claw_swipe/01.png",
+          "bytes": 77241,
+          "sha256": "af537e4f21a03c9cd9c53b97067c0a45fa0c2e72d1363e43935d9d53af86eeca",
+          "git_blob_sha": "497be6800215fadee7cb17fcd4fb3e4d39557c89"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/claw_swipe/02.png",
+          "bytes": 77454,
+          "sha256": "6108472eb5886f0f2aaa7edf824c97ad9c7a7d09d655063e254c90ab78cee01d",
+          "git_blob_sha": "bf4bc31eb71d2fe783782065b7ff0b412de240d2"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/claw_swipe/03.png",
+          "bytes": 80510,
+          "sha256": "a062cf61e0f2feeabb5f1f08afe1dec868e7fb84e9e30c832c89d6ff03385162",
+          "git_blob_sha": "1598f0ed55935f648f6cdc93f1bf91cd2d4103ed"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/claw_swipe/04.png",
+          "bytes": 75544,
+          "sha256": "2ca2e60fdae7f26d0abb5178a74b8fa6e653c63fb61174e2ca4d0b74a5c154ba",
+          "git_blob_sha": "4090e04d84ba195b91762ee637edd22d07d6bbc0"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/claw_swipe/05.png",
+          "bytes": 65495,
+          "sha256": "9a8035cc9a2a2b728c5d92b0b259b652facce704e6b6eea11942e9d3204b9f37",
+          "git_blob_sha": "244dc46ae8711637ed4e5d4be38313b86eef6119"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/lunge/00.png",
+          "bytes": 61239,
+          "sha256": "7d7f8fa6cd29acd61a2fcf9c52660fd8a401d4b101f9c2e89049f9301289ff08",
+          "git_blob_sha": "9d6bf5ede5f396299e53dd0f097bbed559f90a1c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/lunge/01.png",
+          "bytes": 59973,
+          "sha256": "23dd5a5099152d1c84274d0c20a79ef0aba8e0309bda4ac15a595fde648baab7",
+          "git_blob_sha": "b57836f3144c2ae498af5fb7cb0adb708df418a4"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/lunge/02.png",
+          "bytes": 72372,
+          "sha256": "ece84ad160310bbdba90ae6623fe080f3651788dcd41a9a5adeca12478e72e22",
+          "git_blob_sha": "0831979f244e0d4accba8755a5387c74e0c398f8"
+        }
+      ]
+    },
+    {
+      "kit": "royal-mummy-v1",
+      "volume": 9,
+      "volume_count": 12,
+      "archive": "art/kits/archives/royal-mummy-v1.volume-009.zip",
+      "bytes": 2497649,
+      "sha256": "4e4b9d91f4cf0e40cd60562bfcf825962b9a4e522385b74915644f9dc3b56a94",
+      "git_blob_sha": "83ec1dccdafa638a630406ecef2f3589a8f559f6",
+      "content_root": "art/kits/royal-mummy-v1",
+      "file_count": 35,
+      "uncompressed_bytes": 2489809,
+      "files": [
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/lunge/03.png",
+          "bytes": 79287,
+          "sha256": "ede882d8635a918392c0ac586e20e3ee4f3568c3812c7151896aa02b620abda2",
+          "git_blob_sha": "91fe80125fe46a3fc81c103c79600ed3e49a6f74"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/lunge/04.png",
+          "bytes": 71646,
+          "sha256": "6067f4226f3394224a2311f23948a52e866bf652ded3305bd2e6b1a7ae35af63",
+          "git_blob_sha": "a4958444aac12e73bd33e71faa4c67b57506cc66"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/lunge/05.png",
+          "bytes": 61309,
+          "sha256": "01a3cc48d0af306aed53eb6f6eab0b7b8983f4387d141f3ec9ed822a69b66312",
+          "git_blob_sha": "3eefa301519e71d3fab894a70669bd63f13978e9"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/two_hand_slam/00.png",
+          "bytes": 68769,
+          "sha256": "faadc706306628a812faf9ae13707e57468ac6a22ad8f867aa5972c4e106ae9f",
+          "git_blob_sha": "e12f6ce6fc5d6efdc38794396a510ea221e646af"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/two_hand_slam/01.png",
+          "bytes": 72220,
+          "sha256": "22cc2cc64f4baf2eac8d1c627b38443155f4d66657fe7717c07105e52f675081",
+          "git_blob_sha": "9c1637e6542218d591bb89a607dea4ab9343621f"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/two_hand_slam/02.png",
+          "bytes": 70652,
+          "sha256": "42c6906ff9698fe5c4c201023dd2db19b361a6fc495a448cab566ce9b03448be",
+          "git_blob_sha": "f1b2c93f7784f5a7d09bd53c191835b2d212d9c7"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/two_hand_slam/03.png",
+          "bytes": 70918,
+          "sha256": "cc81a741627e7c398ac2919197da6f2e2d02b2cb8812031aa0f63664e4993062",
+          "git_blob_sha": "1ad91cb6adc951efa78d177ded3b575a6c2ba7db"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/two_hand_slam/04.png",
+          "bytes": 62945,
+          "sha256": "533e0a6f19f33434ec4334ce0880e5659f121095b2e826704b53614a69d584a4",
+          "git_blob_sha": "de64a8fa4ebce214d420266d0e8da269c672815f"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/two_hand_slam/05.png",
+          "bytes": 68453,
+          "sha256": "532caf06dfb8b7b37d2e0178a26b49b7c0b8ec179f6749ec6e0ff3b889f9541d",
+          "git_blob_sha": "0daac4c7513dd4b2dd53038fcf65c213e82a5599"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/walk/00.png",
+          "bytes": 67209,
+          "sha256": "bb0e4d5996233cbcc89b5fc246f81cf197cca258833b739e42537f523989497b",
+          "git_blob_sha": "500876ef36dc87af2acb0d450e4ae278ba21b954"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/walk/01.png",
+          "bytes": 60070,
+          "sha256": "5c176805c6738b9dc5147f588810982969db8bf02dedc4e7ed1b509ee0cd786b",
+          "git_blob_sha": "71c1ea649de798c20760824286b98a626b1efdab"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/walk/02.png",
+          "bytes": 63842,
+          "sha256": "a6651ff25a8af000c6ca1075055554fcb047fda019ddb70f0d80f294210a87b4",
+          "git_blob_sha": "b5efb4f3caf2065c1bba3a3e1a995d5a017150bf"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/walk/03.png",
+          "bytes": 68370,
+          "sha256": "fe4674d404e284eb69fc35f50b408e1663666b348116c1ad7c05bc7ea5bb7003",
+          "git_blob_sha": "492011e88790cf8543cf6e87168c1bf6bf84555d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/walk/04.png",
+          "bytes": 62316,
+          "sha256": "057ce8ede79f13fe52580e7ea446d1c361fa340d58e5a25ef92f098b8c1c52d7",
+          "git_blob_sha": "ebe006c10c2bb358c881a493f639c914388b9f87"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/left/walk/05.png",
+          "bytes": 68028,
+          "sha256": "d728f976503fa93d8aa4849afc1f352a5568a38aee0241f29837b7b75e6edf86",
+          "git_blob_sha": "b1c52a3c1b1a2af68d87eea166b0bb63c10657f9"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/claw_swipe/00.png",
+          "bytes": 67249,
+          "sha256": "93885c20f14a37a35b26a42323a13f11e1499b44eba4465a0e917ba3be7fc9c6",
+          "git_blob_sha": "101fa52ed29af6f677193477653793321102a62e"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/claw_swipe/01.png",
+          "bytes": 80577,
+          "sha256": "bfcdd164a3e2f8ecc666ad6b721bfa5bc2ebed9eb6271b8fdc39042181d40691",
+          "git_blob_sha": "5ca3623d6357293acd69bca1668c132da94173d1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/claw_swipe/02.png",
+          "bytes": 82255,
+          "sha256": "20fddad516c0ecd697cb9a8e4811ad3836d3c31a740958212be890c949b52881",
+          "git_blob_sha": "36d3847c395a9e8c13ef46010aade85d238e9320"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/claw_swipe/03.png",
+          "bytes": 82578,
+          "sha256": "1029b704df5d0fba43ef28c42a4201f3cda89a3795f06d99f5ebb33218c96f77",
+          "git_blob_sha": "411198d565393799874004590a9545d1c962f93c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/claw_swipe/04.png",
+          "bytes": 77188,
+          "sha256": "83ec50e3b9514410b784b7f5e6fffb6628a9cc2da9da7b358977147ff91bbd87",
+          "git_blob_sha": "f20399a69d9a78b3e3551474528bd76a534baa5d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/claw_swipe/05.png",
+          "bytes": 68105,
+          "sha256": "e062de8c565a09cfecd8069176a436a2a3bf47d4ab1238e21af336c6358e20ff",
+          "git_blob_sha": "d7182f742d4b94ddad750a7dc68d1ad893884805"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/lunge/00.png",
+          "bytes": 69634,
+          "sha256": "8e894eec6e0b76f8a52c2b73586598e175401bef82a2076e8876053ec24dae75",
+          "git_blob_sha": "c5f8240ca3095bb02db716c1ba54371d58762e64"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/lunge/01.png",
+          "bytes": 61445,
+          "sha256": "786eb86125505911facf2dd0e8f53a60191093bf466da95b701d97a824109de4",
+          "git_blob_sha": "b39ca579c439e0bb06ce5d38a7d11297f901fe18"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/lunge/02.png",
+          "bytes": 79071,
+          "sha256": "a67cba7d7dbfd3552256076013291dfeeea3a9071dc433d1494faa6d287048fa",
+          "git_blob_sha": "0dbe6f81db401f0293f1f82d3526a7867a81c77d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/lunge/03.png",
+          "bytes": 87659,
+          "sha256": "ae38ee1fa17d1d23db42bde5b040c32aa26d4f7795448f5994c69f507461e94f",
+          "git_blob_sha": "4b5f0f1b625dc3fe8f6dae4b756c9c0e1a4455fb"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/lunge/04.png",
+          "bytes": 72404,
+          "sha256": "6fd143480fcf1e0e8b4cf8cca84ab99417842b3ff21122aa51c6874c2522a658",
+          "git_blob_sha": "7f3af2b8f761a442d38e78b22b94114e0669c791"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/lunge/05.png",
+          "bytes": 68703,
+          "sha256": "11ba9b4c58464e3cb7dae26e99781d09a42c6833a5762e58b4873388e7fdeb65",
+          "git_blob_sha": "bbde8ccc1e0f839f24b22d5d3cc2d9f49cadafaa"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/two_hand_slam/00.png",
+          "bytes": 68826,
+          "sha256": "dbbbd00e659068b31647be35ab631a10e1dfc5ed4c305de439eab108d3f5850f",
+          "git_blob_sha": "608085d83640739b754baa47820bcb7b78eae0b4"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/two_hand_slam/01.png",
+          "bytes": 73333,
+          "sha256": "42012d20d12598d8ff8abbee3370d382133b18a90dc83132c4ea3f48bd84c0e2",
+          "git_blob_sha": "aa91d02beaa643e7e02b0f9a4bd9df17693fe2bf"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/two_hand_slam/02.png",
+          "bytes": 76166,
+          "sha256": "3f8150cfef25a74559adea2f4d28b466ada3a69932ceb8b811beb47db7d6fa08",
+          "git_blob_sha": "ed68ea391bb78fe745e7c89faf45095d06401a72"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/two_hand_slam/03.png",
+          "bytes": 72400,
+          "sha256": "de71035489923f99fee00d478355d12af366379de6611734b6d22af63dbf9add",
+          "git_blob_sha": "88cd9cfc9a1d4b91d6f2165e6f307e3a9eec3b34"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/two_hand_slam/04.png",
+          "bytes": 68808,
+          "sha256": "0cf25322684c8be92b3ba95a4c9e349b48fac62377ae9ac7377ccfe2558053e8",
+          "git_blob_sha": "646fa3c50311d64ed28fba413a779b7918454ece"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/two_hand_slam/05.png",
+          "bytes": 71818,
+          "sha256": "fd212e50f5579c1e94c2c6e7dfd5602115e0083b43e510acaf2530fa6c0bfe3e",
+          "git_blob_sha": "d03a38fa4e7ee4544b937a7f14b7483fff1380b9"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/walk/00.png",
+          "bytes": 72940,
+          "sha256": "75fde4cd52844f4f02a43c4a75e82c1aa47844d38f9f99119ba013cd46655055",
+          "git_blob_sha": "392234d7f16d2e47b968cc330256f0b179160c6c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/walk/01.png",
+          "bytes": 72616,
+          "sha256": "16f18da439d32618ee5679586257d5ac6bdf528284975d547c0118ad146aa820",
+          "git_blob_sha": "bfe6dd877f46b312d5d21b50c6ff36590c3ca30a"
+        }
+      ]
+    },
+    {
+      "kit": "royal-mummy-v1",
+      "volume": 10,
+      "volume_count": 12,
+      "archive": "art/kits/archives/royal-mummy-v1.volume-010.zip",
+      "bytes": 2397122,
+      "sha256": "9834b2082745e502fe60bb262b6a8b7e6675c80975eda96658362ee8ffa2cce1",
+      "git_blob_sha": "870e6805d43754fb353b2b8121f589f10662207d",
+      "content_root": "art/kits/royal-mummy-v1",
+      "file_count": 6,
+      "uncompressed_bytes": 2424360,
+      "files": [
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/walk/02.png",
+          "bytes": 64880,
+          "sha256": "519809f3700ae77a114b939f1ae54872df127bd7adbbf6a0d8f2ab3dd7a0e6b3",
+          "git_blob_sha": "4e3bf71d73cc6494aa8be19b3be8f2c4a3bc0ccd"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/walk/03.png",
+          "bytes": 71035,
+          "sha256": "b64d9b8a319bb335482f44a8292757d7c541229b1efd65f2d4df1a0fe56a84b7",
+          "git_blob_sha": "c145d04707a2b97a6e4c474b885306a45ae4b5f1"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/walk/04.png",
+          "bytes": 70342,
+          "sha256": "2d271d1f3ebdedfe7d15999e500407b9247af15e25b8e31b4b31a3d3d031fb7c",
+          "git_blob_sha": "5ba87302ecd112a9b0a39526443ab155f6c2b632"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/native/right/walk/05.png",
+          "bytes": 65615,
+          "sha256": "873578c4b261f0e187e194922dd2f1122cd5d83d1bccd732e959bb15ab270eca",
+          "git_blob_sha": "a3b191b5118de154492e8361a5c9a9a27710f87b"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/all_frames_contact.png",
+          "bytes": 1680251,
+          "sha256": "ae6e77abf4899b7f7c9172209d5b0cea0f6f731d21b536ede9ca590caba48178",
+          "git_blob_sha": "07980c85e6f19c8e0ee6e670c1d73dfde467ceb3"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/alpha_light_check.png",
+          "bytes": 472237,
+          "sha256": "07759ca8649abec8fbc42ce150c7590ccb2b52a3553c41d6248adcfe80c28576",
+          "git_blob_sha": "0615fdc73408657a5d25152a4a5102ef21558eb2"
+        }
+      ]
+    },
+    {
+      "kit": "royal-mummy-v1",
+      "volume": 11,
+      "volume_count": 12,
+      "archive": "art/kits/archives/royal-mummy-v1.volume-011.zip",
+      "bytes": 2009431,
+      "sha256": "6ffb04047f579995d878d39ad1e643eca40e67f64c734c67d0dfe1a8335d3f6d",
+      "git_blob_sha": "e00b42e3b1c9aeb6b8f4ad270995d6112a49025a",
+      "content_root": "art/kits/royal-mummy-v1",
+      "file_count": 20,
+      "uncompressed_bytes": 2106709,
+      "files": [
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/attacks_four_views.gif",
+          "bytes": 663837,
+          "sha256": "4228a6c2389cebf3d20de4754735c0aeb3c4c234773b4754c89ada36fed30bc3",
+          "git_blob_sha": "4dbc0fa441159d645ecf0e8cf060d025a4d3da0c"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/attacks_four_views.png",
+          "bytes": 209537,
+          "sha256": "b8cdd21b28ef7dd468f89fda44454705e9215cd377142d37c3556547f7cf727e",
+          "git_blob_sha": "2fabb3aab5dd9e9a2c8b169fb1a984f907d26726"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/back_claw_swipe.gif",
+          "bytes": 57139,
+          "sha256": "9179162583584ae114019f846ecc4541c9a367e3cda4cb72a210ab94c0056b4a",
+          "git_blob_sha": "90e508e88b50fb2a4b1cee92e24012a65ebf863f"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/back_lunge.gif",
+          "bytes": 52532,
+          "sha256": "c0121e4371484b0f49277edb77a865703262dcf189a4f35e66e7288c39ef7ca9",
+          "git_blob_sha": "8fe0ae20651c073ee3482fb732b87200123a9a74"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/back_two_hand_slam.gif",
+          "bytes": 55796,
+          "sha256": "3c995686d7e6ad0e21d706a2c56ac4288bcfba411e57f6ab14467a3fe8441529",
+          "git_blob_sha": "4a2a906e04f1d4d7e7b9435c24b1bc00dae853f8"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/back_walk.gif",
+          "bytes": 57829,
+          "sha256": "7932710bcdac08019a8ca3eddb8cfd1ea02ec09b8c17080ecaf3ba5fdf5a9bb6",
+          "git_blob_sha": "a2b75a2f57b5e6efb5a3062982e776ba3b67d642"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/front_claw_swipe.gif",
+          "bytes": 60492,
+          "sha256": "ef2dce4e055e1cdc24268be52088e9f734deee89adb83e874cdc5d28c32fc2a7",
+          "git_blob_sha": "37465a68f2b0d7aff92b23456b55899c5897bdeb"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/front_lunge.gif",
+          "bytes": 57767,
+          "sha256": "63c9cd244fc8e691a1e7a185dc903e39eec0fabfc0f2ea432e5a8bfcb2a572eb",
+          "git_blob_sha": "c4244736df0eebc6102b86e133d8e291b256bece"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/front_two_hand_slam.gif",
+          "bytes": 61811,
+          "sha256": "77c2bc696b603211aebd5b86ff39aaa1b0c088a6d9457548de4b8d107062c419",
+          "git_blob_sha": "6b7b740d99c128363b95928d2ba3f2a33f15750a"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/front_walk.gif",
+          "bytes": 60473,
+          "sha256": "4a7e1bfcc20f7b0589362745978cf0250c37aa8d3551f393e08d98bf4084ccba",
+          "git_blob_sha": "e7d10229e6734535a9d06e2a5165196f74846619"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/left_claw_swipe.gif",
+          "bytes": 61577,
+          "sha256": "3520b16a8c761c35c2209335bf5e3a6ae3b5f41113dbbf1f28a9569bfe61016e",
+          "git_blob_sha": "c986476bbd8b8fcfbb66a152f39e86c89725d99f"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/left_lunge.gif",
+          "bytes": 56981,
+          "sha256": "0ebe2c0a844bca18ee98e9fe8d8735828e4046b3c32d6683fb21c55804900be4",
+          "git_blob_sha": "95fa7de2095e8f3959d234b6ebb98ecce5ffafa2"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/left_two_hand_slam.gif",
+          "bytes": 58891,
+          "sha256": "cb03751dfbd7676898ecfa09d12567fcd1685c8e2baeaffa5806839d90a7b502",
+          "git_blob_sha": "785b6c39b29f15051c024050f2ab1b70c4ca0089"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/left_walk.gif",
+          "bytes": 55614,
+          "sha256": "1f14a56d10c3c6f356b4eafca8deff9393b9a4cf67f0e089e4f2f88d387bbf8d",
+          "git_blob_sha": "d98cdff2afdeb000cf05b7b5296549c5b76916b2"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/right_claw_swipe.gif",
+          "bytes": 63468,
+          "sha256": "4dfa1e60f67d5c6a9311e4695459b528658a1a2862eaf5a3163629d05d492582",
+          "git_blob_sha": "e080a581a49c58d299ab8eab5481d920a4f51f5d"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/right_lunge.gif",
+          "bytes": 61580,
+          "sha256": "97ddeaa000ce9d2ffc5ce405f5578ee30ba131f52b453232fd7c8ebce8041e9b",
+          "git_blob_sha": "3c9b39be0334aea0f6fbcc1cf608bec940610e45"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/right_two_hand_slam.gif",
+          "bytes": 60732,
+          "sha256": "7442ef4f716d7630048332a8950f0447cc27eb622a9a5aa7f134ab599f60fc41",
+          "git_blob_sha": "bc009bad825d40929c335b84ab3c15cb225bc034"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/right_walk.gif",
+          "bytes": 58463,
+          "sha256": "1a1d92bf78c560dba85d82d30402617069fab5b70cd87518dac87e4f60c8aaa6",
+          "git_blob_sha": "ab84138037fef4b8e3d7967f6b5ef74a0182d82e"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/walk_four_views.gif",
+          "bytes": 220069,
+          "sha256": "458f9ef45b54aa2a030b731a6d33d1081826ee15226fcf89e7c38bded6074ed8",
+          "git_blob_sha": "071c0a4d03deb16848fc06a4c06ecfaed966a63b"
+        },
+        {
+          "path": "art/kits/royal-mummy-v1/extracted/previews/walk_four_views.png",
+          "bytes": 72121,
+          "sha256": "836d727f6652eaf51be5a95b016b66d57bef7280911649e7368051c1f6adc830",
+          "git_blob_sha": "9ee1f8029c1ba45fec4b0f779f6796658776424a"
+        }
+      ]
+    },
+    {
+      "kit": "royal-mummy-v1",
+      "volume": 12,
+      "volume_count": 12,
+      "archive": "art/kits/archives/royal-mummy-v1.volume-012.zip",
+      "bytes": 707480,
+      "sha256": "7e058ef985252fd1d330585542e4b597d8f44d9952469ce5f14de951763fa702",
+      "git_blob_sha": "d76445e5e6fd0a5ceb32c331b947b5da045cae87",
+      "content_root": "art/kits/royal-mummy-v1",
+      "file_count": 1,
+      "uncompressed_bytes": 787510,
+      "files": [
+        {
+          "path": "art/kits/royal-mummy-v1/sources/reference.png",
+          "bytes": 787510,
+          "sha256": "18e9109b4c1ac66fe169cd9d1b540db919456823bee4e153a753b76d2a966fd9",
+          "git_blob_sha": "e43ecb8dfa6f2eeae13672955ad5db88642c306e"
+        }
+      ]
     }
   ]
 }
