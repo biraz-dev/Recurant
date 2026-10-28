@@ -42,6 +42,11 @@ TEXTURES = {
     "floor.png": "worn_floor_basecolor.png",
     "rubble.png": "rubble_stone_basecolor.png",
     "water.png": "water_basecolor.png",
+    "mossy.png": "mossy_stone_basecolor.png",
+}
+FOLIAGE = {
+    "fern.png": "fern_cluster_rgba.png",
+    "vines.png": "hanging_vines_rgba.png",
 }
 
 # Cell kinds -> map characters. Everything not walkable is solid ('#').
@@ -241,14 +246,39 @@ def main():
         cols = [m[r][c] for c in range(3) for r in range(3)]
         out += struct.pack("<I12f", module_ids.index(inst["module_id"]), *cols, *inst["position_m"])
 
+    # Wall faces, for dressing (ferns at their feet, vines down them): each
+    # walkable cell beside a boundary wall, and the direction of the wall
+    # (0 N, 1 E, 2 S, 3 W, the core's Facing order).
+    faces = set()
+    for inst in instances:
+        if inst["module_id"] != "ruins_wall_2m":
+            continue
+        x, _, z = inst["position_m"]
+        yaw = round(inst["rotation_degrees_xyz"][1]) % 180
+        if yaw == 0:  # runs along X, on the edge at z
+            cx, sides = int((x - 1) // 2), [(int(z // 2) - 1, 2), (int(z // 2), 0)]
+            cells = [((cx, cz), d) for cz, d in sides]
+        else:  # runs along Z, on the edge at x
+            cz, sides = int((z - 1) // 2), [(int(x // 2) - 1, 1), (int(x // 2), 3)]
+            cells = [((cx, cz), d) for cx, d in sides]
+        for cell, d in cells:
+            if cell in walkable:
+                faces.add((cell, d))
+    out += struct.pack("<I", len(faces))
+    for (cx, cz), d in sorted(faces):
+        out += struct.pack("<iiI", cx, cz, d)
+
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "level.bin").write_bytes(out)
     for name, source in TEXTURES.items():
         shutil.copyfile(KIT / "art/runtime/256/materials" / source, OUT / name)
+    for name, source in FOLIAGE.items():
+        shutil.copyfile(KIT / "art/runtime/256/foliage" / source, OUT / name)
 
     total = sum(triangles[i["module_id"]] for i in kept)
     print(f"{len(module_ids)} modules, {len(kept)} instances, {total} triangles")
-    print(f"{len(walkable)} walkable cells, {len(edges) // 2} edges; level.bin {len(out)} bytes")
+    print(f"{len(walkable)} walkable cells, {len(edges) // 2} edges, {len(faces)} wall faces")
+    print(f"level.bin {len(out)} bytes")
 
 
 if __name__ == "__main__":

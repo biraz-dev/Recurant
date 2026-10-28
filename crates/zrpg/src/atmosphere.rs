@@ -106,11 +106,7 @@ impl Look {
     /// The haze colour that, once tonemapped, matches the sky (which is not
     /// tonemapped), so the far distance melts into it without a seam.
     pub fn fog_color(&self) -> Color {
-        let sky = self.sky.to_linear();
-        let luma = sky.luminance().min(0.95);
-        // Inverse of Reinhard on luminance: out = in / (1 + in).
-        let k = 1.0 / (1.0 - luma);
-        Color::linear_rgb(sky.red * k, sky.green * k, sky.blue * k)
+        untonemapped(self.sky)
     }
 
     /// Wrap a standard material in this place's depth grading.
@@ -120,6 +116,16 @@ impl Look {
             extension: DepthGrade { grade: self.grade },
         }
     }
+}
+
+/// The colour that, once tonemapped, shows as `color`: for things drawn
+/// to match the untonemapped background.
+pub fn untonemapped(color: Color) -> Color {
+    let c = color.to_linear();
+    let luma = c.luminance().min(0.95);
+    // Inverse of Reinhard on luminance: out = in / (1 + in).
+    let k = 1.0 / (1.0 - luma);
+    Color::linear_rgb(c.red * k, c.green * k, c.blue * k)
 }
 
 pub struct AtmospherePlugin;

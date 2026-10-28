@@ -97,7 +97,13 @@ impl Plugin for LevelPlugin {
     fn build(&self, app: &mut App) {
         app.init_resource::<GroundHeights>()
             .add_systems(Startup, (load_materials, ruins::load))
-            .add_systems(Update, rebuild_level);
+            .add_systems(
+                Update,
+                (
+                    rebuild_level,
+                    (ruins::animate_water, ruins::follow_sky).in_set(crate::Frame::Present),
+                ),
+            );
     }
 }
 

@@ -67,3 +67,55 @@ fn decode(png: &[u8], srgb: bool) -> Image {
     )
     .expect("embedded textures are valid PNGs")
 }
+
+/// Add a full mip chain to a square, power-of-two sRGB RGBA image, so tiled
+/// surfaces far away show their average colour instead of shimmering as you
+/// move. Pixels are averaged in linear light, so distance doesn't darken.
+pub fn with_mipmaps(mut image: Image) -> Image {
+    let size = image.width();
+    assert!(
+        size.is_power_of_two() && image.height() == size,
+        "square power of two"
+    );
+    let data = image.data.take().expect("decoded image has data");
+    assert_eq!(data.len(), (size * size * 4) as usize, "RGBA8");
+    let to_linear = |c: u8| (c as f32 / 255.0).powf(2.2);
+    let to_srgb = |c: f32| (c.powf(1.0 / 2.2) * 255.0).round() as u8;
+    let mut level: Vec<[f32; 4]> = data
+        .chunks_exact(4)
+        .map(|p| {
+            [
+                to_linear(p[0]),
+                to_linear(p[1]),
+                to_linear(p[2]),
+                p[3] as f32 / 255.0,
+            ]
+        })
+        .collect();
+    let mut all = data;
+    let (mut s, mut levels) = (size as usize, 1);
+    while s > 1 {
+        let half = s / 2;
+        level = (0..half * half)
+            .map(|i| {
+                let (x, y) = (i % half * 2, i / half * 2);
+                let px =
+                    [(x, y), (x + 1, y), (x, y + 1), (x + 1, y + 1)].map(|(x, y)| level[y * s + x]);
+                core::array::from_fn(|c| px.iter().map(|p| p[c]).sum::<f32>() / 4.0)
+            })
+            .collect();
+        for p in &level {
+            all.extend_from_slice(&[
+                to_srgb(p[0]),
+                to_srgb(p[1]),
+                to_srgb(p[2]),
+                (p[3] * 255.0).round() as u8,
+            ]);
+        }
+        s = half;
+        levels += 1;
+    }
+    image.texture_descriptor.mip_level_count = levels;
+    image.data = Some(all);
+    image
+}
