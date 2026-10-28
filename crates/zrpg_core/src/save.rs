@@ -4,18 +4,20 @@
 //! (the player, the enemies, waiting level-ups, the RNG) is.
 //!
 //! The format is versioned little-endian bytes. A save that doesn't parse,
-//! or comes from another version, is ignored rather than trusted.
+//! or comes from an unknown version, is ignored rather than trusted.
+//! Version 2 added gold; version 1 saves still load, with an empty purse.
 
 use alloc::vec::Vec;
 
 use crate::dungeon::Floor;
 use crate::enemy::{Enemy, EnemyKind, EnemyState};
-use crate::game::{Game, Player};
+use crate::game::{Drop, Game, Player};
 use crate::grid::{Facing, GridPos};
 use crate::progression::{MAX_LEVEL, Perk, Perks};
 use crate::rng::Rng;
 
-const MAGIC: &[u8; 4] = b"ZRS1";
+const MAGIC: &[u8; 4] = b"ZRS2";
+const MAGIC_V1: &[u8; 4] = b"ZRS1";
 
 impl Game {
     /// The run as bytes, for [`Game::load`].
@@ -41,6 +43,13 @@ impl Game {
         put_u32(&mut w, p.xp);
         put_f32(&mut w, p.regen);
         w.extend(Perk::ALL.map(|perk| p.perks.count(perk)));
+        put_u32(&mut w, p.gold);
+        put_u32(&mut w, self.drops.len() as u32);
+        for d in &self.drops {
+            put_i32(&mut w, d.pos.x);
+            put_i32(&mut w, d.pos.y);
+            put_u32(&mut w, d.gold);
+        }
 
         put_u32(&mut w, self.pending.len() as u32);
         for offer in &self.pending {
@@ -72,9 +81,11 @@ impl Game {
     /// save from this version.
     pub fn load(bytes: &[u8]) -> Option<Game> {
         let mut r = Reader { bytes, at: 0 };
-        if r.take(4)? != MAGIC {
-            return None;
-        }
+        let version = match r.take(4)? {
+            m if m == MAGIC => 2,
+            m if m == MAGIC_V1 => 1,
+            _ => return None,
+        };
         let run_seed = r.u64()?;
         let depth = r.u32()?;
         if depth == 0 {
@@ -104,6 +115,7 @@ impl Game {
             level: r.u32()?.clamp(1, MAX_LEVEL),
             xp: r.u32()?,
             perks: Perks::default(),
+            gold: 0,
             regen: r.f32()?,
         };
         let mut counts = [0u8; Perk::ALL.len()];
@@ -111,6 +123,19 @@ impl Game {
             *c = r.u8()?;
         }
         player.perks = Perks::from_counts(counts);
+        if version >= 2 {
+            player.gold = r.u32()?;
+            let mut drops = Vec::new();
+            for _ in 0..r.u32()?.min(256) {
+                let pos = GridPos::new(r.i32()?, r.i32()?);
+                let gold = r.u32()?;
+                if !game.floor.map.is_walkable(pos) {
+                    return None;
+                }
+                drops.push(Drop { pos, gold });
+            }
+            game.drops = drops;
+        }
         game.player = player;
 
         let mut pending = Vec::new();
@@ -230,6 +255,7 @@ mod tests {
             assert_eq!(back.player, g.player);
             assert_eq!(back.enemies, g.enemies);
             assert_eq!(back.pending, g.pending);
+            assert_eq!(back.drops, g.drops);
             // And it carries on exactly as the original would have.
             let (mut a, mut b) = (g.clone(), back);
             let (mut ea, mut eb) = (Vec::new(), Vec::new());
@@ -268,5 +294,20 @@ mod tests {
         let mut extra = good.clone();
         extra.push(0);
         assert!(Game::load(&extra).is_none());
+    }
+
+    #[test]
+    fn version_1_saves_still_load() {
+        let g = played(5, 3000);
+        let mut v1 = g.save();
+        // Rewrite as version 1: old magic, no gold or drops after the perks.
+        v1[..4].copy_from_slice(MAGIC_V1);
+        let perks_end = 4 + 8 + 4 + 2 + 8 + 4 * 2 + 1 + 4 * 5 + 4 * 2 + 4 + Perk::ALL.len();
+        let gold_and_drops = 4 + 4 + 12 * g.drops.len();
+        v1.drain(perks_end..perks_end + gold_and_drops);
+        let back = Game::load(&v1).expect("version 1 loads");
+        assert_eq!(back.player.gold, 0);
+        assert!(back.drops.is_empty());
+        assert_eq!(back.player.level, g.player.level);
     }
 }

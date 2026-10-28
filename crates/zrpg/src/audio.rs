@@ -40,6 +40,8 @@ mod mix {
     pub const CRACKLE: f32 = 0.3;
     pub const LEVEL_UP: f32 = 0.6;
     pub const PERK: f32 = 0.5;
+    pub const COINS: f32 = 0.45;
+    pub const COIN_DROP: f32 = 0.5;
 }
 
 /// Rodio fades spatial sounds with the inverse square of distance, which is
@@ -91,6 +93,8 @@ struct Sounds {
     crackle: Handle<AudioSource>,
     level_up: Handle<AudioSource>,
     perk: Handle<AudioSource>,
+    coins: Handle<AudioSource>,
+    coin_drop: Handle<AudioSource>,
 }
 
 fn synthesize(mut commands: Commands, mut sources: ResMut<Assets<AudioSource>>) {
@@ -120,6 +124,8 @@ fn synthesize(mut commands: Commands, mut sources: ResMut<Assets<AudioSource>>) 
         crackle: add(synth::crackle(16)),
         level_up: add(synth::level_up(17)),
         perk: add(synth::perk(18)),
+        coins: add(synth::coins(19)),
+        coin_drop: add(synth::coin_drop(20)),
     });
 }
 
@@ -244,6 +250,10 @@ fn play_event_sounds(
             Event::LeveledUp { .. } => sfx(&sounds.level_up, mix::LEVEL_UP, None),
             Event::PerkTaken { .. } => sfx(&sounds.perk, mix::PERK, None),
             Event::Dodged { id } => sfx(&sounds.whiff, mix::WHIFF, enemy_at(id)),
+            Event::GoldTaken { .. } => sfx(&sounds.coins, mix::COINS, None),
+            Event::GoldDropped { at, .. } => {
+                sfx(&sounds.coin_drop, mix::COIN_DROP, Some(ear_level(at)))
+            }
         }
     }
 }

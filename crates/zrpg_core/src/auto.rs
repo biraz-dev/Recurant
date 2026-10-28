@@ -8,7 +8,8 @@
 //! 2. Enemy next to it: face it and swing. When the enemy winds up, hit it to
 //!    stagger it, or step out of reach if a swing isn't ready.
 //! 3. Healthy and an enemy is awake: go and fight it.
-//! 4. Otherwise: walk the shortest way to the stairs, facing where it walks.
+//! 4. Gold lying a few steps away: go and pick it up.
+//! 5. Otherwise: walk the shortest way to the stairs, facing where it walks.
 
 use crate::enemy::Enemy;
 use crate::game::{Command, Game};
@@ -17,6 +18,8 @@ use crate::grid::{Facing, GridPos, Step, Turn};
 /// Below this share of max Health the bot stops seeking fights and heads
 /// for the stairs, which heal.
 const CAUTIOUS_HEALTH: f32 = 0.4;
+/// The bot detours for gold at most this many steps away.
+const GOLD_DETOUR: u32 = 8;
 
 /// The next command, or `None` to wait (for a cooldown, Energy, or a safer
 /// moment).
@@ -38,9 +41,18 @@ pub fn next_command(game: &Game) -> Option<Command> {
         .iter()
         .filter(|e| e.state != crate::enemy::EnemyState::Dormant)
         .min_by_key(|e| e.pos.manhattan(p.pos));
+    let near_gold = || {
+        let dist = map.distances(p.pos);
+        game.drops
+            .iter()
+            .filter_map(|d| dist[map.index(d.pos)].map(|n| (n, d.pos)))
+            .filter(|&(n, _)| n <= GOLD_DETOUR)
+            .min_by_key(|&(n, _)| n)
+            .map(|(_, pos)| pos)
+    };
     let target = match quarry {
         Some(e) if healthy => e.pos,
-        _ => game.floor.stairs,
+        _ => near_gold().unwrap_or(game.floor.stairs),
     };
     walk_toward(game, target)
 }

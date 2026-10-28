@@ -544,6 +544,39 @@ pub fn perk(_seed: u64) -> Vec<f32> {
     finish(buf)
 }
 
+/// One small coin: a bright, short metallic ping.
+fn ping(freq: f32) -> Vec<f32> {
+    (0..samples(0.25))
+        .map(|i| {
+            let t = time(i);
+            let attack = (t / 0.002).min(1.0);
+            ((TAU * freq * t).sin() + 0.5 * (TAU * freq * 2.71 * t).sin() * decay(t, 0.04))
+                * decay(t, 0.07)
+                * attack
+        })
+        .collect()
+}
+
+/// Picking up gold: two coins chinking together.
+pub fn coins(_seed: u64) -> Vec<f32> {
+    let mut buf = vec![0.0; samples(0.4)];
+    mix_in(&mut buf, &ping(2637.0), 0.0, 1.0);
+    mix_in(&mut buf, &ping(3136.0), 0.07, 0.8);
+    finish(buf)
+}
+
+/// Gold spilling from a kill: a scatter of coins hitting stone.
+pub fn coin_drop(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let mut buf = vec![0.0; samples(0.6)];
+    for k in 0..6 {
+        let at = 0.03 + k as f32 * 0.06 + (noise.next() * 0.02).abs();
+        let freq = 2200.0 + 900.0 * noise.next().abs();
+        mix_in(&mut buf, &ping(freq), at, 1.0 - 0.13 * k as f32);
+    }
+    finish(buf)
+}
+
 pub fn wav(samples: &[f32]) -> Vec<u8> {
     let data_len = (samples.len() * 2) as u32;
     let mut out = Vec::with_capacity(44 + data_len as usize);
@@ -586,6 +619,8 @@ pub fn all() -> Vec<(&'static str, Vec<f32>)> {
         ("crackle", crackle(16)),
         ("level_up", level_up(17)),
         ("perk", perk(18)),
+        ("coins", coins(19)),
+        ("coin_drop", coin_drop(20)),
     ]
 }
 

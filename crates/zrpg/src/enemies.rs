@@ -44,7 +44,12 @@ const SPRITE_HEIGHT: f32 = 0.95;
 const STEP_ANIM_SECS: f32 = 0.3;
 const FLASH_SECS: f32 = 0.2;
 const LUNGE_SECS: f32 = 0.2;
-const DIE_SECS: f32 = 0.45;
+/// Dying: topple over backwards, lie still a moment, sink away.
+const FALL_SECS: f32 = 0.5;
+const LIE_SECS: f32 = 1.0;
+const SINK_SECS: f32 = 0.6;
+/// How far over a body falls (just short of flat, so it still reads).
+const FALL_ANGLE: f32 = 1.45;
 
 /// Sheet layout, shared by every creature kit: 6 frames across, and for each
 /// of the four views, four rows (locomotion, then three attacks).
@@ -162,6 +167,15 @@ struct Attack {
     since_strike: Option<f32>,
 }
 
+/// A death in progress: time since it began, which way the body was turned
+/// as it fell (it stops facing the camera), and its twist as it goes down.
+#[derive(Clone, Copy, Debug)]
+struct Dying {
+    t: f32,
+    facing: Quat,
+    twist: f32,
+}
+
 #[derive(Component)]
 struct EnemySprite {
     id: EnemyId,
@@ -181,7 +195,7 @@ struct EnemySprite {
     wind: f32,
     flash: f32,
     lunge: f32,
-    dying: Option<f32>,
+    dying: Option<Dying>,
     /// Steps taken so far; alternates the lurch from side to side.
     steps: u32,
     material: Handle<GradedMaterial>,
@@ -220,6 +234,18 @@ impl EnemySprite {
 
 fn cycle_frame(sheet: &Sheet, t: f32) -> usize {
     (t * sheet.locomotion.fps) as usize % FRAMES
+}
+
+/// How far over a falling body is, `t` seconds after death: it gathers
+/// speed like a real fall, bounces once off the floor, and settles.
+fn fall_angle(t: f32) -> f32 {
+    if t < FALL_SECS {
+        let k = t / FALL_SECS;
+        FALL_ANGLE * k * k
+    } else {
+        let after = t - FALL_SECS;
+        FALL_ANGLE - 0.12 * (after * 18.0).sin().max(0.0) * (-after * 6.0).exp()
+    }
 }
 
 /// Which run/floor the spawned sprites belong to.
@@ -358,7 +384,16 @@ fn react_to_events(
                     since_strike: Some(0.0),
                 });
             }
-            Event::EnemyDied { .. } => s.dying = Some(0.0),
+            Event::EnemyDied { .. } => {
+                // Facing is fixed on the first frame of the fall.
+                let twist = if s.id % 2 == 0 { 0.25 } else { -0.25 };
+                s.dying = Some(Dying {
+                    t: 0.0,
+                    facing: Quat::NAN,
+                    twist,
+                });
+                s.attack = None;
+            }
             _ => {}
         }
     }
@@ -425,7 +460,7 @@ fn animate(
         }
 
         let mut feet = ground + Vec3::Y * ground_heights.at(ground);
-        let (mut roll, mut sx, mut sy);
+        let (roll, mut sx, mut sy);
         if let Some(sheet) = s.sheet {
             // The drawings carry the motion; the sprite only leans in.
             roll = 0.0;
@@ -466,21 +501,27 @@ fn animate(
             feet += toward * (0.06 * s.wind + 0.3 * lunge);
         }
 
+        let mut rotation = facing * Quat::from_rotation_z(roll);
         if let Some(d) = s.dying.as_mut() {
-            *d += dt;
-            let k = (*d / DIE_SECS).min(1.0);
-            // Collapse into a heap.
-            sy *= 1.0 - k * k;
-            sx *= 1.0 + 0.35 * k;
-            roll *= 1.0 - k;
-            if k >= 1.0 {
+            d.t += dt;
+            if d.facing.is_nan() {
+                d.facing = facing;
+            }
+            if d.t >= FALL_SECS + LIE_SECS + SINK_SECS {
                 commands.entity(entity).despawn();
                 continue;
             }
+            rotation =
+                d.facing * Quat::from_rotation_y(d.twist) * Quat::from_rotation_x(-fall_angle(d.t));
+            sx = 1.0;
+            sy = 1.0;
+            // Then sink into the floor.
+            let sink = ((d.t - FALL_SECS - LIE_SECS) / SINK_SECS).clamp(0.0, 1.0);
+            feet.y -= 0.25 * sink * sink;
         }
-        // Pivot at the feet so swaying never lifts them off the floor.
+        // Pivot at the feet so swaying and falling keep them on the floor.
         *t = Transform::from_translation(feet)
-            .with_rotation(facing * Quat::from_rotation_z(roll))
+            .with_rotation(rotation)
             .with_scale(Vec3::new(sx, sy, 1.0));
 
         // Tint and glow: red on hit, hot orange while winding up.

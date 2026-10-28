@@ -47,7 +47,7 @@ mid-step are buffered.
 
 ## Combat
 
-Real time, on cooldowns. Each swing costs Energy (yellow bar), which refills
+Real time, on cooldowns. Each swing costs Chi (the jade bar), which refills
 on its own; swing too eagerly and you'll be left flailing. Enemies sleep until
 you come close, then chase. When one is next to you it **winds up** (rears up
 and glows orange) before it strikes:
@@ -57,6 +57,12 @@ and glows orange) before it strikes:
 
 Health (red bar) does not regenerate. Reach zero and you die; press Attack to
 rise again in a fresh dungeon.
+
+The dead topple over backwards, lie still a moment, and sink away, leaving
+a heap of **gold** where they fell: more for tougher creatures and deeper
+floors. Walk over it to take it; your purse shows beside your level. Auto
+mode picks up gold lying close by. Gold stays on the floor where it fell,
+so take it before you take the stairs.
 
 ## The ruins and what lives below
 
@@ -88,12 +94,12 @@ torchlight and wall dressing, and is announced as you arrive. Floors grow
 larger and busier the deeper you go.
 
 **Levels.** Kills give XP (more for tougher creatures and deeper floors), up
-to level 36. The bar under Energy fills towards the next level.
+to level 36. The bar under Chi fills towards the next level.
 
 **Abilities.** Each level offers three random abilities; take one. The world
 waits while you choose (left/right to pick, Attack to take). There are
-fourteen, most of which stack a few times: more Health or Energy, faster
-Energy, sharper or cheaper or quicker swings, less damage taken, dodging,
+fourteen, most of which stack a few times: more Health or Chi, faster
+Chi, sharper or cheaper or quicker swings, less damage taken, dodging,
 crushing blows, healing from kills, regeneration, more XP, more healing per
 floor, longer staggers.
 
@@ -119,7 +125,7 @@ and a seed always produces the same sequence of floors.
 Every sound is synthesized in code at startup, from oscillators, noise and
 filters (`crates/zrpg/src/synth.rs`); no audio files ship with the game.
 Footsteps on stone, the sword's whoosh and its impact on bone, a tired breath
-when you're out of energy, footsteps echoing down the stairs, a low room tone
+when you're out of Chi, footsteps echoing down the stairs, a low room tone
 with distant drips, and torches that crackle. Zombie sounds come from where
 the zombie is (panned, fading with distance): a hiss when one notices you, a
 shuffle as it comes, and a rasping groan for exactly as long as its wind-up,
@@ -223,7 +229,7 @@ first-person sword from the asset kits.
 - [x] Grid movement, turning, strafing, collision
 - [x] Keyboard and gamepad
 - [x] Billboard enemy that approaches and attacks
-- [x] Player attack, Health and Energy HUD
+- [x] Player attack, Health and Energy (now Chi) HUD
 - [x] Stairs to the next floor
 - [x] Death and instant restart
 

@@ -14,6 +14,7 @@ mod hud;
 mod input;
 mod level;
 mod lighting;
+mod loot;
 mod persist;
 mod picker;
 mod platform;
@@ -122,6 +123,7 @@ fn build(saves: bool) -> App {
         hud::HudPlugin,
         picker::PickerPlugin,
         automap::AutomapPlugin,
+        loot::LootPlugin,
         persist::PersistPlugin,
         script::ScriptPlugin,
     ))

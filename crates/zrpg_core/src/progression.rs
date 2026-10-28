@@ -22,6 +22,12 @@ pub fn xp_for_kill(kind: EnemyKind, depth: u32) -> u32 {
     kind.stats().max_hp as u32 + depth
 }
 
+/// Gold from a kill: a little for anything, more for tough creatures and
+/// deep floors, with some luck (`roll` is any random number).
+pub fn gold_for_kill(kind: EnemyKind, depth: u32, roll: u32) -> u32 {
+    kind.stats().max_hp as u32 / 2 + depth + roll % (depth + 3)
+}
+
 /// The abilities.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
 pub enum Perk {
@@ -82,10 +88,10 @@ impl Perk {
     pub const fn description(self) -> &'static str {
         match self {
             Perk::Vigor => "+4 max Health",
-            Perk::Stamina => "+2 max Energy",
-            Perk::SecondBreath => "Energy returns 25% faster",
+            Perk::Stamina => "+2 max Chi",
+            Perk::SecondBreath => "Chi returns 25% faster",
             Perk::KeenEdge => "+1 damage per hit",
-            Perk::LightBlade => "Swings cost less Energy",
+            Perk::LightBlade => "Swings cost less Chi",
             Perk::QuickHands => "Swing again sooner",
             Perk::IronSkin => "Take 1 less damage per blow",
             Perk::Evasion => "6% chance to dodge a blow",

@@ -12,7 +12,9 @@ use crate::{Frame, GameEvent, Run, textures};
 const BAR_WIDTH: f32 = 64.0;
 const BAR_HEIGHT: f32 = 4.0;
 const HEALTH_COLOR: Color = Color::srgb(0.78, 0.16, 0.14);
-const ENERGY_COLOR: Color = Color::srgb(0.95, 0.75, 0.2);
+/// Chi (the core's Energy): jade, so it never reads as gold.
+const ENERGY_COLOR: Color = Color::srgb(0.3, 0.78, 0.58);
+const GOLD_COLOR: Color = Color::srgb(0.95, 0.75, 0.2);
 const EXHAUSTED_COLOR: Color = Color::srgb(1.0, 1.0, 1.0);
 const XP_COLOR: Color = Color::srgb(0.45, 0.7, 0.95);
 const XP_HEIGHT: f32 = 2.0;
@@ -88,6 +90,8 @@ struct XpFill;
 #[derive(Component)]
 struct LevelLabel;
 #[derive(Component)]
+struct GoldLabel;
+#[derive(Component)]
 struct Sword;
 #[derive(Component)]
 struct HurtFlash;
@@ -146,15 +150,30 @@ fn spawn_hud(
                 ..default()
             })
             .with_children(|bars| {
-                bars.spawn((
-                    LevelLabel,
-                    Text::new("LV 1"),
-                    TextFont {
+                bars.spawn(Node {
+                    column_gap: px(10),
+                    ..default()
+                })
+                .with_children(|row| {
+                    let small = || TextFont {
                         font_size: FontSize::Px(8.0),
                         ..default()
-                    },
-                    TextColor(LEVEL_COLOR),
-                ));
+                    };
+                    row.spawn((
+                        LevelLabel,
+                        Text::new("LV 1"),
+                        small(),
+                        TextColor(LEVEL_COLOR),
+                        shadow(),
+                    ));
+                    row.spawn((
+                        GoldLabel,
+                        Text::new("0 GOLD"),
+                        small(),
+                        TextColor(GOLD_COLOR),
+                        shadow(),
+                    ));
+                });
                 bar(bars, HealthFill, HEALTH_COLOR, BAR_HEIGHT);
                 bar(bars, EnergyFill, ENERGY_COLOR, BAR_HEIGHT);
                 bar(bars, XpFill, XP_COLOR, XP_HEIGHT);
@@ -229,6 +248,14 @@ fn spawn_hud(
         });
 }
 
+/// A dark drop shadow, so small labels read over bright stone and sky.
+fn shadow() -> TextShadow {
+    TextShadow {
+        offset: Vec2::new(1.0, 1.0),
+        color: Color::srgba(0.0, 0.0, 0.0, 0.85),
+    }
+}
+
 /// A dark, outlined track with a coloured fill whose width tracks a stat.
 fn bar(parent: &mut ChildSpawnerCommands, marker: impl Component, color: Color, height: f32) {
     parent
@@ -286,7 +313,8 @@ fn update_hud(
     map: Res<crate::automap::MapMode>,
     mut fx: ResMut<HudFx>,
     mut xp: Query<&mut Node, (With<XpFill>, Without<HealthFill>, Without<EnergyFill>)>,
-    mut level: Query<(&mut Text, &mut TextColor), With<LevelLabel>>,
+    mut level: Query<(&mut Text, &mut TextColor), (With<LevelLabel>, Without<GoldLabel>)>,
+    mut gold: Query<&mut Text, (With<GoldLabel>, Without<LevelLabel>)>,
     mut health: Query<
         &mut Node,
         (
@@ -326,6 +354,12 @@ fn update_hud(
             p.xp as f32 / needed as f32
         };
         n.width = percent(100.0 * share.min(1.0));
+    }
+    for mut text in &mut gold {
+        let label = format!("{} GOLD", p.gold);
+        if text.0 != label {
+            text.0 = label;
+        }
     }
     for (mut text, mut color) in &mut level {
         // In auto mode, level-ups wait for you: show how many.

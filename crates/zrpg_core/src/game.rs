@@ -125,6 +125,23 @@ pub enum Event {
     Dodged {
         id: EnemyId,
     },
+    /// A kill left gold on the floor.
+    GoldDropped {
+        at: GridPos,
+        amount: u32,
+    },
+    /// Walked onto gold and took it.
+    GoldTaken {
+        at: GridPos,
+        amount: u32,
+    },
+}
+
+/// Gold lying on the floor, waiting to be picked up.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct Drop {
+    pub pos: GridPos,
+    pub gold: u32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -142,6 +159,8 @@ pub struct Player {
     /// XP towards the next level.
     pub xp: u32,
     pub perks: Perks,
+    /// Gold carried.
+    pub gold: u32,
     /// Seconds towards the next Health from Regeneration.
     pub(crate) regen: f32,
 }
@@ -159,6 +178,7 @@ impl Player {
             level: 1,
             xp: 0,
             perks: Perks::default(),
+            gold: 0,
             regen: 0.0,
         }
     }
@@ -209,6 +229,8 @@ pub struct Game {
     pub floor: Floor,
     pub player: Player,
     pub enemies: Vec<Enemy>,
+    /// Gold lying on this floor.
+    pub drops: Vec<Drop>,
     /// Level-ups waiting for an ability to be chosen, oldest first: each is
     /// the three abilities on offer.
     pub pending: Vec<Vec<Perk>>,
@@ -231,6 +253,7 @@ impl Game {
             floor,
             player,
             enemies,
+            drops: Vec::new(),
             pending: Vec::new(),
             rng: Rng::new(mix64(run_seed ^ 0xC0FF_EE00)),
         }
@@ -246,6 +269,8 @@ impl Game {
         self.depth += 1;
         self.floor = Floor::for_depth(self.run_seed, self.depth, &self.params);
         self.enemies = spawn_enemies(&self.floor, self.run_seed, self.depth);
+        // Gold left behind stays behind.
+        self.drops.clear();
         let p = &mut self.player;
         p.pos = self.floor.start;
         p.facing = self.floor.start_facing;
@@ -353,6 +378,11 @@ impl Game {
                 if self.is_open(from, dir) {
                     self.player.pos = to;
                     out.push(Event::Moved { from, to });
+                    if let Some(i) = self.drops.iter().position(|d| d.pos == to) {
+                        let amount = self.drops.swap_remove(i).gold;
+                        self.player.gold += amount;
+                        out.push(Event::GoldTaken { at: to, amount });
+                    }
                 } else {
                     out.push(Event::Bumped { at: from, dir });
                 }
@@ -431,8 +461,17 @@ impl Game {
                 id: enemy.id,
                 at: enemy.pos,
             });
-            let kind = enemy.kind;
+            let (kind, at) = (enemy.kind, enemy.pos);
             self.enemies.swap_remove(i);
+            let amount = progression::gold_for_kill(kind, self.depth, self.rng.next_u32());
+            match self.drops.iter_mut().find(|d| d.pos == at) {
+                Some(d) => d.gold += amount,
+                None => self.drops.push(Drop {
+                    pos: at,
+                    gold: amount,
+                }),
+            }
+            out.push(Event::GoldDropped { at, amount });
             let p = &mut self.player;
             let heal = perk_tuning::BLOODTHIRST_HEAL * p.stacks(Perk::Bloodthirst) as i32;
             p.hp = (p.hp + heal).min(p.max_hp);
@@ -769,6 +808,34 @@ mod tests {
         g.apply(Command::Step(Step::Forward), &mut out);
         g.tick(1.0, &mut out);
         assert!(out.is_empty());
+    }
+
+    #[test]
+    fn kills_drop_gold_and_walking_over_it_takes_it() {
+        let mut g = corridor(3);
+        let mut out = Vec::new();
+        g.player.facing = Facing::East;
+        g.player.pos = GridPos::new(2, 1);
+        kill_in_front(&mut g, &mut out);
+        let dropped = out.iter().find_map(|e| match e {
+            Event::GoldDropped { at, amount } => Some((*at, *amount)),
+            _ => None,
+        });
+        let (at, amount) = dropped.expect("a kill drops gold");
+        assert_eq!(at, GridPos::new(3, 1));
+        assert!(amount > 0);
+        assert_eq!(
+            g.drops,
+            [Drop {
+                pos: at,
+                gold: amount
+            }]
+        );
+        out.clear();
+        g.apply(Command::Step(Step::Forward), &mut out);
+        assert!(out.contains(&Event::GoldTaken { at, amount }));
+        assert_eq!(g.player.gold, amount);
+        assert!(g.drops.is_empty());
     }
 
     /// Kill whatever is in front of the player, as many times as needed.
