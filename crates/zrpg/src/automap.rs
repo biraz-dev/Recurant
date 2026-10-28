@@ -1,22 +1,30 @@
-//! The automap: a small, faint map in the top-left corner that fills in as
-//! you explore. It shows only what you have seen (cells within a few steps
-//! with a clear line of sight), so the unexplored stays dark. Creatures are
-//! not on it.
+//! The automap fills in as you explore. It shows only what you have seen
+//! (cells within a few steps with a clear line of sight), so the unexplored
+//! stays dark. Creatures are not on it.
+//!
+//! Tab (gamepad: LT) cycles it: a small, faint map in the top-left corner,
+//! then the whole map over a dimmed screen, then hidden.
 
 use bevy::asset::RenderAssetUsages;
 use bevy::prelude::*;
 use bevy::render::render_resource::{Extent3d, TextureDimension, TextureFormat};
 use zrpg_core::{Facing, GridPos, Map, Tile};
 
+use crate::input::{Action, Actions};
 use crate::view::PlayerCamera;
 use crate::{Frame, Run};
 
-/// Screen pixels per map cell.
+/// Map pixels per cell (the full-screen map scales this up).
 const CELL: u32 = 3;
 /// How far you can see to map, in cells.
 const SIGHT: i32 = 4;
-/// The whole map is drawn this faint.
-const OPACITY: f32 = 0.75;
+/// How opaque the corner map and the full-screen map are.
+const CORNER_OPACITY: f32 = 0.75;
+const FULL_OPACITY: f32 = 0.95;
+/// The full-screen map dims the world behind it.
+const FULL_BACKDROP: Color = Color::srgba(0.0, 0.0, 0.0, 0.78);
+/// Room the full-screen map may fill, in screen pixels.
+const FULL_ROOM: (u32, u32) = (300, 210);
 /// Dark floors and pale walls read over both the bright ruins and the
 /// dark dungeon.
 const FLOOR: [u8; 4] = [18, 14, 10, 150];
@@ -29,8 +37,31 @@ pub struct AutomapPlugin;
 impl Plugin for AutomapPlugin {
     fn build(&self, app: &mut App) {
         app.init_resource::<Explored>()
+            .init_resource::<MapMode>()
             .add_systems(PostStartup, spawn)
-            .add_systems(Update, (explore, draw).chain().in_set(Frame::Present));
+            .add_systems(
+                Update,
+                (cycle, explore, draw).chain().in_set(Frame::Present),
+            );
+    }
+}
+
+/// How the map is shown. Starts hidden; Tab steps through the rest.
+#[derive(Resource, Clone, Copy, Debug, Default, PartialEq, Eq)]
+pub enum MapMode {
+    #[default]
+    Hidden,
+    Corner,
+    Full,
+}
+
+impl MapMode {
+    fn next(self) -> MapMode {
+        match self {
+            MapMode::Hidden => MapMode::Corner,
+            MapMode::Corner => MapMode::Full,
+            MapMode::Full => MapMode::Hidden,
+        }
     }
 }
 
@@ -43,6 +74,10 @@ struct Explored {
     drawn: Option<(GridPos, Facing, usize)>,
 }
 
+/// The layer the map sits in: clear around the corner map, dimmed behind
+/// the full one.
+#[derive(Component)]
+struct AutomapLayer;
 #[derive(Component)]
 struct AutomapImage;
 
@@ -55,17 +90,31 @@ fn spawn(
         return;
     };
     let image = images.add(blank(1, 1));
-    commands.spawn((
-        AutomapImage,
-        UiTargetCamera(cam),
-        ImageNode::new(image).with_color(Color::srgba(1.0, 1.0, 1.0, OPACITY)),
-        Node {
-            position_type: PositionType::Absolute,
-            left: px(5),
-            top: px(5),
-            ..default()
-        },
-    ));
+    commands
+        .spawn((
+            AutomapLayer,
+            UiTargetCamera(cam),
+            // Over the HUD, under the ability picker.
+            GlobalZIndex(5),
+            Node {
+                position_type: PositionType::Absolute,
+                width: percent(100),
+                height: percent(100),
+                ..default()
+            },
+            BackgroundColor(Color::NONE),
+            Visibility::Hidden,
+        ))
+        .with_children(|layer| {
+            layer.spawn((
+                AutomapImage,
+                ImageNode::new(image),
+                Node {
+                    position_type: PositionType::Absolute,
+                    ..default()
+                },
+            ));
+        });
 }
 
 fn blank(w: u32, h: u32) -> Image {
@@ -80,6 +129,12 @@ fn blank(w: u32, h: u32) -> Image {
         TextureFormat::Rgba8UnormSrgb,
         RenderAssetUsages::RENDER_WORLD | RenderAssetUsages::MAIN_WORLD,
     )
+}
+
+fn cycle(actions: Res<Actions>, mut mode: ResMut<MapMode>) {
+    if actions.just_pressed(Action::Map) {
+        *mode = mode.next();
+    }
 }
 
 /// Can you see from `a` to `b`? Every cell strictly between them must be
@@ -120,17 +175,22 @@ fn explore(run: Res<Run>, mut explored: ResMut<Explored>) {
     }
 }
 
+#[allow(clippy::type_complexity)]
 fn draw(
     run: Res<Run>,
+    mode: Res<MapMode>,
     picker: Res<crate::picker::Picker>,
     mut explored: ResMut<Explored>,
     mut images: ResMut<Assets<Image>>,
-    mut nodes: Query<(&ImageNode, &mut Node, &mut Visibility), With<AutomapImage>>,
+    mut layers: Query<(&mut Visibility, &mut BackgroundColor), With<AutomapLayer>>,
+    mut nodes: Query<(&mut ImageNode, &mut Node), With<AutomapImage>>,
 ) {
-    let Ok((image, mut node, mut vis)) = nodes.single_mut() else {
+    let (Ok((mut vis, mut backdrop)), Ok((mut image, mut node))) =
+        (layers.single_mut(), nodes.single_mut())
+    else {
         return;
     };
-    let show = run.player.is_alive() && !picker.is_open();
+    let show = *mode != MapMode::Hidden && run.player.is_alive() && !picker.is_open();
     let want = if show {
         Visibility::Inherited
     } else {
@@ -139,6 +199,39 @@ fn draw(
     if *vis != want {
         *vis = want;
     }
+    if !show {
+        return;
+    }
+
+    // Place it: small in the corner, or as large as fits in the middle of
+    // the screen (in whole pixels per map pixel, so cells stay crisp).
+    let map = &run.floor.map;
+    let (w, h) = (map.width() as u32 * CELL, map.height() as u32 * CELL);
+    let (scale, left, top, opacity, back) = if *mode == MapMode::Full {
+        let k = (FULL_ROOM.0 / w).min(FULL_ROOM.1 / h).max(1);
+        let left = crate::screen::WIDTH.saturating_sub(w * k) / 2;
+        let top = crate::screen::HEIGHT.saturating_sub(h * k) / 2;
+        (k, left, top, FULL_OPACITY, FULL_BACKDROP)
+    } else {
+        (1, 5, 5, CORNER_OPACITY, Color::NONE)
+    };
+    if backdrop.0 != back {
+        backdrop.0 = back;
+    }
+    let tint = Color::srgba(1.0, 1.0, 1.0, opacity);
+    if image.color != tint {
+        image.color = tint;
+    }
+    let placed = (
+        px((w * scale) as f32),
+        px((h * scale) as f32),
+        px(left as f32),
+        px(top as f32),
+    );
+    if (node.width, node.height, node.left, node.top) != placed {
+        (node.width, node.height, node.left, node.top) = placed;
+    }
+
     let p = &run.player;
     let seen_count = explored.seen.iter().filter(|s| **s).count();
     let state = Some((p.pos, p.facing, seen_count));
@@ -147,54 +240,70 @@ fn draw(
     }
     explored.drawn = state;
 
-    let map = &run.floor.map;
-    let (w, h) = (map.width() as u32 * CELL, map.height() as u32 * CELL);
     let mut pixels = vec![0u8; (w * h * 4) as usize];
-    let mut put = |x: u32, y: u32, c: [u8; 4]| {
-        if x < w && y < h {
-            let i = ((y * w + x) * 4) as usize;
+    let mut put = |x: i32, y: i32, c: [u8; 4]| {
+        if x >= 0 && y >= 0 && (x as u32) < w && (y as u32) < h {
+            let i = ((y as u32 * w + x as u32) * 4) as usize;
             pixels[i..i + 4].copy_from_slice(&c);
         }
     };
-    for cell in map.positions() {
-        if !explored.seen[map.index(cell)] {
-            continue;
-        }
-        let color = match map.get(cell) {
-            Tile::Wall => WALL,
-            Tile::Floor => FLOOR,
-            Tile::StairsDown => STAIRS,
-        };
-        let (x0, y0) = (cell.x as u32 * CELL, cell.y as u32 * CELL);
-        for dy in 0..CELL {
-            for dx in 0..CELL {
-                put(x0 + dx, y0 + dy, color);
+    let cell = CELL as i32;
+    let fill = |at: GridPos, color: [u8; 4], put: &mut dyn FnMut(i32, i32, [u8; 4])| {
+        for dy in 0..cell {
+            for dx in 0..cell {
+                put(at.x * cell + dx, at.y * cell + dy, color);
             }
+        }
+    };
+    for at in map.positions() {
+        if explored.seen[map.index(at)] {
+            let color = match map.get(at) {
+                Tile::Wall => WALL,
+                Tile::Floor => FLOOR,
+                Tile::StairsDown => STAIRS,
+            };
+            fill(at, color, &mut put);
         }
     }
     // You: a gold cell, with a tick poking out on the side you face.
-    let (x0, y0) = (p.pos.x as u32 * CELL, p.pos.y as u32 * CELL);
-    for dy in 0..CELL {
-        for dx in 0..CELL {
-            put(x0 + dx, y0 + dy, YOU);
-        }
-    }
+    fill(p.pos, YOU, &mut put);
     let (fx, fy) = p.facing.delta();
-    let (cx, cy) = (x0 as i32 + 1, y0 as i32 + 1);
-    put((cx + 2 * fx) as u32, (cy + 2 * fy) as u32, YOU);
+    put(
+        p.pos.x * cell + 1 + 2 * fx,
+        p.pos.y * cell + 1 + 2 * fy,
+        YOU,
+    );
 
     let mut fresh = blank(w, h);
     fresh.data = Some(pixels);
     if let Some(mut img) = images.get_mut(&image.image) {
         *img = fresh;
     }
-    node.width = px(w as f32);
-    node.height = px(h as f32);
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn tab_cycles_corner_full_hidden() {
+        let mut m = MapMode::default();
+        assert_eq!(m, MapMode::Hidden);
+        let mut seen = Vec::new();
+        for _ in 0..4 {
+            m = m.next();
+            seen.push(m);
+        }
+        assert_eq!(
+            seen,
+            [
+                MapMode::Corner,
+                MapMode::Full,
+                MapMode::Hidden,
+                MapMode::Corner
+            ]
+        );
+    }
 
     #[test]
     fn walls_hide_what_is_behind_them() {

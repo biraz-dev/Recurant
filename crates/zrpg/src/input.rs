@@ -18,6 +18,7 @@ mod android {
     pub const Y: KeyCode = code(100);
     pub const L1: KeyCode = code(102);
     pub const R1: KeyCode = code(103);
+    pub const L2: KeyCode = code(104);
     pub const R2: KeyCode = code(105);
     pub const SELECT: KeyCode = code(109);
 }
@@ -36,10 +37,12 @@ pub enum Action {
     Auto,
     /// Toggle sound.
     Mute,
+    /// Cycle the automap: corner, full screen, hidden.
+    Map,
 }
 
 impl Action {
-    pub const ALL: [Action; 10] = [
+    pub const ALL: [Action; 11] = [
         Action::Forward,
         Action::Back,
         Action::StrafeLeft,
@@ -50,6 +53,7 @@ impl Action {
         Action::Restart,
         Action::Auto,
         Action::Mute,
+        Action::Map,
     ];
 
     fn keys(self) -> &'static [KeyCode] {
@@ -71,8 +75,9 @@ impl Action {
                 android::R2,
             ],
             Action::Restart => &[KeyR, android::SELECT],
-            Action::Auto => &[Tab, android::Y],
+            Action::Auto => &[KeyP, android::Y],
             Action::Mute => &[KeyM],
+            Action::Map => &[Tab, android::L2],
         }
     }
 
@@ -89,6 +94,7 @@ impl Action {
             Action::Restart => &[Select],
             Action::Auto => &[North],
             Action::Mute => &[],
+            Action::Map => &[LeftTrigger2],
         }
     }
 
@@ -102,7 +108,7 @@ impl Action {
             Action::TurnRight => Some((LeftStickX, 1.0)),
             Action::StrafeLeft => Some((RightStickX, -1.0)),
             Action::StrafeRight => Some((RightStickX, 1.0)),
-            Action::Attack | Action::Restart | Action::Auto | Action::Mute => None,
+            Action::Attack | Action::Restart | Action::Auto | Action::Mute | Action::Map => None,
         }
     }
 }

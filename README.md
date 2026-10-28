@@ -37,7 +37,8 @@ See [docs/PLATFORMS.md](docs/PLATFORMS.md) for web and Android details and
 | Strafe left   | A                 | LB, right stick ←    |
 | Strafe right  | D                 | RB, right stick →    |
 | Attack        | Space / F         | A, X, RT             |
-| Auto mode on/off | Tab            | Y                    |
+| Auto mode on/off | P              | Y                    |
+| Map: corner, full, hidden | Tab | LT                  |
 | Sound on/off  | M                 |                      |
 | Restart (new seed) | R (or Attack once dead) | Select / Back |
 
@@ -127,10 +128,10 @@ so you can dodge by ear. `cargo run -p zrpg --example sfx` writes them all to
 
 ## Auto mode
 
-Press Tab (gamepad: Y) and the game plays for you: it hunts awake enemies
+Press P (gamepad: Y) and the game plays for you: it hunts awake enemies
 while healthy, staggers wind-ups and backs out of blows it can't stop, and
 heads for the stairs when hurt. It picks itself up after dying. Press any move
-or attack to take over again; press Tab to hand back. The bot lives in
+or attack to take over again; press P to hand back. The bot lives in
 `zrpg_core::auto` and only issues the same commands a player can.
 
 ## Layout

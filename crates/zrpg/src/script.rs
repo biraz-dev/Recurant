@@ -2,7 +2,7 @@
 //! confused with auto mode, which plays the game for real.)
 //!
 //! `ZRPG_SCRIPT="w w e shot d shot quit"` presses one action per tick
-//! (`w s a d q e f r`), idles on `wait`, saves `zrpg-N.png` on `shot`, and exits on `quit`.
+//! (`w s a d q e f r`, or `auto`, `mute`, `map`), idles on `wait`, saves `zrpg-N.png` on `shot`, and exits on `quit`.
 //! Does nothing when the variable is unset.
 
 use std::collections::VecDeque;
@@ -61,6 +61,7 @@ fn tick(
         "f" => Action::Attack,
         "auto" => Action::Auto,
         "mute" => Action::Mute,
+        "map" => Action::Map,
         "r" => Action::Restart,
         "shot" => {
             let path = format!("zrpg-{}.png", pilot.shots);

@@ -1,5 +1,5 @@
 //! Auto mode: the game plays itself, using the bot in `zrpg_core::auto`.
-//! Toggle with Tab (gamepad: Y / North). Pressing any move or attack takes
+//! Toggle with P (gamepad: Y / North). Pressing any move or attack takes
 //! control back. Start in auto mode with `--auto`, `ZRPG_AUTO=1`, or `?auto`
 //! in the page URL on the web.
 
