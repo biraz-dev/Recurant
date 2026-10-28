@@ -47,6 +47,16 @@ pub struct TorchAssets {
     flame_material: Handle<StandardMaterial>,
 }
 
+/// How bright the torch in your hand burns right now, around 1.0; the
+/// sword in the HUD flickers with it.
+pub fn hand_torch_flicker(t: f32) -> f32 {
+    Flicker {
+        base: 1.0,
+        phase: 0.0,
+    }
+    .factor(t)
+}
+
 /// Wobbles a light's intensity (and a flame's height) around `base`.
 #[derive(Component)]
 struct Flicker {

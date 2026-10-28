@@ -16,6 +16,7 @@ mod input;
 mod level;
 mod lighting;
 mod loot;
+mod motes;
 mod persist;
 mod picker;
 mod platform;
@@ -150,7 +151,11 @@ fn build(saves: bool) -> App {
         persist::PersistPlugin,
         script::ScriptPlugin,
     ))
-    .add_plugins((spells::SpellsPlugin, equipment::EquipmentPlugin))
+    .add_plugins((
+        spells::SpellsPlugin,
+        equipment::EquipmentPlugin,
+        motes::MotesPlugin,
+    ))
     .add_systems(
         Update,
         (

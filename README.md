@@ -268,6 +268,15 @@ swallows the far end of a corridor. The first two are a small shader that
 extends Bevy's standard material (`depth_grade.wgsl`); torch flames skip it
 all and burn through the dark.
 
+The screen's corners fall into shadow (less so in the sun). The sword in
+your hand is lit by where you are: sunlight in the ruins, and below, the
+stage's torch colour, flickering with your torch. It sways a pixel or two
+as you breathe and bobs with each step. And the air is never quite empty
+(`crates/zrpg/src/motes.rs`): pollen in the sunlit ruins, dust turning in
+the torchlight, gilded dust in the tombs, falling ash in the fallen keep,
+embers rising in the ember deep, pale wisps in the haunted halls.
+`cargo run -p zrpg --example tour` visits the first floor of every stage.
+
 ## Status
 
 Vertical Slice 0.1 is complete; since then: web and Android builds, auto mode,

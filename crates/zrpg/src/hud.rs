@@ -30,6 +30,20 @@ const BANNER_SECS: f32 = 1.6;
 /// `tools/make_sword.py`). Frame 0 is the sword held at rest.
 const SWORD_PNG: &[u8] = include_bytes!("../assets/sword.png");
 const SWORD_SHEET: (u32, u32) = (4, 3);
+/// The sword sways a pixel or two as you breathe and bobs with each step;
+/// (pixels across, pixels down) at most. It only ever drops below its
+/// drawn place, so the cut-off arm never shows its edge.
+const SWAY_PX: (f32, f32) = (1.6, 1.4);
+const BOB_PX: (f32, f32) = (2.5, 4.0);
+const BOB_SECS: f32 = 0.32;
+/// In sunlight the sword is barely tinted; by torchlight it takes the
+/// flame's colour and dims a little.
+const SUNLIT_SWORD: Color = Color::srgb(1.0, 0.98, 0.93);
+const TORCHLIT_SWORD: f32 = 0.78;
+/// How dark the screen's corners are, by torchlight and in the sun.
+const VIGNETTE_DARK: f32 = 0.85;
+const VIGNETTE_SUNLIT: f32 = 0.45;
+
 /// One broad swing, high right to low left, then back up: (frame, seconds).
 ///
 /// The kit proposes 830 ms with contact at 240 ms. But a swing lands the
@@ -65,6 +79,7 @@ impl Plugin for HudPlugin {
                     update_transition,
                     update_auto_label,
                     update_belt,
+                    carry_the_sword,
                 )
                     .chain()
                     .in_set(Frame::Present),
@@ -80,6 +95,10 @@ struct HudFx {
     exhausted: f32,
     banner: f32,
     level_flash: f32,
+    /// Seconds into the current step's bob, and steps taken (the bob
+    /// alternates sides).
+    step: Option<f32>,
+    steps: u32,
 }
 
 #[derive(Component)]
@@ -99,6 +118,8 @@ struct ItemSlot(usize);
 struct ItemCount(usize);
 #[derive(Component)]
 struct Sword;
+#[derive(Component)]
+struct Vignette;
 #[derive(Component)]
 struct HurtFlash;
 #[derive(Component)]
@@ -121,6 +142,7 @@ fn spawn_hud(
         return;
     };
     let sword = images.add(textures::embedded(SWORD_PNG));
+    let vignette = images.add(vignette_image());
     let (cols, rows) = SWORD_SHEET;
     let layout = layouts.add(TextureAtlasLayout::from_grid(
         UVec2::new(crate::screen::WIDTH, crate::screen::HEIGHT),
@@ -147,6 +169,9 @@ fn spawn_hud(
                 ImageNode::from_atlas_image(sword, TextureAtlas { layout, index: 0 }),
                 full(),
             ));
+            // Darkened corners draw the eye down the corridor; the HUD sits
+            // on top.
+            root.spawn((Vignette, ImageNode::new(vignette), full()));
 
             root.spawn(Node {
                 position_type: PositionType::Absolute,
@@ -316,6 +341,101 @@ fn spawn_hud(
         });
 }
 
+/// Black, clear in the middle and deepening towards the corners: an oval
+/// falloff, eased so the centre of the view is untouched.
+fn vignette_image() -> Image {
+    let (w, h) = (crate::screen::WIDTH, crate::screen::HEIGHT);
+    let mut data = Vec::with_capacity((w * h * 4) as usize);
+    for y in 0..h {
+        for x in 0..w {
+            let dx = (x as f32 + 0.5) / w as f32 * 2.0 - 1.0;
+            let dy = (y as f32 + 0.5) / h as f32 * 2.0 - 1.0;
+            let d = (dx * dx + dy * dy).sqrt() / std::f32::consts::SQRT_2;
+            let k = ((d - 0.3) / 0.7).clamp(0.0, 1.0);
+            let alpha = k * k * (3.0 - 2.0 * k);
+            data.extend_from_slice(&[0, 0, 0, (alpha * 255.0) as u8]);
+        }
+    }
+    Image::new(
+        bevy::render::render_resource::Extent3d {
+            width: w,
+            height: h,
+            depth_or_array_layers: 1,
+        },
+        bevy::render::render_resource::TextureDimension::D2,
+        data,
+        bevy::render::render_resource::TextureFormat::Rgba8UnormSrgb,
+        bevy::asset::RenderAssetUsages::RENDER_WORLD,
+    )
+}
+
+/// The sword is lit by where you are (sun, or torch and its flicker), sways
+/// as you breathe and bobs as you walk. The vignette deepens in the dark.
+#[allow(clippy::type_complexity)]
+fn carry_the_sword(
+    time: Res<Time>,
+    run: Res<Run>,
+    mut fx: ResMut<HudFx>,
+    mut sword: Query<(&mut ImageNode, &mut Node), (With<Sword>, Without<Vignette>)>,
+    mut vignette: Query<&mut ImageNode, (With<Vignette>, Without<Sword>)>,
+) {
+    let t = time.elapsed_secs();
+    fx.step = fx
+        .step
+        .map(|s| s + time.delta_secs())
+        .filter(|&s| s < BOB_SECS);
+    let look = crate::atmosphere::Look::of(&run.floor);
+    let sunlit = run.floor.place == zrpg_core::Place::Ruins;
+    let light = if sunlit {
+        SUNLIT_SWORD
+    } else {
+        let torch = Color::WHITE.mix(&look.torch, 0.85).to_linear();
+        let k = TORCHLIT_SWORD * crate::lighting::hand_torch_flicker(t);
+        Color::LinearRgba(LinearRgba::rgb(
+            torch.red * k,
+            torch.green * k,
+            torch.blue * k,
+        ))
+    };
+    // Still while swinging: the swing frames carry their own motion.
+    let (mut x, mut y) = (0.0, 0.0);
+    if fx.swing.is_none() {
+        x += SWAY_PX.0 * (t * 1.1).sin();
+        y += SWAY_PX.1 * (0.5 + 0.5 * (t * 2.2).sin());
+        if let Some(s) = fx.step {
+            let k = (s / BOB_SECS * std::f32::consts::PI).sin();
+            let side = if fx.steps.is_multiple_of(2) {
+                1.0
+            } else {
+                -1.0
+            };
+            x += BOB_PX.0 * k * side;
+            y += BOB_PX.1 * k;
+        }
+    }
+    let (left, top) = (px(x.round()), px(y.round()));
+    for (mut image, mut node) in &mut sword {
+        if image.color != light {
+            image.color = light;
+        }
+        if node.left != left || node.top != top {
+            node.left = left;
+            node.top = top;
+        }
+    }
+    let dark = if sunlit {
+        VIGNETTE_SUNLIT
+    } else {
+        VIGNETTE_DARK
+    };
+    for mut image in &mut vignette {
+        let c = Color::srgba(0.0, 0.0, 0.0, dark);
+        if image.color != c {
+            image.color = c;
+        }
+    }
+}
+
 /// A dark drop shadow, so small labels read over bright stone and sky.
 fn shadow() -> TextShadow {
     TextShadow {
@@ -386,6 +506,10 @@ fn react_to_events(mut events: MessageReader<GameEvent>, mut fx: ResMut<HudFx>) 
     for GameEvent(event) in events.read() {
         match event {
             Event::Swung { .. } => fx.swing = Some(0.0),
+            Event::Moved { .. } => {
+                fx.step = Some(0.0);
+                fx.steps += 1;
+            }
             Event::EnemyStruck { damage, .. } if *damage > 0 => fx.hurt = HURT_FLASH_SECS,
             Event::Exhausted => fx.exhausted = EXHAUSTED_FLASH_SECS,
             Event::Descended { .. } => fx.banner = BANNER_SECS,
