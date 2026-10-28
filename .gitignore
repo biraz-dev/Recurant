@@ -12,3 +12,4 @@ zrpg-*.png
 /art/kits/*/
 !/art/kits/archives/
 !/art/kits/previews/
+__pycache__/

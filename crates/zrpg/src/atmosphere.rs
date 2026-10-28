@@ -60,6 +60,8 @@ pub struct Look {
     pub ambient_brightness: f32,
     /// Far clipping distance, in world units.
     pub view_distance: f32,
+    /// How high the player's eyes are above the ground.
+    pub eye_height: f32,
 }
 
 impl Look {
@@ -73,6 +75,7 @@ impl Look {
         ambient_color: crate::lighting::AMBIENT_COLOR,
         ambient_brightness: crate::lighting::AMBIENT_BRIGHTNESS,
         view_distance: 9.0,
+        eye_height: crate::view::EYE_HEIGHT,
     };
 
     /// Sunlit sandstone: the far court fades into a warm, bright haze, and
@@ -87,6 +90,10 @@ impl Look {
         ambient_color: Color::srgb(0.7, 0.82, 0.76),
         ambient_brightness: 70.0,
         view_distance: 32.0,
+        // The kit's proposed 1.5 m. It also keeps the eye well clear of the
+        // walls' block-course ledges (at 1 m and 2 m), which would otherwise
+        // show as a bright line on the horizon whenever a hit shakes you.
+        eye_height: 1.5 * crate::ruins::SCALE,
     };
 
     pub fn of(place: Place) -> Look {

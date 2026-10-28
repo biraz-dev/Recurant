@@ -99,7 +99,7 @@ impl Plugin for EnemiesPlugin {
     }
 }
 
-/// A kind's mesh and texture, decoded the first time a floor needs them.
+/// A kind's mesh and texture, decoded when a floor needs them.
 struct KindArt {
     mesh: Handle<Mesh>,
     texture: Handle<Image>,
@@ -290,6 +290,11 @@ fn sync_roster(
             NotShadowCaster,
         ));
     }
+    // Keep only this floor's sheets decoded: each is a few megabytes of
+    // texture, which matters on phones and in the browser.
+    assets
+        .kinds
+        .retain(|kind, _| run.enemies.iter().any(|e| e.kind == *kind));
 }
 
 /// UV transform selecting one cell of a sheet (or the whole of a still).

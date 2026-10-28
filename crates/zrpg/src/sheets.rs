@@ -34,10 +34,220 @@ pub const UNDEAD: Sheet = Sheet {
     ],
 };
 
+/// From `art/kits/skeleton-warrior-v1/manifest.json`.
+pub const SKELETON_WARRIOR: Sheet = Sheet {
+    png: include_bytes!("../assets/creatures/skeleton_warrior.png"),
+    height: 0.92,
+    body_px: 54.0,
+    locomotion: Clip {
+        name: "walk",
+        fps: 8.0,
+        hit: None,
+    },
+    attacks: [
+        Clip {
+            name: "sword_slash",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "thrust",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "shield_bash",
+            fps: 8.0,
+            hit: Some(3),
+        },
+    ],
+};
+
+/// From `art/kits/mummy-v1/extracted/manifest.json`.
+pub const MUMMY: Sheet = Sheet {
+    png: include_bytes!("../assets/creatures/mummy.png"),
+    height: 0.95,
+    body_px: 68.0,
+    locomotion: Clip {
+        name: "walk",
+        fps: 8.0,
+        hit: None,
+    },
+    attacks: [
+        Clip {
+            name: "claw_swipe",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "lunge",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "two_hand_slam",
+            fps: 8.0,
+            hit: Some(4),
+        },
+    ],
+};
+
+/// From `art/kits/ember-skeleton-v1/frames/manifest.json`.
+pub const EMBER_SKELETON: Sheet = Sheet {
+    png: include_bytes!("../assets/creatures/ember_skeleton.png"),
+    height: 0.92,
+    body_px: 63.5,
+    locomotion: Clip {
+        name: "walk",
+        fps: 8.0,
+        hit: None,
+    },
+    attacks: [
+        Clip {
+            name: "claw_swipe",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "lunge",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "two_hand_slam",
+            fps: 8.0,
+            hit: Some(4),
+        },
+    ],
+};
+
+/// From `art/kits/wraith-v1/extracted/manifest.json`.
+pub const WRAITH: Sheet = Sheet {
+    png: include_bytes!("../assets/creatures/wraith.png"),
+    height: 1.05,
+    body_px: 74.5,
+    locomotion: Clip {
+        name: "hover",
+        fps: 8.0,
+        hit: None,
+    },
+    attacks: [
+        Clip {
+            name: "claw_swipe",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "spectral_reach",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "wail_cast",
+            fps: 8.0,
+            hit: Some(3),
+        },
+    ],
+};
+
+/// From `art/kits/skeleton-knight-v1/manifest.json`.
+pub const SKELETON_KNIGHT: Sheet = Sheet {
+    png: include_bytes!("../assets/creatures/skeleton_knight.png"),
+    height: 0.98,
+    body_px: 57.0,
+    locomotion: Clip {
+        name: "walk",
+        fps: 8.0,
+        hit: None,
+    },
+    attacks: [
+        Clip {
+            name: "sword_slash",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "thrust",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "shield_bash",
+            fps: 8.0,
+            hit: Some(3),
+        },
+    ],
+};
+
+/// From `art/kits/inner-demon-v1/extracted/manifest.json`.
+pub const INNER_DEMON: Sheet = Sheet {
+    png: include_bytes!("../assets/creatures/inner_demon.png"),
+    height: 0.95,
+    body_px: 56.5,
+    locomotion: Clip {
+        name: "walk",
+        fps: 8.0,
+        hit: None,
+    },
+    attacks: [
+        Clip {
+            name: "claw_swipe",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "lunge",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "two_hand_slam",
+            fps: 8.0,
+            hit: Some(4),
+        },
+    ],
+};
+
+/// From `art/kits/demon-knight-v1/manifest.json`.
+pub const DEMON_KNIGHT: Sheet = Sheet {
+    png: include_bytes!("../assets/creatures/demon_knight.png"),
+    height: 1.12,
+    body_px: 62.0,
+    locomotion: Clip {
+        name: "walk",
+        fps: 8.0,
+        hit: None,
+    },
+    attacks: [
+        Clip {
+            name: "sword_slash",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "thrust",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "shield_bash",
+            fps: 8.0,
+            hit: Some(3),
+        },
+    ],
+};
+
 /// The animated sheet for a kind, if it has one (the zombie is a still).
 pub fn sheet(kind: EnemyKind) -> Option<&'static Sheet> {
     match kind {
         EnemyKind::Undead => Some(&UNDEAD),
+        EnemyKind::SkeletonWarrior => Some(&SKELETON_WARRIOR),
+        EnemyKind::Mummy => Some(&MUMMY),
+        EnemyKind::EmberSkeleton => Some(&EMBER_SKELETON),
+        EnemyKind::Wraith => Some(&WRAITH),
+        EnemyKind::SkeletonKnight => Some(&SKELETON_KNIGHT),
+        EnemyKind::InnerDemon => Some(&INNER_DEMON),
+        EnemyKind::DemonKnight => Some(&DEMON_KNIGHT),
         _ => None,
     }
 }

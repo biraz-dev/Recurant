@@ -36,6 +36,14 @@ PIVOT = [64, 116]
 # A wall is 1.0 (2 m); the zombie stands 0.95.
 CREATURES = {
     "undead": ("undead-four-direction-v1/art/extracted/manifest.json", "Undead", 0.95),
+    "skeleton_warrior": ("skeleton-warrior-v1/manifest.json", "SkeletonWarrior", 0.92),
+    "mummy": ("mummy-v1/extracted/manifest.json", "Mummy", 0.95),
+    "ember_skeleton": ("ember-skeleton-v1/frames/manifest.json", "EmberSkeleton", 0.92),
+    # Hovering: the pivot marks its lowest tendrils, not a foot.
+    "wraith": ("wraith-v1/extracted/manifest.json", "Wraith", 1.05),
+    "skeleton_knight": ("skeleton-knight-v1/manifest.json", "SkeletonKnight", 0.98),
+    "inner_demon": ("inner-demon-v1/extracted/manifest.json", "InnerDemon", 0.95),
+    "demon_knight": ("demon-knight-v1/manifest.json", "DemonKnight", 1.12),
 }
 
 

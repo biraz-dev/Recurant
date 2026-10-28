@@ -30,6 +30,20 @@ pub enum EnemyKind {
     /// Smouldering undead: embers in its cracked flesh. A little sturdier
     /// than a zombie and quicker to close in.
     Undead,
+    /// Bones and a round shield: quick, but brittle.
+    SkeletonWarrior,
+    /// Slow and hard to put down; its blows are heavy.
+    Mummy,
+    /// A charred skeleton with coals for marrow: fast.
+    EmberSkeleton,
+    /// Drifts quickly and notices you from further off.
+    Wraith,
+    /// An armoured skeleton: tough, and hits hard.
+    SkeletonKnight,
+    /// Quick and vicious.
+    InnerDemon,
+    /// The strongest: slow to wind up, but every blow tells.
+    DemonKnight,
 }
 
 /// One kind's numbers, in seconds, cells and hit points.
@@ -64,6 +78,82 @@ impl EnemyKind {
                 step_interval: 0.5,
                 ..zombie
             },
+            EnemyKind::SkeletonWarrior => Stats {
+                max_hp: 7,
+                step_interval: 0.5,
+                wind_up: 0.55,
+                damage_min: 2,
+                damage_max: 4,
+                ..zombie
+            },
+            EnemyKind::Mummy => Stats {
+                max_hp: 13,
+                step_interval: 0.8,
+                wind_up: 0.7,
+                recover: 1.0,
+                damage_min: 4,
+                damage_max: 6,
+                ..zombie
+            },
+            EnemyKind::EmberSkeleton => Stats {
+                step_interval: 0.45,
+                wind_up: 0.5,
+                ..zombie
+            },
+            EnemyKind::Wraith => Stats {
+                max_hp: 7,
+                notice_range: 7,
+                step_interval: 0.4,
+                damage_min: 3,
+                damage_max: 6,
+                ..zombie
+            },
+            EnemyKind::SkeletonKnight => Stats {
+                max_hp: 12,
+                damage_min: 4,
+                damage_max: 6,
+                ..zombie
+            },
+            EnemyKind::InnerDemon => Stats {
+                max_hp: 11,
+                step_interval: 0.45,
+                wind_up: 0.55,
+                damage_min: 4,
+                damage_max: 7,
+                ..zombie
+            },
+            EnemyKind::DemonKnight => Stats {
+                max_hp: 16,
+                wind_up: 0.7,
+                recover: 0.8,
+                damage_min: 5,
+                damage_max: 8,
+                ..zombie
+            },
+        }
+    }
+
+    /// Every kind, weakest first.
+    pub const ALL: [EnemyKind; 9] = [
+        EnemyKind::Zombie,
+        EnemyKind::SkeletonWarrior,
+        EnemyKind::Mummy,
+        EnemyKind::Undead,
+        EnemyKind::EmberSkeleton,
+        EnemyKind::Wraith,
+        EnemyKind::SkeletonKnight,
+        EnemyKind::InnerDemon,
+        EnemyKind::DemonKnight,
+    ];
+
+    /// The first dungeon floor where this kind can turn up.
+    pub const fn first_depth(self) -> u32 {
+        match self {
+            EnemyKind::Zombie | EnemyKind::SkeletonWarrior => 2,
+            EnemyKind::Mummy | EnemyKind::Undead => 3,
+            EnemyKind::EmberSkeleton | EnemyKind::Wraith => 4,
+            EnemyKind::SkeletonKnight | EnemyKind::InnerDemon => 5,
+            EnemyKind::DemonKnight => 6,
         }
     }
 }
@@ -119,5 +209,21 @@ impl Enemy {
 
     pub fn is_winding_up(&self) -> bool {
         matches!(self.state, EnemyState::WindUp { .. })
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn every_kind_keeps_a_readable_tell() {
+        for kind in EnemyKind::ALL {
+            let s = kind.stats();
+            assert!(s.wind_up >= 0.5, "{kind:?} winds up too fast to react");
+            assert!(s.max_hp > 0 && s.damage_min <= s.damage_max, "{kind:?}");
+        }
+        // The zombie is unchanged.
+        assert_eq!(EnemyKind::Zombie.stats().max_hp, tuning::MAX_HP);
     }
 }

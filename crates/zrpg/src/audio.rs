@@ -11,7 +11,7 @@ use bevy::audio::{
     SpatialScale, Volume,
 };
 use bevy::prelude::*;
-use zrpg_core::{Event, GridPos, Tile};
+use zrpg_core::{EnemyKind, Event, GridPos, Tile};
 
 use crate::input::{Action, Actions};
 use crate::level::cell_center;
@@ -158,6 +158,21 @@ fn ear_level(cell: GridPos) -> Vec3 {
     cell_center(cell) + Vec3::Y * SOUND_HEIGHT
 }
 
+/// Each creature's voice: the same synthesized groans, pitched to suit it.
+fn voice(kind: EnemyKind) -> f32 {
+    match kind {
+        EnemyKind::Zombie => 1.0,
+        EnemyKind::Undead => 0.92,
+        EnemyKind::SkeletonWarrior => 1.25,
+        EnemyKind::Mummy => 0.8,
+        EnemyKind::EmberSkeleton => 1.15,
+        EnemyKind::Wraith => 1.45,
+        EnemyKind::SkeletonKnight => 1.05,
+        EnemyKind::InnerDemon => 0.85,
+        EnemyKind::DemonKnight => 0.7,
+    }
+}
+
 /// A little pitch variety so repeated sounds don't machine-gun.
 fn wobble(n: u32) -> f32 {
     let h = zrpg_core::rng::mix64(n as u64);
@@ -179,9 +194,22 @@ fn play_event_sounds(
             .find(|e| e.id == id)
             .map(|e| ear_level(e.pos))
     };
+    let voice_of = |id| {
+        run.enemies
+            .iter()
+            .find(|e| e.id == id)
+            .map_or(1.0, |e| voice(e.kind))
+    };
     for GameEvent(event) in events.read() {
         *count = count.wrapping_add(1);
-        let speed = wobble(*count);
+        // A creature's own cries are pitched to its voice.
+        let pitch = match *event {
+            Event::EnemyNoticed { id }
+            | Event::EnemyWindUp { id }
+            | Event::EnemyHurt { id, .. } => voice_of(id),
+            _ => 1.0,
+        };
+        let speed = wobble(*count) * pitch;
         let mut sfx = |sound: &Handle<AudioSource>, gain: f32, at: Option<Vec3>| {
             play(&mut commands, sound, gain, speed, at, muted)
         };

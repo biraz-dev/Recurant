@@ -144,7 +144,7 @@ impl Game {
     pub fn with_params(run_seed: u64, params: GenParams) -> Self {
         let floor = Floor::for_depth(run_seed, 1, &params);
         let player = Player::new(floor.start, floor.start_facing);
-        let enemies = spawn_enemies(&floor, 1);
+        let enemies = spawn_enemies(&floor, run_seed, 1);
         Self {
             run_seed,
             depth: 1,
@@ -165,7 +165,7 @@ impl Game {
     fn descend(&mut self) {
         self.depth += 1;
         self.floor = Floor::for_depth(self.run_seed, self.depth, &self.params);
-        self.enemies = spawn_enemies(&self.floor, self.depth);
+        self.enemies = spawn_enemies(&self.floor, self.run_seed, self.depth);
         let p = &mut self.player;
         p.pos = self.floor.start;
         p.facing = self.floor.start_facing;
@@ -367,22 +367,30 @@ impl Game {
     }
 }
 
-fn spawn_enemies(floor: &Floor, depth: u32) -> Vec<Enemy> {
-    let kind = kind_for(floor.place, depth);
+fn spawn_enemies(floor: &Floor, run_seed: u64, depth: u32) -> Vec<Enemy> {
     floor
         .enemy_spawns
         .iter()
         .enumerate()
-        .map(|(i, &p)| Enemy::of_kind(i as EnemyId, p, kind))
+        .map(|(i, &p)| {
+            let roll = mix64(run_seed ^ mix64(depth as u64) ^ (i as u64) << 48);
+            Enemy::of_kind(i as EnemyId, p, kind_for(floor.place, depth, roll))
+        })
         .collect()
 }
 
-/// Who lives where: the undead haunt the ruins; zombies the dungeon below.
-fn kind_for(place: Place, _depth: u32) -> EnemyKind {
-    match place {
-        Place::Ruins => EnemyKind::Undead,
-        Place::Dungeon => EnemyKind::Zombie,
+/// Who lives where: the undead haunt the ruins. Below, each floor draws from
+/// every kind that has turned up by that depth, so deeper floors mix the
+/// old with the new.
+fn kind_for(place: Place, depth: u32, roll: u64) -> EnemyKind {
+    if place == Place::Ruins {
+        return EnemyKind::Undead;
     }
+    let pool: Vec<EnemyKind> = EnemyKind::ALL
+        .into_iter()
+        .filter(|k| k.first_depth() <= depth.max(2))
+        .collect();
+    pool[(roll % pool.len() as u64) as usize]
 }
 
 #[cfg(test)]
@@ -634,5 +642,19 @@ mod stairs_tests {
         walk_to_stairs(&mut g);
         g.apply(Command::Descend, &mut Vec::new());
         assert_eq!(g.player.hp, 3 + tuning::DESCEND_HEAL);
+    }
+
+    #[test]
+    fn deeper_floors_bring_new_kinds() {
+        let kinds_at = |depth: u32| -> std::collections::HashSet<EnemyKind> {
+            (0..400u64)
+                .map(|r| kind_for(Place::Dungeon, depth, mix64(r)))
+                .collect()
+        };
+        assert_eq!(kind_for(Place::Ruins, 1, 0), EnemyKind::Undead);
+        let shallow = kinds_at(2);
+        assert!(shallow.contains(&EnemyKind::Zombie));
+        assert!(!shallow.contains(&EnemyKind::DemonKnight));
+        assert_eq!(kinds_at(9).len(), EnemyKind::ALL.len());
     }
 }

@@ -158,10 +158,11 @@ impl Animator {
         out.max(arrive).clamp(0.0, 1.0)
     }
 
-    fn transform(&self, time: f32) -> Transform {
+    /// The camera, `eye_height` above the ground at the pose.
+    fn transform(&self, time: f32, eye_height: f32) -> Transform {
         let pose = self.pose();
         let yaw = Quat::from_rotation_y(pose.yaw);
-        let mut eye = pose.pos + yaw * Vec3::Z * EYE_BACK + Vec3::Y * EYE_HEIGHT;
+        let mut eye = pose.pos + yaw * Vec3::Z * EYE_BACK + Vec3::Y * eye_height;
         let mut rot = yaw;
         if self.shake > 0.0 {
             let k = SHAKE_SIZE * self.shake / SHAKE_SECS;
@@ -170,13 +171,13 @@ impl Animator {
         // Dying: slump to the floor and keel over sideways.
         if let Some(d) = self.dead_for {
             let e = ease((d / DEATH_SECS).min(1.0));
-            eye.y -= EYE_HEIGHT * 0.7 * e;
+            eye.y -= eye_height * 0.7 * e;
             rot *= Quat::from_rotation_z(0.5 * e) * Quat::from_rotation_x(-0.25 * e);
         }
         // Descending: sink and look down the steps.
         if let Some(d) = self.descending {
             let e = ease((d / DESCEND_SECS).min(1.0));
-            eye.y -= EYE_HEIGHT * 0.6 * e;
+            eye.y -= eye_height * 0.6 * e;
             rot *= Quat::from_rotation_x(-0.4 * e);
         }
         Transform::from_translation(eye).with_rotation(rot)
@@ -223,7 +224,7 @@ fn spawn_camera(mut commands: Commands, target: Res<LowResTarget>, run: Res<Run>
             falloff: look.fog,
             ..default()
         },
-        anim.transform(0.0),
+        anim.transform(0.0, look.eye_height),
         anim,
     ));
 }
@@ -407,12 +408,14 @@ fn react_to_events(
 
 fn animate_camera(
     time: Res<Time>,
+    run: Res<Run>,
     ground: Res<GroundHeights>,
     mut fade: ResMut<ScreenFade>,
     mut cams: Query<(&Animator, &mut Transform), With<PlayerCamera>>,
 ) {
     for (anim, mut t) in &mut cams {
-        *t = anim.transform(time.elapsed_secs());
+        let eye_height = Look::of(run.floor.place).eye_height;
+        *t = anim.transform(time.elapsed_secs(), eye_height);
         // Wade down into water and climb stairs smoothly, never in a jump.
         t.translation.y += ground.at(anim.pose().pos);
         fade.0 = anim.fade();

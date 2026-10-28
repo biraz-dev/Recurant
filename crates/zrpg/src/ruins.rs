@@ -57,9 +57,15 @@ pub fn surface(p: GridPos) -> f32 {
         }
 }
 
+/// The kit's floor and bridge slabs stand a few millimetres apart; looking
+/// straight down a seam, you would see the sky through it. This fill, just
+/// below the deepest slab, shows instead, dark in the slabs' shadow.
+const FILL_DEPTH: f32 = -0.85 * SCALE;
+
 #[derive(Resource)]
 pub struct RuinsAssets {
     meshes: Vec<(Handle<Mesh>, Handle<GradedMaterial>)>,
+    fill: (Handle<Mesh>, Handle<GradedMaterial>),
 }
 
 pub fn load(
@@ -95,7 +101,13 @@ pub fn load(
         material(WATER, 0.35),
     ];
     let merged = merge(LEVEL);
+    let (w, d) = (18.0, 20.0);
+    let fill = Plane3d::new(Vec3::Y, Vec2::new(w / 2.0, d / 2.0))
+        .mesh()
+        .build()
+        .translated_by(Vec3::new(w / 2.0, FILL_DEPTH, d / 2.0));
     commands.insert_resource(RuinsAssets {
+        fill: (meshes.add(fill), mats[1].clone()),
         meshes: merged
             .into_iter()
             .zip(mats)
@@ -112,6 +124,12 @@ pub fn spawn(parent: &mut ChildSpawnerCommands, assets: &RuinsAssets) {
             e.insert(NotShadowCaster);
         }
     }
+    let (mesh, material) = &assets.fill;
+    parent.spawn((
+        Mesh3d(mesh.clone()),
+        MeshMaterial3d(material.clone()),
+        NotShadowCaster,
+    ));
     parent.spawn((
         DirectionalLight {
             color: SUN_COLOR,
