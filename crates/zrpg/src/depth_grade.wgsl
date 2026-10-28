@@ -32,6 +32,8 @@ struct DepthGrade {
     params: vec4<f32>,
     // rgb: the tint far-away colours drain toward (multiplied into the grey).
     tint: vec4<f32>,
+    // x: how far it has dissolved (0..1), y: the pixel grid it breaks up on.
+    dream: vec4<f32>,
 }
 
 @group(#{MATERIAL_BIND_GROUP}) @binding(100) var<uniform> grade: DepthGrade;
@@ -43,6 +45,20 @@ fn fragment(
 ) -> FragmentOutput {
     var pbr_input = pbr_input_from_standard_material(in, is_front);
     pbr_input.material.base_color = alpha_discard(pbr_input.material, pbr_input.material.base_color);
+
+    // Dissolving like a dream: pixels drop out in a fixed random order; the
+    // ones about to go glow pale first.
+    var dream_glow = 0.0;
+#ifdef VERTEX_UVS_A
+    if (grade.dream.x > 0.0) {
+        let cell = floor(in.uv * grade.dream.y);
+        let h = fract(sin(dot(cell, vec2<f32>(12.9898, 78.233))) * 43758.5453);
+        if (h < grade.dream.x) {
+            discard;
+        }
+        dream_glow = 1.0 - smoothstep(grade.dream.x, grade.dream.x + 0.18, h);
+    }
+#endif
 
 #ifdef PREPASS_PIPELINE
     let out = deferred_output(in, pbr_input);
@@ -59,6 +75,7 @@ fn fragment(
     let luma = dot(out.color.rgb, vec3<f32>(0.2126, 0.7152, 0.0722));
     let drained = mix(out.color.rgb, vec3<f32>(luma) * grade.tint.rgb, t * grade.params.z);
     out.color = vec4<f32>(drained * mix(1.0, grade.params.w, t), out.color.a);
+    out.color = vec4<f32>(out.color.rgb + vec3<f32>(0.7, 0.85, 1.0) * 1.6 * dream_glow, out.color.a);
 
     // Fog, alpha handling and in-shader tonemapping, as in the standard shader.
     out.color = main_pass_post_lighting_processing(pbr_input, out.color);

@@ -39,6 +39,7 @@ See [docs/PLATFORMS.md](docs/PLATFORMS.md) for web and Android details and
 | Attack        | Space / F         | A, X, RT             |
 | Auto mode on/off | P              | Y                    |
 | Map: corner, full, hidden | Tab | LT                  |
+| Use item (belt slot) | 1 to 6     |                      |
 | Sound on/off  | M                 |                      |
 | Restart (new seed) | R (or Attack once dead) | Select / Back |
 
@@ -58,11 +59,23 @@ and glows orange) before it strikes:
 Health (red bar) does not regenerate. Reach zero and you die; press Attack to
 rise again in a fresh dungeon.
 
-The dead topple over backwards, lie still a moment, and sink away, leaving
-a heap of **gold** where they fell: more for tougher creatures and deeper
-floors. Walk over it to take it; your purse shows beside your level. Auto
-mode picks up gold lying close by. Gold stays on the floor where it fell,
-so take it before you take the stairs.
+The dead dissolve like apparitions in a dream: they pale, drift up and come
+apart pixel by pixel, leaving a pool of **gold** where they stood (more for
+tougher creatures and deeper floors) and sometimes an **item** of their own:
+
+| Item | Left by | Use (keys 1 to 6) |
+|---|---|---|
+| Grave Moss | zombies, undead | heals 4 |
+| Linen Bandage | mummies | heals 8 |
+| Ember Shard | ember skeletons, inner demons | refills Chi |
+| Ectoplasm | wraiths | the next blow passes through you |
+| Bone Charm | skeleton warriors and knights | 20 XP |
+| Demon Sigil | demon knights | your next 3 hits do double damage |
+
+Walk over a pool to take everything in it (up to nine of each item). Your
+purse shows beside your level and your items on the belt above it, each
+with the key that uses it. Loot left behind stays behind when you take the
+stairs. Auto mode picks up nearby loot and uses items when they help.
 
 ## The ruins and what lives below
 

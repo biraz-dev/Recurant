@@ -73,6 +73,7 @@ impl Look {
         grade: DepthGradeUniform {
             params: Vec4::new(GRADE_NEAR, GRADE_FAR, DESATURATE, DARKEN),
             tint: Vec4::new(DRAIN_TINT.x, DRAIN_TINT.y, DRAIN_TINT.z, 1.0),
+            dream: Vec4::ZERO,
         },
         ambient_color: crate::lighting::AMBIENT_COLOR,
         ambient_brightness: crate::lighting::AMBIENT_BRIGHTNESS,
@@ -89,6 +90,7 @@ impl Look {
         grade: DepthGradeUniform {
             params: Vec4::new(5.0, 22.0, 0.45, 0.9),
             tint: Vec4::new(1.06, 1.0, 0.86, 1.0),
+            dream: Vec4::ZERO,
         },
         ambient_color: Color::srgb(0.7, 0.82, 0.76),
         ambient_brightness: 70.0,
@@ -240,12 +242,27 @@ pub struct DepthGradeUniform {
     params: Vec4,
     /// rgb: tint of the drained colour.
     tint: Vec4,
+    /// Dissolving like a dream: x is how far gone (0 whole, 1 vanished), y
+    /// the size of the pixel grid it breaks up on.
+    dream: Vec4,
 }
 
 #[derive(Asset, AsBindGroup, Reflect, Debug, Clone)]
 pub struct DepthGrade {
     #[uniform(100)]
     grade: DepthGradeUniform,
+}
+
+impl DepthGrade {
+    /// Dissolve the surface: `amount` 0 leaves it whole, 1 takes it all;
+    /// it breaks up on a grid of `pixels` across its texture.
+    pub fn set_dissolve(&mut self, amount: f32, pixels: f32) {
+        self.grade.dream = Vec4::new(amount, pixels, 0.0, 0.0);
+    }
+
+    pub fn dissolve(&self) -> f32 {
+        self.grade.dream.x
+    }
 }
 
 impl MaterialExtension for DepthGrade {

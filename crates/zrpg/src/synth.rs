@@ -565,6 +565,14 @@ pub fn coins(_seed: u64) -> Vec<f32> {
     finish(buf)
 }
 
+/// Picking up an item: two soft bells, rising.
+pub fn pickup(_seed: u64) -> Vec<f32> {
+    let mut buf = vec![0.0; samples(0.7)];
+    mix_in(&mut buf, &chime(587.33, 0.5), 0.0, 0.8);
+    mix_in(&mut buf, &chime(880.0, 0.5), 0.1, 0.7);
+    finish(buf)
+}
+
 /// Gold spilling from a kill: a scatter of coins hitting stone.
 pub fn coin_drop(seed: u64) -> Vec<f32> {
     let mut noise = Noise::new(seed);
@@ -621,6 +629,7 @@ pub fn all() -> Vec<(&'static str, Vec<f32>)> {
         ("perk", perk(18)),
         ("coins", coins(19)),
         ("coin_drop", coin_drop(20)),
+        ("pickup", pickup(21)),
     ]
 }
 

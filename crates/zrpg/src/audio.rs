@@ -42,6 +42,8 @@ mod mix {
     pub const PERK: f32 = 0.5;
     pub const COINS: f32 = 0.45;
     pub const COIN_DROP: f32 = 0.5;
+    pub const PICKUP: f32 = 0.45;
+    pub const USE_ITEM: f32 = 0.45;
 }
 
 /// Rodio fades spatial sounds with the inverse square of distance, which is
@@ -95,6 +97,7 @@ struct Sounds {
     perk: Handle<AudioSource>,
     coins: Handle<AudioSource>,
     coin_drop: Handle<AudioSource>,
+    pickup: Handle<AudioSource>,
 }
 
 fn synthesize(mut commands: Commands, mut sources: ResMut<Assets<AudioSource>>) {
@@ -126,6 +129,7 @@ fn synthesize(mut commands: Commands, mut sources: ResMut<Assets<AudioSource>>) 
         perk: add(synth::perk(18)),
         coins: add(synth::coins(19)),
         coin_drop: add(synth::coin_drop(20)),
+        pickup: add(synth::pickup(21)),
     });
 }
 
@@ -251,6 +255,8 @@ fn play_event_sounds(
             Event::PerkTaken { .. } => sfx(&sounds.perk, mix::PERK, None),
             Event::Dodged { id } => sfx(&sounds.whiff, mix::WHIFF, enemy_at(id)),
             Event::GoldTaken { .. } => sfx(&sounds.coins, mix::COINS, None),
+            Event::ItemTaken { .. } => sfx(&sounds.pickup, mix::PICKUP, None),
+            Event::ItemUsed { .. } => sfx(&sounds.perk, mix::USE_ITEM, None),
             Event::GoldDropped { at, .. } => {
                 sfx(&sounds.coin_drop, mix::COIN_DROP, Some(ear_level(at)))
             }

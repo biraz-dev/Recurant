@@ -64,6 +64,7 @@ impl Plugin for HudPlugin {
                     update_hud,
                     update_transition,
                     update_auto_label,
+                    update_belt,
                 )
                     .chain()
                     .in_set(Frame::Present),
@@ -91,6 +92,11 @@ struct XpFill;
 struct LevelLabel;
 #[derive(Component)]
 struct GoldLabel;
+/// A belt slot, for the item at this index of `Item::ALL`.
+#[derive(Component)]
+struct ItemSlot(usize);
+#[derive(Component)]
+struct ItemCount(usize);
 #[derive(Component)]
 struct Sword;
 #[derive(Component)]
@@ -107,6 +113,7 @@ struct AutoLabel;
 fn spawn_hud(
     mut commands: Commands,
     cams: Query<Entity, With<PlayerCamera>>,
+    loot: Res<crate::loot::LootAssets>,
     mut images: ResMut<Assets<Image>>,
     mut layouts: ResMut<Assets<TextureAtlasLayout>>,
 ) {
@@ -150,6 +157,67 @@ fn spawn_hud(
                 ..default()
             })
             .with_children(|bars| {
+                // The item belt: one slot per item carried, keyed 1 to 6.
+                bars.spawn(Node {
+                    column_gap: px(3),
+                    margin: UiRect::bottom(px(2)),
+                    ..default()
+                })
+                .with_children(|belt| {
+                    for (slot, icon) in loot.icons.iter().enumerate() {
+                        belt.spawn((
+                            ItemSlot(slot),
+                            Node {
+                                width: px(crate::loot::ICON as f32 + 4.0),
+                                height: px(crate::loot::ICON as f32 + 4.0),
+                                padding: UiRect::all(px(1)),
+                                border: UiRect::all(px(1)),
+                                display: Display::None,
+                                ..default()
+                            },
+                            BorderColor::all(Color::srgba(0.9, 0.8, 0.6, 0.35)),
+                            BackgroundColor(Color::srgba(0.0, 0.0, 0.0, 0.45)),
+                        ))
+                        .with_children(|cell| {
+                            cell.spawn(ImageNode::new(icon.clone()));
+                            let tiny = |text: String, color: Color, place: Node| {
+                                (
+                                    Text::new(text),
+                                    TextFont {
+                                        font_size: FontSize::Px(6.0),
+                                        ..default()
+                                    },
+                                    TextColor(color),
+                                    shadow(),
+                                    place,
+                                )
+                            };
+                            cell.spawn(tiny(
+                                format!("{}", slot + 1),
+                                Color::srgb(0.75, 0.7, 0.6),
+                                Node {
+                                    position_type: PositionType::Absolute,
+                                    left: px(0),
+                                    top: px(0),
+                                    ..default()
+                                },
+                            ));
+                            cell.spawn((
+                                ItemCount(slot),
+                                tiny(
+                                    String::new(),
+                                    Color::WHITE,
+                                    Node {
+                                        position_type: PositionType::Absolute,
+                                        right: px(0),
+                                        bottom: px(-2),
+                                        ..default()
+                                    },
+                                ),
+                            ));
+                        });
+                    }
+                });
                 bars.spawn(Node {
                     column_gap: px(10),
                     ..default()
@@ -289,6 +357,29 @@ fn swing_frame(t: f32) -> Option<usize> {
         end += secs;
         (t < end).then_some(frame)
     })
+}
+
+/// Show the belt slots for items carried, with their counts.
+fn update_belt(
+    run: Res<Run>,
+    mut slots: Query<(&ItemSlot, &mut Node)>,
+    mut counts: Query<(&ItemCount, &mut Text)>,
+) {
+    let bag = &run.player.bag;
+    for (slot, mut node) in &mut slots {
+        let n = bag.count(zrpg_core::Item::ALL[slot.0]);
+        let display = if n > 0 { Display::Flex } else { Display::None };
+        if node.display != display {
+            node.display = display;
+        }
+    }
+    for (c, mut text) in &mut counts {
+        let n = bag.count(zrpg_core::Item::ALL[c.0]);
+        let label = if n > 1 { n.to_string() } else { String::new() };
+        if text.0 != label {
+            text.0 = label;
+        }
+    }
 }
 
 fn react_to_events(mut events: MessageReader<GameEvent>, mut fx: ResMut<HudFx>) {

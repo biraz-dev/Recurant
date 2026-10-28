@@ -44,12 +44,14 @@ const SPRITE_HEIGHT: f32 = 0.95;
 const STEP_ANIM_SECS: f32 = 0.3;
 const FLASH_SECS: f32 = 0.2;
 const LUNGE_SECS: f32 = 0.2;
-/// Dying: topple over backwards, lie still a moment, sink away.
-const FALL_SECS: f32 = 0.5;
-const LIE_SECS: f32 = 1.0;
-const SINK_SECS: f32 = 0.6;
-/// How far over a body falls (just short of flat, so it still reads).
-const FALL_ANGLE: f32 = 1.45;
+/// Dying: like an apparition in a dream, the body pales, drifts up and
+/// comes apart pixel by pixel over this long.
+const DISSOLVE_SECS: f32 = 1.1;
+/// How far it drifts up and stretches as it goes.
+const DISSOLVE_RISE: f32 = 0.22;
+const DISSOLVE_STRETCH: f32 = 0.18;
+/// The pale it turns as it goes.
+const DREAM_PALE: Color = Color::srgb(0.75, 0.85, 1.0);
 
 /// Sheet layout, shared by every creature kit: 6 frames across, and for each
 /// of the four views, four rows (locomotion, then three attacks).
@@ -167,13 +169,17 @@ struct Attack {
     since_strike: Option<f32>,
 }
 
-/// A death in progress: time since it began, which way the body was turned
-/// as it fell (it stops facing the camera), and its twist as it goes down.
+/// A death in progress: seconds since it began.
 #[derive(Clone, Copy, Debug)]
 struct Dying {
     t: f32,
-    facing: Quat,
-    twist: f32,
+}
+
+impl Dying {
+    /// 0 whole, 1 gone.
+    fn progress(&self) -> f32 {
+        (self.t / DISSOLVE_SECS).min(1.0)
+    }
 }
 
 #[derive(Component)]
@@ -234,18 +240,6 @@ impl EnemySprite {
 
 fn cycle_frame(sheet: &Sheet, t: f32) -> usize {
     (t * sheet.locomotion.fps) as usize % FRAMES
-}
-
-/// How far over a falling body is, `t` seconds after death: it gathers
-/// speed like a real fall, bounces once off the floor, and settles.
-fn fall_angle(t: f32) -> f32 {
-    if t < FALL_SECS {
-        let k = t / FALL_SECS;
-        FALL_ANGLE * k * k
-    } else {
-        let after = t - FALL_SECS;
-        FALL_ANGLE - 0.12 * (after * 18.0).sin().max(0.0) * (-after * 6.0).exp()
-    }
 }
 
 /// Which run/floor the spawned sprites belong to.
@@ -385,13 +379,7 @@ fn react_to_events(
                 });
             }
             Event::EnemyDied { .. } => {
-                // Facing is fixed on the first frame of the fall.
-                let twist = if s.id % 2 == 0 { 0.25 } else { -0.25 };
-                s.dying = Some(Dying {
-                    t: 0.0,
-                    facing: Quat::NAN,
-                    twist,
-                });
+                s.dying = Some(Dying { t: 0.0 });
                 s.attack = None;
             }
             _ => {}
@@ -502,30 +490,36 @@ fn animate(
         }
 
         let mut rotation = facing * Quat::from_rotation_z(roll);
+        let mut dissolve = 0.0;
         if let Some(d) = s.dying.as_mut() {
             d.t += dt;
-            if d.facing.is_nan() {
-                d.facing = facing;
-            }
-            if d.t >= FALL_SECS + LIE_SECS + SINK_SECS {
+            if d.t >= DISSOLVE_SECS {
                 commands.entity(entity).despawn();
                 continue;
             }
-            rotation =
-                d.facing * Quat::from_rotation_y(d.twist) * Quat::from_rotation_x(-fall_angle(d.t));
-            sx = 1.0;
-            sy = 1.0;
-            // Then sink into the floor.
-            let sink = ((d.t - FALL_SECS - LIE_SECS) / SINK_SECS).clamp(0.0, 1.0);
-            feet.y -= 0.25 * sink * sink;
+            // Drift up, thin out, and come apart.
+            let k = d.progress();
+            let ease = k * (2.0 - k);
+            feet.y += DISSOLVE_RISE * ease;
+            sy = 1.0 + DISSOLVE_STRETCH * ease;
+            sx = 1.0 - 0.5 * DISSOLVE_STRETCH * ease;
+            rotation = facing;
+            dissolve = k.powf(0.8);
         }
-        // Pivot at the feet so swaying and falling keep them on the floor.
+        // Pivot at the feet so swaying never lifts them off the floor.
         *t = Transform::from_translation(feet)
             .with_rotation(rotation)
             .with_scale(Vec3::new(sx, sy, 1.0));
 
         // Tint and glow: red on hit, hot orange while winding up.
-        let (color, glow) = if s.flash > 0.0 {
+        let (color, glow) = if let Some(d) = s.dying {
+            // Paling into an apparition.
+            let k = d.progress();
+            (
+                Color::WHITE.mix(&DREAM_PALE, k),
+                LinearRgba::rgb(0.05, 0.07, 0.1) * k,
+            )
+        } else if s.flash > 0.0 {
             (
                 Color::srgb(1.0, 0.35, 0.3),
                 LinearRgba::rgb(0.14, 0.02, 0.01),
@@ -543,12 +537,19 @@ fn animate(
             }
             None => Affine2::IDENTITY,
         };
+        // Sheets break up on their 128-pixel cells; the zombie still on its
+        // own smaller grid.
+        let grid = if s.sheet.is_some() { CELL_PX } else { 64.0 };
         if let Some(mut m) = materials.get_mut(&s.material)
-            && (m.base.base_color != color || m.base.emissive != glow || m.base.uv_transform != uv)
+            && (m.base.base_color != color
+                || m.base.emissive != glow
+                || m.base.uv_transform != uv
+                || m.extension.dissolve() != dissolve)
         {
             m.base.base_color = color;
             m.base.emissive = glow;
             m.base.uv_transform = uv;
+            m.extension.set_dissolve(dissolve, grid);
         }
     }
 }

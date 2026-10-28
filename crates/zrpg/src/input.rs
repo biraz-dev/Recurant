@@ -39,10 +39,17 @@ pub enum Action {
     Mute,
     /// Cycle the automap: corner, full screen, hidden.
     Map,
+    /// Use the item in a belt slot (keys 1 to 6).
+    Item1,
+    Item2,
+    Item3,
+    Item4,
+    Item5,
+    Item6,
 }
 
 impl Action {
-    pub const ALL: [Action; 11] = [
+    pub const ALL: [Action; 17] = [
         Action::Forward,
         Action::Back,
         Action::StrafeLeft,
@@ -54,6 +61,22 @@ impl Action {
         Action::Auto,
         Action::Mute,
         Action::Map,
+        Action::Item1,
+        Action::Item2,
+        Action::Item3,
+        Action::Item4,
+        Action::Item5,
+        Action::Item6,
+    ];
+
+    /// The item slots, in order.
+    pub const ITEMS: [Action; 6] = [
+        Action::Item1,
+        Action::Item2,
+        Action::Item3,
+        Action::Item4,
+        Action::Item5,
+        Action::Item6,
     ];
 
     fn keys(self) -> &'static [KeyCode] {
@@ -78,6 +101,12 @@ impl Action {
             Action::Auto => &[KeyP, android::Y],
             Action::Mute => &[KeyM],
             Action::Map => &[Tab, android::L2],
+            Action::Item1 => &[Digit1],
+            Action::Item2 => &[Digit2],
+            Action::Item3 => &[Digit3],
+            Action::Item4 => &[Digit4],
+            Action::Item5 => &[Digit5],
+            Action::Item6 => &[Digit6],
         }
     }
 
@@ -95,6 +124,12 @@ impl Action {
             Action::Auto => &[North],
             Action::Mute => &[],
             Action::Map => &[LeftTrigger2],
+            Action::Item1
+            | Action::Item2
+            | Action::Item3
+            | Action::Item4
+            | Action::Item5
+            | Action::Item6 => &[],
         }
     }
 
@@ -108,7 +143,7 @@ impl Action {
             Action::TurnRight => Some((LeftStickX, 1.0)),
             Action::StrafeLeft => Some((RightStickX, -1.0)),
             Action::StrafeRight => Some((RightStickX, 1.0)),
-            Action::Attack | Action::Restart | Action::Auto | Action::Mute | Action::Map => None,
+            _ => None,
         }
     }
 }

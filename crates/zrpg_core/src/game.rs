@@ -9,6 +9,7 @@ use alloc::vec::Vec;
 use crate::dungeon::{Floor, GenParams, Place};
 use crate::enemy::{Enemy, EnemyId, EnemyKind, EnemyState, tuning as enemy_tuning};
 use crate::grid::{Facing, GridPos, Step, Turn};
+use crate::items::{Bag, Item, tuning as item_tuning};
 use crate::map::Tile;
 use crate::progression::{self, MAX_LEVEL, Perk, Perks};
 use crate::rng::{Rng, mix64};
@@ -55,6 +56,8 @@ pub enum Command {
     Descend,
     /// Take ability `n` (0..3) of the oldest level-up still waiting.
     Choose(u8),
+    /// Use one of an item from the bag.
+    UseItem(Item),
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -135,13 +138,22 @@ pub enum Event {
         at: GridPos,
         amount: u32,
     },
+    /// Picked up an item.
+    ItemTaken {
+        item: Item,
+    },
+    /// Used an item.
+    ItemUsed {
+        item: Item,
+    },
 }
 
-/// Gold lying on the floor, waiting to be picked up.
+/// A pool of gold, and perhaps items, where something vanished.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub struct Drop {
     pub pos: GridPos,
     pub gold: u32,
+    pub items: Bag,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -161,6 +173,12 @@ pub struct Player {
     pub perks: Perks,
     /// Gold carried.
     pub gold: u32,
+    /// Items carried.
+    pub bag: Bag,
+    /// Blows that will pass through you (Ectoplasm).
+    pub ward: u8,
+    /// Hits that will do double damage (Demon Sigil).
+    pub empowered: u8,
     /// Seconds towards the next Health from Regeneration.
     pub(crate) regen: f32,
 }
@@ -179,6 +197,9 @@ impl Player {
             xp: 0,
             perks: Perks::default(),
             gold: 0,
+            bag: Bag::default(),
+            ward: 0,
+            empowered: 0,
             regen: 0.0,
         }
     }
@@ -310,6 +331,49 @@ impl Game {
         }
     }
 
+    /// Take the pool of gold and items at `at`, as much as the bag holds.
+    fn pick_up(&mut self, at: GridPos, out: &mut Vec<Event>) {
+        let Some(i) = self.drops.iter().position(|d| d.pos == at) else {
+            return;
+        };
+        let drop = &mut self.drops[i];
+        if drop.gold > 0 {
+            let amount = core::mem::take(&mut drop.gold);
+            self.player.gold += amount;
+            out.push(Event::GoldTaken { at, amount });
+        }
+        for item in Item::ALL {
+            while drop.items.count(item) > 0 && self.player.bag.add(item) {
+                drop.items.take(item);
+                out.push(Event::ItemTaken { item });
+            }
+        }
+        // What the bag can't hold stays where it lies.
+        if drop.gold == 0 && drop.items.is_empty() {
+            self.drops.swap_remove(i);
+        }
+    }
+
+    /// Use one `item` from the bag.
+    fn use_item(&mut self, item: Item, out: &mut Vec<Event>) {
+        if !self.player.bag.take(item) {
+            return;
+        }
+        let p = &mut self.player;
+        match item {
+            Item::GraveMoss => p.hp = (p.hp + item_tuning::GRAVE_MOSS_HEAL).min(p.max_hp),
+            Item::LinenBandage => p.hp = (p.hp + item_tuning::BANDAGE_HEAL).min(p.max_hp),
+            Item::EmberShard => p.energy = p.max_energy,
+            Item::Ectoplasm => p.ward = (p.ward + 1).min(item_tuning::MAX_WARD),
+            Item::DemonSigil => p.empowered = p.empowered.saturating_add(item_tuning::SIGIL_HITS),
+            Item::BoneCharm => {}
+        }
+        out.push(Event::ItemUsed { item });
+        if item == Item::BoneCharm {
+            self.gain_xp(item_tuning::BONE_CHARM_XP, out);
+        }
+    }
+
     /// Take ability `choice` of the oldest waiting level-up.
     fn choose(&mut self, choice: usize, out: &mut Vec<Event>) {
         if self.pending.is_empty() {
@@ -378,11 +442,7 @@ impl Game {
                 if self.is_open(from, dir) {
                     self.player.pos = to;
                     out.push(Event::Moved { from, to });
-                    if let Some(i) = self.drops.iter().position(|d| d.pos == to) {
-                        let amount = self.drops.swap_remove(i).gold;
-                        self.player.gold += amount;
-                        out.push(Event::GoldTaken { at: to, amount });
-                    }
+                    self.pick_up(to, out);
                 } else {
                     out.push(Event::Bumped { at: from, dir });
                 }
@@ -404,6 +464,7 @@ impl Game {
                 }
             }
             Command::Choose(n) => self.choose(n as usize, out),
+            Command::UseItem(item) => self.use_item(item, out),
         }
     }
 
@@ -437,6 +498,10 @@ impl Game {
         if crushing > 0 && self.rng.chance(crushing) {
             damage *= 2;
         }
+        if self.player.empowered > 0 {
+            self.player.empowered -= 1;
+            damage *= 2;
+        }
         let enemy = &mut self.enemies[i];
         out.push(Event::Swung {
             hit: Some(enemy.id),
@@ -464,11 +529,23 @@ impl Game {
             let (kind, at) = (enemy.kind, enemy.pos);
             self.enemies.swap_remove(i);
             let amount = progression::gold_for_kill(kind, self.depth, self.rng.next_u32());
+            let mut items = Bag::default();
+            if self.rng.chance(Item::drop_percent(kind)) {
+                items.add(Item::dropped_by(kind));
+            }
             match self.drops.iter_mut().find(|d| d.pos == at) {
-                Some(d) => d.gold += amount,
+                Some(d) => {
+                    d.gold += amount;
+                    for (item, n) in items.items() {
+                        for _ in 0..n {
+                            d.items.add(item);
+                        }
+                    }
+                }
                 None => self.drops.push(Drop {
                     pos: at,
                     gold: amount,
+                    items,
                 }),
             }
             out.push(Event::GoldDropped { at, amount });
@@ -568,6 +645,10 @@ impl Game {
                 let iron = perk_tuning::IRON_SKIN * p.stacks(Perk::IronSkin) as i32;
                 let damage = if !adjacent {
                     0
+                } else if self.player.ward > 0 {
+                    self.player.ward -= 1;
+                    out.push(Event::Dodged { id });
+                    0
                 } else if evasion > 0 && self.rng.chance(evasion) {
                     out.push(Event::Dodged { id });
                     0
@@ -625,6 +706,7 @@ fn kind_for(place: Place, depth: u32, roll: u64) -> EnemyKind {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::items::Item;
     use crate::map::Map;
 
     const DT: f32 = 1.0 / 60.0;
@@ -824,18 +906,71 @@ mod tests {
         let (at, amount) = dropped.expect("a kill drops gold");
         assert_eq!(at, GridPos::new(3, 1));
         assert!(amount > 0);
-        assert_eq!(
-            g.drops,
-            [Drop {
-                pos: at,
-                gold: amount
-            }]
-        );
+        assert_eq!(g.drops.len(), 1);
+        assert_eq!((g.drops[0].pos, g.drops[0].gold), (at, amount));
+        let items = g.drops[0].items;
         out.clear();
         g.apply(Command::Step(Step::Forward), &mut out);
         assert!(out.contains(&Event::GoldTaken { at, amount }));
         assert_eq!(g.player.gold, amount);
+        // Any item in the pool came along too.
+        assert_eq!(g.player.bag, items);
         assert!(g.drops.is_empty());
+    }
+
+    #[test]
+    fn items_drop_from_their_creatures_and_do_what_they_say() {
+        // Enough kills of one kind to see its item drop.
+        let mut g = corridor(3);
+        let mut out = Vec::new();
+        g.player.pos = GridPos::new(2, 1);
+        for _ in 0..30 {
+            g.enemies = alloc::vec![Enemy::of_kind(1, GridPos::new(3, 1), EnemyKind::Mummy)];
+            kill_in_front(&mut g, &mut out);
+        }
+        let pool = g.drops[0].items;
+        assert!(pool.count(Item::LinenBandage) > 0, "mummies drop bandages");
+        assert_eq!(pool.items().count(), 1, "and nothing else");
+
+        // Healing, capped at max Health.
+        g.player.bag.add(Item::LinenBandage);
+        g.player.hp = 5;
+        g.apply(Command::UseItem(Item::LinenBandage), &mut out);
+        assert_eq!(g.player.hp, 13);
+        // Using what you don't have does nothing.
+        out.clear();
+        g.apply(Command::UseItem(Item::EmberShard), &mut out);
+        assert!(out.is_empty());
+
+        // Ectoplasm: the next blow passes through.
+        g.player.bag.add(Item::Ectoplasm);
+        g.apply(Command::UseItem(Item::Ectoplasm), &mut out);
+        g.enemies = alloc::vec![Enemy::of_kind(1, GridPos::new(3, 1), EnemyKind::Zombie)];
+        g.enemies[0].state = EnemyState::WindUp { left: 0.01 };
+        let hp = g.player.hp;
+        let events = run(&mut g, 0.05);
+        assert!(events.contains(&Event::Dodged { id: 1 }));
+        assert_eq!(g.player.hp, hp);
+        assert_eq!(g.player.ward, 0);
+
+        // Demon Sigil: three doubled hits.
+        g.player.bag.add(Item::DemonSigil);
+        g.apply(Command::UseItem(Item::DemonSigil), &mut out);
+        assert_eq!(g.player.empowered, 3);
+        g.enemies = alloc::vec![Enemy::of_kind(
+            1,
+            GridPos::new(3, 1),
+            EnemyKind::DemonKnight
+        )];
+        g.player.attack_cooldown = 0.0;
+        out.clear();
+        g.apply(Command::Attack, &mut out);
+        let dealt = out.iter().find_map(|e| match e {
+            Event::EnemyHurt { damage, .. } => Some(*damage),
+            _ => None,
+        });
+        assert!(dealt.is_some_and(|d| d >= 4 && d % 2 == 0), "{dealt:?}");
+        assert_eq!(g.player.empowered, 2);
     }
 
     /// Kill whatever is in front of the player, as many times as needed.
