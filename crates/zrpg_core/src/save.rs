@@ -129,6 +129,8 @@ impl Game {
             perks: Perks::default(),
             gold: 0,
             bag: Bag::default(),
+            // Gear can't change yet, so it isn't saved.
+            equipment: crate::Equipment::starting_kit(),
             spell_cooldowns: [0.0; crate::spells::Spell::ALL.len()],
             regen: r.f32()?,
         };

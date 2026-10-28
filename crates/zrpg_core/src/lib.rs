@@ -16,6 +16,7 @@ extern crate std;
 pub mod auto;
 pub mod dungeon;
 pub mod enemy;
+pub mod equipment;
 pub mod game;
 pub mod grid;
 pub mod items;
@@ -29,6 +30,7 @@ pub mod stage;
 
 pub use dungeon::{Floor, GenParams, Place};
 pub use enemy::{Enemy, EnemyId, EnemyKind, EnemyState};
+pub use equipment::{Equipment, Gear, Slot};
 pub use game::{Command, Drop, Event, Game, Player};
 pub use grid::{Facing, GridPos, Step, Turn};
 pub use items::{Bag, Item};

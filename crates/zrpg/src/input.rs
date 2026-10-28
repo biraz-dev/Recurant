@@ -22,6 +22,7 @@ mod android {
     pub const L2: KeyCode = code(104);
     pub const R2: KeyCode = code(105);
     pub const SELECT: KeyCode = code(109);
+    pub const START: KeyCode = code(108);
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -46,10 +47,12 @@ pub enum Action {
     Spell1,
     Spell2,
     Spell3,
+    /// Open or close the equipment screen.
+    Gear,
 }
 
 impl Action {
-    pub const ALL: [Action; 15] = [
+    pub const ALL: [Action; 16] = [
         Action::Forward,
         Action::Back,
         Action::StrafeLeft,
@@ -65,6 +68,7 @@ impl Action {
         Action::Spell1,
         Action::Spell2,
         Action::Spell3,
+        Action::Gear,
     ];
 
     /// The item slots, in order.
@@ -98,6 +102,7 @@ impl Action {
             Action::Spell1 => &[KeyZ, android::B],
             Action::Spell2 => &[KeyX],
             Action::Spell3 => &[KeyC],
+            Action::Gear => &[KeyI, android::START],
         }
     }
 
@@ -116,6 +121,7 @@ impl Action {
             Action::Mute => &[],
             Action::Map => &[LeftTrigger2],
             Action::Spell1 => &[East],
+            Action::Gear => &[Start],
             Action::Item1 | Action::Spell2 | Action::Spell3 => &[],
         }
     }

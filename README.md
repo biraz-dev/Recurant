@@ -41,6 +41,7 @@ See [docs/PLATFORMS.md](docs/PLATFORMS.md) for web and Android details and
 | Map: corner, full, hidden | Tab | LT                  |
 | Spark / Chain Lightning / Lightning Bolt | Z / X / C | B (Spark) |
 | Drink a Health Potion | 1         |                      |
+| Equipment screen | I              | Start                |
 | Sound on/off  | M                 |                      |
 | Restart (new seed) | R (or Attack once dead) | Select / Back |
 
@@ -92,6 +93,21 @@ spark particles and a 64×16 lightning strip that repeats along each arc.
 Repaint any of them at the same size. `cargo run -p zrpg --example
 spellbook` casts each spell at a row of creatures (`--shots DIR` saves
 stills).
+
+## Equipment
+
+Press I (gamepad: Start) for the equipment screen, an old paper doll: your
+figure in a lit alcove, ringed by nine slots (helmet, necklace, armor, right
+and left hand, gloves, belt and two rings), with your stats beside it. The
+arrows move between slots and show what each holds; the world holds still
+until you close it. You start with the sword in your right hand and the
+torch in your left; the other slots wait for gear (none drops yet).
+
+The rules are in `zrpg_core::equipment`; the screen is
+`crates/zrpg/src/equipment.rs`. Its art (the stone backdrop, the figure,
+the slot frame, a faint outline for each empty slot and the sword and torch
+icons) is placeholder pixel art from `tools/make_equipment_art.py`, in
+`crates/zrpg/assets/equipment`; repaint any of it at the same size.
 
 ## The ruins and what lives below
 
@@ -199,6 +215,7 @@ cargo run -p zrpg --example sfx              # write every sound effect to targe
 cargo run -p zrpg --example bestiary         # parade every creature (--shots DIR saves stills)
 cargo run -p zrpg --example spellbook        # cast every spell at a row of creatures
 python3 tools/make_spell_art.py              # placeholder spell and potion art
+python3 tools/make_equipment_art.py          # placeholder equipment screen art
 python3 tools/extract_asset_kits.py          # unpack art/kits/archives (needed by the two below)
 python3 tools/make_ruins.py                  # ruins kit -> assets/ruins + zrpg_core/src/ruins.map
 python3 tools/make_creatures.py              # creature kits -> assets/creatures + src/sheets.rs

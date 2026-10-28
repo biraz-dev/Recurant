@@ -246,7 +246,7 @@ fn drive_player(
     time: Res<Time>,
     actions: Res<Actions>,
     auto: Res<AutoMode>,
-    picker: Res<crate::picker::Picker>,
+    hold: crate::Hold,
     mut run: ResMut<Run>,
     mut cams: Query<&mut Animator, With<PlayerCamera>>,
     mut writer: MessageWriter<GameEvent>,
@@ -267,7 +267,7 @@ fn drive_player(
         anim.descending = None;
         return;
     }
-    if picker.holds_the_game() {
+    if hold.holds_the_game() {
         anim.queued = None;
         anim.attack_buffer = 0.0;
         return;

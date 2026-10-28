@@ -8,6 +8,7 @@ use alloc::vec::Vec;
 
 use crate::dungeon::{Floor, GenParams, Place};
 use crate::enemy::{Enemy, EnemyId, EnemyKind, EnemyState, tuning as enemy_tuning};
+use crate::equipment::Equipment;
 use crate::grid::{Facing, GridPos, Step, Turn};
 use crate::items::{Bag, Item, tuning as item_tuning};
 use crate::map::Tile;
@@ -197,6 +198,8 @@ pub struct Player {
     pub gold: u32,
     /// Items carried.
     pub bag: Bag,
+    /// What you wear and hold.
+    pub equipment: Equipment,
     /// Seconds until each spell can be cast again, in `Spell::ALL` order.
     pub spell_cooldowns: [f32; Spell::ALL.len()],
     /// Seconds towards the next Health from Regeneration.
@@ -218,6 +221,7 @@ impl Player {
             perks: Perks::default(),
             gold: 0,
             bag: Bag::default(),
+            equipment: Equipment::starting_kit(),
             spell_cooldowns: [0.0; Spell::ALL.len()],
             regen: 0.0,
         }
@@ -252,6 +256,12 @@ impl Player {
 
     pub fn is_alive(&self) -> bool {
         self.hp > 0
+    }
+
+    /// The least and most a swing does, before Crushing Blow.
+    pub fn swing_damage(&self) -> (i32, i32) {
+        let edge = self.stacks(Perk::KeenEdge) as i32;
+        (tuning::DAMAGE_MIN + edge, tuning::DAMAGE_MAX + edge)
     }
 
     /// Ready to swing and able to pay for it.
@@ -491,7 +501,7 @@ impl Game {
         }
         p.energy -= p.attack_cost();
         p.attack_cooldown = p.attack_cooldown_secs();
-        let edge = p.stacks(Perk::KeenEdge) as i32;
+        let (low, high) = p.swing_damage();
         let crushing = p.stacks(Perk::CrushingBlow) as u32 * perk_tuning::CRUSHING_PERCENT;
         let target = p.pos + p.facing;
         // A parapet between you and it is out of reach.
@@ -505,7 +515,7 @@ impl Game {
             out.push(Event::Swung { hit: None });
             return;
         };
-        let mut damage = self.rng.range(tuning::DAMAGE_MIN, tuning::DAMAGE_MAX) + edge;
+        let mut damage = self.rng.range(low, high);
         if crushing > 0 && self.rng.chance(crushing) {
             damage *= 2;
         }

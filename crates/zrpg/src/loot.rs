@@ -147,12 +147,12 @@ pub fn icon(item: Item) -> Image {
 /// Number keys use the item in that belt slot.
 fn use_items(
     actions: Res<Actions>,
-    picker: Res<crate::picker::Picker>,
+    hold: crate::Hold,
     mut run: ResMut<Run>,
     mut writer: MessageWriter<GameEvent>,
     mut buf: Local<Vec<zrpg_core::Event>>,
 ) {
-    if picker.holds_the_game() || !run.player.is_alive() {
+    if hold.holds_the_game() || !run.player.is_alive() {
         return;
     }
     for (slot, item) in Action::ITEMS.into_iter().zip(Item::ALL) {

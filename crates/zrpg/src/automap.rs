@@ -179,7 +179,7 @@ fn explore(run: Res<Run>, mut explored: ResMut<Explored>) {
 fn draw(
     run: Res<Run>,
     mode: Res<MapMode>,
-    picker: Res<crate::picker::Picker>,
+    hold: crate::Hold,
     mut explored: ResMut<Explored>,
     mut images: ResMut<Assets<Image>>,
     mut layers: Query<(&mut Visibility, &mut BackgroundColor), With<AutomapLayer>>,
@@ -190,7 +190,7 @@ fn draw(
     else {
         return;
     };
-    let show = *mode != MapMode::Hidden && run.player.is_alive() && !picker.is_open();
+    let show = *mode != MapMode::Hidden && run.player.is_alive() && !hold.covers_the_view();
     let want = if show {
         Visibility::Inherited
     } else {

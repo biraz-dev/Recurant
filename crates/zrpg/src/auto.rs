@@ -34,11 +34,19 @@ impl Plugin for AutoPlugin {
     }
 }
 
-pub fn toggle(actions: Res<Actions>, mut auto: ResMut<AutoMode>) {
+pub fn toggle(
+    actions: Res<Actions>,
+    sheet: Res<crate::equipment::Sheet>,
+    mut auto: ResMut<AutoMode>,
+) {
     if actions.just_pressed(Action::Auto) {
         auto.0 = !auto.0;
         info!("auto mode {}", if auto.0 { "on" } else { "off" });
-    } else if auto.0 && TAKE_OVER.iter().any(|a| actions.just_pressed(*a)) {
+    } else if auto.0
+        // Browsing the equipment screen isn't taking over.
+        && !sheet.is_open()
+        && TAKE_OVER.iter().any(|a| actions.just_pressed(*a))
+    {
         auto.0 = false;
         info!("auto mode off: player took over");
     }

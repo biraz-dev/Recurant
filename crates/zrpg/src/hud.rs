@@ -400,7 +400,7 @@ fn update_hud(
     time: Res<Time>,
     run: Res<Run>,
     auto: Res<AutoMode>,
-    picker: Res<crate::picker::Picker>,
+    hold: crate::Hold,
     map: Res<crate::automap::MapMode>,
     mut fx: ResMut<HudFx>,
     mut xp: Query<&mut Node, (With<XpFill>, Without<HealthFill>, Without<EnergyFill>)>,
@@ -485,7 +485,7 @@ fn update_hud(
             atlas.index = frame;
         }
         // Put the sword down while choosing an ability or reading the map.
-        let busy = picker.is_open() || *map == crate::automap::MapMode::Full;
+        let busy = hold.covers_the_view() || *map == crate::automap::MapMode::Full;
         *v = if alive && !busy {
             Visibility::Inherited
         } else {

@@ -140,7 +140,7 @@ fn spawn(mut commands: Commands, cams: Query<Entity, With<PlayerCamera>>) {
         });
 }
 
-fn drive(
+pub(crate) fn drive(
     time: Res<Time>,
     actions: Res<Actions>,
     auto: Res<AutoMode>,

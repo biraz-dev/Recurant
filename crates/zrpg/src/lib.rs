@@ -10,6 +10,7 @@ mod audio;
 mod auto;
 mod automap;
 mod enemies;
+mod equipment;
 mod hud;
 mod input;
 mod level;
@@ -27,6 +28,7 @@ pub mod synth;
 mod textures;
 mod view;
 
+use bevy::ecs::system::SystemParam;
 use bevy::prelude::*;
 use bevy::window::WindowResolution;
 use zrpg_core::{Event, Game};
@@ -47,6 +49,26 @@ impl Run {
 /// Every core event, re-broadcast for presentation systems.
 #[derive(Message, Clone, Copy, Debug)]
 pub struct GameEvent(pub Event);
+
+/// The screens that stop the world while open: the ability picker and the
+/// equipment screen.
+#[derive(SystemParam)]
+pub struct Hold<'w> {
+    picker: Res<'w, picker::Picker>,
+    sheet: Res<'w, equipment::Sheet>,
+}
+
+impl Hold<'_> {
+    /// While true, the game neither runs nor takes commands.
+    pub fn holds_the_game(&self) -> bool {
+        self.picker.holds_the_game() || self.sheet.is_open()
+    }
+
+    /// Whether a screen covers the view (so the sword and map step aside).
+    pub fn covers_the_view(&self) -> bool {
+        self.picker.is_open() || self.sheet.is_open()
+    }
+}
 
 /// Per-frame order: read input and issue commands, advance the simulation,
 /// then let presentation react to what happened.
@@ -128,7 +150,7 @@ fn build(saves: bool) -> App {
         persist::PersistPlugin,
         script::ScriptPlugin,
     ))
-    .add_plugins(spells::SpellsPlugin)
+    .add_plugins((spells::SpellsPlugin, equipment::EquipmentPlugin))
     .add_systems(
         Update,
         (
@@ -146,13 +168,14 @@ pub fn publish(buf: &mut Vec<Event>, writer: &mut MessageWriter<GameEvent>) {
 
 fn simulate(
     time: Res<Time>,
-    picker: Res<picker::Picker>,
+    hold: Hold,
     mut run: ResMut<Run>,
     mut writer: MessageWriter<GameEvent>,
     mut buf: Local<Vec<Event>>,
 ) {
-    // The world holds still while you choose an ability.
-    if picker.holds_the_game() {
+    // The world holds still while you choose an ability or look at your
+    // equipment.
+    if hold.holds_the_game() {
         return;
     }
     // Clamp so a long stall (window drag, breakpoint) can't skip a whole fight.

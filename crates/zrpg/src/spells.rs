@@ -138,12 +138,12 @@ fn glow(color: Color) -> StandardMaterial {
 /// Z, X and C cast.
 fn cast(
     actions: Res<Actions>,
-    picker: Res<crate::picker::Picker>,
+    hold: crate::Hold,
     mut run: ResMut<Run>,
     mut writer: MessageWriter<GameEvent>,
     mut buf: Local<Vec<Event>>,
 ) {
-    if picker.holds_the_game() || !run.player.is_alive() {
+    if hold.holds_the_game() || !run.player.is_alive() {
         return;
     }
     for (key, spell) in Action::SPELLS.into_iter().zip(Spell::ALL) {
