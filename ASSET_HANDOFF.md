@@ -28,6 +28,8 @@ Every numbered volume for a kit is required; each is an ordinary independently v
 | Mummy | `art/kits/mummy-v1/README.md` and `extracted/manifest.json` | `extracted/atlases128/` **or** `extracted/frames128/` |
 | Wraith | `art/kits/wraith-v1/README.md` and `extracted/manifest.json` | `extracted/atlases128/` **or** `extracted/frames128/` |
 | Inner demon | `art/kits/inner-demon-v1/README.md` and `extracted/manifest.json` | `extracted/atlases128/` **or** `extracted/frames128/` |
+| Royal mummy (separate character) | `art/kits/royal-mummy-v1/README.md` and `extracted/manifest.json` | `extracted/atlases128/` **or** `extracted/frames128/` |
+| First-person sword v02 | `art/kits/first-person-sword-v02/README.md` and `sword_v02_animation.json` | `frames/` **or** `sword_v02_atlas_4x3.png`; exact 320 × 240 screen-overlay cells |
 
 Start by saying: **“Read ASSET_HANDOFF.md, verify and extract the asset kits with the supplied helper, then inspect the relevant kit's integration guide and manifest before adapting the game. Do not claim runtime compatibility until it is tested.”**
 
@@ -35,14 +37,18 @@ Paths within each kit remain relative to its original kit root or the manifest's
 
 ## Preview without unpacking
 
-Start with [the eight-character overview](art/kits/previews/recurant-bestiary-preview.png). Browse `art/kits/previews/`: the ruins assembled preview and geometry contact sheet, plus character all-frame contacts and four-view walk/hover/attack GIFs. These duplicate selected files inside the archives for easy inspection; they are not additional poses or runtime assets.
+Start with [the original eight-character overview](art/kits/previews/recurant-bestiary-preview.png). The newer royal mummy and sword v02 have separate contact sheets and GIFs under their named preview directories. Browse `art/kits/previews/`: the ruins assembled preview and geometry contact sheet, plus character all-frame contacts and four-view walk/hover/attack GIFs. These duplicate selected files inside the archives for easy inspection; they are not additional poses or runtime assets.
 
 ## Scope and verification
 
+Eleven kits total: sandstone ruins, nine creatures, and the first-person sword v02.
+
 - Ruins: eleven mesh modules, GLB and OBJ/MTL alternatives, two assembled scenes, textures, layout, diagrams, authoring scripts and asset QA reports. The layout has 266 instances; its statue is a blockout proxy.
-- Eight characters (768 total poses): each has four directions × four actions (walk/hover plus three attacks) × six frames (96 poses), aligned 128 px/256 px frames and atlases, native cutouts, previews, original source sheets, references, prompts, manifests and extraction checks.
-- All eight character kits retain original/rejected source variants for provenance; use only the selected, aligned runtime frames declared by each manifest. Wraith locomotion is hover rather than walk; animation names and hit windows are kit-specific.
-- No intended kit source/runtime file is omitted from its volumes. Transfer helpers, caches and the duplicated ruins reference filename are excluded; the reference itself is preserved as `reference/source_concept.png`.
+- Nine creatures (864 total poses): each has four directions × four actions (walk/hover plus three attacks) × six frames (96 poses), aligned 128 px/256 px frames and atlases, native cutouts, previews, original source sheets, references, prompts, manifests and extraction checks.
+- Sword v02: twelve transparent RGBA **320 × 240** overlay frames, atlas, timing/registration manifest, source design reference, previews and rebuild script. Draw whole frames at viewport origin `(0,0)` without automatic trimming/centering. Large swing offscreen exits and the almost-empty lowered reset are intentional; impact timing is proposed, not implemented damage.
+- Royal mummy is a separate character (reference 141); it does not replace the earlier mummy (reference 137). Sword v01 runtime assets are not included; only the copied idle design reference is retained within v02 sources.
+- All nine creature kits retain original/rejected source variants for provenance; use only the selected, aligned runtime frames declared by each manifest. Wraith locomotion is hover rather than walk; animation names and hit windows are kit-specific.
+- No intended kit source/runtime file is omitted from its volumes. Transfer helpers, caches, the recursive sword ZIP duplicate and the duplicated ruins reference filename are excluded; the reference itself is preserved as `reference/source_concept.png`.
 - `ASSET_INVENTORY.json` lists archive hashes and every included kit file with its repository-relative path, byte count, SHA-256 and Git blob SHA. Local extraction was checked against these inventories.
 - Included reports establish **asset-level** checks only. These are prototype animations and visual/blockout assets, not production-verified runtime integration.
 - No native, browser/Wasm, handheld, physics/controller, combat, performance or N64-runtime QA is claimed. Timing/hit frames and performance budgets are proposals, not measured gameplay.
