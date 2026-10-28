@@ -42,7 +42,14 @@ const SPRITE_HEIGHT: f32 = 0.95;
 /// Slightly longer than the core's step interval would allow, so motion
 /// reads as a deliberate shuffle rather than a teleport.
 const STEP_ANIM_SECS: f32 = 0.3;
-const FLASH_SECS: f32 = 0.2;
+/// A blow landing: how long its shockwave and shudder last, how far it
+/// knocks the body back at full force, and the damage that counts as full
+/// force (lighter blows land softer, on a square-root curve).
+const IMPACT_SECS: f32 = 0.38;
+const KNOCKBACK: f32 = 0.09;
+const FULL_FORCE_DAMAGE: f32 = 8.0;
+/// The faint warm tint of a fresh wound, at full force.
+const WOUND_TINT: Color = Color::srgb(1.0, 0.6, 0.55);
 const LUNGE_SECS: f32 = 0.2;
 /// Dying: like an apparition in a dream, the body pales, drifts up and
 /// comes apart pixel by pixel over this long.
@@ -199,7 +206,8 @@ pub(crate) struct EnemySprite {
     attacks_made: u32,
     /// 0..1, how far into the wind-up pose (eased each frame).
     wind: f32,
-    flash: f32,
+    /// The last blow landed: (force 0..1, seconds since).
+    impact: Option<(f32, f32)>,
     lunge: f32,
     dying: Option<Dying>,
     /// Steps taken so far; alternates the lurch from side to side.
@@ -269,7 +277,7 @@ fn sync_roster(
     let player = cell_center(run.player.pos);
     for enemy in &run.enemies {
         let art = assets.art(enemy.kind, &mut meshes, &mut images);
-        // One material each so hit flashes tint only the enemy that was hit.
+        // One material each so a blow bends only the enemy that was hit.
         let material = materials.add(look.graded(StandardMaterial {
             base_color_texture: Some(art.texture.clone()),
             alpha_mode: AlphaMode::Mask(0.5),
@@ -297,7 +305,7 @@ fn sync_roster(
                 attack: None,
                 attacks_made: 0,
                 wind: 0.0,
-                flash: 0.0,
+                impact: None,
                 lunge: 0.0,
                 dying: None,
                 steps: 0,
@@ -363,8 +371,13 @@ fn react_to_events(
                 });
                 s.heading = (player - s.to).normalize_or(s.heading);
             }
-            Event::EnemyHurt { staggered, .. } => {
-                s.flash = FLASH_SECS;
+            Event::EnemyHurt {
+                damage, staggered, ..
+            } => {
+                // A second blow while the first still rings takes the harder.
+                let force = impact_force(damage);
+                let ringing = s.impact.map_or(0.0, |(f, age)| f * impact_fade(age));
+                s.impact = Some((force.max(ringing), 0.0));
                 // A stagger knocks it out of its attack.
                 if staggered {
                     s.attack = None;
@@ -385,6 +398,20 @@ fn react_to_events(
             _ => {}
         }
     }
+}
+
+/// How hard a blow of `damage` lands, 0..1: even a spark is felt, and a
+/// crushing blow lands at full force.
+fn impact_force(damage: i32) -> f32 {
+    (damage.max(0) as f32 / FULL_FORCE_DAMAGE)
+        .sqrt()
+        .clamp(0.3, 1.0)
+}
+
+/// How much of a blow's force is left `age` seconds after it lands.
+fn impact_fade(age: f32) -> f32 {
+    let left = (1.0 - age / IMPACT_SECS).max(0.0);
+    left * left
 }
 
 /// The view that best fits a creature heading `heading`, seen from a camera
@@ -431,7 +458,14 @@ fn animate(
 
     for (entity, mut s, mut t) in &mut sprites {
         s.move_t += dt;
-        s.flash = (s.flash - dt).max(0.0);
+        if let Some((_, age)) = s.impact.as_mut() {
+            *age += dt;
+        }
+        if s.impact.is_some_and(|(_, age)| age >= IMPACT_SECS) {
+            s.impact = None;
+        }
+        let (force, impact_age) = s.impact.unwrap_or((0.0, 0.0));
+        let impact = force * impact_fade(impact_age);
         s.lunge = (s.lunge - dt).max(0.0);
         let enemy = run.enemies.iter().find(|e| e.id == s.id);
         let winding = enemy.is_some_and(|e| e.is_winding_up());
@@ -489,6 +523,9 @@ fn animate(
             feet += toward * (0.06 * s.wind + 0.3 * lunge);
         }
 
+        // Knocked back from you, fast, then easing back.
+        feet -= toward * KNOCKBACK * impact * (impact_age / 0.03).min(1.0);
+
         let mut rotation = facing * Quat::from_rotation_z(roll);
         let mut dissolve = 0.0;
         if let Some(d) = s.dying.as_mut() {
@@ -519,10 +556,10 @@ fn animate(
                 Color::WHITE.mix(&DREAM_PALE, k),
                 LinearRgba::rgb(0.05, 0.07, 0.1) * k,
             )
-        } else if s.flash > 0.0 {
+        } else if impact > 0.0 {
             (
-                Color::srgb(1.0, 0.35, 0.3),
-                LinearRgba::rgb(0.14, 0.02, 0.01),
+                Color::WHITE.mix(&WOUND_TINT, 0.5 * impact),
+                LinearRgba::rgb(0.06, 0.02, 0.01) * impact,
             )
         } else {
             (
@@ -544,12 +581,14 @@ fn animate(
             && (m.base.base_color != color
                 || m.base.emissive != glow
                 || m.base.uv_transform != uv
-                || m.extension.dissolve() != dissolve)
+                || m.extension.dissolve() != dissolve
+                || m.extension.impact() != (impact, impact_age))
         {
             m.base.base_color = color;
             m.base.emissive = glow;
             m.base.uv_transform = uv;
             m.extension.set_dissolve(dissolve, grid);
+            m.extension.set_impact(impact, impact_age);
         }
     }
 }
@@ -593,7 +632,7 @@ mod tests {
             }),
             attacks_made: 1,
             wind: 0.0,
-            flash: 0.0,
+            impact: None,
             lunge: 0.0,
             dying: None,
             steps: 0,

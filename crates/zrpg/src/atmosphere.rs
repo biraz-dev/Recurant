@@ -243,7 +243,8 @@ pub struct DepthGradeUniform {
     /// rgb: tint of the drained colour.
     tint: Vec4,
     /// Dissolving like a dream: x is how far gone (0 whole, 1 vanished), y
-    /// the size of the pixel grid it breaks up on.
+    /// the size of the pixel grid it breaks up on. A blow landing: z its
+    /// force, already fading (0 none, 1 the hardest), w seconds since.
     dream: Vec4,
 }
 
@@ -257,11 +258,23 @@ impl DepthGrade {
     /// Dissolve the surface: `amount` 0 leaves it whole, 1 takes it all;
     /// it breaks up on a grid of `pixels` across its texture.
     pub fn set_dissolve(&mut self, amount: f32, pixels: f32) {
-        self.grade.dream = Vec4::new(amount, pixels, 0.0, 0.0);
+        self.grade.dream.x = amount;
+        self.grade.dream.y = pixels;
     }
 
     pub fn dissolve(&self) -> f32 {
         self.grade.dream.x
+    }
+
+    /// Ripple the surface from a blow of `force` (0..1, fading) that landed
+    /// `age` seconds ago; force 0 leaves it still.
+    pub fn set_impact(&mut self, force: f32, age: f32) {
+        self.grade.dream.z = force;
+        self.grade.dream.w = age;
+    }
+
+    pub fn impact(&self) -> (f32, f32) {
+        (self.grade.dream.z, self.grade.dream.w)
     }
 }
 

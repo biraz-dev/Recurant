@@ -58,6 +58,11 @@ and glows orange) before it strikes:
 - **Step away** during the wind-up and the blow misses.
 - **Hit it** during the wind-up and it staggers, cancelling the strike.
 
+No numbers: you see a blow land. A shockwave ripples out through the
+creature from where it was struck, bending its picture as it passes; the
+body shudders and is knocked back a step. Harder blows ripple wider and
+knock it further, so a spark is a tremor and a crushing blow a jolt.
+
 Health (red bar) does not regenerate. Reach zero and you die; press Attack to
 rise again in a fresh dungeon.
 

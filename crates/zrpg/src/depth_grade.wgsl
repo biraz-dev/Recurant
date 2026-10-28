@@ -32,8 +32,29 @@ struct DepthGrade {
     params: vec4<f32>,
     // rgb: the tint far-away colours drain toward (multiplied into the grey).
     tint: vec4<f32>,
-    // x: how far it has dissolved (0..1), y: the pixel grid it breaks up on.
+    // x: how far it has dissolved (0..1), y: the pixel grid it breaks up on,
+    // z: the force of a blow landing (0..1, already fading), w: seconds since.
     dream: vec4<f32>,
+}
+
+// Where on a sprite blows land, in its quad's UVs: about the chest.
+const IMPACT_AT: vec2<f32> = vec2<f32>(0.5, 0.45);
+
+// A blow landing: a shockwave ring spreads out from the chest, bending the
+// picture outward as it passes, while the whole body shudders side to
+// side. Both scale with the force. Returns the bent UV and how bright the
+// ring is here.
+fn impact(uv: vec2<f32>, force: f32, age: f32) -> vec3<f32> {
+    let d = uv - IMPACT_AT;
+    let r = length(d);
+    let radius = age * 1.8;
+    let ring = exp(-pow((r - radius) / 0.07, 2.0));
+    let push = d / max(r, 0.001) * ring * force * 0.04;
+    let shudder = sin(uv.y * 48.0 + age * 95.0) * force * 0.012;
+    // Stay inside this frame of the sheet.
+    let bent = clamp(uv - push + vec2<f32>(shudder, 0.0), vec2<f32>(0.004), vec2<f32>(0.996));
+    // Only the spreading ring catches the light, not the point it starts.
+    return vec3<f32>(bent, ring * force * smoothstep(0.03, 0.15, radius));
 }
 
 @group(#{MATERIAL_BIND_GROUP}) @binding(100) var<uniform> grade: DepthGrade;
@@ -43,7 +64,17 @@ fn fragment(
     in: VertexOutput,
     @builtin(front_facing) is_front: bool,
 ) -> FragmentOutput {
-    var pbr_input = pbr_input_from_standard_material(in, is_front);
+    // A blow bends the picture before it is sampled.
+    var bent_in = in;
+    var impact_glow = 0.0;
+#ifdef VERTEX_UVS_A
+    if (grade.dream.z > 0.0) {
+        let hit = impact(in.uv, grade.dream.z, grade.dream.w);
+        bent_in.uv = hit.xy;
+        impact_glow = hit.z;
+    }
+#endif
+    var pbr_input = pbr_input_from_standard_material(bent_in, is_front);
     pbr_input.material.base_color = alpha_discard(pbr_input.material, pbr_input.material.base_color);
 
     // Dissolving like a dream: pixels drop out in a fixed random order; the
@@ -76,6 +107,8 @@ fn fragment(
     let drained = mix(out.color.rgb, vec3<f32>(luma) * grade.tint.rgb, t * grade.params.z);
     out.color = vec4<f32>(drained * mix(1.0, grade.params.w, t), out.color.a);
     out.color = vec4<f32>(out.color.rgb + vec3<f32>(0.7, 0.85, 1.0) * 1.6 * dream_glow, out.color.a);
+    // The shockwave catches the light a little as it passes.
+    out.color = vec4<f32>(out.color.rgb + vec3<f32>(1.0, 0.9, 0.8) * 0.35 * impact_glow, out.color.a);
 
     // Fog, alpha handling and in-shader tonemapping, as in the standard shader.
     out.color = main_pass_post_lighting_processing(pbr_input, out.color);
