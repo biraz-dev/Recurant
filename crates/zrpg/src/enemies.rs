@@ -183,8 +183,8 @@ impl Dying {
 }
 
 #[derive(Component)]
-struct EnemySprite {
-    id: EnemyId,
+pub(crate) struct EnemySprite {
+    pub(crate) id: EnemyId,
     sheet: Option<&'static Sheet>,
     /// Ground position, eased between cells.
     from: Vec3,

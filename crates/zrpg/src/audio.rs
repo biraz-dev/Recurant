@@ -44,6 +44,10 @@ mod mix {
     pub const COIN_DROP: f32 = 0.5;
     pub const PICKUP: f32 = 0.45;
     pub const USE_ITEM: f32 = 0.45;
+    pub const SPARK: f32 = 0.4;
+    pub const CHAIN: f32 = 0.55;
+    pub const BOLT: f32 = 0.7;
+    pub const FIZZLE: f32 = 0.3;
 }
 
 /// Rodio fades spatial sounds with the inverse square of distance, which is
@@ -98,6 +102,9 @@ struct Sounds {
     coins: Handle<AudioSource>,
     coin_drop: Handle<AudioSource>,
     pickup: Handle<AudioSource>,
+    /// One per spell, in `Spell::ALL` order.
+    spells: Vec<Handle<AudioSource>>,
+    fizzle: Handle<AudioSource>,
 }
 
 fn synthesize(mut commands: Commands, mut sources: ResMut<Assets<AudioSource>>) {
@@ -130,6 +137,12 @@ fn synthesize(mut commands: Commands, mut sources: ResMut<Assets<AudioSource>>) 
         coins: add(synth::coins(19)),
         coin_drop: add(synth::coin_drop(20)),
         pickup: add(synth::pickup(21)),
+        spells: vec![
+            add(synth::spark(22)),
+            add(synth::chain(23)),
+            add(synth::bolt(24)),
+        ],
+        fizzle: add(synth::fizzle(25)),
     });
 }
 
@@ -257,6 +270,13 @@ fn play_event_sounds(
             Event::GoldTaken { .. } => sfx(&sounds.coins, mix::COINS, None),
             Event::ItemTaken { .. } => sfx(&sounds.pickup, mix::PICKUP, None),
             Event::ItemUsed { .. } => sfx(&sounds.perk, mix::USE_ITEM, None),
+            Event::SpellCast { spell, .. } => {
+                let gain = [mix::SPARK, mix::CHAIN, mix::BOLT][spell.index()];
+                sfx(&sounds.spells[spell.index()], gain, None)
+            }
+            // Each strike already sounds through `EnemyHurt`.
+            Event::SpellHit { .. } => {}
+            Event::SpellFizzled { .. } => sfx(&sounds.fizzle, mix::FIZZLE, None),
             Event::GoldDropped { at, .. } => {
                 sfx(&sounds.coin_drop, mix::COIN_DROP, Some(ear_level(at)))
             }

@@ -585,6 +585,84 @@ pub fn coin_drop(seed: u64) -> Vec<f32> {
     finish(buf)
 }
 
+/// One electric snap: a click of bright noise with a quick buzzing tail.
+fn snap(noise: &mut Noise, buzz: f32, len: f32) -> Vec<f32> {
+    let (mut osc, mut lp) = (Osc::default(), LowPass::new(5000.0));
+    (0..samples(len))
+        .map(|i| {
+            let t = time(i);
+            let n = noise.next();
+            let click = (n - lp.run(n)) * decay(t, 0.006);
+            let hum = osc.saw(buzz * (1.0 + 0.3 * noise.next())) * decay(t, len * 0.35);
+            click + 0.35 * hum
+        })
+        .collect()
+}
+
+/// Spark: a faint flurry of little snaps.
+pub fn spark(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let mut buf = vec![0.0; samples(0.5)];
+    for k in 0..5 {
+        let at = k as f32 * 0.075 + 0.01 * noise.unit();
+        let buzz = 900.0 + 400.0 * noise.unit();
+        let s = snap(&mut noise, buzz, 0.06);
+        mix_in(&mut buf, &s, at, 1.0 - 0.12 * k as f32);
+    }
+    finish(buf)
+}
+
+/// Chain lightning: a buzzing arc that leaps, crackling, from body to body.
+pub fn chain(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let len = 0.7;
+    let (mut osc, mut band) = (Osc::default(), BandPass::new(0.4));
+    let mut buf: Vec<f32> = (0..samples(len))
+        .map(|i| {
+            let t = time(i);
+            // The buzz stutters on and off as the arc jumps.
+            let gate = if (t * 14.0).fract() < 0.7 { 1.0 } else { 0.25 };
+            let raw = osc.saw(110.0 + 30.0 * (TAU * 9.0 * t).sin()) + 0.6 * noise.next();
+            band.run(raw, 1800.0 + 900.0 * (TAU * 5.0 * t).sin()) * gate * decay(t, 0.3)
+        })
+        .collect();
+    for k in 0..4 {
+        let s = snap(&mut noise, 600.0, 0.08);
+        mix_in(&mut buf, &s, 0.02 + k as f32 * 0.12, 1.2);
+    }
+    finish(buf)
+}
+
+/// Lightning bolt: a hard crack and a short rumble down the corridor.
+pub fn bolt(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let (mut hp_lp, mut rumble) = (LowPass::new(3000.0), LowPass::new(160.0));
+    let mut buf: Vec<f32> = (0..samples(0.9))
+        .map(|i| {
+            let t = time(i);
+            let n = noise.next();
+            let crack = (n - hp_lp.run(n)) * decay(t, 0.03);
+            let low = rumble.run(noise.next()) * 6.0 * bell(t, 0.8);
+            crack + low
+        })
+        .collect();
+    echo(&mut buf, 0.09, 0.3);
+    finish(buf)
+}
+
+/// A spell with nothing to strike: a dry little fizz.
+pub fn fizzle(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let mut band = BandPass::new(1.2);
+    let buf = (0..samples(0.25))
+        .map(|i| {
+            let t = time(i);
+            band.run(noise.next(), 3000.0 - 6000.0 * t) * bell(t, 0.25)
+        })
+        .collect();
+    finish(buf)
+}
+
 pub fn wav(samples: &[f32]) -> Vec<u8> {
     let data_len = (samples.len() * 2) as u32;
     let mut out = Vec::with_capacity(44 + data_len as usize);
@@ -630,6 +708,10 @@ pub fn all() -> Vec<(&'static str, Vec<f32>)> {
         ("coins", coins(19)),
         ("coin_drop", coin_drop(20)),
         ("pickup", pickup(21)),
+        ("spark", spark(22)),
+        ("chain", chain(23)),
+        ("bolt", bolt(24)),
+        ("fizzle", fizzle(25)),
     ]
 }
 

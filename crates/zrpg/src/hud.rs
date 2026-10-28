@@ -157,7 +157,7 @@ fn spawn_hud(
                 ..default()
             })
             .with_children(|bars| {
-                // The item belt: one slot per item carried, keyed 1 to 6.
+                // The item belt: one slot per item carried, keyed from 1.
                 bars.spawn(Node {
                     column_gap: px(3),
                     margin: UiRect::bottom(px(2)),

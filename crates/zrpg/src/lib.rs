@@ -22,6 +22,7 @@ mod ruins;
 mod screen;
 mod script;
 mod sheets;
+mod spells;
 pub mod synth;
 mod textures;
 mod view;
@@ -127,6 +128,7 @@ fn build(saves: bool) -> App {
         persist::PersistPlugin,
         script::ScriptPlugin,
     ))
+    .add_plugins(spells::SpellsPlugin)
     .add_systems(
         Update,
         (

@@ -89,6 +89,21 @@ impl Map {
         self.is_walkable(from + dir) && !self.is_blocked(from, dir)
     }
 
+    /// Can `a` see `b`? Every cell strictly between them must be open:
+    /// walls hide what is behind them, not themselves.
+    pub fn in_sight(&self, a: GridPos, b: GridPos) -> bool {
+        let (dx, dy) = (b.x - a.x, b.y - a.y);
+        let steps = dx.abs().max(dy.abs());
+        (1..steps).all(|i| {
+            // Round to the nearest cell along the line, in integers.
+            let p = GridPos::new(
+                a.x + (2 * dx * i + steps * dx.signum()) / (2 * steps),
+                a.y + (2 * dy * i + steps * dy.signum()) / (2 * steps),
+            );
+            self.is_walkable(p)
+        })
+    }
+
     /// Are `a` and `b` neighbours with an open edge between them (close
     /// enough to strike each other)?
     pub fn within_reach(&self, a: GridPos, b: GridPos) -> bool {

@@ -24,6 +24,7 @@ pub mod progression;
 pub mod rng;
 pub mod ruins;
 pub mod save;
+pub mod spells;
 pub mod stage;
 
 pub use dungeon::{Floor, GenParams, Place};
@@ -34,4 +35,5 @@ pub use items::{Bag, Item};
 pub use map::{Map, Tile};
 pub use progression::{MAX_LEVEL, Perk, Perks};
 pub use rng::Rng;
+pub use spells::Spell;
 pub use stage::{Stage, Theme};

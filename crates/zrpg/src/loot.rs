@@ -1,9 +1,9 @@
 //! What the dead leave behind: a pool of gold coins where they vanished,
 //! perhaps with an item standing in it, all turning to face you and
-//! catching the light until you walk over them. Keys 1 to 6 use items from
+//! catching the light until you walk over them. Number keys use items from
 //! the bag (see the belt on the HUD).
 //!
-//! Coins and item icons are drawn here, pixel by pixel; no art files.
+//! Coins are drawn here, pixel by pixel; item icons are in `assets/items`.
 
 use bevy::asset::RenderAssetUsages;
 use bevy::light::NotShadowCaster;
@@ -135,143 +135,16 @@ fn pool_image() -> Image {
     rgba_image(POOL_W, POOL_H, data)
 }
 
-/// A 12 x 12 icon for an item, drawn from a little character map.
+/// An item's 12 x 12 icon, from `assets/items` (made by
+/// `tools/make_spell_art.py`; repaint freely at the same size).
 pub fn icon(item: Item) -> Image {
-    let (rows, palette): ([&str; 12], &[(char, [u8; 3])]) = match item {
-        Item::GraveMoss => (
-            [
-                "............",
-                "....g.......",
-                "..g.gg..g...",
-                "..gGgGg.g...",
-                ".gGggGgGgg..",
-                ".ggGggggGgg.",
-                "..gggGgggg..",
-                ".gGgggggGgg.",
-                "..dgdgdgdd..",
-                "...dddddd...",
-                "............",
-                "............",
-            ],
-            &[
-                ('g', [74, 140, 52]),
-                ('G', [140, 200, 80]),
-                ('d', [70, 48, 30]),
-            ],
-        ),
-        Item::LinenBandage => (
-            [
-                "............",
-                "............",
-                "...wwwwww...",
-                "..wWWWWWWw..",
-                ".wWWsWWWWWw.",
-                ".wWsSsWWWWw.",
-                ".wWWsWWWWWw.",
-                ".wWWWWWWWWw.",
-                "..wWWWWWWw..",
-                "...wwwwww...",
-                "........ww..",
-                ".........w..",
-            ],
-            &[
-                ('w', [170, 160, 140]),
-                ('W', [236, 230, 214]),
-                ('s', [190, 60, 50]),
-                ('S', [220, 80, 60]),
-            ],
-        ),
-        Item::EmberShard => (
-            [
-                ".....y......",
-                ".....yo.....",
-                "....yYo.....",
-                "....yYoo....",
-                "...yYYoor...",
-                "...yYYYor...",
-                "..yYYYoorr..",
-                "...yYYoor...",
-                "....yYor....",
-                ".....yr.....",
-                ".....r......",
-                "............",
-            ],
-            &[
-                ('y', [255, 220, 120]),
-                ('Y', [255, 250, 200]),
-                ('o', [250, 140, 40]),
-                ('r', [190, 50, 20]),
-            ],
-        ),
-        Item::Ectoplasm => (
-            [
-                "............",
-                "....pppp....",
-                "...pPPPPp...",
-                "..pPPPPPPp..",
-                "..pPkPPkPp..",
-                "..pPPPPPPp..",
-                "..pPPPPPPp..",
-                "..pPPPPPPp..",
-                "..pPpPPpPp..",
-                "..p.p..p.p..",
-                "............",
-                "............",
-            ],
-            &[
-                ('p', [120, 190, 210]),
-                ('P', [200, 240, 250]),
-                ('k', [30, 50, 70]),
-            ],
-        ),
-        Item::BoneCharm => (
-            [
-                "............",
-                ".bb.....bb..",
-                "bBBb...bBBb.",
-                ".bBBb.bBBb..",
-                "..bBBbBBb...",
-                "...bBBBb....",
-                "...bBBBb....",
-                "..bBBbBBb...",
-                ".bBBb.bBBb..",
-                "bBBb...bBBb.",
-                ".bb.....bb..",
-                "............",
-            ],
-            &[('b', [150, 140, 120]), ('B', [235, 228, 205])],
-        ),
-        Item::DemonSigil => (
-            [
-                "............",
-                "....rrrr....",
-                "..rr....rr..",
-                ".r...RR...r.",
-                ".r..R..R..r.",
-                "r..RRRRRR..r",
-                "r...R..R...r",
-                ".r..R..R..r.",
-                ".r...RR...r.",
-                "..rr....rr..",
-                "....rrrr....",
-                "............",
-            ],
-            &[('r', [150, 20, 20]), ('R', [255, 70, 40])],
-        ),
+    let png: &[u8] = match item {
+        Item::HealthPotion => include_bytes!("../assets/items/health_potion.png"),
     };
-    let mut data = vec![0u8; (ICON * ICON * 4) as usize];
-    for (y, row) in rows.iter().enumerate() {
-        for (x, c) in row.chars().enumerate() {
-            if let Some((_, rgb)) = palette.iter().find(|(k, _)| *k == c) {
-                let i = (y * ICON as usize + x) * 4;
-                data[i..i + 4].copy_from_slice(&[rgb[0], rgb[1], rgb[2], 255]);
-            }
-        }
-    }
-    rgba_image(ICON, ICON, data)
+    crate::textures::embedded(png)
 }
 
-/// Keys 1 to 6 use the item in that belt slot.
+/// Number keys use the item in that belt slot.
 fn use_items(
     actions: Res<Actions>,
     picker: Res<crate::picker::Picker>,
@@ -404,9 +277,10 @@ mod tests {
     use super::*;
 
     #[test]
-    fn every_item_has_a_drawn_icon() {
+    fn every_item_has_an_icon() {
         for item in Item::ALL {
             let img = icon(item);
+            assert_eq!((img.width(), img.height()), (ICON, ICON));
             let data = img.data.as_ref().unwrap();
             let opaque = data.chunks(4).filter(|p| p[3] > 0).count();
             assert!(opaque > 20, "{item:?} icon is nearly empty");

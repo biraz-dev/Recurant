@@ -1,51 +1,26 @@
-//! Items: what the dead leave behind besides gold. Each creature family has
-//! its own, dropped now and then in the pool where it vanished; walking over
-//! the pool takes everything. Items are carried in a small bag and used one
-//! at a time.
+//! Items: what the dead sometimes leave besides gold, carried in a small bag
+//! and used one at a time. For now there is one, the Health Potion; the
+//! bag, pools and belt are built for more.
 
 use crate::enemy::EnemyKind;
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
 pub enum Item {
-    /// Heals 4.
-    GraveMoss,
-    /// Heals 8.
-    LinenBandage,
-    /// Refills Chi.
-    EmberShard,
-    /// The next blow at you passes through.
-    Ectoplasm,
-    /// 20 XP.
-    BoneCharm,
-    /// Your next three hits do double damage.
-    DemonSigil,
+    /// Heals 10.
+    HealthPotion,
 }
 
 /// At most this many of each item fit in the bag.
 pub const MAX_CARRIED: u8 = 9;
 
 pub mod tuning {
-    pub const GRAVE_MOSS_HEAL: i32 = 4;
-    pub const BANDAGE_HEAL: i32 = 8;
-    pub const BONE_CHARM_XP: u32 = 20;
-    /// Hits empowered by one Demon Sigil.
-    pub const SIGIL_HITS: u8 = 3;
-    /// Most blows Ectoplasm can ward off at once.
-    pub const MAX_WARD: u8 = 3;
-    /// Percent chance a kill drops its family's item; more for the strongest.
-    pub const DROP_PERCENT: u32 = 35;
-    pub const RARE_DROP_PERCENT: u32 = 60;
+    pub const POTION_HEAL: i32 = 10;
+    /// Percent chance any kill leaves a potion.
+    pub const POTION_DROP_PERCENT: u32 = 15;
 }
 
 impl Item {
-    pub const ALL: [Item; 6] = [
-        Item::GraveMoss,
-        Item::LinenBandage,
-        Item::EmberShard,
-        Item::Ectoplasm,
-        Item::BoneCharm,
-        Item::DemonSigil,
-    ];
+    pub const ALL: [Item; 1] = [Item::HealthPotion];
 
     pub fn index(self) -> usize {
         Item::ALL.iter().position(|&i| i == self).unwrap_or(0)
@@ -53,43 +28,20 @@ impl Item {
 
     pub const fn name(self) -> &'static str {
         match self {
-            Item::GraveMoss => "GRAVE MOSS",
-            Item::LinenBandage => "LINEN BANDAGE",
-            Item::EmberShard => "EMBER SHARD",
-            Item::Ectoplasm => "ECTOPLASM",
-            Item::BoneCharm => "BONE CHARM",
-            Item::DemonSigil => "DEMON SIGIL",
+            Item::HealthPotion => "HEALTH POTION",
         }
     }
 
     pub const fn description(self) -> &'static str {
         match self {
-            Item::GraveMoss => "Heals 4 Health",
-            Item::LinenBandage => "Heals 8 Health",
-            Item::EmberShard => "Refills Chi",
-            Item::Ectoplasm => "The next blow passes through you",
-            Item::BoneCharm => "Grants 20 XP",
-            Item::DemonSigil => "Your next 3 hits do double damage",
+            Item::HealthPotion => "Heals 10 Health",
         }
     }
 
-    /// What a creature leaves behind, if anything.
-    pub const fn dropped_by(kind: EnemyKind) -> Item {
-        match kind {
-            EnemyKind::Zombie | EnemyKind::Undead => Item::GraveMoss,
-            EnemyKind::Mummy | EnemyKind::RoyalMummy => Item::LinenBandage,
-            EnemyKind::EmberSkeleton | EnemyKind::InnerDemon => Item::EmberShard,
-            EnemyKind::Wraith => Item::Ectoplasm,
-            EnemyKind::SkeletonWarrior | EnemyKind::SkeletonKnight => Item::BoneCharm,
-            EnemyKind::DemonKnight => Item::DemonSigil,
-        }
-    }
-
-    /// The chance, in percent, that a kill of `kind` drops its item.
-    pub const fn drop_percent(kind: EnemyKind) -> u32 {
-        match kind {
-            EnemyKind::RoyalMummy | EnemyKind::DemonKnight => tuning::RARE_DROP_PERCENT,
-            _ => tuning::DROP_PERCENT,
+    /// The chance, in percent, that a kill of `kind` leaves this item.
+    pub const fn drop_percent(self, _kind: EnemyKind) -> u32 {
+        match self {
+            Item::HealthPotion => tuning::POTION_DROP_PERCENT,
         }
     }
 }
@@ -155,22 +107,17 @@ mod tests {
     use super::*;
 
     #[test]
-    fn every_creature_has_an_item_and_the_bag_has_limits() {
-        for kind in EnemyKind::ALL {
-            let _ = Item::dropped_by(kind);
-            assert!((1..=100).contains(&Item::drop_percent(kind)));
-        }
+    fn the_bag_has_limits() {
         let mut bag = Bag::default();
-        assert!(bag.is_empty() && !bag.take(Item::BoneCharm));
+        assert!(bag.is_empty() && !bag.take(Item::HealthPotion));
         for _ in 0..MAX_CARRIED {
-            assert!(bag.add(Item::BoneCharm));
+            assert!(bag.add(Item::HealthPotion));
         }
-        assert!(!bag.add(Item::BoneCharm), "full");
-        assert_eq!(bag.count(Item::BoneCharm), MAX_CARRIED);
-        assert!(bag.take(Item::BoneCharm));
+        assert!(!bag.add(Item::HealthPotion), "full");
+        assert!(bag.take(Item::HealthPotion));
         assert_eq!(
             bag.items().collect::<Vec<_>>(),
-            [(Item::BoneCharm, MAX_CARRIED - 1)]
+            [(Item::HealthPotion, MAX_CARRIED - 1)]
         );
     }
 }

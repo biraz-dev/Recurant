@@ -14,6 +14,7 @@ mod android {
     }
 
     pub const A: KeyCode = code(96);
+    pub const B: KeyCode = code(97);
     pub const X: KeyCode = code(99);
     pub const Y: KeyCode = code(100);
     pub const L1: KeyCode = code(102);
@@ -39,17 +40,16 @@ pub enum Action {
     Mute,
     /// Cycle the automap: corner, full screen, hidden.
     Map,
-    /// Use the item in a belt slot (keys 1 to 6).
+    /// Use the item in the belt slot (key 1).
     Item1,
-    Item2,
-    Item3,
-    Item4,
-    Item5,
-    Item6,
+    /// Cast a spell: Spark, Chain Lightning, Lightning Bolt (Z, X, C).
+    Spell1,
+    Spell2,
+    Spell3,
 }
 
 impl Action {
-    pub const ALL: [Action; 17] = [
+    pub const ALL: [Action; 15] = [
         Action::Forward,
         Action::Back,
         Action::StrafeLeft,
@@ -62,22 +62,15 @@ impl Action {
         Action::Mute,
         Action::Map,
         Action::Item1,
-        Action::Item2,
-        Action::Item3,
-        Action::Item4,
-        Action::Item5,
-        Action::Item6,
+        Action::Spell1,
+        Action::Spell2,
+        Action::Spell3,
     ];
 
     /// The item slots, in order.
-    pub const ITEMS: [Action; 6] = [
-        Action::Item1,
-        Action::Item2,
-        Action::Item3,
-        Action::Item4,
-        Action::Item5,
-        Action::Item6,
-    ];
+    pub const ITEMS: [Action; 1] = [Action::Item1];
+    /// The spell keys, in `Spell::ALL` order.
+    pub const SPELLS: [Action; 3] = [Action::Spell1, Action::Spell2, Action::Spell3];
 
     fn keys(self) -> &'static [KeyCode] {
         use KeyCode::*;
@@ -102,11 +95,9 @@ impl Action {
             Action::Mute => &[KeyM],
             Action::Map => &[Tab, android::L2],
             Action::Item1 => &[Digit1],
-            Action::Item2 => &[Digit2],
-            Action::Item3 => &[Digit3],
-            Action::Item4 => &[Digit4],
-            Action::Item5 => &[Digit5],
-            Action::Item6 => &[Digit6],
+            Action::Spell1 => &[KeyZ, android::B],
+            Action::Spell2 => &[KeyX],
+            Action::Spell3 => &[KeyC],
         }
     }
 
@@ -124,12 +115,8 @@ impl Action {
             Action::Auto => &[North],
             Action::Mute => &[],
             Action::Map => &[LeftTrigger2],
-            Action::Item1
-            | Action::Item2
-            | Action::Item3
-            | Action::Item4
-            | Action::Item5
-            | Action::Item6 => &[],
+            Action::Spell1 => &[East],
+            Action::Item1 | Action::Spell2 | Action::Spell3 => &[],
         }
     }
 

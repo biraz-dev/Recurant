@@ -39,7 +39,8 @@ See [docs/PLATFORMS.md](docs/PLATFORMS.md) for web and Android details and
 | Attack        | Space / F         | A, X, RT             |
 | Auto mode on/off | P              | Y                    |
 | Map: corner, full, hidden | Tab | LT                  |
-| Use item (belt slot) | 1 to 6     |                      |
+| Spark / Chain Lightning / Lightning Bolt | Z / X / C | B (Spark) |
+| Drink a Health Potion | 1         |                      |
 | Sound on/off  | M                 |                      |
 | Restart (new seed) | R (or Attack once dead) | Select / Back |
 
@@ -61,21 +62,36 @@ rise again in a fresh dungeon.
 
 The dead dissolve like apparitions in a dream: they pale, drift up and come
 apart pixel by pixel, leaving a pool of **gold** where they stood (more for
-tougher creatures and deeper floors) and sometimes an **item** of their own:
+tougher creatures and deeper floors) and sometimes a **Health Potion**
+(about one kill in seven), which heals 10; press 1 to drink one.
 
-| Item | Left by | Use (keys 1 to 6) |
-|---|---|---|
-| Grave Moss | zombies, undead | heals 4 |
-| Linen Bandage | mummies | heals 8 |
-| Ember Shard | ember skeletons, inner demons | refills Chi |
-| Ectoplasm | wraiths | the next blow passes through you |
-| Bone Charm | skeleton warriors and knights | 20 XP |
-| Demon Sigil | demon knights | your next 3 hits do double damage |
-
-Walk over a pool to take everything in it (up to nine of each item). Your
-purse shows beside your level and your items on the belt above it, each
-with the key that uses it. Loot left behind stays behind when you take the
+Walk over a pool to take everything in it (up to nine potions). Your
+purse shows beside your level and your potions on the belt above it, with
+the key that uses them. Loot left behind stays behind when you take the
 stairs. Auto mode picks up nearby loot and uses items when they help.
+
+## Spells
+
+Three lightning spells, cast from the off hand, each costing Chi and with
+its own short cooldown. Damage grows by one every six levels.
+
+| Spell | Key | Chi | What it does |
+|---|---|---|---|
+| Spark | Z | 2 | a faint flurry of 3 to 5 little hits (1 each) on the first foe straight ahead, up to 3 cells away |
+| Chain Lightning | X | 5 | strikes the nearest foe within 4 cells, then arcs on to up to three more nearby: 5, 4, 3, 2 damage |
+| Lightning Bolt | C | 4 | a straight bolt 6 cells down your line of sight, through everything in it: 4 damage each |
+
+The spell bar (bottom right) dims a spell you can't afford and shades it
+while it cools down. Spark and Chain Lightning fizzle, costing nothing, with
+no one to strike; a bolt always flies. Auto mode casts too: chain or bolt
+into crowds, Spark at what's coming, always keeping Chi for a swing.
+
+The art is placeholder pixel art from `tools/make_spell_art.py`, in
+`crates/zrpg/assets/spells` and `assets/items`: the icons, four frames of
+spark particles and a 64×16 lightning strip that repeats along each arc.
+Repaint any of them at the same size. `cargo run -p zrpg --example
+spellbook` casts each spell at a row of creatures (`--shots DIR` saves
+stills).
 
 ## The ruins and what lives below
 
@@ -181,6 +197,8 @@ cargo run -p zrpg_core --example ascii 7     # print generated floors as ASCII
 ZRPG_SCRIPT="w e shot quit" cargo run        # scripted input + screenshot (zrpg-0.png)
 cargo run -p zrpg --example sfx              # write every sound effect to target/sfx/
 cargo run -p zrpg --example bestiary         # parade every creature (--shots DIR saves stills)
+cargo run -p zrpg --example spellbook        # cast every spell at a row of creatures
+python3 tools/make_spell_art.py              # placeholder spell and potion art
 python3 tools/extract_asset_kits.py          # unpack art/kits/archives (needed by the two below)
 python3 tools/make_ruins.py                  # ruins kit -> assets/ruins + zrpg_core/src/ruins.map
 python3 tools/make_creatures.py              # creature kits -> assets/creatures + src/sheets.rs

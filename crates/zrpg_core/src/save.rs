@@ -5,7 +5,8 @@
 //!
 //! The format is versioned little-endian bytes. A save that doesn't parse,
 //! or comes from an unknown version, is ignored rather than trusted.
-//! Version 2 added gold, version 3 items; older saves still load, with
+//! Version 2 added gold, version 3 six creature items, version 4 kept only
+//! the Health Potion; older saves still load, with
 //! what they lack left empty.
 
 use alloc::vec::Vec;
@@ -14,11 +15,15 @@ use crate::dungeon::Floor;
 use crate::enemy::{Enemy, EnemyKind, EnemyState};
 use crate::game::{Drop, Game, Player};
 use crate::grid::{Facing, GridPos};
-use crate::items::{Bag, Item, tuning as item_tuning};
+use crate::items::{Bag, Item};
 use crate::progression::{MAX_LEVEL, Perk, Perks};
 use crate::rng::Rng;
 
-const MAGIC: &[u8; 4] = b"ZRS3";
+const MAGIC: &[u8; 4] = b"ZRS4";
+const MAGIC_V3: &[u8; 4] = b"ZRS3";
+/// Version 3 carried six kinds of item (none of them potions), a ward and
+/// empowered hits; their bytes are read and set aside.
+const V3_ITEMS: usize = 6;
 const MAGIC_V2: &[u8; 4] = b"ZRS2";
 const MAGIC_V1: &[u8; 4] = b"ZRS1";
 
@@ -48,8 +53,6 @@ impl Game {
         w.extend(Perk::ALL.map(|perk| p.perks.count(perk)));
         put_u32(&mut w, p.gold);
         w.extend(p.bag.counts());
-        w.push(p.ward);
-        w.push(p.empowered);
         put_u32(&mut w, self.drops.len() as u32);
         for d in &self.drops {
             put_i32(&mut w, d.pos.x);
@@ -89,7 +92,8 @@ impl Game {
     pub fn load(bytes: &[u8]) -> Option<Game> {
         let mut r = Reader { bytes, at: 0 };
         let version = match r.take(4)? {
-            m if m == MAGIC => 3,
+            m if m == MAGIC => 4,
+            m if m == MAGIC_V3 => 3,
             m if m == MAGIC_V2 => 2,
             m if m == MAGIC_V1 => 1,
             _ => return None,
@@ -125,8 +129,7 @@ impl Game {
             perks: Perks::default(),
             gold: 0,
             bag: Bag::default(),
-            ward: 0,
-            empowered: 0,
+            spell_cooldowns: [0.0; crate::spells::Spell::ALL.len()],
             regen: r.f32()?,
         };
         let mut counts = [0u8; Perk::ALL.len()];
@@ -136,19 +139,22 @@ impl Game {
         player.perks = Perks::from_counts(counts);
         if version >= 2 {
             player.gold = r.u32()?;
-            if version >= 3 {
+            if version >= 4 {
                 player.bag = Bag::from_counts(r.bag()?);
-                player.ward = r.u8()?.min(item_tuning::MAX_WARD);
-                player.empowered = r.u8()?;
+            } else if version == 3 {
+                r.take(V3_ITEMS + 2)?;
             }
             let mut drops = Vec::new();
             for _ in 0..r.u32()?.min(256) {
                 let pos = GridPos::new(r.i32()?, r.i32()?);
                 let gold = r.u32()?;
-                let items = if version >= 3 {
-                    Bag::from_counts(r.bag()?)
-                } else {
-                    Bag::default()
+                let items = match version {
+                    4.. => Bag::from_counts(r.bag()?),
+                    3 => {
+                        r.take(V3_ITEMS)?;
+                        Bag::default()
+                    }
+                    _ => Bag::default(),
                 };
                 if !game.floor.map.is_walkable(pos) {
                     return None;
@@ -327,8 +333,8 @@ mod tests {
         // Rewrite as version 1: old magic, no gold or drops after the perks.
         v1[..4].copy_from_slice(MAGIC_V1);
         let perks_end = 4 + 8 + 4 + 2 + 8 + 4 * 2 + 1 + 4 * 5 + 4 * 2 + 4 + Perk::ALL.len();
-        // Gold, bag, ward and empowered, then the drops with their items.
-        let gold_and_drops = 4 + Item::ALL.len() + 2 + 4 + (12 + Item::ALL.len()) * g.drops.len();
+        // Gold and the bag, then the drops with their items.
+        let gold_and_drops = 4 + Item::ALL.len() + 4 + (12 + Item::ALL.len()) * g.drops.len();
         v1.drain(perks_end..perks_end + gold_and_drops);
         let back = Game::load(&v1).expect("version 1 loads");
         assert_eq!(back.player.gold, 0);

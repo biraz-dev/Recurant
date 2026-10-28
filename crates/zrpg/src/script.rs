@@ -2,8 +2,11 @@
 //! confused with auto mode, which plays the game for real.)
 //!
 //! `ZRPG_SCRIPT="w w e shot d shot quit"` presses one action per tick
-//! (`w s a d q e f r`, `1 2 3` for item slots, or `auto`, `mute`, `map`),
+//! (`w s a d q e f r`, `1` for the item slot, `z x c` for spells, or
+//! `auto`, `mute`, `map`),
 //! idles on `wait`, saves `zrpg-N.png` on `shot`, and exits on `quit`.
+//! `slow` runs the game at a twentieth of its speed (steps keep their real
+//! pace), to catch quick effects like spells on screen; `fast` undoes it.
 //! Does nothing when the variable is unset.
 
 use std::collections::VecDeque;
@@ -40,7 +43,8 @@ struct Script {
 
 fn tick(
     mut commands: Commands,
-    time: Res<Time>,
+    time: Res<Time<Real>>,
+    mut virtual_time: ResMut<Time<Virtual>>,
     mut pilot: ResMut<Script>,
     mut actions: ResMut<Actions>,
     mut exit: MessageWriter<AppExit>,
@@ -64,8 +68,9 @@ fn tick(
         "mute" => Action::Mute,
         "map" => Action::Map,
         "1" => Action::Item1,
-        "2" => Action::Item2,
-        "3" => Action::Item3,
+        "z" => Action::Spell1,
+        "x" => Action::Spell2,
+        "c" => Action::Spell3,
         "r" => Action::Restart,
         "shot" => {
             let path = format!("zrpg-{}.png", pilot.shots);
@@ -80,6 +85,10 @@ fn tick(
             return;
         }
         "wait" => return,
+        "slow" | "fast" => {
+            virtual_time.set_relative_speed(if step == "slow" { 0.05 } else { 1.0 });
+            return;
+        }
         "quit" => {
             exit.write(AppExit::Success);
             return;

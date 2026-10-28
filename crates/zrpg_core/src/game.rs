@@ -13,6 +13,7 @@ use crate::items::{Bag, Item, tuning as item_tuning};
 use crate::map::Tile;
 use crate::progression::{self, MAX_LEVEL, Perk, Perks};
 use crate::rng::{Rng, mix64};
+use crate::spells::{self, Spell, tuning as spell_tuning};
 use crate::stage;
 
 /// Player tuning, in seconds, hit points and energy points.
@@ -58,6 +59,8 @@ pub enum Command {
     Choose(u8),
     /// Use one of an item from the bag.
     UseItem(Item),
+    /// Cast a spell.
+    Cast(Spell),
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -146,6 +149,25 @@ pub enum Event {
     ItemUsed {
         item: Item,
     },
+    /// A spell went off from `from`; `reach` is where its line ends (the
+    /// bolt) or its first target.
+    SpellCast {
+        spell: Spell,
+        from: GridPos,
+        reach: GridPos,
+    },
+    /// A spell struck an enemy at `at`; `order` counts its strikes (the
+    /// sparks of a Spark, the jumps of a chain).
+    SpellHit {
+        spell: Spell,
+        id: EnemyId,
+        at: GridPos,
+        order: u8,
+    },
+    /// Nothing for the spell to strike; no Chi spent.
+    SpellFizzled {
+        spell: Spell,
+    },
 }
 
 /// A pool of gold, and perhaps items, where something vanished.
@@ -175,10 +197,8 @@ pub struct Player {
     pub gold: u32,
     /// Items carried.
     pub bag: Bag,
-    /// Blows that will pass through you (Ectoplasm).
-    pub ward: u8,
-    /// Hits that will do double damage (Demon Sigil).
-    pub empowered: u8,
+    /// Seconds until each spell can be cast again, in `Spell::ALL` order.
+    pub spell_cooldowns: [f32; Spell::ALL.len()],
     /// Seconds towards the next Health from Regeneration.
     pub(crate) regen: f32,
 }
@@ -198,8 +218,7 @@ impl Player {
             perks: Perks::default(),
             gold: 0,
             bag: Bag::default(),
-            ward: 0,
-            empowered: 0,
+            spell_cooldowns: [0.0; Spell::ALL.len()],
             regen: 0.0,
         }
     }
@@ -361,17 +380,9 @@ impl Game {
         }
         let p = &mut self.player;
         match item {
-            Item::GraveMoss => p.hp = (p.hp + item_tuning::GRAVE_MOSS_HEAL).min(p.max_hp),
-            Item::LinenBandage => p.hp = (p.hp + item_tuning::BANDAGE_HEAL).min(p.max_hp),
-            Item::EmberShard => p.energy = p.max_energy,
-            Item::Ectoplasm => p.ward = (p.ward + 1).min(item_tuning::MAX_WARD),
-            Item::DemonSigil => p.empowered = p.empowered.saturating_add(item_tuning::SIGIL_HITS),
-            Item::BoneCharm => {}
+            Item::HealthPotion => p.hp = (p.hp + item_tuning::POTION_HEAL).min(p.max_hp),
         }
         out.push(Event::ItemUsed { item });
-        if item == Item::BoneCharm {
-            self.gain_xp(item_tuning::BONE_CHARM_XP, out);
-        }
     }
 
     /// Take ability `choice` of the oldest waiting level-up.
@@ -465,6 +476,7 @@ impl Game {
             }
             Command::Choose(n) => self.choose(n as usize, out),
             Command::UseItem(item) => self.use_item(item, out),
+            Command::Cast(spell) => self.cast(spell, out),
         }
     }
 
@@ -481,7 +493,6 @@ impl Game {
         p.attack_cooldown = p.attack_cooldown_secs();
         let edge = p.stacks(Perk::KeenEdge) as i32;
         let crushing = p.stacks(Perk::CrushingBlow) as u32 * perk_tuning::CRUSHING_PERCENT;
-        let concussion = p.stacks(Perk::Concussion) as f32 * perk_tuning::CONCUSSION_SECS;
         let target = p.pos + p.facing;
         // A parapet between you and it is out of reach.
         let reachable = self.floor.map.within_reach(p.pos, target);
@@ -498,16 +509,19 @@ impl Game {
         if crushing > 0 && self.rng.chance(crushing) {
             damage *= 2;
         }
-        if self.player.empowered > 0 {
-            self.player.empowered -= 1;
-            damage *= 2;
-        }
-        let enemy = &mut self.enemies[i];
         out.push(Event::Swung {
-            hit: Some(enemy.id),
+            hit: Some(self.enemies[i].id),
         });
+        self.hurt_enemy(i, damage, out);
+    }
+
+    /// Hurt enemy `i`: a hit wakes it, a hit during its wind-up staggers
+    /// it, and a killing hit leaves loot and gives XP. Returns whether it
+    /// died (and so left the list).
+    fn hurt_enemy(&mut self, i: usize, damage: i32, out: &mut Vec<Event>) -> bool {
+        let concussion = self.player.stacks(Perk::Concussion) as f32 * perk_tuning::CONCUSSION_SECS;
+        let enemy = &mut self.enemies[i];
         enemy.hp -= damage;
-        // A hit wakes sleepers and interrupts a wind-up.
         let staggered = enemy.is_winding_up();
         if staggered {
             enemy.state = EnemyState::Recover {
@@ -521,38 +535,164 @@ impl Game {
             damage,
             staggered,
         });
-        if enemy.hp <= 0 {
-            out.push(Event::EnemyDied {
-                id: enemy.id,
-                at: enemy.pos,
-            });
-            let (kind, at) = (enemy.kind, enemy.pos);
-            self.enemies.swap_remove(i);
-            let amount = progression::gold_for_kill(kind, self.depth, self.rng.next_u32());
-            let mut items = Bag::default();
-            if self.rng.chance(Item::drop_percent(kind)) {
-                items.add(Item::dropped_by(kind));
+        if enemy.hp > 0 {
+            return false;
+        }
+        out.push(Event::EnemyDied {
+            id: enemy.id,
+            at: enemy.pos,
+        });
+        let (kind, at) = (enemy.kind, enemy.pos);
+        self.enemies.swap_remove(i);
+        let amount = progression::gold_for_kill(kind, self.depth, self.rng.next_u32());
+        let mut items = Bag::default();
+        for item in Item::ALL {
+            if self.rng.chance(item.drop_percent(kind)) {
+                items.add(item);
             }
-            match self.drops.iter_mut().find(|d| d.pos == at) {
-                Some(d) => {
-                    d.gold += amount;
-                    for (item, n) in items.items() {
-                        for _ in 0..n {
-                            d.items.add(item);
-                        }
+        }
+        match self.drops.iter_mut().find(|d| d.pos == at) {
+            Some(d) => {
+                d.gold += amount;
+                for (item, n) in items.items() {
+                    for _ in 0..n {
+                        d.items.add(item);
                     }
                 }
-                None => self.drops.push(Drop {
-                    pos: at,
-                    gold: amount,
-                    items,
-                }),
             }
-            out.push(Event::GoldDropped { at, amount });
-            let p = &mut self.player;
-            let heal = perk_tuning::BLOODTHIRST_HEAL * p.stacks(Perk::Bloodthirst) as i32;
-            p.hp = (p.hp + heal).min(p.max_hp);
-            self.gain_xp(progression::xp_for_kill(kind, self.depth), out);
+            None => self.drops.push(Drop {
+                pos: at,
+                gold: amount,
+                items,
+            }),
+        }
+        out.push(Event::GoldDropped { at, amount });
+        let p = &mut self.player;
+        let heal = perk_tuning::BLOODTHIRST_HEAL * p.stacks(Perk::Bloodthirst) as i32;
+        p.hp = (p.hp + heal).min(p.max_hp);
+        self.gain_xp(progression::xp_for_kill(kind, self.depth), out);
+        true
+    }
+
+    /// The enemies a spell would strike, in order, and where its line
+    /// ends (for the bolt). Empty if it has nothing to strike.
+    pub fn spell_targets(&self, spell: Spell) -> (Vec<EnemyId>, GridPos) {
+        let map = &self.floor.map;
+        let p = &self.player;
+        // Cells straight ahead, until a wall, a closed edge, or the range.
+        let ahead = |range: i32| {
+            let mut cells = Vec::new();
+            let mut at = p.pos;
+            for _ in 0..range {
+                if !map.can_step(at, p.facing) {
+                    break;
+                }
+                at = at + p.facing;
+                cells.push(at);
+            }
+            cells
+        };
+        match spell {
+            Spell::Spark => {
+                let cells = ahead(spell_tuning::SPARK_RANGE);
+                let hit = cells
+                    .iter()
+                    .find_map(|&c| self.enemy_at(c).map(|e| (e.id, c)));
+                match hit {
+                    Some((id, c)) => (alloc::vec![id], c),
+                    None => (Vec::new(), cells.last().copied().unwrap_or(p.pos)),
+                }
+            }
+            Spell::LightningBolt => {
+                let cells = ahead(spell_tuning::BOLT_RANGE);
+                let ids = cells
+                    .iter()
+                    .filter_map(|&c| self.enemy_at(c).map(|e| e.id))
+                    .collect();
+                (ids, cells.last().copied().unwrap_or(p.pos))
+            }
+            Spell::ChainLightning => {
+                let mut ids: Vec<EnemyId> = Vec::new();
+                let mut from = p.pos;
+                let mut reach = spell_tuning::CHAIN_RANGE;
+                while ids.len() < spell_tuning::CHAIN_TARGETS {
+                    let next = self
+                        .enemies
+                        .iter()
+                        .filter(|e| !ids.contains(&e.id))
+                        .filter(|e| e.pos.manhattan(from) <= reach && map.in_sight(from, e.pos))
+                        .min_by_key(|e| (e.pos.manhattan(from), e.id));
+                    let Some(e) = next else { break };
+                    ids.push(e.id);
+                    from = e.pos;
+                    reach = spell_tuning::CHAIN_JUMP;
+                }
+                let first = ids
+                    .first()
+                    .and_then(|&id| self.enemies.iter().find(|e| e.id == id))
+                    .map_or(p.pos, |e| e.pos);
+                (ids, first)
+            }
+        }
+    }
+
+    /// Cast `spell`, if it is ready, there is Chi for it, and (for Spark
+    /// and Chain Lightning) something to strike.
+    fn cast(&mut self, spell: Spell, out: &mut Vec<Event>) {
+        let p = &self.player;
+        if p.spell_cooldowns[spell.index()] > 0.0 {
+            return;
+        }
+        if p.energy < spell.cost() {
+            out.push(Event::Exhausted);
+            return;
+        }
+        let (targets, reach) = self.spell_targets(spell);
+        if targets.is_empty() && spell != Spell::LightningBolt {
+            out.push(Event::SpellFizzled { spell });
+            return;
+        }
+        let p = &mut self.player;
+        p.energy -= spell.cost();
+        p.spell_cooldowns[spell.index()] = spell.cooldown();
+        let bonus = spells::level_bonus(p.level);
+        out.push(Event::SpellCast {
+            spell,
+            from: p.pos,
+            reach,
+        });
+        let hits: Vec<(EnemyId, i32)> = match spell {
+            Spell::Spark => {
+                let n = self
+                    .rng
+                    .range(spell_tuning::SPARK_HITS_MIN, spell_tuning::SPARK_HITS_MAX);
+                (0..n)
+                    .map(|_| (targets[0], spell_tuning::SPARK_DAMAGE + bonus))
+                    .collect()
+            }
+            Spell::ChainLightning => targets
+                .iter()
+                .zip(spell_tuning::CHAIN_DAMAGE)
+                .map(|(&id, d)| (id, d + bonus))
+                .collect(),
+            Spell::LightningBolt => targets
+                .iter()
+                .map(|&id| (id, spell_tuning::BOLT_DAMAGE + bonus))
+                .collect(),
+        };
+        for (order, (id, damage)) in hits.into_iter().enumerate() {
+            // A target already dead (Spark's later sparks) is skipped.
+            let Some(i) = self.enemies.iter().position(|e| e.id == id) else {
+                continue;
+            };
+            let at = self.enemies[i].pos;
+            out.push(Event::SpellHit {
+                spell,
+                id,
+                at,
+                order: order as u8,
+            });
+            self.hurt_enemy(i, damage, out);
         }
     }
 
@@ -563,6 +703,9 @@ impl Game {
         }
         let p = &mut self.player;
         p.attack_cooldown = (p.attack_cooldown - dt).max(0.0);
+        for c in p.spell_cooldowns.iter_mut() {
+            *c = (*c - dt).max(0.0);
+        }
         p.energy = (p.energy + p.energy_regen() * dt).min(p.max_energy);
         let regen = p.stacks(Perk::Regeneration);
         if regen > 0 && p.hp < p.max_hp {
@@ -644,10 +787,6 @@ impl Game {
                 let evasion = p.stacks(Perk::Evasion) as u32 * perk_tuning::EVASION_PERCENT;
                 let iron = perk_tuning::IRON_SKIN * p.stacks(Perk::IronSkin) as i32;
                 let damage = if !adjacent {
-                    0
-                } else if self.player.ward > 0 {
-                    self.player.ward -= 1;
-                    out.push(Event::Dodged { id });
                     0
                 } else if evasion > 0 && self.rng.chance(evasion) {
                     out.push(Event::Dodged { id });
@@ -919,58 +1058,118 @@ mod tests {
     }
 
     #[test]
-    fn items_drop_from_their_creatures_and_do_what_they_say() {
-        // Enough kills of one kind to see its item drop.
+    fn potions_drop_now_and_then_and_heal() {
         let mut g = corridor(3);
         let mut out = Vec::new();
         g.player.pos = GridPos::new(2, 1);
-        for _ in 0..30 {
-            g.enemies = alloc::vec![Enemy::of_kind(1, GridPos::new(3, 1), EnemyKind::Mummy)];
+        for _ in 0..40 {
+            g.enemies = alloc::vec![Enemy::of_kind(1, GridPos::new(3, 1), EnemyKind::Zombie)];
             kill_in_front(&mut g, &mut out);
         }
-        let pool = g.drops[0].items;
-        assert!(pool.count(Item::LinenBandage) > 0, "mummies drop bandages");
-        assert_eq!(pool.items().count(), 1, "and nothing else");
-
-        // Healing, capped at max Health.
-        g.player.bag.add(Item::LinenBandage);
+        assert!(
+            g.drops[0].items.count(Item::HealthPotion) > 0,
+            "40 kills, no potion"
+        );
+        g.player.bag.add(Item::HealthPotion);
         g.player.hp = 5;
-        g.apply(Command::UseItem(Item::LinenBandage), &mut out);
-        assert_eq!(g.player.hp, 13);
-        // Using what you don't have does nothing.
+        g.apply(Command::UseItem(Item::HealthPotion), &mut out);
+        assert_eq!(g.player.hp, 15);
+    }
+
+    /// A corridor with enemies at the given x positions, the player at x=1
+    /// facing east, full of Chi.
+    fn lined_up(xs: &[i32]) -> Game {
+        let mut g = corridor(9);
+        g.enemies = xs
+            .iter()
+            .enumerate()
+            .map(|(i, &x)| Enemy::of_kind(i as EnemyId, GridPos::new(x, 1), EnemyKind::DemonKnight))
+            .collect();
+        g.player.energy = g.player.max_energy;
+        g
+    }
+
+    fn hits(out: &[Event]) -> Vec<(EnemyId, i32)> {
+        out.iter()
+            .filter_map(|e| match e {
+                Event::EnemyHurt { id, damage, .. } => Some((*id, *damage)),
+                _ => None,
+            })
+            .collect()
+    }
+
+    #[test]
+    fn spark_flickers_three_to_five_times_at_the_nearest_ahead() {
+        let mut counts = std::collections::HashSet::new();
+        for seed in 0..40 {
+            let mut g = lined_up(&[3, 4]);
+            g.rng = Rng::new(seed);
+            let mut out = Vec::new();
+            g.apply(Command::Cast(Spell::Spark), &mut out);
+            let h = hits(&out);
+            assert!(h.iter().all(|&(id, d)| id == 0 && d == 1), "{h:?}");
+            assert!((3..=5).contains(&h.len()));
+            counts.insert(h.len());
+            assert!((g.player.energy - (g.player.max_energy - Spell::Spark.cost())).abs() < 1e-4);
+        }
+        assert_eq!(counts.len(), 3, "3, 4 and 5 sparks all happen");
+        // Out of range, nothing happens and nothing is spent.
+        let mut g = lined_up(&[6]);
+        let mut out = Vec::new();
+        g.apply(Command::Cast(Spell::Spark), &mut out);
+        assert_eq!(
+            out,
+            [Event::SpellFizzled {
+                spell: Spell::Spark
+            }]
+        );
+        assert_eq!(g.player.energy, g.player.max_energy);
+    }
+
+    #[test]
+    fn the_bolt_goes_through_everything_in_line_and_stops_at_walls() {
+        let mut g = lined_up(&[3, 5, 7, 9]);
+        let mut out = Vec::new();
+        g.apply(Command::Cast(Spell::LightningBolt), &mut out);
+        // Range 6 from x=1 reaches x=7; x=9 is too far.
+        let ids: Vec<_> = hits(&out).iter().map(|h| h.0).collect();
+        assert_eq!(ids, [0, 1, 2]);
+        assert!(out.contains(&Event::SpellCast {
+            spell: Spell::LightningBolt,
+            from: GridPos::new(1, 1),
+            reach: GridPos::new(7, 1),
+        }));
+        // Again at once: still cooling down.
         out.clear();
-        g.apply(Command::UseItem(Item::EmberShard), &mut out);
+        g.player.energy = g.player.max_energy;
+        g.apply(Command::Cast(Spell::LightningBolt), &mut out);
         assert!(out.is_empty());
+    }
 
-        // Ectoplasm: the next blow passes through.
-        g.player.bag.add(Item::Ectoplasm);
-        g.apply(Command::UseItem(Item::Ectoplasm), &mut out);
-        g.enemies = alloc::vec![Enemy::of_kind(1, GridPos::new(3, 1), EnemyKind::Zombie)];
-        g.enemies[0].state = EnemyState::WindUp { left: 0.01 };
-        let hp = g.player.hp;
-        let events = run(&mut g, 0.05);
-        assert!(events.contains(&Event::Dodged { id: 1 }));
-        assert_eq!(g.player.hp, hp);
-        assert_eq!(g.player.ward, 0);
+    #[test]
+    fn chain_lightning_arcs_from_foe_to_foe_and_weakens() {
+        let mut g = lined_up(&[3, 5, 7, 9, 10]);
+        let mut out = Vec::new();
+        g.apply(Command::Cast(Spell::ChainLightning), &mut out);
+        // Nearest first, then each next within 3, at most 4, 5-4-3-2.
+        assert_eq!(hits(&out), [(0, 5), (1, 4), (2, 3), (3, 2)]);
+        assert!((g.player.energy - (g.player.max_energy - 5.0)).abs() < 1e-4);
+    }
 
-        // Demon Sigil: three doubled hits.
-        g.player.bag.add(Item::DemonSigil);
-        g.apply(Command::UseItem(Item::DemonSigil), &mut out);
-        assert_eq!(g.player.empowered, 3);
-        g.enemies = alloc::vec![Enemy::of_kind(
-            1,
-            GridPos::new(3, 1),
-            EnemyKind::DemonKnight
-        )];
-        g.player.attack_cooldown = 0.0;
+    #[test]
+    fn spells_need_chi_and_kills_by_spell_pay() {
+        let mut g = lined_up(&[2]);
+        g.player.energy = 1.0;
+        let mut out = Vec::new();
+        g.apply(Command::Cast(Spell::LightningBolt), &mut out);
+        assert_eq!(out, [Event::Exhausted]);
+        g.enemies[0].hp = 1;
+        g.player.energy = g.player.max_energy;
         out.clear();
-        g.apply(Command::Attack, &mut out);
-        let dealt = out.iter().find_map(|e| match e {
-            Event::EnemyHurt { damage, .. } => Some(*damage),
-            _ => None,
-        });
-        assert!(dealt.is_some_and(|d| d >= 4 && d % 2 == 0), "{dealt:?}");
-        assert_eq!(g.player.empowered, 2);
+        g.apply(Command::Cast(Spell::LightningBolt), &mut out);
+        assert!(out.iter().any(|e| matches!(e, Event::EnemyDied { .. })));
+        assert!(out.iter().any(|e| matches!(e, Event::GoldDropped { .. })));
+        assert!(out.iter().any(|e| matches!(e, Event::GainedXp { .. })));
     }
 
     /// Kill whatever is in front of the player, as many times as needed.

@@ -4,7 +4,8 @@
 //! it likes.
 //!
 //! The bot's habits, in priority order:
-//! 0. Use an item when it clearly helps (see [`item_to_use`]).
+//! 0. Drink a potion when badly hurt; cast lightning when it pays (see
+//!    [`spell_to_cast`]).
 //! 1. On the stairs: go down.
 //! 2. Enemy next to it: face it and swing. When the enemy winds up, hit it to
 //!    stagger it, or step out of reach if a swing isn't ready.
@@ -15,7 +16,8 @@
 use crate::enemy::Enemy;
 use crate::game::{Command, Game};
 use crate::grid::{Facing, GridPos, Step, Turn};
-use crate::items::{Item, tuning as item_tuning};
+use crate::items::Item;
+use crate::spells::Spell;
 
 /// Below this share of max Health the bot stops seeking fights and heads
 /// for the stairs, which heal.
@@ -35,6 +37,9 @@ pub fn next_command(game: &Game) -> Option<Command> {
     }
     if game.on_stairs() {
         return Some(Command::Descend);
+    }
+    if let Some(spell) = spell_to_cast(game) {
+        return Some(Command::Cast(spell));
     }
     let map = &game.floor.map;
     if let Some(enemy) = game.enemies.iter().find(|e| map.within_reach(e.pos, p.pos)) {
@@ -62,46 +67,40 @@ pub fn next_command(game: &Game) -> Option<Command> {
     walk_toward(game, target)
 }
 
-/// Heal below this share of max Health, if there is something to heal with.
+/// Heal below this share of max Health, if there is a potion.
 const HEAL_BELOW: f32 = 0.45;
-/// Save Demon Sigils for foes at least this tough.
-const SIGIL_WORTHY_HP: i32 = 12;
 
-/// An item worth using right now: heal when hurt, cash in XP at once, and
-/// keep the fighting items for a fight that needs them.
+/// An item worth using right now: a potion when badly hurt.
 fn item_to_use(game: &Game) -> Option<Item> {
     let p = &game.player;
-    let has = |item| p.bag.count(item) > 0;
-    let missing = p.max_hp - p.hp;
-    if (p.hp as f32) < p.max_hp as f32 * HEAL_BELOW {
-        if has(Item::LinenBandage) && missing >= item_tuning::BANDAGE_HEAL {
-            return Some(Item::LinenBandage);
+    let hurt = (p.hp as f32) < p.max_hp as f32 * HEAL_BELOW;
+    (hurt && p.bag.count(Item::HealthPotion) > 0).then_some(Item::HealthPotion)
+}
+
+/// A spell worth casting right now, keeping Chi for a swing: lightning
+/// where it strikes two or more, Spark at something coming from ahead.
+fn spell_to_cast(game: &Game) -> Option<Spell> {
+    let p = &game.player;
+    let affordable =
+        |s: Spell| p.spell_cooldowns[s.index()] <= 0.0 && p.energy >= s.cost() + p.attack_cost();
+    let awake = |id| {
+        game.enemies
+            .iter()
+            .any(|e| e.id == id && e.state != crate::enemy::EnemyState::Dormant)
+    };
+    for spell in [Spell::ChainLightning, Spell::LightningBolt] {
+        if affordable(spell) && game.spell_targets(spell).0.len() >= 2 {
+            return Some(spell);
         }
-        if has(Item::GraveMoss) {
-            return Some(Item::GraveMoss);
-        }
-        if has(Item::LinenBandage) {
-            return Some(Item::LinenBandage);
-        }
     }
-    if has(Item::BoneCharm) && p.level < crate::progression::MAX_LEVEL {
-        return Some(Item::BoneCharm);
-    }
-    let map = &game.floor.map;
-    let foe = game
-        .enemies
-        .iter()
-        .find(|e| map.within_reach(e.pos, p.pos))?;
-    if has(Item::EmberShard) && p.energy < p.attack_cost() {
-        return Some(Item::EmberShard);
-    }
-    if has(Item::Ectoplasm) && foe.is_winding_up() && !p.can_attack() && p.ward == 0 {
-        return Some(Item::Ectoplasm);
-    }
-    if has(Item::DemonSigil) && p.empowered == 0 && foe.hp >= SIGIL_WORTHY_HP {
-        return Some(Item::DemonSigil);
-    }
-    None
+    let (spark, _) = game.spell_targets(Spell::Spark);
+    let near = |id| {
+        game.enemies
+            .iter()
+            .any(|e| e.id == id && e.pos.manhattan(p.pos) >= 2)
+    };
+    (affordable(Spell::Spark) && spark.first().is_some_and(|&id| awake(id) && near(id)))
+        .then_some(Spell::Spark)
 }
 
 fn fight(game: &Game, enemy: &Enemy) -> Option<Command> {
