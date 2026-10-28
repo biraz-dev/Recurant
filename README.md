@@ -57,6 +57,23 @@ and glows orange) before it strikes:
 Health (red bar) does not regenerate. Reach zero and you die; press Attack to
 rise again in a fresh dungeon.
 
+## The ruins and what lives below
+
+A run starts in sunlit sandstone ruins: a roofed corridor, an open junction,
+a bridge over a pool (or wade through the pool's southern half), and a statue
+chamber where a stair at the statue's feet leads down. Two smouldering undead
+keep watch. Below, every floor is generated, and each brings creatures from a
+growing cast: zombie and skeleton warrior from floor 2, mummy and undead
+from 3, ember skeleton and wraith from 4, skeleton knight and inner demon
+from 5, demon knight from 6. Each kind has its own health, pace and blows.
+
+The ruins and the eight animated creatures come from the asset kits in
+`art/kits` (see `ASSET_HANDOFF.md`). Their animations are generated
+prototypes: the game uses their four views, walk or hover cycle and three
+attacks, but the core alone decides when a blow lands, and the attack frames
+are stretched to meet it. There is no death animation in the kits; creatures
+collapse as the zombie does.
+
 ## Going deeper
 
 Every floor has one staircase, as far from the start as the floor allows,
@@ -111,6 +128,10 @@ cargo test                                   # rules, bot, mesh sanity checks
 cargo run -p zrpg_core --example ascii 7     # print generated floors as ASCII
 ZRPG_SCRIPT="w e shot quit" cargo run        # scripted input + screenshot (zrpg-0.png)
 cargo run -p zrpg --example sfx              # write every sound effect to target/sfx/
+cargo run -p zrpg --example bestiary         # parade every creature (--shots DIR saves stills)
+python3 tools/extract_asset_kits.py          # unpack art/kits/archives (needed by the two below)
+python3 tools/make_ruins.py                  # ruins kit -> assets/ruins + zrpg_core/src/ruins.map
+python3 tools/make_creatures.py              # creature kits -> assets/creatures + src/sheets.rs
 python3 tools/make_sprite.py art/zombie-reference.png crates/zrpg/assets/zombie.png --height 64
 python3 tools/make_textures.py --preview sheet.png   # regenerate the environment textures
 ```
@@ -157,8 +178,9 @@ all and burn through the dark.
 ## Status
 
 Vertical Slice 0.1 is complete; since then: web and Android builds, auto mode,
-the zombie, the sandstone-temple look with torchlight and atmosphere, and
-synthesized sound.
+the zombie, the sandstone-temple look with torchlight and atmosphere,
+synthesized sound, the sunlit ruins entrance, and eight animated creatures
+from the asset kits.
 
 ### Vertical Slice 0.1
 
