@@ -42,7 +42,7 @@ fn main() {
         .iter()
         .position(|a| a == "--shots")
         .and_then(|i| args.get(i + 1).cloned());
-    let mut app = zrpg::app();
+    let mut app = zrpg::app_unsaved();
     app.insert_resource(Parade {
         kind: 0,
         clock: None,

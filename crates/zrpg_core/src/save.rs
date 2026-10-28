@@ -1,0 +1,272 @@
+//! Saving and restoring a run, so auto mode's progress survives closing the
+//! game. A save is small: the floor itself is not stored, because the same
+//! run seed and depth always generate the same floor; only what changes
+//! (the player, the enemies, waiting level-ups, the RNG) is.
+//!
+//! The format is versioned little-endian bytes. A save that doesn't parse,
+//! or comes from another version, is ignored rather than trusted.
+
+use alloc::vec::Vec;
+
+use crate::dungeon::Floor;
+use crate::enemy::{Enemy, EnemyKind, EnemyState};
+use crate::game::{Game, Player};
+use crate::grid::{Facing, GridPos};
+use crate::progression::{MAX_LEVEL, Perk, Perks};
+use crate::rng::Rng;
+
+const MAGIC: &[u8; 4] = b"ZRS1";
+
+impl Game {
+    /// The run as bytes, for [`Game::load`].
+    pub fn save(&self) -> Vec<u8> {
+        let mut w = Vec::new();
+        w.extend_from_slice(MAGIC);
+        put_u64(&mut w, self.run_seed);
+        put_u32(&mut w, self.depth);
+        w.push(self.params.ruins_entrance as u8);
+        w.push(self.params.randomize as u8);
+        put_u64(&mut w, self.rng.state());
+
+        let p = &self.player;
+        put_i32(&mut w, p.pos.x);
+        put_i32(&mut w, p.pos.y);
+        w.push(p.facing as u8);
+        put_i32(&mut w, p.hp);
+        put_i32(&mut w, p.max_hp);
+        put_f32(&mut w, p.energy);
+        put_f32(&mut w, p.max_energy);
+        put_f32(&mut w, p.attack_cooldown);
+        put_u32(&mut w, p.level);
+        put_u32(&mut w, p.xp);
+        put_f32(&mut w, p.regen);
+        w.extend(Perk::ALL.map(|perk| p.perks.count(perk)));
+
+        put_u32(&mut w, self.pending.len() as u32);
+        for offer in &self.pending {
+            w.push(offer.len() as u8);
+            w.extend(offer.iter().map(|perk| perk.index() as u8));
+        }
+
+        put_u32(&mut w, self.enemies.len() as u32);
+        for e in &self.enemies {
+            put_u32(&mut w, e.id);
+            w.push(kind_index(e.kind) as u8);
+            put_i32(&mut w, e.pos.x);
+            put_i32(&mut w, e.pos.y);
+            put_i32(&mut w, e.hp);
+            put_f32(&mut w, e.step_timer);
+            let (tag, left) = match e.state {
+                EnemyState::Dormant => (0, 0.0),
+                EnemyState::Chasing => (1, 0.0),
+                EnemyState::WindUp { left } => (2, left),
+                EnemyState::Recover { left } => (3, left),
+            };
+            w.push(tag);
+            put_f32(&mut w, left);
+        }
+        w
+    }
+
+    /// A run from [`Game::save`] bytes, or `None` if they aren't a valid
+    /// save from this version.
+    pub fn load(bytes: &[u8]) -> Option<Game> {
+        let mut r = Reader { bytes, at: 0 };
+        if r.take(4)? != MAGIC {
+            return None;
+        }
+        let run_seed = r.u64()?;
+        let depth = r.u32()?;
+        if depth == 0 {
+            return None;
+        }
+        let mut game = Game::new(run_seed);
+        game.params.ruins_entrance = r.u8()? != 0;
+        game.params.randomize = r.u8()? != 0;
+        game.depth = depth;
+        game.floor = Floor::for_depth(run_seed, depth, &game.params);
+        game.rng = Rng::new(r.u64()?);
+
+        let map = &game.floor.map;
+        let pos = GridPos::new(r.i32()?, r.i32()?);
+        let facing = *Facing::ALL.get(r.u8()? as usize)?;
+        if !map.is_walkable(pos) {
+            return None;
+        }
+        let mut player = Player {
+            pos,
+            facing,
+            hp: r.i32()?,
+            max_hp: r.i32()?,
+            energy: r.f32()?,
+            max_energy: r.f32()?,
+            attack_cooldown: r.f32()?,
+            level: r.u32()?.clamp(1, MAX_LEVEL),
+            xp: r.u32()?,
+            perks: Perks::default(),
+            regen: r.f32()?,
+        };
+        let mut counts = [0u8; Perk::ALL.len()];
+        for c in counts.iter_mut() {
+            *c = r.u8()?;
+        }
+        player.perks = Perks::from_counts(counts);
+        game.player = player;
+
+        let mut pending = Vec::new();
+        for _ in 0..r.u32()?.min(MAX_LEVEL) {
+            let n = r.u8()?;
+            let mut offer = Vec::new();
+            for _ in 0..n {
+                offer.push(*Perk::ALL.get(r.u8()? as usize)?);
+            }
+            pending.push(offer);
+        }
+        game.pending = pending;
+
+        let mut enemies = Vec::new();
+        for _ in 0..r.u32()?.min(64) {
+            let id = r.u32()?;
+            let kind = *EnemyKind::ALL.get(r.u8()? as usize)?;
+            let pos = GridPos::new(r.i32()?, r.i32()?);
+            let mut e = Enemy::of_kind(id, pos, kind);
+            e.hp = r.i32()?;
+            e.step_timer = r.f32()?;
+            let tag = r.u8()?;
+            let left = r.f32()?;
+            e.state = match tag {
+                0 => EnemyState::Dormant,
+                1 => EnemyState::Chasing,
+                2 => EnemyState::WindUp { left },
+                3 => EnemyState::Recover { left },
+                _ => return None,
+            };
+            if !map.is_walkable(pos) {
+                return None;
+            }
+            enemies.push(e);
+        }
+        game.enemies = enemies;
+        (r.at == bytes.len()).then_some(game)
+    }
+}
+
+fn kind_index(kind: EnemyKind) -> usize {
+    EnemyKind::ALL.iter().position(|&k| k == kind).unwrap_or(0)
+}
+
+fn put_u32(w: &mut Vec<u8>, v: u32) {
+    w.extend_from_slice(&v.to_le_bytes());
+}
+fn put_i32(w: &mut Vec<u8>, v: i32) {
+    w.extend_from_slice(&v.to_le_bytes());
+}
+fn put_u64(w: &mut Vec<u8>, v: u64) {
+    w.extend_from_slice(&v.to_le_bytes());
+}
+fn put_f32(w: &mut Vec<u8>, v: f32) {
+    w.extend_from_slice(&v.to_le_bytes());
+}
+
+struct Reader<'a> {
+    bytes: &'a [u8],
+    at: usize,
+}
+
+impl Reader<'_> {
+    fn take(&mut self, n: usize) -> Option<&[u8]> {
+        let s = self.bytes.get(self.at..self.at + n)?;
+        self.at += n;
+        Some(s)
+    }
+    fn u8(&mut self) -> Option<u8> {
+        Some(self.take(1)?[0])
+    }
+    fn u32(&mut self) -> Option<u32> {
+        Some(u32::from_le_bytes(self.take(4)?.try_into().ok()?))
+    }
+    fn i32(&mut self) -> Option<i32> {
+        Some(i32::from_le_bytes(self.take(4)?.try_into().ok()?))
+    }
+    fn u64(&mut self) -> Option<u64> {
+        Some(u64::from_le_bytes(self.take(8)?.try_into().ok()?))
+    }
+    fn f32(&mut self) -> Option<f32> {
+        let v = f32::from_le_bytes(self.take(4)?.try_into().ok()?);
+        v.is_finite().then_some(v)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::game::{Command, Event};
+
+    /// Play a while with the bot, banking level-ups.
+    fn played(seed: u64, ticks: usize) -> Game {
+        let mut g = Game::new(seed);
+        let mut out = Vec::new();
+        for _ in 0..ticks {
+            if let Some(cmd) = crate::auto::next_command(&g) {
+                g.apply(cmd, &mut out);
+            }
+            g.tick(1.0 / 30.0, &mut out);
+            if !g.player.is_alive() {
+                break;
+            }
+        }
+        g
+    }
+
+    #[test]
+    fn a_saved_run_comes_back_exactly() {
+        for seed in [1u64, 7, 42] {
+            let g = played(seed, 9000);
+            let bytes = g.save();
+            assert!(bytes.len() < 1024, "{} bytes", bytes.len());
+            let back = Game::load(&bytes).expect("loads");
+            assert_eq!(back.save(), bytes, "seed {seed}: round trip");
+            assert_eq!(back.depth, g.depth);
+            assert_eq!(back.player, g.player);
+            assert_eq!(back.enemies, g.enemies);
+            assert_eq!(back.pending, g.pending);
+            // And it carries on exactly as the original would have.
+            let (mut a, mut b) = (g.clone(), back);
+            let (mut ea, mut eb) = (Vec::new(), Vec::new());
+            for _ in 0..600 {
+                for (game, out) in [(&mut a, &mut ea), (&mut b, &mut eb)] {
+                    if let Some(cmd) = crate::auto::next_command(game) {
+                        game.apply(cmd, out);
+                    }
+                    game.tick(1.0 / 30.0, out);
+                }
+            }
+            assert_eq!(ea, eb, "seed {seed}: diverged after loading");
+        }
+    }
+
+    #[test]
+    fn banked_level_ups_survive_a_save() {
+        let mut g = played(3, 12000);
+        g.player.hp = g.player.max_hp;
+        if g.pending.is_empty() {
+            g.pending
+                .push(alloc::vec![Perk::Vigor, Perk::Scholar, Perk::Evasion]);
+        }
+        let mut back = Game::load(&g.save()).unwrap();
+        let mut out = Vec::new();
+        back.apply(Command::Choose(0), &mut out);
+        assert!(matches!(out[0], Event::PerkTaken { .. }));
+    }
+
+    #[test]
+    fn junk_is_not_a_save() {
+        let good = played(9, 600).save();
+        assert!(Game::load(b"").is_none());
+        assert!(Game::load(b"ZRS0aaaaaaaaaaaaaaaaaaaaaaaaa").is_none());
+        assert!(Game::load(&good[..good.len() - 1]).is_none());
+        let mut extra = good.clone();
+        extra.push(0);
+        assert!(Game::load(&extra).is_none());
+    }
+}

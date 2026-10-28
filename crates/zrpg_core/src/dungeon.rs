@@ -7,6 +7,7 @@ use alloc::vec::Vec;
 use crate::grid::{Facing, GridPos};
 use crate::map::{Map, Tile};
 use crate::rng::{Rng, mix64};
+use crate::stage::{self, Stage};
 
 #[derive(Clone, Copy, Debug)]
 pub struct GenParams {
@@ -20,6 +21,9 @@ pub struct GenParams {
     /// Start the run in the sandstone ruins (see `ruins.rs`) instead of a
     /// generated floor.
     pub ruins_entrance: bool,
+    /// Vary each floor's size and population with depth, and group floors
+    /// into themed stages (see `stage.rs`).
+    pub randomize: bool,
 }
 
 impl Default for GenParams {
@@ -32,6 +36,7 @@ impl Default for GenParams {
             room_max: 4,
             enemies: 1,
             ruins_entrance: true,
+            randomize: true,
         }
     }
 }
@@ -79,6 +84,8 @@ pub struct Floor {
     /// Where this floor's enemies start. Never the start or stairs cell.
     pub enemy_spawns: Vec<GridPos>,
     pub place: Place,
+    /// The stage this floor belongs to (generated floors of a randomized run).
+    pub stage: Option<Stage>,
 }
 
 impl Floor {
@@ -88,7 +95,13 @@ impl Floor {
         if depth == 1 && params.ruins_entrance {
             return crate::ruins::floor();
         }
-        generate(mix64(run_seed ^ mix64(depth as u64 + 1)), params)
+        let seed = mix64(run_seed ^ mix64(depth as u64 + 1));
+        if !params.randomize {
+            return generate(seed, params);
+        }
+        let mut floor = generate(seed, &stage::params_for(params, run_seed, depth));
+        floor.stage = Some(stage::stage_for(run_seed, depth));
+        floor
     }
 }
 
@@ -132,6 +145,7 @@ pub fn generate(seed: u64, params: &GenParams) -> Floor {
         stairs_dir,
         enemy_spawns,
         place: Place::Dungeon,
+        stage: None,
     }
 }
 

@@ -78,6 +78,34 @@ collapse as the zombie does. The sword's broad swing is retimed the same
 way: a blow lands the moment you press Attack, so its wind-up is cut short
 and the whole swing fits inside the half-second before the next.
 
+## Stages, levels and abilities
+
+**Stages.** Below the ruins, every four floors is a new stage: the Crypt, the
+Catacombs, the Tombs, the Ember Deep, the Haunted Halls or the Fallen Keep.
+Each run shuffles their order. Each stage has its own inhabitants, haze,
+torchlight and wall dressing, and is announced as you arrive. Floors grow
+larger and busier the deeper you go.
+
+**Levels.** Kills give XP (more for tougher creatures and deeper floors), up
+to level 36. The bar under Energy fills towards the next level.
+
+**Abilities.** Each level offers three random abilities; take one. The world
+waits while you choose (left/right to pick, Attack to take). There are
+fourteen, most of which stack a few times: more Health or Energy, faster
+Energy, sharper or cheaper or quicker swings, less damage taken, dodging,
+crushing blows, healing from kills, regeneration, more XP, more healing per
+floor, longer staggers.
+
+**Auto mode banks them.** The bot never chooses for you: while it plays,
+level-ups wait, shown as `LV 7 +3`. Take control (move or attack) and choose
+them one by one.
+
+**Saving.** The run is saved as you go (every few seconds, every floor, and
+when the app is put away) and resumes when you come back, auto mode and
+waiting level-ups included. Death ends the run and its save: everything
+starts again from level 1. Runs with a chosen seed or a script don't save
+unless `ZRPG_SAVE_DIR` names a folder for them.
+
 ## Going deeper
 
 Every floor has one staircase, as far from the start as the floor allows,

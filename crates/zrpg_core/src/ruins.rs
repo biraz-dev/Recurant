@@ -110,6 +110,7 @@ pub fn floor() -> Floor {
         stairs_dir: Facing::North,
         enemy_spawns: SENTRIES.to_vec(),
         place: Place::Ruins,
+        stage: None,
     }
 }
 

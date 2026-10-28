@@ -38,6 +38,8 @@ mod mix {
     pub const STAIRS: f32 = 0.5;
     pub const AMBIENCE: f32 = 0.25;
     pub const CRACKLE: f32 = 0.3;
+    pub const LEVEL_UP: f32 = 0.6;
+    pub const PERK: f32 = 0.5;
 }
 
 /// Rodio fades spatial sounds with the inverse square of distance, which is
@@ -87,6 +89,8 @@ struct Sounds {
     stairs: Handle<AudioSource>,
     ambience: Handle<AudioSource>,
     crackle: Handle<AudioSource>,
+    level_up: Handle<AudioSource>,
+    perk: Handle<AudioSource>,
 }
 
 fn synthesize(mut commands: Commands, mut sources: ResMut<Assets<AudioSource>>) {
@@ -114,6 +118,8 @@ fn synthesize(mut commands: Commands, mut sources: ResMut<Assets<AudioSource>>) 
         stairs: add(synth::stairs(14)),
         ambience: add(synth::ambience(15)),
         crackle: add(synth::crackle(16)),
+        level_up: add(synth::level_up(17)),
+        perk: add(synth::perk(18)),
     });
 }
 
@@ -234,7 +240,10 @@ fn play_event_sounds(
             Event::EnemyHurt { id, .. } => sfx(&sounds.hit, mix::HIT, enemy_at(id)),
             Event::EnemyDied { at, .. } => sfx(&sounds.crumble, mix::CRUMBLE, Some(ear_level(at))),
             Event::PlayerDied => sfx(&sounds.death, mix::DEATH, None),
-            Event::Descended { .. } => {}
+            Event::Descended { .. } | Event::GainedXp { .. } => {}
+            Event::LeveledUp { .. } => sfx(&sounds.level_up, mix::LEVEL_UP, None),
+            Event::PerkTaken { .. } => sfx(&sounds.perk, mix::PERK, None),
+            Event::Dodged { id } => sfx(&sounds.whiff, mix::WHIFF, enemy_at(id)),
         }
     }
 }

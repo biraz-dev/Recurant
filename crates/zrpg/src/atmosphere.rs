@@ -19,7 +19,7 @@ use bevy::pbr::{ExtendedMaterial, FogFalloff, MaterialExtension};
 use bevy::prelude::*;
 use bevy::render::render_resource::{AsBindGroup, ShaderType};
 use bevy::shader::ShaderRef;
-use zrpg_core::Place;
+use zrpg_core::{Floor, Place, Theme};
 
 use crate::view::PlayerCamera;
 use crate::{Frame, Run};
@@ -62,6 +62,8 @@ pub struct Look {
     pub view_distance: f32,
     /// How high the player's eyes are above the ground.
     pub eye_height: f32,
+    /// The colour of torchlight and flames.
+    pub torch: Color,
 }
 
 impl Look {
@@ -76,6 +78,7 @@ impl Look {
         ambient_brightness: crate::lighting::AMBIENT_BRIGHTNESS,
         view_distance: 9.0,
         eye_height: crate::view::EYE_HEIGHT,
+        torch: crate::lighting::TORCH_COLOR,
     };
 
     /// Sunlit sandstone: the far court fades into a warm, bright haze, and
@@ -94,12 +97,73 @@ impl Look {
         // walls' block-course ledges (at 1 m and 2 m), which would otherwise
         // show as a bright line on the horizon whenever a hit shakes you.
         eye_height: 1.5 * crate::ruins::SCALE,
+        torch: crate::lighting::TORCH_COLOR,
     };
 
-    pub fn of(place: Place) -> Look {
-        match place {
-            Place::Dungeon => Look::DUNGEON,
-            Place::Ruins => Look::RUINS,
+    /// How a floor looks: the ruins, or a dungeon stage's own take on the
+    /// dark.
+    pub fn of(floor: &Floor) -> Look {
+        match (floor.place, floor.stage) {
+            (Place::Ruins, _) => Look::RUINS,
+            (Place::Dungeon, Some(stage)) => Look::stage(stage.theme),
+            (Place::Dungeon, None) => Look::DUNGEON,
+        }
+    }
+
+    /// Each stage tints the dungeon's haze, shadows and torchlight.
+    fn stage(theme: Theme) -> Look {
+        let d = Look::DUNGEON;
+        let tint = |sky: Color, ambient: Color, torch: Color, drain: Vec3| Look {
+            sky,
+            ambient_color: ambient,
+            torch,
+            grade: DepthGradeUniform {
+                tint: drain.extend(1.0),
+                ..d.grade
+            },
+            ..d.clone()
+        };
+        match theme {
+            // The original dungeon.
+            Theme::Crypt => d,
+            // Bone-dust: a dry, warm grey.
+            Theme::Catacombs => tint(
+                Color::srgb(0.055, 0.05, 0.045),
+                Color::srgb(0.82, 0.78, 0.72),
+                Color::srgb(1.0, 0.86, 0.66),
+                Vec3::new(0.95, 0.92, 0.88),
+            ),
+            // Gilded dust and bright flames.
+            Theme::Tombs => tint(
+                Color::srgb(0.065, 0.052, 0.032),
+                Color::srgb(0.9, 0.8, 0.6),
+                Color::srgb(1.0, 0.8, 0.5),
+                Vec3::new(1.05, 0.95, 0.75),
+            ),
+            // Red haze and hot, low fires.
+            Theme::EmberDeep => tint(
+                Color::srgb(0.08, 0.03, 0.02),
+                Color::srgb(0.95, 0.55, 0.42),
+                Color::srgb(1.0, 0.55, 0.3),
+                Vec3::new(1.1, 0.8, 0.7),
+            ),
+            // Cold blue, and ghostly torches.
+            Theme::Haunted => Look {
+                fog: FogFalloff::ExponentialSquared { density: 0.3 },
+                ..tint(
+                    Color::srgb(0.03, 0.05, 0.07),
+                    Color::srgb(0.6, 0.75, 0.95),
+                    Color::srgb(0.6, 0.95, 1.0),
+                    Vec3::new(0.75, 0.9, 1.1),
+                )
+            },
+            // Steel-grey stone, plain firelight.
+            Theme::FallenKeep => tint(
+                Color::srgb(0.042, 0.045, 0.055),
+                Color::srgb(0.72, 0.75, 0.84),
+                Color::srgb(1.0, 0.82, 0.62),
+                Vec3::new(0.85, 0.9, 1.0),
+            ),
         }
     }
 
@@ -141,7 +205,7 @@ impl Plugin for AtmospherePlugin {
 /// Dress the camera for the place the player is in, whenever that changes.
 fn apply_look(
     run: Res<Run>,
-    mut current: Local<Option<Place>>,
+    mut current: Local<Option<(Place, Option<Theme>)>>,
     mut cams: Query<
         (
             &mut Camera,
@@ -152,11 +216,11 @@ fn apply_look(
         With<PlayerCamera>,
     >,
 ) {
-    let place = run.floor.place;
+    let place = (run.floor.place, run.floor.stage.map(|s| s.theme));
     if *current == Some(place) {
         return;
     }
-    let look = Look::of(place);
+    let look = Look::of(&run.floor);
     for (mut camera, mut fog, mut ambient, mut projection) in &mut cams {
         camera.clear_color = ClearColorConfig::Custom(look.sky);
         fog.color = look.fog_color();

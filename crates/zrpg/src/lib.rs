@@ -13,6 +13,8 @@ mod hud;
 mod input;
 mod level;
 mod lighting;
+mod persist;
+mod picker;
 mod platform;
 mod ruins;
 mod screen;
@@ -52,10 +54,42 @@ pub enum Frame {
     Present,
 }
 
-/// The whole game, ready to `run()`.
+/// The whole game, ready to `run()`. Resumes the saved run, if any.
 pub fn app() -> App {
-    let seed = platform::seed_override().unwrap_or_else(platform::clock_seed);
+    build(true)
+}
+
+/// The game without saving or resuming, for tools and examples.
+pub fn app_unsaved() -> App {
+    build(false)
+}
+
+fn build(saves: bool) -> App {
+    let chosen_seed = platform::seed_override();
+    // Scripted and seeded runs are for testing: they must not resume, nor
+    // overwrite the player's run (unless given a save folder of their own).
+    let own_folder = std::env::var_os("ZRPG_SAVE_DIR").is_some();
+    let testing = chosen_seed.is_some() || std::env::var_os("ZRPG_SCRIPT").is_some();
+    let saves = saves && (own_folder || !testing);
+    let resumed = if saves { persist::resume() } else { None };
+    let seed = chosen_seed.unwrap_or_else(platform::clock_seed);
     let mut app = App::new();
+    match resumed {
+        Some(r) => {
+            info!(
+                "resuming run {} on floor {} at level {}",
+                r.game.run_seed, r.game.depth, r.game.player.level
+            );
+            app.insert_resource(Run(r.game))
+                .insert_resource(auto::AutoMode(r.auto || platform::auto_requested()));
+        }
+        None => {
+            app.insert_resource(Run::new(seed));
+        }
+    }
+    if saves {
+        app.insert_resource(persist::Saving);
+    }
     app.add_plugins(
         DefaultPlugins
             .set(WindowPlugin {
@@ -69,7 +103,6 @@ pub fn app() -> App {
             .set(ImagePlugin::default_nearest()),
     )
     .insert_resource(ClearColor(Color::BLACK))
-    .insert_resource(Run::new(seed))
     .add_message::<GameEvent>()
     .configure_sets(
         Update,
@@ -86,6 +119,8 @@ pub fn app() -> App {
         enemies::EnemiesPlugin,
         auto::AutoPlugin,
         hud::HudPlugin,
+        picker::PickerPlugin,
+        persist::PersistPlugin,
         script::ScriptPlugin,
     ))
     .add_systems(
@@ -105,10 +140,15 @@ pub fn publish(buf: &mut Vec<Event>, writer: &mut MessageWriter<GameEvent>) {
 
 fn simulate(
     time: Res<Time>,
+    picker: Res<picker::Picker>,
     mut run: ResMut<Run>,
     mut writer: MessageWriter<GameEvent>,
     mut buf: Local<Vec<Event>>,
 ) {
+    // The world holds still while you choose an ability.
+    if picker.holds_the_game() {
+        return;
+    }
     // Clamp so a long stall (window drag, breakpoint) can't skip a whole fight.
     let dt = time.delta_secs().min(0.1);
     run.tick(dt, &mut buf);

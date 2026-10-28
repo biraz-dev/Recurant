@@ -26,12 +26,15 @@ pub struct AutoPlugin;
 
 impl Plugin for AutoPlugin {
     fn build(&self, app: &mut App) {
-        app.insert_resource(AutoMode(platform::auto_requested()))
-            .add_systems(Update, toggle.before(Frame::Command));
+        // A resumed run may already have set it.
+        if !app.world().contains_resource::<AutoMode>() {
+            app.insert_resource(AutoMode(platform::auto_requested()));
+        }
+        app.add_systems(Update, toggle.before(Frame::Command));
     }
 }
 
-fn toggle(actions: Res<Actions>, mut auto: ResMut<AutoMode>) {
+pub fn toggle(actions: Res<Actions>, mut auto: ResMut<AutoMode>) {
     if actions.just_pressed(Action::Auto) {
         auto.0 = !auto.0;
         info!("auto mode {}", if auto.0 { "on" } else { "off" });

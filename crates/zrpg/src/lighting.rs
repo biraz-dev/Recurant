@@ -8,12 +8,13 @@
 
 use bevy::prelude::*;
 
+use crate::atmosphere::Look;
 use crate::level::Torch;
 use crate::textures::{self, env};
 use crate::view::PlayerCamera;
 use crate::{Frame, Run};
 
-const TORCH_COLOR: Color = Color::srgb(1.0, 0.84, 0.64);
+pub const TORCH_COLOR: Color = Color::srgb(1.0, 0.84, 0.64);
 /// The player's torch: held up, to the right and a little ahead, so light
 /// rakes across what is in front rather than hitting it flat.
 const HAND_TORCH_OFFSET: Vec3 = Vec3::new(0.28, 0.1, -0.25);
@@ -139,12 +140,34 @@ pub fn spawn_wall_torch(
     ));
 }
 
-fn flicker(time: Res<Time>, run: Res<Run>, mut lights: Query<(&Flicker, &mut PointLight)>) {
+fn flicker(
+    time: Res<Time>,
+    run: Res<Run>,
+    assets: Res<TorchAssets>,
+    mut materials: ResMut<Assets<StandardMaterial>>,
+    mut lights: Query<(&Flicker, &mut PointLight)>,
+) {
     let t = time.elapsed_secs();
     // The dead see no torchlight.
     let fade = if run.player.is_alive() { 1.0 } else { 0.35 };
+    // Each stage burns its own colour.
+    let color = Look::of(&run.floor).torch;
     for (f, mut light) in &mut lights {
         light.intensity = f.base * f.factor(t) * fade;
+        if light.color != color {
+            light.color = color;
+        }
+    }
+    // Flames are drawn in the classic fire's colours; tint them by how far
+    // the stage's fire is from it (the classic fire leaves them untouched).
+    let (c, base) = (color.to_linear(), TORCH_COLOR.to_linear());
+    let flame = Color::linear_rgb(c.red / base.red, c.green / base.green, c.blue / base.blue);
+    if materials
+        .get(&assets.flame_material)
+        .is_some_and(|m| m.base_color != flame)
+        && let Some(mut m) = materials.get_mut(&assets.flame_material)
+    {
+        m.base_color = flame;
     }
 }
 

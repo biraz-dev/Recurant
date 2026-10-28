@@ -245,7 +245,7 @@ fn sync_roster(
     for e in &sprites {
         commands.entity(e).despawn();
     }
-    let look = Look::of(run.floor.place);
+    let look = Look::of(&run.floor);
     let player = cell_center(run.player.pos);
     for enemy in &run.enemies {
         let art = assets.art(enemy.kind, &mut meshes, &mut images);

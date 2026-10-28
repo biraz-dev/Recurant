@@ -189,7 +189,7 @@ fn ease(t: f32) -> f32 {
 }
 
 fn spawn_camera(mut commands: Commands, target: Res<LowResTarget>, run: Res<Run>) {
-    let look = Look::of(run.floor.place);
+    let look = Look::of(&run.floor);
     let anim = Animator::new(
         Pose::at(run.player.pos, run.player.facing),
         (run.run_seed, run.depth),
@@ -241,10 +241,12 @@ fn command_for(a: Action) -> Option<Command> {
     })
 }
 
+#[allow(clippy::too_many_arguments)]
 fn drive_player(
     time: Res<Time>,
     actions: Res<Actions>,
     auto: Res<AutoMode>,
+    picker: Res<crate::picker::Picker>,
     mut run: ResMut<Run>,
     mut cams: Query<&mut Animator, With<PlayerCamera>>,
     mut writer: MessageWriter<GameEvent>,
@@ -263,6 +265,11 @@ fn drive_player(
     }
     if !run.player.is_alive() {
         anim.descending = None;
+        return;
+    }
+    if picker.holds_the_game() {
+        anim.queued = None;
+        anim.attack_buffer = 0.0;
         return;
     }
 
@@ -414,7 +421,7 @@ fn animate_camera(
     mut cams: Query<(&Animator, &mut Transform), With<PlayerCamera>>,
 ) {
     for (anim, mut t) in &mut cams {
-        let eye_height = Look::of(run.floor.place).eye_height;
+        let eye_height = Look::of(&run.floor).eye_height;
         *t = anim.transform(time.elapsed_secs(), eye_height);
         // Wade down into water and climb stairs smoothly, never in a jump.
         t.translation.y += ground.at(anim.pose().pos);

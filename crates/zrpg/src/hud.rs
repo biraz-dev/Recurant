@@ -14,6 +14,11 @@ const BAR_HEIGHT: f32 = 4.0;
 const HEALTH_COLOR: Color = Color::srgb(0.78, 0.16, 0.14);
 const ENERGY_COLOR: Color = Color::srgb(0.95, 0.75, 0.2);
 const EXHAUSTED_COLOR: Color = Color::srgb(1.0, 1.0, 1.0);
+const XP_COLOR: Color = Color::srgb(0.45, 0.7, 0.95);
+const XP_HEIGHT: f32 = 2.0;
+const LEVEL_COLOR: Color = Color::srgb(0.95, 0.85, 0.55);
+/// How long a level-up flashes on the level label.
+const LEVEL_FLASH_SECS: f32 = 1.2;
 const HURT_FLASH_SECS: f32 = 0.3;
 const EXHAUSTED_FLASH_SECS: f32 = 0.3;
 /// How long the "FLOOR N" banner stays up after descending.
@@ -71,12 +76,17 @@ struct HudFx {
     hurt: f32,
     exhausted: f32,
     banner: f32,
+    level_flash: f32,
 }
 
 #[derive(Component)]
 struct HealthFill;
 #[derive(Component)]
 struct EnergyFill;
+#[derive(Component)]
+struct XpFill;
+#[derive(Component)]
+struct LevelLabel;
 #[derive(Component)]
 struct Sword;
 #[derive(Component)]
@@ -136,8 +146,18 @@ fn spawn_hud(
                 ..default()
             })
             .with_children(|bars| {
-                bar(bars, HealthFill, HEALTH_COLOR);
-                bar(bars, EnergyFill, ENERGY_COLOR);
+                bars.spawn((
+                    LevelLabel,
+                    Text::new("LV 1"),
+                    TextFont {
+                        font_size: FontSize::Px(8.0),
+                        ..default()
+                    },
+                    TextColor(LEVEL_COLOR),
+                ));
+                bar(bars, HealthFill, HEALTH_COLOR, BAR_HEIGHT);
+                bar(bars, EnergyFill, ENERGY_COLOR, BAR_HEIGHT);
+                bar(bars, XpFill, XP_COLOR, XP_HEIGHT);
             });
 
             root.spawn((HurtFlash, full(), BackgroundColor(Color::NONE)));
@@ -167,6 +187,7 @@ fn spawn_hud(
                 row.spawn((
                     FloorBanner,
                     Text::new(""),
+                    TextLayout::justify(Justify::Center),
                     TextFont {
                         font_size: FontSize::Px(16.0),
                         ..default()
@@ -209,12 +230,12 @@ fn spawn_hud(
 }
 
 /// A dark, outlined track with a coloured fill whose width tracks a stat.
-fn bar(parent: &mut ChildSpawnerCommands, marker: impl Component, color: Color) {
+fn bar(parent: &mut ChildSpawnerCommands, marker: impl Component, color: Color, height: f32) {
     parent
         .spawn((
             Node {
                 width: px(BAR_WIDTH + 2.0),
-                height: px(BAR_HEIGHT + 2.0),
+                height: px(height + 2.0),
                 border: UiRect::all(px(1)),
                 ..default()
             },
@@ -250,6 +271,7 @@ fn react_to_events(mut events: MessageReader<GameEvent>, mut fx: ResMut<HudFx>) 
             Event::EnemyStruck { damage, .. } if *damage > 0 => fx.hurt = HURT_FLASH_SECS,
             Event::Exhausted => fx.exhausted = EXHAUSTED_FLASH_SECS,
             Event::Descended { .. } => fx.banner = BANNER_SECS,
+            Event::LeveledUp { .. } => fx.level_flash = LEVEL_FLASH_SECS,
             _ => {}
         }
     }
@@ -259,11 +281,28 @@ fn react_to_events(mut events: MessageReader<GameEvent>, mut fx: ResMut<HudFx>) 
 fn update_hud(
     time: Res<Time>,
     run: Res<Run>,
+    auto: Res<AutoMode>,
+    picker: Res<crate::picker::Picker>,
     mut fx: ResMut<HudFx>,
-    mut health: Query<&mut Node, (With<HealthFill>, Without<EnergyFill>, Without<Sword>)>,
+    mut xp: Query<&mut Node, (With<XpFill>, Without<HealthFill>, Without<EnergyFill>)>,
+    mut level: Query<(&mut Text, &mut TextColor), With<LevelLabel>>,
+    mut health: Query<
+        &mut Node,
+        (
+            With<HealthFill>,
+            Without<EnergyFill>,
+            Without<Sword>,
+            Without<XpFill>,
+        ),
+    >,
     mut energy: Query<
         (&mut Node, &mut BackgroundColor),
-        (With<EnergyFill>, Without<HurtFlash>, Without<Sword>),
+        (
+            With<EnergyFill>,
+            Without<HurtFlash>,
+            Without<Sword>,
+            Without<XpFill>,
+        ),
     >,
     mut sword: Query<(&mut ImageNode, &mut Visibility), (With<Sword>, Without<DeathScreen>)>,
     mut flash: Query<&mut BackgroundColor, (With<HurtFlash>, Without<EnergyFill>)>,
@@ -276,7 +315,29 @@ fn update_hud(
         .filter(|&t| swing_frame(t).is_some());
     fx.hurt = (fx.hurt - dt).max(0.0);
     fx.exhausted = (fx.exhausted - dt).max(0.0);
+    fx.level_flash = (fx.level_flash - dt).max(0.0);
     let p = &run.player;
+    for mut n in &mut xp {
+        let needed = p.xp_needed();
+        let share = if needed == 0 {
+            1.0
+        } else {
+            p.xp as f32 / needed as f32
+        };
+        n.width = percent(100.0 * share.min(1.0));
+    }
+    for (mut text, mut color) in &mut level {
+        // In auto mode, level-ups wait for you: show how many.
+        let label = match run.pending.len() {
+            n if n > 0 && auto.0 => format!("LV {}  +{n}", p.level),
+            _ => format!("LV {}", p.level),
+        };
+        if text.0 != label {
+            text.0 = label;
+        }
+        let flash = fx.level_flash / LEVEL_FLASH_SECS;
+        color.0 = LEVEL_COLOR.mix(&Color::WHITE, (flash * 12.0).sin().abs() * flash);
+    }
     let alive = p.is_alive();
 
     for mut n in &mut health {
@@ -297,7 +358,8 @@ fn update_hud(
         {
             atlas.index = frame;
         }
-        *v = if alive {
+        // Put the sword down while choosing an ability.
+        *v = if alive && !picker.is_open() {
             Visibility::Inherited
         } else {
             Visibility::Hidden
@@ -330,7 +392,13 @@ fn update_transition(
     // Hold, then fade out over the last half second.
     let alpha = (fx.banner / 0.5).min(1.0);
     for (mut text, mut color) in &mut banner {
-        let label = format!("FLOOR {}", run.depth);
+        // A new stage is announced by name.
+        let label = match run.floor.stage {
+            Some(stage) if stage.first_floor => {
+                format!("FLOOR {}\n{}", run.depth, stage.theme.name())
+            }
+            _ => format!("FLOOR {}", run.depth),
+        };
         if text.0 != label {
             text.0 = label;
         }

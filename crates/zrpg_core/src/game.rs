@@ -10,7 +10,9 @@ use crate::dungeon::{Floor, GenParams, Place};
 use crate::enemy::{Enemy, EnemyId, EnemyKind, EnemyState, tuning as enemy_tuning};
 use crate::grid::{Facing, GridPos, Step, Turn};
 use crate::map::Tile;
+use crate::progression::{self, MAX_LEVEL, Perk, Perks};
 use crate::rng::{Rng, mix64};
+use crate::stage;
 
 /// Player tuning, in seconds, hit points and energy points.
 pub mod tuning {
@@ -26,6 +28,24 @@ pub mod tuning {
     pub const DESCEND_HEAL: i32 = 5;
 }
 
+/// What each ability adds per time it is taken (see `progression.rs`).
+mod perk_tuning {
+    pub const VIGOR_HP: i32 = 4;
+    pub const STAMINA_ENERGY: f32 = 2.0;
+    pub const BREATH_REGEN: f32 = 0.25;
+    pub const LIGHT_BLADE_COST: f32 = 0.4;
+    pub const QUICK_HANDS_COOLDOWN: f32 = 0.05;
+    pub const IRON_SKIN: i32 = 1;
+    pub const EVASION_PERCENT: u32 = 6;
+    pub const CRUSHING_PERCENT: u32 = 7;
+    pub const BLOODTHIRST_HEAL: i32 = 1;
+    /// Seconds per Health regenerated, divided by the stacks taken.
+    pub const REGEN_SECS: f32 = 10.0;
+    pub const SCHOLAR_XP_PERCENT: u32 = 15;
+    pub const PILGRIM_HEAL: i32 = 3;
+    pub const CONCUSSION_SECS: f32 = 0.25;
+}
+
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Command {
     Step(Step),
@@ -33,6 +53,8 @@ pub enum Command {
     Attack,
     /// Take the stairs down. Only works while standing on them.
     Descend,
+    /// Take ability `n` (0..3) of the oldest level-up still waiting.
+    Choose(u8),
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -87,6 +109,22 @@ pub enum Event {
     Descended {
         depth: u32,
     },
+    /// A kill earned XP.
+    GainedXp {
+        xp: u32,
+    },
+    /// Reached a new level; an ability choice is waiting.
+    LeveledUp {
+        level: u32,
+    },
+    /// An ability was taken.
+    PerkTaken {
+        perk: Perk,
+    },
+    /// A blow was dodged (Evasion).
+    Dodged {
+        id: EnemyId,
+    },
 }
 
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -99,6 +137,13 @@ pub struct Player {
     pub max_energy: f32,
     /// Seconds until the next attack is allowed.
     pub attack_cooldown: f32,
+    /// 1 to [`MAX_LEVEL`].
+    pub level: u32,
+    /// XP towards the next level.
+    pub xp: u32,
+    pub perks: Perks,
+    /// Seconds towards the next Health from Regeneration.
+    pub(crate) regen: f32,
 }
 
 impl Player {
@@ -111,6 +156,37 @@ impl Player {
             energy: tuning::MAX_ENERGY,
             max_energy: tuning::MAX_ENERGY,
             attack_cooldown: 0.0,
+            level: 1,
+            xp: 0,
+            perks: Perks::default(),
+            regen: 0.0,
+        }
+    }
+
+    fn stacks(&self, perk: Perk) -> u8 {
+        self.perks.count(perk)
+    }
+
+    pub fn attack_cost(&self) -> f32 {
+        tuning::ATTACK_COST - perk_tuning::LIGHT_BLADE_COST * self.stacks(Perk::LightBlade) as f32
+    }
+
+    pub fn attack_cooldown_secs(&self) -> f32 {
+        tuning::ATTACK_COOLDOWN
+            - perk_tuning::QUICK_HANDS_COOLDOWN * self.stacks(Perk::QuickHands) as f32
+    }
+
+    fn energy_regen(&self) -> f32 {
+        tuning::ENERGY_REGEN
+            * (1.0 + perk_tuning::BREATH_REGEN * self.stacks(Perk::SecondBreath) as f32)
+    }
+
+    /// XP still needed for the next level (0 at the top).
+    pub fn xp_needed(&self) -> u32 {
+        if self.level >= MAX_LEVEL {
+            0
+        } else {
+            progression::xp_to_next(self.level)
         }
     }
 
@@ -120,7 +196,7 @@ impl Player {
 
     /// Ready to swing and able to pay for it.
     pub fn can_attack(&self) -> bool {
-        self.attack_cooldown <= 0.0 && self.energy >= tuning::ATTACK_COST
+        self.attack_cooldown <= 0.0 && self.energy >= self.attack_cost()
     }
 }
 
@@ -133,7 +209,10 @@ pub struct Game {
     pub floor: Floor,
     pub player: Player,
     pub enemies: Vec<Enemy>,
-    rng: Rng,
+    /// Level-ups waiting for an ability to be chosen, oldest first: each is
+    /// the three abilities on offer.
+    pub pending: Vec<Vec<Perk>>,
+    pub(crate) rng: Rng,
 }
 
 impl Game {
@@ -152,6 +231,7 @@ impl Game {
             floor,
             player,
             enemies,
+            pending: Vec::new(),
             rng: Rng::new(mix64(run_seed ^ 0xC0FF_EE00)),
         }
     }
@@ -169,7 +249,86 @@ impl Game {
         let p = &mut self.player;
         p.pos = self.floor.start;
         p.facing = self.floor.start_facing;
-        p.hp = (p.hp + tuning::DESCEND_HEAL).min(p.max_hp);
+        let heal =
+            tuning::DESCEND_HEAL + perk_tuning::PILGRIM_HEAL * p.stacks(Perk::Pilgrim) as i32;
+        p.hp = (p.hp + heal).min(p.max_hp);
+    }
+
+    /// Earn XP; level up (each level queues an ability choice).
+    fn gain_xp(&mut self, base: u32, out: &mut Vec<Event>) {
+        let p = &mut self.player;
+        let scholar = 100 + perk_tuning::SCHOLAR_XP_PERCENT * p.stacks(Perk::Scholar) as u32;
+        let xp = base * scholar / 100;
+        out.push(Event::GainedXp { xp });
+        if p.level >= MAX_LEVEL {
+            return;
+        }
+        p.xp += xp;
+        while self.player.level < MAX_LEVEL && self.player.xp >= self.player.xp_needed() {
+            let p = &mut self.player;
+            p.xp -= p.xp_needed();
+            p.level += 1;
+            // Offers are rolled now, with everything already chosen or still
+            // waiting counted, so no offer can overflow an ability's cap.
+            let mut planned = self.player.perks;
+            for offer in &self.pending {
+                planned.add(offer[0]);
+            }
+            let offer = progression::roll_offer(&mut self.rng, &planned);
+            self.pending.push(offer);
+            out.push(Event::LeveledUp {
+                level: self.player.level,
+            });
+        }
+        if self.player.level >= MAX_LEVEL {
+            self.player.xp = 0;
+        }
+    }
+
+    /// Take ability `choice` of the oldest waiting level-up.
+    fn choose(&mut self, choice: usize, out: &mut Vec<Event>) {
+        if self.pending.is_empty() {
+            return;
+        }
+        let Some(&perk) = self.pending[0].get(choice) else {
+            return;
+        };
+        if !self.player.perks.can_take(perk) {
+            return;
+        }
+        self.pending.remove(0);
+        let p = &mut self.player;
+        p.perks.add(perk);
+        match perk {
+            Perk::Vigor => {
+                p.max_hp += perk_tuning::VIGOR_HP;
+                p.hp += perk_tuning::VIGOR_HP;
+            }
+            Perk::Stamina => {
+                p.max_energy += perk_tuning::STAMINA_ENERGY;
+                p.energy += perk_tuning::STAMINA_ENERGY;
+            }
+            _ => {}
+        }
+        out.push(Event::PerkTaken { perk });
+        // Offers still waiting were rolled guessing at earlier picks; swap
+        // out anything that can no longer be taken.
+        let perks = self.player.perks;
+        for i in 0..self.pending.len() {
+            self.pending[i].retain(|&p| perks.can_take(p));
+            while self.pending[i].len() < 3 {
+                let offer = &self.pending[i];
+                let fresh: Vec<Perk> = Perk::ALL
+                    .into_iter()
+                    .filter(|p| perks.can_take(*p) && !offer.contains(p))
+                    .collect();
+                if fresh.is_empty() {
+                    break;
+                }
+                let k = self.rng.range(0, fresh.len() as i32 - 1) as usize;
+                self.pending[i].push(fresh[k]);
+            }
+        }
     }
 
     pub fn enemy_at(&self, p: GridPos) -> Option<&Enemy> {
@@ -214,6 +373,7 @@ impl Game {
                     out.push(Event::Descended { depth: self.depth });
                 }
             }
+            Command::Choose(n) => self.choose(n as usize, out),
         }
     }
 
@@ -222,12 +382,15 @@ impl Game {
         if p.attack_cooldown > 0.0 {
             return;
         }
-        if p.energy < tuning::ATTACK_COST {
+        if p.energy < p.attack_cost() {
             out.push(Event::Exhausted);
             return;
         }
-        p.energy -= tuning::ATTACK_COST;
-        p.attack_cooldown = tuning::ATTACK_COOLDOWN;
+        p.energy -= p.attack_cost();
+        p.attack_cooldown = p.attack_cooldown_secs();
+        let edge = p.stacks(Perk::KeenEdge) as i32;
+        let crushing = p.stacks(Perk::CrushingBlow) as u32 * perk_tuning::CRUSHING_PERCENT;
+        let concussion = p.stacks(Perk::Concussion) as f32 * perk_tuning::CONCUSSION_SECS;
         let target = p.pos + p.facing;
         // A parapet between you and it is out of reach.
         let reachable = self.floor.map.within_reach(p.pos, target);
@@ -240,7 +403,10 @@ impl Game {
             out.push(Event::Swung { hit: None });
             return;
         };
-        let damage = self.rng.range(tuning::DAMAGE_MIN, tuning::DAMAGE_MAX);
+        let mut damage = self.rng.range(tuning::DAMAGE_MIN, tuning::DAMAGE_MAX) + edge;
+        if crushing > 0 && self.rng.chance(crushing) {
+            damage *= 2;
+        }
         let enemy = &mut self.enemies[i];
         out.push(Event::Swung {
             hit: Some(enemy.id),
@@ -250,7 +416,7 @@ impl Game {
         let staggered = enemy.is_winding_up();
         if staggered {
             enemy.state = EnemyState::Recover {
-                left: enemy_tuning::STAGGER,
+                left: enemy_tuning::STAGGER + concussion,
             };
         } else if enemy.state == EnemyState::Dormant {
             enemy.state = EnemyState::Chasing;
@@ -265,7 +431,12 @@ impl Game {
                 id: enemy.id,
                 at: enemy.pos,
             });
+            let kind = enemy.kind;
             self.enemies.swap_remove(i);
+            let p = &mut self.player;
+            let heal = perk_tuning::BLOODTHIRST_HEAL * p.stacks(Perk::Bloodthirst) as i32;
+            p.hp = (p.hp + heal).min(p.max_hp);
+            self.gain_xp(progression::xp_for_kill(kind, self.depth), out);
         }
     }
 
@@ -276,7 +447,15 @@ impl Game {
         }
         let p = &mut self.player;
         p.attack_cooldown = (p.attack_cooldown - dt).max(0.0);
-        p.energy = (p.energy + tuning::ENERGY_REGEN * dt).min(p.max_energy);
+        p.energy = (p.energy + p.energy_regen() * dt).min(p.max_energy);
+        let regen = p.stacks(Perk::Regeneration);
+        if regen > 0 && p.hp < p.max_hp {
+            p.regen += dt * regen as f32;
+            if p.regen >= perk_tuning::REGEN_SECS {
+                p.regen -= perk_tuning::REGEN_SECS;
+                p.hp += 1;
+            }
+        }
 
         if self.enemies.is_empty() {
             return;
@@ -343,11 +522,18 @@ impl Game {
                     self.enemies[i].state = EnemyState::WindUp { left };
                     return;
                 }
-                // Stepping away during the tell dodges the blow.
-                let damage = if adjacent {
-                    self.rng.range(stats.damage_min, stats.damage_max)
-                } else {
+                // Stepping away during the tell dodges the blow; so, now and
+                // then, does Evasion.
+                let p = &self.player;
+                let evasion = p.stacks(Perk::Evasion) as u32 * perk_tuning::EVASION_PERCENT;
+                let iron = perk_tuning::IRON_SKIN * p.stacks(Perk::IronSkin) as i32;
+                let damage = if !adjacent {
                     0
+                } else if evasion > 0 && self.rng.chance(evasion) {
+                    out.push(Event::Dodged { id });
+                    0
+                } else {
+                    (self.rng.range(stats.damage_min, stats.damage_max) - iron).max(1)
                 };
                 self.player.hp = (self.player.hp - damage).max(0);
                 self.enemies[i].state = EnemyState::Recover {
@@ -374,7 +560,11 @@ fn spawn_enemies(floor: &Floor, run_seed: u64, depth: u32) -> Vec<Enemy> {
         .enumerate()
         .map(|(i, &p)| {
             let roll = mix64(run_seed ^ mix64(depth as u64) ^ (i as u64) << 48);
-            Enemy::of_kind(i as EnemyId, p, kind_for(floor.place, depth, roll))
+            let kind = match floor.stage {
+                Some(s) => stage::kind_for(s.theme, depth, roll),
+                None => kind_for(floor.place, depth, roll),
+            };
+            Enemy::of_kind(i as EnemyId, p, kind)
         })
         .collect()
 }
@@ -579,6 +769,137 @@ mod tests {
         g.apply(Command::Step(Step::Forward), &mut out);
         g.tick(1.0, &mut out);
         assert!(out.is_empty());
+    }
+
+    /// Kill whatever is in front of the player, as many times as needed.
+    fn kill_in_front(g: &mut Game, out: &mut Vec<Event>) {
+        while g
+            .enemies
+            .iter()
+            .any(|e| e.pos == g.player.pos + g.player.facing)
+        {
+            g.player.attack_cooldown = 0.0;
+            g.player.energy = g.player.max_energy;
+            g.apply(Command::Attack, out);
+        }
+    }
+
+    #[test]
+    fn kills_level_you_up_and_choices_wait_for_you() {
+        let mut g = corridor(2);
+        let mut out = Vec::new();
+        g.depth = 10;
+        // Enough kills for a few levels, without choosing anything.
+        for _ in 0..8 {
+            g.enemies = alloc::vec![Enemy::of_kind(
+                1,
+                GridPos::new(2, 1),
+                EnemyKind::DemonKnight
+            )];
+            kill_in_front(&mut g, &mut out);
+        }
+        let levels = out
+            .iter()
+            .filter(|e| matches!(e, Event::LeveledUp { .. }))
+            .count();
+        assert!(levels >= 3, "{levels} levels");
+        assert_eq!(g.player.level as usize, 1 + levels);
+        assert_eq!(g.pending.len(), levels, "every level banks a choice");
+        assert!(g.pending.iter().all(|o| o.len() == 3));
+
+        // Choosing takes the ability and its effect.
+        let before = g.player.max_hp;
+        let offer = g.pending[0].clone();
+        let pick = offer.iter().position(|&p| p == Perk::Vigor).unwrap_or(0);
+        out.clear();
+        g.apply(Command::Choose(pick as u8), &mut out);
+        assert_eq!(out, [Event::PerkTaken { perk: offer[pick] }]);
+        assert_eq!(g.player.perks.count(offer[pick]), 1);
+        if offer[pick] == Perk::Vigor {
+            assert_eq!(g.player.max_hp, before + 4);
+        }
+        assert_eq!(g.pending.len(), levels - 1);
+    }
+
+    #[test]
+    fn level_36_is_the_top() {
+        let mut g = corridor(2);
+        let mut out = Vec::new();
+        g.depth = 30;
+        for _ in 0..400 {
+            g.enemies = alloc::vec![Enemy::of_kind(
+                1,
+                GridPos::new(2, 1),
+                EnemyKind::DemonKnight
+            )];
+            kill_in_front(&mut g, &mut out);
+            while !g.pending.is_empty() {
+                g.apply(Command::Choose(0), &mut out);
+            }
+        }
+        assert_eq!(g.player.level, MAX_LEVEL);
+        assert_eq!(g.player.xp, 0);
+        let taken: u32 = g.player.perks.taken().map(|(_, n)| n as u32).sum();
+        assert_eq!(taken, MAX_LEVEL - 1, "one ability per level gained");
+        for (perk, n) in g.player.perks.taken() {
+            assert!(n <= perk.max_stacks(), "{perk:?} {n}");
+        }
+    }
+
+    #[test]
+    fn abilities_change_the_rules() {
+        let mut g = corridor(2);
+        let mut out = Vec::new();
+        for perk in [
+            Perk::KeenEdge,
+            Perk::LightBlade,
+            Perk::QuickHands,
+            Perk::IronSkin,
+        ] {
+            for _ in 0..3 {
+                g.player.perks.add(perk);
+            }
+        }
+        assert!((g.player.attack_cost() - 1.8).abs() < 1e-4);
+        assert!((g.player.attack_cooldown_secs() - 0.35).abs() < 1e-4);
+        // Keen Edge: every hit does at least 2 + 3.
+        g.enemies = alloc::vec![Enemy::of_kind(
+            1,
+            GridPos::new(2, 1),
+            EnemyKind::DemonKnight
+        )];
+        g.apply(Command::Attack, &mut out);
+        let dealt = out.iter().find_map(|e| match e {
+            Event::EnemyHurt { damage, .. } => Some(*damage),
+            _ => None,
+        });
+        assert!(dealt.is_some_and(|d| d >= 5), "{dealt:?}");
+        // Iron Skin: a demon knight's 5..8 lands as 2..5.
+        g.enemies[0].state = EnemyState::WindUp { left: 0.01 };
+        let hp = g.player.hp;
+        let events = run(&mut g, 0.05);
+        let struck = events.iter().find_map(|e| match e {
+            Event::EnemyStruck { damage, .. } => Some(*damage),
+            _ => None,
+        });
+        assert!(struck.is_some_and(|d| (2..=5).contains(&d)), "{struck:?}");
+        assert_eq!(g.player.hp, hp - struck.unwrap());
+    }
+
+    #[test]
+    fn randomized_runs_bring_stages_and_crowds() {
+        let mut g = Game::new(5);
+        for _ in 0..13 {
+            g.player.pos = g.floor.stairs;
+            g.apply(Command::Descend, &mut Vec::new());
+        }
+        assert_eq!(g.depth, 14);
+        let stage = g.floor.stage.expect("generated floors belong to a stage");
+        assert_eq!(stage.number, 4);
+        assert!(g.enemies.len() >= 2, "deeper floors hold more enemies");
+        for e in &g.enemies {
+            assert!(stage.theme.kinds().contains(&e.kind) || e.kind.first_depth() <= 2);
+        }
     }
 }
 

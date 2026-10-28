@@ -19,12 +19,17 @@ pub mod enemy;
 pub mod game;
 pub mod grid;
 pub mod map;
+pub mod progression;
 pub mod rng;
 pub mod ruins;
+pub mod save;
+pub mod stage;
 
 pub use dungeon::{Floor, GenParams, Place};
 pub use enemy::{Enemy, EnemyId, EnemyKind, EnemyState};
 pub use game::{Command, Event, Game, Player};
 pub use grid::{Facing, GridPos, Step, Turn};
 pub use map::{Map, Tile};
+pub use progression::{MAX_LEVEL, Perk, Perks};
 pub use rng::Rng;
+pub use stage::{Stage, Theme};

@@ -499,6 +499,51 @@ pub fn crackle(seed: u64) -> Vec<f32> {
 }
 
 /// Wrap samples as a 16-bit mono PCM WAV file.
+/// A struck bell: a few inharmonic partials, each fading at its own pace.
+fn chime(freq: f32, len: f32) -> Vec<f32> {
+    const PARTIALS: [(f32, f32, f32); 4] = [
+        (1.0, 1.0, 0.9),
+        (2.0, 0.45, 0.5),
+        (2.76, 0.3, 0.3),
+        (5.4, 0.12, 0.12),
+    ];
+    (0..samples(len))
+        .map(|i| {
+            let t = time(i);
+            let attack = (t / 0.004).min(1.0);
+            PARTIALS
+                .iter()
+                .map(|&(ratio, gain, tau)| (TAU * freq * ratio * t).sin() * gain * decay(t, tau))
+                .sum::<f32>()
+                * attack
+        })
+        .collect()
+}
+
+/// Levelling up: four bells rising, ringing in the stone.
+pub fn level_up(_seed: u64) -> Vec<f32> {
+    let mut buf = vec![0.0; samples(1.6)];
+    for (k, freq) in [392.0, 523.25, 659.25, 783.99].into_iter().enumerate() {
+        mix_in(
+            &mut buf,
+            &chime(freq, 1.2),
+            k as f32 * 0.09,
+            1.0 - 0.1 * k as f32,
+        );
+    }
+    echo(&mut buf, 0.13, 0.3);
+    finish(buf)
+}
+
+/// Taking an ability: one low, warm bell.
+pub fn perk(_seed: u64) -> Vec<f32> {
+    let mut buf = chime(261.63, 0.9);
+    let fifth = chime(392.0, 0.7);
+    mix_in(&mut buf, &fifth, 0.0, 0.4);
+    echo(&mut buf, 0.11, 0.25);
+    finish(buf)
+}
+
 pub fn wav(samples: &[f32]) -> Vec<u8> {
     let data_len = (samples.len() * 2) as u32;
     let mut out = Vec::with_capacity(44 + data_len as usize);
@@ -539,6 +584,8 @@ pub fn all() -> Vec<(&'static str, Vec<f32>)> {
         ("stairs", stairs(14)),
         ("ambience", ambience(15)),
         ("crackle", crackle(16)),
+        ("level_up", level_up(17)),
+        ("perk", perk(18)),
     ]
 }
 

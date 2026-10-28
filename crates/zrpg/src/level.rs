@@ -16,7 +16,7 @@ use bevy::asset::RenderAssetUsages;
 use bevy::mesh::{Indices, PrimitiveTopology};
 use bevy::prelude::*;
 use zrpg_core::rng::mix64;
-use zrpg_core::{Facing, GridPos, Map, Place, Tile};
+use zrpg_core::{Facing, GridPos, Map, Place, Theme, Tile};
 
 use crate::Run;
 use crate::atmosphere::{GradedMaterial, graded};
@@ -50,6 +50,91 @@ const FERN_SIZE: f32 = 0.42;
 /// how far apart (in cells) they must be.
 const TORCH: f32 = 0.1;
 const MAX_TORCHES: usize = 4;
+
+/// How a floor is dressed: the chance of each wall and floor variant, of
+/// vines, ferns and torches. Each stage has its own mix.
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct Dressing {
+    carved: f32,
+    cracked: f32,
+    mossy_wall: f32,
+    mossy_floor: f32,
+    vines: f32,
+    fern: f32,
+    torch: f32,
+}
+
+impl Dressing {
+    /// The original dungeon's mix.
+    const CLASSIC: Dressing = Dressing {
+        carved: CARVED,
+        cracked: CRACKED,
+        mossy_wall: MOSSY_WALL,
+        mossy_floor: MOSSY_FLOOR,
+        vines: VINES,
+        fern: FERN,
+        torch: TORCH,
+    };
+
+    pub fn for_theme(theme: Theme) -> Dressing {
+        let c = Dressing::CLASSIC;
+        match theme {
+            // Damp and green.
+            Theme::Crypt => Dressing {
+                mossy_wall: 0.35,
+                mossy_floor: 0.45,
+                vines: 0.35,
+                ..c
+            },
+            // Old, split stone; little grows.
+            Theme::Catacombs => Dressing {
+                cracked: 0.4,
+                mossy_wall: 0.05,
+                mossy_floor: 0.1,
+                vines: 0.08,
+                fern: 0.05,
+                ..c
+            },
+            // Carved, cared-for walls, well lit.
+            Theme::Tombs => Dressing {
+                carved: 0.3,
+                cracked: 0.06,
+                mossy_wall: 0.04,
+                mossy_floor: 0.08,
+                vines: 0.05,
+                fern: 0.04,
+                torch: 0.16,
+            },
+            // Scorched: cracked, bare, many fires.
+            Theme::EmberDeep => Dressing {
+                carved: 0.02,
+                cracked: 0.45,
+                mossy_wall: 0.0,
+                mossy_floor: 0.0,
+                vines: 0.0,
+                fern: 0.0,
+                torch: 0.18,
+            },
+            // Overgrown and dim.
+            Theme::Haunted => Dressing {
+                mossy_wall: 0.3,
+                vines: 0.45,
+                fern: 0.3,
+                torch: 0.06,
+                ..c
+            },
+            // A fortress: carved and cracked stone, torches on the walls.
+            Theme::FallenKeep => Dressing {
+                carved: 0.15,
+                cracked: 0.25,
+                mossy_wall: 0.08,
+                vines: 0.12,
+                torch: 0.15,
+                ..c
+            },
+        }
+    }
+}
 const TORCH_SPACING: i32 = 4;
 /// The sconce (bracket and torch) on the wall: size and height of its foot.
 const SCONCE_SIZE: Vec2 = Vec2::new(0.2, 0.3);
@@ -236,7 +321,11 @@ fn rebuild_level(
     let geo = match place {
         Place::Dungeon => {
             *ground = GroundHeights::default();
-            LevelGeometry::build(&run.floor.map, run.floor.stairs_dir, seed)
+            let dressing = run
+                .floor
+                .stage
+                .map_or(Dressing::CLASSIC, |s| Dressing::for_theme(s.theme));
+            LevelGeometry::dress(&run.floor.map, run.floor.stairs_dir, seed, &dressing)
         }
         Place::Ruins => {
             *ground = GroundHeights::new(&run.floor.map, ruins::surface);
@@ -413,7 +502,12 @@ struct LevelGeometry {
 }
 
 impl LevelGeometry {
+    #[cfg(test)]
     fn build(map: &Map, stairs_dir: Facing, seed: u64) -> Self {
+        Self::dress(map, stairs_dir, seed, &Dressing::CLASSIC)
+    }
+
+    fn dress(map: &Map, stairs_dir: Facing, seed: u64, d: &Dressing) -> Self {
         let mut geo = LevelGeometry::default();
         let h = WALL_HEIGHT;
         let mut torch_spots: Vec<(f32, GridPos, Facing)> = Vec::new();
@@ -439,7 +533,7 @@ impl LevelGeometry {
             if stairs {
                 geo.add_stairs(p, stairs_dir);
             } else {
-                let kind = usize::from(roll(seed, p, 1) < MOSSY_FLOOR);
+                let kind = usize::from(roll(seed, p, 1) < d.mossy_floor);
                 geo.floors[kind].quad_shaded(
                     floor,
                     UV,
@@ -485,19 +579,19 @@ impl LevelGeometry {
                 }
                 let salt = 10 + dir as u64;
                 let kind = match roll(seed, p, salt) {
-                    r if r < CARVED => 3,
-                    r if r < CARVED + CRACKED => 2,
-                    r if r < CARVED + CRACKED + MOSSY_WALL => 1,
+                    r if r < d.carved => 3,
+                    r if r < d.carved + d.cracked => 2,
+                    r if r < d.carved + d.cracked + d.mossy_wall => 1,
                     _ => 0,
                 };
                 let foot = light * WALL_FOOT_SHADE;
                 let top = light * WALL_TOP_SHADE;
                 geo.walls[kind].quad_shaded(wall, UV, [foot, foot, top, top]);
                 let t = roll(seed, p, salt + 30);
-                if t < TORCH {
+                if t < d.torch {
                     torch_spots.push((t, p, dir));
                 }
-                if roll(seed, p, salt + 10) < VINES {
+                if roll(seed, p, salt + 10) < d.vines {
                     let lift = -forward * DECAL_OFFSET;
                     let (l, r) = (l + lift, r + lift);
                     let bottom = Vec3::Y * VINES_BOTTOM;
@@ -510,7 +604,7 @@ impl LevelGeometry {
                     );
                 }
             }
-            if !stairs && roll(seed, p, 30) < FERN {
+            if !stairs && roll(seed, p, 30) < d.fern {
                 geo.add_fern(map, p, seed);
             }
         }
