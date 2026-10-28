@@ -17,6 +17,9 @@ pub struct GenParams {
     pub room_min: i32,
     pub room_max: i32,
     pub enemies: usize,
+    /// Start the run in the sandstone ruins (see `ruins.rs`) instead of a
+    /// generated floor.
+    pub ruins_entrance: bool,
 }
 
 impl Default for GenParams {
@@ -28,6 +31,7 @@ impl Default for GenParams {
             room_min: 2,
             room_max: 4,
             enemies: 1,
+            ruins_entrance: true,
         }
     }
 }
@@ -54,7 +58,15 @@ impl Room {
     }
 }
 
-/// One generated dungeon floor.
+/// Where a floor is: the front-end dresses each differently.
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
+pub enum Place {
+    #[default]
+    Dungeon,
+    Ruins,
+}
+
+/// One dungeon floor.
 #[derive(Clone, Debug)]
 pub struct Floor {
     pub map: Map,
@@ -66,11 +78,16 @@ pub struct Floor {
     pub stairs_dir: Facing,
     /// Where this floor's enemies start. Never the start or stairs cell.
     pub enemy_spawns: Vec<GridPos>,
+    pub place: Place,
 }
 
 impl Floor {
-    /// Floor `depth` of the run identified by `run_seed`. Same inputs, same floor.
+    /// Floor `depth` of the run identified by `run_seed`. Same inputs, same
+    /// floor. With `ruins_entrance`, floor 1 is the ruins.
     pub fn for_depth(run_seed: u64, depth: u32, params: &GenParams) -> Floor {
+        if depth == 1 && params.ruins_entrance {
+            return crate::ruins::floor();
+        }
         generate(mix64(run_seed ^ mix64(depth as u64 + 1)), params)
     }
 }
@@ -114,6 +131,7 @@ pub fn generate(seed: u64, params: &GenParams) -> Floor {
         stairs,
         stairs_dir,
         enemy_spawns,
+        place: Place::Dungeon,
     }
 }
 

@@ -6,3 +6,9 @@ zrpg-*.png
 /android/app/build
 /android/app/src/main/jniLibs
 /android/local.properties
+# Extracted asset kits: reproduce them from the committed archives with
+# `python3 tools/extract_asset_kits.py`. The game embeds only what
+# tools/make_ruins.py and tools/make_creatures.py convert from them.
+/art/kits/*/
+!/art/kits/archives/
+!/art/kits/previews/

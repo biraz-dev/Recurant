@@ -6,8 +6,8 @@
 
 use alloc::vec::Vec;
 
-use crate::dungeon::{Floor, GenParams};
-use crate::enemy::{Enemy, EnemyId, EnemyState, tuning as enemy_tuning};
+use crate::dungeon::{Floor, GenParams, Place};
+use crate::enemy::{Enemy, EnemyId, EnemyKind, EnemyState, tuning as enemy_tuning};
 use crate::grid::{Facing, GridPos, Step, Turn};
 use crate::map::Tile;
 use crate::rng::{Rng, mix64};
@@ -144,7 +144,7 @@ impl Game {
     pub fn with_params(run_seed: u64, params: GenParams) -> Self {
         let floor = Floor::for_depth(run_seed, 1, &params);
         let player = Player::new(floor.start, floor.start_facing);
-        let enemies = spawn_enemies(&floor);
+        let enemies = spawn_enemies(&floor, 1);
         Self {
             run_seed,
             depth: 1,
@@ -165,7 +165,7 @@ impl Game {
     fn descend(&mut self) {
         self.depth += 1;
         self.floor = Floor::for_depth(self.run_seed, self.depth, &self.params);
-        self.enemies = spawn_enemies(&self.floor);
+        self.enemies = spawn_enemies(&self.floor, self.depth);
         let p = &mut self.player;
         p.pos = self.floor.start;
         p.facing = self.floor.start_facing;
@@ -176,8 +176,9 @@ impl Game {
         self.enemies.iter().find(|e| e.pos == p)
     }
 
-    fn is_open(&self, p: GridPos) -> bool {
-        self.floor.map.is_walkable(p) && self.enemy_at(p).is_none()
+    /// Can something at `from` step `dir` (walkable, edge open, unoccupied)?
+    fn is_open(&self, from: GridPos, dir: Facing) -> bool {
+        self.floor.map.can_step(from, dir) && self.enemy_at(from + dir).is_none()
     }
 
     /// Resolve one player command. The dead don't take orders.
@@ -190,7 +191,7 @@ impl Game {
                 let dir = step.world_dir(self.player.facing);
                 let from = self.player.pos;
                 let to = from + dir;
-                if self.is_open(to) {
+                if self.is_open(from, dir) {
                     self.player.pos = to;
                     out.push(Event::Moved { from, to });
                 } else {
@@ -228,8 +229,14 @@ impl Game {
         p.energy -= tuning::ATTACK_COST;
         p.attack_cooldown = tuning::ATTACK_COOLDOWN;
         let target = p.pos + p.facing;
+        // A parapet between you and it is out of reach.
+        let reachable = self.floor.map.within_reach(p.pos, target);
 
-        let Some(i) = self.enemies.iter().position(|e| e.pos == target) else {
+        let Some(i) = self
+            .enemies
+            .iter()
+            .position(|e| e.pos == target && reachable)
+        else {
             out.push(Event::Swung { hit: None });
             return;
         };
@@ -288,20 +295,21 @@ impl Game {
     fn tick_enemy(&mut self, i: usize, dt: f32, dist: &[Option<u32>], out: &mut Vec<Event>) {
         let map = &self.floor.map;
         let player_pos = self.player.pos;
-        let adjacent = self.enemies[i].pos.manhattan(player_pos) == 1;
+        let adjacent = map.within_reach(self.enemies[i].pos, player_pos);
+        let stats = self.enemies[i].stats();
         let walk_dist = dist[map.index(self.enemies[i].pos)];
         let id = self.enemies[i].id;
 
         match self.enemies[i].state {
             EnemyState::Dormant => {
-                if walk_dist.is_some_and(|d| d <= enemy_tuning::NOTICE_RANGE) {
+                if walk_dist.is_some_and(|d| d <= stats.notice_range) {
                     self.enemies[i].state = EnemyState::Chasing;
                     out.push(Event::EnemyNoticed { id });
                 }
             }
             EnemyState::Chasing if adjacent => {
                 self.enemies[i].state = EnemyState::WindUp {
-                    left: enemy_tuning::WIND_UP,
+                    left: stats.wind_up,
                 };
                 out.push(Event::EnemyWindUp { id });
             }
@@ -311,13 +319,14 @@ impl Game {
                 if e.step_timer > 0.0 {
                     return;
                 }
-                e.step_timer = enemy_tuning::STEP_INTERVAL;
+                e.step_timer = stats.step_interval;
                 let from = e.pos;
                 // Step to the open neighbour closest to the player.
                 let next = Facing::ALL
                     .into_iter()
+                    .filter(|&d| self.is_open(from, d))
                     .map(|d| from + d)
-                    .filter(|&n| n != player_pos && self.is_open(n))
+                    .filter(|&n| n != player_pos)
                     // Stairs are for the player; enemies stay on solid ground.
                     .filter(|&n| map.get(n) != Tile::StairsDown)
                     .filter_map(|n| dist[map.index(n)].map(|d| (d, n)))
@@ -336,14 +345,13 @@ impl Game {
                 }
                 // Stepping away during the tell dodges the blow.
                 let damage = if adjacent {
-                    self.rng
-                        .range(enemy_tuning::DAMAGE_MIN, enemy_tuning::DAMAGE_MAX)
+                    self.rng.range(stats.damage_min, stats.damage_max)
                 } else {
                     0
                 };
                 self.player.hp = (self.player.hp - damage).max(0);
                 self.enemies[i].state = EnemyState::Recover {
-                    left: enemy_tuning::RECOVER,
+                    left: stats.recover,
                 };
                 out.push(Event::EnemyStruck { id, damage });
             }
@@ -359,13 +367,22 @@ impl Game {
     }
 }
 
-fn spawn_enemies(floor: &Floor) -> Vec<Enemy> {
+fn spawn_enemies(floor: &Floor, depth: u32) -> Vec<Enemy> {
+    let kind = kind_for(floor.place, depth);
     floor
         .enemy_spawns
         .iter()
         .enumerate()
-        .map(|(i, &p)| Enemy::new(i as EnemyId, p))
+        .map(|(i, &p)| Enemy::of_kind(i as EnemyId, p, kind))
         .collect()
+}
+
+/// Who lives where: the undead haunt the ruins; zombies the dungeon below.
+fn kind_for(place: Place, _depth: u32) -> EnemyKind {
+    match place {
+        Place::Ruins => EnemyKind::Undead,
+        Place::Dungeon => EnemyKind::Zombie,
+    }
 }
 
 #[cfg(test)]

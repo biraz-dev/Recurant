@@ -28,7 +28,8 @@ pub fn next_command(game: &Game) -> Option<Command> {
     if game.on_stairs() {
         return Some(Command::Descend);
     }
-    if let Some(enemy) = game.enemies.iter().find(|e| e.pos.manhattan(p.pos) == 1) {
+    let map = &game.floor.map;
+    if let Some(enemy) = game.enemies.iter().find(|e| map.within_reach(e.pos, p.pos)) {
         return fight(game, enemy);
     }
     let healthy = p.hp as f32 >= p.max_hp as f32 * CAUTIOUS_HEALTH;
@@ -71,8 +72,9 @@ fn dodge(game: &Game, enemy: &Enemy) -> Option<Step> {
     ]
     .into_iter()
     .find(|step| {
-        let to = p.pos + step.world_dir(p.facing);
-        game.floor.map.is_walkable(to)
+        let dir = step.world_dir(p.facing);
+        let to = p.pos + dir;
+        game.floor.map.can_step(p.pos, dir)
             && game.enemy_at(to).is_none()
             && to.manhattan(enemy.pos) >= 2
     })
@@ -87,7 +89,9 @@ fn walk_toward(game: &Game, target: GridPos) -> Option<Command> {
     // keeps the bot from turning more than it needs to.
     let dir = [p.facing, p.facing.left(), p.facing.right(), p.facing.back()]
         .into_iter()
-        .find(|&d| dist[map.index(p.pos + d)].is_some_and(|n| n < here))?;
+        .find(|&d| {
+            map.can_step(p.pos, d) && dist[map.index(p.pos + d)].is_some_and(|n| n < here)
+        })?;
     if dir != p.facing {
         return Some(Command::Turn(turn_toward(p.facing, dir)));
     }

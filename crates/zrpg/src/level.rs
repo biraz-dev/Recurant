@@ -1,5 +1,6 @@
 //! Turns a `zrpg_core::Map` into geometry: one mesh per material, so a whole
-//! floor costs about a dozen draw calls.
+//! floor costs about a dozen draw calls. The ruins (see `ruins.rs`) are
+//! built from their asset kit instead; only their way down comes from here.
 //!
 //! World layout: grid cell `(x, y)` spans `x..x+1` on X and `y..y+1` on Z,
 //! floor at height 0, ceiling at `WALL_HEIGHT`.
@@ -15,11 +16,12 @@ use bevy::asset::RenderAssetUsages;
 use bevy::mesh::{Indices, PrimitiveTopology};
 use bevy::prelude::*;
 use zrpg_core::rng::mix64;
-use zrpg_core::{Facing, GridPos, Map, Tile};
+use zrpg_core::{Facing, GridPos, Map, Place, Tile};
 
 use crate::Run;
 use crate::atmosphere::{GradedMaterial, graded};
 use crate::lighting::{self, TorchAssets};
+use crate::ruins::{self, RuinsAssets};
 use crate::textures::{self, Maps, env};
 
 pub const WALL_HEIGHT: f32 = 1.0;
@@ -93,7 +95,8 @@ pub struct LevelPlugin;
 
 impl Plugin for LevelPlugin {
     fn build(&self, app: &mut App) {
-        app.add_systems(Startup, load_materials)
+        app.init_resource::<GroundHeights>()
+            .add_systems(Startup, (load_materials, ruins::load))
             .add_systems(Update, rebuild_level);
     }
 }
@@ -109,6 +112,46 @@ struct LevelMaterials {
     vines: Handle<GradedMaterial>,
     fern: Handle<GradedMaterial>,
     sconce: Handle<GradedMaterial>,
+}
+
+/// How high the ground is anywhere on the current floor, for the camera and
+/// enemies: flat in the dungeon; in the ruins, eased between cell centres so
+/// that walking into the pool or up its stairs is a slope, not a jump.
+#[derive(Resource, Default)]
+pub struct GroundHeights {
+    width: i32,
+    depth: i32,
+    /// Height at each cell's centre; empty means flat at 0.
+    cells: Vec<f32>,
+}
+
+impl GroundHeights {
+    fn new(map: &Map, surface: impl Fn(GridPos) -> f32) -> Self {
+        Self {
+            width: map.width(),
+            depth: map.height(),
+            cells: map.positions().map(surface).collect(),
+        }
+    }
+
+    pub fn at(&self, p: Vec3) -> f32 {
+        if self.cells.is_empty() {
+            return 0.0;
+        }
+        let (u, v) = (p.x - 0.5, p.z - 0.5);
+        let (x, z) = (u.floor() as i32, v.floor() as i32);
+        let (fu, fv) = (u - u.floor(), v - v.floor());
+        let h = |x: i32, z: i32| {
+            if x < 0 || z < 0 || x >= self.width || z >= self.depth {
+                0.0
+            } else {
+                self.cells[(z * self.width + x) as usize]
+            }
+        };
+        let near = h(x, z) + (h(x + 1, z) - h(x, z)) * fu;
+        let far = h(x, z + 1) + (h(x + 1, z + 1) - h(x, z + 1)) * fu;
+        near + (far - near) * fv
+    }
 }
 
 /// Parent of all geometry for the current floor.
@@ -161,12 +204,15 @@ fn load_materials(
     });
 }
 
+#[allow(clippy::too_many_arguments)]
 fn rebuild_level(
     mut commands: Commands,
     run: Res<Run>,
     roots: Query<(Entity, &LevelRoot)>,
     mats: Res<LevelMaterials>,
     torch_assets: Res<TorchAssets>,
+    ruins_assets: Res<RuinsAssets>,
+    mut ground: ResMut<GroundHeights>,
     mut meshes: ResMut<Assets<Mesh>>,
 ) {
     let current = roots
@@ -180,7 +226,20 @@ fn rebuild_level(
     }
 
     let seed = mix64(run.run_seed ^ mix64(run.depth as u64));
-    let geo = LevelGeometry::build(&run.floor.map, run.floor.stairs_dir, seed);
+    let place = run.floor.place;
+    let geo = match place {
+        Place::Dungeon => {
+            *ground = GroundHeights::default();
+            LevelGeometry::build(&run.floor.map, run.floor.stairs_dir, seed)
+        }
+        Place::Ruins => {
+            *ground = GroundHeights::new(&run.floor.map, ruins::surface);
+            // The way down: dungeon stairs sunk into the ruin's floor.
+            let mut geo = LevelGeometry::default();
+            geo.add_stairs(run.floor.stairs, run.floor.stairs_dir);
+            geo
+        }
+    };
     commands
         .spawn((
             LevelRoot {
@@ -191,6 +250,9 @@ fn rebuild_level(
             Visibility::default(),
         ))
         .with_children(|parent| {
+            if place == Place::Ruins {
+                ruins::spawn(parent, &ruins_assets);
+            }
             let parts = geo
                 .walls
                 .into_iter()

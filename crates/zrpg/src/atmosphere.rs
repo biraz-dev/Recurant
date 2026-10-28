@@ -10,12 +10,19 @@
 //! Desaturation and darkness live in a small shader (`depth_grade.wgsl`) that
 //! extends Bevy's standard material: lighting as usual, then grading, then
 //! fog and tonemapping. Torch flames skip all of it, so they burn through.
+//!
+//! Each [`Place`] has its own [`Look`]: the dungeon is dark and close; the
+//! sunlit ruins have a warm, far haze and a sky.
 
 use bevy::asset::embedded_asset;
 use bevy::pbr::{ExtendedMaterial, FogFalloff, MaterialExtension};
 use bevy::prelude::*;
 use bevy::render::render_resource::{AsBindGroup, ShaderType};
 use bevy::shader::ShaderRef;
+use zrpg_core::Place;
+
+use crate::view::PlayerCamera;
+use crate::{Frame, Run};
 
 /// Grading starts at this distance (world units; a cell is 1.0)...
 const GRADE_NEAR: f32 = 1.2;
@@ -36,11 +43,75 @@ pub const FOG: FogFalloff = FogFalloff::ExponentialSquared { density: 0.26 };
 /// A standard PBR material with depth grading on top.
 pub type GradedMaterial = ExtendedMaterial<StandardMaterial, DepthGrade>;
 
-/// Wrap a standard material in the shared depth grading.
+/// Wrap a standard material in the dungeon's depth grading.
 pub fn graded(base: StandardMaterial) -> GradedMaterial {
-    GradedMaterial {
-        base,
-        extension: DepthGrade::default(),
+    Look::DUNGEON.graded(base)
+}
+
+/// Everything about how a place looks at a distance, and how it is lit
+/// when no torch is near.
+#[derive(Clone, Debug)]
+pub struct Look {
+    /// Background: open space and the sky. Distant surfaces fade into it.
+    pub sky: Color,
+    pub fog: FogFalloff,
+    grade: DepthGradeUniform,
+    pub ambient_color: Color,
+    pub ambient_brightness: f32,
+    /// Far clipping distance, in world units.
+    pub view_distance: f32,
+}
+
+impl Look {
+    pub const DUNGEON: Look = Look {
+        sky: FOG_COLOR,
+        fog: FOG,
+        grade: DepthGradeUniform {
+            params: Vec4::new(GRADE_NEAR, GRADE_FAR, DESATURATE, DARKEN),
+            tint: Vec4::new(DRAIN_TINT.x, DRAIN_TINT.y, DRAIN_TINT.z, 1.0),
+        },
+        ambient_color: crate::lighting::AMBIENT_COLOR,
+        ambient_brightness: crate::lighting::AMBIENT_BRIGHTNESS,
+        view_distance: 9.0,
+    };
+
+    /// Sunlit sandstone: the far court fades into a warm, bright haze, and
+    /// shadows are a muted cool green, as in the kit's reference.
+    pub const RUINS: Look = Look {
+        sky: Color::srgb(0.84, 0.83, 0.78),
+        fog: FogFalloff::ExponentialSquared { density: 0.055 },
+        grade: DepthGradeUniform {
+            params: Vec4::new(5.0, 22.0, 0.45, 0.9),
+            tint: Vec4::new(1.06, 1.0, 0.86, 1.0),
+        },
+        ambient_color: Color::srgb(0.7, 0.82, 0.76),
+        ambient_brightness: 70.0,
+        view_distance: 32.0,
+    };
+
+    pub fn of(place: Place) -> Look {
+        match place {
+            Place::Dungeon => Look::DUNGEON,
+            Place::Ruins => Look::RUINS,
+        }
+    }
+
+    /// The haze colour that, once tonemapped, matches the sky (which is not
+    /// tonemapped), so the far distance melts into it without a seam.
+    pub fn fog_color(&self) -> Color {
+        let sky = self.sky.to_linear();
+        let luma = sky.luminance().min(0.95);
+        // Inverse of Reinhard on luminance: out = in / (1 + in).
+        let k = 1.0 / (1.0 - luma);
+        Color::linear_rgb(sky.red * k, sky.green * k, sky.blue * k)
+    }
+
+    /// Wrap a standard material in this place's depth grading.
+    pub fn graded(&self, base: StandardMaterial) -> GradedMaterial {
+        GradedMaterial {
+            base,
+            extension: DepthGrade { grade: self.grade },
+        }
     }
 }
 
@@ -49,7 +120,40 @@ pub struct AtmospherePlugin;
 impl Plugin for AtmospherePlugin {
     fn build(&self, app: &mut App) {
         embedded_asset!(app, "depth_grade.wgsl");
-        app.add_plugins(MaterialPlugin::<GradedMaterial>::default());
+        app.add_plugins(MaterialPlugin::<GradedMaterial>::default())
+            .add_systems(Update, apply_look.in_set(Frame::Present));
+    }
+}
+
+/// Dress the camera for the place the player is in, whenever that changes.
+fn apply_look(
+    run: Res<Run>,
+    mut current: Local<Option<Place>>,
+    mut cams: Query<
+        (
+            &mut Camera,
+            &mut DistanceFog,
+            &mut AmbientLight,
+            &mut Projection,
+        ),
+        With<PlayerCamera>,
+    >,
+) {
+    let place = run.floor.place;
+    if *current == Some(place) {
+        return;
+    }
+    let look = Look::of(place);
+    for (mut camera, mut fog, mut ambient, mut projection) in &mut cams {
+        camera.clear_color = ClearColorConfig::Custom(look.sky);
+        fog.color = look.fog_color();
+        fog.falloff = look.fog.clone();
+        ambient.color = look.ambient_color;
+        ambient.brightness = look.ambient_brightness;
+        if let Projection::Perspective(p) = projection.as_mut() {
+            p.far = look.view_distance;
+        }
+        *current = Some(place);
     }
 }
 
@@ -67,19 +171,31 @@ pub struct DepthGrade {
     grade: DepthGradeUniform,
 }
 
-impl Default for DepthGrade {
-    fn default() -> Self {
-        Self {
-            grade: DepthGradeUniform {
-                params: Vec4::new(GRADE_NEAR, GRADE_FAR, DESATURATE, DARKEN),
-                tint: DRAIN_TINT.extend(1.0),
-            },
-        }
-    }
-}
-
 impl MaterialExtension for DepthGrade {
     fn fragment_shader() -> ShaderRef {
         "embedded://zrpg/depth_grade.wgsl".into()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// Reinhard on luminance, as the camera's tonemapping does it.
+    fn tonemap(c: LinearRgba) -> LinearRgba {
+        let l = c.luminance();
+        let k = (l / (1.0 + l)) / l;
+        LinearRgba::rgb(c.red * k, c.green * k, c.blue * k)
+    }
+
+    #[test]
+    fn haze_meets_the_sky() {
+        for look in [Look::DUNGEON, Look::RUINS] {
+            let sky = look.sky.to_linear();
+            let fog = tonemap(look.fog_color().to_linear());
+            for (a, b) in [(sky.red, fog.red), (sky.green, fog.green), (sky.blue, fog.blue)] {
+                assert!((a - b).abs() < 1e-4, "{:?}: {sky:?} vs {fog:?}", look.sky);
+            }
+        }
     }
 }

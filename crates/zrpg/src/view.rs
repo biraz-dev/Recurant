@@ -9,10 +9,10 @@ use bevy::pbr::DistanceFog;
 use bevy::prelude::*;
 use zrpg_core::{Command, Event, Facing, GridPos, Step, Turn};
 
-use crate::atmosphere;
+use crate::atmosphere::Look;
 use crate::auto::AutoMode;
 use crate::input::{Action, Actions};
-use crate::level::{WALL_HEIGHT, cell_center, grid_dir};
+use crate::level::{GroundHeights, WALL_HEIGHT, cell_center, grid_dir};
 use crate::screen::{LowResTarget, world_target};
 use crate::{Frame, GameEvent, Run, publish};
 
@@ -33,8 +33,6 @@ pub const EYE_HEIGHT: f32 = WALL_HEIGHT * 0.5;
 /// cell stay in view, as in the classics.
 const EYE_BACK: f32 = 0.25;
 const FOV_DEGREES: f32 = 60.0;
-/// Nothing beyond this is visible through the haze anyway.
-const VIEW_DISTANCE: f32 = 9.0;
 
 pub struct ViewPlugin;
 
@@ -190,6 +188,7 @@ fn ease(t: f32) -> f32 {
 }
 
 fn spawn_camera(mut commands: Commands, target: Res<LowResTarget>, run: Res<Run>) {
+    let look = Look::of(run.floor.place);
     let anim = Animator::new(
         Pose::at(run.player.pos, run.player.facing),
         (run.run_seed, run.depth),
@@ -199,14 +198,14 @@ fn spawn_camera(mut commands: Commands, target: Res<LowResTarget>, run: Res<Run>
         Camera3d::default(),
         Camera {
             order: 0,
-            clear_color: ClearColorConfig::Custom(atmosphere::FOG_COLOR),
+            clear_color: ClearColorConfig::Custom(look.sky),
             ..default()
         },
         world_target(&target),
         Projection::Perspective(PerspectiveProjection {
             fov: FOV_DEGREES.to_radians(),
             near: 0.05,
-            far: VIEW_DISTANCE,
+            far: look.view_distance,
             ..default()
         }),
         // Compress torch highlights instead of clipping them (needs no LUTs).
@@ -215,13 +214,13 @@ fn spawn_camera(mut commands: Commands, target: Res<LowResTarget>, run: Res<Run>
         // Torchlit interiors: lights are tuned for indoor exposure.
         bevy::camera::Exposure { ev100: 6.4 },
         AmbientLight {
-            color: crate::lighting::AMBIENT_COLOR,
-            brightness: crate::lighting::AMBIENT_BRIGHTNESS,
+            color: look.ambient_color,
+            brightness: look.ambient_brightness,
             ..default()
         },
         DistanceFog {
-            color: atmosphere::FOG_COLOR,
-            falloff: atmosphere::FOG,
+            color: look.fog_color(),
+            falloff: look.fog,
             ..default()
         },
         anim.transform(0.0),
@@ -408,11 +407,14 @@ fn react_to_events(
 
 fn animate_camera(
     time: Res<Time>,
+    ground: Res<GroundHeights>,
     mut fade: ResMut<ScreenFade>,
     mut cams: Query<(&Animator, &mut Transform), With<PlayerCamera>>,
 ) {
     for (anim, mut t) in &mut cams {
         *t = anim.transform(time.elapsed_secs());
+        // Wade down into water and climb stairs smoothly, never in a jump.
+        t.translation.y += ground.at(anim.pose().pos);
         fade.0 = anim.fade();
     }
 }

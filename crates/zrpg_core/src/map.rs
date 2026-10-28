@@ -3,7 +3,7 @@
 use alloc::vec;
 use alloc::vec::Vec;
 
-use crate::grid::GridPos;
+use crate::grid::{Facing, GridPos};
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Tile {
@@ -23,6 +23,9 @@ pub struct Map {
     width: i32,
     height: i32,
     tiles: Vec<Tile>,
+    /// Per cell, edges closed even between two walkable cells (a parapet,
+    /// the side of a stair): one bit per `Facing`.
+    blocked: Vec<u8>,
 }
 
 impl Map {
@@ -32,6 +35,7 @@ impl Map {
             width,
             height,
             tiles: vec![tile; (width * height) as usize],
+            blocked: vec![0; (width * height) as usize],
         }
     }
 
@@ -66,6 +70,33 @@ impl Map {
         self.get(p).is_walkable()
     }
 
+    /// Close the edge between `p` and its neighbour in `dir`, both ways.
+    pub fn block(&mut self, p: GridPos, dir: Facing) {
+        for (cell, side) in [(p, dir), (p + dir, dir.back())] {
+            if self.in_bounds(cell) {
+                let i = self.index(cell);
+                self.blocked[i] |= 1 << side as u8;
+            }
+        }
+    }
+
+    pub fn is_blocked(&self, p: GridPos, dir: Facing) -> bool {
+        self.in_bounds(p) && self.blocked[self.index(p)] & (1 << dir as u8) != 0
+    }
+
+    /// Can something walk from `from` to its neighbour in `dir`?
+    pub fn can_step(&self, from: GridPos, dir: Facing) -> bool {
+        self.is_walkable(from + dir) && !self.is_blocked(from, dir)
+    }
+
+    /// Are `a` and `b` neighbours with an open edge between them (close
+    /// enough to strike each other)?
+    pub fn within_reach(&self, a: GridPos, b: GridPos) -> bool {
+        Facing::ALL
+            .into_iter()
+            .any(|d| a + d == b && !self.is_blocked(a, d))
+    }
+
     /// Every cell position, row by row.
     pub fn positions(&self) -> impl Iterator<Item = GridPos> + '_ {
         (0..self.height).flat_map(move |y| (0..self.width).map(move |x| GridPos::new(x, y)))
@@ -83,9 +114,9 @@ impl Map {
         queue.push_back(from);
         while let Some(p) = queue.pop_front() {
             let d = dist[self.index(p)].unwrap_or(0);
-            for dir in crate::grid::Facing::ALL {
+            for dir in Facing::ALL {
                 let n = p + dir;
-                if self.is_walkable(n) && dist[self.index(n)].is_none() {
+                if self.can_step(p, dir) && dist[self.index(n)].is_none() {
                     dist[self.index(n)] = Some(d + 1);
                     queue.push_back(n);
                 }
