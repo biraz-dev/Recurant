@@ -193,7 +193,11 @@ mod tests {
         for look in [Look::DUNGEON, Look::RUINS] {
             let sky = look.sky.to_linear();
             let fog = tonemap(look.fog_color().to_linear());
-            for (a, b) in [(sky.red, fog.red), (sky.green, fog.green), (sky.blue, fog.blue)] {
+            for (a, b) in [
+                (sky.red, fog.red),
+                (sky.green, fog.green),
+                (sky.blue, fog.blue),
+            ] {
                 assert!((a - b).abs() < 1e-4, "{:?}: {sky:?} vs {fog:?}", look.sky);
             }
         }
