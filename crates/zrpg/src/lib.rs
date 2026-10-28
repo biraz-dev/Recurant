@@ -8,6 +8,7 @@
 mod atmosphere;
 mod audio;
 mod auto;
+mod automap;
 mod enemies;
 mod hud;
 mod input;
@@ -120,6 +121,7 @@ fn build(saves: bool) -> App {
         auto::AutoPlugin,
         hud::HudPlugin,
         picker::PickerPlugin,
+        automap::AutomapPlugin,
         persist::PersistPlugin,
         script::ScriptPlugin,
     ))
