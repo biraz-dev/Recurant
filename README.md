@@ -64,15 +64,19 @@ a bridge over a pool (or wade through the pool's southern half), and a statue
 chamber where a stair at the statue's feet leads down. Two smouldering undead
 keep watch. Below, every floor is generated, and each brings creatures from a
 growing cast: zombie and skeleton warrior from floor 2, mummy and undead
-from 3, ember skeleton and wraith from 4, skeleton knight and inner demon
-from 5, demon knight from 6. Each kind has its own health, pace and blows.
+from 3, ember skeleton and wraith from 4, skeleton knight, inner demon and
+royal mummy from 5, demon knight from 6. Each kind has its own health, pace
+and blows.
 
-The ruins and the eight animated creatures come from the asset kits in
+The ruins, the nine animated creatures and the sword in your hand come from
+the asset kits in
 `art/kits` (see `ASSET_HANDOFF.md`). Their animations are generated
 prototypes: the game uses their four views, walk or hover cycle and three
 attacks, but the core alone decides when a blow lands, and the attack frames
 are stretched to meet it. There is no death animation in the kits; creatures
-collapse as the zombie does.
+collapse as the zombie does. The sword's broad swing is retimed the same
+way: a blow lands the moment you press Attack, so its wind-up is cut short
+and the whole swing fits inside the half-second before the next.
 
 ## Going deeper
 
@@ -132,6 +136,7 @@ cargo run -p zrpg --example bestiary         # parade every creature (--shots DI
 python3 tools/extract_asset_kits.py          # unpack art/kits/archives (needed by the two below)
 python3 tools/make_ruins.py                  # ruins kit -> assets/ruins + zrpg_core/src/ruins.map
 python3 tools/make_creatures.py              # creature kits -> assets/creatures + src/sheets.rs
+python3 tools/make_sword.py                  # sword kit -> assets/sword.png
 python3 tools/make_sprite.py art/zombie-reference.png crates/zrpg/assets/zombie.png --height 64
 python3 tools/make_textures.py --preview sheet.png   # regenerate the environment textures
 ```
@@ -179,8 +184,8 @@ all and burn through the dark.
 
 Vertical Slice 0.1 is complete; since then: web and Android builds, auto mode,
 the zombie, the sandstone-temple look with torchlight and atmosphere,
-synthesized sound, the sunlit ruins entrance, and eight animated creatures
-from the asset kits.
+synthesized sound, the sunlit ruins entrance, nine animated creatures and a
+first-person sword from the asset kits.
 
 ### Vertical Slice 0.1
 

@@ -165,6 +165,7 @@ fn voice(kind: EnemyKind) -> f32 {
         EnemyKind::Undead => 0.92,
         EnemyKind::SkeletonWarrior => 1.25,
         EnemyKind::Mummy => 0.8,
+        EnemyKind::RoyalMummy => 0.74,
         EnemyKind::EmberSkeleton => 1.15,
         EnemyKind::Wraith => 1.45,
         EnemyKind::SkeletonKnight => 1.05,

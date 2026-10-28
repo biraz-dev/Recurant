@@ -92,6 +92,35 @@ pub const MUMMY: Sheet = Sheet {
     ],
 };
 
+/// From `art/kits/royal-mummy-v1/extracted/manifest.json`.
+pub const ROYAL_MUMMY: Sheet = Sheet {
+    png: include_bytes!("../assets/creatures/royal_mummy.png"),
+    height: 1.0,
+    body_px: 70.0,
+    locomotion: Clip {
+        name: "walk",
+        fps: 8.0,
+        hit: None,
+    },
+    attacks: [
+        Clip {
+            name: "claw_swipe",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "lunge",
+            fps: 10.0,
+            hit: Some(3),
+        },
+        Clip {
+            name: "two_hand_slam",
+            fps: 8.0,
+            hit: Some(4),
+        },
+    ],
+};
+
 /// From `art/kits/ember-skeleton-v1/frames/manifest.json`.
 pub const EMBER_SKELETON: Sheet = Sheet {
     png: include_bytes!("../assets/creatures/ember_skeleton.png"),
@@ -243,6 +272,7 @@ pub fn sheet(kind: EnemyKind) -> Option<&'static Sheet> {
         EnemyKind::Undead => Some(&UNDEAD),
         EnemyKind::SkeletonWarrior => Some(&SKELETON_WARRIOR),
         EnemyKind::Mummy => Some(&MUMMY),
+        EnemyKind::RoyalMummy => Some(&ROYAL_MUMMY),
         EnemyKind::EmberSkeleton => Some(&EMBER_SKELETON),
         EnemyKind::Wraith => Some(&WRAITH),
         EnemyKind::SkeletonKnight => Some(&SKELETON_KNIGHT),

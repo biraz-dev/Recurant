@@ -2,8 +2,6 @@
 //! hurt, and the death screen. Drawn into the 320x240 frame so it gets the
 //! same chunky pixels as the world.
 
-use std::f32::consts::PI;
-
 use bevy::prelude::*;
 use zrpg_core::Event;
 
@@ -16,19 +14,35 @@ const BAR_HEIGHT: f32 = 4.0;
 const HEALTH_COLOR: Color = Color::srgb(0.78, 0.16, 0.14);
 const ENERGY_COLOR: Color = Color::srgb(0.95, 0.75, 0.2);
 const EXHAUSTED_COLOR: Color = Color::srgb(1.0, 1.0, 1.0);
-const SWING_SECS: f32 = 0.22;
 const HURT_FLASH_SECS: f32 = 0.3;
 const EXHAUSTED_FLASH_SECS: f32 = 0.3;
 /// How long the "FLOOR N" banner stays up after descending.
 const BANNER_SECS: f32 = 1.6;
-/// Sword rest position (from the bottom-right corner), in low-res pixels.
-const SWORD_RIGHT: f32 = 36.0;
-const SWORD_BOTTOM: f32 = -60.0;
-const SWORD_SCALE: f32 = 3.0;
-/// Resting tilt (tip leaning in towards the centre) and the extra tilt at
-/// the peak of a swing, in degrees.
-const SWORD_TILT: f32 = 20.0;
-const SWING_TILT: f32 = 45.0;
+/// The sword in hand: twelve whole-screen 320x240 overlays in a 4 x 3
+/// sheet, from `art/kits/first-person-sword-v02` (copied by
+/// `tools/make_sword.py`). Frame 0 is the sword held at rest.
+const SWORD_PNG: &[u8] = include_bytes!("../assets/sword.png");
+const SWORD_SHEET: (u32, u32) = (4, 3);
+/// One broad swing, high right to low left, then back up: (frame, seconds).
+///
+/// The kit proposes 830 ms with contact at 240 ms. But a swing lands the
+/// instant you press Attack (`zrpg_core`), and the next one is allowed
+/// 500 ms later. So the wind-up is cut short, showing contact 110 ms in, and
+/// the whole swing fits inside the cooldown; the kit's order of frames and
+/// its fast-cut, slower-recovery rhythm are kept.
+const SWING: [(usize, f32); 11] = [
+    (1, 0.05),  // draw back
+    (2, 0.04),  // windup
+    (3, 0.02),  // release
+    (4, 0.03),  // contact
+    (5, 0.03),  // follow-through
+    (6, 0.04),  // finish, offscreen
+    (7, 0.05),  // lowered reset
+    (8, 0.06),  // return low
+    (9, 0.05),  // raise
+    (10, 0.04), // settle
+    (11, 0.04), // idle again
+];
 
 pub struct HudPlugin;
 
@@ -52,7 +66,8 @@ impl Plugin for HudPlugin {
 
 #[derive(Resource, Default)]
 struct HudFx {
-    swing: f32,
+    /// Seconds into the current swing, if swinging.
+    swing: Option<f32>,
     hurt: f32,
     exhausted: f32,
     banner: f32,
@@ -79,12 +94,20 @@ fn spawn_hud(
     mut commands: Commands,
     cams: Query<Entity, With<PlayerCamera>>,
     mut images: ResMut<Assets<Image>>,
+    mut layouts: ResMut<Assets<TextureAtlasLayout>>,
 ) {
     let Ok(cam) = cams.single() else {
         return;
     };
-    let sword = images.add(textures::sword());
-    let (sw, sh) = textures::SWORD_SIZE;
+    let sword = images.add(textures::embedded(SWORD_PNG));
+    let (cols, rows) = SWORD_SHEET;
+    let layout = layouts.add(TextureAtlasLayout::from_grid(
+        UVec2::new(crate::screen::WIDTH, crate::screen::HEIGHT),
+        cols,
+        rows,
+        None,
+        None,
+    ));
 
     let full = || Node {
         position_type: PositionType::Absolute,
@@ -96,18 +119,12 @@ fn spawn_hud(
     commands
         .spawn((full(), UiTargetCamera(cam)))
         .with_children(|root| {
+            // Whole frames at the screen's origin, as the kit asks: its
+            // swing leaves the screen on purpose.
             root.spawn((
                 Sword,
-                ImageNode::new(sword),
-                UiTransform::from_rotation(Rot2::degrees(SWORD_TILT)),
-                Node {
-                    position_type: PositionType::Absolute,
-                    right: px(SWORD_RIGHT),
-                    bottom: px(SWORD_BOTTOM),
-                    width: px(sw as f32 * SWORD_SCALE),
-                    height: px(sh as f32 * SWORD_SCALE),
-                    ..default()
-                },
+                ImageNode::from_atlas_image(sword, TextureAtlas { layout, index: 0 }),
+                full(),
             ));
 
             root.spawn(Node {
@@ -217,10 +234,19 @@ fn bar(parent: &mut ChildSpawnerCommands, marker: impl Component, color: Color) 
         });
 }
 
+/// The sword frame `t` seconds into a swing, or `None` once it is over.
+fn swing_frame(t: f32) -> Option<usize> {
+    let mut end = 0.0;
+    SWING.iter().find_map(|&(frame, secs)| {
+        end += secs;
+        (t < end).then_some(frame)
+    })
+}
+
 fn react_to_events(mut events: MessageReader<GameEvent>, mut fx: ResMut<HudFx>) {
     for GameEvent(event) in events.read() {
         match event {
-            Event::Swung { .. } => fx.swing = SWING_SECS,
+            Event::Swung { .. } => fx.swing = Some(0.0),
             Event::EnemyStruck { damage, .. } if *damage > 0 => fx.hurt = HURT_FLASH_SECS,
             Event::Exhausted => fx.exhausted = EXHAUSTED_FLASH_SECS,
             Event::Descended { .. } => fx.banner = BANNER_SECS,
@@ -239,15 +265,15 @@ fn update_hud(
         (&mut Node, &mut BackgroundColor),
         (With<EnergyFill>, Without<HurtFlash>, Without<Sword>),
     >,
-    mut sword: Query<
-        (&mut Node, &mut UiTransform, &mut Visibility),
-        (With<Sword>, Without<DeathScreen>),
-    >,
+    mut sword: Query<(&mut ImageNode, &mut Visibility), (With<Sword>, Without<DeathScreen>)>,
     mut flash: Query<&mut BackgroundColor, (With<HurtFlash>, Without<EnergyFill>)>,
     mut death: Query<&mut Visibility, (With<DeathScreen>, Without<Sword>)>,
 ) {
     let dt = time.delta_secs();
-    fx.swing = (fx.swing - dt).max(0.0);
+    fx.swing = fx
+        .swing
+        .map(|t| t + dt)
+        .filter(|&t| swing_frame(t).is_some());
     fx.hurt = (fx.hurt - dt).max(0.0);
     fx.exhausted = (fx.exhausted - dt).max(0.0);
     let p = &run.player;
@@ -264,12 +290,13 @@ fn update_hud(
             ENERGY_COLOR
         };
     }
-    for (mut n, mut tf, mut v) in &mut sword {
-        // Swing: chop up, across and in towards the centre, then settle back.
-        let s = (fx.swing / SWING_SECS * PI).sin().max(0.0);
-        n.right = px(SWORD_RIGHT + 80.0 * s);
-        n.bottom = px(SWORD_BOTTOM + 36.0 * s);
-        tf.rotation = Rot2::degrees(SWORD_TILT + SWING_TILT * s);
+    let frame = fx.swing.and_then(swing_frame).unwrap_or(0);
+    for (mut image, mut v) in &mut sword {
+        if let Some(atlas) = image.texture_atlas.as_mut()
+            && atlas.index != frame
+        {
+            atlas.index = frame;
+        }
         *v = if alive {
             Visibility::Inherited
         } else {
@@ -324,5 +351,26 @@ fn update_auto_label(
         };
         let pulse = 0.65 + 0.35 * (time.elapsed_secs() * 3.0).sin().abs();
         color.0 = Color::srgba(0.95, 0.75, 0.2, pulse);
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use zrpg_core::game::tuning::ATTACK_COOLDOWN;
+
+    #[test]
+    fn a_swing_shows_contact_early_and_ends_before_the_next() {
+        let total: f32 = SWING.iter().map(|s| s.1).sum();
+        assert!(
+            total < ATTACK_COOLDOWN,
+            "swing {total} s outlasts the cooldown"
+        );
+        assert_eq!(swing_frame(0.0), Some(1));
+        let contact = (0..1000)
+            .map(|ms| ms as f32 / 1000.0)
+            .find(|&t| swing_frame(t) == Some(4));
+        assert!(contact.is_some_and(|t| t <= 0.12), "contact at {contact:?}");
+        assert_eq!(swing_frame(total + 0.001), None);
     }
 }

@@ -34,6 +34,8 @@ pub enum EnemyKind {
     SkeletonWarrior,
     /// Slow and hard to put down; its blows are heavy.
     Mummy,
+    /// A mummified king in gold and blue: a mummy, only more so.
+    RoyalMummy,
     /// A charred skeleton with coals for marrow: fast.
     EmberSkeleton,
     /// Drifts quickly and notices you from further off.
@@ -95,6 +97,14 @@ impl EnemyKind {
                 damage_max: 6,
                 ..zombie
             },
+            EnemyKind::RoyalMummy => Stats {
+                max_hp: 15,
+                step_interval: 0.75,
+                wind_up: 0.65,
+                damage_min: 4,
+                damage_max: 7,
+                ..zombie
+            },
             EnemyKind::EmberSkeleton => Stats {
                 step_interval: 0.45,
                 wind_up: 0.5,
@@ -134,7 +144,7 @@ impl EnemyKind {
     }
 
     /// Every kind, weakest first.
-    pub const ALL: [EnemyKind; 9] = [
+    pub const ALL: [EnemyKind; 10] = [
         EnemyKind::Zombie,
         EnemyKind::SkeletonWarrior,
         EnemyKind::Mummy,
@@ -143,6 +153,7 @@ impl EnemyKind {
         EnemyKind::Wraith,
         EnemyKind::SkeletonKnight,
         EnemyKind::InnerDemon,
+        EnemyKind::RoyalMummy,
         EnemyKind::DemonKnight,
     ];
 
@@ -152,7 +163,7 @@ impl EnemyKind {
             EnemyKind::Zombie | EnemyKind::SkeletonWarrior => 2,
             EnemyKind::Mummy | EnemyKind::Undead => 3,
             EnemyKind::EmberSkeleton | EnemyKind::Wraith => 4,
-            EnemyKind::SkeletonKnight | EnemyKind::InnerDemon => 5,
+            EnemyKind::SkeletonKnight | EnemyKind::InnerDemon | EnemyKind::RoyalMummy => 5,
             EnemyKind::DemonKnight => 6,
         }
     }

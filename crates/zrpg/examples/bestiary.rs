@@ -3,14 +3,14 @@
 //!
 //! For each kind, one creature crosses the chamber to the right and back
 //! (its right and left views), then another walks up to you (front),
-//! attacks, and walks away (back). The core still decides when the blow
+//! attacks, takes a swing of your sword, and walks away (back). The core still decides when the blow
 //! lands, as in the game. With `--shots DIR`, screenshots of each stage are
 //! saved there and the parade ends after the last creature.
 
 use bevy::prelude::*;
 use bevy::render::view::screenshot::{Screenshot, save_to_disk};
 use zrpg::{Frame, GameEvent, Run};
-use zrpg_core::{EnemyKind, EnemyState, Event, Facing, GridPos};
+use zrpg_core::{Command, EnemyKind, EnemyState, Event, Facing, GridPos};
 
 /// Seconds per beat: one step, or one pause.
 const BEAT: f32 = 0.4;
@@ -132,15 +132,26 @@ fn stage(
         }
     }
 
-    // Screenshots: mid-stride each way, mid-wind-up, the blow, walking off.
+    // You strike back once its blow has landed.
     let cross = (CROSS_TO - CROSS_FROM) as f32;
     let wind_up = kind.stats().wind_up;
+    let riposte = ATTACK_BEAT as f32 * BEAT + wind_up + 0.4;
+    if clock >= riposte && clock - time.delta_secs() < riposte {
+        let mut out = Vec::new();
+        run.apply(Command::Attack, &mut out);
+        events.write_batch(out.into_iter().map(GameEvent));
+    }
+
+    // Screenshots: mid-stride each way, mid-wind-up, the blow, your sword
+    // at contact and recovering, walking off.
     let moments = [
         ("right", (cross * 0.5 + 0.4) * BEAT),
         ("left", (cross * 1.5 + 0.4) * BEAT),
         ("front", (2.0 * cross + 2.4) * BEAT),
         ("windup", ATTACK_BEAT as f32 * BEAT + wind_up * 0.7),
         ("strike", ATTACK_BEAT as f32 * BEAT + wind_up + 0.12),
+        ("sword-contact", riposte + 0.115),
+        ("sword-recover", riposte + 0.3),
         ("back", (2.0 * cross + 9.4) * BEAT),
     ];
     if let Some(dir) = parade.shots.clone() {

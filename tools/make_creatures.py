@@ -38,6 +38,8 @@ CREATURES = {
     "undead": ("undead-four-direction-v1/art/extracted/manifest.json", "Undead", 0.95),
     "skeleton_warrior": ("skeleton-warrior-v1/manifest.json", "SkeletonWarrior", 0.92),
     "mummy": ("mummy-v1/extracted/manifest.json", "Mummy", 0.95),
+    # A separate character from the mummy above, not a replacement.
+    "royal_mummy": ("royal-mummy-v1/extracted/manifest.json", "RoyalMummy", 1.0),
     "ember_skeleton": ("ember-skeleton-v1/frames/manifest.json", "EmberSkeleton", 0.92),
     # Hovering: the pivot marks its lowest tendrils, not a foot.
     "wraith": ("wraith-v1/extracted/manifest.json", "Wraith", 1.05),
