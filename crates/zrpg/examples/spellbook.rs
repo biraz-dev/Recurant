@@ -12,7 +12,10 @@ use zrpg_core::{Command, EnemyKind, EnemyState, Facing, GridPos, Spell};
 const ROUND: f32 = 2.4;
 /// When in each round to cast, and to take pictures after casting.
 const CAST_AT: f32 = 1.6;
-const SHOTS: [f32; 2] = [0.06, 0.16];
+const SHOTS: [f32; 3] = [0.06, 0.16, 0.35];
+/// The barrage is held down this long; a second hammer follows this soon.
+const HOLD: f32 = 0.6;
+const SECOND_HAMMER: f32 = 0.15;
 const PLAYER: GridPos = GridPos::new(14, 12);
 /// Two in the line ahead, two off to the sides.
 const FOES: [GridPos; 4] = [
@@ -89,7 +92,11 @@ fn stage(
     let p = &mut run.player;
     p.energy = p.max_energy;
 
-    if !warming_up && before < CAST_AT && clock >= CAST_AT {
+    let held = spell == Spell::SparkBarrage && (CAST_AT..CAST_AT + HOLD).contains(&clock);
+    let again = spell == Spell::MagicHammer
+        && before < CAST_AT + SECOND_HAMMER
+        && clock >= CAST_AT + SECOND_HAMMER;
+    if !warming_up && ((before < CAST_AT && clock >= CAST_AT) || held || again) {
         let mut out = Vec::new();
         run.apply(Command::Cast(spell), &mut out);
         events.write_batch(out.into_iter().map(GameEvent));

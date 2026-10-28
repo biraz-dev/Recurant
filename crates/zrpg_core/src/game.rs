@@ -6,7 +6,7 @@
 
 use alloc::vec::Vec;
 
-use crate::archery::{Flight, tuning as arrow_tuning};
+use crate::archery::{Flight, Missile, tuning as arrow_tuning};
 use crate::dungeon::{Floor, GenParams, Place};
 use crate::enemy::{Enemy, EnemyId, EnemyKind, EnemyState, tuning as enemy_tuning};
 use crate::equipment::Equipment;
@@ -172,15 +172,21 @@ pub enum Event {
     SpellFizzled {
         spell: Spell,
     },
-    /// An arrow left the bow (see `Game::flights`).
-    ArrowLoosed {
+    /// The psionic blade's last swing: it comes apart, and the sword is
+    /// back in hand.
+    BladeFaded,
+    /// Something was loosed down the line: an arrow, a spark or a hammer
+    /// (see `Game::flights`).
+    Launched {
         id: u32,
+        missile: Missile,
         from: GridPos,
         dir: Facing,
     },
-    /// An arrow struck an enemy at `at`.
-    ArrowHit {
+    /// It struck an enemy at `at`.
+    MissileHit {
         id: u32,
+        missile: Missile,
         enemy: EnemyId,
         at: GridPos,
     },
@@ -191,6 +197,20 @@ pub enum Event {
         at: GridPos,
         wall: bool,
         kept: bool,
+    },
+    /// A spark went out at `at`, against a wall or spent.
+    SparkSpent {
+        id: u32,
+        at: GridPos,
+    },
+    /// A hammer turned for home at `at`.
+    HammerTurned {
+        id: u32,
+        at: GridPos,
+    },
+    /// A hammer came back to your hand.
+    HammerCaught {
+        id: u32,
     },
     /// Tried to shoot with an empty quiver.
     OutOfArrows,
@@ -233,6 +253,8 @@ pub struct Player {
     /// Arrows in the quiver, and seconds until the bow can shoot again.
     pub arrows: u32,
     pub bow_cooldown: f32,
+    /// Swings left in a conjured psionic blade (0: the sword).
+    pub blade: u8,
     /// Seconds until each spell can be cast again, in `Spell::ALL` order.
     pub spell_cooldowns: [f32; Spell::ALL.len()],
     /// Seconds towards the next Health from Regeneration.
@@ -257,6 +279,7 @@ impl Player {
             equipment: Equipment::starting_kit(),
             arrows: arrow_tuning::START_ARROWS,
             bow_cooldown: 0.0,
+            blade: 0,
             spell_cooldowns: [0.0; Spell::ALL.len()],
             regen: 0.0,
         }
@@ -293,15 +316,24 @@ impl Player {
         self.hp > 0
     }
 
-    /// The least and most a swing does, before Crushing Blow.
+    /// The least and most a swing does, before Crushing Blow: the sword's,
+    /// or the psionic blade's while it lasts.
     pub fn swing_damage(&self) -> (i32, i32) {
         let edge = self.stacks(Perk::KeenEdge) as i32;
-        (tuning::DAMAGE_MIN + edge, tuning::DAMAGE_MAX + edge)
+        if self.blade > 0 {
+            let bonus = spells::level_bonus(self.level);
+            (
+                spell_tuning::BLADE_DAMAGE_MIN + edge + bonus,
+                spell_tuning::BLADE_DAMAGE_MAX + edge + bonus,
+            )
+        } else {
+            (tuning::DAMAGE_MIN + edge, tuning::DAMAGE_MAX + edge)
+        }
     }
 
-    /// Ready to swing and able to pay for it.
+    /// Ready to swing and able to pay for it (the psionic blade is free).
     pub fn can_attack(&self) -> bool {
-        self.attack_cooldown <= 0.0 && self.energy >= self.attack_cost()
+        self.attack_cooldown <= 0.0 && (self.blade > 0 || self.energy >= self.attack_cost())
     }
 }
 
@@ -544,13 +576,19 @@ impl Game {
         if p.attack_cooldown > 0.0 {
             return;
         }
-        if p.energy < p.attack_cost() {
+        let psionic = p.blade > 0;
+        if !psionic && p.energy < p.attack_cost() {
             out.push(Event::Exhausted);
             return;
         }
-        p.energy -= p.attack_cost();
+        if !psionic {
+            p.energy -= p.attack_cost();
+        }
         p.attack_cooldown = p.attack_cooldown_secs();
         let (low, high) = p.swing_damage();
+        // Every swing wears the blade, hit or miss.
+        p.blade = p.blade.saturating_sub(1);
+        let fades = psionic && p.blade == 0;
         let crushing = p.stacks(Perk::CrushingBlow) as u32 * perk_tuning::CRUSHING_PERCENT;
         let target = p.pos + p.facing;
         // A parapet between you and it is out of reach.
@@ -562,6 +600,9 @@ impl Game {
             .position(|e| e.pos == target && reachable)
         else {
             out.push(Event::Swung { hit: None });
+            if fades {
+                out.push(Event::BladeFaded);
+            }
             return;
         };
         let mut damage = self.rng.range(low, high);
@@ -572,6 +613,9 @@ impl Game {
             hit: Some(self.enemies[i].id),
         });
         self.hurt_enemy(i, damage, out);
+        if fades {
+            out.push(Event::BladeFaded);
+        }
     }
 
     /// Hurt enemy `i`: a hit wakes it, a hit during its wind-up staggers
@@ -658,11 +702,29 @@ impl Game {
         }
         p.arrows -= 1;
         p.bow_cooldown = arrow_tuning::COOLDOWN;
-        let (from, dir) = (p.pos, p.facing);
+        self.launch(Missile::Arrow, out);
+    }
+
+    /// Send `missile` down the line from where you stand.
+    fn launch(&mut self, missile: Missile, out: &mut Vec<Event>) {
+        let (from, dir) = (self.player.pos, self.player.facing);
         let id = self.next_flight;
         self.next_flight = self.next_flight.wrapping_add(1);
-        self.flights.push(Flight::new(id, from, dir));
-        out.push(Event::ArrowLoosed { id, from, dir });
+        self.flights.push(Flight::new(id, missile, from, dir));
+        out.push(Event::Launched {
+            id,
+            missile,
+            from,
+            dir,
+        });
+    }
+
+    /// Hammers in the air (going out or coming home).
+    pub fn hammers_out(&self) -> usize {
+        self.flights
+            .iter()
+            .filter(|f| f.missile == Missile::Hammer)
+            .count()
     }
 
     /// The first enemy an arrow loosed now would meet, if it stood still.
@@ -681,46 +743,37 @@ impl Game {
         None
     }
 
-    /// Move every arrow in the air on by `dt`: into the next cells, until
-    /// it meets an enemy, a wall or the end of its range.
-    fn fly_arrows(&mut self, dt: f32, out: &mut Vec<Event>) {
+    /// Move everything in the air on by `dt`: into the next cells, until
+    /// it meets an enemy, a wall or the end of its range. Hammers then
+    /// fly home.
+    fn fly_missiles(&mut self, dt: f32, out: &mut Vec<Event>) {
         let mut i = 0;
         while i < self.flights.len() {
             let mut f = self.flights[i];
-            f.dist += arrow_tuning::SPEED * dt;
+            let step = f.missile.speed() * dt;
             let mut done = false;
-            while !done && f.entered < f.cells_reached() {
-                if !self.floor.map.can_step(f.cell, f.dir) {
-                    self.arrow_falls(f.id, f.cell, true, out);
+            if f.returning {
+                // Home along the way it came; nothing stops it now.
+                f.dist -= step;
+                if f.dist <= 0.0 {
+                    out.push(Event::HammerCaught { id: f.id });
                     done = true;
+                }
+            } else {
+                f.dist += step;
+            }
+            while !done && !f.returning && f.entered < f.cells_reached() {
+                if !self.floor.map.can_step(f.cell, f.dir) {
+                    done = self.missile_stops(&mut f, true, out);
                     continue;
                 }
                 f.cell = f.cell + f.dir;
                 f.entered += 1;
                 if let Some(e) = self.enemies.iter().position(|e| e.pos == f.cell) {
-                    let id = self.enemies[e].id;
-                    out.push(Event::ArrowHit {
-                        id: f.id,
-                        enemy: id,
-                        at: f.cell,
-                    });
-                    let damage = self
-                        .rng
-                        .range(arrow_tuning::DAMAGE_MIN, arrow_tuning::DAMAGE_MAX)
-                        + spells::level_bonus(self.player.level);
-                    self.hurt_enemy(e, damage, out);
-                    if self.rng.chance(arrow_tuning::KEPT_HIT_PERCENT) {
-                        self.leave(Drop {
-                            pos: f.cell,
-                            gold: 0,
-                            items: Bag::default(),
-                            arrows: 1,
-                        });
-                    }
-                    done = true;
-                } else if f.entered >= arrow_tuning::RANGE {
-                    self.arrow_falls(f.id, f.cell, false, out);
-                    done = true;
+                    self.missile_strikes(&mut f, e, out);
+                    done = f.missile != Missile::Hammer;
+                } else if f.entered >= f.missile.range() {
+                    done = self.missile_stops(&mut f, false, out);
                 }
             }
             if done {
@@ -730,6 +783,76 @@ impl Game {
                 i += 1;
             }
         }
+    }
+
+    /// `f` strikes enemy `e`. A hammer turns for home from here.
+    fn missile_strikes(&mut self, f: &mut Flight, e: usize, out: &mut Vec<Event>) {
+        out.push(Event::MissileHit {
+            id: f.id,
+            missile: f.missile,
+            enemy: self.enemies[e].id,
+            at: f.cell,
+        });
+        let bonus = spells::level_bonus(self.player.level);
+        let damage = match f.missile {
+            Missile::Arrow => {
+                self.rng
+                    .range(arrow_tuning::DAMAGE_MIN, arrow_tuning::DAMAGE_MAX)
+                    + bonus
+            }
+            Missile::Spark => spell_tuning::BARRAGE_DAMAGE + bonus / 2,
+            Missile::Hammer => {
+                self.rng.range(
+                    spell_tuning::HAMMER_DAMAGE_MIN,
+                    spell_tuning::HAMMER_DAMAGE_MAX,
+                ) + bonus
+            }
+        };
+        self.hurt_enemy(e, damage, out);
+        match f.missile {
+            Missile::Arrow if self.rng.chance(arrow_tuning::KEPT_HIT_PERCENT) => {
+                self.leave(Drop {
+                    pos: f.cell,
+                    gold: 0,
+                    items: Bag::default(),
+                    arrows: 1,
+                });
+            }
+            Missile::Hammer => self.turn_home(f, out),
+            _ => {}
+        }
+    }
+
+    /// `f` can go no further (a wall, or the end of its reach). Returns
+    /// whether it is gone; a hammer instead turns for home.
+    fn missile_stops(&mut self, f: &mut Flight, wall: bool, out: &mut Vec<Event>) -> bool {
+        match f.missile {
+            Missile::Arrow => {
+                self.arrow_falls(f.id, f.cell, wall, out);
+                true
+            }
+            Missile::Spark => {
+                out.push(Event::SparkSpent {
+                    id: f.id,
+                    at: f.cell,
+                });
+                true
+            }
+            Missile::Hammer => {
+                self.turn_home(f, out);
+                false
+            }
+        }
+    }
+
+    /// A hammer starts back from the middle of the cell it reached.
+    fn turn_home(&mut self, f: &mut Flight, out: &mut Vec<Event>) {
+        f.returning = true;
+        f.dist = f.entered as f32;
+        out.push(Event::HammerTurned {
+            id: f.id,
+            at: f.cell,
+        });
     }
 
     /// An arrow comes down at `at`, whole or broken.
@@ -810,6 +933,8 @@ impl Game {
                     .map_or(p.pos, |e| e.pos);
                 (ids, first)
             }
+            // These aim themselves (see `cast`).
+            Spell::PsionicBlade | Spell::MagicHammer | Spell::SparkBarrage => (Vec::new(), p.pos),
         }
     }
 
@@ -822,6 +947,32 @@ impl Game {
         }
         if p.energy < spell.cost() {
             out.push(Event::Exhausted);
+            return;
+        }
+        if matches!(
+            spell,
+            Spell::PsionicBlade | Spell::MagicHammer | Spell::SparkBarrage
+        ) {
+            // Nothing to aim at first: the blade forms in your hand (afresh,
+            // if one is already there); a hammer or a spark flies down the
+            // line and finds its own mark.
+            if spell == Spell::MagicHammer && self.hammers_out() >= spell_tuning::HAMMERS {
+                return;
+            }
+            let p = &mut self.player;
+            p.energy -= spell.cost();
+            p.spell_cooldowns[spell.index()] = spell.cooldown();
+            let from = p.pos;
+            out.push(Event::SpellCast {
+                spell,
+                from,
+                reach: from,
+            });
+            match spell {
+                Spell::PsionicBlade => self.player.blade = spell_tuning::BLADE_SWINGS,
+                Spell::MagicHammer => self.launch(Missile::Hammer, out),
+                _ => self.launch(Missile::Spark, out),
+            }
             return;
         }
         let (targets, reach) = self.spell_targets(spell);
@@ -856,6 +1007,8 @@ impl Game {
                 .iter()
                 .map(|&id| (id, spell_tuning::BOLT_DAMAGE + bonus))
                 .collect(),
+            // Handled above.
+            Spell::PsionicBlade | Spell::MagicHammer | Spell::SparkBarrage => Vec::new(),
         };
         for (order, (id, damage)) in hits.into_iter().enumerate() {
             // A target already dead (Spark's later sparks) is skipped.
@@ -894,7 +1047,7 @@ impl Game {
             }
         }
 
-        self.fly_arrows(dt, out);
+        self.fly_missiles(dt, out);
         if !self.player.is_alive() {
             return;
         }
@@ -1492,13 +1645,19 @@ mod tests {
         let hp = g.enemies[0].hp;
         let mut out = Vec::new();
         g.apply(Command::Shoot, &mut out);
-        assert!(matches!(out[0], Event::ArrowLoosed { .. }));
+        assert!(matches!(
+            out[0],
+            Event::Launched {
+                missile: Missile::Arrow,
+                ..
+            }
+        ));
         assert_eq!(g.player.arrows, arrow_tuning::START_ARROWS - 1);
         assert!(g.enemies[0].hp == hp && g.flights.len() == 1, "not yet");
         let out = run(&mut g, 0.6);
         assert!(
             out.iter()
-                .any(|e| matches!(e, Event::ArrowHit { enemy: 7, .. }))
+                .any(|e| matches!(e, Event::MissileHit { enemy: 7, .. }))
         );
         assert!(g.enemies.first().is_none_or(|e| e.hp < hp));
         assert!(g.flights.is_empty());
@@ -1573,6 +1732,134 @@ mod tests {
             _ => None,
         });
         assert_eq!(at, Some(GridPos::new(1 + arrow_tuning::RANGE as i32, 1)));
+    }
+
+    #[test]
+    fn the_psionic_blade_lasts_five_swings_and_costs_no_chi() {
+        let mut g = corridor(2);
+        g.enemies[0].hp = 1000;
+        let mut out = Vec::new();
+        g.apply(Command::Cast(Spell::PsionicBlade), &mut out);
+        assert_eq!(g.player.blade, spell_tuning::BLADE_SWINGS);
+        let chi = g.player.energy;
+        let mut damage = Vec::new();
+        for _ in 0..spell_tuning::BLADE_SWINGS {
+            let mut out = Vec::new();
+            g.player.attack_cooldown = 0.0;
+            g.apply(Command::Attack, &mut out);
+            damage.extend(out.iter().filter_map(|e| match e {
+                Event::EnemyHurt { damage, .. } => Some(*damage),
+                _ => None,
+            }));
+            let last = g.player.blade == 0;
+            assert_eq!(out.contains(&Event::BladeFaded), last);
+        }
+        assert_eq!(g.player.energy, chi, "free while it lasts");
+        assert!(damage.iter().all(|&d| d >= spell_tuning::BLADE_DAMAGE_MIN));
+        // Then the sword again, at the sword's price.
+        let mut out = Vec::new();
+        g.player.attack_cooldown = 0.0;
+        g.apply(Command::Attack, &mut out);
+        assert!(g.player.energy < chi);
+    }
+
+    #[test]
+    fn a_hammer_strikes_and_comes_home() {
+        let mut g = corridor(5);
+        g.enemies[0].hp = 1000;
+        let mut out = Vec::new();
+        g.apply(Command::Cast(Spell::MagicHammer), &mut out);
+        assert_eq!(g.hammers_out(), 1);
+        let out = run(&mut g, 2.0);
+        let hit = out.iter().position(|e| {
+            matches!(
+                e,
+                Event::MissileHit {
+                    missile: Missile::Hammer,
+                    ..
+                }
+            )
+        });
+        let turned = out
+            .iter()
+            .position(|e| matches!(e, Event::HammerTurned { .. }));
+        let caught = out
+            .iter()
+            .position(|e| matches!(e, Event::HammerCaught { .. }));
+        assert!(
+            hit < turned && turned < caught && caught.is_some(),
+            "{out:?}"
+        );
+        assert_eq!(g.hammers_out(), 0);
+    }
+
+    #[test]
+    fn two_hammers_at_once_thwack_thwack() {
+        let mut g = corridor(6);
+        g.enemies[0].hp = 1000;
+        let mut out = Vec::new();
+        g.apply(Command::Cast(Spell::MagicHammer), &mut out);
+        let _ = run(&mut g, 0.3);
+        g.apply(Command::Cast(Spell::MagicHammer), &mut out);
+        assert_eq!(g.hammers_out(), 2);
+        // A third waits until one is back.
+        let _ = run(&mut g, 0.3);
+        g.apply(Command::Cast(Spell::MagicHammer), &mut out);
+        assert_eq!(g.hammers_out(), 2);
+        let out = run(&mut g, 2.5);
+        let thwacks = out
+            .iter()
+            .filter(|e| {
+                matches!(
+                    e,
+                    Event::MissileHit {
+                        missile: Missile::Hammer,
+                        ..
+                    }
+                )
+            })
+            .count();
+        assert!(thwacks >= 1, "{out:?}");
+        assert_eq!(g.hammers_out(), 0);
+    }
+
+    #[test]
+    fn a_spark_barrage_is_a_stream_of_little_hits() {
+        let mut g = corridor(5);
+        g.enemies[0].hp = 1000;
+        g.player.energy = g.player.max_energy;
+        let mut out = Vec::new();
+        // Held down: cast every frame; the cooldown sets the rate.
+        for _ in 0..(1.0 / DT) as usize {
+            g.apply(Command::Cast(Spell::SparkBarrage), &mut out);
+            g.tick(DT, &mut out);
+        }
+        let sparks = out
+            .iter()
+            .filter(|e| {
+                matches!(
+                    e,
+                    Event::Launched {
+                        missile: Missile::Spark,
+                        ..
+                    }
+                )
+            })
+            .count();
+        let hits = out
+            .iter()
+            .filter(|e| {
+                matches!(
+                    e,
+                    Event::MissileHit {
+                        missile: Missile::Spark,
+                        ..
+                    }
+                )
+            })
+            .count();
+        assert!((8..=12).contains(&sparks), "{sparks} sparks in a second");
+        assert!(hits >= sparks - 2, "{hits} of {sparks} hit");
     }
 }
 

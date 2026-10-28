@@ -2,7 +2,7 @@
 //! confused with auto mode, which plays the game for real.)
 //!
 //! `ZRPG_SCRIPT="w w e shot d shot quit"` presses one action per tick
-//! (`w s a d q e f r`, `1` for the item slot, `z x c` for spells, `v` to shoot, or
+//! (`w s a d q e f r`, `1` for the item slot, `z x c b n g` for spells, `v` to shoot, or
 //! `auto`, `mute`, `map`, `gear`),
 //! idles on `wait`, saves `zrpg-N.png` on `shot`, and exits on `quit`.
 //! `slow` runs the game at a twentieth of its speed (steps keep their real
@@ -71,6 +71,9 @@ fn tick(
         "z" => Action::Spell1,
         "x" => Action::Spell2,
         "c" => Action::Spell3,
+        "b" => Action::Spell4,
+        "n" => Action::Spell5,
+        "g" => Action::Spell6,
         "gear" => Action::Gear,
         "v" => Action::Shoot,
         "r" => Action::Restart,

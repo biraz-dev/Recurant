@@ -1,15 +1,19 @@
-//! The bow. V (gamepad West) looses an arrow down your line of sight; the
-//! rules are in `zrpg_core::archery`. This draws each arrow in the air,
-//! leaving from the off hand and flying true down the line, and keeps the
-//! bow's slot on the HUD (left of the spells) with the arrows left.
+//! The bow, and everything else that flies. V (gamepad West) looses an
+//! arrow down your line of sight; the rules are in `zrpg_core::archery`.
+//! This draws whatever is in the air, leaving from the off hand and flying
+//! true down the line: arrows, magic hammers (tumbling end over end, out
+//! and home again) and barrage sparks (a spray of little glowing motes).
+//! It also keeps the bow's slot on the HUD (left of the spells) with the
+//! arrows left.
 //!
-//! The arrow is built from a few simple shapes here; the icons are in
+//! The arrow and hammer are built from a few simple shapes here; the icons
+//! are in
 //! `assets/equipment/gear` and `assets/items`, made by
 //! `tools/make_archery_art.py`.
 
 use bevy::light::NotShadowCaster;
 use bevy::prelude::*;
-use zrpg_core::archery::tuning;
+use zrpg_core::archery::{Missile, tuning};
 use zrpg_core::{Command, Event};
 
 use crate::atmosphere::Look;
@@ -25,6 +29,10 @@ const FLIGHT_DROP: f32 = 0.1;
 /// They leave from the off hand (left and low), joining the line of sight
 /// over the first cell.
 const HAND_OFFSET: Vec2 = Vec2::new(-0.12, -0.08);
+/// Hammers tumble this fast (radians per cell flown).
+const HAMMER_SPIN: f32 = 5.0;
+/// Barrage sparks scatter this far about the line, so the stream sprays.
+const SPARK_SPRAY: f32 = 0.07;
 
 pub struct ArcheryPlugin;
 
@@ -49,6 +57,11 @@ struct ArrowAssets {
     wood: Handle<StandardMaterial>,
     iron: Handle<StandardMaterial>,
     feather: Handle<StandardMaterial>,
+    hammer_head: Handle<Mesh>,
+    hammer_haft: Handle<Mesh>,
+    hammer_metal: Handle<StandardMaterial>,
+    spark: Handle<Mesh>,
+    spark_glow: Handle<StandardMaterial>,
     bow_icon: Handle<Image>,
 }
 
@@ -86,6 +99,23 @@ fn load(
             cull_mode: None,
             ..matte(Color::srgb(0.78, 0.25, 0.2))
         }),
+        hammer_head: meshes.add(Cuboid::new(0.16, 0.09, 0.09)),
+        hammer_haft: meshes.add(Cuboid::new(0.025, 0.22, 0.025)),
+        // Cold, enchanted silver: it glows a little on its own.
+        hammer_metal: materials.add(StandardMaterial {
+            base_color: Color::srgb(0.78, 0.82, 0.92),
+            emissive: LinearRgba::rgb(0.25, 0.35, 0.6),
+            metallic: 0.8,
+            perceptual_roughness: 0.3,
+            ..default()
+        }),
+        spark: meshes.add(Sphere::new(0.03)),
+        spark_glow: materials.add(StandardMaterial {
+            base_color: Color::LinearRgba(LinearRgba::rgb(2.2, 2.4, 2.8)),
+            unlit: true,
+            fog_enabled: false,
+            ..default()
+        }),
         bow_icon: images.add(textures::embedded(BOW_PNG)),
     });
 }
@@ -107,7 +137,7 @@ fn shoot(
     publish(&mut buf, &mut writer);
 }
 
-/// Keep one arrow for each flight in the core, where it has got to.
+/// Keep one missile for each flight in the core, where it has got to.
 fn fly(
     mut commands: Commands,
     run: Res<Run>,
@@ -129,41 +159,91 @@ fn fly(
         // Off the hand at first, onto the line of sight within a cell.
         let join = (1.0 - f.dist).max(0.0);
         let along = cell_center(f.from) + dir * f.dist;
-        let at = along
+        let mut at = along
             + right * HAND_OFFSET.x * join
             + Vec3::Y * (ground.at(along) + eye + HAND_OFFSET.y * join);
-        let place = Transform::from_translation(at).looking_to(dir, Vec3::Y);
+        let mut place = Transform::from_translation(at).looking_to(dir, Vec3::Y);
+        match f.missile {
+            Missile::Arrow => {}
+            Missile::Hammer => {
+                // End over end, the same way out and home.
+                place.rotate_local_x(-f.dist * HAMMER_SPIN);
+            }
+            Missile::Spark => {
+                // Each spark strays a little from the line, its own way.
+                let h = zrpg_core::rng::mix64(f.id as u64);
+                let side = (h % 1000) as f32 / 500.0 - 1.0;
+                let lift = (h / 1000 % 1000) as f32 / 500.0 - 1.0;
+                let spread = SPARK_SPRAY * (f.dist / 2.0).min(1.0);
+                at += right * side * spread + Vec3::Y * lift * spread;
+                place.translation = at;
+            }
+        }
         if let Some((entity, _)) = arrows.iter().find(|(_, a)| a.0 == f.id) {
             if let Ok(mut t) = transforms.get_mut(entity) {
                 *t = place;
             }
             continue;
         }
-        commands
-            .spawn((ArrowInFlight(f.id), place, Visibility::default()))
-            .with_children(|arrow| {
-                // Forward is -Z: head in front, vanes at the back.
-                arrow.spawn((
-                    Mesh3d(assets.shaft.clone()),
-                    MeshMaterial3d(assets.wood.clone()),
-                    NotShadowCaster,
-                ));
-                arrow.spawn((
-                    Mesh3d(assets.head.clone()),
-                    MeshMaterial3d(assets.iron.clone()),
-                    Transform::from_xyz(0.0, 0.0, -0.28)
-                        .with_rotation(Quat::from_rotation_x(-std::f32::consts::FRAC_PI_2)),
-                    NotShadowCaster,
-                ));
-                for vane in [&assets.vane_upright, &assets.vane_flat] {
-                    arrow.spawn((
-                        Mesh3d(vane.clone()),
-                        MeshMaterial3d(assets.feather.clone()),
-                        Transform::from_xyz(0.0, 0.0, 0.2),
+        let mut flying = commands.spawn((ArrowInFlight(f.id), place, Visibility::default()));
+        match f.missile {
+            Missile::Arrow => {}
+            Missile::Hammer => {
+                flying.with_children(|hammer| {
+                    hammer.spawn((
+                        Mesh3d(assets.hammer_head.clone()),
+                        MeshMaterial3d(assets.hammer_metal.clone()),
+                        Transform::from_xyz(0.0, 0.1, 0.0),
                         NotShadowCaster,
                     ));
-                }
-            });
+                    hammer.spawn((
+                        Mesh3d(assets.hammer_haft.clone()),
+                        MeshMaterial3d(assets.wood.clone()),
+                        NotShadowCaster,
+                    ));
+                    hammer.spawn(PointLight {
+                        color: Color::srgb(0.6, 0.75, 1.0),
+                        intensity: 2500.0,
+                        range: 2.5,
+                        radius: 0.05,
+                        shadow_maps_enabled: false,
+                        ..default()
+                    });
+                });
+                continue;
+            }
+            Missile::Spark => {
+                flying.insert((
+                    Mesh3d(assets.spark.clone()),
+                    MeshMaterial3d(assets.spark_glow.clone()),
+                    NotShadowCaster,
+                ));
+                continue;
+            }
+        }
+        flying.with_children(|arrow| {
+            // Forward is -Z: head in front, vanes at the back.
+            arrow.spawn((
+                Mesh3d(assets.shaft.clone()),
+                MeshMaterial3d(assets.wood.clone()),
+                NotShadowCaster,
+            ));
+            arrow.spawn((
+                Mesh3d(assets.head.clone()),
+                MeshMaterial3d(assets.iron.clone()),
+                Transform::from_xyz(0.0, 0.0, -0.28)
+                    .with_rotation(Quat::from_rotation_x(-std::f32::consts::FRAC_PI_2)),
+                NotShadowCaster,
+            ));
+            for vane in [&assets.vane_upright, &assets.vane_flat] {
+                arrow.spawn((
+                    Mesh3d(vane.clone()),
+                    MeshMaterial3d(assets.feather.clone()),
+                    Transform::from_xyz(0.0, 0.0, 0.2),
+                    NotShadowCaster,
+                ));
+            }
+        });
     }
 }
 
@@ -185,8 +265,9 @@ fn spawn_slot(
     let Ok(cam) = cams.single() else {
         return;
     };
-    // Three spell slots of ICON + 4 with gaps of 3, then a little room.
-    let right = 6.0 + 3.0 * (ICON + 4.0) + 2.0 * 3.0 + 6.0;
+    // The spell slots (ICON + 4 each, with gaps of 3), then a little room.
+    let spells = zrpg_core::Spell::ALL.len() as f32;
+    let right = 6.0 + spells * (ICON + 4.0) + (spells - 1.0) * 3.0 + 6.0;
     let tiny = |text: &str, color: Color, place: Node| {
         (
             Text::new(text),

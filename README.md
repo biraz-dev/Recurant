@@ -41,6 +41,8 @@ See [docs/PLATFORMS.md](docs/PLATFORMS.md) for web and Android details and
 | Auto mode on/off | P              | Y                    |
 | Map: corner, full, hidden | Tab | LT                  |
 | Spark / Chain Lightning / Lightning Bolt | Z / X / C | B (Spark) |
+| Psionic Blade / Magic Hammer | B / N   | R3 / L3              |
+| Spark Barrage (hold) | G          |                      |
 | Drink a Health Potion | 1         |                      |
 | Equipment screen | I              | Start                |
 | Sound on/off  | M                 |                      |
@@ -79,14 +81,17 @@ stairs. Auto mode picks up nearby loot and uses items when they help.
 
 ## Spells
 
-Three lightning spells, cast from the off hand, each costing Chi and with
-its own short cooldown. Damage grows by one every six levels.
+Six spells, cast from the off hand, each costing Chi and with its own
+short cooldown. Damage grows by one every six levels.
 
 | Spell | Key | Chi | What it does |
 |---|---|---|---|
 | Spark | Z | 2 | a faint flurry of 3 to 5 little hits (1 each) on the first foe straight ahead, up to 3 cells away |
 | Chain Lightning | X | 5 | strikes the nearest foe within 4 cells, then arcs on to up to three more nearby: 5, 4, 3, 2 damage |
 | Lightning Bolt | C | 4 | a straight bolt 6 cells down your line of sight, through everything in it: 4 damage each |
+| Psionic Blade | B | 6 | conjures a blade of violet light in place of your sword for 5 swings (hit or miss): 6 to 9 a hit, and the swings cost no Chi; then it comes apart and your worn sword is back. Casting again renews it |
+| Magic Hammer | N | 3 | after Dungeon Hack: throws a hammer down the line that thwacks the first foe (5 to 7) and flies back to your hand. Two can be in the air at once: tap twice, thwack thwack |
+| Spark Barrage | G (hold) | ½ a spark | after Lands of Lore's Spark: hold it to hose about eleven little sparks a second down the line, each a missile of its own (1 damage) |
 
 The spell bar (bottom right) dims a spell you can't afford and shades it
 while it cools down. Spark and Chain Lightning fizzle, costing nothing, with

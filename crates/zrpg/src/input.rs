@@ -43,10 +43,14 @@ pub enum Action {
     Map,
     /// Use the item in the belt slot (key 1).
     Item1,
-    /// Cast a spell: Spark, Chain Lightning, Lightning Bolt (Z, X, C).
+    /// Cast a spell: Spark, Chain Lightning, Lightning Bolt, Psionic Blade,
+    /// Magic Hammer, Spark Barrage (Z, X, C, B, N, G).
     Spell1,
     Spell2,
     Spell3,
+    Spell4,
+    Spell5,
+    Spell6,
     /// Open or close the equipment screen.
     Gear,
     /// Loose an arrow.
@@ -54,7 +58,7 @@ pub enum Action {
 }
 
 impl Action {
-    pub const ALL: [Action; 17] = [
+    pub const ALL: [Action; 20] = [
         Action::Forward,
         Action::Back,
         Action::StrafeLeft,
@@ -70,6 +74,9 @@ impl Action {
         Action::Spell1,
         Action::Spell2,
         Action::Spell3,
+        Action::Spell4,
+        Action::Spell5,
+        Action::Spell6,
         Action::Gear,
         Action::Shoot,
     ];
@@ -77,7 +84,14 @@ impl Action {
     /// The item slots, in order.
     pub const ITEMS: [Action; 1] = [Action::Item1];
     /// The spell keys, in `Spell::ALL` order.
-    pub const SPELLS: [Action; 3] = [Action::Spell1, Action::Spell2, Action::Spell3];
+    pub const SPELLS: [Action; 6] = [
+        Action::Spell1,
+        Action::Spell2,
+        Action::Spell3,
+        Action::Spell4,
+        Action::Spell5,
+        Action::Spell6,
+    ];
 
     fn keys(self) -> &'static [KeyCode] {
         use KeyCode::*;
@@ -97,6 +111,9 @@ impl Action {
             Action::Spell1 => &[KeyZ, android::B],
             Action::Spell2 => &[KeyX],
             Action::Spell3 => &[KeyC],
+            Action::Spell4 => &[KeyB],
+            Action::Spell5 => &[KeyN],
+            Action::Spell6 => &[KeyG],
             Action::Gear => &[KeyI, android::START],
             Action::Shoot => &[KeyV, android::X],
         }
@@ -119,7 +136,9 @@ impl Action {
             Action::Spell1 => &[East],
             Action::Gear => &[Start],
             Action::Shoot => &[West],
-            Action::Item1 | Action::Spell2 | Action::Spell3 => &[],
+            Action::Spell4 => &[RightThumb],
+            Action::Spell5 => &[LeftThumb],
+            Action::Item1 | Action::Spell2 | Action::Spell3 | Action::Spell6 => &[],
         }
     }
 

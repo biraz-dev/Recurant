@@ -7,12 +7,13 @@
 //! or comes from an unknown version, is ignored rather than trusted.
 //! Version 2 added gold, version 3 six creature items, version 4 kept only
 //! the Health Potion, version 5 arrows (in the quiver, lying about and in
-//! the air); older saves still load, with what they lack left empty (and a
-//! full starting quiver).
+//! the air), version 6 the psionic blade and spell missiles in the air;
+//! older saves still load, with what they lack left empty (and a full
+//! starting quiver).
 
 use alloc::vec::Vec;
 
-use crate::archery::{Flight, tuning as arrow_tuning};
+use crate::archery::{Flight, Missile, tuning as arrow_tuning};
 use crate::dungeon::Floor;
 use crate::enemy::{Enemy, EnemyKind, EnemyState};
 use crate::game::{Drop, Game, Player};
@@ -21,7 +22,8 @@ use crate::items::{Bag, Item};
 use crate::progression::{MAX_LEVEL, Perk, Perks};
 use crate::rng::Rng;
 
-const MAGIC: &[u8; 4] = b"ZRS5";
+const MAGIC: &[u8; 4] = b"ZRS6";
+const MAGIC_V5: &[u8; 4] = b"ZRS5";
 const MAGIC_V4: &[u8; 4] = b"ZRS4";
 const MAGIC_V3: &[u8; 4] = b"ZRS3";
 /// Version 3 carried six kinds of item (none of them potions), a ward and
@@ -58,6 +60,7 @@ impl Game {
         w.extend(p.bag.counts());
         put_u32(&mut w, p.arrows);
         put_f32(&mut w, p.bow_cooldown);
+        w.push(p.blade);
         put_u32(&mut w, self.drops.len() as u32);
         for d in &self.drops {
             put_i32(&mut w, d.pos.x);
@@ -70,6 +73,8 @@ impl Game {
         put_u32(&mut w, self.flights.len() as u32);
         for f in &self.flights {
             put_u32(&mut w, f.id);
+            w.push(missile_index(f.missile) as u8);
+            w.push(f.returning as u8);
             put_i32(&mut w, f.from.x);
             put_i32(&mut w, f.from.y);
             w.push(f.dir as u8);
@@ -110,7 +115,8 @@ impl Game {
     pub fn load(bytes: &[u8]) -> Option<Game> {
         let mut r = Reader { bytes, at: 0 };
         let version = match r.take(4)? {
-            m if m == MAGIC => 5,
+            m if m == MAGIC => 6,
+            m if m == MAGIC_V5 => 5,
             m if m == MAGIC_V4 => 4,
             m if m == MAGIC_V3 => 3,
             m if m == MAGIC_V2 => 2,
@@ -152,6 +158,7 @@ impl Game {
             equipment: crate::Equipment::starting_kit(),
             arrows: arrow_tuning::START_ARROWS,
             bow_cooldown: 0.0,
+            blade: 0,
             spell_cooldowns: [0.0; crate::spells::Spell::ALL.len()],
             regen: r.f32()?,
         };
@@ -167,6 +174,9 @@ impl Game {
                 if version >= 5 {
                     player.arrows = r.u32()?.min(arrow_tuning::MAX_ARROWS);
                     player.bow_cooldown = r.f32()?;
+                }
+                if version >= 6 {
+                    player.blade = r.u8()?.min(crate::spells::tuning::BLADE_SWINGS);
                 }
             } else if version == 3 {
                 r.take(V3_ITEMS + 2)?;
@@ -200,9 +210,15 @@ impl Game {
                 let mut flights = Vec::new();
                 for _ in 0..r.u32()?.min(64) {
                     let id = r.u32()?;
+                    let (missile, returning) = if version >= 6 {
+                        (*Missile::ALL.get(r.u8()? as usize)?, r.u8()? != 0)
+                    } else {
+                        (Missile::Arrow, false)
+                    };
                     let from = GridPos::new(r.i32()?, r.i32()?);
                     let dir = *Facing::ALL.get(r.u8()? as usize)?;
-                    let mut f = Flight::new(id, from, dir);
+                    let mut f = Flight::new(id, missile, from, dir);
+                    f.returning = returning;
                     f.dist = r.f32()?;
                     f.cell = GridPos::new(r.i32()?, r.i32()?);
                     f.entered = r.u32()?;
@@ -249,6 +265,10 @@ impl Game {
         game.enemies = enemies;
         (r.at == bytes.len()).then_some(game)
     }
+}
+
+fn missile_index(missile: Missile) -> usize {
+    Missile::ALL.iter().position(|&m| m == missile).unwrap_or(0)
 }
 
 fn kind_index(kind: EnemyKind) -> usize {
@@ -383,9 +403,9 @@ mod tests {
         let perks_end = 4 + 8 + 4 + 2 + 8 + 4 * 2 + 1 + 4 * 5 + 4 * 2 + 4 + Perk::ALL.len();
         // Gold, the bag and the quiver, then the drops with their items
         // and arrows, then the arrows in the air.
-        let flights = 4 + 4 + 29 * g.flights.len();
+        let flights = 4 + 4 + 31 * g.flights.len();
         let gold_and_drops =
-            4 + Item::ALL.len() + 8 + 4 + (16 + Item::ALL.len()) * g.drops.len() + flights;
+            4 + Item::ALL.len() + 9 + 4 + (16 + Item::ALL.len()) * g.drops.len() + flights;
         v1.drain(perks_end..perks_end + gold_and_drops);
         let back = Game::load(&v1).expect("version 1 loads");
         assert_eq!(back.player.gold, 0);

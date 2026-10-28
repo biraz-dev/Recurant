@@ -1,7 +1,11 @@
 //! Spells in hand. Z, X and C cast Spark, Chain Lightning and Lightning
-//! Bolt (the rules are in `zrpg_core::spells`); this draws them: jagged arcs
-//! of light from the hand, little bursts of sparks where they strike, and a
-//! blue flash on the walls. The spell bar sits bottom right.
+//! Bolt, B the Psionic Blade, N the Magic Hammer, and G (held) the Spark
+//! Barrage (the rules are in `zrpg_core::spells`). This draws the
+//! lightning: jagged arcs of light from the hand, little bursts of sparks
+//! where they strike, and a flash on the walls; and the bursts where a
+//! hammer or a barrage spark lands. The hammers and sparks in the air are
+//! drawn with the arrows (`archery.rs`), the psionic blade in the hand by
+//! the HUD. The spell bar sits bottom right.
 //!
 //! The art is in `assets/spells`, made by `tools/make_spell_art.py`:
 //! placeholder pixels, meant to be repainted at the same sizes.
@@ -11,6 +15,7 @@ use bevy::image::{ImageAddressMode, ImageSampler, ImageSamplerDescriptor};
 use bevy::light::NotShadowCaster;
 use bevy::mesh::{Indices, PrimitiveTopology};
 use bevy::prelude::*;
+use zrpg_core::archery::Missile;
 use zrpg_core::{Command, Event, GridPos, Spell};
 
 use crate::enemies::EnemySprite;
@@ -21,12 +26,15 @@ use crate::{Frame, GameEvent, Run, publish, textures};
 
 const LIGHTNING_PNG: &[u8] = include_bytes!("../assets/spells/lightning.png");
 const SPARKS_PNG: &[u8] = include_bytes!("../assets/spells/sparks.png");
-const ICON_PNGS: [&[u8]; 3] = [
+const ICON_PNGS: [&[u8]; 6] = [
     include_bytes!("../assets/spells/spark.png"),
     include_bytes!("../assets/spells/chain.png"),
     include_bytes!("../assets/spells/bolt.png"),
+    include_bytes!("../assets/spells/blade.png"),
+    include_bytes!("../assets/spells/hammer.png"),
+    include_bytes!("../assets/spells/barrage.png"),
 ];
-const KEYS: [&str; 3] = ["Z", "X", "C"];
+const KEYS: [&str; 6] = ["Z", "X", "C", "B", "N", "G"];
 const SPARK_FRAMES: u32 = 4;
 const ICON: f32 = 16.0;
 
@@ -40,6 +48,9 @@ const SPARK_GAP: f32 = 0.09;
 const CHAIN_GAP: f32 = 0.08;
 /// Blue-white light, shared by arcs, sparks and flashes.
 const SPELL_LIGHT: Color = Color::srgb(0.6, 0.85, 1.0);
+/// The psionic blade's violet, and the hammer's cold silver.
+const PSIONIC_LIGHT: Color = Color::srgb(0.75, 0.45, 1.0);
+const HAMMER_LIGHT: Color = Color::srgb(0.85, 0.9, 1.0);
 const FLASH_LUMENS: f32 = 9_000.0;
 const FLASH_RANGE: f32 = 4.0;
 const FLASH_SECS: f32 = 0.18;
@@ -135,7 +146,8 @@ fn glow(color: Color) -> StandardMaterial {
     }
 }
 
-/// Z, X and C cast.
+/// Z, X, C, B and N cast; G casts for as long as it is held (the
+/// barrage's cooldown sets its rate of fire).
 fn cast(
     actions: Res<Actions>,
     hold: crate::Hold,
@@ -147,7 +159,8 @@ fn cast(
         return;
     }
     for (key, spell) in Action::SPELLS.into_iter().zip(Spell::ALL) {
-        if actions.just_pressed(key) {
+        let held = spell == Spell::SparkBarrage && actions.pressed(key);
+        if actions.just_pressed(key) || held {
             run.apply(Command::Cast(spell), &mut buf);
         }
     }
@@ -191,9 +204,20 @@ const BOLT_FORK: Style = Style {
 
 #[derive(Clone, Copy)]
 enum Effect {
-    Arc { from: Vec3, to: Vec3, style: Style },
-    Burst { at: Vec3, count: u32 },
-    Flash { at: Vec3, strength: f32 },
+    Arc {
+        from: Vec3,
+        to: Vec3,
+        style: Style,
+    },
+    Burst {
+        at: Vec3,
+        count: u32,
+    },
+    Flash {
+        at: Vec3,
+        strength: f32,
+        color: Color,
+    },
 }
 
 /// Effects waiting to start, with seconds to go: a Spark's strikes and a
@@ -229,6 +253,52 @@ fn queue_effects(
     };
     for GameEvent(event) in events.read() {
         match *event {
+            Event::SpellCast {
+                spell: Spell::PsionicBlade,
+                ..
+            } => {
+                // The blade forms in a violet flash.
+                queue.0.push((
+                    0.0,
+                    Effect::Flash {
+                        at: hand,
+                        strength: 1.2,
+                        color: PSIONIC_LIGHT,
+                    },
+                ));
+            }
+            Event::BladeFaded => {
+                queue.0.push((
+                    0.0,
+                    Effect::Flash {
+                        at: hand,
+                        strength: 0.6,
+                        color: PSIONIC_LIGHT,
+                    },
+                ));
+            }
+            Event::MissileHit {
+                missile, enemy, at, ..
+            } => {
+                let to = body(enemy, at);
+                match missile {
+                    Missile::Hammer => {
+                        queue.0.push((0.0, Effect::Burst { at: to, count: 6 }));
+                        queue.0.push((
+                            0.0,
+                            Effect::Flash {
+                                at: to,
+                                strength: 0.9,
+                                color: HAMMER_LIGHT,
+                            },
+                        ));
+                    }
+                    Missile::Spark => {
+                        queue.0.push((0.0, Effect::Burst { at: to, count: 2 }));
+                    }
+                    Missile::Arrow => {}
+                }
+            }
             Event::SpellCast { spell, reach, .. } => {
                 *last = Some(hand);
                 if spell == Spell::LightningBolt {
@@ -263,6 +333,7 @@ fn queue_effects(
                         Effect::Flash {
                             at: mid,
                             strength: 1.4,
+                            color: SPELL_LIGHT,
                         },
                     ));
                 }
@@ -292,6 +363,7 @@ fn queue_effects(
                             Effect::Flash {
                                 at: to,
                                 strength: 0.35,
+                                color: SPELL_LIGHT,
                             },
                         ));
                     }
@@ -312,6 +384,7 @@ fn queue_effects(
                             Effect::Flash {
                                 at: to,
                                 strength: 0.8,
+                                color: SPELL_LIGHT,
                             },
                         ));
                         *last = Some(to);
@@ -319,6 +392,8 @@ fn queue_effects(
                     Spell::LightningBolt => {
                         queue.0.push((0.03, Effect::Burst { at: to, count: 5 }));
                     }
+                    // These never strike as lightning does.
+                    Spell::PsionicBlade | Spell::MagicHammer | Spell::SparkBarrage => {}
                 }
             }
             _ => {}
@@ -422,14 +497,18 @@ fn play_queue(
                     ));
                 }
             }
-            Effect::Flash { at, strength } => {
+            Effect::Flash {
+                at,
+                strength,
+                color,
+            } => {
                 commands.spawn((
                     SpellFlash {
                         age: 0.0,
                         lumens: FLASH_LUMENS * strength,
                     },
                     PointLight {
-                        color: SPELL_LIGHT,
+                        color,
                         intensity: FLASH_LUMENS * strength,
                         range: FLASH_RANGE,
                         radius: 0.05,
@@ -611,6 +690,9 @@ struct SpellSlot(usize);
 /// The shade over a slot that shrinks as its cooldown runs out.
 #[derive(Component)]
 struct CooldownShade(usize);
+/// A count in a slot's corner (blade swings, hammers in hand).
+#[derive(Component)]
+struct SlotCount(usize);
 
 fn spawn_bar(
     mut commands: Commands,
@@ -677,19 +759,52 @@ fn spawn_bar(
                             ..default()
                         },
                     ));
+                    slot.spawn((
+                        SlotCount(i),
+                        Text::new(""),
+                        TextFont {
+                            font_size: FontSize::Px(6.0),
+                            ..default()
+                        },
+                        TextColor(Color::WHITE),
+                        TextShadow {
+                            offset: Vec2::new(1.0, 1.0),
+                            color: Color::srgba(0.0, 0.0, 0.0, 0.85),
+                        },
+                        Node {
+                            position_type: PositionType::Absolute,
+                            right: px(0),
+                            bottom: px(-2),
+                            ..default()
+                        },
+                    ));
                 });
             }
         });
 }
 
-/// Dim a spell you can't afford; shade it while it cools down.
+/// Dim a spell you can't afford; shade it while it cools down; count the
+/// psionic blade's swings left and the hammers in hand.
 fn update_bar(
     run: Res<Run>,
     slots: Query<&SpellSlot>,
     mut shades: Query<(&CooldownShade, &mut Node)>,
     mut icons: Query<(&ChildOf, &mut ImageNode)>,
+    mut counts: Query<(&SlotCount, &mut Text)>,
 ) {
     let p = &run.player;
+    for (count, mut text) in &mut counts {
+        let label = match Spell::ALL[count.0] {
+            Spell::PsionicBlade if p.blade > 0 => p.blade.to_string(),
+            Spell::MagicHammer => {
+                (zrpg_core::spells::tuning::HAMMERS - run.hammers_out()).to_string()
+            }
+            _ => String::new(),
+        };
+        if text.0 != label {
+            text.0 = label;
+        }
+    }
     for (shade, mut node) in &mut shades {
         let spell = Spell::ALL[shade.0];
         let left = p.spell_cooldowns[shade.0] / spell.cooldown();

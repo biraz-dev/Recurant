@@ -11,7 +11,8 @@ use bevy::audio::{
     SpatialScale, Volume,
 };
 use bevy::prelude::*;
-use zrpg_core::{EnemyKind, Event, GridPos, Tile};
+use zrpg_core::archery::Missile;
+use zrpg_core::{EnemyKind, Event, GridPos, Spell, Tile};
 
 use crate::input::{Action, Actions};
 use crate::level::cell_center;
@@ -52,6 +53,12 @@ mod mix {
     pub const THUNK: f32 = 0.7;
     pub const CLATTER: f32 = 0.45;
     pub const EMPTY_QUIVER: f32 = 0.4;
+    pub const CONJURE: f32 = 0.55;
+    pub const SHATTER: f32 = 0.5;
+    pub const WHIRR: f32 = 0.5;
+    pub const THWACK: f32 = 0.85;
+    pub const CATCH: f32 = 0.5;
+    pub const ZIP: f32 = 0.22;
 }
 
 /// Rodio fades spatial sounds with the inverse square of distance, which is
@@ -113,6 +120,12 @@ struct Sounds {
     thunk: Handle<AudioSource>,
     clatter: Handle<AudioSource>,
     empty_quiver: Handle<AudioSource>,
+    conjure: Handle<AudioSource>,
+    shatter: Handle<AudioSource>,
+    whirr: Handle<AudioSource>,
+    thwack: Handle<AudioSource>,
+    catch: Handle<AudioSource>,
+    zip: Handle<AudioSource>,
 }
 
 fn synthesize(mut commands: Commands, mut sources: ResMut<Assets<AudioSource>>) {
@@ -155,6 +168,12 @@ fn synthesize(mut commands: Commands, mut sources: ResMut<Assets<AudioSource>>) 
         thunk: add(synth::thunk(27)),
         clatter: add(synth::clatter(28)),
         empty_quiver: add(synth::empty_quiver(29)),
+        conjure: add(synth::conjure(30)),
+        shatter: add(synth::shatter(31)),
+        whirr: add(synth::whirr(32)),
+        thwack: add(synth::thwack(33)),
+        catch: add(synth::catch(34)),
+        zip: add(synth::zip(35)),
     });
 }
 
@@ -282,16 +301,32 @@ fn play_event_sounds(
             Event::GoldTaken { .. } => sfx(&sounds.coins, mix::COINS, None),
             Event::ItemTaken { .. } => sfx(&sounds.pickup, mix::PICKUP, None),
             Event::ItemUsed { .. } => sfx(&sounds.perk, mix::USE_ITEM, None),
-            Event::SpellCast { spell, .. } => {
-                let gain = [mix::SPARK, mix::CHAIN, mix::BOLT][spell.index()];
-                sfx(&sounds.spells[spell.index()], gain, None)
-            }
+            Event::SpellCast { spell, .. } => match spell {
+                Spell::Spark => sfx(&sounds.spells[0], mix::SPARK, None),
+                Spell::ChainLightning => sfx(&sounds.spells[1], mix::CHAIN, None),
+                Spell::LightningBolt => sfx(&sounds.spells[2], mix::BOLT, None),
+                Spell::PsionicBlade => sfx(&sounds.conjure, mix::CONJURE, None),
+                // These sound as they fly (`Launched`).
+                Spell::MagicHammer | Spell::SparkBarrage => {}
+            },
+            Event::BladeFaded => sfx(&sounds.shatter, mix::SHATTER, None),
             // Each strike already sounds through `EnemyHurt`.
             Event::SpellHit { .. } => {}
             Event::SpellFizzled { .. } => sfx(&sounds.fizzle, mix::FIZZLE, None),
-            Event::ArrowLoosed { .. } => sfx(&sounds.twang, mix::TWANG, None),
-            // The strike itself sounds through `EnemyHurt`.
-            Event::ArrowHit { .. } => {}
+            Event::Launched { missile, .. } => match missile {
+                Missile::Arrow => sfx(&sounds.twang, mix::TWANG, None),
+                Missile::Hammer => sfx(&sounds.whirr, mix::WHIRR, None),
+                Missile::Spark => sfx(&sounds.zip, mix::ZIP, None),
+            },
+            Event::MissileHit {
+                missile: Missile::Hammer,
+                at,
+                ..
+            } => sfx(&sounds.thwack, mix::THWACK, Some(ear_level(at))),
+            // Other strikes sound through `EnemyHurt`.
+            Event::MissileHit { .. } | Event::HammerTurned { .. } => {}
+            Event::SparkSpent { at, .. } => sfx(&sounds.fizzle, mix::ZIP, Some(ear_level(at))),
+            Event::HammerCaught { .. } => sfx(&sounds.catch, mix::CATCH, None),
             Event::ArrowLanded { at, wall: true, .. } => {
                 sfx(&sounds.thunk, mix::THUNK, Some(ear_level(at)))
             }

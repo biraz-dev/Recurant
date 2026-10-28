@@ -1,8 +1,13 @@
-//! Archery: a bow and a quiver of arrows. An arrow is loosed down your line
+//! Things that fly: arrows from the bow, and the missiles of two spells
+//! (the magic hammer and the spark barrage). Each is loosed down your line
 //! of sight and really flies, cell by cell, so a creature can step into its
-//! path or out of it. It strikes the first one it meets; one that misses
-//! falls where it stops (into a wall, or spent at the end of its range) and
-//! can usually be picked up again. Kills sometimes leave a few arrows.
+//! path or out of it, and strikes the first one it meets.
+//!
+//! An arrow that misses falls where it stops (into a wall, or spent at the
+//! end of its range) and can usually be picked up again; kills sometimes
+//! leave a few arrows. A spark that misses just goes out. A hammer turns
+//! back after its blow (or at a wall, or the end of its reach) and flies
+//! home to your hand.
 //!
 //! The flight itself is in `game.rs` ([`Game::tick`](crate::Game::tick)).
 
@@ -30,11 +35,44 @@ pub mod tuning {
     pub const DROP_MAX: i32 = 3;
 }
 
-/// An arrow in the air.
+/// What is flying.
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
+pub enum Missile {
+    Arrow,
+    Spark,
+    Hammer,
+}
+
+impl Missile {
+    pub const ALL: [Missile; 3] = [Missile::Arrow, Missile::Spark, Missile::Hammer];
+
+    /// Cells per second.
+    pub const fn speed(self) -> f32 {
+        match self {
+            Missile::Arrow => tuning::SPEED,
+            Missile::Spark => crate::spells::tuning::BARRAGE_SPEED,
+            Missile::Hammer => crate::spells::tuning::HAMMER_SPEED,
+        }
+    }
+
+    /// Cells it can go before it falls (or turns back).
+    pub const fn range(self) -> u32 {
+        match self {
+            Missile::Arrow => tuning::RANGE,
+            Missile::Spark => crate::spells::tuning::BARRAGE_RANGE,
+            Missile::Hammer => crate::spells::tuning::HAMMER_RANGE,
+        }
+    }
+}
+
+/// Something in the air.
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub struct Flight {
     /// Unique within the run, so the front-end can follow each one.
     pub id: u32,
+    pub missile: Missile,
+    /// A hammer on its way home: `dist` counts down to your hand.
+    pub returning: bool,
     /// The cell it was loosed from, and the way it flies.
     pub from: GridPos,
     pub dir: Facing,
@@ -46,9 +84,11 @@ pub struct Flight {
 }
 
 impl Flight {
-    pub(crate) fn new(id: u32, from: GridPos, dir: Facing) -> Flight {
+    pub(crate) fn new(id: u32, missile: Missile, from: GridPos, dir: Facing) -> Flight {
         Flight {
             id,
+            missile,
+            returning: false,
             from,
             dir,
             dist: 0.0,

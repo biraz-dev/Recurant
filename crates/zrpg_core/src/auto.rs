@@ -83,7 +83,9 @@ fn item_to_use(game: &Game) -> Option<Item> {
 }
 
 /// A spell worth casting right now, keeping Chi for a swing: lightning
-/// where it strikes two or more, Spark at something coming from ahead.
+/// where it strikes two or more, the psionic blade with a foe close by, a
+/// hammer (or a spark barrage, with Chi to spare) down the line at
+/// something coming, and Spark at something coming from ahead.
 fn spell_to_cast(game: &Game) -> Option<Spell> {
     let p = &game.player;
     let affordable =
@@ -93,6 +95,40 @@ fn spell_to_cast(game: &Game) -> Option<Spell> {
             .iter()
             .any(|e| e.id == id && e.state != crate::enemy::EnemyState::Dormant)
     };
+    let woke = |e: &&Enemy| e.state != crate::enemy::EnemyState::Dormant;
+    // The blade swings for free, so it needs only its own price; but a
+    // blow being wound up next to it must be answered first.
+    let blade = Spell::PsionicBlade;
+    let threatened = game
+        .enemies
+        .iter()
+        .any(|e| e.is_winding_up() && game.floor.map.within_reach(e.pos, p.pos));
+    if p.blade == 0
+        && !threatened
+        && p.spell_cooldowns[blade.index()] <= 0.0
+        && p.energy >= blade.cost()
+        && game
+            .enemies
+            .iter()
+            .filter(woke)
+            .any(|e| e.pos.manhattan(p.pos) <= 2)
+    {
+        return Some(blade);
+    }
+    let coming = game
+        .arrow_target()
+        .filter(woke)
+        .is_some_and(|e| e.pos.manhattan(p.pos) >= 2);
+    if coming {
+        let hammer = Spell::MagicHammer;
+        if affordable(hammer) && game.hammers_out() < crate::spells::tuning::HAMMERS {
+            return Some(hammer);
+        }
+        let barrage = Spell::SparkBarrage;
+        if affordable(barrage) && p.energy >= p.max_energy * 0.6 {
+            return Some(barrage);
+        }
+    }
     for spell in [Spell::ChainLightning, Spell::LightningBolt] {
         if affordable(spell) && game.spell_targets(spell).0.len() >= 2 {
             return Some(spell);

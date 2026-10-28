@@ -13,6 +13,13 @@ Writes:
                                               the core runs along the middle,
                                               glow fades to the edges; it
                                               repeats left to right
+    crates/zrpg/assets/spells/blade.png       16x16 HUD icons for the
+    crates/zrpg/assets/spells/hammer.png      psionic blade, the magic hammer
+    crates/zrpg/assets/spells/barrage.png     and the spark barrage
+    crates/zrpg/assets/sword_psionic.png      the sword sheet (assets/sword.png)
+                                              with its steel turned to violet
+                                              light and haloed; the hand is
+                                              left as drawn
     crates/zrpg/assets/items/health_potion.png 12x12 icon
 
 Requires Pillow.
@@ -228,6 +235,135 @@ def health_potion() -> Image.Image:
     )
 
 
+VIOLET_DEEP = (70, 30, 140)
+VIOLET = (160, 90, 255)
+LAVENDER = (225, 205, 255)
+SILVER = (200, 205, 220)
+SILVER_DARK = (110, 115, 135)
+HAFT = (130, 84, 46)
+
+
+def blade_icon() -> Image.Image:
+    return icon_frame(
+        pattern(
+            [
+                "................",
+                ".............LW.",
+                "............LWL.",
+                "...........LWV..",
+                "..........LWV...",
+                ".........LWV....",
+                "........LWV.....",
+                ".......LWV......",
+                "..v...LWV.......",
+                "..vv.LWV........",
+                "...vVWV.........",
+                "....vV..........",
+                "...ddvV.........",
+                "..dd..vv........",
+                ".dd.............",
+                "................",
+            ],
+            {"W": WHITE, "L": LAVENDER, "V": VIOLET, "v": VIOLET_DEEP, "d": (90, 60, 40)},
+        )
+    )
+
+
+def hammer_icon() -> Image.Image:
+    return icon_frame(
+        pattern(
+            [
+                "................",
+                "..c.............",
+                ".c.sSSSSSs......",
+                "...sWSSSSs.c....",
+                "...sSSSSSsc.....",
+                "...kkkhkkk......",
+                "......h.....c...",
+                "......h.........",
+                ".....hh.........",
+                ".....h..........",
+                ".....h....c.....",
+                "....hh..........",
+                "....h...........",
+                "....h...........",
+                "...hh...........",
+                "................",
+            ],
+            {"s": SILVER, "S": (230, 232, 240), "W": WHITE, "k": SILVER_DARK, "h": HAFT, "c": CYAN},
+        )
+    )
+
+
+def barrage_icon() -> Image.Image:
+    return icon_frame(
+        pattern(
+            [
+                "................",
+                "................",
+                "............p...",
+                "..........p.....",
+                "................",
+                "...w...c...w..c.",
+                "..wWw.cWc.wWw...",
+                "...w...c...w....",
+                "................",
+                ".c...w....c.....",
+                "....wWw..cWc....",
+                ".....w....c.....",
+                "........p.......",
+                "................",
+                "..p.............",
+                "................",
+            ],
+            {"w": PALE, "W": WHITE, "c": CYAN, "p": BLUE},
+        )
+    )
+
+
+def psionic_sword() -> Image.Image:
+    """The sword sheet with its steel made of violet light: grey, unsaturated
+    pixels (blade, guard, pommel) are recoloured by brightness along a
+    violet ramp and made a little translucent, and a soft halo is grown
+    around them. Dark outlines and the warm hand are left alone."""
+    src = Image.open(ROOT / "crates/zrpg/assets/sword.png").convert("RGBA")
+    w, h = src.size
+    px = src.load()
+    out = src.copy()
+    op = out.load()
+    steel = [[False] * w for _ in range(h)]
+    ramp = [VIOLET_DEEP, VIOLET, LAVENDER, WHITE]
+    for y in range(h):
+        for x in range(w):
+            r, g, b, a = px[x, y]
+            if a == 0:
+                continue
+            hi, lo = max(r, g, b), min(r, g, b)
+            sat = 0 if hi == 0 else (hi - lo) / hi
+            value = hi / 255
+            if sat < 0.2 and value >= 0.22:
+                steel[y][x] = True
+                t = min(0.999, max(0.0, (value - 0.22) / 0.78)) * (len(ramp) - 1)
+                i, f = int(t), t - int(t)
+                c = tuple(int(ramp[i][k] + (ramp[i + 1][k] - ramp[i][k]) * f) for k in range(3))
+                op[x, y] = (*c, 215 if value < 0.85 else 255)
+    # The halo: transparent pixels near the steel glow faintly.
+    for y in range(h):
+        for x in range(w):
+            if px[x, y][3] != 0:
+                continue
+            near = 0
+            for dy in range(-3, 4):
+                for dx in range(-3, 4):
+                    yy, xx = y + dy, x + dx
+                    if 0 <= yy < h and 0 <= xx < w and steel[yy][xx]:
+                        d = max(abs(dx), abs(dy))
+                        near = max(near, 4 - d)
+            if near:
+                op[x, y] = (*VIOLET, 28 * near)
+    return out
+
+
 def main():
     SPELLS.mkdir(parents=True, exist_ok=True)
     ITEMS.mkdir(parents=True, exist_ok=True)
@@ -237,6 +373,10 @@ def main():
         SPELLS / "bolt.png": bolt_icon(),
         SPELLS / "sparks.png": spark_particles(),
         SPELLS / "lightning.png": lightning_strip(),
+        SPELLS / "blade.png": blade_icon(),
+        SPELLS / "hammer.png": hammer_icon(),
+        SPELLS / "barrage.png": barrage_icon(),
+        ROOT / "crates/zrpg/assets/sword_psionic.png": psionic_sword(),
         ITEMS / "health_potion.png": health_potion(),
     }
     for path, img in out.items():

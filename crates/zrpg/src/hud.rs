@@ -29,6 +29,12 @@ const BANNER_SECS: f32 = 1.6;
 /// sheet, from `art/kits/first-person-sword-v02` (copied by
 /// `tools/make_sword.py`). Frame 0 is the sword held at rest.
 const SWORD_PNG: &[u8] = include_bytes!("../assets/sword.png");
+/// The same sheet with the steel turned to violet light, for the psionic
+/// blade (made by `tools/make_spell_art.py`).
+const PSIONIC_SWORD_PNG: &[u8] = include_bytes!("../assets/sword_psionic.png");
+/// Seconds for the psionic blade to form in the hand, and to come apart.
+const BLADE_FORMS_SECS: f32 = 0.25;
+const BLADE_FADES_SECS: f32 = 0.45;
 const SWORD_SHEET: (u32, u32) = (4, 3);
 /// The sword sways a pixel or two as you breathe and bobs with each step;
 /// (pixels across, pixels down) at most. It only ever drops below its
@@ -99,6 +105,8 @@ struct HudFx {
     /// alternates sides).
     step: Option<f32>,
     steps: u32,
+    /// How far the psionic blade has replaced the sword (0..1).
+    psionic: f32,
 }
 
 #[derive(Component)]
@@ -120,6 +128,10 @@ struct ItemCount(usize);
 struct Sword;
 #[derive(Component)]
 struct Vignette;
+/// The psionic blade's overlay (also a `Sword`, so it swings and sways in
+/// step with the steel one).
+#[derive(Component)]
+struct Psionic;
 #[derive(Component)]
 struct HurtFlash;
 #[derive(Component)]
@@ -142,6 +154,7 @@ fn spawn_hud(
         return;
     };
     let sword = images.add(textures::embedded(SWORD_PNG));
+    let psionic = images.add(textures::embedded(PSIONIC_SWORD_PNG));
     let vignette = images.add(vignette_image());
     let (cols, rows) = SWORD_SHEET;
     let layout = layouts.add(TextureAtlasLayout::from_grid(
@@ -166,10 +179,25 @@ fn spawn_hud(
             // swing leaves the screen on purpose.
             root.spawn((
                 Sword,
-                ImageNode::from_atlas_image(sword, TextureAtlas { layout, index: 0 }),
+                ImageNode::from_atlas_image(
+                    sword,
+                    TextureAtlas {
+                        layout: layout.clone(),
+                        index: 0,
+                    },
+                ),
                 full(),
                 // Beneath every other piece of the HUD (spell bar and bow slot
-                // included), with the vignette just above it.
+                // included), with the psionic blade and then the vignette
+                // just above it.
+                GlobalZIndex(-3),
+            ));
+            root.spawn((
+                Sword,
+                Psionic,
+                ImageNode::from_atlas_image(psionic, TextureAtlas { layout, index: 0 })
+                    .with_color(Color::NONE),
+                full(),
                 GlobalZIndex(-2),
             ));
             // Darkened corners draw the eye down the corridor; the HUD sits
@@ -379,7 +407,7 @@ fn carry_the_sword(
     time: Res<Time>,
     run: Res<Run>,
     mut fx: ResMut<HudFx>,
-    mut sword: Query<(&mut ImageNode, &mut Node), (With<Sword>, Without<Vignette>)>,
+    mut sword: Query<(&mut ImageNode, &mut Node, Has<Psionic>), (With<Sword>, Without<Vignette>)>,
     mut vignette: Query<&mut ImageNode, (With<Vignette>, Without<Sword>)>,
 ) {
     let t = time.elapsed_secs();
@@ -417,9 +445,24 @@ fn carry_the_sword(
         }
     }
     let (left, top) = (px(x.round()), px(y.round()));
-    for (mut image, mut node) in &mut sword {
-        if image.color != light {
-            image.color = light;
+    // The psionic blade forms quickly and comes apart a little slower,
+    // shimmering while it lasts.
+    let dt = time.delta_secs();
+    fx.psionic = if run.player.blade > 0 {
+        (fx.psionic + dt / BLADE_FORMS_SECS).min(1.0)
+    } else {
+        (fx.psionic - dt / BLADE_FADES_SECS).max(0.0)
+    };
+    let a = fx.psionic;
+    let shimmer = 0.85 + 0.15 * (t * 9.0).sin();
+    for (mut image, mut node, psionic) in &mut sword {
+        let color = if psionic {
+            Color::srgba(1.0, 1.0, 1.0, a * shimmer)
+        } else {
+            light.with_alpha(1.0 - a)
+        };
+        if image.color != color {
+            image.color = color;
         }
         if node.left != left || node.top != top {
             node.left = left;

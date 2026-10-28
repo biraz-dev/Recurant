@@ -728,6 +728,103 @@ pub fn empty_quiver(_seed: u64) -> Vec<f32> {
     finish(buf)
 }
 
+/// The psionic blade forming: a shimmering chord rising out of a hum,
+/// each voice trembling a little.
+pub fn conjure(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let len = 0.9;
+    let mut voices: Vec<(Osc, f32, f32)> = [220.0, 330.0, 440.0, 660.0]
+        .into_iter()
+        .map(|f| (Osc::default(), f, noise.unit() * TAU))
+        .collect();
+    let buf = (0..samples(len))
+        .map(|i| {
+            let t = time(i);
+            let rise = 1.0 + 0.25 * (t / len);
+            let swell = (t / 0.35).min(1.0) * decay((t - 0.35).max(0.0), 0.3);
+            voices
+                .iter_mut()
+                .enumerate()
+                .map(|(k, (osc, f, ph))| {
+                    let wobble = 1.0 + 0.008 * (TAU * 6.0 * t + *ph).sin();
+                    osc.sine(*f * rise * wobble) / (1.0 + k as f32 * 0.6)
+                })
+                .sum::<f32>()
+                * swell
+        })
+        .collect();
+    finish(buf)
+}
+
+/// The psionic blade coming apart: glassy chimes falling away.
+pub fn shatter(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let mut buf = vec![0.0; samples(0.9)];
+    for k in 0..6 {
+        let freq = 2400.0 - 260.0 * k as f32 + 120.0 * noise.next();
+        mix_in(&mut buf, &ping(freq), k as f32 * 0.06, 0.9 - 0.1 * k as f32);
+    }
+    echo(&mut buf, 0.11, 0.3);
+    finish(buf)
+}
+
+/// A magic hammer leaving the hand: a low, fluttering whirr as it tumbles.
+pub fn whirr(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let mut band = BandPass::new(0.9);
+    let buf = (0..samples(0.45))
+        .map(|i| {
+            let t = time(i);
+            let flutter = 0.5 + 0.5 * (TAU * 14.0 * t).sin();
+            band.run(noise.next(), 500.0 + 300.0 * flutter) * flutter * bell(t, 0.45)
+        })
+        .collect();
+    finish(buf)
+}
+
+/// THWACK: a hammer's blow, a heavy thud with a ringing clang on top.
+pub fn thwack(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let (mut osc, mut lp) = (Osc::default(), LowPass::new(900.0));
+    let mut buf: Vec<f32> = (0..samples(0.5))
+        .map(|i| {
+            let t = time(i);
+            let thud = osc.sine(110.0 - 50.0 * t) * decay(t, 0.06);
+            let crunch = lp.run(noise.next()) * decay(t, 0.02) * 2.0;
+            thud + crunch
+        })
+        .collect();
+    let clang = chime(740.0, 0.45);
+    mix_in(&mut buf, &clang, 0.0, 0.5);
+    echo(&mut buf, 0.09, 0.25);
+    finish(buf)
+}
+
+/// A hammer slapping back into the palm.
+pub fn catch(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let mut lp = LowPass::new(1400.0);
+    let mut buf: Vec<f32> = (0..samples(0.2))
+        .map(|i| lp.run(noise.next()) * decay(time(i), 0.015))
+        .collect();
+    mix_in(&mut buf, &chime(520.0, 0.15), 0.0, 0.15);
+    finish(buf)
+}
+
+/// One barrage spark leaving the hand: a tiny bright zip.
+pub fn zip(seed: u64) -> Vec<f32> {
+    let mut noise = Noise::new(seed);
+    let mut osc = Osc::default();
+    let buf = (0..samples(0.11))
+        .map(|i| {
+            let t = time(i);
+            let sweep = 2600.0 - 9000.0 * t;
+            (osc.saw(sweep.max(400.0)) * 0.6 + 0.4 * noise.next()) * decay(t, 0.03)
+        })
+        .collect();
+    finish(buf)
+}
+
 /// A spell with nothing to strike: a dry little fizz.
 pub fn fizzle(seed: u64) -> Vec<f32> {
     let mut noise = Noise::new(seed);
@@ -794,6 +891,12 @@ pub fn all() -> Vec<(&'static str, Vec<f32>)> {
         ("thunk", thunk(27)),
         ("clatter", clatter(28)),
         ("empty_quiver", empty_quiver(29)),
+        ("conjure", conjure(30)),
+        ("shatter", shatter(31)),
+        ("whirr", whirr(32)),
+        ("thwack", thwack(33)),
+        ("catch", catch(34)),
+        ("zip", zip(35)),
     ]
 }
 
