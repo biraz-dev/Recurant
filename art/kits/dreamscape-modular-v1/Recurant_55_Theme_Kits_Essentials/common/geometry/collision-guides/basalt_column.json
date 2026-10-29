@@ -1,0 +1,20 @@
+{
+  "asset": "basalt_column",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.003124,
+        1.8975,
+        0.038202
+      ],
+      "size": [
+        0.77184,
+        3.795,
+        0.847899
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/basalt_column__GUIDE.glb"
+}

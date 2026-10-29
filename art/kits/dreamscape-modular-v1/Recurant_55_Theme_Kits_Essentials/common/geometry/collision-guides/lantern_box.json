@@ -1,0 +1,20 @@
+{
+  "asset": "lantern_box",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.5,
+        0.0
+      ],
+      "size": [
+        0.7,
+        1.0,
+        0.55
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/lantern_box__GUIDE.glb"
+}

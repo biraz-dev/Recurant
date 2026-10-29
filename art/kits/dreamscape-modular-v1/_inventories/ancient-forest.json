@@ -1,0 +1,156 @@
+{
+  "id": "ancient-forest",
+  "title": "Ancient Forest",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 22,
+  "archives": [
+    {
+      "id": "ancient-forest-001",
+      "bytes": 1736991,
+      "sha256": "ad3595248405cc61daede69458d62e53ed1338e68b79b7281e73e0083a95a3a6",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/ancient-forest.volume-001.zip",
+          "bytes": 1736991,
+          "sha256": "ad3595248405cc61daede69458d62e53ed1338e68b79b7281e73e0083a95a3a6",
+          "git_blob_sha": "eb72759af76b6968839206140b9e8ef571e84b4f"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/CLAUDE_README.md",
+          "bytes": 7236,
+          "sha256": "f73c3a4b8d2680c196daa2a43f8877c72158a834c3a7cb75fbea3d85d5ea1d4e",
+          "git_blob_sha": "b7416f583607c7483221e014c81392217a664ac0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/MATERIAL_NOTES.md",
+          "bytes": 4312,
+          "sha256": "053ccfb32b5d604d56fd63719cd96e16232966e229f946a0ef27d248769ffd52",
+          "git_blob_sha": "03ee6bda33e85a6f230ba1c65f9bc9d9468d1aa0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "1b8c443ad13b1478b071a407040b708a97c14bf6ce5c1ef4741908fa944e9d7b",
+          "git_blob_sha": "072c1056c8ba5d003c749ffa4ebcd5b6fbc32a4b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/assembly/collision-navigation.json",
+          "bytes": 10026,
+          "sha256": "ac48d32774b494663c03c3344df4de6b5faca827397c115c3a187bce6c50e82e",
+          "git_blob_sha": "b4ec34f58daf5bf2e2ed93588b9f70f47895b8c6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/assembly/layout.json",
+          "bytes": 14546,
+          "sha256": "f5ef385992fd3f347f7e5b314f763fe0b49e53d48eaed0739c2ae5e96c8f6d44",
+          "git_blob_sha": "af88cc982481b6ea440fa8af7042ef388731a304"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/assembly/native_320x240.png",
+          "bytes": 134519,
+          "sha256": "26efa3ba1af0135be46cd02901a7cd1743006e1b5bdef7d0bb9cb61f771f4194",
+          "git_blob_sha": "bcc8588acd70173f3a611fce8f464aed41cd58c1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/assembly/showcase.glb",
+          "bytes": 778924,
+          "sha256": "178622080df57b3a7948ba1902eb253b9f4ee356a65fc3d1eba5209707d1c490",
+          "git_blob_sha": "6bcf8c0f64b883671c97647f9490c6ba4048dc92"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/concept/reference_native_320x240.png",
+          "bytes": 186245,
+          "sha256": "fd1ee4a15a9f280e8cec1f46b7b8720f8dccf4e49703ccc526dfbd598bc42d0b",
+          "git_blob_sha": "7c99c4a9294427b7d8fa34a4f254d23c89ca58c4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "8a5f52ec1deb043b66cd064a18ff01e48fa68cbb0517b4b06cd01610eb3edb81",
+          "git_blob_sha": "4ac68c4957e44304c317e9d73fdf64eefb1c1cb9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/material-manifest.json",
+          "bytes": 7922,
+          "sha256": "7eff595ef7fc09161fc571e19aa85ba8c508079806f5e905f0ae8219d8ad625b",
+          "git_blob_sha": "8bb13eaa35145c87f18f4d81b363bc5b96783d1c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/materials/detail_diffuse_128.png",
+          "bytes": 37861,
+          "sha256": "3e95d82c65ca04231edd9c9b8cd82535011ca56c75c6267bdf03ae212aa6831c",
+          "git_blob_sha": "191046e05a167eac74a53d597a8a90dfef775c16"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/materials/detail_diffuse_256.png",
+          "bytes": 148563,
+          "sha256": "5f4121fe00ad413e38c0fd12bc832032c43f59f08bed7608fc5d9be1c227328b",
+          "git_blob_sha": "1d453bc8350f695b29ddca407a629fe1db0179ed"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/materials/ground_diffuse_128.png",
+          "bytes": 37834,
+          "sha256": "a178a4f96a6f82f2d8aa7fdb2d415c860389f9ef5cf0bb2045fd57c95e584164",
+          "git_blob_sha": "11d123b5b70a34a57f49c42bfae68335035650cf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/materials/ground_diffuse_256.png",
+          "bytes": 155620,
+          "sha256": "7d648208586dda1b99cc9e03d9e4812b5324da8e99310f442280a9a5ff39706d",
+          "git_blob_sha": "0f2b7f8af396baf164f57c71955e1505485f5899"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/materials/structure_diffuse_128.png",
+          "bytes": 36679,
+          "sha256": "cee8f97c1b8a475edd8096733c0fc1faccd73224d7a724014dddfc9a6acb7bc2",
+          "git_blob_sha": "9d2e6db2bcb270fa317ffcef7c788b2344c7bf96"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/materials/structure_diffuse_256.png",
+          "bytes": 150493,
+          "sha256": "b958bfe05fc6abc2f6077faa8cc697e8cc82530f09c35409b53696b0a7ef3472",
+          "git_blob_sha": "2baadbc40478b4ed5f3412b9ae6e02c9f75cc43c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/materials/wall_diffuse_128.png",
+          "bytes": 35873,
+          "sha256": "dec478337337854a36df4a8a559e9e6734a59ad4fc09b1a40fb11c79a27556ed",
+          "git_blob_sha": "94fb70c1954c67dd87d27c4d1247c3b3a5d2b552"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/materials/wall_diffuse_256.png",
+          "bytes": 145159,
+          "sha256": "ace98884e064c677ad267c58c38bcaeaaa0b6ea46df99b3226d288117d06ba27",
+          "git_blob_sha": "23e0af54cfb5f57d43cfb615bb07e9e4902dd4af"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/prompts/material_atlas_v1.txt",
+          "bytes": 1681,
+          "sha256": "12eeee0f41871d278d04109710b6aaffbffeccf2f09d674d5b420019e2917738",
+          "git_blob_sha": "23f3363fd92cc6f1f1558bfb504d99476dd9f90e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/qa/material-qa.json",
+          "bytes": 2195,
+          "sha256": "8fa2c131d4f256206984113ff11944bd77b2c38603eaa7a741a492e1cccbc769",
+          "git_blob_sha": "f0b21e76e4d4affee799fb86e75cf6f63ecd93c6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/ancient-forest/theme-manifest.json",
+          "bytes": 6775,
+          "sha256": "345a846c2a4c1d86567327c3fa8c4da4acc2fee768bd28e90efbd1c8433bc8fb",
+          "git_blob_sha": "fff14213d05aa953478dd6c032072ef43efe392b"
+        }
+      ]
+    }
+  ]
+}

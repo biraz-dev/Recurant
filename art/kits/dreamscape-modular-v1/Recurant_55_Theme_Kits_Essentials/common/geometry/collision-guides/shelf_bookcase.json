@@ -1,0 +1,20 @@
+{
+  "asset": "shelf_bookcase",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        1.0,
+        -0.085
+      ],
+      "size": [
+        1.4,
+        2.0,
+        0.47
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/shelf_bookcase__GUIDE.glb"
+}

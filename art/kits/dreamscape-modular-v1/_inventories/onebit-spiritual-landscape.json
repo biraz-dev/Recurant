@@ -1,0 +1,174 @@
+{
+  "id": "onebit-spiritual-landscape",
+  "title": "One-Bit Spiritual Landscape",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "onebit-spiritual-landscape-001",
+      "bytes": 211311,
+      "sha256": "b5fafcee5e3eba492dc94126ffdd1bf02bffa0254454aa23681dc517bf7e6e40",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/onebit-spiritual-landscape.volume-001.zip",
+          "bytes": 211311,
+          "sha256": "b5fafcee5e3eba492dc94126ffdd1bf02bffa0254454aa23681dc517bf7e6e40",
+          "git_blob_sha": "c44656a2a6df127401961136204a411312ccab29"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/CLAUDE_README.md",
+          "bytes": 8649,
+          "sha256": "ba6638b7ec30f22bcec85bf49118ee2c925c7c84897876056ea61375800960c4",
+          "git_blob_sha": "ed6fcb3ab40b80306f4471df9dc6168a01f0898d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/MATERIAL_NOTES.md",
+          "bytes": 3894,
+          "sha256": "cb70b58ef4e6d5fa8e101fcf87e3985cea60a552ab005f8557c9ebc3d8ad29e0",
+          "git_blob_sha": "8779b679385d10de7a22fabeb2062d7612db5ac5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/assembly/asset-validation.json",
+          "bytes": 2260,
+          "sha256": "0af476fa3d2b28fe8f54f3a6fbd8352ffa5780ff44219c6c08211f6c71e2d162",
+          "git_blob_sha": "b2f963afbb1356ec5b1ca6292e03e76bb224841b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/assembly/collision-navigation.json",
+          "bytes": 10419,
+          "sha256": "0fa958c051e26704b158df8bda729a50401560a467787df3371ef51d10bc2bb3",
+          "git_blob_sha": "f5b912a0af1eb87e36e80b61317c8b7ccd3ac759"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/assembly/layout.json",
+          "bytes": 14173,
+          "sha256": "cad5ecf44a1b203013d8c29d576276a29b0ee4f410c5ea031d69cba8970768ff",
+          "git_blob_sha": "160783fda4fe758890726885692bec1b4f527bb8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/assembly/native_320x240.png",
+          "bytes": 10199,
+          "sha256": "1e8d16356ca01401d785fbafa224e6f04400b6a9f9c9c26ce152e488ed8cd6ec",
+          "git_blob_sha": "8cd11da77212b8ab28c33c383807f24826a34aaf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/assembly/showcase.glb",
+          "bytes": 335964,
+          "sha256": "c3358441569f7af99e32d3b02b79cba3ef2069445ac13644cd67019bdd6f08c4",
+          "git_blob_sha": "287d392901463a3c61021c04b6d6806fbfaea9a3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/concept/preview_4x.png",
+          "bytes": 12264,
+          "sha256": "9b9e15c8981de592955c4d014a2672c0aa29c5397953101dbbdda93545576f06",
+          "git_blob_sha": "2a47f395c7139eade12c0e38d752f2783c0300dc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/concept/reference_native_320x240.png",
+          "bytes": 5612,
+          "sha256": "f857939f5c97e243f7f1ac7c0d2c272b8f4a7dcce9b4e3fe84a2946cddc986ee",
+          "git_blob_sha": "5085abecf0a0d598ddc8d4c5f5df492980e0b37e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/concept/source-index.json",
+          "bytes": 392,
+          "sha256": "26ca347d2af84d546c3802c27ad3b9f206e8299c0f1b5d64c6b4fa8b2cc2bdfe",
+          "git_blob_sha": "2c6344a9ce11e40ae1df6b533bdb4980abe7503a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/derive_assets.py",
+          "bytes": 7775,
+          "sha256": "0f8341277400ee9ceea803d170eccb7fa962be96a826927b232936193587b2ce",
+          "git_blob_sha": "d5252cff660d553bcc82b06cb1ad8eed822870eb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/material-manifest.json",
+          "bytes": 7759,
+          "sha256": "e1c6f8882f529526b51236aa127463f7ecb2093d649c3118f65def3ce9ea6210",
+          "git_blob_sha": "18652d6346e93451575998b058df0664000898bd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/materials/detail_diffuse_128.png",
+          "bytes": 3462,
+          "sha256": "611320b1982a0d72536d9ea211c428dce72faa808c80e0759ab0196a7de97cec",
+          "git_blob_sha": "a674f1eba7e8e39b5b7380f2f55be8a7fc70d381"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/materials/detail_diffuse_256.png",
+          "bytes": 13594,
+          "sha256": "432b11120259cef76eb934974c2b3bcc2782652ed791ad9fd4399853ab2ffe15",
+          "git_blob_sha": "3fa0df340de2786b5717418f9eafa4389cdd8572"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/materials/ground_diffuse_128.png",
+          "bytes": 3961,
+          "sha256": "c782eb371a3012cc09d0ab6c24568d5fbedcfdda2fef90603ef1c1466f89a244",
+          "git_blob_sha": "2c9b2c9bbec722f8193c3ff0a6d1ea5bfd30705d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/materials/ground_diffuse_256.png",
+          "bytes": 14064,
+          "sha256": "053884e63909b98b37a95ec376e2d413fe802abfd4cf52e8b841bddcbdde2f79",
+          "git_blob_sha": "bf0e2af8ec2b99730b690bb37348bb47a145d3dd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/materials/structure_diffuse_128.png",
+          "bytes": 3236,
+          "sha256": "0bea6af987137dc9099c9ddc2d1385a07b549a99b549e12490a825eb443b8e76",
+          "git_blob_sha": "ae03f0b716dd803cdff8512c992c4bed4994b242"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/materials/structure_diffuse_256.png",
+          "bytes": 10057,
+          "sha256": "b0aca3e1e2b943098dcc153d49f484db5bb1567e0b5878643bb67e69dcc45c9a",
+          "git_blob_sha": "80732ed7350d5ca35e134e843526c1e839ec523e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/materials/wall_diffuse_128.png",
+          "bytes": 3127,
+          "sha256": "0b3927fc3b414a83d9519b4486f86e581881f30e8bb7cf997ce4ebfe5c4de9d5",
+          "git_blob_sha": "8fbd414da680de3ea010ed858378bca3342434c0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/materials/wall_diffuse_256.png",
+          "bytes": 10398,
+          "sha256": "677ec07e19c1991810db660c964cae73a207a236a1444bd020220c7d94cef4ba",
+          "git_blob_sha": "ddc0a0ef0fa9d17035bcba4530f872a284d2f4b5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/prompts/atlas-prompt.txt",
+          "bytes": 2181,
+          "sha256": "c144dd47641bb694fae706e515e43a4e89077f61bb0e5ad43d07d726c127eedc",
+          "git_blob_sha": "4944538bdc912812ffafebefee984ec30d6bdcc7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/prompts/concept-prompt.txt",
+          "bytes": 1673,
+          "sha256": "0ca370e0669b8d1dc6cab406bf6810e713c72c335f69ce13879a68dd64dac57a",
+          "git_blob_sha": "645ba0d23f50da049cb89172559ba37aa7f7e497"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/qa/validation-report.json",
+          "bytes": 7326,
+          "sha256": "f6df884a10ebfc3675e30adb00dc1f6c159a5deabde6ee74c01b5baa31a306b3",
+          "git_blob_sha": "bcae4e958bdd550a918535a8ecebf52dac05adaf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/onebit-spiritual-landscape/theme-manifest.json",
+          "bytes": 7674,
+          "sha256": "ca94ef2633ce5b5275a4706a35f185dc48da810f6fe6117e123bdbee12161ab0",
+          "git_blob_sha": "f2d6f566a48c74ffd455ed5f986dda5378bcf645"
+        }
+      ]
+    }
+  ]
+}

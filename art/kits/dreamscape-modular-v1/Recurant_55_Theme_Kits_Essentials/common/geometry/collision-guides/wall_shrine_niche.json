@@ -1,0 +1,20 @@
+{
+  "asset": "wall_shrine_niche",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        2.0,
+        -0.2875
+      ],
+      "size": [
+        2.0,
+        4.0,
+        0.735
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/wall_shrine_niche__GUIDE.glb"
+}

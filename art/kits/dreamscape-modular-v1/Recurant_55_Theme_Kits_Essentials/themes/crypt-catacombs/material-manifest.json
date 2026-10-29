@@ -1,0 +1,209 @@
+{
+  "schema": "recurant.material-kit.v1",
+  "theme": "crypt-catacombs",
+  "generator": "builtin image_gen",
+  "source_atlas": "art_sources/material-atlas-master.png",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "prompt": "prompts/material-atlas.txt",
+  "derived_processing": "Quadrant crops, optionally restricted to whole masonry courses (see source_crop_px), and nearest-neighbour resizing only. No synthesized PBR maps or procedural seam repair.",
+  "lighting_note": "Diffuse stylized painted surface shading is baked; do not infer physical PBR maps.",
+  "qa_contacts": [
+    "qa/material-contact.png",
+    "qa/wall-ground-repeat-2x2.png"
+  ],
+  "qa_status": "Visual QA complete. See per-role notes; no claim of pixel-perfect seamlessness.",
+  "materials": [
+    {
+      "role": "wall",
+      "file_256": "materials/wall_diffuse_256.png",
+      "file_128": "materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "weathered gray-purple limestone ashlar in horizontal staggered courses, fine chipped edges, quiet recess joints",
+      "repeat_intent": true,
+      "repeat_verified": true,
+      "wrap_recommendation": "REPEAT",
+      "uv_recommendation": "2 metres per repeat candidate",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 30.895,
+        "top_bottom_mae": 11.715,
+        "horizontal_internal_mae": 19.421,
+        "vertical_internal_mae": 22.187
+      },
+      "source_crop_px": [
+        0,
+        3,
+        627,
+        589
+      ],
+      "sha256": "f624a0789eac2c8a315da24cc672c1b3e6767677871f972de81507ba2922c8e9",
+      "repeat_quality": "Practical visually reviewed repeat; not pixel-edge-identical",
+      "qa_note": "One targeted imagegen seam repair and whole-course crop. 2x2 visual QA accepts general use; subtle edge/course variation remains. Break large wall expanses with structure meshes.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "ground",
+      "file_256": "materials/ground_diffuse_256.png",
+      "file_128": "materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "worn lavender slate paving in square tiles, mottled quiet blue-gray with small chips, dark thin grout",
+      "repeat_intent": true,
+      "repeat_verified": true,
+      "wrap_recommendation": "REPEAT",
+      "uv_recommendation": "2 metres per repeat candidate",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 13.676,
+        "top_bottom_mae": 44.518,
+        "horizontal_internal_mae": 18.762,
+        "vertical_internal_mae": 18.174
+      },
+      "source_crop_px": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "69123b02197e8319e871388f9ef4874860b6c2ee9922c374d8fc58d5306c8829",
+      "repeat_quality": "Practical visually reviewed tiled repeat; not pixel-edge-identical",
+      "qa_note": "2x2 visual QA: regular square tile grid joins plausibly; individual tile veining/color intentionally changes at mortar joints.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "structure",
+      "file_256": "materials/structure_diffuse_256.png",
+      "file_128": "materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "pale carved limestone with restrained interlocking funerary leaf band in horizontal courses, material only",
+      "repeat_intent": false,
+      "repeat_verified": false,
+      "wrap_recommendation": "CLAMP",
+      "uv_recommendation": "Local component UV0 0\u20131",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 27.268,
+        "top_bottom_mae": 47.092,
+        "horizontal_internal_mae": 14.619,
+        "vertical_internal_mae": 22.687
+      },
+      "source_crop_px": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "3c2f924261afc208285084b24053b3efa7de6b326e27aea2fb6934edc600163c",
+      "repeat_quality": "Intentional nonrepeat component material / decorative panel",
+      "qa_note": "Flat surface accepted; map once per component UV0 0\u20131, not across room-scale repeats.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "detail",
+      "file_256": "materials/detail_diffuse_256.png",
+      "file_128": "materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "square shallow relief rosette and funerary knot in aged limestone, no skull object and no text",
+      "repeat_intent": false,
+      "repeat_verified": false,
+      "wrap_recommendation": "CLAMP",
+      "uv_recommendation": "Local component UV0 0\u20131",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 12.393,
+        "top_bottom_mae": 22.57,
+        "horizontal_internal_mae": 16.234,
+        "vertical_internal_mae": 16.782
+      },
+      "source_crop_px": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "afceb401d95ae0c587c0b6dece48e78ee3bef47d3b5f55a61f65ed965087b8f8",
+      "repeat_quality": "Intentional nonrepeat component material / decorative panel",
+      "qa_note": "Flat surface accepted; map once per component UV0 0\u20131, not across room-scale repeats.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    }
+  ],
+  "material_type": "Opaque painted diffuse/base color only",
+  "recommended_sampler": {
+    "magnification": "NEAREST / POINT",
+    "minification": "NEAREST or nearest-mipmap-nearest; test fine textile weave at distance",
+    "color_management": "Interpret PNG as sRGB and convert to linear only inside renderer",
+    "compression": "Prefer lossless/uncompressed for pixel fidelity",
+    "alpha_mode": "OPAQUE"
+  },
+  "provenance": {
+    "mode": "builtin image_gen",
+    "primary_prompt": "prompts/material-atlas.txt",
+    "art_sources": [
+      "art_sources/material-atlas-initial.png",
+      "art_sources/material-atlas-master.png",
+      "art_sources/material-atlas-repair.png"
+    ],
+    "no_manual_pixel_painting": true,
+    "processing": "Crop and nearest-neighbor resize only; visual QA contact assembly is not production image editing.",
+    "repair_prompt": "prompts/seam-repair.txt"
+  },
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

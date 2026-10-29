@@ -1,0 +1,123 @@
+{
+  "id": "organic_passage_demo",
+  "description": "Traversable-looking root and cave corridor with edge fungi and foliage.",
+  "file": "assemblies/organic_passage_demo.glb",
+  "coordinate_system": "metres/Y-up/-Z-north",
+  "instances": [
+    {
+      "asset": "floor_pavers_2m",
+      "position_m": [
+        0,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_pavers_2m",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_pavers_2m",
+      "position_m": [
+        0,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "root_arch_2m",
+      "position_m": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "cave_arch_2m",
+      "position_m": [
+        0,
+        0,
+        3
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "cave_wall_2m",
+      "position_m": [
+        -1.55,
+        0,
+        0
+      ],
+      "rotation_y_radians": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "asset": "tree_trunk",
+      "position_m": [
+        1.9,
+        0,
+        1.6
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "mushroom_cluster",
+      "position_m": [
+        1.25,
+        0,
+        -1.9
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "mushroom_tall",
+      "position_m": [
+        -2.0,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "fern_clump",
+      "position_m": [
+        1.6,
+        0,
+        -0.1
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    }
+  ],
+  "bounds_m": {
+    "min": [
+      -3.0,
+      -0.2,
+      -2.995
+    ],
+    "max": [
+      3.0359089962369525,
+      4.369999999999999,
+      3.41803211315016
+    ]
+  },
+  "notes": [
+    "Demonstrates visual assembly only. Collision/world navigation must be adapted through the current game grid pipeline."
+  ]
+}

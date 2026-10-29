@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "astral-sanctuary",
+  "title": "Astral Sanctuary",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/astral-sanctuary/materials/wall_diffuse_256.png",
+      "low_memory_basecolor": "themes/astral-sanctuary/materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "pearl-white alabaster blocks with delicate blue-lavender veins, very refined thin joints, not glowing"
+    },
+    "ground": {
+      "basecolor": "themes/astral-sanctuary/materials/ground_diffuse_256.png",
+      "low_memory_basecolor": "themes/astral-sanctuary/materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "ivory marble square paving with extremely fine muted gold geometric lattice and quiet lavender clouding, no reflections"
+    },
+    "structure": {
+      "basecolor": "themes/astral-sanctuary/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/astral-sanctuary/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "smooth pearl stone surface with restrained repeating gold and lapis filigree trim, flat material"
+    },
+    "detail": {
+      "basecolor": "themes/astral-sanctuary/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/astral-sanctuary/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "square midnight-blue enameled surface with a delicate original gold celestial compass of tiny stars and crescent shapes, nonrepeating, no text and no glow"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "crystal_floor_2m",
+      "role": "walkable_floor",
+      "notes": "Walkable mineral slab; small edge inclusions remain outside 1.2m centre lane."
+    },
+    {
+      "module_id": "crystal_wall_ribs",
+      "role": "structure",
+      "notes": "Five applied faceted ribs on a wall panel, preserving flat 2m snap ends."
+    },
+    {
+      "module_id": "crystal_pointed_arch",
+      "role": "structure",
+      "notes": "Angular ceremonial portal with two crystal uprights and pointed lintel."
+    },
+    {
+      "module_id": "astral_ring_focus",
+      "role": "distinctive_prop",
+      "notes": "Orbit ring around a central crystal, mounted on a circular base."
+    },
+    {
+      "module_id": "crystal_obelisk",
+      "role": "distinctive_prop",
+      "notes": "Prismatic body and pointed crown, true flat-facet silhouette."
+    },
+    {
+      "module_id": "ceremonial_pedestal",
+      "role": "distinctive_prop",
+      "notes": "Octagonal shrine pedestal with broad base and dish-like upper platform."
+    },
+    {
+      "module_id": "crystal_cluster",
+      "role": "distinctive_prop",
+      "notes": "Four asymmetric faceted crystal prisms with divergent growth."
+    },
+    {
+      "module_id": "column_round",
+      "role": "distinctive_prop",
+      "notes": "Round freestanding column with plinth and capital."
+    },
+    {
+      "module_id": "altar_block",
+      "role": "distinctive_prop",
+      "notes": "Compact shrine altar with slab top."
+    },
+    {
+      "module_id": "crystal_shard_tall",
+      "role": "distinctive_prop",
+      "notes": "Prismatic body and pointed crown, true flat-facet silhouette."
+    },
+    {
+      "module_id": "textile_banner_pointed",
+      "role": "distinctive_prop",
+      "notes": "Pennant-shaped hanging banner with solid thickness. Local origin is tip shoulder."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/astral-sanctuary/assembly/layout.json",
+    "glb": "themes/astral-sanctuary/assembly/showcase.glb",
+    "preview": "themes/astral-sanctuary/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 4638,
+      "triangles": 2344,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "ef443802681e42fb1adbe65263da5980ba4cc341df8685db2598c6bfbe5d1bd8",
+        "showcase.glb": "799cd484dc69817f55d081a7f6544dceb419732f8e4409d42d160366bc2e21f7"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "05eb9d6bfea8e14acdefbbed9cdedc00e6093a915497f5412c87f8dc9b91143f"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/astral-sanctuary/material-manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

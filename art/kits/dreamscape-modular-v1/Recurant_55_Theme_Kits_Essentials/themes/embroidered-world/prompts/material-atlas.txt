@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: PRODUCTION GAME MATERIAL DIFFUSE TEXTURE ATLAS. Not a scene, not concept art.
+Make one exactly square atlas divided at its exact horizontal and vertical midpoint into FOUR independent equal square swatches. Top left WALL, top right GROUND, bottom left STRUCTURE, bottom right DETAIL. These are position instructions, NOT labels: draw absolutely NO text. All four swatches touch edge to edge, no gaps, margins, shadows, separators, captions, presentation borders or frames. Each swatch entirely fills its quadrant.
+All four images are entirely flat orthographic surface color viewed perpendicular to surface. No objects, no environment, no room, no perspective, no vanishing point, no scene lighting, no sky, no horizon, no cast shadows, no glossy reflections. Uniform neutral diffuse illumination; minute painted surface recess shading is fine.
+Style: elegant refined painterly pixel art for a dreamlike 1990s-style fantasy dungeon game, with dense intentional pixel clusters and authentic handpainted tactile surfaces. General craftsmanship reminiscent of Lands of Lore, but original design, never copied. Pixel clustered detail, not photoreal, not blurry, not smooth vector.
+
+Theme: embroidered world.
+Palette: deep indigo, antique gold, warm cream, dusty lavender.
+TOP LEFT: dense deep indigo knitted wool with fine repeating gold vine embroidery, flat textile face. Tileable repeat in both axes, matching edges and aligned course heights.
+TOP RIGHT: cream and old-gold woven tapestry surface with simple regular small diamond stitch pattern, flat woven color. Tileable repeat in both axes, matching edges and exact grid alignment. Render from directly overhead, not angled.
+BOTTOM LEFT: thick golden braided yarn textile arranged in orderly horizontal cable-knit rows, no freestanding yarn or scenery. This square will be wrapped 0–1 onto structural mesh elements; no object silhouette.
+BOTTOM RIGHT: square hand-embroidered lavender and gold floral mandala on indigo cloth, visible tiny stitches, nonrepeat flat textile panel. Nonrepeating detail panel, square edge-to-edge material, no outer frame unless intrinsic to textile design.
+Hard constraints: four distinct useful material swatches, perfectly square exact quadrants. No scenery, no floating props, no text, no lighting gradients, no dramatic shadows.
+Functional tiling constraint: in top-left and top-right, the quadrant borders must follow repeating grid boundaries. Draw only complete rows and complete cells; never clip a partial row or column. For masonry exactly SIX complete courses; for square tiled surfaces exactly FOUR by FOUR complete tiles; for woven or wood surfaces use uniform, low-contrast edges. For tatami floor use precisely even fiber weave with no directional brightness gradient. Opposite edges must equal overall color and pattern alignment. No outer border distinct from ordinary mortar or weave.

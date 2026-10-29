@@ -1,0 +1,20 @@
+{
+  "asset": "machine_wall_panel",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        2.0,
+        -0.04
+      ],
+      "size": [
+        2.0,
+        4.0,
+        0.28
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/machine_wall_panel__GUIDE.glb"
+}

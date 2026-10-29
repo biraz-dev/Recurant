@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "theme": "genesis-garden",
+  "public_title": "Genesis Garden",
+  "manifest_base": "this theme directory",
+  "atlas_source": "art_sources/material_atlas_v1.png",
+  "atlas_source_dimensions": [
+    1254,
+    1254
+  ],
+  "atlas_source_sha256": "00f73c1af5383e63567c2b4062be86d65180c77a4b8de11cc526161d9f574251",
+  "full_prompt": "prompts/material_atlas_v1.txt",
+  "generator": "built-in image_gen",
+  "input_reference": "Original scene concept describes palette only; no external art supplied to generator.",
+  "processing": "Exact quadrant crop; Lanczos resize to 256 then 128. QA images duplicate finished tiles 2x2 without alteration. No painting, seam synthesis, color edits, or fake PBR map generation.",
+  "palette": "deep ultramarine, vivid but tasteful teal, radiant honey gold, pale opal light",
+  "materials": [
+    {
+      "id": "genesis-garden__wall",
+      "role": "wall",
+      "description": "flat muted ultramarine mineral stone with fine branching ochre-gold veins",
+      "base_color_texture": "materials/wall_diffuse_256.png",
+      "low_res_texture": "materials/wall_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_repeat_candidate",
+      "recommended_wrap": "REPEAT_WITH_QA_CAUTION",
+      "nominal_meters_per_repeat": 2,
+      "uv_policy": "1 repeat per 2 authoring metres, only after seam acceptance",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/wall_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 22.577,
+          "top_bottom": 26.828
+        },
+        "interior_adjacent_MAE_rgb255": 15.989,
+        "visual_findings": "Gold mineral veins are discontinuous at borders and repeat visibly; not seamless-certified.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sha256": "888f23cd1f5453ae58e08cc8932cd91f03df24a49035fde02ded6c6195c5ffa5",
+      "low_res_sha256": "bf2882e5345b84ccbd18789b1ce952be4f34705a81d6608ea96040e81d88c4e0"
+    },
+    {
+      "id": "genesis-garden__ground",
+      "role": "ground",
+      "description": "flat pale opal limestone with quiet blue-gray hairline cracks and faint warm mineral specks",
+      "base_color_texture": "materials/ground_diffuse_256.png",
+      "low_res_texture": "materials/ground_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_repeat_candidate",
+      "recommended_wrap": "REPEAT_WITH_QA_CAUTION",
+      "nominal_meters_per_repeat": 2,
+      "uv_policy": "1 repeat per 2 authoring metres, only after seam acceptance",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/ground_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 15.934,
+          "top_bottom": 18.333
+        },
+        "interior_adjacent_MAE_rgb255": 10.763,
+        "visual_findings": "Pale stone value is coherent, but long mineral cracks reveal repeated boundaries.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "58dc62d20dd3d4f73e44fb7706d766e606f01c9ce3434b56f78ca33005377220",
+      "low_res_sha256": "b64a5f48ca96a1bad0ad2c6547726f0fd91a35d4685ef21973499454ec0b63d9"
+    },
+    {
+      "id": "genesis-garden__structure",
+      "role": "structure",
+      "description": "flat luminous deep cerulean water surface with fine soft gold ripple streaks, no reflected scene",
+      "base_color_texture": "materials/structure_diffuse_256.png",
+      "low_res_texture": "materials/structure_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_component_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "uv_policy": "0-1 per component",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/structure_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 12.107,
+          "top_bottom": 17.37
+        },
+        "interior_adjacent_MAE_rgb255": 10.316,
+        "visual_findings": "Gold ripple lines reveal repetition; opaque painted fluid only, no physical emission.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "4f2abef04be3fa71545835d907a1f94dc742c19ed1cd0a874adf8ccb56422c0f",
+      "low_res_sha256": "89d47cc82b1aa32c173d61015b6fa6acce20c478a2a592cf12a4cd565994c788"
+    },
+    {
+      "id": "genesis-garden__detail",
+      "role": "detail",
+      "description": "flat deep teal living bark with restrained branching gold mineral fibers",
+      "base_color_texture": "materials/detail_diffuse_256.png",
+      "low_res_texture": "materials/detail_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_component_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "uv_policy": "0-1 per component",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/detail_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 21.332,
+          "top_bottom": 17.318
+        },
+        "interior_adjacent_MAE_rgb255": 15.738,
+        "visual_findings": "Branching gold bark forms a strong repeated motif; clamp each hero tree component.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "a668013becac3cf16e75149171de10db8a2bd17cda4021a873ae939d90ed1844",
+      "low_res_sha256": "d86fb380755ed630ab3845678de557e21e02a3f51f4f04feb481f1bd6b86d6dd"
+    }
+  ],
+  "import_defaults": {
+    "filter": "nearest at runtime for pixel aesthetic; test motion shimmer",
+    "roughness": 0.85,
+    "metallic": 0,
+    "blend_mode": "opaque",
+    "default_emission": 0
+  },
+  "status": "production-authorized generated material candidates, asset-level QA complete; engine acceptance remains",
+  "known_limitations": [
+    "No mathematically seamless certification. Use the actual repeat diagnostics before enabling broad repeats.",
+    "Structure and detail are clamp panels, not unrestricted tiled fields.",
+    "No normal, roughness, AO, metallic, height, emission or alpha-cutout maps supplied.",
+    "No engine import, movement, collision or target performance validation is implied by these textures."
+  ],
+  "support_notes": "MATERIAL_NOTES.md",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

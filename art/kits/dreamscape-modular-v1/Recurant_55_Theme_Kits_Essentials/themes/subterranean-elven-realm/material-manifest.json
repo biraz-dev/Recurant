@@ -1,0 +1,206 @@
+{
+  "schema": "recurant.material-kit.v1",
+  "theme": "subterranean-elven-realm",
+  "generator": "builtin image_gen",
+  "source_atlas": "art_sources/material-atlas-master.png",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "prompt": "prompts/material-atlas.txt",
+  "derived_processing": "Quadrant crops, optionally restricted to whole masonry courses (see source_crop_px), and nearest-neighbour resizing only. No synthesized PBR maps or procedural seam repair.",
+  "lighting_note": "Diffuse stylized painted surface shading is baked; do not infer physical PBR maps.",
+  "qa_contacts": [
+    "qa/material-contact.png",
+    "qa/wall-ground-repeat-2x2.png"
+  ],
+  "qa_status": "Visual QA complete. See per-role notes; no claim of pixel-perfect seamlessness.",
+  "materials": [
+    {
+      "role": "wall",
+      "file_256": "materials/wall_diffuse_256.png",
+      "file_128": "materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "deep blue-black dressed obsidian masonry with restrained violet mineral veins, rectangular low-relief blocks",
+      "repeat_intent": true,
+      "repeat_verified": true,
+      "wrap_recommendation": "REPEAT",
+      "uv_recommendation": "2 metres per repeat candidate",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 12.48,
+        "top_bottom_mae": 8.147,
+        "horizontal_internal_mae": 11.27,
+        "vertical_internal_mae": 13.052
+      },
+      "source_crop_px": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sha256": "3cb9b088345390bfc4b821060b085696248826d6fc2d3c30e91727394f0cf209",
+      "repeat_quality": "Practical visually reviewed repeat; not pixel-edge-identical",
+      "qa_note": "2x2 visual QA accepted; whole-course crop where necessary. Minor mortar/cell-width variation remains; avoid unbroken giant walls.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "ground",
+      "file_256": "materials/ground_diffuse_256.png",
+      "file_128": "materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "dark indigo polished stone square paving with thin pale lilac geometric inlay, matte diffuse no reflected light",
+      "repeat_intent": true,
+      "repeat_verified": true,
+      "wrap_recommendation": "REPEAT",
+      "uv_recommendation": "2 metres per repeat candidate",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 18.068,
+        "top_bottom_mae": 9.238,
+        "horizontal_internal_mae": 14.692,
+        "vertical_internal_mae": 12.81
+      },
+      "source_crop_px": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "d6fde75bec512f7ad74c8d74aa061044e25c4cc2edeb07d52359e7c00ce73e96",
+      "repeat_quality": "Practical visually reviewed tiled repeat; not pixel-edge-identical",
+      "qa_note": "2x2 visual QA accepted; complete square paving grid with intrinsic per-tile color variation.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "structure",
+      "file_256": "materials/structure_diffuse_256.png",
+      "file_128": "materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "deep charcoal carved stone with thin repetitive elegant angular silver-violet tracery, absolutely no raised architectural object",
+      "repeat_intent": false,
+      "repeat_verified": false,
+      "wrap_recommendation": "CLAMP",
+      "uv_recommendation": "Local component UV0 0\u20131",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 10.766,
+        "top_bottom_mae": 27.52,
+        "horizontal_internal_mae": 24.404,
+        "vertical_internal_mae": 9.98
+      },
+      "source_crop_px": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "7a1225c9074b41e8dfab543906f95ca983f715ad80aa64b0df98559b224f8e20",
+      "repeat_quality": "Intentional nonrepeat component material / decorative panel",
+      "qa_note": "Flat surface accepted; map once per component UV0 0\u20131, not across room-scale repeats.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "detail",
+      "file_256": "materials/detail_diffuse_256.png",
+      "file_128": "materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "square subtle amethyst and silver spiderweb-like abstract radial sigil in a dark obsidian surface, ornamental pattern not lettering, no glow",
+      "repeat_intent": false,
+      "repeat_verified": false,
+      "wrap_recommendation": "CLAMP",
+      "uv_recommendation": "Local component UV0 0\u20131",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 9.146,
+        "top_bottom_mae": 12.738,
+        "horizontal_internal_mae": 17.253,
+        "vertical_internal_mae": 17.452
+      },
+      "source_crop_px": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "b99f68791e189982a595cec9dc1d3ac68495074b74a3f106512b34cf0bae9701",
+      "repeat_quality": "Intentional nonrepeat component material / decorative panel",
+      "qa_note": "Flat surface accepted; map once per component UV0 0\u20131, not across room-scale repeats.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    }
+  ],
+  "material_type": "Opaque painted diffuse/base color only",
+  "recommended_sampler": {
+    "magnification": "NEAREST / POINT",
+    "minification": "NEAREST or nearest-mipmap-nearest; test fine textile weave at distance",
+    "color_management": "Interpret PNG as sRGB and convert to linear only inside renderer",
+    "compression": "Prefer lossless/uncompressed for pixel fidelity",
+    "alpha_mode": "OPAQUE"
+  },
+  "provenance": {
+    "mode": "builtin image_gen",
+    "primary_prompt": "prompts/material-atlas.txt",
+    "art_sources": [
+      "art_sources/material-atlas-master.png"
+    ],
+    "no_manual_pixel_painting": true,
+    "processing": "Crop and nearest-neighbor resize only; visual QA contact assembly is not production image editing."
+  },
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

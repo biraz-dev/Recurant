@@ -1,0 +1,174 @@
+{
+  "id": "fungus-wonderland",
+  "title": "Fungus Wonderland",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "fungus-wonderland-001",
+      "bytes": 2291690,
+      "sha256": "e7059e2dc7676995b79fb5f1545b771015ca4c0d609e3ce918e1b381e7873551",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/fungus-wonderland.volume-001.zip",
+          "bytes": 2291690,
+          "sha256": "e7059e2dc7676995b79fb5f1545b771015ca4c0d609e3ce918e1b381e7873551",
+          "git_blob_sha": "79bf40964ffe261b9fa0e80ecdacbaa3360bbeb1"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/CLAUDE_README.md",
+          "bytes": 7434,
+          "sha256": "f82f80b72435dbd8c6da0878945f3b57ab993c0372f9138cc6bd985a0ed9d176",
+          "git_blob_sha": "79e4f5e0dbf6bdee67ae2a362897b45180b912f1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "7a7fb05331c23a5f5757dda3a707e4496ca291a68144695b3fbc16b16c359a36",
+          "git_blob_sha": "f6fafa06f65fb0f66526f088b1b75ea36087f72e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/assembly/collision-navigation.json",
+          "bytes": 10173,
+          "sha256": "8d726e0099e0be32ba7a1fef8215c8052d20763a26cd457b12726775e4519cf0",
+          "git_blob_sha": "41c6dc903b87d631e516ea5892b99651e10c6e20"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/assembly/layout.json",
+          "bytes": 14115,
+          "sha256": "4a3f2c6e7313bd5781299ab7ead153e08be63bf21c4722e779ffaffccd62998c",
+          "git_blob_sha": "b6a144a592589b4609e6d9bc5a952efe12350719"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/assembly/native_320x240.png",
+          "bytes": 153141,
+          "sha256": "62222114aa152c8f07abddaddf792b741c739002a7dd4c5cdef82bf67a200f60",
+          "git_blob_sha": "fb23c5649d114d709308671763b37ab0c60b33d8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/assembly/showcase.glb",
+          "bytes": 812108,
+          "sha256": "31c28cc173f1eca2d99ca1a7fa39d38209a3a3e3bbb63c3f1f2a546fbd1ed01f",
+          "git_blob_sha": "5dd7d008fc8362c02b5c633e8937a5ec2a4c24d9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/concept/reference_native_320x240.png",
+          "bytes": 183799,
+          "sha256": "b640a47643f3ae256ccea3a4aa6f99b83f83ad65c87161c04f737b087279ba91",
+          "git_blob_sha": "46b48c73b57a638caee0ff76e2f47c6684999322"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "9f6ba82933e7561295677e5986d8013a9073153ed621c39bb24b5818183e0f34",
+          "git_blob_sha": "0e7d05eb6134a3b2cf6df130f7bc8d255eaec87a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/material_manifest.json",
+          "bytes": 14080,
+          "sha256": "e9a8fdb70f901e8d4d732e85b1e4607a05ddd12ee7c6877dd917b82daa6a7cb0",
+          "git_blob_sha": "c0fbd1726c24a4d5b9b0f304d97e785faf735334"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/materials/detail_diffuse_128.png",
+          "bytes": 42957,
+          "sha256": "a49c63c5a97318a3eb9b8455055ad1e67e4b9214f4ab4ea9be58dfed873cc391",
+          "git_blob_sha": "bf0e712bc2b753768eef1d27ad21f705d3a9a3c9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/materials/detail_diffuse_256.png",
+          "bytes": 154912,
+          "sha256": "070dd2526dc99fafecdb06b056103443c48c66176c9dafbd64b676841f0665e9",
+          "git_blob_sha": "edfe11883ff0e8dea4cf3b02d54c83552ddad1ad"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/materials/ground_diffuse_128.png",
+          "bytes": 42193,
+          "sha256": "59ff8d3bc8b7b9f1304bc37d7238d0d8e88fc901690474d4e2b7c39fefd9e2d6",
+          "git_blob_sha": "fa27b42aad108660f3ef1bfc1431673e42324105"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/materials/ground_diffuse_256.png",
+          "bytes": 160872,
+          "sha256": "0aa25044d50023c34fe3a0d7fac4494f485ecaff19f9b5f1b8ec5ce212d5552e",
+          "git_blob_sha": "f9cda9265ea342409915aa9313aa1f883a23d5e7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/materials/ground_repeat_diffuse_128.png",
+          "bytes": 47448,
+          "sha256": "c037bff38e64385b84b81f8592c9e0fb9a735eb7efc8e5ed822ad6348fb69907",
+          "git_blob_sha": "d69f2dd4b9c6243db8029b6e6701b222f77349e1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/materials/ground_repeat_diffuse_256.png",
+          "bytes": 182115,
+          "sha256": "96bf9626d6f82ab4a55fe2b014890664f6fb8a5bfdf7c24540e97f97d671d4aa",
+          "git_blob_sha": "c7dc2f54b9f275fde396bc162c8b98cc9569d64b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/materials/structure_diffuse_128.png",
+          "bytes": 38505,
+          "sha256": "47afec50c4d6c544549f31707feba3559e5e0498ae9cc720979d2fb5045d3874",
+          "git_blob_sha": "d452487271a137ddb4ed199dc016a7c922873237"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/materials/structure_diffuse_256.png",
+          "bytes": 139656,
+          "sha256": "11bdc1ed0ba4ccaa746c96b57e237ee0d17e7e2423a56732c1bf7773e3423536",
+          "git_blob_sha": "fbc185a21e0ee4b402f96112545ec2f43345d5ee"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/materials/wall_diffuse_128.png",
+          "bytes": 43319,
+          "sha256": "0e0d7b99f792521a40281b1640320de7406500c3a942e39514064dddc4cf78e6",
+          "git_blob_sha": "f596459095b76fc5ff51629098472f5ee2582ccf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/materials/wall_diffuse_256.png",
+          "bytes": 164755,
+          "sha256": "5ba7710cdef1d0032f189d7372829f9774ef17118d50440815dcdb080c1f83e6",
+          "git_blob_sha": "377acd4d77ded599335a2be64bccdf8185d7739e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/materials/wall_repeat_diffuse_128.png",
+          "bytes": 46387,
+          "sha256": "b24114705f7a9b8440172b0daf9f08dc56f0b82970c49fc4f32f29cf8be8dee8",
+          "git_blob_sha": "29b42c147a61a160c3949e448da288deea3783ba"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/materials/wall_repeat_diffuse_256.png",
+          "bytes": 176403,
+          "sha256": "3a06096b7bf53c594a63540fa42726175d40b01f677acad3376bc669c3961553",
+          "git_blob_sha": "b7df3ef6c56be757782c68e8839203993786ab4e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/prompts/material_atlas_prompt.txt",
+          "bytes": 1798,
+          "sha256": "e8902363f86e098ba63c7c4ccb33a9d01f715622fb571cbe4dc6dd5d47e7e6b6",
+          "git_blob_sha": "431f82eba9a4c989f35dccc874b60223a3a14617"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1895,
+          "sha256": "8269c2811c5049a15f81dbac0f47fa4bdc64e074187490b3777ff4575dee4aaa",
+          "git_blob_sha": "f22dfde6160c46f3a1a2018d8e8940995ef811a3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/fungus-wonderland/theme-manifest.json",
+          "bytes": 6903,
+          "sha256": "5f934bcf7f589a3d8212f203bda40219f06883b80e668885320f3c1ad8d722fa",
+          "git_blob_sha": "fa7b9377c4539dea39e3bc77f06ce823b0fd2bdd"
+        }
+      ]
+    }
+  ]
+}

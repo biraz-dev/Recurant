@@ -1,0 +1,20 @@
+{
+  "asset": "industrial_ladder_3m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        1.5,
+        -0.0
+      ],
+      "size": [
+        0.77,
+        3.0,
+        0.060622
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/industrial_ladder_3m__GUIDE.glb"
+}

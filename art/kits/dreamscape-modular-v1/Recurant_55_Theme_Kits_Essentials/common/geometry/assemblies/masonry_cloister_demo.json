@@ -1,0 +1,193 @@
+{
+  "id": "masonry_cloister_demo",
+  "description": "Open-front 3\u00d73 cell cloister with doorway, ashlar boundaries and ceremonial prop.",
+  "file": "assemblies/masonry_cloister_demo.glb",
+  "coordinate_system": "metres/Y-up/-Z-north",
+  "instances": [
+    {
+      "asset": "floor_inset_2m",
+      "position_m": [
+        -2,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_inset_2m",
+      "position_m": [
+        -2,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_inset_2m",
+      "position_m": [
+        -2,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_inset_2m",
+      "position_m": [
+        0,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_inset_2m",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_inset_2m",
+      "position_m": [
+        0,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_inset_2m",
+      "position_m": [
+        2,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_inset_2m",
+      "position_m": [
+        2,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_inset_2m",
+      "position_m": [
+        2,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "masonry_wall_ashlar",
+      "position_m": [
+        -2,
+        0,
+        3
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "masonry_wall_ashlar",
+      "position_m": [
+        2,
+        0,
+        3
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "masonry_doorway_pointed",
+      "position_m": [
+        0,
+        0,
+        3
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "masonry_wall_ashlar",
+      "position_m": [
+        -3,
+        0,
+        -2
+      ],
+      "rotation_y_radians": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "asset": "masonry_wall_ashlar",
+      "position_m": [
+        -3,
+        0,
+        0
+      ],
+      "rotation_y_radians": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "asset": "masonry_wall_ashlar",
+      "position_m": [
+        -3,
+        0,
+        2
+      ],
+      "rotation_y_radians": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "asset": "column_fluted",
+      "position_m": [
+        2.5,
+        0,
+        2.5
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "altar_block",
+      "position_m": [
+        1.9,
+        0,
+        1.8
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    }
+  ],
+  "bounds_m": {
+    "min": [
+      -3.08,
+      -0.2,
+      -3.0
+    ],
+    "max": [
+      3.0,
+      4.0,
+      3.14
+    ]
+  },
+  "notes": [
+    "Demonstrates visual assembly only. Collision/world navigation must be adapted through the current game grid pipeline."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "asset": "shelf_fungus",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.395,
+        0.0
+      ],
+      "size": [
+        1.0,
+        0.79,
+        1.0
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/shelf_fungus__GUIDE.glb"
+}

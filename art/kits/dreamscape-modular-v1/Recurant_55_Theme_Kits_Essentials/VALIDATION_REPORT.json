@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checks": {
+    "assertions": 8430,
+    "glb_files": 204,
+    "runtime_pngs": 216,
+    "low_memory_pngs": 216,
+    "themes": 54,
+    "onebit_binary_images": 9
+  },
+  "errors": [],
+  "asset_only": true,
+  "runtime_tests": "not run",
+  "seamless_certification": false,
+  "visual_review": "See QA_VISUAL_REVIEW.md; image existence is not a visual pass."
+}

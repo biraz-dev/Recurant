@@ -1,0 +1,13 @@
+{
+  "note": "Available original generated source studies. Earlier drafts may be retained; reference_native_320x240.png is the selected art-direction reference. These are not game renders.",
+  "sources": [
+    {
+      "path": "source-studies/source-01.png",
+      "sha256": "a956274d43b53e7ce684d95d03872fb37bef1c828d25b278dfe3b9cf1a5e59d7",
+      "dimensions": [
+        1448,
+        1086
+      ]
+    }
+  ]
+}

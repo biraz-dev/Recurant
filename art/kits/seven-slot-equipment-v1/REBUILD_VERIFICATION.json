@@ -1,0 +1,143 @@
+{
+  "status": "pass",
+  "pillow_version": "12.3.0",
+  "pngs_checked": 26,
+  "all_approved_png_bytes_unchanged": true,
+  "rebuild_in_isolated_copy": "pass",
+  "bundled_source_only": true,
+  "layout_and_qa_match_corrected_recipe": true,
+  "silhouette_crop": "full alpha > 0 bounding box",
+  "silhouette_resize": "BOX to 54x124; nearest enlargement only",
+  "files": [
+    {
+      "path": "assets/label-amulet.png",
+      "sha256": "cb3beebffe9feedd0b0c98a291d4e670da8d52c384122a067e175b38236ea32d",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/label-body.png",
+      "sha256": "626aecd4f572540dbd5ff7a46253c7c1ca11cc64864161d37bb9a8369f49cb68",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/label-head.png",
+      "sha256": "4ca7079dfb7da7348c6445f499aadf739e071eb0131c8934cc0e013b1159d5ba",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/label-left_hand.png",
+      "sha256": "857c8c2a716fd90bb8f652b8a9883fde276368db3d1a505ef821f5aad05295db",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/label-right_hand.png",
+      "sha256": "8bad2164186d6ac9be0670e1f670d70003291f6fda9105b8ca3481928f0a1ad5",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/label-ring_1.png",
+      "sha256": "f80eb212598cb932c2c7ae0de57759c6fe2d209989a76f23730345da48f4dff4",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/label-ring_2.png",
+      "sha256": "379479b156530e94386bc2e662e9d68cee1b78228fce848dbc6005c0d5aceb01",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/panel-320x240.png",
+      "sha256": "9e194b70b4a1e4fc83227f4a719a770b6619ece81511919c8c27fa3cb27cf2b5",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/silhouette-54x124.png",
+      "sha256": "70433cde00668faff6d73b3b0526717cf28dbb48cfb4ae77bafa34e35773127d",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/slot-20x20-compat.png",
+      "sha256": "0c38c28ce5228155d2342957310e43cb51894977363393d09c4234ffa0584990",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/slot-amulet.png",
+      "sha256": "48e545ecaf2e5fda23ffc24d9036f769bf7317536cad9543e6229fbaf722a0b1",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/slot-body.png",
+      "sha256": "a06bdf125e1a07a53fb52d9e513ccaf8220ac6893c0b68adda5cc857576affff",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/slot-head.png",
+      "sha256": "4b3c27cbcd77037fa0ff2c3c6b79063c4efdd4676293c101860e589bcb7b0d5c",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/slot-left_hand.png",
+      "sha256": "8d083986acfc317c44df4aa750e63495c60460508bd2ea5c75bfe8f5ac2bc750",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/slot-right_hand.png",
+      "sha256": "a255d8c7c194942eb0411a901a246c649ac6a42f0ccd8fd10f6ae6f02098d503",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/slot-ring_1.png",
+      "sha256": "6bfff96a55a5fedbdbd1bdff94d104cf587cc266d9a062bfb2e03a31707adf1a",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/slot-ring_2.png",
+      "sha256": "18e071a3e558375df496b96474eb6e38a54d1e61fb67041f375bd9d220d1db69",
+      "byte_identical": true
+    },
+    {
+      "path": "assets/title-equipment.png",
+      "sha256": "c5e8517443ae190590599a3fa2911219933637db6a558540863b3d9edc35a0ab",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/equipment-320x240.png",
+      "sha256": "c687ddef894e11d628d3ddf4897cc0622e01bd4850350ba851892054938e8831",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/equipment-preview-4x.png",
+      "sha256": "95101b7c2861ef65e9dbe2b9c6a1d68094ffab8f03d34de1758c0f904a63c62c",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/silhouette-alpha-4x.png",
+      "sha256": "61599bff279881b3eeedb31f8fa1a61d02feb67656a8c240bef0ec4cd54adb32",
+      "byte_identical": true
+    },
+    {
+      "path": "source/equipment-generated.png",
+      "sha256": "3ad341516a6b5238a20244c7ad489c4db41daec214e9ff05bb0dc8efb3b6a81a",
+      "byte_identical": true
+    },
+    {
+      "path": "source/equipment-pixel-refined.png",
+      "sha256": "5ac42448c5531bdf501aa7cdeb56a7efec94c2a2125e9447e21b87c2fd6ee2dc",
+      "byte_identical": true
+    },
+    {
+      "path": "source/panel-generated.png",
+      "sha256": "e47a69191f6039822540bed9bd0ff0f42b35ce0dcd8a698f26e487044b3e8c26",
+      "byte_identical": true
+    },
+    {
+      "path": "source/silhouette-clean-generated.png",
+      "sha256": "4e31c170ce95b51d1d6e2b50428f53a64a7941ad96818473aca4afc3e861bb47",
+      "byte_identical": true
+    },
+    {
+      "path": "source/silhouette-generated.png",
+      "sha256": "770cc53041ae8a37780db36a7cf0d598dd885d9dc521e5beb3297e3df8fda38f",
+      "byte_identical": true
+    }
+  ]
+}

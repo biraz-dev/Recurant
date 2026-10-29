@@ -1,0 +1,55 @@
+{
+  "asset": "machine_doorframe",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.85,
+        2,
+        0
+      ],
+      "size": [
+        0.3,
+        4,
+        0.35
+      ]
+    },
+    {
+      "center": [
+        0.85,
+        2,
+        0
+      ],
+      "size": [
+        0.3,
+        4,
+        0.35
+      ]
+    },
+    {
+      "center": [
+        0,
+        3.45,
+        0
+      ],
+      "size": [
+        1.4,
+        1.1,
+        0.35
+      ]
+    }
+  ],
+  "clear_openings": [
+    {
+      "width_m": 1.4,
+      "height_m": 2.9,
+      "through_axis": "Z",
+      "center": [
+        0,
+        1.45,
+        0
+      ]
+    }
+  ],
+  "preview_glb": "collision-guides/machine_doorframe__GUIDE.glb"
+}

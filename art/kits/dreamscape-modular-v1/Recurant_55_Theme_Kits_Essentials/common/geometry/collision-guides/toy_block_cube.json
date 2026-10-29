@@ -1,0 +1,20 @@
+{
+  "asset": "toy_block_cube",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.5,
+        0.0
+      ],
+      "size": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/toy_block_cube__GUIDE.glb"
+}

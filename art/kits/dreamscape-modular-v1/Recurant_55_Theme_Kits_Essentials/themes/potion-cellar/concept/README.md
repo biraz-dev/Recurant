@@ -1,0 +1,1 @@
+This is the original palette/composition concept reference, NOT a render of the supplied geometry. The actual GLB inspection views are in assembly/. The modular gallery is deliberately smaller and simpler than this art-direction scene.

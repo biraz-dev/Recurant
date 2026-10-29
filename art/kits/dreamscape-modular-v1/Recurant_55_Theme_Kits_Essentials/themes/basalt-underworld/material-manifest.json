@@ -1,0 +1,206 @@
+{
+  "schema": "recurant.material-kit.v1",
+  "theme": "basalt-underworld",
+  "generator": "builtin image_gen",
+  "source_atlas": "art_sources/material-atlas-master.png",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "prompt": "prompts/material-atlas.txt",
+  "derived_processing": "Quadrant crops, optionally restricted to whole masonry courses (see source_crop_px), and nearest-neighbour resizing only. No synthesized PBR maps or procedural seam repair.",
+  "lighting_note": "Diffuse stylized painted surface shading is baked; do not infer physical PBR maps.",
+  "qa_contacts": [
+    "qa/material-contact.png",
+    "qa/wall-ground-repeat-2x2.png"
+  ],
+  "qa_status": "Visual QA complete. See per-role notes; no claim of pixel-perfect seamlessness.",
+  "materials": [
+    {
+      "role": "wall",
+      "file_256": "materials/wall_diffuse_256.png",
+      "file_128": "materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "massive blue-black basalt ashlar in rectangular staggered courses, fine chipped stone grain, dark quiet joints",
+      "repeat_intent": true,
+      "repeat_verified": true,
+      "wrap_recommendation": "REPEAT",
+      "uv_recommendation": "2 metres per repeat candidate",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 17.977,
+        "top_bottom_mae": 35.241,
+        "horizontal_internal_mae": 11.37,
+        "vertical_internal_mae": 12.938
+      },
+      "source_crop_px": [
+        0,
+        0,
+        627,
+        581
+      ],
+      "sha256": "405dde92fd94c3f9d427004ac7d4638b4b4f11dde0a1a8afc06f85f35215471a",
+      "repeat_quality": "Practical visually reviewed repeat; not pixel-edge-identical",
+      "qa_note": "Whole-course crop removes partial bottom row. 2x2 repeat accepted with irregular stone widths and low-contrast texture.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "ground",
+      "file_256": "materials/ground_diffuse_256.png",
+      "file_128": "materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "large charcoal slate paving squares with subtle cool blue roughness, small edge chips, strict orthogonal top-down pattern",
+      "repeat_intent": true,
+      "repeat_verified": true,
+      "wrap_recommendation": "REPEAT",
+      "uv_recommendation": "2 metres per repeat candidate",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 7.798,
+        "top_bottom_mae": 16.086,
+        "horizontal_internal_mae": 14.475,
+        "vertical_internal_mae": 14.436
+      },
+      "source_crop_px": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "47f294c17e3160e23a7916884c0b33d5f5d13fe8e6ead4153ca8584c3c722b0f",
+      "repeat_quality": "Practical visually reviewed repeat; not pixel-edge-identical",
+      "qa_note": "Complete 4x4 slate tile grid. 2x2 repeat accepted; rough stone shading is painted diffuse, not a real height map.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "structure",
+      "file_256": "materials/structure_diffuse_256.png",
+      "file_128": "materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "dark volcanic basalt mineral surface with elongated crystalline grain and thin subdued pewter veins, flat material only",
+      "repeat_intent": false,
+      "repeat_verified": false,
+      "wrap_recommendation": "CLAMP",
+      "uv_recommendation": "Local component UV0 0\u20131",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 18.974,
+        "top_bottom_mae": 23.674,
+        "horizontal_internal_mae": 16.823,
+        "vertical_internal_mae": 14.923
+      },
+      "source_crop_px": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "d38d895a6765acc3b186a6f19b59a3cafeaf5ad03b3be1bf87e75f310fa7d967",
+      "repeat_quality": "Intentional nonrepeat component material / decorative panel",
+      "qa_note": "Flat surface accepted; map once per component UV0 0\u20131, not across room-scale repeats.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "detail",
+      "file_256": "materials/detail_diffuse_256.png",
+      "file_128": "materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "square dark basalt relief panel with a restrained labyrinthine abstract geometric knot in worn pale green-gray mineral inlay, nonrepeat no text",
+      "repeat_intent": false,
+      "repeat_verified": false,
+      "wrap_recommendation": "CLAMP",
+      "uv_recommendation": "Local component UV0 0\u20131",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 5.223,
+        "top_bottom_mae": 37.096,
+        "horizontal_internal_mae": 22.76,
+        "vertical_internal_mae": 22.164
+      },
+      "source_crop_px": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "1cbc05b604bcfde2c0b0fd375bab5eb1df9cb225a508b56672d7d96c53c114d3",
+      "repeat_quality": "Intentional nonrepeat component material / decorative panel",
+      "qa_note": "Flat surface accepted; map once per component UV0 0\u20131, not across room-scale repeats.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    }
+  ],
+  "material_type": "Opaque painted diffuse/base color only",
+  "recommended_sampler": {
+    "magnification": "NEAREST / POINT",
+    "minification": "NEAREST or nearest-mipmap-nearest; test fine textile weave at distance",
+    "color_management": "Interpret PNG as sRGB and convert to linear only inside renderer",
+    "compression": "Prefer lossless/uncompressed for pixel fidelity",
+    "alpha_mode": "OPAQUE"
+  },
+  "provenance": {
+    "mode": "builtin image_gen",
+    "primary_prompt": "prompts/material-atlas.txt",
+    "art_sources": [
+      "art_sources/material-atlas-master.png"
+    ],
+    "no_manual_pixel_painting": true,
+    "processing": "Crop and nearest-neighbor resize only; visual QA contact assembly is not production image editing."
+  },
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

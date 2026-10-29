@@ -1,0 +1,20 @@
+{
+  "asset": "cliff_face_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.199744,
+        2.3,
+        0.148187
+      ],
+      "size": [
+        2.452444,
+        4.6,
+        1.385739
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/cliff_face_2m__GUIDE.glb"
+}

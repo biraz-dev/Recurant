@@ -1,0 +1,144 @@
+{
+  "id": "potion-cellar",
+  "title": "Potion Cellar",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 20,
+  "archives": [
+    {
+      "id": "potion-cellar-001",
+      "bytes": 1779743,
+      "sha256": "d2b2eb6fe1f8b2dfcd6bb2d5edf9f77922c91be9d731ba9e88ef71e62a4be1a9",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/potion-cellar.volume-001.zip",
+          "bytes": 1779743,
+          "sha256": "d2b2eb6fe1f8b2dfcd6bb2d5edf9f77922c91be9d731ba9e88ef71e62a4be1a9",
+          "git_blob_sha": "b669026de4c4e2555b78762b7b8ba0bb9ec070c4"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/CLAUDE_README.md",
+          "bytes": 7825,
+          "sha256": "e2fad53981d0bc901775fb8d7c57a793b435e792d0a89249e36488c43e1f51e9",
+          "git_blob_sha": "fcecc900c913327927b1b3b19c59e5b2aa031b49"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "0b004b286fd2a0973027d1251cea958970ee4c9d55362929f16f34d9e13e026e",
+          "git_blob_sha": "01fd20a6809eb377d6cb14a9fe7394cde5a81b98"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/assembly/collision-navigation.json",
+          "bytes": 10343,
+          "sha256": "bfb4f52f5323c6ec7b5e9b46e1e52c5abfed35dc161ca4bf9919d78c12d6b5cb",
+          "git_blob_sha": "8596a05679992d4c5f1deac68e1b041e4fb28cf9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/assembly/layout.json",
+          "bytes": 13435,
+          "sha256": "1399279c50e21e5ae8b6c80adc3a91cc60e880aba52b9d42a9da1dec5e0aa962",
+          "git_blob_sha": "7399847e702ccd9e78a4305625e3bcb10151d7a4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/assembly/native_320x240.png",
+          "bytes": 136921,
+          "sha256": "588b40c67416d7858866a03fc7fb5768ca97befcd62383a7d15f49e1dc6fc302",
+          "git_blob_sha": "654116eafca34c717ab05dc7a631a54d5233a0e5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/assembly/showcase.glb",
+          "bytes": 956876,
+          "sha256": "3c6bff91cd854e0bf4da4d5806802853f6d79c4108f400eb3eb7a8ee4dc56297",
+          "git_blob_sha": "13d8397666f4ce80f738cadf111c4e322f585345"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/concept/reference_native_320x240.png",
+          "bytes": 156091,
+          "sha256": "45f559840190443e704a32de72549a7b5d7f5f66d5deb7fb32767e4aa3bd9848",
+          "git_blob_sha": "1dfed4d03d407c74d829b15f7482f40591acec60"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "91d9162899747291c0de3569f2117fdd7def83397f75733aa33f3f24fecd1b22",
+          "git_blob_sha": "c73b7349b9dc55f65147c071a69784fbd40903f3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/material-manifest.json",
+          "bytes": 7239,
+          "sha256": "6ac6c64c612f13a2b37d1d0e8a2825422b99f93d2b4045da566e11bc0809790b",
+          "git_blob_sha": "28c204635594a5aadde21373463b8f75b8b420af"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/materials/detail_diffuse_128.png",
+          "bytes": 43134,
+          "sha256": "cc15a79744196c612cca88f031b9674b8daebd57b3a953afac6754762c1a5cb2",
+          "git_blob_sha": "4b4e28dd1f965c16ca545298dcddf4d572b19493"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/materials/detail_diffuse_256.png",
+          "bytes": 162026,
+          "sha256": "c5c44efa0ac2a0131a30a59cab7977ded913807ab34e6950df74667cbdd26fb4",
+          "git_blob_sha": "ede3d4f3559a14b2b85cc77503a5e349b5bc6e3f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/materials/ground_diffuse_128.png",
+          "bytes": 40568,
+          "sha256": "3f5f21c6065cfdb5bfabeb4e31ba6f9cc19fa3bc9e591ae425b890243016aaeb",
+          "git_blob_sha": "941158e338c3d03e81a272fab58013905a15fa14"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/materials/ground_diffuse_256.png",
+          "bytes": 156351,
+          "sha256": "0691e28b0ad84fcac88c417c77a6ad1143285d8536053e878e5e8b6b31481d01",
+          "git_blob_sha": "638f9b3f9a8dc4ae0b7ebec83459801dacf57124"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/materials/structure_diffuse_128.png",
+          "bytes": 38183,
+          "sha256": "932e4589e97ef4220d668db5ce47bc35f6925cd2d67583f7e5f4c592e5d85958",
+          "git_blob_sha": "1b0519425b58f3a535cd72d09347d6b090373194"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/materials/structure_diffuse_256.png",
+          "bytes": 145528,
+          "sha256": "496f9a08d34b0982a29af532efb41dae80043545fd10c871ca2c92e86f6e7562",
+          "git_blob_sha": "c9ae3a6f67124c0031c649f76d3f8c83e3e440f5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/materials/wall_diffuse_128.png",
+          "bytes": 42053,
+          "sha256": "f6b262838cdfd9ec97423662458723387bb98087955562ca7a57fd84fe0c1884",
+          "git_blob_sha": "2529000d29a9765c14f4fe0e7a32fae7155171f4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/materials/wall_diffuse_256.png",
+          "bytes": 161524,
+          "sha256": "1ba6a3a08fa823d984657802aef618cf299295178c62559042197f06717dadb9",
+          "git_blob_sha": "703b788c7f5a8418ff480ea10acb9679a79124ec"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/prompts/material-atlas.txt",
+          "bytes": 2830,
+          "sha256": "974a08ce733e393793bab0aef2dc3a97277768bfa5e0728b8d099e9af5fe3c9d",
+          "git_blob_sha": "9b56ba5a449d05cfc0e0214077d19e67d81cb7d1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/potion-cellar/theme-manifest.json",
+          "bytes": 7092,
+          "sha256": "dccb5e57dadd2c2c3ce49335b983c5d6fbf055dc3ae1545ff033bb01770ad9b3",
+          "git_blob_sha": "a9b07359eb4a00bffb8d5ba90428a191f31b3d64"
+        }
+      ]
+    }
+  ]
+}

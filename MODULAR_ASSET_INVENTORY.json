@@ -1,0 +1,998 @@
+{
+  "schema_version": 1,
+  "packaging": "Independent ZIP volumes. Source-art volumes and oversized single-file volumes use explicitly ordered binary .partNNN segments. The helper validates all part/ZIP/member hashes and safely extracts; no artwork is altered.",
+  "groups": [
+    {
+      "id": "dreamscape-common",
+      "title": "Shared geometry, authoring sources and root documentation",
+      "requires": [],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/dreamscape-common.json",
+        "bytes": 170642,
+        "sha256": "096743bdf99b3cc56ddd797dcfe268fe88c8b92c352c524be85e6fe96a603c24",
+        "git_blob_sha": "87d5f19178879a7bc787d12211de077920b390d5"
+      },
+      "files": 496,
+      "volumes": 4,
+      "parts": 4
+    },
+    {
+      "id": "alabaster-temple",
+      "title": "Alabaster Temple",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/alabaster-temple.json",
+        "bytes": 7903,
+        "sha256": "c0571ae2d64b84d4665db0236eb6f064b4c177242741126b36135bf616161f94",
+        "git_blob_sha": "f1b13e37d2dbf46a30072543a658ddb8a7c8222a"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "ancient-forest",
+      "title": "Ancient Forest",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/ancient-forest.json",
+        "bytes": 8181,
+        "sha256": "39a38db45cac9a65b9ab6d1945d873e8f7047fb55616d1507997d49e33e0369f",
+        "git_blob_sha": "7ad81ae2b02cc39d01be794168c86f07b545eec7"
+      },
+      "files": 22,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "aquatic-living-laboratory",
+      "title": "Aquatic Living Laboratory",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/aquatic-living-laboratory.json",
+        "bytes": 8125,
+        "sha256": "3d6bd233640cfd2000cddc6c77d22a572766974768c637de0833dd73248b9a56",
+        "git_blob_sha": "60325e93ac8ce9ee1afd5b477e3babde14bc4454"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "arcane-factory",
+      "title": "Arcane Factory",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/arcane-factory.json",
+        "bytes": 7850,
+        "sha256": "c7f39450463d99231d895d5652ac296a8a12f009ee490e88d302563001ffb4c2",
+        "git_blob_sha": "149b6edaf5286d226d21c45f8e29f53f70b8e299"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "armory",
+      "title": "Armory",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/armory.json",
+        "bytes": 7986,
+        "sha256": "a7408b34831ef03ad378364580e9dc73c43bfc3b1fc22f0bcfbbb4305a849228",
+        "git_blob_sha": "6d51b310fbed9a24ac1a83e5d56f19d24ea16749"
+      },
+      "files": 22,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "astral-sanctuary",
+      "title": "Astral Sanctuary",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/astral-sanctuary.json",
+        "bytes": 7566,
+        "sha256": "756bd90f57aef52e0d38cc7a1568142fdc6795559a695c07e96311f7877e49ef",
+        "git_blob_sha": "9cb1e084cf5f8769a2818ec2acfbef92dea131bd"
+      },
+      "files": 20,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "basalt-underworld",
+      "title": "Basalt Underworld",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/basalt-underworld.json",
+        "bytes": 7590,
+        "sha256": "2041913481130acd678a5c43bf2534480bce1d00ff15615c55bed3100a6f3240",
+        "git_blob_sha": "8937f88a1fb7cf98f466d55047512e837a3e25a1"
+      },
+      "files": 20,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "blackwater-swamp",
+      "title": "Blackwater Swamp",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/blackwater-swamp.json",
+        "bytes": 8231,
+        "sha256": "f08928376142de0feb330b435561c4ed43fb0a50198a5a2e09e852c41da33ab4",
+        "git_blob_sha": "4f962fa28decf9a2c7e25f5f701692732b015f28"
+      },
+      "files": 22,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "bone-cavern",
+      "title": "Bone Cavern",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/bone-cavern.json",
+        "bytes": 9195,
+        "sha256": "458583ea88dc3b2135f10ec6e39536f073947f2ee80d67745bbee8b75b07e0b7",
+        "git_blob_sha": "df2f5c9f39a9ef5ea91873f0768c9c1c7498cedf"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "clockwork",
+      "title": "Clockwork",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/clockwork.json",
+        "bytes": 7725,
+        "sha256": "c2b0368780393594d5b8387477d303c1482432efc392937bbf2e054fd4764155",
+        "git_blob_sha": "b130bafc525272e0392a0c0f44f0b23f9568bb35"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "colossal-canopy",
+      "title": "Colossal Canopy",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/colossal-canopy.json",
+        "bytes": 9311,
+        "sha256": "12e453c91c3ca8d73e795665cba93be0d3ce722827bab3ad6d748e912409ef16",
+        "git_blob_sha": "be1ebdf16d20830978d27a66511d031205ca0721"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "crescent-iron-warship",
+      "title": "Crescent Iron Warship",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/crescent-iron-warship.json",
+        "bytes": 8374,
+        "sha256": "2ce30aa3a01acd0dd04477a96d95fdd5c11533cf4cedcee89ccb949c9620af42",
+        "git_blob_sha": "80c293db30f6c4d000fee7e7ace566ee973c0b16"
+      },
+      "files": 22,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "crypt-catacombs",
+      "title": "Crypt Catacombs",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/crypt-catacombs.json",
+        "bytes": 7878,
+        "sha256": "7d1340b83049a72013c3a2e9e1ac3bbde1d2f445f352f8e43f92961397d07bde",
+        "git_blob_sha": "f6d309a4406ca97781c3f600657ddb295d2cbfd5"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "crystal-hallway",
+      "title": "Crystal Hallway",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/crystal-hallway.json",
+        "bytes": 7875,
+        "sha256": "df03d0afb1a7b76a7fab104e05dbd3f138a1587ed1c157a42512a04467e7e55d",
+        "git_blob_sha": "6b3fb08bcdbec6ea00198c9a19b8064e57f7528f"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "crystalline-machine-sanctuary",
+      "title": "Crystalline Machine Sanctuary",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/crystalline-machine-sanctuary.json",
+        "bytes": 8225,
+        "sha256": "ca2e1bbc1a2ec1eee328dd00c3d4605839d8e06980963e9811a5127c0f67c9bf",
+        "git_blob_sha": "61dbaf0887d04f059683be1719aa945dbae8b965"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "desert-life-sanctuary",
+      "title": "Desert Life Sanctuary",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/desert-life-sanctuary.json",
+        "bytes": 9486,
+        "sha256": "9409cd8ab0b4859a7dd301b920f28851170af8137676e15b30c931bb05f908b9",
+        "git_blob_sha": "d8754cbf677827b29513b6dbd1ad61f390314705"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "dingy-cellar",
+      "title": "Dingy Cellar",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/dingy-cellar.json",
+        "bytes": 7803,
+        "sha256": "6dbc0c6a8155269546aba077ae8e9bab0cb360626dbcc3087b783ae7e9f04c32",
+        "git_blob_sha": "267d7dc551e7ebc67f3c9d1d112cd9bc49c63b15"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "dream-city-alleys",
+      "title": "Dream City Alleys",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/dream-city-alleys.json",
+        "bytes": 7928,
+        "sha256": "71447ef9eb2fe097a4294727c4a7aeb6bdc95bc6e07471b35008488ee497e5bf",
+        "git_blob_sha": "a27dc93f211ea73a865e6d704c24afefca600a6e"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "eerie-frontier-wilderness",
+      "title": "Eerie Frontier Wilderness",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/eerie-frontier-wilderness.json",
+        "bytes": 9600,
+        "sha256": "9f415c23719a25a1452fb70c96053711d5269602adae62e9a7c8f4ec7f22e1ea",
+        "git_blob_sha": "a1d4bf8e26cd7205b1fb8f509755a8dc0278231e"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "elemental-mountain-refuge",
+      "title": "Elemental Mountain Refuge",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/elemental-mountain-refuge.json",
+        "bytes": 9601,
+        "sha256": "d3877fada0edf5185ecb18fd30da715032a05249633141b036b71e7d1c75039a",
+        "git_blob_sha": "182621c160644ef84ed01e14c274f310b3cd5d98"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "embroidered-world",
+      "title": "Embroidered World",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/embroidered-world.json",
+        "bytes": 7929,
+        "sha256": "03472ba9feb6b46b285f4761a5e4c133838dd6a5d8a83a2c31969661320bacd2",
+        "git_blob_sha": "3f425215c406f8b3e1cb8dfe378a990ef76c4697"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "enchanted-forest",
+      "title": "Enchanted Forest",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/enchanted-forest.json",
+        "bytes": 9341,
+        "sha256": "c478b35af5c1d7ab290f69c4feb8c81a39580c7a88609cdc5c63c6db0c00bdb8",
+        "git_blob_sha": "5520e8ff52a6e7eb44389337498f4a6ede004453"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "forge",
+      "title": "Forge",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/forge.json",
+        "bytes": 7625,
+        "sha256": "58b9f58d253926826274429a12669a46d415fddce8762174ff356dc54d70962a",
+        "git_blob_sha": "2e9e64a3377c2ec0674b51ad4ef8280ce8fc4273"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "foundry",
+      "title": "Foundry",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/foundry.json",
+        "bytes": 7675,
+        "sha256": "fb49ec8acbe98fd89418efe155d62fc2739e8f18a58bda52805206b73a55240f",
+        "git_blob_sha": "d4eedb490b52abfb26ebb0b489717d1af84fbf3b"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "fungus-wonderland",
+      "title": "Fungus Wonderland",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/fungus-wonderland.json",
+        "bytes": 9369,
+        "sha256": "86980ac68c0df797de609c66180dbd149ca9441203d4df7ce457f1f1af25bd00",
+        "git_blob_sha": "c2419863bb6a4e91b6603d3f850cce773a98c0b3"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "genesis-garden",
+      "title": "Genesis Garden",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/genesis-garden.json",
+        "bytes": 8181,
+        "sha256": "31991dd720dd0847a5e8c84e6a18a0bce7a4ae626d6b7e0a07b2a6ba4d9a13e2",
+        "git_blob_sha": "3b324af0489561c20dd0319e106e0158acbdc99b"
+      },
+      "files": 22,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "golden-plains",
+      "title": "Golden Plains",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/golden-plains.json",
+        "bytes": 8154,
+        "sha256": "ba6b42d2522737676fae203865500b4d27ba5c6a56823590fc35ce0e4b9e36d6",
+        "git_blob_sha": "7a2a52ca20ca0086cabfa7a9fb0d25c76d78aca5"
+      },
+      "files": 22,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "gothic-night-castle",
+      "title": "Gothic Night Castle",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/gothic-night-castle.json",
+        "bytes": 7638,
+        "sha256": "3927c2ad87952693d7bb0ffd3b4a71d77fe339c77a82427500ba98259e53f5ea",
+        "git_blob_sha": "8f72a0ffe79666ca83d22c28d9f470fe22570c4f"
+      },
+      "files": 20,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "living-crystal-interior",
+      "title": "Living Crystal Interior",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/living-crystal-interior.json",
+        "bytes": 8426,
+        "sha256": "c3a7177e8278cef540074b196eeb58ac3e9b9618c9e702cb15f43384bf4ea4e8",
+        "git_blob_sha": "ec6e73dfb8dcdbeb506ac55e634ad7856dc925ce"
+      },
+      "files": 22,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "lost-toy-world",
+      "title": "Lost Toy World",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/lost-toy-world.json",
+        "bytes": 7518,
+        "sha256": "7c80826f92c03e86264e7ab72264a367b045af4dc615fc5d74e57b2ee3ef3178",
+        "git_blob_sha": "d1784a0907d2d691c1234a230b97a912d0fc00c8"
+      },
+      "files": 20,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "machine-city",
+      "title": "Machine City",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/machine-city.json",
+        "bytes": 8142,
+        "sha256": "d21e7b41d0b55ac258f143a2572c893413666d0ec2354501f3ae2625cd66d6f9",
+        "git_blob_sha": "96a84256b3a3c65888477747366126182b53b193"
+      },
+      "files": 22,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "mindglass-sanctum",
+      "title": "Mindglass Sanctum",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/mindglass-sanctum.json",
+        "bytes": 7590,
+        "sha256": "bcc20063f809786fff73c02d9c6b9461e12eaabbf8cf0c665e96ed8f8db0e991",
+        "git_blob_sha": "db28427f2b62b297ae8d4c4fc4e137a9dacf9052"
+      },
+      "files": 20,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "mythic-mural-cavern",
+      "title": "Mythic Mural Cavern",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/mythic-mural-cavern.json",
+        "bytes": 9427,
+        "sha256": "de15c4f72e1a420f57e40c8fce2a16cd4731d6ab33af37972560c9192a8afa34",
+        "git_blob_sha": "02999ef7ce007bad4fa015dfec0cf621eb455646"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "natural-caverns",
+      "title": "Natural Caverns",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/natural-caverns.json",
+        "bytes": 9311,
+        "sha256": "6ed32f2737d99d6b4d9ec8807612bc84825f1eef666f626ab3c44c1478dbad24",
+        "git_blob_sha": "1d1b832f0a949571d8037522c3b780cabc6f2a7f"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "onebit-spiritual-landscape",
+      "title": "One-Bit Spiritual Landscape",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/onebit-spiritual-landscape.json",
+        "bytes": 9519,
+        "sha256": "f21ba6e05ad86a81ea9a6749e9ad425b5d15000376b8afca56d6484bf1d72e52",
+        "git_blob_sha": "056cce3ae574c5a1280b46f59497c95cf5a6fdc9"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "organic-living",
+      "title": "Living Tissue Labyrinth",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/organic-living.json",
+        "bytes": 9291,
+        "sha256": "de81ae035ea06d9c2df04f82017d7b41a10a5e9bbdfdfcfd9bf01ee8e405d6c9",
+        "git_blob_sha": "0f7dca8af32268fb44027076d23dd42e7e26b676"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "palace-hallways",
+      "title": "Palace Hallways",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/palace-hallways.json",
+        "bytes": 7542,
+        "sha256": "5ea7724d5700c84f82445cd7d2d2210c43efe95df6663213228a15a0dd04b4c0",
+        "git_blob_sha": "68e4da2316807e82196bb27770864e8006dcbd9e"
+      },
+      "files": 20,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "perfected-metal-sanctuary",
+      "title": "Perfected Metal Sanctuary",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/perfected-metal-sanctuary.json",
+        "bytes": 8125,
+        "sha256": "7c5434a13a3ad86c97d1dc2263c326240cdd2865af5f1bc989be930477b90725",
+        "git_blob_sha": "eeac6562d79b9854a4f8f0e2e074621e98177c0d"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "potion-cellar",
+      "title": "Potion Cellar",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/potion-cellar.json",
+        "bytes": 7494,
+        "sha256": "694cb10b094485ac5e4dcabfabebbc47768049b4cd60d7e9c977c48c9f6971ed",
+        "git_blob_sha": "6b5f3304aea458118926a72a863c5e41b228c270"
+      },
+      "files": 20,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "rainforest-river",
+      "title": "Rainforest River",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/rainforest-river.json",
+        "bytes": 9339,
+        "sha256": "b6d3a6d51e1a303f49aeb894e6862687b8b477eb06d03081dd5bf7c5b5ad62df",
+        "git_blob_sha": "6624730b77e330329d3c3324997f77d42ec4c2b2"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "reclaimed-wild-city",
+      "title": "Reclaimed Wild City",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/reclaimed-wild-city.json",
+        "bytes": 9427,
+        "sha256": "397793e2819637e1eb1b7c3c4eaac826c66493e20e2b4b83bc65221aea39d2c0",
+        "git_blob_sha": "eefbf7bfa4bed5f84ba4a8002c4d80565525d10a"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "redrock-mountain",
+      "title": "Redrock Mountain",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/redrock-mountain.json",
+        "bytes": 8233,
+        "sha256": "52a34ff5960327559f7fa8342824f857b6c735bc775113ac1df3bfdc50e8a63d",
+        "git_blob_sha": "704bd4e8d80225e84d73e831fb88973a48180a12"
+      },
+      "files": 22,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "rootbound-undercity",
+      "title": "Rootbound Undercity",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/rootbound-undercity.json",
+        "bytes": 9427,
+        "sha256": "47dd6d29e82cfef5a95bdfc3781e72735e88c0db4db028c81ffb0391fa62bb60",
+        "git_blob_sha": "37c0e4c90d5cb201ccdce6702fe46a2ecb0f8058"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "sandstone-ruins-existing",
+      "title": "Existing Sandstone Ruins",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/sandstone-ruins-existing.json",
+        "bytes": 1421,
+        "sha256": "9f025e969bf1fcd620c82a0a742060899bed11896c5e22f49b7f52e6b0e0f113",
+        "git_blob_sha": "3be96e2050ca67707b033f41b5ab2cb58e4be1b8"
+      },
+      "files": 2,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "smith-workshop",
+      "title": "Smith Workshop",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/smith-workshop.json",
+        "bytes": 7850,
+        "sha256": "0137cb89f52159ed549e14de1fa9f051d89dfcb5a46df851642aca98a4b14dc3",
+        "git_blob_sha": "e3c1cd7e003bd199b3fa363cf8cd14a282800905"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "storm-inventor-workshop",
+      "title": "Storm Inventor Workshop",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/storm-inventor-workshop.json",
+        "bytes": 8075,
+        "sha256": "28946d36e43d2a0034ea21d0b4676e5b2f39718e8444575f6cd2acafe8a2fe2a",
+        "git_blob_sha": "6ce25ed3d2b64b58469f719af5cc0976e65bbf86"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "subterranean-elven-realm",
+      "title": "Subterranean Elven Realm",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/subterranean-elven-realm.json",
+        "bytes": 7758,
+        "sha256": "147ca4e2d4efff18d8666ddac6a06a784751c875f5e1769906a2b5e66b24236a",
+        "git_blob_sha": "79def2b2471f16f2342f6709d7cf55be976b3251"
+      },
+      "files": 20,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "sunflower-sanctuary",
+      "title": "Sunflower Sanctuary",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/sunflower-sanctuary.json",
+        "bytes": 9426,
+        "sha256": "205d8b3633b7f670f3e0b712112dc514da155a5c303c7b0712ba9ee31540b7aa",
+        "git_blob_sha": "94d12ed8320dad17dbca03dd76ee6e5b9e98b420"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "tatami-house",
+      "title": "Tatami House",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/tatami-house.json",
+        "bytes": 7470,
+        "sha256": "2d85a0f7a3a612fb5507389b7d012480b195b34a4b0eeb0ffa613fc1670e9335",
+        "git_blob_sha": "21213f336cf1d2a722fc85bb7f560a7295078fe5"
+      },
+      "files": 20,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "tavern-inn",
+      "title": "Tavern Inn",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/tavern-inn.json",
+        "bytes": 7422,
+        "sha256": "a9ad294ead92ba56b85a2e27f771aedd946464bb0279d05d2e64b8aef975584f",
+        "git_blob_sha": "904946be364d837797cb216bd1b13ab672c9b8a7"
+      },
+      "files": 20,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "tidal-island",
+      "title": "Tidal Island",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/tidal-island.json",
+        "bytes": 8129,
+        "sha256": "ac9323bbbb834912acc123b91fbb4145406722f8172b4a2e5ccf7cddbe0b1120",
+        "git_blob_sha": "18b7cebdda7751143b2ea4a793c0336fd9c1e829"
+      },
+      "files": 22,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "toxic-forest",
+      "title": "Toxic Forest",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/toxic-forest.json",
+        "bytes": 9224,
+        "sha256": "f607c81614a514b6982e32a95f9b0a5b9a10357870aa4d1233db8e0a4a028d00",
+        "git_blob_sha": "c606d1fcc8c2819c437bb4584bfe03dd5457ba8f"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "transforming-machine-interior",
+      "title": "Transforming Machine Interior",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/transforming-machine-interior.json",
+        "bytes": 8225,
+        "sha256": "1f11d00a85ac90bb2f1759e4a28ca7b53f961f7b19b16c5aab7fa0a98f728b1f",
+        "git_blob_sha": "d053d9303a197a711cbf22dc1b02886d626e7561"
+      },
+      "files": 21,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "volcanic-wildlands",
+      "title": "Volcanic Wildlands",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/volcanic-wildlands.json",
+        "bytes": 9398,
+        "sha256": "31d5f491478aa35ac616243d859174cc912eb260b0eddff029c2d6b0b933ffff",
+        "git_blob_sha": "5cefa5299af4bd8dd5f942dc8dc4300fb1960bc2"
+      },
+      "files": 25,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "wild-savanna",
+      "title": "Wild Savanna",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/wild-savanna.json",
+        "bytes": 8128,
+        "sha256": "46853192eaaad57b2d4db6009d3092eb41ba2fb9bb0049af229a03083651d5c1",
+        "git_blob_sha": "c6e419f8cec7a18ce39b17c421bc19c43814e1fe"
+      },
+      "files": 22,
+      "volumes": 1,
+      "parts": 1
+    },
+    {
+      "id": "seven-slot-equipment-v1",
+      "title": "Seven-slot equipment UI source kit",
+      "requires": [],
+      "optional": false,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/seven-slot-equipment-v1.json",
+        "bytes": 11136,
+        "sha256": "2dff1a0de9a1316883848f3bd411b442b1ec0439543e5afc134227c7d173e720",
+        "git_blob_sha": "7e328ffd3234f6cbd9d560014947e04f85334ed8"
+      },
+      "files": 33,
+      "volumes": 3,
+      "parts": 3
+    },
+    {
+      "id": "original-source-art",
+      "title": "Optional original masters and editable Blender source (lossless deduplicated)",
+      "requires": [
+        "dreamscape-common"
+      ],
+      "optional": true,
+      "inventory": {
+        "path": "art/kits/dreamscape-modular-v1/_inventories/original-source-art.json",
+        "bytes": 120030,
+        "sha256": "263b1c3a697622de0e21718b90ce77e7134bcb94130d7e371f9018fe5aa6ab07",
+        "git_blob_sha": "de911e67c1489c918ae42a9052a0a8b03de82dce"
+      },
+      "files": 161,
+      "volumes": 22,
+      "parts": 169
+    }
+  ],
+  "total_original_files": 1895,
+  "total_zip_volumes": 84,
+  "total_archive_parts": 231,
+  "runtime_integration_tested": false,
+  "source_restoration": {
+    "group": "original-source-art",
+    "source_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art",
+    "target_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+    "alias_map": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/SOURCE_ALIAS_MAP.json"
+  }
+}

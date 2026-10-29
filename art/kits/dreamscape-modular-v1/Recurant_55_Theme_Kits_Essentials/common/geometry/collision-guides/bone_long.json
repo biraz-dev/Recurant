@@ -1,0 +1,20 @@
+{
+  "asset": "bone_long",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.008913,
+        0.102702,
+        -0.009714
+      ],
+      "size": [
+        1.942174,
+        0.356378,
+        0.338962
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/bone_long__GUIDE.glb"
+}

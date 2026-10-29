@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "reclaimed-wild-city",
+  "title": "Reclaimed Wild City",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/reclaimed-wild-city/materials/wall_repeat_diffuse_256.png",
+      "low_memory_basecolor": "themes/reclaimed-wild-city/materials/wall_repeat_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Weathered salmon-red sandstone blocks with emerald ivy in cracks"
+    },
+    "ground": {
+      "basecolor": "themes/reclaimed-wild-city/materials/ground_repeat_diffuse_256.png",
+      "low_memory_basecolor": "themes/reclaimed-wild-city/materials/ground_repeat_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Rose terracotta urban paving blocks with moss and delicate grass joints"
+    },
+    "structure": {
+      "basecolor": "themes/reclaimed-wild-city/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/reclaimed-wild-city/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Broken deep red brick courses with ochre worn mortar and narrow roots"
+    },
+    "detail": {
+      "basecolor": "themes/reclaimed-wild-city/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/reclaimed-wild-city/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Dense jade ivy leaves and fine warm brown climbing root strands"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_cracked_2m",
+      "role": "walkable_floor",
+      "notes": "Cracked 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "masonry_wall_broken",
+      "role": "structure",
+      "notes": "Broken wall silhouette with irregular stepped crest, no walk-through hole."
+    },
+    {
+      "module_id": "root_arch_2m",
+      "role": "structure",
+      "notes": "Root-grown arch with 1.4 m clear central lane."
+    },
+    {
+      "module_id": "column_broken",
+      "role": "distinctive_prop",
+      "notes": "Broken freestanding column with plinth and capital."
+    },
+    {
+      "module_id": "tree_trunk",
+      "role": "distinctive_prop",
+      "notes": "Tapered trunk with five flaring buttress roots. Set outside travel lane."
+    },
+    {
+      "module_id": "root_corner_2m",
+      "role": "distinctive_prop",
+      "notes": "Rounded L-root with two orthogonal attachment ends."
+    },
+    {
+      "module_id": "rubble_scatter",
+      "role": "distinctive_prop",
+      "notes": "Seven small irregular stones in a low scatter cluster."
+    },
+    {
+      "module_id": "fern_clump",
+      "role": "distinctive_prop",
+      "notes": "Six fern fronds built from stems and 48 solid leaflet blades."
+    },
+    {
+      "module_id": "masonry_buttress",
+      "role": "distinctive_prop",
+      "notes": "Sloping buttress with broad foot and narrow shoulder."
+    },
+    {
+      "module_id": "shelf_fungus",
+      "role": "distinctive_prop",
+      "notes": "Three stacked bracket fungi; pivot is wall attachment base."
+    },
+    {
+      "module_id": "broadleaf_clump",
+      "role": "distinctive_prop",
+      "notes": "Eight thick diamond leaves, actual double-volume geometry, not alpha cards."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/reclaimed-wild-city/assembly/layout.json",
+    "glb": "themes/reclaimed-wild-city/assembly/showcase.glb",
+    "preview": "themes/reclaimed-wild-city/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 5146,
+      "triangles": 2416,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "d36f19e6c0e3a63ede1ff0e05243f31c38293b4444e5b889e8e47fc0566280f9",
+        "showcase.glb": "0efe12573cf6022d6134396ffada2b04aa2e60f3f3b256b7c88dfa8085d055d6"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "ef71a500e2f42d7c9fab445991c4befb92a671a0db9888a7da3edf52deadf1df"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/reclaimed-wild-city/material_manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

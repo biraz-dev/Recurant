@@ -1,0 +1,156 @@
+{
+  "id": "genesis-garden",
+  "title": "Genesis Garden",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 22,
+  "archives": [
+    {
+      "id": "genesis-garden-001",
+      "bytes": 1734263,
+      "sha256": "e2ae2351211cc768f4c8b316daf9246ecb3884559fba55cccac9489e688882d3",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/genesis-garden.volume-001.zip",
+          "bytes": 1734263,
+          "sha256": "e2ae2351211cc768f4c8b316daf9246ecb3884559fba55cccac9489e688882d3",
+          "git_blob_sha": "7853e832af3e08930f3a6aa410760261fd37eb4f"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/CLAUDE_README.md",
+          "bytes": 7296,
+          "sha256": "c75c511bc61ed9b074ce24415449a6a8831ad381ed0be9b7edec2e8cbf2be1e8",
+          "git_blob_sha": "d1f35b0c61368961723fbab88bf96312f1709b16"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/MATERIAL_NOTES.md",
+          "bytes": 5322,
+          "sha256": "c8f707cddae2c3552e4321ee9622c68ccef643a12fed5cb4c3adac47abfdad35",
+          "git_blob_sha": "000e66194120a2f44453aee3a40bd158d186e8ca"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "39d382f61dd83a0c15312bbd54eee3fb46997e8376bc258916dcd9a54889dae1",
+          "git_blob_sha": "1b2621238573a51fc4715b9c07b98ad529b11c37"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/assembly/collision-navigation.json",
+          "bytes": 10182,
+          "sha256": "7824d30f421668420c361f281558840fa91df481fe4952fd3aba0c69ef9d120f",
+          "git_blob_sha": "f0ee3feb5668a24128289f3b3b2b48016b2370f9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/assembly/layout.json",
+          "bytes": 14766,
+          "sha256": "60da5aba43de6fc02cfb22aaa9a20e146955bea822a37932cd84cc408c890b09",
+          "git_blob_sha": "7380c338d4a4908e0abe91da0763cad1225ba84a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/assembly/native_320x240.png",
+          "bytes": 161970,
+          "sha256": "55530fab1c1cae6d9285c4079bd16694632227280fe747957417b1e9d38f16fe",
+          "git_blob_sha": "e136228b3402a46942189e819ca2351aa4c86e02"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/assembly/showcase.glb",
+          "bytes": 809420,
+          "sha256": "1985eb6c6ae48e29ced80c59563203c336d0267565941fbaa7529508c8c7e1fa",
+          "git_blob_sha": "7ba1741f7b636bb818094e7f8e5143a490f11974"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/concept/reference_native_320x240.png",
+          "bytes": 193715,
+          "sha256": "eb1efba5528c74c47d0a5c1deb2b3beb46241464268e2f5edec616c4ac3988a0",
+          "git_blob_sha": "2f675f51af03395b008834cb170a8b55b393c838"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "8bc8aa393f8629605729f57548c42a43b13fc538c44bdc2b38d4c384a2033c20",
+          "git_blob_sha": "fc2384846fe421c38fd374471e0da0dfc11445da"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/material-manifest.json",
+          "bytes": 7999,
+          "sha256": "7e6e9f50b89170fc96aa1e206ecb6434febb09a192f4fa06d8dcaa565e77e330",
+          "git_blob_sha": "387f6d912e631840fa96685fc99d1cd2316c1173"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/materials/detail_diffuse_128.png",
+          "bytes": 36843,
+          "sha256": "d86fb380755ed630ab3845678de557e21e02a3f51f4f04feb481f1bd6b86d6dd",
+          "git_blob_sha": "1e3bd856446b1fa00b9925d4101f422b752fd8f5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/materials/detail_diffuse_256.png",
+          "bytes": 152527,
+          "sha256": "a668013becac3cf16e75149171de10db8a2bd17cda4021a873ae939d90ed1844",
+          "git_blob_sha": "c72c0046848baff11fae5c73a6e2b224bc992dd4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/materials/ground_diffuse_128.png",
+          "bytes": 35188,
+          "sha256": "b64a5f48ca96a1bad0ad2c6547726f0fd91a35d4685ef21973499454ec0b63d9",
+          "git_blob_sha": "e0c5132184685c6512e71ee15579bdf685551b7d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/materials/ground_diffuse_256.png",
+          "bytes": 143542,
+          "sha256": "58dc62d20dd3d4f73e44fb7706d766e606f01c9ce3434b56f78ca33005377220",
+          "git_blob_sha": "2146c4f02168db80aaf1f171f42d37394dbf7fe3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/materials/structure_diffuse_128.png",
+          "bytes": 35237,
+          "sha256": "89d47cc82b1aa32c173d61015b6fa6acce20c478a2a592cf12a4cd565994c788",
+          "git_blob_sha": "efd66e3bdec1ca5706e070ca33bf5ad5e2c346af"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/materials/structure_diffuse_256.png",
+          "bytes": 126489,
+          "sha256": "4f2abef04be3fa71545835d907a1f94dc742c19ed1cd0a874adf8ccb56422c0f",
+          "git_blob_sha": "bcd0bb15d564b257eee9bc61c83a5ae5a1439860"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/materials/wall_diffuse_128.png",
+          "bytes": 38947,
+          "sha256": "bf2882e5345b84ccbd18789b1ce952be4f34705a81d6608ea96040e81d88c4e0",
+          "git_blob_sha": "3c92fc90984dc82f3db99d41288d13c11f6e7452"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/materials/wall_diffuse_256.png",
+          "bytes": 157047,
+          "sha256": "888f23cd1f5453ae58e08cc8932cd91f03df24a49035fde02ded6c6195c5ffa5",
+          "git_blob_sha": "e01e0a9cb6dd93ba81cd071b69130e6e9cd0a4dc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/prompts/material_atlas_v1.txt",
+          "bytes": 1739,
+          "sha256": "86dd31a6bb947a1a5a7a9ac98968829b993efec30396865b63780edb13b8f28d",
+          "git_blob_sha": "59974a4c46c42a277980e37946d3476ec6fa9b17"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/qa/material-qa.json",
+          "bytes": 2214,
+          "sha256": "fc0feef79cc796e969d33234406fe870ad09841b30ad3eeee0384dc85e0f253d",
+          "git_blob_sha": "40c6abba0f305aeda36c2fe6ff76345af7c69560"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/genesis-garden/theme-manifest.json",
+          "bytes": 7145,
+          "sha256": "6c62bfd366c0332c375abfd772715cb2d37dd16b5fc9a8812f21c7b0b658f2c7",
+          "git_blob_sha": "1506eb119cf482c432e4f3fdd83565e359fe2f2c"
+        }
+      ]
+    }
+  ]
+}

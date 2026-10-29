@@ -1,0 +1,645 @@
+{
+  "authority": "authoring guides only; zrpg_core::Map remains runtime authority",
+  "boxes": [
+    {
+      "instance_id": "i000",
+      "module_id": "floor_plain_2m",
+      "center": [
+        1.0,
+        -0.1,
+        1.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i001",
+      "module_id": "floor_plain_2m",
+      "center": [
+        3.0,
+        -0.1,
+        1.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i002",
+      "module_id": "floor_plain_2m",
+      "center": [
+        5.0,
+        -0.1,
+        1.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i003",
+      "module_id": "floor_plain_2m",
+      "center": [
+        1.0,
+        -0.1,
+        3.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i004",
+      "module_id": "floor_plain_2m",
+      "center": [
+        3.0,
+        -0.1,
+        3.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i005",
+      "module_id": "floor_plain_2m",
+      "center": [
+        5.0,
+        -0.1,
+        3.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i006",
+      "module_id": "floor_plain_2m",
+      "center": [
+        1.0,
+        -0.1,
+        5.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i007",
+      "module_id": "floor_plain_2m",
+      "center": [
+        3.0,
+        -0.1,
+        5.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i008",
+      "module_id": "floor_plain_2m",
+      "center": [
+        5.0,
+        -0.1,
+        5.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i009",
+      "module_id": "floor_plain_2m",
+      "center": [
+        1.0,
+        -0.1,
+        7.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i010",
+      "module_id": "floor_plain_2m",
+      "center": [
+        3.0,
+        -0.1,
+        7.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i011",
+      "module_id": "floor_plain_2m",
+      "center": [
+        5.0,
+        -0.1,
+        7.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i012",
+      "module_id": "floor_plain_2m",
+      "center": [
+        1.0,
+        -0.1,
+        9.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i013",
+      "module_id": "floor_plain_2m",
+      "center": [
+        3.0,
+        -0.1,
+        9.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i014",
+      "module_id": "floor_plain_2m",
+      "center": [
+        5.0,
+        -0.1,
+        9.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i015",
+      "module_id": "tissue_wall_2m",
+      "center": [
+        1.056597,
+        1.994357,
+        10.357354
+      ],
+      "size": [
+        2.145425,
+        4.027427,
+        0.514708
+      ],
+      "role": "rear_boundary"
+    },
+    {
+      "instance_id": "i016",
+      "module_id": "tissue_wall_2m",
+      "center": [
+        3.056597,
+        1.994357,
+        10.357354
+      ],
+      "size": [
+        2.145425,
+        4.027427,
+        0.514708
+      ],
+      "role": "rear_boundary"
+    },
+    {
+      "instance_id": "i017",
+      "module_id": "tissue_wall_2m",
+      "center": [
+        5.056597,
+        1.994357,
+        10.357354
+      ],
+      "size": [
+        2.145425,
+        4.027427,
+        0.514708
+      ],
+      "role": "rear_boundary"
+    },
+    {
+      "instance_id": "i018",
+      "module_id": "tissue_rib_arch",
+      "center": [
+        2.09,
+        1.2,
+        8.0
+      ],
+      "size": [
+        0.34,
+        2.4,
+        0.34
+      ],
+      "role": "open_portal"
+    },
+    {
+      "instance_id": "i018",
+      "module_id": "tissue_rib_arch",
+      "center": [
+        3.91,
+        1.2,
+        8.0
+      ],
+      "size": [
+        0.34,
+        2.4,
+        0.34
+      ],
+      "role": "open_portal"
+    },
+    {
+      "instance_id": "i019",
+      "module_id": "organic_pod",
+      "center": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "size": [
+        0.8,
+        2.0,
+        0.8
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i020",
+      "module_id": "tissue_rib_arch",
+      "center": [
+        4.241667,
+        1.035276,
+        1.203195
+      ],
+      "size": [
+        0.359252,
+        2.070552,
+        0.359252
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i020",
+      "module_id": "tissue_rib_arch",
+      "center": [
+        5.758333,
+        1.035276,
+        0.796805
+      ],
+      "size": [
+        0.359252,
+        2.070552,
+        0.359252
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i021",
+      "module_id": "mushroom_tall",
+      "center": [
+        1.0,
+        1.024445,
+        3.0
+      ],
+      "size": [
+        2.184734,
+        2.048891,
+        2.122353
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i022",
+      "module_id": "bone_long",
+      "center": [
+        5.0,
+        0.165145,
+        3.0
+      ],
+      "size": [
+        0.314149,
+        0.33029,
+        1.8
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i023",
+      "module_id": "root_corner_2m",
+      "center": [
+        1.0,
+        0.258034,
+        5.0
+      ],
+      "size": [
+        1.240301,
+        0.516068,
+        1.236189
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i024",
+      "module_id": "root_straight_2m",
+      "center": [
+        5.008335,
+        0.234038,
+        5.012292
+      ],
+      "size": [
+        1.870795,
+        0.468075,
+        0.961196
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i025",
+      "module_id": "shelf_fungus",
+      "center": [
+        1.0,
+        0.395,
+        7.0
+      ],
+      "size": [
+        1.224745,
+        0.79,
+        1.224745
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i026",
+      "module_id": "crystal_cluster",
+      "center": [
+        5.0,
+        1.022986,
+        7.0
+      ],
+      "size": [
+        0.984936,
+        2.045971,
+        1.487848
+      ],
+      "role": "blocked_cell_scenery"
+    }
+  ],
+  "navigation": {
+    "cells": [
+      {
+        "cell": [
+          0,
+          0
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          0
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          0
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          1
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          1
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          1
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          2
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          2
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          2
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          3
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          3
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          3
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          4
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          4
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          4
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      }
+    ],
+    "edges": [
+      {
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          1,
+          1
+        ],
+        "bidirectional": true
+      },
+      {
+        "a": [
+          1,
+          1
+        ],
+        "b": [
+          1,
+          2
+        ],
+        "bidirectional": true
+      },
+      {
+        "a": [
+          1,
+          2
+        ],
+        "b": [
+          1,
+          3
+        ],
+        "bidirectional": true
+      },
+      {
+        "a": [
+          1,
+          3
+        ],
+        "b": [
+          1,
+          4
+        ],
+        "bidirectional": true
+      }
+    ],
+    "start_cell": [
+      1,
+      0
+    ],
+    "goal_cell": [
+      1,
+      4
+    ],
+    "missing_edges": "forbidden_between_declared_walkable_neighbours",
+    "diagonal": false
+  },
+  "travel_lane": {
+    "width_m": 1.2,
+    "headroom_m": 2.4,
+    "central_x_m": 3,
+    "z_range_m": [
+      0.2,
+      9.8
+    ]
+  },
+  "fluid_collision": "none; solid decks or beds separate"
+}

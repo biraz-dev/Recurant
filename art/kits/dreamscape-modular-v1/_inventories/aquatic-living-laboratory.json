@@ -1,0 +1,150 @@
+{
+  "id": "aquatic-living-laboratory",
+  "title": "Aquatic Living Laboratory",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "aquatic-living-laboratory-001",
+      "bytes": 1847124,
+      "sha256": "a4470a07a3fedb20c4ff4b54a0a6ea35489242991403e33fb078e62cf789240e",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/aquatic-living-laboratory.volume-001.zip",
+          "bytes": 1847124,
+          "sha256": "a4470a07a3fedb20c4ff4b54a0a6ea35489242991403e33fb078e62cf789240e",
+          "git_blob_sha": "06f51333bca88a1790359bf3f66374ac2e7d2fb8"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/CLAUDE_README.md",
+          "bytes": 7346,
+          "sha256": "1c4732c5758085bb2553d7ce4e9fa449c19e5d9398bd099ba1a6993941900a2d",
+          "git_blob_sha": "8697a8552f1da099f5c015ad88108e90d3418e7f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/MATERIAL_NOTES.md",
+          "bytes": 2765,
+          "sha256": "d498f7cb60c4af7b7123b5388151bb696ecd079bb7ff3d492b4d115af7ee217b",
+          "git_blob_sha": "2a4ff3dece90d345404a20a6e6bc259898a56a31"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "08109324173a8da0706d5e0063a578d6351558ad67c7ed3231877adaafbe757b",
+          "git_blob_sha": "a1a0e49c187057467aba5a57df1af3a9dc65bd79"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/assembly/collision-navigation.json",
+          "bytes": 10240,
+          "sha256": "f61a51fafad792a2fa18ec4ac44dd8c2ee037736a16aadb4a581f248c2d5e7d6",
+          "git_blob_sha": "e06a5661b49a26003b0d16f8b07095e4b4eb1b8c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/assembly/layout.json",
+          "bytes": 13551,
+          "sha256": "09164a2766784bfb036735cd2c10a5c2fb7be60523b8fa0c4ea5c5a2a307b562",
+          "git_blob_sha": "d6c2679031760daa0a124cc79773cf88fe1d93cf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/assembly/native_320x240.png",
+          "bytes": 155863,
+          "sha256": "98a93ba36ee6cd0fd802a0051af31d96583a54d872f3a40193bae69e8487b1af",
+          "git_blob_sha": "25c69694f0d5bbedbbc6227459083b60e20489ce"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/assembly/showcase.glb",
+          "bytes": 859580,
+          "sha256": "7d1b4f790711d7f99b036e54e1c3ad689718fe191c5b823d1e3d423b4abc4552",
+          "git_blob_sha": "ade51dc9d97d0b729297b046e2eba4f934db739f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/concept/reference_native_320x240.png",
+          "bytes": 183199,
+          "sha256": "d6b5215e91336b12423383a938374b3ff533e6589e22ec5427f7ea12fca2f6e5",
+          "git_blob_sha": "4a0cc302e8e5063a5a07621e97e684b7e5e46567"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "ba0c7192dfbbf0aff3db01987149351e329396ee6fd89d0c342b3fc8d6bb4e93",
+          "git_blob_sha": "4c7868723f185f4dc16435531c49fe6205d7ceb9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/material-manifest.json",
+          "bytes": 7436,
+          "sha256": "d6d48dba5a945d302a028397e41199982467e7f11e6a80f1a90cdf9f43de63d5",
+          "git_blob_sha": "43e99666a6a231e7f631251dc76279a717ef4070"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/materials/detail_diffuse_128.png",
+          "bytes": 44293,
+          "sha256": "3225aa8535f8edbb216da8704ce4a1731c609200e8bce598c8d11acc66c4cc8c",
+          "git_blob_sha": "33e38fb39dcb64563d1a12d0853abd3e86553e26"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/materials/detail_diffuse_256.png",
+          "bytes": 165498,
+          "sha256": "87b31b1edb23af36d6f7711db23013a6f8a88f39fbbb22737b58fa410d4c6e94",
+          "git_blob_sha": "0353264c9084633601bc2e25dc97ba459732fa96"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/materials/ground_diffuse_128.png",
+          "bytes": 43472,
+          "sha256": "97d708572df4fa8600ee501b5fb67de6960fb1640748eefb0f6cbc08327d19ce",
+          "git_blob_sha": "d0de4cdd53cf424dd17a225d6fea60a01429fd8a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/materials/ground_diffuse_256.png",
+          "bytes": 167736,
+          "sha256": "97c815395df51d2b4ad95dfcfa9ab12a639718d65bbddc393a9d1dfc25b005ec",
+          "git_blob_sha": "29f0a0c3456655194d8e2210e3aea5c8be178729"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/materials/structure_diffuse_128.png",
+          "bytes": 41165,
+          "sha256": "7f9aec92fea027a628a2b7b222a1b7dbf6a26bb9c5dabdc1042453c9d907af6b",
+          "git_blob_sha": "13369e58bd62e63ef13532aa04c792ec6e78b3ae"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/materials/structure_diffuse_256.png",
+          "bytes": 152430,
+          "sha256": "57ae4b9501c3e7064d94760f4cfafbe98cc908c93ee0ce591717c38a7b5d2981",
+          "git_blob_sha": "fdf5a933b32f6ade8e17b009cf0628471e62225c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/materials/wall_diffuse_128.png",
+          "bytes": 38852,
+          "sha256": "1d117fd02b133312e28a1e892417d456a909745484922a7cf2eb4b66df26e1c2",
+          "git_blob_sha": "cbe48d31f98d00a5885843e765b35a5252bbf282"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/materials/wall_diffuse_256.png",
+          "bytes": 149548,
+          "sha256": "56bb59679ebdcee4270675a83b6c59df74f58257d523bb3a1630d7342a4e9fed",
+          "git_blob_sha": "a7e983eecfe334c6e4001b24c5703ff37d5aa7ff"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/prompts/material_atlas_v1.txt",
+          "bytes": 2507,
+          "sha256": "cab827181881dddfd8755bccb459e33766dd0fb1fd49fad549db7a588703cba8",
+          "git_blob_sha": "2b3ab1089a02b680bf29768199d06d8a37674a02"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/aquatic-living-laboratory/theme-manifest.json",
+          "bytes": 7137,
+          "sha256": "50a960e0ed05369ef108dd643b0d141870a64b779991ee47972f66f68e46180a",
+          "git_blob_sha": "299fc4b68b8604541082698fbaacfe6f10bafe2f"
+        }
+      ]
+    }
+  ]
+}

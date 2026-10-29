@@ -1,0 +1,46 @@
+{
+  "asset_assembly_generated": true,
+  "metrics": {
+    "vertices": 9312,
+    "triangles": 4732,
+    "primitives": 4,
+    "embedded_pngs": 4
+  },
+  "lane_guide_clear": true,
+  "lane_guide_conflicts": [],
+  "navigation_connected": true,
+  "runtime_integration_verified": false,
+  "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+  "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+  "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+  "rendered_views": [
+    "native_320x240.png"
+  ],
+  "native_preview_camera": {
+    "vertical_fov_degrees": 60,
+    "eye_height_m": 1.5,
+    "resolution_px": [
+      320,
+      240
+    ],
+    "back_offset_m": 0,
+    "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+  },
+  "visual_review": {
+    "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+    "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+    "files_sha256": {
+      "native_320x240.png": "588b40c67416d7858866a03fc7fb5768ca97befcd62383a7d15f49e1dc6fc302",
+      "showcase.glb": "3c6bff91cd854e0bf4da4d5806802853f6d79c4108f400eb3eb7a8ee4dc56297"
+    },
+    "known_limits": [
+      "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+      "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+      "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+      "Texture repeat candidates are not mathematically seamless-certified.",
+      "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+    ],
+    "omitted_recreatable_overview_sha256": "d9460bbdf3376b87f55ae455161f442371d7fa7df0b3694cea03041ced33065c"
+  },
+  "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+}

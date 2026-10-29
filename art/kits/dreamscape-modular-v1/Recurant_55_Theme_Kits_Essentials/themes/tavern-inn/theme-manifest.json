@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "tavern-inn",
+  "title": "Tavern Inn",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/tavern-inn/materials/wall_diffuse_256.png",
+      "low_memory_basecolor": "themes/tavern-inn/materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "warm gray rubble stone masonry in muted amber brown, visible mortar with handmade irregular blocks"
+    },
+    "ground": {
+      "basecolor": "themes/tavern-inn/materials/ground_diffuse_256.png",
+      "low_memory_basecolor": "themes/tavern-inn/materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "warm dark oak floorboards laid flat in staggered joints, subtle fine grain and wear, no perspective"
+    },
+    "structure": {
+      "basecolor": "themes/tavern-inn/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/tavern-inn/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "dark walnut structural wood surface with hand-carved shallow vine-and-chevron strip, no beam object"
+    },
+    "detail": {
+      "basecolor": "themes/tavern-inn/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/tavern-inn/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "square flat burgundy wool rug with muted ochre and cream geometric border and original central diamond motif, no folds"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_pavers_2m",
+      "role": "walkable_floor",
+      "notes": "Pavers 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "timber_wall_plaster",
+      "role": "structure",
+      "notes": "2 m bay timber plaster wall with real structural posts."
+    },
+    {
+      "module_id": "timber_post_beam_gate",
+      "role": "structure",
+      "notes": "Open post-and-beam portal with 1.52 m clear lane."
+    },
+    {
+      "module_id": "inn_bar_counter_2m",
+      "role": "distinctive_prop",
+      "notes": "2 m bar/counter with overhanging serving top."
+    },
+    {
+      "module_id": "inn_table",
+      "role": "distinctive_prop",
+      "notes": "Rectangular inn table with four legs."
+    },
+    {
+      "module_id": "inn_bench",
+      "role": "distinctive_prop",
+      "notes": "Simple low-poly bench, 1.8 m long, ground standing."
+    },
+    {
+      "module_id": "barrel",
+      "role": "distinctive_prop",
+      "notes": "Faceted barrel with two raised metal hoops."
+    },
+    {
+      "module_id": "inn_bed_single",
+      "role": "distinctive_prop",
+      "notes": "Single bed with separate mattress and headboard."
+    },
+    {
+      "module_id": "crate",
+      "role": "distinctive_prop",
+      "notes": "Braced wooden crate with diagonal front reinforcement."
+    },
+    {
+      "module_id": "lantern_box",
+      "role": "distinctive_prop",
+      "notes": "Box lantern with capped roof and hanging spindle; use separate emissive adapter."
+    },
+    {
+      "module_id": "textile_rug_2m",
+      "role": "distinctive_prop",
+      "notes": "Square raised woven rug with separate edge-binding geometry."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/tavern-inn/assembly/layout.json",
+    "glb": "themes/tavern-inn/assembly/showcase.glb",
+    "preview": "themes/tavern-inn/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 7684,
+      "triangles": 3884,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "e73febcf1db9028c54a06bba3d4a7b208349c725b1694bb0a3db3ff0ea1fb994",
+        "showcase.glb": "a38b41ecaeed445afb372ed65fbc005082117fbf24239b32f3288970518592a0"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "bf134cd6ada49532e137f6e26d8c37c0bfd34a076d4356a3c2082a45161e6947"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/tavern-inn/material-manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

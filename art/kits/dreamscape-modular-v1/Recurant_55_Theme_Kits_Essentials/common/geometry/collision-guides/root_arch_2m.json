@@ -1,0 +1,43 @@
+{
+  "asset": "root_arch_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.9,
+        1.2,
+        0
+      ],
+      "size": [
+        0.35,
+        2.4,
+        0.4
+      ]
+    },
+    {
+      "center": [
+        0.9,
+        1.2,
+        0
+      ],
+      "size": [
+        0.35,
+        2.4,
+        0.4
+      ]
+    }
+  ],
+  "clear_openings": [
+    {
+      "width_m": 1.4,
+      "height_m": 2.4,
+      "through_axis": "Z",
+      "center": [
+        0,
+        1.2,
+        0
+      ]
+    }
+  ],
+  "preview_glb": "collision-guides/root_arch_2m__GUIDE.glb"
+}

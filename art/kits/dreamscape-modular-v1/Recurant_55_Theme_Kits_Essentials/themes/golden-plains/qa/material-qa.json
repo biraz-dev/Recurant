@@ -1,0 +1,65 @@
+{
+  "theme": "golden-plains",
+  "all_flat_orthographic": true,
+  "all_four_distinct": true,
+  "no_text_frame_gutter": true,
+  "reviewed_contact_sheet": "qa/material_contact_sheet.png",
+  "reviewed_repeat_sheets": [
+    "qa/wall_repeat_2x2.png",
+    "qa/ground_repeat_2x2.png",
+    "qa/structure_repeat_2x2.png",
+    "qa/detail_repeat_2x2.png"
+  ],
+  "checks": [
+    {
+      "role": "wall",
+      "preview": "qa/wall_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 17.725,
+        "top_bottom": 14.762
+      },
+      "interior_adjacent_MAE_rgb255": 11.301,
+      "visual_findings": "Large limestone crack motifs repeat; mild edge discontinuities remain.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "ground",
+      "preview": "qa/ground_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 18.986,
+        "top_bottom": 20.115
+      },
+      "interior_adjacent_MAE_rgb255": 17.073,
+      "visual_findings": "Grit pattern is distributed, visually low-contrast; exact edges are not matched.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "structure",
+      "preview": "qa/structure_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 24.549,
+        "top_bottom": 22.454
+      },
+      "interior_adjacent_MAE_rgb255": 22.79,
+      "visual_findings": "Grass blades repeat in recognizable tangles; clamp grass/groundcover patches.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "detail",
+      "preview": "qa/detail_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 14.913,
+        "top_bottom": 20.107
+      },
+      "interior_adjacent_MAE_rgb255": 14.942,
+      "visual_findings": "Large wood knot repeats conspicuously; clamp to single timber components.",
+      "opposing_edges_identical": false
+    }
+  ],
+  "native_and_preview_dimensions_verified": true,
+  "production_seam_acceptance": "not certified; use per-role findings"
+}

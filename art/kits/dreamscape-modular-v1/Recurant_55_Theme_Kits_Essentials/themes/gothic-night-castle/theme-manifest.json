@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "gothic-night-castle",
+  "title": "Gothic Night Castle",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/gothic-night-castle/materials/wall_diffuse_256.png",
+      "low_memory_basecolor": "themes/gothic-night-castle/materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "elegant cold blue-gray limestone ashlar, subtle fine veins and refined wear, regular rectangular masonry"
+    },
+    "ground": {
+      "basecolor": "themes/gothic-night-castle/materials/ground_diffuse_256.png",
+      "low_memory_basecolor": "themes/gothic-night-castle/materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "pale blue-gray marble tiled floor with narrow charcoal borders in an orthogonal grid, no reflections"
+    },
+    "structure": {
+      "basecolor": "themes/gothic-night-castle/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/gothic-night-castle/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "carved gray stone with repeating fine gothic foliate ornament, shallow relief on flat square surface"
+    },
+    "detail": {
+      "basecolor": "themes/gothic-night-castle/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/gothic-night-castle/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "flat deep crimson damask textile with antique gold ornamental pomegranate-and-thorn brocade, no curtain folds"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_pavers_2m",
+      "role": "walkable_floor",
+      "notes": "Pavers 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "masonry_inset_panel",
+      "role": "structure",
+      "notes": "Recess illusion through raised frame, separate front detail panel for mural/decor binding."
+    },
+    {
+      "module_id": "masonry_doorway_pointed",
+      "role": "structure",
+      "notes": "Pointed arch through-wall, 1.4 m wide / 2.4 m clear rectangular passage."
+    },
+    {
+      "module_id": "masonry_buttress",
+      "role": "distinctive_prop",
+      "notes": "Sloping buttress with broad foot and narrow shoulder."
+    },
+    {
+      "module_id": "column_fluted",
+      "role": "distinctive_prop",
+      "notes": "Fluted freestanding column with plinth and capital."
+    },
+    {
+      "module_id": "sarcophagus",
+      "role": "distinctive_prop",
+      "notes": "Stone coffin / sarcophagus plinth with overhanging lid."
+    },
+    {
+      "module_id": "textile_banner_pointed",
+      "role": "distinctive_prop",
+      "notes": "Pennant-shaped hanging banner with solid thickness. Local origin is tip shoulder."
+    },
+    {
+      "module_id": "lantern_box",
+      "role": "distinctive_prop",
+      "notes": "Box lantern with capped roof and hanging spindle; use separate emissive adapter."
+    },
+    {
+      "module_id": "urn",
+      "role": "distinctive_prop",
+      "notes": "Faceted urn / potion container with broad body and narrow neck."
+    },
+    {
+      "module_id": "altar_block",
+      "role": "distinctive_prop",
+      "notes": "Compact shrine altar with slab top."
+    },
+    {
+      "module_id": "shelf_bookcase",
+      "role": "distinctive_prop",
+      "notes": "Solid-backed three-shelf cabinet; fill with separately instanced props."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/gothic-night-castle/assembly/layout.json",
+    "glb": "themes/gothic-night-castle/assembly/showcase.glb",
+    "preview": "themes/gothic-night-castle/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 7480,
+      "triangles": 3780,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "e6bcb7e3e654ae3a23126d49daf0e63361d66af54cca4dbd2bf3d0cb2a1378f9",
+        "showcase.glb": "7bbc0feb4761b3d3611a78e3a2584a6a9a47640475b67755e4b17259eb79f73d"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "b15097f1520ab85ab4ac731d49f8b06f90bf5b22c3764529b3ea00503bb1fbdd"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/gothic-night-castle/material-manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

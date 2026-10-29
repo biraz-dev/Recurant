@@ -1,0 +1,174 @@
+{
+  "id": "colossal-canopy",
+  "title": "Colossal Canopy",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "colossal-canopy-001",
+      "bytes": 2353595,
+      "sha256": "0eb3578f52fe62c0357319e39e98f5b64bcb4670b1a0e15f7691326228664260",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/colossal-canopy.volume-001.zip",
+          "bytes": 2353595,
+          "sha256": "0eb3578f52fe62c0357319e39e98f5b64bcb4670b1a0e15f7691326228664260",
+          "git_blob_sha": "710ffbc183020c9701a1cafb8187362ec661975a"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/CLAUDE_README.md",
+          "bytes": 7398,
+          "sha256": "0e9525968acabb16e428267d5645930eca7ffce8b205c73e58789bcc611d1392",
+          "git_blob_sha": "106d5278edcafd01dbb84b57506f82ca16e3f28a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "650c4f9c6264e13a29088fbab4f22f44df346b5d932188b8b012c47e43993012",
+          "git_blob_sha": "8db46081d40327e9cb976b89f3516fb7bcc90b3f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/assembly/collision-navigation.json",
+          "bytes": 10288,
+          "sha256": "24289381351d0107bed921aca830a7be343eb31a94b85767aa413c8d84aa754d",
+          "git_blob_sha": "f80f4ac79a6d0ea255b98f31c1d642736daa1203"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/assembly/layout.json",
+          "bytes": 14765,
+          "sha256": "5aa11f785f32cf4d0e9b8a78299ee8b16d10e525062d8fa193f15f3a959c98a5",
+          "git_blob_sha": "9463363b5092d552e54476b8674cbfaa903f3b70"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/assembly/native_320x240.png",
+          "bytes": 152875,
+          "sha256": "f40c2ad98c061ad148d0f2e6bfb85e82b26059e8a13910d9b11d7986e3578d86",
+          "git_blob_sha": "9d0a6f5831696915ff916a21c7ebad76d208c78e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/assembly/showcase.glb",
+          "bytes": 856540,
+          "sha256": "10129550fce15ba8659b2d314a2617366a1b5663cf7e3b779d45ebd1a9ca74db",
+          "git_blob_sha": "c705c0f958911dc2338b36588bcd2a09b618e00f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/concept/reference_native_320x240.png",
+          "bytes": 184160,
+          "sha256": "4813be0c24fc2c611b4e2acc5ce0c0de206ef91befbe83c619969da89105540f",
+          "git_blob_sha": "73da81b391ec598a2f0809b68e6c20e9c528d228"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "a61f8a3af9adf7a9cb908fbe2f878eb2d1dc506e58f47916670514118175abe9",
+          "git_blob_sha": "f51ea7184ac1c34ba1b21a97915bf7fa8a37530a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/material_manifest.json",
+          "bytes": 14061,
+          "sha256": "07429bd191d3b99c04b2d50a4ebab95eb555fa555dddceeb0ca6dfdc6722231e",
+          "git_blob_sha": "e106b3f996e0af3827e48410750ddde0f739c13b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/materials/detail_diffuse_128.png",
+          "bytes": 43950,
+          "sha256": "ebc48543f221e8720c769c44e831a92bf007de2caa1a5afd28cfe4add16ffa32",
+          "git_blob_sha": "53df5aae5e9c40361d48e7cc35012447a64bf221"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/materials/detail_diffuse_256.png",
+          "bytes": 161234,
+          "sha256": "4b233f83b5eaa286a239002452a089d6a1067cff539c6e877c1783e8259505da",
+          "git_blob_sha": "955ab2a59336cfadda0524826712eb50e73742a0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/materials/ground_diffuse_128.png",
+          "bytes": 43233,
+          "sha256": "1fbcd42565820efb48c038bf7f32b037ca11999283ccf86d6cacf2ead557865a",
+          "git_blob_sha": "0b6b9bdc50a2b821960f32fe27c8b60996a30d3e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/materials/ground_diffuse_256.png",
+          "bytes": 166145,
+          "sha256": "e0fe56e25bc349992e1b2d9c2503cb9ab6d422d7c2703e6bbd10e897ed6cdb31",
+          "git_blob_sha": "f123d195a22e35c214231b9bee1931318e1dba37"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/materials/ground_repeat_diffuse_128.png",
+          "bytes": 47212,
+          "sha256": "7fb48a38ed7b0501ff3c49f7e9b8c04fad4097f0a50ae57b56c728ce35b90596",
+          "git_blob_sha": "365c684cc5fb4552080a816ab5439e19b490f76e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/materials/ground_repeat_diffuse_256.png",
+          "bytes": 180320,
+          "sha256": "a5a27b498e935dd3f7ec79d7488e810edb91e8ab19a1bcd85fa82c7834abc799",
+          "git_blob_sha": "f99cb63c885f81a824e49c13db80ecdff4226386"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/materials/structure_diffuse_128.png",
+          "bytes": 45408,
+          "sha256": "df5f1c5b57f5a520ba1a6e28a89874c2c59c050388bd464bfce87fbd7ce3f1f3",
+          "git_blob_sha": "197462e30857d3576f5b52594f3f88a7c0162d99"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/materials/structure_diffuse_256.png",
+          "bytes": 174503,
+          "sha256": "694de4ddc8cabdf306e33a65d3e657d282735a6b1f0e584c6142b475200c5c17",
+          "git_blob_sha": "81de2a79a55fc13ac169301da01bb1ff14345811"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/materials/wall_diffuse_128.png",
+          "bytes": 41916,
+          "sha256": "bdd2a3ea0a48b152290210688e7c8fcdaed71c436413d846a4e6efd36bb5a7bc",
+          "git_blob_sha": "704ae0913e11711a9bb5766fabcce04a0791a72a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/materials/wall_diffuse_256.png",
+          "bytes": 158802,
+          "sha256": "1404247ff916a07617895dab2c671a8f5a8c4863175c780ee15b0caede3102fa",
+          "git_blob_sha": "27833f24ad7e666520cc65d29924f07cfe3f7878"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/materials/wall_repeat_diffuse_128.png",
+          "bytes": 43569,
+          "sha256": "764d4ac1588fb3bce24a72c8b14fbeeb88f8711b3b2a2bc50db5b042316f15b3",
+          "git_blob_sha": "943e78044df1c61e833aeac6a1f012839dcec587"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/materials/wall_repeat_diffuse_256.png",
+          "bytes": 163093,
+          "sha256": "897e77c21edcfdc31e60983a4aad0799c5058eeaba93f288a134d81ec7cf8565",
+          "git_blob_sha": "a6db6614b8b2749aac98713162e600415b587d55"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/prompts/material_atlas_prompt.txt",
+          "bytes": 1776,
+          "sha256": "004b56fdd5058f438b3c4e6dcc11eca45fef5faa8cbca707acbafe1969d170cf",
+          "git_blob_sha": "8c89554f9a07347962f4838121c66b046f7bad68"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1912,
+          "sha256": "79be9b93bcb6c488def4f895fa65827726d536ec222a5f03bf66afc322c4302a",
+          "git_blob_sha": "f926796dd311dd5c49066c76cff8f3768d2020ac"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/colossal-canopy/theme-manifest.json",
+          "bytes": 6779,
+          "sha256": "d4e9558db0e506d8863cc9cf515b7d34e7435a1b8e67efbf58fc754060284fc7",
+          "git_blob_sha": "bbe479f9ce8285371a107783461e21be2955e2dd"
+        }
+      ]
+    }
+  ]
+}

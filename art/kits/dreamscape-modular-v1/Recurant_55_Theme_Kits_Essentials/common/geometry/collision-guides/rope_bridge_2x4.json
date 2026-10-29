@@ -1,0 +1,44 @@
+{
+  "asset": "rope_bridge_2x4",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0,
+        -0.08,
+        0
+      ],
+      "size": [
+        2,
+        0.16,
+        4
+      ]
+    },
+    {
+      "center": [
+        -0.95,
+        0.6,
+        0
+      ],
+      "size": [
+        0.1,
+        1.2,
+        4
+      ]
+    },
+    {
+      "center": [
+        0.95,
+        0.6,
+        0
+      ],
+      "size": [
+        0.1,
+        1.2,
+        4
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/rope_bridge_2x4__GUIDE.glb"
+}

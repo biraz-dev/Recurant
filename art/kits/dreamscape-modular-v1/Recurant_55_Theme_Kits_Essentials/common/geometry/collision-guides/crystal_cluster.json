@@ -1,0 +1,20 @@
+{
+  "asset": "crystal_cluster",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.051023,
+        0.977015,
+        -0.067997
+      ],
+      "size": [
+        1.487848,
+        2.045971,
+        0.984936
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/crystal_cluster__GUIDE.glb"
+}

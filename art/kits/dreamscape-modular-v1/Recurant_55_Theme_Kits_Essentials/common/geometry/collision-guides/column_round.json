@@ -1,0 +1,20 @@
+{
+  "asset": "column_round",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        2.0,
+        0.0
+      ],
+      "size": [
+        0.8,
+        4.0,
+        0.8
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/column_round__GUIDE.glb"
+}

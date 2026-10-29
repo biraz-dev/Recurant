@@ -1,0 +1,20 @@
+{
+  "asset": "gear_10tooth",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.0,
+        0.4,
+        0.0
+      ],
+      "size": [
+        0.788087,
+        0.792019,
+        0.256
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/gear_10tooth__GUIDE.glb"
+}

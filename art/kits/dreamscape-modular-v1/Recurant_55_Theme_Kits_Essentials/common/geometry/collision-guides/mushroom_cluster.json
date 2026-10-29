@@ -1,0 +1,20 @@
+{
+  "asset": "mushroom_cluster",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.068,
+        0.454221,
+        -0.001851
+      ],
+      "size": [
+        1.216,
+        0.927558,
+        0.979764
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/mushroom_cluster__GUIDE.glb"
+}

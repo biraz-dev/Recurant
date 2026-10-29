@@ -1,0 +1,5982 @@
+{
+  "pass": true,
+  "schema_valid": true,
+  "assets_checked": 150,
+  "assembly_glbs_checked": 6,
+  "collision_guide_glbs_checked": 138,
+  "declared_apertures_checked": 9,
+  "all_buffers_read_from_delivered_glb": true,
+  "checks": [
+    {
+      "file": "meshes/masonry_wall_2x2.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.10000000149011612
+      ],
+      "bounds_max": [
+        1.0,
+        2.0,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/masonry_wall_2x4.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.6,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.10000000149011612
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/masonry_wall_ashlar.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 504,
+      "triangles": 252,
+      "max_index": 503,
+      "signed_volume_m3": 1.795375,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.11999999731779099
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.07999999821186066
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/masonry_corner_inner.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 56,
+      "triangles": 28,
+      "max_index": 55,
+      "signed_volume_m3": 3.186666,
+      "bounds_min": [
+        -0.10000000149011612,
+        0.0,
+        -0.10000000149011612
+      ],
+      "bounds_max": [
+        2.0,
+        4.0,
+        2.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/masonry_corner_outer.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 47,
+      "signed_volume_m3": 3.6224,
+      "bounds_min": [
+        -0.18000000715255737,
+        0.0,
+        -0.18000000715255737
+      ],
+      "bounds_max": [
+        2.0,
+        4.0,
+        2.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/masonry_wall_broken.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 144,
+      "triangles": 72,
+      "max_index": 143,
+      "signed_volume_m3": 1.14155,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.10000000149011612
+      ],
+      "bounds_max": [
+        1.0,
+        3.700000047683716,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/masonry_doorway_round.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 768,
+      "triangles": 384,
+      "max_index": 383,
+      "signed_volume_m3": 1.241992,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.14000000059604645
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.14000000059604645
+      ],
+      "aperture_checks": [
+        {
+          "width_m": 1.4,
+          "height_m": 2.4,
+          "depth_m": 0.35,
+          "intersecting_triangles": 0,
+          "test_tolerance_m": 1e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "file": "meshes/masonry_doorway_pointed.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 576,
+      "triangles": 288,
+      "max_index": 383,
+      "signed_volume_m3": 1.157418,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.14000000059604645
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.14000000059604645
+      ],
+      "aperture_checks": [
+        {
+          "width_m": 1.4,
+          "height_m": 2.4,
+          "depth_m": 0.35,
+          "intersecting_triangles": 0,
+          "test_tolerance_m": 1e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "file": "meshes/door_leaf_plank_1p36.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 120,
+      "triangles": 60,
+      "max_index": 71,
+      "signed_volume_m3": 0.404512,
+      "bounds_min": [
+        0.0,
+        0.0,
+        -0.1599999964237213
+      ],
+      "bounds_max": [
+        1.3600000143051147,
+        2.359999895095825,
+        0.05999999865889549
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/gate_leaf_barred.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 420,
+      "triangles": 224,
+      "max_index": 251,
+      "signed_volume_m3": 0.061731,
+      "bounds_min": [
+        -0.6800000071525574,
+        0.0,
+        -0.03999999910593033
+      ],
+      "bounds_max": [
+        0.6800000071525574,
+        2.4000000953674316,
+        0.03999999910593033
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/column_square.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 47,
+      "signed_volume_m3": 1.2184,
+      "bounds_min": [
+        -0.4000000059604645,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.4000000059604645,
+        4.0,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/column_round.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 96,
+      "triangles": 52,
+      "max_index": 47,
+      "signed_volume_m3": 1.017431,
+      "bounds_min": [
+        -0.4000000059604645,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.4000000059604645,
+        4.0,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/column_fluted.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 360,
+      "triangles": 196,
+      "max_index": 287,
+      "signed_volume_m3": 1.188374,
+      "bounds_min": [
+        -0.4000000059604645,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.4000000059604645,
+        4.0,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/column_broken.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 96,
+      "triangles": 52,
+      "max_index": 47,
+      "signed_volume_m3": 0.710905,
+      "bounds_min": [
+        -0.4000000059604645,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.4000000059604645,
+        2.4000000953674316,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/masonry_buttress.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 46,
+      "triangles": 24,
+      "max_index": 29,
+      "signed_volume_m3": 2.024334,
+      "bounds_min": [
+        -0.20000000298023224,
+        0.0,
+        -0.30000001192092896
+      ],
+      "bounds_max": [
+        0.6000000238418579,
+        4.0,
+        0.30000001192092896
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/masonry_parapet_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 48,
+      "triangles": 24,
+      "max_index": 23,
+      "signed_volume_m3": 0.623067,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.1599999964237213
+      ],
+      "bounds_max": [
+        1.0,
+        1.309999942779541,
+        0.1599999964237213
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/masonry_crenellation_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 128,
+      "triangles": 64,
+      "max_index": 71,
+      "signed_volume_m3": 0.6348,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.15000000596046448
+      ],
+      "bounds_max": [
+        1.0,
+        1.25,
+        0.15000000596046448
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/masonry_inset_panel.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 23,
+      "signed_volume_m3": 2.067416,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.23999999463558197
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.07999999821186066
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/masonry_capital_bracket.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 80,
+      "triangles": 40,
+      "max_index": 55,
+      "signed_volume_m3": 1.007333,
+      "bounds_min": [
+        -0.800000011920929,
+        0.0,
+        -0.3499999940395355
+      ],
+      "bounds_max": [
+        0.800000011920929,
+        2.950000047683716,
+        0.3499999940395355
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/floor_plain_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/floor_inset_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 120,
+      "triangles": 60,
+      "max_index": 95,
+      "signed_volume_m3": 0.8,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/floor_pavers_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 384,
+      "triangles": 192,
+      "max_index": 383,
+      "signed_volume_m3": 0.76832,
+      "bounds_min": [
+        -0.9950000047683716,
+        -0.20000000298023224,
+        -0.9950000047683716
+      ],
+      "bounds_max": [
+        0.9950000047683716,
+        0.0,
+        0.9950000047683716
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/floor_grate_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 360,
+      "triangles": 180,
+      "max_index": 359,
+      "signed_volume_m3": 0.2112,
+      "bounds_min": [
+        -1.0,
+        -0.1599999964237213,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/floor_cracked_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 96,
+      "triangles": 48,
+      "max_index": 71,
+      "signed_volume_m3": 0.8003,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.00800000037997961,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/ceiling_flat_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.799999,
+      "bounds_min": [
+        -1.0,
+        4.0,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        4.199999809265137,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/ceiling_coffer_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 120,
+      "triangles": 60,
+      "max_index": 95,
+      "signed_volume_m3": 1.239297,
+      "bounds_min": [
+        -1.0,
+        3.8399999141693115,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        4.260000228881836,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/ceiling_barrel_vault_4x2.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 384,
+      "triangles": 192,
+      "max_index": 383,
+      "signed_volume_m3": 2.622018,
+      "bounds_min": [
+        -2.200000047683716,
+        4.0,
+        -1.0
+      ],
+      "bounds_max": [
+        2.200000047683716,
+        6.199999809265137,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/stairs_rise1_run2.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 96,
+      "triangles": 48,
+      "max_index": 95,
+      "signed_volume_m3": 2.5,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -2.0
+      ],
+      "bounds_max": [
+        1.0,
+        1.0,
+        2.220446049250313e-16
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/stairs_rise2_run4.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 192,
+      "triangles": 96,
+      "max_index": 191,
+      "signed_volume_m3": 9.0,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -4.0
+      ],
+      "bounds_max": [
+        1.0,
+        2.0,
+        0.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/ramp_rise1_run2.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.002,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -2.0
+      ],
+      "bounds_max": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/landing_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/bridge_stone_2x4.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 280,
+      "triangles": 140,
+      "max_index": 207,
+      "signed_volume_m3": 3.16672,
+      "bounds_min": [
+        -1.0299999713897705,
+        -0.23999999463558197,
+        -2.0
+      ],
+      "bounds_max": [
+        1.0299999713897705,
+        1.159999966621399,
+        2.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/bridge_timber_2x4.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 720,
+      "triangles": 360,
+      "max_index": 383,
+      "signed_volume_m3": 1.835519,
+      "bounds_min": [
+        -1.0299999713897705,
+        -0.3400000035762787,
+        -2.0
+      ],
+      "bounds_max": [
+        1.0299999713897705,
+        1.159999966621399,
+        2.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/bridge_metal_2x4.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 312,
+      "triangles": 156,
+      "max_index": 239,
+      "signed_volume_m3": 2.20992,
+      "bounds_min": [
+        -1.0299999713897705,
+        -0.23999999463558197,
+        -2.0
+      ],
+      "bounds_max": [
+        1.0299999713897705,
+        1.159999966621399,
+        2.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/railing_iron_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 312,
+      "triangles": 162,
+      "max_index": 179,
+      "signed_volume_m3": 0.065076,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        1.2000000476837158,
+        0.05999999865889549
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/railing_timber_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 180,
+      "triangles": 90,
+      "max_index": 131,
+      "signed_volume_m3": 0.073608,
+      "bounds_min": [
+        -1.0167125463485718,
+        0.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0167125463485718,
+        1.2000000476837158,
+        0.05999999865889549
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/timber_wall_plaster.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 256,
+      "triangles": 128,
+      "max_index": 239,
+      "signed_volume_m3": 1.082797,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.20499999821186066
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.09000000357627869
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/timber_wall_plank.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 376,
+      "triangles": 188,
+      "max_index": 359,
+      "signed_volume_m3": 1.338604,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.12999999523162842
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.09000000357627869
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/timber_wall_lattice.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 648,
+      "triangles": 324,
+      "max_index": 647,
+      "signed_volume_m3": 0.505553,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.12999999523162842
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.09000000357627869
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/timber_wall_paper.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 664,
+      "triangles": 332,
+      "max_index": 647,
+      "signed_volume_m3": 1.087953,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.12999999523162842
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.09000000357627869
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/timber_post_beam_gate.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 120,
+      "triangles": 60,
+      "max_index": 95,
+      "signed_volume_m3": 0.7784,
+      "bounds_min": [
+        -1.100000023841858,
+        0.0,
+        -0.20000000298023224
+      ],
+      "bounds_max": [
+        1.100000023841858,
+        3.7750000953674316,
+        0.20000000298023224
+      ],
+      "aperture_checks": [
+        {
+          "width_m": 1.52,
+          "height_m": 2.74,
+          "depth_m": 0.35,
+          "intersecting_triangles": 0,
+          "test_tolerance_m": 1e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "file": "meshes/timber_post.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 44,
+      "triangles": 22,
+      "max_index": 23,
+      "signed_volume_m3": 0.21408,
+      "bounds_min": [
+        -0.1599999964237213,
+        0.0,
+        -0.1599999964237213
+      ],
+      "bounds_max": [
+        0.1599999964237213,
+        4.0,
+        0.1599999964237213
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/timber_short_post.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 44,
+      "triangles": 22,
+      "max_index": 23,
+      "signed_volume_m3": 0.07856,
+      "bounds_min": [
+        -0.1599999964237213,
+        0.0,
+        -0.1599999964237213
+      ],
+      "bounds_max": [
+        0.1599999964237213,
+        1.2000000476837158,
+        0.1599999964237213
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/timber_beam_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.1056,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.10999999940395355
+      ],
+      "bounds_max": [
+        1.0,
+        0.23999999463558197,
+        0.10999999940395355
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/timber_gable_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 100,
+      "triangles": 50,
+      "max_index": 71,
+      "signed_volume_m3": 0.289195,
+      "bounds_min": [
+        -1.0565685033798218,
+        -0.05656854063272476,
+        -0.20999999344348907
+      ],
+      "bounds_max": [
+        1.0565685033798218,
+        1.0565685033798218,
+        0.15000000596046448
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/roof_pitch_left_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.3,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "bounds_max": [
+        0.0,
+        1.149999976158142,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/roof_pitch_right_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.3,
+      "bounds_min": [
+        -1.2246468525851679e-16,
+        0.0,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        1.149999976158142,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/inn_bench.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 0.1964,
+      "bounds_min": [
+        -0.8999999761581421,
+        0.0,
+        -0.32499998807907104
+      ],
+      "bounds_max": [
+        0.8999999761581421,
+        0.5,
+        0.32499998807907104
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/inn_table.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 120,
+      "triangles": 60,
+      "max_index": 119,
+      "signed_volume_m3": 0.216576,
+      "bounds_min": [
+        -0.800000011920929,
+        0.0,
+        -0.44999998807907104
+      ],
+      "bounds_max": [
+        0.800000011920929,
+        0.8500000238418579,
+        0.44999998807907104
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/inn_bar_counter_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 48,
+      "triangles": 24,
+      "max_index": 23,
+      "signed_volume_m3": 1.7742,
+      "bounds_min": [
+        -1.0499999523162842,
+        0.0,
+        -0.42500001192092896
+      ],
+      "bounds_max": [
+        1.0499999523162842,
+        1.2999999523162842,
+        0.42500001192092896
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/inn_bed_single.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 80,
+      "triangles": 40,
+      "max_index": 55,
+      "signed_volume_m3": 1.1776,
+      "bounds_min": [
+        -0.550000011920929,
+        0.14499999582767487,
+        -1.0
+      ],
+      "bounds_max": [
+        0.550000011920929,
+        1.2999999523162842,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/tatami_mat_1x2.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 47,
+      "signed_volume_m3": 0.16048,
+      "bounds_min": [
+        -0.5,
+        0.0,
+        -1.0
+      ],
+      "bounds_max": [
+        0.5,
+        0.0820000022649765,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/shelf_bookcase.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 96,
+      "triangles": 48,
+      "max_index": 71,
+      "signed_volume_m3": 0.90075,
+      "bounds_min": [
+        -0.699999988079071,
+        0.0,
+        -0.3199999928474426
+      ],
+      "bounds_max": [
+        0.699999988079071,
+        2.0,
+        0.15000000596046448
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/barrel.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 360,
+      "triangles": 220,
+      "max_index": 215,
+      "signed_volume_m3": 0.480891,
+      "bounds_min": [
+        -0.4050000011920929,
+        0.0,
+        -0.4050000011920929
+      ],
+      "bounds_max": [
+        0.4050000011920929,
+        0.949999988079071,
+        0.4050000011920929
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/crate.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 120,
+      "triangles": 60,
+      "max_index": 71,
+      "signed_volume_m3": 0.751294,
+      "bounds_min": [
+        -0.44999998807907104,
+        0.0,
+        -0.5600000023841858
+      ],
+      "bounds_max": [
+        0.44999998807907104,
+        0.8999999761581421,
+        0.44999998807907104
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/boulder_small.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 84,
+      "triangles": 40,
+      "max_index": 83,
+      "signed_volume_m3": 0.468252,
+      "bounds_min": [
+        -0.5619527697563171,
+        0.0,
+        -0.5143290758132935
+      ],
+      "bounds_max": [
+        0.5529274940490723,
+        0.7475000023841858,
+        0.6162023544311523
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/boulder_large.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 84,
+      "triangles": 40,
+      "max_index": 83,
+      "signed_volume_m3": 3.901179,
+      "bounds_min": [
+        -1.0374512672424316,
+        0.0,
+        -0.9429365992546082
+      ],
+      "bounds_max": [
+        1.0207892656326294,
+        1.840000033378601,
+        1.1297043561935425
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/basalt_column.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 84,
+      "triangles": 40,
+      "max_index": 83,
+      "signed_volume_m3": 1.234357,
+      "bounds_min": [
+        -0.38904422521591187,
+        0.0,
+        -0.3857467770576477
+      ],
+      "bounds_max": [
+        0.38279595971107483,
+        3.7950000762939453,
+        0.46215179562568665
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/rock_slab.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 84,
+      "triangles": 40,
+      "max_index": 83,
+      "signed_volume_m3": 0.397047,
+      "bounds_min": [
+        -0.9529145359992981,
+        0.0,
+        -1.000601053237915
+      ],
+      "bounds_max": [
+        1.0795594453811646,
+        0.23000000417232513,
+        0.8445689082145691
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/cave_wall_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 365,
+      "triangles": 173,
+      "max_index": 364,
+      "signed_volume_m3": 6.119569,
+      "bounds_min": [
+        -1.335644006729126,
+        0.0,
+        -0.40080660581588745
+      ],
+      "bounds_max": [
+        1.26039457321167,
+        4.369999885559082,
+        0.3902615010738373
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/cave_arch_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 336,
+      "triangles": 164,
+      "max_index": 335,
+      "signed_volume_m3": 1.685257,
+      "bounds_min": [
+        -1.331321120262146,
+        0.0,
+        -0.4717042148113251
+      ],
+      "bounds_max": [
+        1.3603471517562866,
+        3.4236743450164795,
+        0.41803210973739624
+      ],
+      "aperture_checks": [
+        {
+          "width_m": 1.4,
+          "height_m": 2.4,
+          "depth_m": 0.35,
+          "intersecting_triangles": 0,
+          "test_tolerance_m": 1e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "file": "meshes/stalagmite.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 28,
+      "triangles": 12,
+      "max_index": 27,
+      "signed_volume_m3": 0.292409,
+      "bounds_min": [
+        -0.35974058508872986,
+        -0.023956915363669395,
+        -0.38997116684913635
+      ],
+      "bounds_max": [
+        0.39928194880485535,
+        2.0,
+        0.38997116684913635
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/stalactite.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 28,
+      "triangles": 12,
+      "max_index": 27,
+      "signed_volume_m3": 0.292409,
+      "bounds_min": [
+        -0.39928194880485535,
+        -2.0,
+        -0.38997116684913635
+      ],
+      "bounds_max": [
+        0.35974058508872986,
+        0.021584436297416687,
+        0.38997116684913635
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/root_straight_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 168,
+      "triangles": 96,
+      "max_index": 167,
+      "signed_volume_m3": 0.250243,
+      "bounds_min": [
+        -1.0361825227737427,
+        -0.10176566243171692,
+        -0.2777888774871826
+      ],
+      "bounds_max": [
+        1.0174616575241089,
+        0.4324635863304138,
+        0.30768200755119324
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/root_corner_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 126,
+      "triangles": 72,
+      "max_index": 125,
+      "signed_volume_m3": 0.24767,
+      "bounds_min": [
+        -1.0240685939788818,
+        -0.033527035266160965,
+        -0.22524221241474152
+      ],
+      "bounds_max": [
+        0.2162325233221054,
+        0.4825408458709717,
+        1.0109466314315796
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/root_arch_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 336,
+      "triangles": 192,
+      "max_index": 335,
+      "signed_volume_m3": 0.664279,
+      "bounds_min": [
+        -1.1031047105789185,
+        -0.006481792312115431,
+        -0.1982131451368332
+      ],
+      "bounds_max": [
+        1.1031047105789185,
+        3.773461103439331,
+        0.2199999988079071
+      ],
+      "aperture_checks": [
+        {
+          "width_m": 1.4,
+          "height_m": 2.4,
+          "depth_m": 0.35,
+          "intersecting_triangles": 0,
+          "test_tolerance_m": 1e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "file": "meshes/tree_trunk.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 414,
+      "triangles": 232,
+      "max_index": 413,
+      "signed_volume_m3": 3.053094,
+      "bounds_min": [
+        -0.9424811005592346,
+        -0.059249844402074814,
+        -1.0926743745803833
+      ],
+      "bounds_max": [
+        1.1359089612960815,
+        4.013557434082031,
+        1.0926743745803833
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/colossal_trunk_quarter.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 414,
+      "triangles": 232,
+      "max_index": 413,
+      "signed_volume_m3": 30.290476,
+      "bounds_min": [
+        -2.312270402908325,
+        -0.06739798933267593,
+        -2.6905806064605713
+      ],
+      "bounds_max": [
+        2.816047191619873,
+        6.02301549911499,
+        2.6905806064605713
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/dead_branch_tree.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 228,
+      "triangles": 128,
+      "max_index": 227,
+      "signed_volume_m3": 0.328362,
+      "bounds_min": [
+        -1.1200190782546997,
+        -0.009987523779273033,
+        -0.19498558342456818
+      ],
+      "bounds_max": [
+        1.1200190782546997,
+        3.7125260829925537,
+        0.19498558342456818
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/broadleaf_clump.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 192,
+      "triangles": 64,
+      "max_index": 191,
+      "signed_volume_m3": 0.032373,
+      "bounds_min": [
+        -0.8500000238418579,
+        0.10000000149011612,
+        -0.8500000238418579
+      ],
+      "bounds_max": [
+        0.8500000238418579,
+        0.75,
+        0.8500000238418579
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/fern_clump.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 1332,
+      "triangles": 480,
+      "max_index": 1151,
+      "signed_volume_m3": 0.011132,
+      "bounds_min": [
+        -0.8199999928474426,
+        0.03858732059597969,
+        -0.7266408205032349
+      ],
+      "bounds_max": [
+        0.8199999928474426,
+        0.6538042426109314,
+        0.7266408205032349
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/mushroom_small.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 162,
+      "triangles": 96,
+      "max_index": 59,
+      "signed_volume_m3": 0.024417,
+      "bounds_min": [
+        -0.2199999988079071,
+        -0.006184434052556753,
+        -0.25107893347740173
+      ],
+      "bounds_max": [
+        0.30799999833106995,
+        0.593999981880188,
+        0.25107893347740173
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/mushroom_tall.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 162,
+      "triangles": 96,
+      "max_index": 59,
+      "signed_volume_m3": 2.293074,
+      "bounds_min": [
+        -1.0,
+        -0.028111062943935394,
+        -1.1412677764892578
+      ],
+      "bounds_max": [
+        1.399999976158142,
+        2.700000047683716,
+        1.1412677764892578
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/mushroom_cluster.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 486,
+      "triangles": 288,
+      "max_index": 179,
+      "signed_volume_m3": 0.132699,
+      "bounds_min": [
+        -0.5400000214576721,
+        -0.009557761251926422,
+        -0.49173298478126526
+      ],
+      "bounds_max": [
+        0.6759999990463257,
+        0.9179999828338623,
+        0.4880310595035553
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/shelf_fungus.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 144,
+      "triangles": 84,
+      "max_index": 143,
+      "signed_volume_m3": 0.129353,
+      "bounds_min": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        0.5,
+        0.7900000214576721,
+        0.5
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/tissue_wall_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 654,
+      "triangles": 372,
+      "max_index": 629,
+      "signed_volume_m3": 2.777623,
+      "bounds_min": [
+        -1.016115665435791,
+        -0.01935589127242565,
+        -0.3147077262401581
+      ],
+      "bounds_max": [
+        1.1293091773986816,
+        4.008070468902588,
+        0.20000000298023224
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/tissue_rib_arch.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 384,
+      "triangles": 224,
+      "max_index": 383,
+      "signed_volume_m3": 0.611834,
+      "bounds_min": [
+        -1.0800000429153442,
+        0.0,
+        -0.17000000178813934
+      ],
+      "bounds_max": [
+        1.0800000429153442,
+        3.455348014831543,
+        0.17000000178813934
+      ],
+      "aperture_checks": [
+        {
+          "width_m": 1.4,
+          "height_m": 2.4,
+          "depth_m": 0.35,
+          "intersecting_triangles": 0,
+          "test_tolerance_m": 1e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "file": "meshes/organic_pod.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 128,
+      "triangles": 70,
+      "max_index": 79,
+      "signed_volume_m3": 0.487702,
+      "bounds_min": [
+        -0.4000000059604645,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.4000000059604645,
+        2.0,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/bone_long.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 228,
+      "triangles": 128,
+      "max_index": 143,
+      "signed_volume_m3": 0.123235,
+      "bounds_min": [
+        -0.9800000190734863,
+        -0.07548702508211136,
+        -0.17919516563415527
+      ],
+      "bounds_max": [
+        0.9621744155883789,
+        0.28089049458503723,
+        0.15976662933826447
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/crag_cluster.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 30,
+      "max_index": 71,
+      "signed_volume_m3": 0.277736,
+      "bounds_min": [
+        -0.8199999928474426,
+        -0.015822289511561394,
+        -0.3634619414806366
+      ],
+      "bounds_max": [
+        0.6200000047683716,
+        1.2999999523162842,
+        0.3634619414806366
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/crystal_shard_small.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 60,
+      "triangles": 30,
+      "max_index": 59,
+      "signed_volume_m3": 0.026407,
+      "bounds_min": [
+        -0.15000000596046448,
+        0.0,
+        -0.12990380823612213
+      ],
+      "bounds_max": [
+        0.15000000596046448,
+        0.699999988079071,
+        0.12990380823612213
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/crystal_shard_tall.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 60,
+      "triangles": 30,
+      "max_index": 59,
+      "signed_volume_m3": 0.600902,
+      "bounds_min": [
+        -0.3199999928474426,
+        0.0,
+        -0.277128130197525
+      ],
+      "bounds_max": [
+        0.3199999928474426,
+        3.5,
+        0.277128130197525
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/crystal_obelisk.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 60,
+      "triangles": 30,
+      "max_index": 59,
+      "signed_volume_m3": 2.028717,
+      "bounds_min": [
+        -0.550000011920929,
+        0.0,
+        -0.476313978433609
+      ],
+      "bounds_max": [
+        0.550000011920929,
+        4.0,
+        0.476313978433609
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/crystal_cluster.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 240,
+      "triangles": 120,
+      "max_index": 239,
+      "signed_volume_m3": 0.472545,
+      "bounds_min": [
+        -0.7949468493461609,
+        -0.04597081243991852,
+        -0.56046462059021
+      ],
+      "bounds_max": [
+        0.692901611328125,
+        2.0,
+        0.4244714379310608
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/crystal_wall_ribs.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 364,
+      "triangles": 182,
+      "max_index": 299,
+      "signed_volume_m3": 1.775862,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.21258330345153809
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.1599999964237213
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/crystal_pointed_arch.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 168,
+      "triangles": 84,
+      "max_index": 119,
+      "signed_volume_m3": 0.500591,
+      "bounds_min": [
+        -1.0499999523162842,
+        0.0,
+        -0.17000000178813934
+      ],
+      "bounds_max": [
+        1.0499999523162842,
+        3.9047067165374756,
+        0.17000000178813934
+      ],
+      "aperture_checks": [
+        {
+          "width_m": 1.4,
+          "height_m": 2.4,
+          "depth_m": 0.35,
+          "intersecting_triangles": 0,
+          "test_tolerance_m": 1e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "file": "meshes/crystal_floor_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 144,
+      "triangles": 72,
+      "max_index": 119,
+      "signed_volume_m3": 1.052072,
+      "bounds_min": [
+        -1.0,
+        -0.25999999046325684,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.17000000178813934,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/ceremonial_pedestal.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 144,
+      "triangles": 84,
+      "max_index": 47,
+      "signed_volume_m3": 0.741175,
+      "bounds_min": [
+        -0.699999988079071,
+        0.0,
+        -0.699999988079071
+      ],
+      "bounds_max": [
+        0.699999988079071,
+        1.350000023841858,
+        0.699999988079071
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/astral_ring_focus.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 504,
+      "triangles": 258,
+      "max_index": 383,
+      "signed_volume_m3": 0.305999,
+      "bounds_min": [
+        -0.6000000238418579,
+        0.0,
+        -0.5706338882446289
+      ],
+      "bounds_max": [
+        0.6000000238418579,
+        1.600000023841858,
+        0.5706338882446289
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/machine_wall_panel.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 128,
+      "triangles": 64,
+      "max_index": 79,
+      "signed_volume_m3": 1.433856,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.18000000715255737
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/machine_wall_ribbed.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 320,
+      "triangles": 160,
+      "max_index": 295,
+      "signed_volume_m3": 1.045376,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.20000000298023224
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/machine_wall_bulkhead.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 222,
+      "triangles": 110,
+      "max_index": 197,
+      "signed_volume_m3": 0.993474,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.23000000417232513
+      ],
+      "bounds_max": [
+        1.0,
+        4.02642822265625,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/machine_doorframe.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 136,
+      "triangles": 68,
+      "max_index": 63,
+      "signed_volume_m3": 1.41036,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.23999999463558197
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.17499999701976776
+      ],
+      "aperture_checks": [
+        {
+          "width_m": 1.4,
+          "height_m": 2.9,
+          "depth_m": 0.35,
+          "intersecting_triangles": 0,
+          "test_tolerance_m": 1e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "file": "meshes/pipe_straight_12cm.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 180,
+      "triangles": 108,
+      "max_index": 119,
+      "signed_volume_m3": 0.096982,
+      "bounds_min": [
+        -1.0,
+        -0.03407115489244461,
+        -0.16200000047683716
+      ],
+      "bounds_max": [
+        1.0,
+        0.2740711569786072,
+        0.16200000047683716
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/pipe_straight_24cm.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 180,
+      "triangles": 108,
+      "max_index": 119,
+      "signed_volume_m3": 0.387927,
+      "bounds_min": [
+        -1.0,
+        -0.06814230978488922,
+        -0.3240000009536743
+      ],
+      "bounds_max": [
+        1.0,
+        0.5481423139572144,
+        0.3240000009536743
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/pipe_elbow_90.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 400,
+      "triangles": 236,
+      "max_index": 399,
+      "signed_volume_m3": 0.058759,
+      "bounds_min": [
+        -0.15863117575645447,
+        0.00783095695078373,
+        0.4791158139705658
+      ],
+      "bounds_max": [
+        0.5208842158317566,
+        0.31216904520988464,
+        1.1586312055587769
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/pipe_tee_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 136,
+      "triangles": 80,
+      "max_index": 135,
+      "signed_volume_m3": 0.225214,
+      "bounds_min": [
+        -1.0,
+        0.00783095695078373,
+        -0.1599999964237213
+      ],
+      "bounds_max": [
+        1.0,
+        0.31216904520988464,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/pipe_valve_riser.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 480,
+      "triangles": 248,
+      "max_index": 383,
+      "signed_volume_m3": 0.155376,
+      "bounds_min": [
+        -0.27000001072883606,
+        0.0,
+        -0.3499999940395355
+      ],
+      "bounds_max": [
+        0.27000001072883606,
+        2.0,
+        0.15216904878616333
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/gear_10tooth.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 508,
+      "triangles": 248,
+      "max_index": 459,
+      "signed_volume_m3": 0.073062,
+      "bounds_min": [
+        -0.3940437436103821,
+        0.003990537021309137,
+        -0.12800000607967377
+      ],
+      "bounds_max": [
+        0.3940437436103821,
+        0.7960094809532166,
+        0.12800000607967377
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/gear_16tooth.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 784,
+      "triangles": 380,
+      "max_index": 735,
+      "signed_volume_m3": 0.295279,
+      "bounds_min": [
+        -0.7953395843505859,
+        0.004660398233681917,
+        -0.12800000607967377
+      ],
+      "bounds_max": [
+        0.7953395843505859,
+        1.5953396558761597,
+        0.12800000607967377
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/gear_machine_pair.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 1200,
+      "triangles": 586,
+      "max_index": 1103,
+      "signed_volume_m3": 0.75494,
+      "bounds_min": [
+        -0.8948256969451904,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.8440437316894531,
+        1.8460094928741455,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/tank_vertical.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 168,
+      "triangles": 100,
+      "max_index": 95,
+      "signed_volume_m3": 3.13412,
+      "bounds_min": [
+        -0.699999988079071,
+        0.0,
+        -0.699999988079071
+      ],
+      "bounds_max": [
+        0.699999988079071,
+        2.9000000953674316,
+        0.699999988079071
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/machine_console.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 120,
+      "triangles": 60,
+      "max_index": 95,
+      "signed_volume_m3": 1.49168,
+      "bounds_min": [
+        -0.699999988079071,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.699999988079071,
+        1.4900000095367432,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/smith_anvil.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 66,
+      "triangles": 32,
+      "max_index": 41,
+      "signed_volume_m3": 0.7601,
+      "bounds_min": [
+        -0.800000011920929,
+        0.0,
+        -0.2750000059604645
+      ],
+      "bounds_max": [
+        1.2000000476837158,
+        1.340000033378601,
+        0.2750000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/forge_hearth.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 152,
+      "triangles": 76,
+      "max_index": 79,
+      "signed_volume_m3": 2.554,
+      "bounds_min": [
+        -0.800000011920929,
+        0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        0.800000011920929,
+        3.5,
+        0.5
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/foundry_crucible.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 144,
+      "triangles": 88,
+      "max_index": 71,
+      "signed_volume_m3": 0.87725,
+      "bounds_min": [
+        -0.75,
+        0.05000000074505806,
+        -0.75
+      ],
+      "bounds_max": [
+        0.75,
+        0.800000011920929,
+        0.75
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/coil_generator.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 144,
+      "triangles": 84,
+      "max_index": 83,
+      "signed_volume_m3": 0.271176,
+      "bounds_min": [
+        -0.5,
+        0.0,
+        -0.4755282700061798
+      ],
+      "bounds_max": [
+        0.5,
+        2.5999999046325684,
+        0.4755282700061798
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/coil_stack.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 564,
+      "triangles": 344,
+      "max_index": 503,
+      "signed_volume_m3": 0.588535,
+      "bounds_min": [
+        -0.41999998688697815,
+        0.0,
+        -0.41999998688697815
+      ],
+      "bounds_max": [
+        0.41999998688697815,
+        2.5,
+        0.41999998688697815
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/vent_louver.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 312,
+      "triangles": 156,
+      "max_index": 287,
+      "signed_volume_m3": 0.6624,
+      "bounds_min": [
+        -0.8999999761581421,
+        0.0,
+        -0.1899999976158142
+      ],
+      "bounds_max": [
+        0.8999999761581421,
+        2.4000000953674316,
+        0.07999999821186066
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/industrial_ladder_3m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 432,
+      "triangles": 240,
+      "max_index": 359,
+      "signed_volume_m3": 0.030462,
+      "bounds_min": [
+        -0.38499999046325684,
+        0.0,
+        -0.030310889706015587
+      ],
+      "bounds_max": [
+        0.38499999046325684,
+        3.0,
+        0.030310889706015587
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/textile_curtain_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 2340,
+      "triangles": 1172,
+      "max_index": 2303,
+      "signed_volume_m3": 0.158314,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.09000000357627869
+      ],
+      "bounds_max": [
+        1.0,
+        3.0846409797668457,
+        0.11500000208616257
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/textile_banner_pointed.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 66,
+      "triangles": 36,
+      "max_index": 35,
+      "signed_volume_m3": 0.043024,
+      "bounds_min": [
+        -0.5,
+        -0.25,
+        -0.02500000037252903
+      ],
+      "bounds_max": [
+        0.5,
+        1.6716506481170654,
+        0.02500000037252903
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/textile_rug_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 152,
+      "triangles": 76,
+      "max_index": 127,
+      "signed_volume_m3": 0.203147,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.05400000140070915,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/textile_canopy_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 192,
+      "triangles": 104,
+      "max_index": 143,
+      "signed_volume_m3": 0.342559,
+      "bounds_min": [
+        -1.2000000476837158,
+        0.0,
+        -1.0
+      ],
+      "bounds_max": [
+        1.2000000476837158,
+        3.059999942779541,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/textile_cushion.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.168,
+      "bounds_min": [
+        -0.4000000059604645,
+        0.0,
+        -0.3499999940395355
+      ],
+      "bounds_max": [
+        0.4000000059604645,
+        0.30000001192092896,
+        0.3499999940395355
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/toy_block_cube.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.0,
+      "bounds_min": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        0.5,
+        1.0,
+        0.5
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/toy_block_wedge.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 18,
+      "triangles": 8,
+      "max_index": 17,
+      "signed_volume_m3": 0.5,
+      "bounds_min": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        0.5,
+        1.0,
+        0.5
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/toy_block_arch.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 240,
+      "triangles": 120,
+      "max_index": 239,
+      "signed_volume_m3": 0.262459,
+      "bounds_min": [
+        -0.5,
+        0.0,
+        -0.25
+      ],
+      "bounds_max": [
+        0.5,
+        1.2000000476837158,
+        0.25
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/urn.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 180,
+      "triangles": 108,
+      "max_index": 59,
+      "signed_volume_m3": 0.188351,
+      "bounds_min": [
+        -0.3499999940395355,
+        0.0,
+        -0.3328697681427002
+      ],
+      "bounds_max": [
+        0.3499999940395355,
+        0.8500000238418579,
+        0.3328697681427002
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/bottle_potion.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 168,
+      "triangles": 100,
+      "max_index": 119,
+      "signed_volume_m3": 0.051838,
+      "bounds_min": [
+        -0.20000000298023224,
+        0.0,
+        -0.19021129608154297
+      ],
+      "bounds_max": [
+        0.20000000298023224,
+        0.75,
+        0.19021129608154297
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/lantern_box.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 84,
+      "triangles": 44,
+      "max_index": 59,
+      "signed_volume_m3": 0.194124,
+      "bounds_min": [
+        -0.3499999940395355,
+        0.0,
+        -0.2750000059604645
+      ],
+      "bounds_max": [
+        0.3499999940395355,
+        1.0,
+        0.2750000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/sarcophagus.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 48,
+      "triangles": 24,
+      "max_index": 23,
+      "signed_volume_m3": 1.213,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        1.0,
+        1.0,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/altar_block.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 48,
+      "triangles": 24,
+      "max_index": 23,
+      "signed_volume_m3": 1.274,
+      "bounds_min": [
+        -0.6499999761581421,
+        0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        0.6499999761581421,
+        1.399999976158142,
+        0.5
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/water_surface_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.24,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.05999999865889549,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/rubble_scatter.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 588,
+      "triangles": 280,
+      "max_index": 587,
+      "signed_volume_m3": 0.05942,
+      "bounds_min": [
+        -0.7955771088600159,
+        0.0,
+        -0.2908697724342346
+      ],
+      "bounds_max": [
+        0.8695359230041504,
+        0.24150000512599945,
+        0.2922164499759674
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/sunflower_stem.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 396,
+      "triangles": 160,
+      "max_index": 287,
+      "signed_volume_m3": 0.028287,
+      "bounds_min": [
+        -0.44999998807907104,
+        0.0,
+        -0.20522280037403107
+      ],
+      "bounds_max": [
+        0.5,
+        2.4279754161834717,
+        0.22650451958179474
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/library_book_row.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 144,
+      "triangles": 72,
+      "max_index": 119,
+      "signed_volume_m3": 1.4046,
+      "bounds_min": [
+        -0.8999999761581421,
+        0.0,
+        -0.25999999046325684
+      ],
+      "bounds_max": [
+        0.8999999761581421,
+        2.200000047683716,
+        0.15000000596046448
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/fallen_log_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 198,
+      "triangles": 116,
+      "max_index": 107,
+      "signed_volume_m3": 0.4089,
+      "bounds_min": [
+        -1.0,
+        0.00425382936373353,
+        -0.26311394572257996
+      ],
+      "bounds_max": [
+        1.0,
+        0.7667931914329529,
+        0.2800000011920929
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/acacia_tree.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 822,
+      "triangles": 424,
+      "max_index": 419,
+      "signed_volume_m3": 2.342155,
+      "bounds_min": [
+        -1.9074658155441284,
+        -0.00799360778182745,
+        -2.1238179206848145
+      ],
+      "bounds_max": [
+        2.1064445972442627,
+        3.244999885559082,
+        2.060051202774048
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/palm_tree.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 216,
+      "triangles": 84,
+      "max_index": 167,
+      "signed_volume_m3": 0.277087,
+      "bounds_min": [
+        -1.3064048290252686,
+        0.0,
+        -1.4136455059051514
+      ],
+      "bounds_max": [
+        1.4500000476837158,
+        2.950000047683716,
+        1.4136455059051514
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/grass_clump.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 264,
+      "triangles": 88,
+      "max_index": 263,
+      "signed_volume_m3": 0.003477,
+      "bounds_min": [
+        -0.33582255244255066,
+        0.0,
+        -0.3464375138282776
+      ],
+      "bounds_max": [
+        0.3499999940395355,
+        0.5699999928474426,
+        0.3464375138282776
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/dry_grass_tuft.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 312,
+      "triangles": 104,
+      "max_index": 311,
+      "signed_volume_m3": 0.006315,
+      "bounds_min": [
+        -0.33982962369918823,
+        0.0,
+        -0.34744811058044434
+      ],
+      "bounds_max": [
+        0.3499999940395355,
+        0.949999988079071,
+        0.34744811058044434
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/cattail_reed_cluster.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 480,
+      "triangles": 240,
+      "max_index": 329,
+      "signed_volume_m3": 0.022158,
+      "bounds_min": [
+        -0.5,
+        -0.0004997224314138293,
+        -0.05362103506922722
+      ],
+      "bounds_max": [
+        0.36500000953674316,
+        1.7999999523162842,
+        0.30000001192092896
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/coral_branch.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 330,
+      "triangles": 184,
+      "max_index": 287,
+      "signed_volume_m3": 0.080798,
+      "bounds_min": [
+        -0.7196115851402283,
+        0.0,
+        -0.19919349253177643
+      ],
+      "bounds_max": [
+        0.7196115851402283,
+        1.1591520309448242,
+        0.13648991286754608
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/coral_shelf_cluster.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 432,
+      "triangles": 204,
+      "max_index": 431,
+      "signed_volume_m3": 0.624502,
+      "bounds_min": [
+        -0.5430186986923218,
+        0.0,
+        -0.43858280777931213
+      ],
+      "bounds_max": [
+        1.0012394189834595,
+        0.7475000023841858,
+        0.6872541904449463
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/cliff_face_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 178,
+      "triangles": 84,
+      "max_index": 177,
+      "signed_volume_m3": 6.862367,
+      "bounds_min": [
+        -1.0264780521392822,
+        0.0,
+        -0.5446825623512268
+      ],
+      "bounds_max": [
+        1.425965666770935,
+        4.599999904632568,
+        0.841056227684021
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/shore_bank_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 1.278,
+      "bounds_min": [
+        -1.0,
+        -0.30000001192092896,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.09000000357627869,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/standing_stone.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 101,
+      "triangles": 47,
+      "max_index": 76,
+      "signed_volume_m3": 0.938386,
+      "bounds_min": [
+        -0.44999998807907104,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.44999998807907104,
+        3.2200000286102295,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/wheat_seedhead_cluster.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 750,
+      "triangles": 280,
+      "max_index": 599,
+      "signed_volume_m3": 0.003884,
+      "bounds_min": [
+        -0.3100000023841858,
+        -0.000698812073096633,
+        -0.029223227873444557
+      ],
+      "bounds_max": [
+        0.44999998807907104,
+        1.223273754119873,
+        0.04922322556376457
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/desert_cactus.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 216,
+      "triangles": 124,
+      "max_index": 215,
+      "signed_volume_m3": 0.205675,
+      "bounds_min": [
+        -0.5581162571907043,
+        0.0,
+        -0.23000000417232513
+      ],
+      "bounds_max": [
+        0.5699999928474426,
+        1.100000023841858,
+        0.23000000417232513
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/arch_wide_4m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 509,
+      "triangles": 247,
+      "max_index": 383,
+      "signed_volume_m3": 2.252369,
+      "bounds_min": [
+        -2.0,
+        0.0,
+        -0.17499999701976776
+      ],
+      "bounds_max": [
+        2.0,
+        4.5,
+        0.17499999701976776
+      ],
+      "aperture_checks": [
+        {
+          "width_m": 3,
+          "height_m": 2.5,
+          "depth_m": 0.35,
+          "intersecting_triangles": 0,
+          "test_tolerance_m": 1e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "file": "meshes/wall_window_open_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 208,
+      "triangles": 104,
+      "max_index": 111,
+      "signed_volume_m3": 1.189133,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.1899999976158142
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.10999999940395355
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/wall_shrine_niche.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 216,
+      "triangles": 108,
+      "max_index": 123,
+      "signed_volume_m3": 2.29,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.6549999713897705
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.07999999821186066
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/water_channel_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 47,
+      "signed_volume_m3": 1.28,
+      "bounds_min": [
+        -1.0,
+        -0.5,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.10000000149011612,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/channel_crossing_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 47,
+      "signed_volume_m3": 0.936,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -0.7599999904632568
+      ],
+      "bounds_max": [
+        1.0,
+        0.699999988079071,
+        0.7599999904632568
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/culvert_vault_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 336,
+      "triangles": 168,
+      "max_index": 335,
+      "signed_volume_m3": 2.8588,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        2.5,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/rope_bridge_2x4.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 1308,
+      "triangles": 688,
+      "max_index": 827,
+      "signed_volume_m3": 1.342091,
+      "bounds_min": [
+        -1.0099999904632568,
+        -0.1599999964237213,
+        -2.008709669113159
+      ],
+      "bounds_max": [
+        1.0099999904632568,
+        1.2999999523162842,
+        2.008709669113159
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/raised_walkway_2m.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 47,
+      "signed_volume_m3": 0.96,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.4000000059604645,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/fountain_base.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 168,
+      "triangles": 100,
+      "max_index": 71,
+      "signed_volume_m3": 1.2995,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.550000011920929,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "meshes/weapon_display_rack.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 240,
+      "triangles": 120,
+      "max_index": 143,
+      "signed_volume_m3": 0.52032,
+      "bounds_min": [
+        -0.800000011920929,
+        0.0,
+        -0.3499999940395355
+      ],
+      "bounds_max": [
+        0.800000011920929,
+        1.5,
+        0.3499999940395355
+      ],
+      "aperture_checks": []
+    }
+  ],
+  "assemblies": [
+    {
+      "file": "assemblies/masonry_cloister_demo.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 4584,
+      "triangles": 2308,
+      "max_index": 2999,
+      "signed_volume_m3": 19.796679,
+      "bounds_min": [
+        -3.0799999237060547,
+        -0.20000000298023224,
+        -3.0
+      ],
+      "bounds_max": [
+        3.0,
+        4.0,
+        3.140000104904175
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "assemblies/organic_passage_demo.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 4583,
+      "triangles": 2201,
+      "max_index": 1391,
+      "signed_volume_m3": 16.264065,
+      "bounds_min": [
+        -3.0,
+        -0.20000000298023224,
+        -2.994999885559082
+      ],
+      "bounds_max": [
+        3.0359089374542236,
+        4.369999885559082,
+        3.418032169342041
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "assemblies/machine_workshop_demo.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 5308,
+      "triangles": 2718,
+      "max_index": 4395,
+      "signed_volume_m3": 11.782959,
+      "bounds_min": [
+        -2.0999999046325684,
+        -0.1599999964237213,
+        -3.0
+      ],
+      "bounds_max": [
+        2.0,
+        4.0,
+        3.174999952316284
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "assemblies/timber_inn_demo.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 2868,
+      "triangles": 1476,
+      "max_index": 2327,
+      "signed_volume_m3": 17.522794,
+      "bounds_min": [
+        -3.0899999141693115,
+        -0.20000000298023224,
+        -3.0
+      ],
+      "bounds_max": [
+        3.0,
+        4.0,
+        3.0899999141693115
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "assemblies/crystal_sanctum_demo.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 3260,
+      "triangles": 1648,
+      "max_index": 1655,
+      "signed_volume_m3": 16.843391,
+      "bounds_min": [
+        -3.0,
+        -0.25999999046325684,
+        -3.0
+      ],
+      "bounds_max": [
+        3.0,
+        4.0,
+        3.1700000762939453
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "assemblies/textile_pavilion_demo.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 8886,
+      "triangles": 4456,
+      "max_index": 6959,
+      "signed_volume_m3": 4.576273,
+      "bounds_min": [
+        -3.0,
+        0.0,
+        -3.0
+      ],
+      "bounds_max": [
+        3.0,
+        3.0846409797668457,
+        3.115000009536743
+      ],
+      "aperture_checks": []
+    }
+  ],
+  "collision_guides": [
+    {
+      "file": "collision-guides/masonry_wall_2x2__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.10000000149011612
+      ],
+      "bounds_max": [
+        1.0,
+        2.0,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/masonry_wall_2x4__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.6,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.10000000149011612
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/masonry_wall_ashlar__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.6,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.10000000149011612
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/masonry_corner_inner__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 48,
+      "triangles": 24,
+      "max_index": 47,
+      "signed_volume_m3": 3.2,
+      "bounds_min": [
+        -0.10000000149011612,
+        0.0,
+        -0.10000000149011612
+      ],
+      "bounds_max": [
+        2.0,
+        4.0,
+        2.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/masonry_corner_outer__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 48,
+      "triangles": 24,
+      "max_index": 47,
+      "signed_volume_m3": 3.2,
+      "bounds_min": [
+        -0.10000000149011612,
+        0.0,
+        -0.10000000149011612
+      ],
+      "bounds_max": [
+        2.0,
+        4.0,
+        2.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/masonry_wall_broken__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.12,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.10000000149011612
+      ],
+      "bounds_max": [
+        1.0,
+        2.799999952316284,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/masonry_doorway_round__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 0.812,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.14000000059604645
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.14000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/masonry_doorway_pointed__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 0.812,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.14000000059604645
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.14000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/door_leaf_plank_1p36__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.385152,
+      "bounds_min": [
+        0.0,
+        0.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.3600000143051147,
+        2.359999895095825,
+        0.05999999865889549
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/gate_leaf_barred__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.26112,
+      "bounds_min": [
+        -0.6800000071525574,
+        0.0,
+        -0.03999999910593033
+      ],
+      "bounds_max": [
+        0.6800000071525574,
+        2.4000000953674316,
+        0.03999999910593033
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/column_square__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.56,
+      "bounds_min": [
+        -0.4000000059604645,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.4000000059604645,
+        4.0,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/column_round__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.56,
+      "bounds_min": [
+        -0.4000000059604645,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.4000000059604645,
+        4.0,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/column_fluted__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.56,
+      "bounds_min": [
+        -0.4000000059604645,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.4000000059604645,
+        4.0,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/column_broken__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.536,
+      "bounds_min": [
+        -0.4000000059604645,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.4000000059604645,
+        2.4000000953674316,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/masonry_buttress__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.92,
+      "bounds_min": [
+        -0.20000000298023224,
+        0.0,
+        -0.30000001192092896
+      ],
+      "bounds_max": [
+        0.6000000238418579,
+        4.0,
+        0.30000001192092896
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/masonry_parapet_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8384,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.1599999964237213
+      ],
+      "bounds_max": [
+        1.0,
+        1.309999942779541,
+        0.1599999964237213
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/masonry_crenellation_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.75,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.15000000596046448
+      ],
+      "bounds_max": [
+        1.0,
+        1.25,
+        0.15000000596046448
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/masonry_inset_panel__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.56,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.23999999463558197
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.07999999821186066
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/masonry_capital_bracket__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 3.304,
+      "bounds_min": [
+        -0.800000011920929,
+        0.0,
+        -0.3499999940395355
+      ],
+      "bounds_max": [
+        0.800000011920929,
+        2.950000047683716,
+        0.3499999940395355
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/floor_plain_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/floor_inset_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/floor_pavers_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/floor_grate_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/floor_cracked_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/ceiling_flat_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.799999,
+      "bounds_min": [
+        -1.0,
+        4.0,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        4.199999809265137,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/ceiling_coffer_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.680001,
+      "bounds_min": [
+        -1.0,
+        3.8399999141693115,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        4.260000228881836,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/landing_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/bridge_stone_2x4__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 3.264,
+      "bounds_min": [
+        -1.0299999713897705,
+        -0.23999999463558197,
+        -2.0
+      ],
+      "bounds_max": [
+        1.0299999713897705,
+        1.2000000476837158,
+        2.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/bridge_timber_2x4__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 3.264,
+      "bounds_min": [
+        -1.0299999713897705,
+        -0.23999999463558197,
+        -2.0
+      ],
+      "bounds_max": [
+        1.0299999713897705,
+        1.2000000476837158,
+        2.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/bridge_metal_2x4__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 3.264,
+      "bounds_min": [
+        -1.0299999713897705,
+        -0.23999999463558197,
+        -2.0
+      ],
+      "bounds_max": [
+        1.0299999713897705,
+        1.2000000476837158,
+        2.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/railing_iron_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.288,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        1.2000000476837158,
+        0.05999999865889549
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/railing_timber_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.292813,
+      "bounds_min": [
+        -1.0167125463485718,
+        0.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0167125463485718,
+        1.2000000476837158,
+        0.05999999865889549
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/timber_wall_plaster__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.36,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.20499999821186066
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.09000000357627869
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/timber_wall_plank__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.76,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.12999999523162842
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.09000000357627869
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/timber_wall_lattice__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.76,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.12999999523162842
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.09000000357627869
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/timber_wall_paper__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.76,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.12999999523162842
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.09000000357627869
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/timber_post_beam_gate__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 0.7384,
+      "bounds_min": [
+        -1.100000023841858,
+        0.0,
+        -0.20000000298023224
+      ],
+      "bounds_max": [
+        1.100000023841858,
+        3.7750000953674316,
+        0.20000000298023224
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/timber_post__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.4096,
+      "bounds_min": [
+        -0.1599999964237213,
+        0.0,
+        -0.1599999964237213
+      ],
+      "bounds_max": [
+        0.1599999964237213,
+        4.0,
+        0.1599999964237213
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/timber_short_post__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.12288,
+      "bounds_min": [
+        -0.1599999964237213,
+        0.0,
+        -0.1599999964237213
+      ],
+      "bounds_max": [
+        0.1599999964237213,
+        1.2000000476837158,
+        0.1599999964237213
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/timber_beam_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.1056,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.10999999940395355
+      ],
+      "bounds_max": [
+        1.0,
+        0.23999999463558197,
+        0.10999999940395355
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/timber_gable_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.846796,
+      "bounds_min": [
+        -1.0565685033798218,
+        -0.05656849965453148,
+        -0.20999999344348907
+      ],
+      "bounds_max": [
+        1.0565685033798218,
+        1.0565685033798218,
+        0.15000000596046448
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/inn_bench__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.585,
+      "bounds_min": [
+        -0.8999999761581421,
+        0.0,
+        -0.32499998807907104
+      ],
+      "bounds_max": [
+        0.8999999761581421,
+        0.5,
+        0.32499998807907104
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/inn_table__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.224,
+      "bounds_min": [
+        -0.800000011920929,
+        0.0,
+        -0.44999998807907104
+      ],
+      "bounds_max": [
+        0.800000011920929,
+        0.8500000238418579,
+        0.44999998807907104
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/inn_bar_counter_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.3205,
+      "bounds_min": [
+        -1.0499999523162842,
+        0.0,
+        -0.42500001192092896
+      ],
+      "bounds_max": [
+        1.0499999523162842,
+        1.2999999523162842,
+        0.42500001192092896
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/inn_bed_single__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.541,
+      "bounds_min": [
+        -0.550000011920929,
+        0.14499999582767487,
+        -1.0
+      ],
+      "bounds_max": [
+        0.550000011920929,
+        1.2999999523162842,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/tatami_mat_1x2__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.164,
+      "bounds_min": [
+        -0.5,
+        0.0,
+        -1.0
+      ],
+      "bounds_max": [
+        0.5,
+        0.0820000022649765,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/shelf_bookcase__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.316,
+      "bounds_min": [
+        -0.699999988079071,
+        0.0,
+        -0.3199999928474426
+      ],
+      "bounds_max": [
+        0.699999988079071,
+        2.0,
+        0.15000000596046448
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/barrel__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.623295,
+      "bounds_min": [
+        -0.4050000011920929,
+        0.0,
+        -0.4050000011920929
+      ],
+      "bounds_max": [
+        0.4050000011920929,
+        0.949999988079071,
+        0.4050000011920929
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/crate__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8181,
+      "bounds_min": [
+        -0.44999998807907104,
+        0.0,
+        -0.5600000023841858
+      ],
+      "bounds_max": [
+        0.44999998807907104,
+        0.8999999761581421,
+        0.44999998807907104
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/boulder_small__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.942154,
+      "bounds_min": [
+        -0.5619530081748962,
+        0.0,
+        -0.5143284797668457
+      ],
+      "bounds_max": [
+        0.5529270172119141,
+        0.7475000023841858,
+        0.6162024736404419
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/boulder_large__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 7.849426,
+      "bounds_min": [
+        -1.0374510288238525,
+        0.0,
+        -0.9429364800453186
+      ],
+      "bounds_max": [
+        1.0207890272140503,
+        1.840000033378601,
+        1.129704475402832
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/basalt_column__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.483609,
+      "bounds_min": [
+        -0.38904398679733276,
+        0.0,
+        -0.385747492313385
+      ],
+      "bounds_max": [
+        0.3827959895133972,
+        3.7950000762939453,
+        0.46215149760246277
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/rock_slab__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.86256,
+      "bounds_min": [
+        -0.9529150128364563,
+        0.0,
+        -1.000601053237915
+      ],
+      "bounds_max": [
+        1.0795589685440063,
+        0.23000000417232513,
+        0.8445690274238586
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/cave_wall_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 4.8,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.30000001192092896
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.30000001192092896
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/cave_arch_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 48,
+      "triangles": 24,
+      "max_index": 47,
+      "signed_volume_m3": 1.68,
+      "bounds_min": [
+        -1.2000000476837158,
+        0.0,
+        -0.3499999940395355
+      ],
+      "bounds_max": [
+        1.2000000476837158,
+        2.4000000953674316,
+        0.3499999940395355
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/stalagmite__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.19817,
+      "bounds_min": [
+        -0.3597404956817627,
+        -0.023956499993801117,
+        -0.389970988035202
+      ],
+      "bounds_max": [
+        0.3992824852466583,
+        2.000000476837158,
+        0.389970988035202
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/stalactite__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.196765,
+      "bounds_min": [
+        -0.3992824852466583,
+        -2.0,
+        -0.389970988035202
+      ],
+      "bounds_max": [
+        0.3597404956817627,
+        0.021584000438451767,
+        0.389970988035202
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/root_straight_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.64233,
+      "bounds_min": [
+        -1.0361820459365845,
+        -0.10176549851894379,
+        -0.2777884900569916
+      ],
+      "bounds_max": [
+        1.0174620151519775,
+        0.43246349692344666,
+        0.30768251419067383
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/root_corner_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.791259,
+      "bounds_min": [
+        -1.0240684747695923,
+        -0.03352700173854828,
+        -0.2252424955368042
+      ],
+      "bounds_max": [
+        0.21623249351978302,
+        0.4825409948825836,
+        1.01094651222229
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/root_arch_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 48,
+      "triangles": 24,
+      "max_index": 47,
+      "signed_volume_m3": 0.672,
+      "bounds_min": [
+        -1.0750000476837158,
+        0.0,
+        -0.20000000298023224
+      ],
+      "bounds_max": [
+        1.0750000476837158,
+        2.4000000953674316,
+        0.20000000298023224
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/tree_trunk__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 18.498718,
+      "bounds_min": [
+        -0.9424809813499451,
+        -0.059249501675367355,
+        -1.0926744937896729
+      ],
+      "bounds_max": [
+        1.1359089612960815,
+        4.013557434082031,
+        1.0926744937896729
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/colossal_trunk_quarter__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 168.072891,
+      "bounds_min": [
+        -2.3122711181640625,
+        -0.06739749759435654,
+        -2.6905806064605713
+      ],
+      "bounds_max": [
+        2.816046953201294,
+        6.02301549911499,
+        2.6905806064605713
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/dead_branch_tree__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 3.251801,
+      "bounds_min": [
+        -1.1200189590454102,
+        -0.009987999685108662,
+        -0.194985494017601
+      ],
+      "bounds_max": [
+        1.1200189590454102,
+        3.7125260829925537,
+        0.194985494017601
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/broadleaf_clump__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.8785,
+      "bounds_min": [
+        -0.8500000238418579,
+        0.10000000149011612,
+        -0.8500000238418579
+      ],
+      "bounds_max": [
+        0.8500000238418579,
+        0.75,
+        0.8500000238418579
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/fern_clump__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.466297,
+      "bounds_min": [
+        -0.8199999928474426,
+        0.03858749940991402,
+        -0.7266409993171692
+      ],
+      "bounds_max": [
+        0.8199999928474426,
+        0.6538044810295105,
+        0.7266409993171692
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/mushroom_small__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.159132,
+      "bounds_min": [
+        -0.2199999988079071,
+        -0.006184000056236982,
+        -0.2510789930820465
+      ],
+      "bounds_max": [
+        0.30799999833106995,
+        0.593999981880188,
+        0.2510789930820465
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/mushroom_tall__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 14.944829,
+      "bounds_min": [
+        -1.0,
+        -0.028111500665545464,
+        -1.141268014907837
+      ],
+      "bounds_max": [
+        1.399999976158142,
+        2.6999995708465576,
+        1.141268014907837
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/mushroom_cluster__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.105086,
+      "bounds_min": [
+        -0.5400000214576721,
+        -0.009557999670505524,
+        -0.49173301458358765
+      ],
+      "bounds_max": [
+        0.6759999990463257,
+        0.9179999828338623,
+        0.4880309998989105
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/shelf_fungus__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.79,
+      "bounds_min": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        0.5,
+        0.7900000214576721,
+        0.5
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/tissue_wall_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 4.447357,
+      "bounds_min": [
+        -1.0161155462265015,
+        -0.01935650035738945,
+        -0.31470799446105957
+      ],
+      "bounds_max": [
+        1.1293095350265503,
+        4.008070468902588,
+        0.20000000298023224
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/tissue_rib_arch__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 48,
+      "triangles": 24,
+      "max_index": 47,
+      "signed_volume_m3": 0.55488,
+      "bounds_min": [
+        -1.0800000429153442,
+        0.0,
+        -0.17000000178813934
+      ],
+      "bounds_max": [
+        1.0800000429153442,
+        2.4000000953674316,
+        0.17000000178813934
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/organic_pod__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.28,
+      "bounds_min": [
+        -0.4000000059604645,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.4000000059604645,
+        2.0,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/bone_long__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.234612,
+      "bounds_min": [
+        -0.9800000190734863,
+        -0.07548700273036957,
+        -0.17919500172138214
+      ],
+      "bounds_max": [
+        0.9621739983558655,
+        0.2808910012245178,
+        0.1597670018672943
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/crag_cluster__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.377364,
+      "bounds_min": [
+        -0.8199999928474426,
+        -0.015822000801563263,
+        -0.36346200108528137
+      ],
+      "bounds_max": [
+        0.6200000047683716,
+        1.2999999523162842,
+        0.36346200108528137
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/crystal_shard_small__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.05456,
+      "bounds_min": [
+        -0.15000000596046448,
+        0.0,
+        -0.12990400195121765
+      ],
+      "bounds_max": [
+        0.15000000596046448,
+        0.699999988079071,
+        0.12990400195121765
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/crystal_shard_tall__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.241533,
+      "bounds_min": [
+        -0.3199999928474426,
+        0.0,
+        -0.2771280109882355
+      ],
+      "bounds_max": [
+        0.3199999928474426,
+        3.5,
+        0.2771280109882355
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/crystal_obelisk__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 4.191563,
+      "bounds_min": [
+        -0.550000011920929,
+        0.0,
+        -0.4763140082359314
+      ],
+      "bounds_max": [
+        0.550000011920929,
+        4.0,
+        0.4763140082359314
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/crystal_cluster__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.998238,
+      "bounds_min": [
+        -0.7949470281600952,
+        -0.04597049951553345,
+        -0.5604649782180786
+      ],
+      "bounds_max": [
+        0.6929010152816772,
+        2.000000476837158,
+        0.424470990896225
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/crystal_wall_ribs__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.980664,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.2125834971666336
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.15999950468540192
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/crystal_pointed_arch__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 48,
+      "triangles": 24,
+      "max_index": 47,
+      "signed_volume_m3": 0.55488,
+      "bounds_min": [
+        -1.0299999713897705,
+        0.0,
+        -0.17000000178813934
+      ],
+      "bounds_max": [
+        1.0299999713897705,
+        2.4000000953674316,
+        0.17000000178813934
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/crystal_floor_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.04,
+      "bounds_min": [
+        -1.0,
+        -0.25999999046325684,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/ceremonial_pedestal__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.646,
+      "bounds_min": [
+        -0.699999988079071,
+        0.0,
+        -0.699999988079071
+      ],
+      "bounds_max": [
+        0.699999988079071,
+        1.350000023841858,
+        0.699999988079071
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/astral_ring_focus__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.191235,
+      "bounds_min": [
+        -0.6000000238418579,
+        0.0,
+        -0.5706340074539185
+      ],
+      "bounds_max": [
+        0.6000000238418579,
+        1.600000023841858,
+        0.5706340074539185
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/machine_wall_panel__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.24,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.18000000715255737
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/machine_wall_ribbed__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.4,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.20000000298023224
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/machine_wall_bulkhead__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.657442,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.23000000417232513
+      ],
+      "bounds_max": [
+        1.0,
+        4.02642822265625,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/machine_doorframe__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 1.379,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.17499999701976776
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.17499999701976776
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/pipe_straight_12cm__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.199676,
+      "bounds_min": [
+        -1.0,
+        -0.034070998430252075,
+        -0.16200000047683716
+      ],
+      "bounds_max": [
+        1.0,
+        0.27407100796699524,
+        0.16200000047683716
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/pipe_straight_24cm__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.798705,
+      "bounds_min": [
+        -1.0,
+        -0.06814250349998474,
+        -0.3240000009536743
+      ],
+      "bounds_max": [
+        1.0,
+        0.5481424927711487,
+        0.3240000009536743
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/pipe_elbow_90__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.140525,
+      "bounds_min": [
+        -0.15863050520420074,
+        0.007830999791622162,
+        0.47911548614501953
+      ],
+      "bounds_max": [
+        0.5208845138549805,
+        0.31216898560523987,
+        1.1586304903030396
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/pipe_tee_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.706064,
+      "bounds_min": [
+        -1.0,
+        0.007830999791622162,
+        -0.1599999964237213
+      ],
+      "bounds_max": [
+        1.0,
+        0.31216898560523987,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/pipe_valve_riser__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.542343,
+      "bounds_min": [
+        -0.27000001072883606,
+        0.0,
+        -0.34999948740005493
+      ],
+      "bounds_max": [
+        0.27000001072883606,
+        2.0,
+        0.15216949582099915
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/gear_10tooth__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.15979,
+      "bounds_min": [
+        -0.394043505191803,
+        0.003990499768406153,
+        -0.12800000607967377
+      ],
+      "bounds_max": [
+        0.394043505191803,
+        0.7960094809532166,
+        0.12800000607967377
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/gear_16tooth__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.647747,
+      "bounds_min": [
+        -0.7953395247459412,
+        0.004660500213503838,
+        -0.12800000607967377
+      ],
+      "bounds_max": [
+        0.7953395247459412,
+        1.5953395366668701,
+        0.12800000607967377
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/gear_machine_pair__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.567974,
+      "bounds_min": [
+        -0.8948255181312561,
+        4.999999987376214e-07,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.844043493270874,
+        1.8460094928741455,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/tank_vertical__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 5.684,
+      "bounds_min": [
+        -0.699999988079071,
+        0.0,
+        -0.699999988079071
+      ],
+      "bounds_max": [
+        0.699999988079071,
+        2.9000000953674316,
+        0.699999988079071
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/machine_console__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.6688,
+      "bounds_min": [
+        -0.699999988079071,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.699999988079071,
+        1.4900000095367432,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/smith_anvil__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.474,
+      "bounds_min": [
+        -0.800000011920929,
+        0.0,
+        -0.2750000059604645
+      ],
+      "bounds_max": [
+        1.2000000476837158,
+        1.340000033378601,
+        0.2750000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/forge_hearth__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 5.6,
+      "bounds_min": [
+        -0.800000011920929,
+        0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        0.800000011920929,
+        3.5,
+        0.5
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/foundry_crucible__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.6875,
+      "bounds_min": [
+        -0.75,
+        0.05000000074505806,
+        -0.75
+      ],
+      "bounds_max": [
+        0.75,
+        0.800000011920929,
+        0.75
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/coil_generator__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.472748,
+      "bounds_min": [
+        -0.5,
+        0.0,
+        -0.4755285084247589
+      ],
+      "bounds_max": [
+        0.5,
+        2.5999999046325684,
+        0.4755285084247589
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/coil_stack__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.764,
+      "bounds_min": [
+        -0.41999998688697815,
+        0.0,
+        -0.41999998688697815
+      ],
+      "bounds_max": [
+        0.41999998688697815,
+        2.5,
+        0.41999998688697815
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/vent_louver__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.1664,
+      "bounds_min": [
+        -0.8999999761581421,
+        0.0,
+        -0.1899999976158142
+      ],
+      "bounds_max": [
+        0.8999999761581421,
+        2.4000000953674316,
+        0.07999999821186066
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/industrial_ladder_3m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.140037,
+      "bounds_min": [
+        -0.38499999046325684,
+        0.0,
+        -0.03031099960207939
+      ],
+      "bounds_max": [
+        0.38499999046325684,
+        3.0,
+        0.03031099960207939
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/textile_curtain_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.264703,
+      "bounds_min": [
+        -1.0,
+        4.999999987376214e-07,
+        -0.09000000357627869
+      ],
+      "bounds_max": [
+        1.0,
+        3.084641456604004,
+        0.11500000208616257
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/textile_banner_pointed__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.096083,
+      "bounds_min": [
+        -0.5,
+        -0.2500005066394806,
+        -0.02500000037252903
+      ],
+      "bounds_max": [
+        0.5,
+        1.6716505289077759,
+        0.02500000037252903
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/textile_rug_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.2,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.05000000074505806,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/textile_canopy_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 96,
+      "triangles": 48,
+      "max_index": 95,
+      "signed_volume_m3": 0.08,
+      "bounds_min": [
+        -1.149999976158142,
+        0.0,
+        -0.949999988079071
+      ],
+      "bounds_max": [
+        1.149999976158142,
+        2.0,
+        0.949999988079071
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/textile_cushion__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.168,
+      "bounds_min": [
+        -0.4000000059604645,
+        0.0,
+        -0.3499999940395355
+      ],
+      "bounds_max": [
+        0.4000000059604645,
+        0.30000001192092896,
+        0.3499999940395355
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/toy_block_cube__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.0,
+      "bounds_min": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        0.5,
+        1.0,
+        0.5
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/toy_block_wedge__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.0,
+      "bounds_min": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        0.5,
+        1.0,
+        0.5
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/toy_block_arch__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.6,
+      "bounds_min": [
+        -0.5,
+        0.0,
+        -0.25
+      ],
+      "bounds_max": [
+        0.5,
+        1.2000000476837158,
+        0.25
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/urn__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.396115,
+      "bounds_min": [
+        -0.3499999940395355,
+        0.0,
+        -0.3328700065612793
+      ],
+      "bounds_max": [
+        0.3499999940395355,
+        0.8500000238418579,
+        0.3328700065612793
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/bottle_potion__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.114127,
+      "bounds_min": [
+        -0.20000000298023224,
+        0.0,
+        -0.19021150469779968
+      ],
+      "bounds_max": [
+        0.20000000298023224,
+        0.75,
+        0.19021150469779968
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/lantern_box__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.385,
+      "bounds_min": [
+        -0.3499999940395355,
+        0.0,
+        -0.2750000059604645
+      ],
+      "bounds_max": [
+        0.3499999940395355,
+        1.0,
+        0.2750000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/sarcophagus__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.6,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        1.0,
+        1.0,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/altar_block__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.82,
+      "bounds_min": [
+        -0.6499999761581421,
+        0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        0.6499999761581421,
+        1.399999976158142,
+        0.5
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/rubble_scatter__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.234473,
+      "bounds_min": [
+        -0.7955775260925293,
+        0.0,
+        -0.2908700108528137
+      ],
+      "bounds_max": [
+        0.869535505771637,
+        0.24150000512599945,
+        0.2922160029411316
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/sunflower_stem__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.995811,
+      "bounds_min": [
+        -0.44999998807907104,
+        4.999999987376214e-07,
+        -0.2052225023508072
+      ],
+      "bounds_max": [
+        0.5,
+        2.4279754161834717,
+        0.22650450468063354
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/library_book_row__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.6236,
+      "bounds_min": [
+        -0.8999999761581421,
+        0.0,
+        -0.25999999046325684
+      ],
+      "bounds_max": [
+        0.8999999761581421,
+        2.200000047683716,
+        0.15000000596046448
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/fallen_log_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.828291,
+      "bounds_min": [
+        -1.0,
+        0.004254499915987253,
+        -0.26311400532722473
+      ],
+      "bounds_max": [
+        1.0,
+        0.7667934894561768,
+        0.2800000011920929
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/acacia_tree__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 54.629715,
+      "bounds_min": [
+        -1.9074660539627075,
+        -0.007993999868631363,
+        -2.1238174438476562
+      ],
+      "bounds_max": [
+        2.1064438819885254,
+        3.244999885559082,
+        2.060051441192627
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/palm_tree__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 22.98982,
+      "bounds_min": [
+        -1.3064044713974,
+        0.0,
+        -1.4136455059051514
+      ],
+      "bounds_max": [
+        1.450000524520874,
+        2.950000047683716,
+        1.4136455059051514
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/coral_branch__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.560013,
+      "bounds_min": [
+        -0.7196115255355835,
+        0.0,
+        -0.19919350743293762
+      ],
+      "bounds_max": [
+        0.7196115255355835,
+        1.1591520309448242,
+        0.13648949563503265
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/coral_shelf_cluster__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.299591,
+      "bounds_min": [
+        -0.5430189967155457,
+        0.0,
+        -0.43858250975608826
+      ],
+      "bounds_max": [
+        1.0012389421463013,
+        0.7475000023841858,
+        0.6872544884681702
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/cliff_face_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 15.632858,
+      "bounds_min": [
+        -1.0264780521392822,
+        0.0,
+        -0.544682502746582
+      ],
+      "bounds_max": [
+        1.4259660243988037,
+        4.599999904632568,
+        0.8410565257072449
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/shore_bank_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.8,
+      "bounds_min": [
+        -1.0,
+        -0.15000000596046448,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.05000000074505806,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/standing_stone__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.3184,
+      "bounds_min": [
+        -0.44999998807907104,
+        0.0,
+        -0.4000000059604645
+      ],
+      "bounds_max": [
+        0.44999998807907104,
+        3.2200000286102295,
+        0.4000000059604645
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/desert_cactus__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 0.570827,
+      "bounds_min": [
+        -0.5581160187721252,
+        0.0,
+        -0.23000000417232513
+      ],
+      "bounds_max": [
+        0.5699999928474426,
+        1.100000023841858,
+        0.23000000417232513
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/arch_wide_4m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 48,
+      "triangles": 24,
+      "max_index": 47,
+      "signed_volume_m3": 0.875,
+      "bounds_min": [
+        -2.0,
+        0.0,
+        -0.17499999701976776
+      ],
+      "bounds_max": [
+        2.0,
+        2.5,
+        0.17499999701976776
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/wall_window_open_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 96,
+      "triangles": 48,
+      "max_index": 95,
+      "signed_volume_m3": 1.0,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.10000000149011612
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.10000000149011612
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/wall_shrine_niche__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 5.88,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.6549999713897705
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.07999999821186066
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/water_channel_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 1.28,
+      "bounds_min": [
+        -1.0,
+        -0.5,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.10000000149011612,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/channel_crossing_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 0.936,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -0.7599999904632568
+      ],
+      "bounds_max": [
+        1.0,
+        0.699999988079071,
+        0.7599999904632568
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/rope_bridge_2x4__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 2.24,
+      "bounds_min": [
+        -1.0,
+        -0.1599999964237213,
+        -2.0
+      ],
+      "bounds_max": [
+        1.0,
+        1.2000000476837158,
+        2.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/raised_walkway_2m__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 72,
+      "triangles": 36,
+      "max_index": 71,
+      "signed_volume_m3": 0.96,
+      "bounds_min": [
+        -1.0,
+        -0.20000000298023224,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.4000000059604645,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/fountain_base__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 2.2,
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.550000011920929,
+        1.0
+      ],
+      "aperture_checks": []
+    },
+    {
+      "file": "collision-guides/weapon_display_rack__GUIDE.glb",
+      "pass": true,
+      "issues": [],
+      "vertices": 24,
+      "triangles": 12,
+      "max_index": 23,
+      "signed_volume_m3": 1.68,
+      "bounds_min": [
+        -0.800000011920929,
+        0.0,
+        -0.3499999940395355
+      ],
+      "bounds_max": [
+        0.800000011920929,
+        1.5,
+        0.3499999940395355
+      ],
+      "aperture_checks": []
+    }
+  ],
+  "limits": [
+    "Aperture checks use triangle versus3Dbox separating-axis test with1micrometre inset tolerance and35cm through-depth. They do not establish gameplay navigation.",
+    "Signed volume is total across intentionally overlapping closed component solids; no boolean manifold claim.",
+    "No runtime or game code executed.",
+    "Diffuse texture quality, seamlessness, shader/culling appearance in engine and navigation are separate integration QA."
+  ]
+}

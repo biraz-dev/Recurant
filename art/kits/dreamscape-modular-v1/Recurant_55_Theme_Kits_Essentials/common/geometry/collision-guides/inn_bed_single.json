@@ -1,0 +1,20 @@
+{
+  "asset": "inn_bed_single",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.7225,
+        0.0
+      ],
+      "size": [
+        1.1,
+        1.155,
+        2.0
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/inn_bed_single__GUIDE.glb"
+}

@@ -1,0 +1,20 @@
+{
+  "asset": "broadleaf_clump",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.425,
+        0.0
+      ],
+      "size": [
+        1.7,
+        0.65,
+        1.7
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/broadleaf_clump__GUIDE.glb"
+}

@@ -1,0 +1,65 @@
+{
+  "theme": "tidal-island",
+  "all_flat_orthographic": true,
+  "all_four_distinct": true,
+  "no_text_frame_gutter": true,
+  "reviewed_contact_sheet": "qa/material_contact_sheet.png",
+  "reviewed_repeat_sheets": [
+    "qa/wall_repeat_2x2.png",
+    "qa/ground_repeat_2x2.png",
+    "qa/structure_repeat_2x2.png",
+    "qa/detail_repeat_2x2.png"
+  ],
+  "checks": [
+    {
+      "role": "wall",
+      "preview": "qa/wall_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 21.471,
+        "top_bottom": 24.582
+      },
+      "interior_adjacent_MAE_rgb255": 22.007,
+      "visual_findings": "Some horizontal edge/value discontinuity is visible in the 2x2 diagnostic; conceal joins with separate rock forms.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "ground",
+      "preview": "qa/ground_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 14.828,
+        "top_bottom": 12.383
+      },
+      "interior_adjacent_MAE_rgb255": 11.544,
+      "visual_findings": "Fine sand ripple direction and brightness are consistent; exact grains do not match.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "structure",
+      "preview": "qa/structure_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 10.581,
+        "top_bottom": 13.16
+      },
+      "interior_adjacent_MAE_rgb255": 8.619,
+      "visual_findings": "Fine ripple seams and periodic highlights visible; clamp individual pool panels.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "detail",
+      "preview": "qa/detail_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 19.796,
+        "top_bottom": 21.172
+      },
+      "interior_adjacent_MAE_rgb255": 17.621,
+      "visual_findings": "Pore pattern is quiet but repeats; suitable for coral-rock components, no coral mesh implied by texture.",
+      "opposing_edges_identical": false
+    }
+  ],
+  "native_and_preview_dimensions_verified": true,
+  "production_seam_acceptance": "not certified; use per-role findings"
+}

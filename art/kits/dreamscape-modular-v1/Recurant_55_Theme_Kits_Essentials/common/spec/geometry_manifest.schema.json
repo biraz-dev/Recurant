@@ -1,0 +1,248 @@
+{
+  "type": "object",
+  "required": [
+    "coordinate_contract",
+    "assets"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "manifest_base": {
+      "type": "string"
+    },
+    "coordinate_contract": {
+      "type": "object"
+    },
+    "assets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/asset"
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Recurant reusable geometry manifest",
+  "$defs": {
+    "vec3": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?![A-Za-z]+:).+"
+    },
+    "box": {
+      "type": "object",
+      "required": [
+        "center",
+        "size"
+      ],
+      "properties": {
+        "center": {
+          "$ref": "#/$defs/vec3"
+        },
+        "size": {
+          "$ref": "#/$defs/vec3"
+        }
+      }
+    },
+    "connector": {
+      "type": "object",
+      "required": [
+        "id",
+        "position",
+        "normal"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "position": {
+          "$ref": "#/$defs/vec3"
+        },
+        "normal": {
+          "$ref": "#/$defs/vec3"
+        }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "required": [
+        "id",
+        "family",
+        "description",
+        "files",
+        "bounds_m",
+        "pivot",
+        "snap",
+        "material_slots",
+        "metrics",
+        "collision",
+        "uv"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "family": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "files": {
+          "type": "object",
+          "required": [
+            "glb"
+          ],
+          "properties": {
+            "glb": {
+              "$ref": "#/$defs/relativePath"
+            },
+            "collision_guides": {
+              "$ref": "#/$defs/relativePath"
+            }
+          }
+        },
+        "bounds_m": {
+          "type": "object",
+          "required": [
+            "min",
+            "max",
+            "size"
+          ],
+          "properties": {
+            "min": {
+              "$ref": "#/$defs/vec3"
+            },
+            "max": {
+              "$ref": "#/$defs/vec3"
+            },
+            "size": {
+              "$ref": "#/$defs/vec3"
+            }
+          }
+        },
+        "pivot": {
+          "type": "object",
+          "required": [
+            "position",
+            "semantic"
+          ],
+          "properties": {
+            "position": {
+              "$ref": "#/$defs/vec3"
+            },
+            "semantic": {
+              "type": "string"
+            }
+          }
+        },
+        "snap": {
+          "type": "object",
+          "required": [
+            "grid_m",
+            "connectors"
+          ],
+          "properties": {
+            "grid_m": {
+              "const": 2
+            },
+            "connectors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/connector"
+              }
+            }
+          }
+        },
+        "material_slots": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "wall",
+              "ground",
+              "structure",
+              "detail"
+            ]
+          }
+        },
+        "metrics": {
+          "type": "object",
+          "required": [
+            "vertices",
+            "triangles",
+            "material_count"
+          ],
+          "properties": {
+            "vertices": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "triangles": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "material_count": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 4
+            }
+          }
+        },
+        "collision": {
+          "type": "object",
+          "required": [
+            "mode",
+            "boxes"
+          ],
+          "properties": {
+            "mode": {
+              "const": "authoring_guides_only"
+            },
+            "boxes": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/box"
+              }
+            },
+            "clear_openings": {
+              "type": "array"
+            }
+          }
+        },
+        "uv": {
+          "type": "object",
+          "required": [
+            "uv0"
+          ],
+          "properties": {
+            "uv0": {
+              "const": true
+            },
+            "repeat_m": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "method": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

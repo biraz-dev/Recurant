@@ -1,0 +1,20 @@
+{
+  "asset": "colossal_trunk_quarter",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.251888,
+        2.977809,
+        -0.0
+      ],
+      "size": [
+        5.128318,
+        6.090413,
+        5.381161
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/colossal_trunk_quarter__GUIDE.glb"
+}

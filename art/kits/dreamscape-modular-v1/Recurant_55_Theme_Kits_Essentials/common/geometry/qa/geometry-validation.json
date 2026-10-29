@@ -1,0 +1,2262 @@
+{
+  "pass": true,
+  "assets_checked": 150,
+  "checks": [
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.8,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_wall_2x2",
+      "coplanar_cleanup": {
+        "input_faces": 6,
+        "output_faces": 6,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.6,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_wall_2x4",
+      "coplanar_cleanup": {
+        "input_faces": 6,
+        "output_faces": 6,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.795375,
+      "triangles": 252,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_wall_ashlar",
+      "coplanar_cleanup": {
+        "input_faces": 126,
+        "output_faces": 126,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 3.186667,
+      "triangles": 28,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_corner_inner",
+      "coplanar_cleanup": {
+        "input_faces": 12,
+        "output_faces": 14,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 3.6224,
+      "triangles": 36,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_corner_outer",
+      "coplanar_cleanup": {
+        "input_faces": 18,
+        "output_faces": 18,
+        "clipped_faces": 4
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.14155,
+      "triangles": 72,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_wall_broken",
+      "coplanar_cleanup": {
+        "input_faces": 36,
+        "output_faces": 36,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.241992,
+      "triangles": 384,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_doorway_round",
+      "coplanar_cleanup": {
+        "input_faces": 192,
+        "output_faces": 192,
+        "clipped_faces": 6
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.157418,
+      "triangles": 288,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_doorway_pointed",
+      "coplanar_cleanup": {
+        "input_faces": 144,
+        "output_faces": 144,
+        "clipped_faces": 4
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.404512,
+      "triangles": 60,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "door_leaf_plank_1p36",
+      "coplanar_cleanup": {
+        "input_faces": 24,
+        "output_faces": 30,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.061731,
+      "triangles": 224,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "gate_leaf_barred",
+      "coplanar_cleanup": {
+        "input_faces": 86,
+        "output_faces": 98,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.2184,
+      "triangles": 36,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "column_square",
+      "coplanar_cleanup": {
+        "input_faces": 18,
+        "output_faces": 18,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.017431,
+      "triangles": 52,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "column_round",
+      "coplanar_cleanup": {
+        "input_faces": 22,
+        "output_faces": 22,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.188374,
+      "triangles": 196,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "column_fluted",
+      "coplanar_cleanup": {
+        "input_faces": 82,
+        "output_faces": 82,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.710905,
+      "triangles": 52,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "column_broken",
+      "coplanar_cleanup": {
+        "input_faces": 22,
+        "output_faces": 22,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.024333,
+      "triangles": 24,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_buttress",
+      "coplanar_cleanup": {
+        "input_faces": 13,
+        "output_faces": 11,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.623067,
+      "triangles": 24,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_parapet_2m",
+      "coplanar_cleanup": {
+        "input_faces": 12,
+        "output_faces": 12,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.6348,
+      "triangles": 64,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_crenellation_2m",
+      "coplanar_cleanup": {
+        "input_faces": 24,
+        "output_faces": 32,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.067416,
+      "triangles": 36,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_inset_panel",
+      "coplanar_cleanup": {
+        "input_faces": 18,
+        "output_faces": 18,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.007333,
+      "triangles": 40,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "masonry_capital_bracket",
+      "coplanar_cleanup": {
+        "input_faces": 18,
+        "output_faces": 20,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.8,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "floor_plain_2m",
+      "coplanar_cleanup": {
+        "input_faces": 6,
+        "output_faces": 6,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.8,
+      "triangles": 60,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "floor_inset_2m",
+      "coplanar_cleanup": {
+        "input_faces": 30,
+        "output_faces": 30,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.76832,
+      "triangles": 192,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "floor_pavers_2m",
+      "coplanar_cleanup": {
+        "input_faces": 96,
+        "output_faces": 96,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.2112,
+      "triangles": 180,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "floor_grate_2m",
+      "coplanar_cleanup": {
+        "input_faces": 90,
+        "output_faces": 90,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.8003,
+      "triangles": 48,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "floor_cracked_2m",
+      "coplanar_cleanup": {
+        "input_faces": 24,
+        "output_faces": 24,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.8,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "ceiling_flat_2m",
+      "coplanar_cleanup": {
+        "input_faces": 6,
+        "output_faces": 6,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.239296,
+      "triangles": 60,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "ceiling_coffer_2m",
+      "coplanar_cleanup": {
+        "input_faces": 30,
+        "output_faces": 30,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.622014,
+      "triangles": 192,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "ceiling_barrel_vault_4x2",
+      "coplanar_cleanup": {
+        "input_faces": 96,
+        "output_faces": 96,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.5,
+      "triangles": 48,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "stairs_rise1_run2",
+      "coplanar_cleanup": {
+        "input_faces": 24,
+        "output_faces": 24,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 9.0,
+      "triangles": 96,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "stairs_rise2_run4",
+      "coplanar_cleanup": {
+        "input_faces": 48,
+        "output_faces": 48,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.002,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "ramp_rise1_run2",
+      "coplanar_cleanup": {
+        "input_faces": 6,
+        "output_faces": 6,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.8,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "landing_2m",
+      "coplanar_cleanup": {
+        "input_faces": 6,
+        "output_faces": 6,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 3.16672,
+      "triangles": 140,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "bridge_stone_2x4",
+      "coplanar_cleanup": {
+        "input_faces": 78,
+        "output_faces": 70,
+        "clipped_faces": 8
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.83552,
+      "triangles": 360,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "bridge_timber_2x4",
+      "coplanar_cleanup": {
+        "input_faces": 180,
+        "output_faces": 180,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.20992,
+      "triangles": 156,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "bridge_metal_2x4",
+      "coplanar_cleanup": {
+        "input_faces": 78,
+        "output_faces": 78,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.065076,
+      "triangles": 162,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "railing_iron_2m",
+      "coplanar_cleanup": {
+        "input_faces": 66,
+        "output_faces": 75,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.073608,
+      "triangles": 90,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "railing_timber_2m",
+      "coplanar_cleanup": {
+        "input_faces": 36,
+        "output_faces": 45,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.082797,
+      "triangles": 128,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "timber_wall_plaster",
+      "coplanar_cleanup": {
+        "input_faces": 48,
+        "output_faces": 64,
+        "clipped_faces": 10
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.338604,
+      "triangles": 188,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "timber_wall_plank",
+      "coplanar_cleanup": {
+        "input_faces": 78,
+        "output_faces": 94,
+        "clipped_faces": 10
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.505553,
+      "triangles": 324,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "timber_wall_lattice",
+      "coplanar_cleanup": {
+        "input_faces": 114,
+        "output_faces": 162,
+        "clipped_faces": 7
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.087953,
+      "triangles": 332,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "timber_wall_paper",
+      "coplanar_cleanup": {
+        "input_faces": 120,
+        "output_faces": 166,
+        "clipped_faces": 11
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.7784,
+      "triangles": 60,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "timber_post_beam_gate",
+      "coplanar_cleanup": {
+        "input_faces": 24,
+        "output_faces": 30,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.21408,
+      "triangles": 22,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "timber_post",
+      "coplanar_cleanup": {
+        "input_faces": 12,
+        "output_faces": 11,
+        "clipped_faces": 1
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.07856,
+      "triangles": 22,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "timber_short_post",
+      "coplanar_cleanup": {
+        "input_faces": 12,
+        "output_faces": 11,
+        "clipped_faces": 1
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.1056,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "timber_beam_2m",
+      "coplanar_cleanup": {
+        "input_faces": 6,
+        "output_faces": 6,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.289195,
+      "triangles": 50,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "timber_gable_2m",
+      "coplanar_cleanup": {
+        "input_faces": 23,
+        "output_faces": 25,
+        "clipped_faces": 3
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.3,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "roof_pitch_left_2m",
+      "coplanar_cleanup": {
+        "input_faces": 6,
+        "output_faces": 6,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.3,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "roof_pitch_right_2m",
+      "coplanar_cleanup": {
+        "input_faces": 6,
+        "output_faces": 6,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.1964,
+      "triangles": 36,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "inn_bench",
+      "coplanar_cleanup": {
+        "input_faces": 18,
+        "output_faces": 18,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.216576,
+      "triangles": 60,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "inn_table",
+      "coplanar_cleanup": {
+        "input_faces": 30,
+        "output_faces": 30,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.7742,
+      "triangles": 24,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "inn_bar_counter_2m",
+      "coplanar_cleanup": {
+        "input_faces": 12,
+        "output_faces": 12,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.1776,
+      "triangles": 40,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "inn_bed_single",
+      "coplanar_cleanup": {
+        "input_faces": 18,
+        "output_faces": 20,
+        "clipped_faces": 3
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.16048,
+      "triangles": 36,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "tatami_mat_1x2",
+      "coplanar_cleanup": {
+        "input_faces": 18,
+        "output_faces": 18,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.90075,
+      "triangles": 48,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "shelf_bookcase",
+      "coplanar_cleanup": {
+        "input_faces": 24,
+        "output_faces": 24,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.480891,
+      "triangles": 220,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "barrel",
+      "coplanar_cleanup": {
+        "input_faces": 70,
+        "output_faces": 70,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.751294,
+      "triangles": 60,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "crate",
+      "coplanar_cleanup": {
+        "input_faces": 24,
+        "output_faces": 30,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.468252,
+      "triangles": 40,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "boulder_small",
+      "coplanar_cleanup": {
+        "input_faces": 22,
+        "output_faces": 22,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 3.901179,
+      "triangles": 40,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "boulder_large",
+      "coplanar_cleanup": {
+        "input_faces": 22,
+        "output_faces": 22,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.234357,
+      "triangles": 40,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "basalt_column",
+      "coplanar_cleanup": {
+        "input_faces": 22,
+        "output_faces": 22,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.397047,
+      "triangles": 40,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "rock_slab",
+      "coplanar_cleanup": {
+        "input_faces": 22,
+        "output_faces": 22,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 6.119569,
+      "triangles": 173,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "cave_wall_2m",
+      "coplanar_cleanup": {
+        "input_faces": 88,
+        "output_faces": 96,
+        "clipped_faces": 3
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.685258,
+      "triangles": 164,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "cave_arch_2m",
+      "coplanar_cleanup": {
+        "input_faces": 86,
+        "output_faces": 86,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.292409,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "stalagmite",
+      "coplanar_cleanup": {
+        "input_faces": 8,
+        "output_faces": 8,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.292409,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "stalactite",
+      "coplanar_cleanup": {
+        "input_faces": 8,
+        "output_faces": 8,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.250243,
+      "triangles": 96,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "root_straight_2m",
+      "coplanar_cleanup": {
+        "input_faces": 36,
+        "output_faces": 36,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.24767,
+      "triangles": 72,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "root_corner_2m",
+      "coplanar_cleanup": {
+        "input_faces": 27,
+        "output_faces": 27,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.664279,
+      "triangles": 192,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "root_arch_2m",
+      "coplanar_cleanup": {
+        "input_faces": 72,
+        "output_faces": 72,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 3.053094,
+      "triangles": 232,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "tree_trunk",
+      "coplanar_cleanup": {
+        "input_faces": 91,
+        "output_faces": 91,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 30.290474,
+      "triangles": 232,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "colossal_trunk_quarter",
+      "coplanar_cleanup": {
+        "input_faces": 91,
+        "output_faces": 91,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.328362,
+      "triangles": 128,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "dead_branch_tree",
+      "coplanar_cleanup": {
+        "input_faces": 50,
+        "output_faces": 50,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.032373,
+      "triangles": 64,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "broadleaf_clump",
+      "coplanar_cleanup": {
+        "input_faces": 64,
+        "output_faces": 64,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.011132,
+      "triangles": 480,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "fern_clump",
+      "coplanar_cleanup": {
+        "input_faces": 426,
+        "output_faces": 426,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.024417,
+      "triangles": 96,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "mushroom_small",
+      "coplanar_cleanup": {
+        "input_faces": 33,
+        "output_faces": 33,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.293074,
+      "triangles": 96,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "mushroom_tall",
+      "coplanar_cleanup": {
+        "input_faces": 33,
+        "output_faces": 33,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.132699,
+      "triangles": 288,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "mushroom_cluster",
+      "coplanar_cleanup": {
+        "input_faces": 99,
+        "output_faces": 99,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.129353,
+      "triangles": 84,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "shelf_fungus",
+      "coplanar_cleanup": {
+        "input_faces": 30,
+        "output_faces": 30,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.777623,
+      "triangles": 372,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "tissue_wall_2m",
+      "coplanar_cleanup": {
+        "input_faces": 141,
+        "output_faces": 141,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.611834,
+      "triangles": 224,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "tissue_rib_arch",
+      "coplanar_cleanup": {
+        "input_faces": 80,
+        "output_faces": 80,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.487702,
+      "triangles": 70,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "organic_pod",
+      "coplanar_cleanup": {
+        "input_faces": 29,
+        "output_faces": 29,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.123235,
+      "triangles": 128,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "bone_long",
+      "coplanar_cleanup": {
+        "input_faces": 50,
+        "output_faces": 50,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.277736,
+      "triangles": 30,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "crag_cluster",
+      "coplanar_cleanup": {
+        "input_faces": 21,
+        "output_faces": 21,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.026407,
+      "triangles": 30,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "crystal_shard_small",
+      "coplanar_cleanup": {
+        "input_faces": 15,
+        "output_faces": 15,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.600902,
+      "triangles": 30,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "crystal_shard_tall",
+      "coplanar_cleanup": {
+        "input_faces": 15,
+        "output_faces": 15,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.028716,
+      "triangles": 30,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "crystal_obelisk",
+      "coplanar_cleanup": {
+        "input_faces": 15,
+        "output_faces": 15,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.472545,
+      "triangles": 120,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "crystal_cluster",
+      "coplanar_cleanup": {
+        "input_faces": 60,
+        "output_faces": 60,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.775862,
+      "triangles": 182,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "crystal_wall_ribs",
+      "coplanar_cleanup": {
+        "input_faces": 81,
+        "output_faces": 91,
+        "clipped_faces": 1
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.500591,
+      "triangles": 84,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "crystal_pointed_arch",
+      "coplanar_cleanup": {
+        "input_faces": 42,
+        "output_faces": 42,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.052072,
+      "triangles": 72,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "crystal_floor_2m",
+      "coplanar_cleanup": {
+        "input_faces": 36,
+        "output_faces": 36,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.741175,
+      "triangles": 84,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "ceremonial_pedestal",
+      "coplanar_cleanup": {
+        "input_faces": 30,
+        "output_faces": 30,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.305999,
+      "triangles": 258,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "astral_ring_focus",
+      "coplanar_cleanup": {
+        "input_faces": 123,
+        "output_faces": 123,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.433856,
+      "triangles": 64,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "machine_wall_panel",
+      "coplanar_cleanup": {
+        "input_faces": 36,
+        "output_faces": 32,
+        "clipped_faces": 14
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.045376,
+      "triangles": 160,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "machine_wall_ribbed",
+      "coplanar_cleanup": {
+        "input_faces": 84,
+        "output_faces": 80,
+        "clipped_faces": 14
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.993474,
+      "triangles": 110,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "machine_wall_bulkhead",
+      "coplanar_cleanup": {
+        "input_faces": 54,
+        "output_faces": 56,
+        "clipped_faces": 15
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.41036,
+      "triangles": 68,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "machine_doorframe",
+      "coplanar_cleanup": {
+        "input_faces": 30,
+        "output_faces": 34,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.096982,
+      "triangles": 108,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "pipe_straight_12cm",
+      "coplanar_cleanup": {
+        "input_faces": 36,
+        "output_faces": 36,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.387927,
+      "triangles": 108,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "pipe_straight_24cm",
+      "coplanar_cleanup": {
+        "input_faces": 36,
+        "output_faces": 36,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.058759,
+      "triangles": 236,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "pipe_elbow_90",
+      "coplanar_cleanup": {
+        "input_faces": 72,
+        "output_faces": 82,
+        "clipped_faces": 10
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.225214,
+      "triangles": 80,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "pipe_tee_2m",
+      "coplanar_cleanup": {
+        "input_faces": 24,
+        "output_faces": 28,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.155376,
+      "triangles": 248,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "pipe_valve_riser",
+      "coplanar_cleanup": {
+        "input_faces": 116,
+        "output_faces": 116,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.073062,
+      "triangles": 248,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "gear_10tooth",
+      "coplanar_cleanup": {
+        "input_faces": 92,
+        "output_faces": 130,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.295279,
+      "triangles": 380,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "gear_16tooth",
+      "coplanar_cleanup": {
+        "input_faces": 140,
+        "output_faces": 202,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.75494,
+      "triangles": 586,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "gear_machine_pair",
+      "coplanar_cleanup": {
+        "input_faces": 218,
+        "output_faces": 307,
+        "clipped_faces": 5
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 3.13412,
+      "triangles": 100,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "tank_vertical",
+      "coplanar_cleanup": {
+        "input_faces": 34,
+        "output_faces": 34,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.49168,
+      "triangles": 60,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "machine_console",
+      "coplanar_cleanup": {
+        "input_faces": 30,
+        "output_faces": 30,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.7601,
+      "triangles": 32,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "smith_anvil",
+      "coplanar_cleanup": {
+        "input_faces": 17,
+        "output_faces": 17,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.554,
+      "triangles": 76,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "forge_hearth",
+      "coplanar_cleanup": {
+        "input_faces": 36,
+        "output_faces": 38,
+        "clipped_faces": 6
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.87725,
+      "triangles": 88,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "foundry_crucible",
+      "coplanar_cleanup": {
+        "input_faces": 28,
+        "output_faces": 28,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.271176,
+      "triangles": 84,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "coil_generator",
+      "coplanar_cleanup": {
+        "input_faces": 30,
+        "output_faces": 30,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.588535,
+      "triangles": 344,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "coil_stack",
+      "coplanar_cleanup": {
+        "input_faces": 110,
+        "output_faces": 110,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.6624,
+      "triangles": 156,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "vent_louver",
+      "coplanar_cleanup": {
+        "input_faces": 78,
+        "output_faces": 78,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.030462,
+      "triangles": 240,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "industrial_ladder_3m",
+      "coplanar_cleanup": {
+        "input_faces": 96,
+        "output_faces": 96,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.158314,
+      "triangles": 1172,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "textile_curtain_2m",
+      "coplanar_cleanup": {
+        "input_faces": 584,
+        "output_faces": 584,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.043024,
+      "triangles": 36,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "textile_banner_pointed",
+      "coplanar_cleanup": {
+        "input_faces": 15,
+        "output_faces": 15,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.203147,
+      "triangles": 76,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "textile_rug_2m",
+      "coplanar_cleanup": {
+        "input_faces": 30,
+        "output_faces": 38,
+        "clipped_faces": 4
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.34256,
+      "triangles": 104,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "textile_canopy_2m",
+      "coplanar_cleanup": {
+        "input_faces": 44,
+        "output_faces": 44,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.168,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "textile_cushion",
+      "coplanar_cleanup": {
+        "input_faces": 6,
+        "output_faces": 6,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.0,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "toy_block_cube",
+      "coplanar_cleanup": {
+        "input_faces": 6,
+        "output_faces": 6,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.5,
+      "triangles": 8,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "toy_block_wedge",
+      "coplanar_cleanup": {
+        "input_faces": 5,
+        "output_faces": 5,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.262459,
+      "triangles": 120,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "toy_block_arch",
+      "coplanar_cleanup": {
+        "input_faces": 60,
+        "output_faces": 60,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.188351,
+      "triangles": 108,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "urn",
+      "coplanar_cleanup": {
+        "input_faces": 36,
+        "output_faces": 36,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.051838,
+      "triangles": 100,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "bottle_potion",
+      "coplanar_cleanup": {
+        "input_faces": 34,
+        "output_faces": 34,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.194124,
+      "triangles": 44,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "lantern_box",
+      "coplanar_cleanup": {
+        "input_faces": 20,
+        "output_faces": 20,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.213,
+      "triangles": 24,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "sarcophagus",
+      "coplanar_cleanup": {
+        "input_faces": 12,
+        "output_faces": 12,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.274,
+      "triangles": 24,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "altar_block",
+      "coplanar_cleanup": {
+        "input_faces": 12,
+        "output_faces": 12,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.24,
+      "triangles": 12,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "water_surface_2m",
+      "coplanar_cleanup": {
+        "input_faces": 6,
+        "output_faces": 6,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.05942,
+      "triangles": 280,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "rubble_scatter",
+      "coplanar_cleanup": {
+        "input_faces": 154,
+        "output_faces": 154,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.028287,
+      "triangles": 160,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "sunflower_stem",
+      "coplanar_cleanup": {
+        "input_faces": 118,
+        "output_faces": 118,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.4046,
+      "triangles": 72,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "library_book_row",
+      "coplanar_cleanup": {
+        "input_faces": 36,
+        "output_faces": 36,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.408899,
+      "triangles": 116,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "fallen_log_2m",
+      "coplanar_cleanup": {
+        "input_faces": 41,
+        "output_faces": 41,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.342156,
+      "triangles": 424,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "acacia_tree",
+      "coplanar_cleanup": {
+        "input_faces": 199,
+        "output_faces": 199,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.277087,
+      "triangles": 84,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "palm_tree",
+      "coplanar_cleanup": {
+        "input_faces": 66,
+        "output_faces": 66,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.003477,
+      "triangles": 88,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "grass_clump",
+      "coplanar_cleanup": {
+        "input_faces": 88,
+        "output_faces": 88,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.006315,
+      "triangles": 104,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "dry_grass_tuft",
+      "coplanar_cleanup": {
+        "input_faces": 104,
+        "output_faces": 104,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.022158,
+      "triangles": 240,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "cattail_reed_cluster",
+      "coplanar_cleanup": {
+        "input_faces": 120,
+        "output_faces": 120,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.080798,
+      "triangles": 184,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "coral_branch",
+      "coplanar_cleanup": {
+        "input_faces": 73,
+        "output_faces": 73,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.624502,
+      "triangles": 204,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "coral_shelf_cluster",
+      "coplanar_cleanup": {
+        "input_faces": 110,
+        "output_faces": 114,
+        "clipped_faces": 2
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 6.862367,
+      "triangles": 84,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "cliff_face_2m",
+      "coplanar_cleanup": {
+        "input_faces": 44,
+        "output_faces": 47,
+        "clipped_faces": 1
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.278,
+      "triangles": 36,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "shore_bank_2m",
+      "coplanar_cleanup": {
+        "input_faces": 18,
+        "output_faces": 18,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.938386,
+      "triangles": 47,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "standing_stone",
+      "coplanar_cleanup": {
+        "input_faces": 28,
+        "output_faces": 27,
+        "clipped_faces": 1
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.003884,
+      "triangles": 280,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "wheat_seedhead_cluster",
+      "coplanar_cleanup": {
+        "input_faces": 235,
+        "output_faces": 235,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.205675,
+      "triangles": 124,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "desert_cactus",
+      "coplanar_cleanup": {
+        "input_faces": 46,
+        "output_faces": 46,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.252369,
+      "triangles": 247,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "arch_wide_4m",
+      "coplanar_cleanup": {
+        "input_faces": 108,
+        "output_faces": 131,
+        "clipped_faces": 4
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.189133,
+      "triangles": 104,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "wall_window_open_2m",
+      "coplanar_cleanup": {
+        "input_faces": 48,
+        "output_faces": 52,
+        "clipped_faces": 4
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.29,
+      "triangles": 108,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "wall_shrine_niche",
+      "coplanar_cleanup": {
+        "input_faces": 42,
+        "output_faces": 54,
+        "clipped_faces": 10
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.28,
+      "triangles": 36,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "water_channel_2m",
+      "coplanar_cleanup": {
+        "input_faces": 18,
+        "output_faces": 18,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.936,
+      "triangles": 36,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "channel_crossing_2m",
+      "coplanar_cleanup": {
+        "input_faces": 18,
+        "output_faces": 18,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 2.8588,
+      "triangles": 168,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "culvert_vault_2m",
+      "coplanar_cleanup": {
+        "input_faces": 84,
+        "output_faces": 84,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.342091,
+      "triangles": 688,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "rope_bridge_2x4",
+      "coplanar_cleanup": {
+        "input_faces": 310,
+        "output_faces": 310,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.96,
+      "triangles": 36,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "raised_walkway_2m",
+      "coplanar_cleanup": {
+        "input_faces": 18,
+        "output_faces": 18,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 1.2995,
+      "triangles": 100,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "fountain_base",
+      "coplanar_cleanup": {
+        "input_faces": 34,
+        "output_faces": 34,
+        "clipped_faces": 0
+      }
+    },
+    {
+      "pass": true,
+      "issues": [],
+      "signed_volume_m3": 0.52032,
+      "triangles": 120,
+      "uv0_finite": true,
+      "root_transform_identity": true,
+      "render_mesh_collision_separated": true,
+      "id": "weapon_display_rack",
+      "coplanar_cleanup": {
+        "input_faces": 48,
+        "output_faces": 60,
+        "clipped_faces": 6
+      }
+    }
+  ],
+  "limitations": [
+    "Disjoint intersecting closed solids are intentional for low-poly modular art. Not boolean-unioned or watertight as single shells.",
+    "Automatic checks validate finite buffers, zero-area triangles, winding/normal consistency,16-bit indices and positive total volume; not gameplay clearance or perfect UV seam art.",
+    "Collision GLBs/JSON are separate design guides, not imported runtime colliders.",
+    "All floor and wall snapping should be validated in the target importer before production."
+  ]
+}

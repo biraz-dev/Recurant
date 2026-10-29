@@ -1,0 +1,1187 @@
+{
+  "pass": true,
+  "files_reproduced": 295,
+  "method": "Generator copied into a clean independent temporary output tree; output bytes compared with delivered files. No delivered mesh files overwritten.",
+  "checks": [
+    {
+      "path": "meshes/crag_cluster.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/shelf_fungus.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/acacia_tree.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/wall_shrine_niche.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/barrel.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/sarcophagus.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/organic_pod.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/ceiling_barrel_vault_4x2.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/arch_wide_4m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/raised_walkway_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/mushroom_tall.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/bridge_timber_2x4.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/bridge_stone_2x4.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/pipe_elbow_90.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/machine_wall_ribbed.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/forge_hearth.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/stalactite.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/shore_bank_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/column_broken.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/dry_grass_tuft.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/bridge_metal_2x4.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/colossal_trunk_quarter.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/culvert_vault_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/pipe_valve_riser.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/textile_curtain_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/water_surface_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_doorway_round.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/ramp_rise1_run2.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/cliff_face_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/cave_wall_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_wall_ashlar.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/gate_leaf_barred.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/bottle_potion.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/textile_cushion.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/urn.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/crystal_shard_small.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/sunflower_stem.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/root_straight_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/timber_gable_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/crystal_shard_tall.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/rope_bridge_2x4.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/floor_cracked_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_doorway_pointed.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/coil_stack.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/cave_arch_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/timber_short_post.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/pipe_straight_12cm.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/textile_rug_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/floor_inset_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_corner_inner.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/rubble_scatter.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/textile_canopy_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/wall_window_open_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/gear_10tooth.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/timber_wall_lattice.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/railing_timber_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/industrial_ladder_3m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_corner_outer.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/toy_block_cube.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/desert_cactus.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/column_square.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/palm_tree.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/timber_wall_plank.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/tatami_mat_1x2.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/vent_louver.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/timber_post_beam_gate.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/timber_beam_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/library_book_row.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/channel_crossing_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_wall_broken.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/crystal_pointed_arch.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/boulder_large.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/timber_post.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/textile_banner_pointed.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/bone_long.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/ceiling_coffer_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/crate.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_capital_bracket.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/floor_grate_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/fern_clump.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/gear_16tooth.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/column_fluted.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/pipe_tee_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/timber_wall_plaster.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/cattail_reed_cluster.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/roof_pitch_right_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/wheat_seedhead_cluster.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/shelf_bookcase.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/machine_console.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/broadleaf_clump.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/root_corner_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/floor_pavers_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/grass_clump.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/rock_slab.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/machine_wall_panel.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/gear_machine_pair.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/water_channel_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/weapon_display_rack.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/coil_generator.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/pipe_straight_24cm.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/tissue_rib_arch.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_wall_2x2.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/mushroom_cluster.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/machine_doorframe.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/crystal_floor_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/stalagmite.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/fountain_base.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/astral_ring_focus.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/mushroom_small.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_wall_2x4.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_crenellation_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/stairs_rise1_run2.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/smith_anvil.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/coral_shelf_cluster.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/machine_wall_bulkhead.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/toy_block_wedge.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/fallen_log_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_inset_panel.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/inn_bed_single.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/tissue_wall_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/coral_branch.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/dead_branch_tree.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/altar_block.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/inn_bar_counter_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/floor_plain_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/inn_table.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/basalt_column.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/stairs_rise2_run4.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/door_leaf_plank_1p36.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_parapet_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/timber_wall_paper.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/ceiling_flat_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/roof_pitch_left_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/crystal_obelisk.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/tank_vertical.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/toy_block_arch.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/crystal_wall_ribs.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/foundry_crucible.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/column_round.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/landing_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/lantern_box.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/masonry_buttress.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/inn_bench.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/tree_trunk.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/railing_iron_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/root_arch_2m.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/crystal_cluster.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/boulder_small.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/standing_stone.glb",
+      "identical": true
+    },
+    {
+      "path": "meshes/ceremonial_pedestal.glb",
+      "identical": true
+    },
+    {
+      "path": "assemblies/masonry_cloister_demo.glb",
+      "identical": true
+    },
+    {
+      "path": "assemblies/organic_passage_demo.glb",
+      "identical": true
+    },
+    {
+      "path": "assemblies/crystal_sanctum_demo.glb",
+      "identical": true
+    },
+    {
+      "path": "assemblies/textile_pavilion_demo.glb",
+      "identical": true
+    },
+    {
+      "path": "assemblies/timber_inn_demo.glb",
+      "identical": true
+    },
+    {
+      "path": "assemblies/machine_workshop_demo.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/sarcophagus__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/crystal_shard_small__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/arch_wide_4m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/cliff_face_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/desert_cactus__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/toy_block_wedge__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/column_round__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/bridge_metal_2x4__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/pipe_valve_riser__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/ceremonial_pedestal__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/tree_trunk__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/inn_bench__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_capital_bracket__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/bone_long__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_parapet_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/timber_beam_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_doorway_pointed__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/wall_window_open_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/broadleaf_clump__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/textile_cushion__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/coral_shelf_cluster__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/smith_anvil__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/inn_bed_single__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/floor_cracked_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/mushroom_tall__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/library_book_row__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/machine_doorframe__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/crate__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/crystal_wall_ribs__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/railing_iron_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/root_straight_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/bottle_potion__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/vent_louver__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/barrel__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/crystal_floor_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/timber_wall_plaster__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/textile_canopy_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_buttress__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/shore_bank_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/shelf_bookcase__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/tissue_rib_arch__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_wall_ashlar__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/timber_wall_paper__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/toy_block_arch__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/wall_shrine_niche__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/rope_bridge_2x4__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/root_corner_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/shelf_fungus__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_wall_2x4__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/tatami_mat_1x2__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/textile_rug_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/timber_short_post__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/timber_gable_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/floor_plain_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/stalactite__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/urn__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/organic_pod__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_wall_broken__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/basalt_column__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/fallen_log_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/lantern_box__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/rock_slab__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/timber_wall_lattice__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/altar_block__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/palm_tree__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/industrial_ladder_3m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/stalagmite__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/door_leaf_plank_1p36__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/floor_pavers_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/coral_branch__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/crystal_cluster__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/landing_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/bridge_stone_2x4__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/timber_wall_plank__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/gear_machine_pair__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/railing_timber_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/boulder_large__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/fountain_base__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/ceiling_coffer_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/inn_table__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/forge_hearth__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/boulder_small__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/pipe_straight_24cm__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/gear_10tooth__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/crystal_obelisk__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/root_arch_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_corner_inner__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/cave_arch_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/column_broken__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/mushroom_small__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/coil_generator__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/gate_leaf_barred__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/channel_crossing_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/tank_vertical__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/crag_cluster__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/colossal_trunk_quarter__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/timber_post_beam_gate__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_wall_2x2__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/inn_bar_counter_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/pipe_elbow_90__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/machine_wall_panel__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/gear_16tooth__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/pipe_tee_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/sunflower_stem__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/acacia_tree__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/toy_block_cube__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/raised_walkway_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/bridge_timber_2x4__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/floor_grate_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/column_fluted__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/water_channel_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/machine_wall_bulkhead__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_inset_panel__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/column_square__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_crenellation_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/timber_post__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/crystal_shard_tall__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/floor_inset_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/standing_stone__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/dead_branch_tree__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_corner_outer__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/astral_ring_focus__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/machine_wall_ribbed__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/textile_curtain_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/cave_wall_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/machine_console__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/masonry_doorway_round__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/mushroom_cluster__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/ceiling_flat_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/rubble_scatter__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/textile_banner_pointed__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/fern_clump__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/coil_stack__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/foundry_crucible__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/tissue_wall_2m__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/pipe_straight_12cm__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/crystal_pointed_arch__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "collision-guides/weapon_display_rack__GUIDE.glb",
+      "identical": true
+    },
+    {
+      "path": "geometry-manifest.json",
+      "identical": true
+    }
+  ]
+}

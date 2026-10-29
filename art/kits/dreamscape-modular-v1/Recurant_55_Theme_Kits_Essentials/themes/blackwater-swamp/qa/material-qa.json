@@ -1,0 +1,65 @@
+{
+  "theme": "blackwater-swamp",
+  "all_flat_orthographic": true,
+  "all_four_distinct": true,
+  "no_text_frame_gutter": true,
+  "reviewed_contact_sheet": "qa/material_contact_sheet.png",
+  "reviewed_repeat_sheets": [
+    "qa/wall_repeat_2x2.png",
+    "qa/ground_repeat_2x2.png",
+    "qa/structure_repeat_2x2.png",
+    "qa/detail_repeat_2x2.png"
+  ],
+  "checks": [
+    {
+      "role": "wall",
+      "preview": "qa/wall_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 14.557,
+        "top_bottom": 17.582
+      },
+      "interior_adjacent_MAE_rgb255": 13.006,
+      "visual_findings": "Small lichen clusters repeat visibly, but no strong brightness stripe.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "ground",
+      "preview": "qa/ground_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 12.495,
+        "top_bottom": 14.878
+      },
+      "interior_adjacent_MAE_rgb255": 13.036,
+      "visual_findings": "Root fragments terminate at borders; distributed mud value remains consistent.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "structure",
+      "preview": "qa/structure_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 5.264,
+        "top_bottom": 5.561
+      },
+      "interior_adjacent_MAE_rgb255": 5.592,
+      "visual_findings": "Water ripples repeat quietly; this remains an opaque painted water panel, not simulated water.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "detail",
+      "preview": "qa/detail_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 22.311,
+        "top_bottom": 15.378
+      },
+      "interior_adjacent_MAE_rgb255": 16.003,
+      "visual_findings": "Vertical bark bands repeat conspicuously; clamp to individual trunk/root components.",
+      "opposing_edges_identical": false
+    }
+  ],
+  "native_and_preview_dimensions_verified": true,
+  "production_seam_acceptance": "not certified; use per-role findings"
+}

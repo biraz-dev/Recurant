@@ -1,0 +1,20 @@
+{
+  "asset": "acacia_tree",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.099489,
+        1.618503,
+        -0.031883
+      ],
+      "size": [
+        4.01391,
+        3.252994,
+        4.183869
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/acacia_tree__GUIDE.glb"
+}

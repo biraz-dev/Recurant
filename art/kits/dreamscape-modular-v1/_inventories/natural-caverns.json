@@ -1,0 +1,174 @@
+{
+  "id": "natural-caverns",
+  "title": "Natural Caverns",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "natural-caverns-001",
+      "bytes": 2280901,
+      "sha256": "d2d811d25c31941f1e9e8cbc19ec8c2f0d0cf88257a5745d4e5d7dbfb44a8b3c",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/natural-caverns.volume-001.zip",
+          "bytes": 2280901,
+          "sha256": "d2d811d25c31941f1e9e8cbc19ec8c2f0d0cf88257a5745d4e5d7dbfb44a8b3c",
+          "git_blob_sha": "f3f1bd0cd2d4f9e8fc8f2180290a0836bfc4e071"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/CLAUDE_README.md",
+          "bytes": 7454,
+          "sha256": "10e24137b6e22d43e1b48b6633ed6fcbeb8782d833856feb62540541dd41f7b3",
+          "git_blob_sha": "70a239b4f07ab7fe2996f5537deb3432e80885d7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "87494b96a63b1d46862286d01f56caefb37caf79953ed4bfadfacc41b909d61e",
+          "git_blob_sha": "1ffadd26460ed5c9f4702933a3b6b1131360271c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/assembly/collision-navigation.json",
+          "bytes": 10185,
+          "sha256": "1d11d33cacc6391d70ef79e3792e4b0a7c79330be0e12e79409d2164f1f65dcf",
+          "git_blob_sha": "f8b88f7e3a87d6083454486f3a5174c1ec6933e9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/assembly/layout.json",
+          "bytes": 14779,
+          "sha256": "0ef4f756cebe9a4744f448010834d5dc319162410341a45993c870263ff5dd40",
+          "git_blob_sha": "9e696a5baf705b48658a7eccd986049bb412f017"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/assembly/native_320x240.png",
+          "bytes": 161436,
+          "sha256": "aa64280f8db2ab4235ce8459d1a9f6141eaced3eeb1460181aa5232c1c8c1772",
+          "git_blob_sha": "d306a07532778bc0045f8367f3c0debc4a7df527"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/assembly/showcase.glb",
+          "bytes": 761484,
+          "sha256": "64454e9f5c92084befc03a018470b3a4598bad189037fc56135953ad6c91b4bd",
+          "git_blob_sha": "4802b7818103a10733a483661f74ec431f1ac840"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/concept/reference_native_320x240.png",
+          "bytes": 154907,
+          "sha256": "0e26fe83d5f20c3e2fb213b1b93506473747f9e17b9168b5bfd97bcccbb53d14",
+          "git_blob_sha": "09298adf110dd7725047fcae423a8931bfc45ee0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "8b4f25a19a903f2c1cdb6aa140b4943178ca9f1e25258455d844054f275eeb99",
+          "git_blob_sha": "9cacbad5ad88e9687314b426ae7d06da99e55200"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/material_manifest.json",
+          "bytes": 14119,
+          "sha256": "79178d52f3fc27bbed1f48ac742f20c726016f92fd324916e2e441354946c7a1",
+          "git_blob_sha": "d22ca3bd9192a196e7d6511e915e7a7e1c819aad"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/materials/detail_diffuse_128.png",
+          "bytes": 42792,
+          "sha256": "d53001837b1d742e855eaab9f337dd6e39c77d2eac7479cd06dc7695b38221f5",
+          "git_blob_sha": "abef6405ca2d91d9e37eb1a33d0d438ca0245754"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/materials/detail_diffuse_256.png",
+          "bytes": 162376,
+          "sha256": "ef0494869c4cf2ef36c898224f233688b714db2276d59bb7b3e4d5d79358142f",
+          "git_blob_sha": "e90c437b8bfc73571073d7319f7616149f10bd5a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/materials/ground_diffuse_128.png",
+          "bytes": 43449,
+          "sha256": "20ad04ce74241e1d640f959b0cd98dcc5bdedadf673e5859c3d289e6cac07df9",
+          "git_blob_sha": "e1076d1fe7489156d83a3614ad170f844da08e94"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/materials/ground_diffuse_256.png",
+          "bytes": 164900,
+          "sha256": "8642135788103779200f383456b4b994a168cb7304f9360dd696d2f5a62f9c7a",
+          "git_blob_sha": "b0eb8e931be55002b187b9481fe3e2a93c11a6b8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/materials/ground_repeat_diffuse_128.png",
+          "bytes": 47277,
+          "sha256": "d1321a3f0afee40f373624b49941bfde0d68efb0f9501e8cbf7801f8b9493af6",
+          "git_blob_sha": "70d4097648be06942c275b507cecb7ed0f85c031"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/materials/ground_repeat_diffuse_256.png",
+          "bytes": 178839,
+          "sha256": "63c1861e6de09feed1ac2c90f66a8936b6d51f77957c0ded14ec7f947ae86203",
+          "git_blob_sha": "b3b26b934b4b819241d5e681b59e25634bc9cdaa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/materials/structure_diffuse_128.png",
+          "bytes": 41649,
+          "sha256": "41b45da025c6a1d183d9a76bfeb4c62d32fe6916d6bf488f848cfc3452294748",
+          "git_blob_sha": "f9f09bf397f277dcc9a6a5b9e7539f077ee5ce53"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/materials/structure_diffuse_256.png",
+          "bytes": 156322,
+          "sha256": "9aa5e35bac8d8eda1c5e4d82d78b1fc4c2409512b8b1021bf955dab562430715",
+          "git_blob_sha": "dd7ed651dde096e6de7e3adc5bdd8add3fe976ae"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/materials/wall_diffuse_128.png",
+          "bytes": 41445,
+          "sha256": "efe78ceef58b0d91aadb2bbeb0eedea0b8c6e81248b866c34365fdca18413553",
+          "git_blob_sha": "309476b604089f3962ecb4709e9115f190596567"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/materials/wall_diffuse_256.png",
+          "bytes": 154298,
+          "sha256": "d22f19ba1ed903419b593fb7762af8fe3f1110bf5ba8dbc2a42304effbc47b72",
+          "git_blob_sha": "d811fcaee477d717974d32aa7b959d7a999c21b4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/materials/wall_repeat_diffuse_128.png",
+          "bytes": 45304,
+          "sha256": "12c8efa20bde7f9c48903814346b1c7560653e72d3fb67d3b546b3f0a88c7cf8",
+          "git_blob_sha": "ee6b156bcd8062129cd7a5e8dff05d940b4612ac"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/materials/wall_repeat_diffuse_256.png",
+          "bytes": 170037,
+          "sha256": "763723bd498c27e909755f69010c31f6bc27f1779523ea43f3b385193e4762fc",
+          "git_blob_sha": "2b3d8efcc777220969a0125e25cdeaae62fdb098"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/prompts/material_atlas_prompt.txt",
+          "bytes": 1809,
+          "sha256": "e389dab7e65ea965875daf5f6878a3ceb6075de82d6125427573d03e3cb7b550",
+          "git_blob_sha": "08f43617cf0caa23e00a3e403728db92cc3bff81"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1887,
+          "sha256": "4affc4d7ba869526040474edbe1638d4591519fd7e228093ecb4cb79923bf3bd",
+          "git_blob_sha": "fb434e0968929c6b330e2f114719b1ca8b09be6b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/natural-caverns/theme-manifest.json",
+          "bytes": 6866,
+          "sha256": "47a2ad6c07f742b3348562cc2f898d4ae3ec83f41ecf82f8357ad6059700e401",
+          "git_blob_sha": "090b98b39024b7bc61a0aec9ab829e904be20161"
+        }
+      ]
+    }
+  ]
+}

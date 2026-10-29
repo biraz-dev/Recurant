@@ -1,0 +1,317 @@
+{
+  "schema": "recurant.material-kit.v1",
+  "theme": "bone-cavern",
+  "source": "art_sources/material_atlas_source.png",
+  "generation_tool": "built-in image_gen",
+  "status": "Production diffuse textures delivered and raster-reviewed; final in-engine acceptance remains.",
+  "layout": "2x2 quadrant atlas, wall top-left, ground top-right, structure bottom-left, detail bottom-right",
+  "materials": [
+    {
+      "slot": "wall",
+      "name": "Deep teal craggy cavern rock with fine turquoise mineral veins",
+      "intended_surface": "Deep teal craggy cavern rock with fine turquoise mineral veins",
+      "files": {
+        "256": "materials/wall_diffuse_256.png",
+        "128": "materials/wall_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "bounded_span_original_not_seamless",
+      "qa": {
+        "source_crop_px": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 12.676,
+          "vertical": 20.941
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 17.278,
+          "vertical": 16.035
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "repeat_alternative": {
+        "name": "Deep blue-teal mineral rock with subtle small turquoise inclusions, no large jagged forms",
+        "files": {
+          "256": "materials/wall_repeat_diffuse_256.png",
+          "128": "materials/wall_repeat_diffuse_128.png"
+        },
+        "colorspace": "sRGB",
+        "semantic": "diffuse color; not physically calibrated albedo",
+        "actual_size_px": [
+          256,
+          256
+        ],
+        "alpha": false,
+        "repeat_classification": "visually_usable_repeat_not_mathematically_certified",
+        "source": "art_sources/repeat_alternatives_pair_source.png",
+        "source_quadrant_px": [
+          0,
+          627,
+          627,
+          1254
+        ],
+        "processing": "Imagegen targeted quieter-motif correction; quadrant nearest-resampled to320 square, crop-only edge-similarity selection, nearest-resampled to256 and128. No pixel blending, painting, mirroring or synthetic map derivation.",
+        "crop_in_320_intermediate_px": [
+          4,
+          4,
+          320,
+          320
+        ],
+        "qa": {
+          "before_crop_metrics": {
+            "edge_horizontal": 24.436,
+            "edge_vertical": 18.826,
+            "internal_horizontal": 19.412,
+            "internal_vertical": 18.275,
+            "edge_to_internal_ratio_horizontal": 1.259,
+            "edge_to_internal_ratio_vertical": 1.03
+          },
+          "after_crop_metrics": {
+            "edge_horizontal": 19.4,
+            "edge_vertical": 21.158,
+            "internal_horizontal": 18.894,
+            "internal_vertical": 17.868,
+            "edge_to_internal_ratio_horizontal": 1.027,
+            "edge_to_internal_ratio_vertical": 1.184
+          },
+          "repeat_preview": "qa/repeat_alternatives_2x2.png",
+          "visual_review": "Visually inspected actual256-pixel texture repeated2x2. No dominant hard boundary or tonal step; painterly material identity retained. Fine motif discontinuities can remain, especially close-up. Use alternative on repeated wall/ground spans; keep original for architectural or landmark detail.",
+          "mathematically_seamless_certified": false,
+          "limits": "Crop can lower boundary color mismatch, but does not prove motif continuity or equal boundary pixels. In-engine distance, UV and lighting acceptance required."
+        }
+      },
+      "preferred_files": {
+        "256": "materials/wall_repeat_diffuse_256.png",
+        "128": "materials/wall_repeat_diffuse_128.png"
+      },
+      "preferred_usage": "Use repeat alternative on broad repeating surfaces; use original files on bounded slabs/bays for richer macro detail."
+    },
+    {
+      "slot": "ground",
+      "name": "Blue-teal worn stone tiles with thin ivory inlay fragments",
+      "intended_surface": "Blue-teal worn stone tiles with thin ivory inlay fragments",
+      "files": {
+        "256": "materials/ground_diffuse_256.png",
+        "128": "materials/ground_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "bounded_span_original_not_seamless",
+      "qa": {
+        "source_crop_px": [
+          627,
+          0,
+          1254,
+          627
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 21.182,
+          "vertical": 18.262
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 18.774,
+          "vertical": 18.175
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "repeat_alternative": {
+        "name": "Worn teal stone grit with tiny muted ivory bone fragments, no geometrical inlay",
+        "files": {
+          "256": "materials/ground_repeat_diffuse_256.png",
+          "128": "materials/ground_repeat_diffuse_128.png"
+        },
+        "colorspace": "sRGB",
+        "semantic": "diffuse color; not physically calibrated albedo",
+        "actual_size_px": [
+          256,
+          256
+        ],
+        "alpha": false,
+        "repeat_classification": "visually_usable_repeat_not_mathematically_certified",
+        "source": "art_sources/repeat_alternatives_pair_source.png",
+        "source_quadrant_px": [
+          627,
+          627,
+          1254,
+          1254
+        ],
+        "processing": "Imagegen targeted quieter-motif correction; quadrant nearest-resampled to320 square, crop-only edge-similarity selection, nearest-resampled to256 and128. No pixel blending, painting, mirroring or synthetic map derivation.",
+        "crop_in_320_intermediate_px": [
+          0,
+          0,
+          320,
+          320
+        ],
+        "qa": {
+          "before_crop_metrics": {
+            "edge_horizontal": 31.66,
+            "edge_vertical": 33.398,
+            "internal_horizontal": 29.205,
+            "internal_vertical": 29.534,
+            "edge_to_internal_ratio_horizontal": 1.084,
+            "edge_to_internal_ratio_vertical": 1.131
+          },
+          "after_crop_metrics": {
+            "edge_horizontal": 25.562,
+            "edge_vertical": 28.214,
+            "internal_horizontal": 28.578,
+            "internal_vertical": 28.72,
+            "edge_to_internal_ratio_horizontal": 0.894,
+            "edge_to_internal_ratio_vertical": 0.982
+          },
+          "repeat_preview": "qa/repeat_alternatives_2x2.png",
+          "visual_review": "Visually inspected actual256-pixel texture repeated2x2. No dominant hard boundary or tonal step; painterly material identity retained. Fine motif discontinuities can remain, especially close-up. Use alternative on repeated wall/ground spans; keep original for architectural or landmark detail.",
+          "mathematically_seamless_certified": false,
+          "limits": "Crop can lower boundary color mismatch, but does not prove motif continuity or equal boundary pixels. In-engine distance, UV and lighting acceptance required."
+        }
+      },
+      "preferred_files": {
+        "256": "materials/ground_repeat_diffuse_256.png",
+        "128": "materials/ground_repeat_diffuse_128.png"
+      },
+      "preferred_usage": "Use repeat alternative on broad repeating surfaces; use original files on bounded slabs/bays for richer macro detail."
+    },
+    {
+      "slot": "structure",
+      "name": "Old ivory rib-bone surface with long cream striations and restrained warm ochre wear",
+      "intended_surface": "Old ivory rib-bone surface with long cream striations and restrained warm ochre wear",
+      "files": {
+        "256": "materials/structure_diffuse_256.png",
+        "128": "materials/structure_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "bounded_span_original_not_seamless",
+      "qa": {
+        "source_crop_px": [
+          0,
+          627,
+          627,
+          1254
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 29.521,
+          "vertical": 18.13
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 21.83,
+          "vertical": 13.547
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "preferred_usage": "Use on bounded structural/prop surfaces; clamp or align structural breaks instead of unrestricted repeat."
+    },
+    {
+      "slot": "detail",
+      "name": "Ancient carved ivory-bone plaque face with abstract concentric incisions, no letters or copied symbols",
+      "intended_surface": "Ancient carved ivory-bone plaque face with abstract concentric incisions, no letters or copied symbols",
+      "files": {
+        "256": "materials/detail_diffuse_256.png",
+        "128": "materials/detail_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "nonrepeat_detail",
+      "qa": {
+        "source_crop_px": [
+          627,
+          627,
+          1254,
+          1254
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 11.268,
+          "vertical": 15.507
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 21.617,
+          "vertical": 19.973
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "preferred_usage": "Use on bounded structural/prop surfaces; clamp or align structural breaks instead of unrestricted repeat."
+    }
+  ],
+  "import_recommendation": {
+    "filter": "nearest for pixel aesthetic; test trilinear on distant surfaces if shimmer occurs",
+    "wrap": "repeat for candidate structural textures only after seam acceptance; clamp for one-off detail patches",
+    "texture_resolution": "256 primary; 128 alternative",
+    "base_texel_density": "128 px/m at 2 m repeats for 256 textures"
+  },
+  "qa_notes": "All original 2x2 repeat sheets reviewed; original macro motifs are bounded-span materials with imperfect repeat continuity. Targeted imagegen edits supplied quieter wall/ground alternatives, then crop-only edge selection and nearest resize; all alternative 2x2 sheets reviewed as visually usable repeats. None is mathematically seamless-certified. No fake PBR maps.",
+  "raster_status": "FROZEN",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

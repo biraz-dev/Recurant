@@ -1,0 +1,9 @@
+{
+  "theme_id": "sandstone-ruins-existing",
+  "status": "existing_repository_kit_reuse_not_rebundled",
+  "newly_generated": false,
+  "external_dependency": "project repository art/kits/archives/sandstone-ruins-v1.volume-001.zip through volume-018.zip",
+  "extract_command": "python3 tools/extract_asset_kits.py",
+  "runtime_already_exists_at_observed_head": true,
+  "new_kit_runtime_tested": false
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "natural-caverns",
+  "title": "Natural Caverns",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/natural-caverns/materials/wall_repeat_diffuse_256.png",
+      "low_memory_basecolor": "themes/natural-caverns/materials/wall_repeat_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Blue-grey stratified limestone face with broad soft ochre mineral bands"
+    },
+    "ground": {
+      "basecolor": "themes/natural-caverns/materials/ground_repeat_diffuse_256.png",
+      "low_memory_basecolor": "themes/natural-caverns/materials/ground_repeat_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Worn broken slate cave floor with irregular blue-grey slabs and small grit joints"
+    },
+    "structure": {
+      "basecolor": "themes/natural-caverns/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/natural-caverns/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Dark cool limestone with thick pale stalactite-like mineral streaks"
+    },
+    "detail": {
+      "basecolor": "themes/natural-caverns/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/natural-caverns/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Ochre calcite mineral deposit veins on a charcoal-blue rock surface"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_plain_2m",
+      "role": "walkable_floor",
+      "notes": "Plain 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "cave_wall_2m",
+      "role": "structure",
+      "notes": "Four overlapping faceted stone masses making an irregular cave wall."
+    },
+    {
+      "module_id": "cave_arch_2m",
+      "role": "structure",
+      "notes": "Low-facet cave arch and rock piers with true opening."
+    },
+    {
+      "module_id": "stalagmite",
+      "role": "distinctive_prop",
+      "notes": "Stalagmite tapered cave tooth; ceiling-attached one points downward."
+    },
+    {
+      "module_id": "rock_slab",
+      "role": "distinctive_prop",
+      "notes": "Rock slab, irregular original faceted solid."
+    },
+    {
+      "module_id": "crag_cluster",
+      "role": "distinctive_prop",
+      "notes": "Three differently sized jagged stone/bone spires."
+    },
+    {
+      "module_id": "boulder_large",
+      "role": "distinctive_prop",
+      "notes": "Boulder large, irregular original faceted solid."
+    },
+    {
+      "module_id": "crystal_cluster",
+      "role": "distinctive_prop",
+      "notes": "Four asymmetric faceted crystal prisms with divergent growth."
+    },
+    {
+      "module_id": "basalt_column",
+      "role": "distinctive_prop",
+      "notes": "Basalt column, irregular original faceted solid."
+    },
+    {
+      "module_id": "boulder_small",
+      "role": "distinctive_prop",
+      "notes": "Boulder small, irregular original faceted solid."
+    },
+    {
+      "module_id": "standing_stone",
+      "role": "distinctive_prop",
+      "notes": "Irregular upright megalith on a low buried foot."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/natural-caverns/assembly/layout.json",
+    "glb": "themes/natural-caverns/assembly/showcase.glb",
+    "preview": "themes/natural-caverns/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 2568,
+      "triangles": 1232,
+      "primitives": 3,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "aa64280f8db2ab4235ce8459d1a9f6141eaced3eeb1460181aa5232c1c8c1772",
+        "showcase.glb": "64454e9f5c92084befc03a018470b3a4598bad189037fc56135953ad6c91b4bd"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "788e4dadb77e2ae28c795982d59d469a4d9a1b003dfcd7fa12ee3539bb93aeff"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/natural-caverns/material_manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

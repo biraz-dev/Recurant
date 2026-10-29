@@ -1,0 +1,174 @@
+{
+  "id": "sunflower-sanctuary",
+  "title": "Sunflower Sanctuary",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "sunflower-sanctuary-001",
+      "bytes": 2283667,
+      "sha256": "a31c259fb8d9da2749f69f64f858600b4401f59f2877a41266cab173babd1f5d",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/sunflower-sanctuary.volume-001.zip",
+          "bytes": 2283667,
+          "sha256": "a31c259fb8d9da2749f69f64f858600b4401f59f2877a41266cab173babd1f5d",
+          "git_blob_sha": "0763efe8f647d41c23a38fccad08fd0f3fa1bc8c"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/CLAUDE_README.md",
+          "bytes": 7541,
+          "sha256": "038ac8756cd668a4e01c1b8bd96c8bc7ba4f51825f1b2f481e9396459d9d7113",
+          "git_blob_sha": "14bd448354d1b950791b9f1f33b5032022e19821"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "be8b975f180f6b5ce2145cdbf74d29becffe728e514e07954fb16e859d3d55e0",
+          "git_blob_sha": "eb099aeb5867c1b036ac0b5044442beb454d0d08"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/assembly/collision-navigation.json",
+          "bytes": 9900,
+          "sha256": "675e0d3a7b419d0298c1d648fbfd38fffdbb47b5396ed03d15839d1219acb968",
+          "git_blob_sha": "f158a543ab1d943904fe736a14f394c10be8b8cd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/assembly/layout.json",
+          "bytes": 14000,
+          "sha256": "cf32df5a41feef21a46760368b86c15e52ca74f259d71e242295c8c3bd56cc3b",
+          "git_blob_sha": "02318bda03a609d9981c7839ee9eb3b149dd85bb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/assembly/native_320x240.png",
+          "bytes": 151584,
+          "sha256": "8a061848b24abd19608ba088bfaaa7eb502d39add83f0fe82bce1b080e4d5102",
+          "git_blob_sha": "ed55e43d22157412a6c725d34691da5ed40f7efa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/assembly/showcase.glb",
+          "bytes": 984272,
+          "sha256": "e2a56734b1a789139d3b65de0e25bc6c11b5dba97b9d208f3095c33d3968ffc0",
+          "git_blob_sha": "a90a0804a3e744d0bd9f2a3586285ad1d0e503bb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/concept/reference_native_320x240.png",
+          "bytes": 176622,
+          "sha256": "71f74bd9ca46b14c3fdc574618d208828e2dbbc4c17ec92654d8ee62fb40d28b",
+          "git_blob_sha": "7d073306379f11089c482d71e65262979fc2f5db"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "44b69148021e7748cac8343c4a12574ffd3e0499122d420414a6c65c069df5c9",
+          "git_blob_sha": "ea2307b03b0ccdb95a7ff444972c848dfadf4443"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/material_manifest.json",
+          "bytes": 14208,
+          "sha256": "26f3ee737d2250f3179809a64975c466225ff0e006cd6945aed8bc7e762d9840",
+          "git_blob_sha": "9dd7e46bd5a8cbc42ea0cdc20b0c8987bf9c8c88"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/materials/detail_diffuse_128.png",
+          "bytes": 42025,
+          "sha256": "f00565f5a5c22a9793d233cfd74fd29cd458a344150e4db0f006547ff2149f15",
+          "git_blob_sha": "e1be266a6264db737a44c74a7554cf3b69bad073"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/materials/detail_diffuse_256.png",
+          "bytes": 154770,
+          "sha256": "d723897ec0aa275b3176a39754cd3de8f1ff0a960283f25d9aa10b7f27018be7",
+          "git_blob_sha": "bc46b7028851d2511b40a7a3779dd755417d6a69"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/materials/ground_diffuse_128.png",
+          "bytes": 41143,
+          "sha256": "dd340680d918a9cc434764c1071a44fcdc2b01f3de5e5c301f232ae5cfc3c14e",
+          "git_blob_sha": "929169baf7e65df7414c5fd2644fe5b371063176"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/materials/ground_diffuse_256.png",
+          "bytes": 154773,
+          "sha256": "b4bfb2ef7c2630c5047576149cc9bb50435f377064a6fe7acbde3a14d175a5dc",
+          "git_blob_sha": "d29bf818a0a85cf4e11d01f76c49c1f161baf93e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/materials/ground_repeat_diffuse_128.png",
+          "bytes": 45008,
+          "sha256": "0dcea5d38cbe35d998d00d98fa4d57c994c331896664707a962c5c0e762463fd",
+          "git_blob_sha": "ec7078728c3be5f75d4f84452a8f93dcab1e715c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/materials/ground_repeat_diffuse_256.png",
+          "bytes": 173438,
+          "sha256": "96befd7101ca13bdc4b076965d7bd39996de5dcc2bec9ca3097f089536e7a257",
+          "git_blob_sha": "40eadf0b39fc22fe72605b16aabf47ce4fed9d75"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/materials/structure_diffuse_128.png",
+          "bytes": 40037,
+          "sha256": "a7fa0063b928d26eabd5fb97b2dfa27d73a58d0137031421982e1611e686b333",
+          "git_blob_sha": "dd32aa046371b5f5a341509c3c5d4ceb7ccb6799"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/materials/structure_diffuse_256.png",
+          "bytes": 149954,
+          "sha256": "7735bec7f1424595ef8bef19faa9bfd04e75d9f4b42889de06011b9acd75bf74",
+          "git_blob_sha": "5a7b9bb50af21a861b65daca3f5f74eace1c3859"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/materials/wall_diffuse_128.png",
+          "bytes": 42829,
+          "sha256": "436f80d1f698b7c8b5311b9ea99239b278a83b46ab9aec91be92da1b1d37810c",
+          "git_blob_sha": "5e168dae60839ed208d45f9d04845e29a4273f81"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/materials/wall_diffuse_256.png",
+          "bytes": 161066,
+          "sha256": "e9d7941aa9d1e2b507b70a7b800950d6b63b62212a907884a1564a0bd1c51309",
+          "git_blob_sha": "693c7173c3e795eb230c245d93bd1849cd4f4fca"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/materials/wall_repeat_diffuse_128.png",
+          "bytes": 44522,
+          "sha256": "ea290db2857b0e1e493618ebe0f81de0107afc2dedf16a73a5df94c1e4f77ba7",
+          "git_blob_sha": "50fce9d366c760d0402fa13e4815a18dd0a4d887"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/materials/wall_repeat_diffuse_256.png",
+          "bytes": 170732,
+          "sha256": "50a82bbc502dcb44b3fcd1bb4b2d6801a10c0fa164f402bcc78b6bb2c3144597",
+          "git_blob_sha": "f8f7cb68323e3b4f07a8c36c665017b72752b71c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/prompts/material_atlas_prompt.txt",
+          "bytes": 1857,
+          "sha256": "3128a74a171cb38f325e6b99263e470e2399a593d8e0e76b4a1b52c05692f7b1",
+          "git_blob_sha": "002df13d4182b0085a10f11dc7a444984b764257"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1924,
+          "sha256": "99dfc1a662bd9e5a8d8365721aaeeacc51c352ae29630146089cf8b7db9fdadd",
+          "git_blob_sha": "de813747b9ef38ee4d6dca1e81eb1fae8c10f60e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sunflower-sanctuary/theme-manifest.json",
+          "bytes": 6895,
+          "sha256": "35e9e36b80de72d2b4e45925496eb6c9d0c9b1d0ef8afce5d47cf11e10685c93",
+          "git_blob_sha": "a966bd8d69199e2783b0b44890674c75834c6a7d"
+        }
+      ]
+    }
+  ]
+}

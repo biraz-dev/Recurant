@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "wild-savanna",
+  "title": "Wild Savanna",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/wild-savanna/materials/wall_diffuse_256.png",
+      "low_memory_basecolor": "themes/wild-savanna/materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "flat weathered ochre sandstone with broad quiet cracks and earth-red stains"
+    },
+    "ground": {
+      "basecolor": "themes/wild-savanna/materials/ground_diffuse_256.png",
+      "low_memory_basecolor": "themes/wild-savanna/materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "flat dusty terracotta earth with small warm pebbles and fine dry cracks"
+    },
+    "structure": {
+      "basecolor": "themes/wild-savanna/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/wild-savanna/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "flat short sun-dried tawny savanna grass groundcover with muted olive undergrowth"
+    },
+    "detail": {
+      "basecolor": "themes/wild-savanna/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/wild-savanna/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "flat gray-brown acacia bark with fine irregular grooves and subtle pale lichen"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_plain_2m",
+      "role": "walkable_floor",
+      "notes": "Plain 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "cliff_face_2m",
+      "role": "structure",
+      "notes": "Tall stratified cliff mass with lower shoulder, overlap-friendly scenery segment."
+    },
+    {
+      "module_id": "cave_arch_2m",
+      "role": "structure",
+      "notes": "Low-facet cave arch and rock piers with true opening."
+    },
+    {
+      "module_id": "acacia_tree",
+      "role": "distinctive_prop",
+      "notes": "Flat-canopy acacia silhouette with spreading real branches and faceted foliage volumes."
+    },
+    {
+      "module_id": "dry_grass_tuft",
+      "role": "distinctive_prop",
+      "notes": "Solid low-poly grass blades; opaque geometry, no cutout shader required."
+    },
+    {
+      "module_id": "crag_cluster",
+      "role": "distinctive_prop",
+      "notes": "Three differently sized jagged stone/bone spires."
+    },
+    {
+      "module_id": "wheat_seedhead_cluster",
+      "role": "distinctive_prop",
+      "notes": "Five grass seed heads, readable gold-plains silhouette using opaque geometry."
+    },
+    {
+      "module_id": "standing_stone",
+      "role": "distinctive_prop",
+      "notes": "Irregular upright megalith on a low buried foot."
+    },
+    {
+      "module_id": "boulder_large",
+      "role": "distinctive_prop",
+      "notes": "Boulder large, irregular original faceted solid."
+    },
+    {
+      "module_id": "grass_clump",
+      "role": "distinctive_prop",
+      "notes": "Solid low-poly grass blades; opaque geometry, no cutout shader required."
+    },
+    {
+      "module_id": "dead_branch_tree",
+      "role": "distinctive_prop",
+      "notes": "Forking bare tree silhouette, no foliage cards."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/wild-savanna/assembly/layout.json",
+    "glb": "themes/wild-savanna/assembly/showcase.glb",
+    "preview": "themes/wild-savanna/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 3863,
+      "triangles": 1737,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "5d2676ff095a28bcba271bf6eac45f851edf740ad89a506e15c05811ec7d5bd7",
+        "showcase.glb": "589d2bd32929f4ccc4a6e47f60b03b824df5b284e56fbb8827b1677501c1adf5"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "90985fea01d72600a0bb335c8a6346a71b0e843e1ddcd76dfa8a22ef2d4ff9fd"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/wild-savanna/material-manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

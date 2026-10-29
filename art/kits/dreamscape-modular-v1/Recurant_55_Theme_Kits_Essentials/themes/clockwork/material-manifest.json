@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "theme": "clockwork",
+  "atlas_source": "art_sources/material_atlas_v1.png",
+  "atlas_source_dimensions": [
+    1254,
+    1254
+  ],
+  "full_prompt": "prompts/material_atlas_v1.txt",
+  "generator": "built-in image_gen",
+  "input_reference": "Original biome concept inspected visually; not used as image-edit input",
+  "processing": "Exact atlas quadrant crop or selected full-frame built-in imagegen repeat edit, followed by nearest-neighbor resizing to256 and128. No programmatic seam blend, edge copying or PBR map invention.",
+  "palette": "aged ochre gold, deep indigo, warm bronze and midnight violet",
+  "materials": [
+    {
+      "id": "clockwork__wall",
+      "role": "wall",
+      "description": "dark indigo stone blockwork with thin muted brass joints",
+      "base_color_texture": "materials/wall_diffuse_256.png",
+      "low_res_texture": "materials/wall_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_practical_repeat",
+      "recommended_wrap": "REPEAT",
+      "nominal_meters_per_repeat": 2,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/wall_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 18.01,
+          "top_bottom": 33.83
+        },
+        "interior_adjacent_MAE_rgb255": 16.43,
+        "status": "visually_reviewed_practical_repeat_minor_seams",
+        "visual_review": "Indigo/brass masonry aligns usefully in repeat; tiny brass-line shifts remain.",
+        "review_scale": "256px native, 512px 2x2 composite"
+      },
+      "source_crop_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sha256": "1a099a753809f0c0ddbda37658b11c71363da43562cb09a5e84fb2fe38915827",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "clockwork__ground",
+      "role": "ground",
+      "description": "worn ochre square stone slabs with fine aged bronze seams",
+      "base_color_texture": "materials/ground_diffuse_256.png",
+      "low_res_texture": "materials/ground_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_practical_repeat",
+      "recommended_wrap": "REPEAT",
+      "nominal_meters_per_repeat": 2,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/ground_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 15.73,
+          "top_bottom": 18.48
+        },
+        "interior_adjacent_MAE_rgb255": 17.46,
+        "status": "visually_reviewed_practical_repeat_minor_seams",
+        "visual_review": "Ochre tiled floor aligns usefully in repeat; stone grain is not exactly edge-identical.",
+        "review_scale": "256px native, 512px 2x2 composite"
+      },
+      "source_crop_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "e029f3319bc628a594e90e07c4fa8642135fd916dd6ac97d112a775c5fe1a4ae",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "clockwork__structure",
+      "role": "structure",
+      "description": "aged golden bronze plate with tiny flush rivets and subtle machinery wear",
+      "base_color_texture": "materials/structure_diffuse_256.png",
+      "low_res_texture": "materials/structure_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/structure_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 18.0,
+          "top_bottom": 23.92
+        },
+        "interior_adjacent_MAE_rgb255": 19.52,
+        "status": "nonrepeat_by_design",
+        "visual_review": "Nonrepeat face-on panel: clamp UVs 0-1 or crop within module; not intended as a seamless surface."
+      },
+      "source_crop_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "c61d8aaa90de7ca51441b3d46a79363d59259a2e73d893789072a64902690720",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "clockwork__detail",
+      "role": "detail",
+      "description": "flat bronze gear-faced inset panel with concentric fine machined circles, no perspective",
+      "base_color_texture": "materials/detail_diffuse_256.png",
+      "low_res_texture": "materials/detail_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/detail_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 8.98,
+          "top_bottom": 68.07
+        },
+        "interior_adjacent_MAE_rgb255": 24.5,
+        "status": "nonrepeat_by_design",
+        "visual_review": "Nonrepeat face-on panel: clamp UVs 0-1 or crop within module; not intended as a seamless surface."
+      },
+      "source_crop_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "75e4946ac75adf16cbe9ad246115ca584b00496b576d784a7d6896c4ef1f349d",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    }
+  ],
+  "qa_contact": "qa/material_contact_sheet.png",
+  "readme": "MATERIAL_NOTES.md",
+  "qa_visual_summary": "Four distinct face-on opaque diffuse surfaces inspected. No scene or text. All wall/ground 2x2 repeats visually reviewed and practical at native size with minor retained discontinuities; no mathematical seamlessness certification. Structure/detail are explicitly nonrepeat.",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

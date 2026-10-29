@@ -1,0 +1,206 @@
+{
+  "schema": "recurant.material-kit.v1",
+  "theme": "tatami-house",
+  "generator": "builtin image_gen",
+  "source_atlas": "art_sources/material-atlas-master.png",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "prompt": "prompts/material-atlas.txt",
+  "derived_processing": "Quadrant crops, optionally restricted to whole masonry courses (see source_crop_px), and nearest-neighbour resizing only. No synthesized PBR maps or procedural seam repair.",
+  "lighting_note": "Diffuse stylized painted surface shading is baked; do not infer physical PBR maps.",
+  "qa_contacts": [
+    "qa/material-contact.png",
+    "qa/wall-ground-repeat-2x2.png"
+  ],
+  "qa_status": "Visual QA complete. See per-role notes; no claim of pixel-perfect seamlessness.",
+  "materials": [
+    {
+      "role": "wall",
+      "file_256": "materials/wall_diffuse_256.png",
+      "file_128": "materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "warm cream fibrous rice-paper shoji surface with narrow dark wooden horizontal and vertical lattice, exact regular square repeat",
+      "repeat_intent": true,
+      "repeat_verified": true,
+      "wrap_recommendation": "REPEAT",
+      "uv_recommendation": "2 metres per repeat candidate",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 20.017,
+        "top_bottom_mae": 9.408,
+        "horizontal_internal_mae": 10.71,
+        "vertical_internal_mae": 11.301
+      },
+      "source_crop_px": [
+        5,
+        5,
+        622,
+        621
+      ],
+      "sha256": "0dfe9fd60f4a1319a81902abd30868a69285413e5a8e693d56e20c5a123ebb5c",
+      "repeat_quality": "Practical visually reviewed repeat; not pixel-edge-identical",
+      "qa_note": "Shoji paper lattice repeats accepted after cropping boundary frame halves. Do not mistake the baked wooden lattice for physical dividers; add geometry for silhouette/depth.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "ground",
+      "file_256": "materials/ground_diffuse_256.png",
+      "file_128": "materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "straw-gold finely woven tatami mat surface, parallel natural fiber pattern, restrained jade edging only as a flat repeating woven band",
+      "repeat_intent": true,
+      "repeat_verified": true,
+      "wrap_recommendation": "REPEAT",
+      "uv_recommendation": "2 metres per repeat candidate",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 40.882,
+        "top_bottom_mae": 34.199,
+        "horizontal_internal_mae": 13.957,
+        "vertical_internal_mae": 15.239
+      },
+      "source_crop_px": [
+        661,
+        0,
+        1216,
+        627
+      ],
+      "sha256": "adbe7e5a14785d1c82334ebb70200d5c3fed38e4e47f397f1b84ad1ce9741e3c",
+      "repeat_quality": "Practical visually reviewed repeat; not pixel-edge-identical",
+      "qa_note": "Tatami weave repeat accepted. Cropped side-band halves meet as one mat seam; use 2m per repeat or physical mat dimensions. Fine fiber moire at distance needs proper sampling.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "structure",
+      "file_256": "materials/structure_diffuse_256.png",
+      "file_128": "materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "warm aged cedar plank surface with straight quiet grain, refined traditional wooden structural material",
+      "repeat_intent": false,
+      "repeat_verified": false,
+      "wrap_recommendation": "CLAMP",
+      "uv_recommendation": "Local component UV0 0\u20131",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 53.19,
+        "top_bottom_mae": 29.962,
+        "horizontal_internal_mae": 13.014,
+        "vertical_internal_mae": 5.89
+      },
+      "source_crop_px": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "71ad2dc664c6d799573964c8da172be2229dd20f02755a2337edc715e59bcb19",
+      "repeat_quality": "Intentional nonrepeat component material / decorative panel",
+      "qa_note": "Flat surface accepted; map once per component UV0 0\u20131, not across room-scale repeats.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "detail",
+      "file_256": "materials/detail_diffuse_256.png",
+      "file_128": "materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "square indigo and sage dyed textile panel with a restrained original maple leaf and stream motif, flat cloth, no folds",
+      "repeat_intent": false,
+      "repeat_verified": false,
+      "wrap_recommendation": "CLAMP",
+      "uv_recommendation": "Local component UV0 0\u20131",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 41.94,
+        "top_bottom_mae": 42.286,
+        "horizontal_internal_mae": 19.904,
+        "vertical_internal_mae": 24.403
+      },
+      "source_crop_px": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "ec0006bd0f962ad74c13e399bf4a6857dbacc505c7ecf39331edabce50a933af",
+      "repeat_quality": "Intentional nonrepeat component material / decorative panel",
+      "qa_note": "Flat surface accepted; map once per component UV0 0\u20131, not across room-scale repeats.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    }
+  ],
+  "material_type": "Opaque painted diffuse/base color only",
+  "recommended_sampler": {
+    "magnification": "NEAREST / POINT",
+    "minification": "NEAREST or nearest-mipmap-nearest; test fine textile weave at distance",
+    "color_management": "Interpret PNG as sRGB and convert to linear only inside renderer",
+    "compression": "Prefer lossless/uncompressed for pixel fidelity",
+    "alpha_mode": "OPAQUE"
+  },
+  "provenance": {
+    "mode": "builtin image_gen",
+    "primary_prompt": "prompts/material-atlas.txt",
+    "art_sources": [
+      "art_sources/material-atlas-master.png"
+    ],
+    "no_manual_pixel_painting": true,
+    "processing": "Crop and nearest-neighbor resize only; visual QA contact assembly is not production image editing."
+  },
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

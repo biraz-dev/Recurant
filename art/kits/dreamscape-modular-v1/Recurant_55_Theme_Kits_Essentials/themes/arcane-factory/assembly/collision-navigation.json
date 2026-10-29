@@ -1,0 +1,645 @@
+{
+  "authority": "authoring guides only; zrpg_core::Map remains runtime authority",
+  "boxes": [
+    {
+      "instance_id": "i000",
+      "module_id": "floor_inset_2m",
+      "center": [
+        1.0,
+        -0.1,
+        1.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i001",
+      "module_id": "floor_inset_2m",
+      "center": [
+        3.0,
+        -0.1,
+        1.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i002",
+      "module_id": "floor_inset_2m",
+      "center": [
+        5.0,
+        -0.1,
+        1.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i003",
+      "module_id": "floor_inset_2m",
+      "center": [
+        1.0,
+        -0.1,
+        3.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i004",
+      "module_id": "floor_inset_2m",
+      "center": [
+        3.0,
+        -0.1,
+        3.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i005",
+      "module_id": "floor_inset_2m",
+      "center": [
+        5.0,
+        -0.1,
+        3.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i006",
+      "module_id": "floor_inset_2m",
+      "center": [
+        1.0,
+        -0.1,
+        5.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i007",
+      "module_id": "floor_inset_2m",
+      "center": [
+        3.0,
+        -0.1,
+        5.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i008",
+      "module_id": "floor_inset_2m",
+      "center": [
+        5.0,
+        -0.1,
+        5.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i009",
+      "module_id": "floor_inset_2m",
+      "center": [
+        1.0,
+        -0.1,
+        7.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i010",
+      "module_id": "floor_inset_2m",
+      "center": [
+        3.0,
+        -0.1,
+        7.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i011",
+      "module_id": "floor_inset_2m",
+      "center": [
+        5.0,
+        -0.1,
+        7.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i012",
+      "module_id": "floor_inset_2m",
+      "center": [
+        1.0,
+        -0.1,
+        9.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i013",
+      "module_id": "floor_inset_2m",
+      "center": [
+        3.0,
+        -0.1,
+        9.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i014",
+      "module_id": "floor_inset_2m",
+      "center": [
+        5.0,
+        -0.1,
+        9.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i015",
+      "module_id": "machine_wall_panel",
+      "center": [
+        1.0,
+        2.0,
+        10.240001
+      ],
+      "size": [
+        2.0,
+        4.0,
+        0.28
+      ],
+      "role": "rear_boundary"
+    },
+    {
+      "instance_id": "i016",
+      "module_id": "machine_wall_panel",
+      "center": [
+        3.0,
+        2.0,
+        10.240001
+      ],
+      "size": [
+        2.0,
+        4.0,
+        0.28
+      ],
+      "role": "rear_boundary"
+    },
+    {
+      "instance_id": "i017",
+      "module_id": "machine_wall_panel",
+      "center": [
+        5.0,
+        2.0,
+        10.240001
+      ],
+      "size": [
+        2.0,
+        4.0,
+        0.28
+      ],
+      "role": "rear_boundary"
+    },
+    {
+      "instance_id": "i018",
+      "module_id": "machine_doorframe",
+      "center": [
+        2.15,
+        2.0,
+        8.0
+      ],
+      "size": [
+        0.3,
+        4.0,
+        0.35
+      ],
+      "role": "open_portal"
+    },
+    {
+      "instance_id": "i018",
+      "module_id": "machine_doorframe",
+      "center": [
+        3.85,
+        2.0,
+        8.0
+      ],
+      "size": [
+        0.3,
+        4.0,
+        0.35
+      ],
+      "role": "open_portal"
+    },
+    {
+      "instance_id": "i018",
+      "module_id": "machine_doorframe",
+      "center": [
+        3.0,
+        3.45,
+        8.0
+      ],
+      "size": [
+        1.4,
+        1.1,
+        0.35
+      ],
+      "role": "open_portal"
+    },
+    {
+      "instance_id": "i019",
+      "module_id": "coil_generator",
+      "center": [
+        1.0,
+        1.3,
+        1.0
+      ],
+      "size": [
+        1.0,
+        2.6,
+        0.951057
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i020",
+      "module_id": "tank_vertical",
+      "center": [
+        5.0,
+        1.45,
+        1.0
+      ],
+      "size": [
+        1.714643,
+        2.9,
+        1.714643
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i021",
+      "module_id": "pipe_tee_2m",
+      "center": [
+        0.902879,
+        0.135955,
+        3.097121
+      ],
+      "size": [
+        1.994242,
+        0.271909,
+        1.463563
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i022",
+      "module_id": "gear_machine_pair",
+      "center": [
+        5.0,
+        0.923005,
+        3.0
+      ],
+      "size": [
+        0.8,
+        1.846009,
+        1.738869
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i023",
+      "module_id": "machine_console",
+      "center": [
+        1.0,
+        0.745,
+        5.0
+      ],
+      "size": [
+        1.4,
+        1.49,
+        0.8
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i024",
+      "module_id": "bottle_potion",
+      "center": [
+        5.0,
+        0.375,
+        5.0
+      ],
+      "size": [
+        0.484831,
+        0.75,
+        0.470988
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i025",
+      "module_id": "coil_stack",
+      "center": [
+        1.0,
+        1.25,
+        7.0
+      ],
+      "size": [
+        1.028786,
+        2.5,
+        1.028786
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i026",
+      "module_id": "foundry_crucible",
+      "center": [
+        5.0,
+        0.375,
+        7.0
+      ],
+      "size": [
+        1.5,
+        0.75,
+        1.5
+      ],
+      "role": "blocked_cell_scenery"
+    }
+  ],
+  "navigation": {
+    "cells": [
+      {
+        "cell": [
+          0,
+          0
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          0
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          0
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          1
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          1
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          1
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          2
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          2
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          2
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          3
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          3
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          3
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          4
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          4
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          4
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      }
+    ],
+    "edges": [
+      {
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          1,
+          1
+        ],
+        "bidirectional": true
+      },
+      {
+        "a": [
+          1,
+          1
+        ],
+        "b": [
+          1,
+          2
+        ],
+        "bidirectional": true
+      },
+      {
+        "a": [
+          1,
+          2
+        ],
+        "b": [
+          1,
+          3
+        ],
+        "bidirectional": true
+      },
+      {
+        "a": [
+          1,
+          3
+        ],
+        "b": [
+          1,
+          4
+        ],
+        "bidirectional": true
+      }
+    ],
+    "start_cell": [
+      1,
+      0
+    ],
+    "goal_cell": [
+      1,
+      4
+    ],
+    "missing_edges": "forbidden_between_declared_walkable_neighbours",
+    "diagonal": false
+  },
+  "travel_lane": {
+    "width_m": 1.2,
+    "headroom_m": 2.4,
+    "central_x_m": 3,
+    "z_range_m": [
+      0.2,
+      9.8
+    ]
+  },
+  "fluid_collision": "none; solid decks or beds separate"
+}

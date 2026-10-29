@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: Production game texture atlas, diffuse color only, NOT concept art or a scene.
+Create ONE square 2 by 2 atlas of FOUR DIFFERENT square material swatches, with exact dividing lines at 50% width and height. Swatches touch edge-to-edge, no margin, gap, frame, border, captions or labels. Each quadrant fills its entire square with the material. Flat orthographic straight-on surface only. Absolutely no perspective, walls receding, objects, environment, horizon, cast shadow, glow bloom, light shafts, vignette, or directional light. Even neutral color throughout; surface microshading only.
+Theme: Alabaster Temple. Dreamlike refinement, elegant tactile painterly pixel-art reminiscent of classic 1990s fantasy dungeon adventures such as Lands of Lore, but original design. Dense deliberate pixel clusters, restrained authentic handpainted detail, no photographic detail or smooth airbrush.
+TOP LEFT: warm ivory alabaster ashlar wall, clean small rectangular fitted blocks, subtle pale rose and cream veining, orderly offset masonry. Seamlessly repeating in both directions, edge cells must align.
+TOP RIGHT: pale cream polished marble floor, orthogonal square tiles and extremely thin muted champagne-gold grout, gentle ivory clouding. No perspective or reflections. Seamlessly repeating in both directions, tile grid aligns at borders.
+BOTTOM LEFT: subtly veined ivory structural marble with sparse thin gold inlay bands, straight ornamental repeated rhythm suitable for columns or arches. Full square flat material, no column object.
+BOTTOM RIGHT: small elegant symmetrical sun-and-petal bas-relief medallion in ivory and pale champagne gold, centered on alabaster square. This is a nonrepeating architectural relief panel, absolutely no lettering or frame.
+Color palette ivory, pale rose, muted gold, palest cool blue-gray accents. Keep fine details visibly pixel-clustered. Preserve four exact quadrants; no scene.

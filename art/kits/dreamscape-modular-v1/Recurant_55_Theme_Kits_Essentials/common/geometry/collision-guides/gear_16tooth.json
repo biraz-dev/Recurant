@@ -1,0 +1,20 @@
+{
+  "asset": "gear_16tooth",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.8,
+        0.0
+      ],
+      "size": [
+        1.590679,
+        1.590679,
+        0.256
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/gear_16tooth__GUIDE.glb"
+}

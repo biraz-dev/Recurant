@@ -1,0 +1,2355 @@
+{
+  "id": "original-source-art",
+  "title": "Optional original masters and editable Blender source (lossless deduplicated)",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art",
+  "file_count": 161,
+  "archives": [
+    {
+      "id": "original-source-art-001",
+      "bytes": 19274134,
+      "sha256": "47443ce6ba672221b8839eacd5b9a9feabc253d8dfa8fd55c69c5382a6541ccf",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-001.zip.part001",
+          "bytes": 2500000,
+          "sha256": "95bfda0aaeafd2ade746fc51660888d1091577d93db4f0cc9c629010b323b1a9",
+          "git_blob_sha": "0e1ced393679a97ac435b0dae34a0a69301d6182"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-001.zip.part002",
+          "bytes": 2500000,
+          "sha256": "b74b94cd312da358cb87993e31be55f2609e9ec4395e6a1c7f23a98319e6c6a7",
+          "git_blob_sha": "d523e5db9f7765e5ba663ac6d0be66dc1c5320ce"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-001.zip.part003",
+          "bytes": 2500000,
+          "sha256": "673ad7e76e1a598523ca6c98b445cbb6aaddecb84bcf19ed1b20ca3911f81e18",
+          "git_blob_sha": "b5a479a630370e9ea5fb876cf99ef12e2ee41b8b"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-001.zip.part004",
+          "bytes": 2500000,
+          "sha256": "9b3140a08cb50b701a6ebbd6d37a2995781b8aa0179e7a25c4ffff6b7dc1b623",
+          "git_blob_sha": "81398000456c2a23d085c7cf7576ba4952b949ec"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-001.zip.part005",
+          "bytes": 2500000,
+          "sha256": "ad5167a432672d9c6d429e2dbd4def42a3a16c2bab80d98a606b84924c75070b",
+          "git_blob_sha": "e85582cf06fb9948f612454d7083826bb4d7b79a"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-001.zip.part006",
+          "bytes": 2500000,
+          "sha256": "911c2abe955a7c1e96327dcaf12b7b66eed61fee9dd4a2ead1e8a4c5d6a81a6e",
+          "git_blob_sha": "68268d70d96f79d705c1dd7423d87b8fff6d8f71"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-001.zip.part007",
+          "bytes": 2500000,
+          "sha256": "fc399d5702daa9a17e1787b185ad21793615d27013b55de054fc095aefa1ff47",
+          "git_blob_sha": "ed4c0d5636a1e0ef7e9471cf40ef0c167bc51340"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-001.zip.part008",
+          "bytes": 1774134,
+          "sha256": "45095a03a7e4604ec8953e4824adcea5a71f310b988dc9cd3eb1a523dd7c2d6e",
+          "git_blob_sha": "031b1df2b5908d6271c7c8d0bead08e5550614c5"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/FILE_INVENTORY.json",
+          "bytes": 33529,
+          "sha256": "9734e6d1f588b0b8106e4cbc3749da80f4e6c82c9d437bf8db282ff4e37f09fd",
+          "git_blob_sha": "1d4c6a87a392c53a51fabdf9f76251ad6251ad11"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/README.md",
+          "bytes": 1946,
+          "sha256": "ce2654bfb0bde47c5ddb76b36581eacfeceea6abfba95ee3b62a61c70e0baacc",
+          "git_blob_sha": "41ad34b980ae4f8e4f1b90dadb5df734454ed0a9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/SHA256SUMS.txt",
+          "bytes": 22272,
+          "sha256": "7abecdf7bc06feb27357e5860c9ef02af58f448bcd6f124a209c7d56a11743d8",
+          "git_blob_sha": "c7b35fb3940ef97ee80f340985a36c1c551b1906"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/SOURCE_ALIAS_MAP.json",
+          "bytes": 82443,
+          "sha256": "9e4d61ee26f5898a93a4186352f31db5b504e9d0129339d38f8d183ec0d2eaf9",
+          "git_blob_sha": "326129c4feb111aafdb93da2f06fd0b92263907f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/0096f3fd5e9dbaa2ebe9b6bf287a3d05fdfc8b31bcae7f9aebcb37c9b6e30f03.png",
+          "bytes": 1842560,
+          "sha256": "0096f3fd5e9dbaa2ebe9b6bf287a3d05fdfc8b31bcae7f9aebcb37c9b6e30f03",
+          "git_blob_sha": "e9bbe0782fc036e666b41e9dc297144fe8552c3f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/00a5b6707ae1a7070644c7f8692dd81b34f97d8308abebd99d1b6165b78dccbf.png",
+          "bytes": 4257393,
+          "sha256": "00a5b6707ae1a7070644c7f8692dd81b34f97d8308abebd99d1b6165b78dccbf",
+          "git_blob_sha": "0ec303dda38019fb13528abd0bc86453754de807"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/00f73c1af5383e63567c2b4062be86d65180c77a4b8de11cc526161d9f574251.png",
+          "bytes": 3539453,
+          "sha256": "00f73c1af5383e63567c2b4062be86d65180c77a4b8de11cc526161d9f574251",
+          "git_blob_sha": "53db626beae2dfd46fc0c315038506c78cd916a3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/02f31bf848c3cae5b3001d96655c03fe25b35b4ddfc5241e0749044930195fb8.png",
+          "bytes": 2874367,
+          "sha256": "02f31bf848c3cae5b3001d96655c03fe25b35b4ddfc5241e0749044930195fb8",
+          "git_blob_sha": "f1b031e2a4f4cacb8313e10ee85ca27ce2c90858"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/0667b2abea6040bc0cb6f87ea7b19c2300ddedb9abb0d8e4b963498f3836c96a.png",
+          "bytes": 3761624,
+          "sha256": "0667b2abea6040bc0cb6f87ea7b19c2300ddedb9abb0d8e4b963498f3836c96a",
+          "git_blob_sha": "6f13146a4781a475a1ee181dfcb6c6cce2600f78"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/0a18698092dc3df2f1a0b14464e2b5411b2dce148ef2f0562eb7c499a66af7d6.png",
+          "bytes": 3495559,
+          "sha256": "0a18698092dc3df2f1a0b14464e2b5411b2dce148ef2f0562eb7c499a66af7d6",
+          "git_blob_sha": "047bffd759543a5913469cbe23870368fec317af"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-002",
+      "bytes": 17840262,
+      "sha256": "5bdfd4f33d8662188ef03f554a8d473ba42a6042f0f71c522640291cc6e10ddd",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-002.zip.part001",
+          "bytes": 2500000,
+          "sha256": "47ad9447d33feaa9dc83e76c833298756291449016726c163cbe9d48bc262b09",
+          "git_blob_sha": "2d2a3f37542448ca1f1cb37083b8f37f3c2ede96"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-002.zip.part002",
+          "bytes": 2500000,
+          "sha256": "d9e189928d331f44165ebd4c89c3abef34d0f7576cb478a2833a92397a4f4dd1",
+          "git_blob_sha": "2cd7de35da208fba2f6218055a2fe4ee5ffee619"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-002.zip.part003",
+          "bytes": 2500000,
+          "sha256": "1a4e5803e8f911267d41f14997bfc9d89e298b242bec24e4189fa6b9dedb6618",
+          "git_blob_sha": "88ff5a761c754ae7cde818a467f34229e4904af9"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-002.zip.part004",
+          "bytes": 2500000,
+          "sha256": "7e6a7f1b613633c5009e9293b5b39dc9afdcb4022486c9c07419200f46d2a00b",
+          "git_blob_sha": "5a6db927f64b90c6f57131fab193833a29ee0271"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-002.zip.part005",
+          "bytes": 2500000,
+          "sha256": "66729244b83dfbc6560c9fedea8a150c5dfc2437f3db15b53f6bfdc2ab6c8318",
+          "git_blob_sha": "19f9a589e822034b21caa56ea7068ca8e479eefe"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-002.zip.part006",
+          "bytes": 2500000,
+          "sha256": "19918cd34388e405495f6d9f66c265b99c7bd3e8306a0c2a74f3cba98cab46f5",
+          "git_blob_sha": "5c6f2c6487fe7a8c1dc248dcecfcf9b144595465"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-002.zip.part007",
+          "bytes": 2500000,
+          "sha256": "5b7b053ef64a7e8df11f1605dd3e85035869fcfff7b1eaa107f08ddad316bcc9",
+          "git_blob_sha": "2140e039f753216779a3b330c9a7ba9a74f5d84a"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-002.zip.part008",
+          "bytes": 340262,
+          "sha256": "1ace601fd41684eb1b60c5ff96e529ad9ec0134b1acbe2a4262dc6a46125130c",
+          "git_blob_sha": "04a8dff2d3fac2cea9d658b5371dfd3654eed572"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/0a74d9cb4797504befcef868209ef457aed5d7a4fba1853d208e7bcacdc4c4b9.png",
+          "bytes": 3777313,
+          "sha256": "0a74d9cb4797504befcef868209ef457aed5d7a4fba1853d208e7bcacdc4c4b9",
+          "git_blob_sha": "377cfd835ae3cd7f99fd726df0a7d2bdd5a8f823"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/0d3065110b748f2af3babc924c2f7530c2656df77f6ca857ae6fea4a038eef54.json",
+          "bytes": 420,
+          "sha256": "0d3065110b748f2af3babc924c2f7530c2656df77f6ca857ae6fea4a038eef54",
+          "git_blob_sha": "21583aa3e31e5f64f357520d8ef4e4ee83385537"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/0d820bd43a32cdc46d491f0ac0763744ebba6ed8f33b1acab3e0c298eed74a8e.png",
+          "bytes": 3070466,
+          "sha256": "0d820bd43a32cdc46d491f0ac0763744ebba6ed8f33b1acab3e0c298eed74a8e",
+          "git_blob_sha": "7d2c14f9c68789c9601c51a56162182007d72ea7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/106e0fbe9020776297dd08ddc4cbad3358c64e75b44288d395b1258861d660fa.png",
+          "bytes": 2538006,
+          "sha256": "106e0fbe9020776297dd08ddc4cbad3358c64e75b44288d395b1258861d660fa",
+          "git_blob_sha": "018d7e3878382e7c5a428c36fd5317c5cb96a215"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/16ec5160bb3a1d883bde00f8bee0b9345326c7882238c6d8334705f5ddaa6b0d.png",
+          "bytes": 2524218,
+          "sha256": "16ec5160bb3a1d883bde00f8bee0b9345326c7882238c6d8334705f5ddaa6b0d",
+          "git_blob_sha": "1adce1f03d4cd5d52636d16d2c722dd037c8062a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/18384568b2c209bb60d17746f1b36a13b2c3e8151647410a0ad293bea846a3af.png",
+          "bytes": 2958187,
+          "sha256": "18384568b2c209bb60d17746f1b36a13b2c3e8151647410a0ad293bea846a3af",
+          "git_blob_sha": "41018cac5d878df3fa1ba208a3a48740ea0a76c1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/190a94f662f8f32cd457b54ead0a7833cb051273b9c3db801d3894eee0e3d220.json",
+          "bytes": 470,
+          "sha256": "190a94f662f8f32cd457b54ead0a7833cb051273b9c3db801d3894eee0e3d220",
+          "git_blob_sha": "d2543de0a1047c8bd48b7c63ad72e22961e4ccab"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/1a28276381cb8a7568c837a411c78768b2bcb0f86f0410263f427904997c17ab.json",
+          "bytes": 3945,
+          "sha256": "1a28276381cb8a7568c837a411c78768b2bcb0f86f0410263f427904997c17ab",
+          "git_blob_sha": "ebc6d049e78ba22a710a49c87e347462fe37e57f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/1d966ca8bb78bed7bf1de71ce04c803729db71dccfd6afc57039e658c17a16a7.png",
+          "bytes": 3181195,
+          "sha256": "1d966ca8bb78bed7bf1de71ce04c803729db71dccfd6afc57039e658c17a16a7",
+          "git_blob_sha": "ac2dd0d0a03b35218b45a8d4a5e12f4f8a9ca286"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-003",
+      "bytes": 18046547,
+      "sha256": "394c19aa9f4de824ce1293000a74c14def6083f41b05c5f75906e7373f8878d7",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-003.zip.part001",
+          "bytes": 2500000,
+          "sha256": "8b91a3c223b7326763ce0b80e4339ce5045811723c252c4964c154992a8784fb",
+          "git_blob_sha": "987c2b7f63a551b6767fd56c81e70484110d9c67"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-003.zip.part002",
+          "bytes": 2500000,
+          "sha256": "1fdc83e1ec09b8f9d69256e4272d92f505f8d594b0ea25f70c2e7cd7e58dd778",
+          "git_blob_sha": "f0d62e06c5ced0ecf533d928529bd024703bb9fb"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-003.zip.part003",
+          "bytes": 2500000,
+          "sha256": "2f9d6da6318fba3cfadae658186775d440681d029d6144abb6206f6593a4a3a3",
+          "git_blob_sha": "d45635fbf4dabd055a9687db1352a87e03b8b4d5"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-003.zip.part004",
+          "bytes": 2500000,
+          "sha256": "06ea26128e6794a7042b1cef02edd2a913854f03abf574d1931390cbe4287cd0",
+          "git_blob_sha": "7a97e1d9e01b0b8a86160b83681c66d258d8024c"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-003.zip.part005",
+          "bytes": 2500000,
+          "sha256": "0eb837b3264a93d962868c678c187ad9007f27fd4c7f71ea287f14caa7dbd6a5",
+          "git_blob_sha": "0107cb171c38ace43cfb1767fc22bb5d8abd146d"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-003.zip.part006",
+          "bytes": 2500000,
+          "sha256": "ed36ff0c15d27e5593794f8544faa941a4f078e3182cff182014c1aad9fb30d5",
+          "git_blob_sha": "7775eeea953f2e3f82a00a4c52f4e753bbf67ef3"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-003.zip.part007",
+          "bytes": 2500000,
+          "sha256": "71142be7b63750ec5787fd56da7d7dbf727e6c15b656b7b4eaff76747e03d872",
+          "git_blob_sha": "dca9e6f6ce524fac4822e475f198c5a33efd3f08"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-003.zip.part008",
+          "bytes": 546547,
+          "sha256": "4bcd00fac1aa7afffee4cc88c1103c20b15b0503b23ca5a88ba7e754730f1f44",
+          "git_blob_sha": "b995a2c4d8e70b3e6d07843bfa02ba95d7647f05"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/1f9b9556c3bc324b1acae13be7a594142f5eafb5d82bc35ef380aa0625a5109e.png",
+          "bytes": 3916909,
+          "sha256": "1f9b9556c3bc324b1acae13be7a594142f5eafb5d82bc35ef380aa0625a5109e",
+          "git_blob_sha": "4977a5ad1c3cbc8150e03c597dbdd914b1ac9045"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/216666006a7055e1fb234e25ef7f0413840f0cf8b36398bce4e3b3aec3a03ccf.png",
+          "bytes": 3540499,
+          "sha256": "216666006a7055e1fb234e25ef7f0413840f0cf8b36398bce4e3b3aec3a03ccf",
+          "git_blob_sha": "5adb0a9b05d0c6f41cb1eed240c632aa6b73d64f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/21a2714a3c8193c6c84a1dc1f1e2e93f4e5857e5f29ab0120eaeac7eb252a4f5.png",
+          "bytes": 3489513,
+          "sha256": "21a2714a3c8193c6c84a1dc1f1e2e93f4e5857e5f29ab0120eaeac7eb252a4f5",
+          "git_blob_sha": "ca23c12a42c5906afc1acfdb94a2639d68f5e2a6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/220cc8c3caecc7bae53745e9d8ac80c2416846ee819f822ea831ce1445f56190.png",
+          "bytes": 3769067,
+          "sha256": "220cc8c3caecc7bae53745e9d8ac80c2416846ee819f822ea831ce1445f56190",
+          "git_blob_sha": "79cfc39422f8512383a7da4383914cd918b5d80a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/23105dc1c2e007df40132d872b5df45b4c296d98de057e3ad413c983e30f519b.png",
+          "bytes": 3741910,
+          "sha256": "23105dc1c2e007df40132d872b5df45b4c296d98de057e3ad413c983e30f519b",
+          "git_blob_sha": "2d41e858e4ae514eafd2e8e08862e051bfa7dc62"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-004",
+      "bytes": 19958310,
+      "sha256": "29223a92ebb7d8e7d4a538debd402918fa6f6aac0a1396730aa2f4ec5bcb74c1",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-004.zip.part001",
+          "bytes": 2500000,
+          "sha256": "4bde6f2dcbcc937e19945fea92b557264df1de844a9636124f725eef7705d4be",
+          "git_blob_sha": "2e1aefd016bb473478c5ac215ae94f70b501fdab"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-004.zip.part002",
+          "bytes": 2500000,
+          "sha256": "c977ffbc1544a37fdb8aa4061f33dcb946ecb72813a81bca981ee40c0edb3c0e",
+          "git_blob_sha": "251bdd1df95e76aacfdb24dee8e4bd429ac02239"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-004.zip.part003",
+          "bytes": 2500000,
+          "sha256": "6e9b6d4229249831f3c35ce9eedf4f6b65096af7dbf18d6581d1ba92a093e770",
+          "git_blob_sha": "3e89dd7f046d9799f3541bdebf163448554ec8e5"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-004.zip.part004",
+          "bytes": 2500000,
+          "sha256": "25e6fd7c85ac55686f1b5f055e010f545e291203856eb38b607abf1b80642341",
+          "git_blob_sha": "fd167d6211188465087e1b4a838412ddcf043aa8"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-004.zip.part005",
+          "bytes": 2500000,
+          "sha256": "ee2379dab45f53b738ccdb720a6948de989747dbbd14cdc99203571395ad84f7",
+          "git_blob_sha": "468068f68658a0d7bb60a254520ba792bfed3f3b"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-004.zip.part006",
+          "bytes": 2500000,
+          "sha256": "2e56eeb509c4f4d990859fa014148e144c750ff8caeb312f49c2e54f09b3ac9f",
+          "git_blob_sha": "2a65fb25bc94865341f98ce10f4509500e98349b"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-004.zip.part007",
+          "bytes": 2500000,
+          "sha256": "5e4ca339f78ae27f010ecd49ac4a57b2c7c5b0effebdf9398a823b86d7699507",
+          "git_blob_sha": "0d8ec9f53230b80feec16e231efbaf879d7d94a5"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-004.zip.part008",
+          "bytes": 2458310,
+          "sha256": "b7887f2484283220918a6febb634a00522261a82a1981082929c15d5851980f1",
+          "git_blob_sha": "feb884c73256e5ea0e8d1a703912ba854178e36a"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/240ae7a8a21c8d1a8bd39429b03e9e42c0a30d5cb08dd0e34616ebe21ed5493b.png",
+          "bytes": 3598407,
+          "sha256": "240ae7a8a21c8d1a8bd39429b03e9e42c0a30d5cb08dd0e34616ebe21ed5493b",
+          "git_blob_sha": "91312addf32f330cfaac4ed0fb757a2705da15cd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/25f2d3428eb11358808b0e3e3d01f85ace892cb9e5b15a99022a81599125f922.png",
+          "bytes": 155289,
+          "sha256": "25f2d3428eb11358808b0e3e3d01f85ace892cb9e5b15a99022a81599125f922",
+          "git_blob_sha": "a9b88b18e61def68ea3c348a5ad59c71fdc45118"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/30415b8625f0623a408f2889e115db25bfa2fe58697ef7867c656360b89b4e3a.png",
+          "bytes": 3796583,
+          "sha256": "30415b8625f0623a408f2889e115db25bfa2fe58697ef7867c656360b89b4e3a",
+          "git_blob_sha": "e0eb80bc12ad549179dce54c9fb443ac269e6bbf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/3058fab1a8b8814a5a31b89261ec5be4d9cbc507a29761821b39d3db1211e80b.png",
+          "bytes": 3106348,
+          "sha256": "3058fab1a8b8814a5a31b89261ec5be4d9cbc507a29761821b39d3db1211e80b",
+          "git_blob_sha": "6e750a0b208734553e70574095ef1026be89031e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/336f05e1e0169a56ae4d65d2a742210d4b5e4c67c0cc6e8e83dc297d7925f7e7.png",
+          "bytes": 3062402,
+          "sha256": "336f05e1e0169a56ae4d65d2a742210d4b5e4c67c0cc6e8e83dc297d7925f7e7",
+          "git_blob_sha": "ff1726482d5d7c3318ffc06ef3ce7a30717b0b38"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/33e2c4ffb373ae90a1e03d72f450e7ec68404185cdb719d6a491c20d7789adbc.png",
+          "bytes": 3557218,
+          "sha256": "33e2c4ffb373ae90a1e03d72f450e7ec68404185cdb719d6a491c20d7789adbc",
+          "git_blob_sha": "48c51d53236961127eea6053639963e2b84cec67"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/36f7035cd884ab0f41282e773915bd9610ba57adc7be2a0ee192b536b084f8b8.png",
+          "bytes": 3032030,
+          "sha256": "36f7035cd884ab0f41282e773915bd9610ba57adc7be2a0ee192b536b084f8b8",
+          "git_blob_sha": "b0009726ba9b06275012260fa0bb97647e6e80d4"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-005",
+      "bytes": 18150876,
+      "sha256": "86fcd7f6bc5d1812205bf760e499b5b184d11006c163f3fd6362d268c7339e40",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-005.zip.part001",
+          "bytes": 2500000,
+          "sha256": "44d273127cdf09383b9078b7f7649f3fc315fd6b88e20268ff8990360a1050d2",
+          "git_blob_sha": "2798401f29c804eabbb65ccb0e0f2d7dd7e9a2cd"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-005.zip.part002",
+          "bytes": 2500000,
+          "sha256": "5d1d54d32c7de66ea1503124989961ae54eeed0618e1633d3526d646559db56a",
+          "git_blob_sha": "d642fd0fea498c4972ad6f54e32c6ebbfbed3d08"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-005.zip.part003",
+          "bytes": 2500000,
+          "sha256": "3c570abe2999a4d3d91b554b6a8500bf921c9ef88ca9e76adf43a52e7b721d5f",
+          "git_blob_sha": "eca72772738f815fad3e31ee57bc69170d899cab"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-005.zip.part004",
+          "bytes": 2500000,
+          "sha256": "03f496cbd615fe72b177d95ffbff3db4ff298e15288b16ab24d3179a3dd34b23",
+          "git_blob_sha": "c951cbf59779004b4ed2335cf9d0f1401a8c6a7f"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-005.zip.part005",
+          "bytes": 2500000,
+          "sha256": "97c88b4c739f7852dd1dcf13886084deb431d007860b1f30dfa63c20da2b398f",
+          "git_blob_sha": "d41fbb1fc4892fda48955c638c4f2f05303b2796"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-005.zip.part006",
+          "bytes": 2500000,
+          "sha256": "23bd8ef7324a2ffa1917beeb06e2eeb8f081fc66a5e926fc59b5664795c73518",
+          "git_blob_sha": "2a113c962ae3b539e8a8c97a89a3484362be84ec"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-005.zip.part007",
+          "bytes": 2500000,
+          "sha256": "4f62d7d192c5d6e11476316022e7888a3bdcffefb25aaa115864834b3d8fc593",
+          "git_blob_sha": "bb3141d7f82d9311ef1d9ff8cb30b9fe985ec9aa"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-005.zip.part008",
+          "bytes": 650876,
+          "sha256": "1fc5180e0754584c4ab9c1597502ddc7b6cc91a8fd422954e81a8527c268c251",
+          "git_blob_sha": "55f9bac231c1a2238f0b1946717a272b58ec2da2"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/37884085e437e3b6edb4162a3a447f5875b450002fdc9d7cb28abfe98bccfe47.png",
+          "bytes": 3082296,
+          "sha256": "37884085e437e3b6edb4162a3a447f5875b450002fdc9d7cb28abfe98bccfe47",
+          "git_blob_sha": "e89247d967a6d90a26dec0f99722d6c47b6aee25"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/38ac632aaec1811c1161d8f6167911d0d7dd8d7fec1755a4f49c4bd2ecd0f12d.png",
+          "bytes": 3704272,
+          "sha256": "38ac632aaec1811c1161d8f6167911d0d7dd8d7fec1755a4f49c4bd2ecd0f12d",
+          "git_blob_sha": "11e49bfc1267ac0ec964187a882fef9014857c0c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/3a8cb85d7dd37669bbe76c0dcfdcf75f525e45e7394308abe781b137aba853ad.png",
+          "bytes": 2808749,
+          "sha256": "3a8cb85d7dd37669bbe76c0dcfdcf75f525e45e7394308abe781b137aba853ad",
+          "git_blob_sha": "2a5fba4d5e0756ddcdd8cda8967be13e8b4fda0e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/3af9d47fd7d1b0189b15c5dd37ba7ee17121d992bce124c8e002359973c6897b.json",
+          "bytes": 4207,
+          "sha256": "3af9d47fd7d1b0189b15c5dd37ba7ee17121d992bce124c8e002359973c6897b",
+          "git_blob_sha": "d3e4a3964a6c5786cd3af2f3b13c17865034562c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/3d29031a4f6afac679cb463fe47a01cd685dc0d7eebcdc097b97ab52b9177c1c.json",
+          "bytes": 425,
+          "sha256": "3d29031a4f6afac679cb463fe47a01cd685dc0d7eebcdc097b97ab52b9177c1c",
+          "git_blob_sha": "d8b723bebcdd2903aaff1684b8743140101901e2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/40a43e63233073ca1eb8c6854d5b19f9fe779ff54d3d92fdcc4ea9e1daa09dd2.png",
+          "bytes": 3651838,
+          "sha256": "40a43e63233073ca1eb8c6854d5b19f9fe779ff54d3d92fdcc4ea9e1daa09dd2",
+          "git_blob_sha": "3515d246fe9eff778b858d9b855862a3e35bd45f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/43b9cbe6592e42a37e1c4259c68d106a6435a50e17700c577167c967ac206d9d.png",
+          "bytes": 2246394,
+          "sha256": "43b9cbe6592e42a37e1c4259c68d106a6435a50e17700c577167c967ac206d9d",
+          "git_blob_sha": "b5c1c3124f2cd89cf036b825a0485133619dfa4b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/44d3fbda0484d381d2a90374ed31b619824ffcb184a1ef352bba649928b6324b.png",
+          "bytes": 3021588,
+          "sha256": "44d3fbda0484d381d2a90374ed31b619824ffcb184a1ef352bba649928b6324b",
+          "git_blob_sha": "8ed8a949cb3978c10e863eec5ac7f6698fcd2444"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-006",
+      "bytes": 17858904,
+      "sha256": "f33476aa1d73301fa2f0d75129ed88f25db424c16a30b3e0bdcc06c456e06de8",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-006.zip.part001",
+          "bytes": 2500000,
+          "sha256": "ab82f6cf84e74f59a833f5a63caeaf8c6bcd743dff3c4b4aea867baed5a23b94",
+          "git_blob_sha": "197df88b292e44989707a8e57f15f37cff8f3511"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-006.zip.part002",
+          "bytes": 2500000,
+          "sha256": "164a92e8d73b5dfc4e74660e28e754778d3bfcb62dd6491ccb1ecb7ab5db4355",
+          "git_blob_sha": "ef54c474b277adbb074d2b40354949de40236b66"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-006.zip.part003",
+          "bytes": 2500000,
+          "sha256": "ec06fbedc3751264b8e5f9ff1798c19659cb7ee8097134c300e1ba7026ad83a8",
+          "git_blob_sha": "9c8ee0f3a257d91d5f188d8cb1dc4b7d11ed5227"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-006.zip.part004",
+          "bytes": 2500000,
+          "sha256": "acd16369c1b27d36abdd21e07e35db183877118e259079e822fd6818777aff14",
+          "git_blob_sha": "3681bacf6b6dc3121422382e5497662f6ef226fd"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-006.zip.part005",
+          "bytes": 2500000,
+          "sha256": "870afd1cc48a2459cbd60e8db8c2b35f069c7cd371330467ced59b7cb4557f77",
+          "git_blob_sha": "69e257c312be4540c32f60d295ed7039eeee1f9c"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-006.zip.part006",
+          "bytes": 2500000,
+          "sha256": "7d0a248634d8ca8270af9ba1363ea858054ca42d469bba4548e51a2588d847e9",
+          "git_blob_sha": "56f203a7725a6c1e2c039d229c330e69770db2cb"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-006.zip.part007",
+          "bytes": 2500000,
+          "sha256": "d03f234b44a4159bf3b1b660ff65a96dd9db102e4446f92f6dbee80f709c2a70",
+          "git_blob_sha": "f45fea628c076c9d9dc8876ce86feb833f5fe786"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-006.zip.part008",
+          "bytes": 358904,
+          "sha256": "9be59e3c35f94a81bac8b09a1d07d407aaa38121971ee7bc800a6062b0c25a95",
+          "git_blob_sha": "0b2005c2bcb0f57078e28e434c87a94148559d52"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/456ea264badaa224e2b3b7db6b29ba25bfc67a83bf2047c3ba0aab15aa4e608c.png",
+          "bytes": 3793717,
+          "sha256": "456ea264badaa224e2b3b7db6b29ba25bfc67a83bf2047c3ba0aab15aa4e608c",
+          "git_blob_sha": "f2c126ccc20d2e3d846acfc1249770625f363961"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/473c329bdaf0f9892b459399f69455376a3e1aded61bf9e03248a2469378ed31.png",
+          "bytes": 3488337,
+          "sha256": "473c329bdaf0f9892b459399f69455376a3e1aded61bf9e03248a2469378ed31",
+          "git_blob_sha": "d7b26c3053d7ad23ea75ad53891161db0e7f3580"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/47ade06b93a268969e2326dabc70cea641d795f614ddff2f55101f11b168a426.png",
+          "bytes": 2319028,
+          "sha256": "47ade06b93a268969e2326dabc70cea641d795f614ddff2f55101f11b168a426",
+          "git_blob_sha": "2b0e083fc9e934169206eee679f3c458e179a67f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/49b9acca028a41b0f9d81ca9dfa7b2da7c7d665ae3e644057b5434bc8150ccca.png",
+          "bytes": 1950112,
+          "sha256": "49b9acca028a41b0f9d81ca9dfa7b2da7c7d665ae3e644057b5434bc8150ccca",
+          "git_blob_sha": "c2e078201799f368b42303c41cec0ef20d4c8fd6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/4da489f495a3b21337ec4ea2f03b7c905410209c44b8ae0ab15a271719daa0a7.png",
+          "bytes": 3219231,
+          "sha256": "4da489f495a3b21337ec4ea2f03b7c905410209c44b8ae0ab15a271719daa0a7",
+          "git_blob_sha": "0d9c1c3a4de62d4b9667bcc09d458a67794b16e7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/4f611a20accd70d73ac093dec96c52cf149dff07132f62e49dcd5fe78b4efc38.json",
+          "bytes": 446,
+          "sha256": "4f611a20accd70d73ac093dec96c52cf149dff07132f62e49dcd5fe78b4efc38",
+          "git_blob_sha": "02ee291ff280ceca6d0c6bc17db365618bded574"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/4fa9b38672809cc2d80ef7b951594588fb987b94b74c642d443ad642a0849d49.png",
+          "bytes": 3398624,
+          "sha256": "4fa9b38672809cc2d80ef7b951594588fb987b94b74c642d443ad642a0849d49",
+          "git_blob_sha": "1331907e06fc9bc0e006b2e2328f44f24a4e8ba5"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-007",
+      "bytes": 19414573,
+      "sha256": "1232397417d4878fd6fd54db1b51306d0cf2c31dfa284f15070073b8a5a6caaa",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-007.zip.part001",
+          "bytes": 2500000,
+          "sha256": "f528606df6b26fd946c784abff15de389395a0808e9e2d1dfa204fd5c9610e55",
+          "git_blob_sha": "5c14dd06c067cb564ac0770e50e4a8494a141392"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-007.zip.part002",
+          "bytes": 2500000,
+          "sha256": "d17193c26cdff68be62279afc470d497a58fbddb003360257085099f7a248b2b",
+          "git_blob_sha": "6eee3c5e9a081edc92ede6dfa9a905ace678b7a9"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-007.zip.part003",
+          "bytes": 2500000,
+          "sha256": "1fdafc45d324273b6ede99ee86fd0407d6a47c73b83416ad2b214c9e87aa764b",
+          "git_blob_sha": "8c34939f72af27e58bc790b44c539438d74879f5"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-007.zip.part004",
+          "bytes": 2500000,
+          "sha256": "b65d28c916874034758ca9e4c2f4dbdecb97c341e520e4affd9e2aeb8fb67a0a",
+          "git_blob_sha": "915df202936568a512010dd5e297de596d8bbe9f"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-007.zip.part005",
+          "bytes": 2500000,
+          "sha256": "5ae3afbd764778bf3ca381af0204bd32da8d015d2775899e78c9c4c62995a411",
+          "git_blob_sha": "6234f6afe0a3cf72b162961a88c22bcccd4e7926"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-007.zip.part006",
+          "bytes": 2500000,
+          "sha256": "3e3c382f72acbf21a10ef751136b36058b467ec809c4be023cf1915371dae3ca",
+          "git_blob_sha": "c4002a581c1b6b9443fdbe7f510450913214054b"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-007.zip.part007",
+          "bytes": 2500000,
+          "sha256": "b3d652b28f800d1fefaf8fec8c447775be0e785fd8ed8075435178e2da135767",
+          "git_blob_sha": "8a05c5a343da8a98f7d86170f5038b3847d4b539"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-007.zip.part008",
+          "bytes": 1914573,
+          "sha256": "5db61ca12445cd09c340639d345175fe3c595fb0b84c3489d354e59967477258",
+          "git_blob_sha": "258dba73d99b164d87b9598ee91250bd30a9f007"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/50f6353af253ac2a6e8f3d88d73a78ed9e8b5a5752fb7c972615bfee74cd3e75.png",
+          "bytes": 3489156,
+          "sha256": "50f6353af253ac2a6e8f3d88d73a78ed9e8b5a5752fb7c972615bfee74cd3e75",
+          "git_blob_sha": "e2f7fb5f2318e68f0122083f450aeef25743915f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/512afaaeb62529d43495862e7ef43457d814368983fa7dc84c4dff46966e07f2.png",
+          "bytes": 3661247,
+          "sha256": "512afaaeb62529d43495862e7ef43457d814368983fa7dc84c4dff46966e07f2",
+          "git_blob_sha": "e6baafea3b4e59ce46b04cda79d3e5b8869f62f7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/51c843c43fa1cae554ab79d21cead2a98267c21c4d0db537338bc31545e0f720.png",
+          "bytes": 2706850,
+          "sha256": "51c843c43fa1cae554ab79d21cead2a98267c21c4d0db537338bc31545e0f720",
+          "git_blob_sha": "31878ed4285c46ed39d386f72277ddf2aa7bf46d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/538590a3d96b46a4ca873bee1da0a52dbc22aa8970ce3e33edb60ecee1ac6cbc.png",
+          "bytes": 2670540,
+          "sha256": "538590a3d96b46a4ca873bee1da0a52dbc22aa8970ce3e33edb60ecee1ac6cbc",
+          "git_blob_sha": "7e019d1fe1f0dd01d4c4ee8d56354c7ce16cbfcf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/539218cabc7f73159a04420bf447e8bae6172838064a0cf43bdcccf8af27cdc0.png",
+          "bytes": 3773255,
+          "sha256": "539218cabc7f73159a04420bf447e8bae6172838064a0cf43bdcccf8af27cdc0",
+          "git_blob_sha": "e50745d85f6dbbe55afc8ae6e046323167de0d3f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/5a36f0ed576a4eeba42a104067ab6ade47376d50022c4027425baa11f9c4c2f0.png",
+          "bytes": 3428110,
+          "sha256": "5a36f0ed576a4eeba42a104067ab6ade47376d50022c4027425baa11f9c4c2f0",
+          "git_blob_sha": "5eab98d8a670ce8189035fb12f8a2d0737f9c3ee"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-008",
+      "bytes": 18438918,
+      "sha256": "f51bfbbc5ab87fe2eba418f5353a29dab1d0138889541bc61d64dc5f15d9e3b6",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-008.zip.part001",
+          "bytes": 2500000,
+          "sha256": "c5572947690794798f79b35ee97a48f22d69b6317919635715cc8abc1f86284b",
+          "git_blob_sha": "9a8c244abd70bcf3485d263a2e44c371e37809eb"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-008.zip.part002",
+          "bytes": 2500000,
+          "sha256": "70b9f90a336759e783152843a0e9215f14309d2132b0859f0c52a2748c1c3c32",
+          "git_blob_sha": "7b04bf1a5f72903048aeac8a679340fe6c282608"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-008.zip.part003",
+          "bytes": 2500000,
+          "sha256": "9d8337ccc7001192a545caa3a6f80b6eb5a62c590a4d275c0363a72493527199",
+          "git_blob_sha": "f82e2cb2b0d12c38e9022b1605e767fb0599104a"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-008.zip.part004",
+          "bytes": 2500000,
+          "sha256": "6ea14ddb424046b6eb20b4b1cb567f82376ebeed4f8b9258aca8e3b4ccc3c481",
+          "git_blob_sha": "f7f12deddec5dc0b0007c1d50c6005fc5f19c5d4"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-008.zip.part005",
+          "bytes": 2500000,
+          "sha256": "3ad0c419c02c5f678d5f0cdc99db07d8143cf055999a679bac48722a0ce6e7e8",
+          "git_blob_sha": "f5a88f00db190da524b2daa5b2e188a930e67dbb"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-008.zip.part006",
+          "bytes": 2500000,
+          "sha256": "b39f7e538bd23984eb0f75d5e8979c87925f30b063afc0bb6d9715ce2c481291",
+          "git_blob_sha": "0998d4424fe0da41efbe09b57d22babcfa63bd9c"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-008.zip.part007",
+          "bytes": 2500000,
+          "sha256": "68bad1b3d64d5b8784e921d6be75b41ea47754497b81ca6cbd5394ce0814f6cc",
+          "git_blob_sha": "99d4aca651c4a934802df5006c809e7bbd6a0b0e"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-008.zip.part008",
+          "bytes": 938918,
+          "sha256": "cdbfca25491d5c0d21e732ac0a88b5dfe1b7a23604d5edcbaeaee1ca5dcd965b",
+          "git_blob_sha": "88b9af3532af6dc4885d4a11fae902612aa26b24"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/5cd850a9131302e5ab1d6d7b788f2bf5bb1eb838740fac3e4cecce9d7e8cc5c3.png",
+          "bytes": 2856864,
+          "sha256": "5cd850a9131302e5ab1d6d7b788f2bf5bb1eb838740fac3e4cecce9d7e8cc5c3",
+          "git_blob_sha": "6ced25b72f27f4b878043557fa996324fac43a82"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/60be132f40daefc0b78b50bcd6b6fb75e32aa364c3e9ab78c8d0bfd2cf3e2853.json",
+          "bytes": 504,
+          "sha256": "60be132f40daefc0b78b50bcd6b6fb75e32aa364c3e9ab78c8d0bfd2cf3e2853",
+          "git_blob_sha": "0b55f377b129df363705eb49ba620c9ef3a12ff5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/63111decb5e0d64556c6b7c253e3ab68204ee9b607f6afd173c5b1e9aa38dfaa.png",
+          "bytes": 2695003,
+          "sha256": "63111decb5e0d64556c6b7c253e3ab68204ee9b607f6afd173c5b1e9aa38dfaa",
+          "git_blob_sha": "da691c6e17814872e1ef35a8f587e5e0bd583ff3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/63113579477ddfbb395c08eb20b560064045689b4e5f43ce9501ef2e46b88779.png",
+          "bytes": 3710091,
+          "sha256": "63113579477ddfbb395c08eb20b560064045689b4e5f43ce9501ef2e46b88779",
+          "git_blob_sha": "75ea1ac962002943f6cededce429953df728f13b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/632bd509eed3d9134859dd01ae9cf9015b8dbca5698a064888ed443e7ac6f718.png",
+          "bytes": 2706125,
+          "sha256": "632bd509eed3d9134859dd01ae9cf9015b8dbca5698a064888ed443e7ac6f718",
+          "git_blob_sha": "dc97450bf66933954e7ab619c5bc0d772fbae189"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/66c5f9dafd801efbb6b5da47a944d40974134db5e4f5b3d3032e056051a69249.png",
+          "bytes": 2468739,
+          "sha256": "66c5f9dafd801efbb6b5da47a944d40974134db5e4f5b3d3032e056051a69249",
+          "git_blob_sha": "c91308193c3ad8905b5b85412700b8e5f4735232"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/686c4552cd77713ca6977b65c4c39869acc2ec8cc6a414f1d6be30491720ef43.json",
+          "bytes": 464,
+          "sha256": "686c4552cd77713ca6977b65c4c39869acc2ec8cc6a414f1d6be30491720ef43",
+          "git_blob_sha": "60d83b807971cd21985c0af714fce55e93f75294"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/69b1bd0a279e7677214424320baf02ff267a0844053bcb32f1d238eb372218be.json",
+          "bytes": 3960,
+          "sha256": "69b1bd0a279e7677214424320baf02ff267a0844053bcb32f1d238eb372218be",
+          "git_blob_sha": "52eabd97b517a63b57a90dd7159fdf60947a5afa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/6f83b0faa18fc64d7491bc951fc080578d55442b6558e875fe6b7f8f2151251b.png",
+          "bytes": 4279661,
+          "sha256": "6f83b0faa18fc64d7491bc951fc080578d55442b6558e875fe6b7f8f2151251b",
+          "git_blob_sha": "c33fb0bcf2c3eebcb3ae7b1836202106467350ce"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-009",
+      "bytes": 18342229,
+      "sha256": "7c1e53a489915a8cc44d1d6b11c477132286073aa65a39107cca9e836f3fd88c",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-009.zip.part001",
+          "bytes": 2500000,
+          "sha256": "3757ec982a66613b961b8328e322ef445c7d533fc25a03b32ac3cf485d0d289b",
+          "git_blob_sha": "3930d2134b6e81d030a231ffd3d7f1a447cbacdb"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-009.zip.part002",
+          "bytes": 2500000,
+          "sha256": "17a7a3aabf9376a664b571731817789e49e8d197ba6e429e6e04796509dbf254",
+          "git_blob_sha": "a3d7731c5a7154db33715b6209032ad7ff7c5f80"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-009.zip.part003",
+          "bytes": 2500000,
+          "sha256": "969b9c28b778fd45ec46cd445e20e446a45e301d508d084c8341ecbf0f95fedf",
+          "git_blob_sha": "6b131ca5551434d4220df0697593a44a949f88cf"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-009.zip.part004",
+          "bytes": 2500000,
+          "sha256": "bf951654755a76e1b2b7605022141495d75540c20312fb518860bcceda480a1e",
+          "git_blob_sha": "90ded25fa74c9a3f6d9a6d25ce908a73bc04ae46"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-009.zip.part005",
+          "bytes": 2500000,
+          "sha256": "6a9e8d0d3cf4ab2d20dff6f41840b8f83b6fccecac2e972d334083b736db3a70",
+          "git_blob_sha": "5eeb059c7f4c7f77b788ad6eb01b71e8e805a7dd"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-009.zip.part006",
+          "bytes": 2500000,
+          "sha256": "6b9f175284a5c7d59916e2202ec3a3d072221c22503e26de6e7d25e572bfc0f7",
+          "git_blob_sha": "8eed652c83854e641a27f9029fde80ff7da21e6a"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-009.zip.part007",
+          "bytes": 2500000,
+          "sha256": "f9fddf7d38e889b8c9e90be4b0eeacfd51f538cf2fa0ff1b98c346a6176f65f8",
+          "git_blob_sha": "2de98fb5fe307f4ed95be9253ef3ef79beb76ebd"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-009.zip.part008",
+          "bytes": 842229,
+          "sha256": "3b92d2c2d681cac29e5acfe69c3c90aa9e94226ad222ef673c80cde66af27c75",
+          "git_blob_sha": "8b1fb17ab2262d688c3267b1d36e5bf3dc908def"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/732bc09b4930d85811496af293ff702fa572fb5f898747647f6b6f80db266c80.png",
+          "bytes": 3618123,
+          "sha256": "732bc09b4930d85811496af293ff702fa572fb5f898747647f6b6f80db266c80",
+          "git_blob_sha": "c10cecbbd2775fd8f6456b87c89cb99fbfbb1d22"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/73e15091b9cdc1d97ff84f2537a14813e918f434966f4f84f2c058ec0a9ef79a.png",
+          "bytes": 3116423,
+          "sha256": "73e15091b9cdc1d97ff84f2537a14813e918f434966f4f84f2c058ec0a9ef79a",
+          "git_blob_sha": "b52d4e13c65d0899506e4ac481262db266fb5193"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/774540fa5ec13df367cbf5256c43c9f10fa62d678134d432f5d38ca77cd3da92.png",
+          "bytes": 123853,
+          "sha256": "774540fa5ec13df367cbf5256c43c9f10fa62d678134d432f5d38ca77cd3da92",
+          "git_blob_sha": "28ee26ac303040b159b5a8e64de41fd8d74014c5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/797732e97cd21fcc44bc4d041e038c29aa9ce4d25f4b131d5511896d48db75dd.png",
+          "bytes": 3933850,
+          "sha256": "797732e97cd21fcc44bc4d041e038c29aa9ce4d25f4b131d5511896d48db75dd",
+          "git_blob_sha": "34de7fb995be20a999fd22bda305cb60087f31ea"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/7a8e70107c4bc4c9bbf0b86ac00e41a7c8a59ebeb5a317be0e4139edc7c0bc70.png",
+          "bytes": 3183154,
+          "sha256": "7a8e70107c4bc4c9bbf0b86ac00e41a7c8a59ebeb5a317be0e4139edc7c0bc70",
+          "git_blob_sha": "86b4be119847bb56aff5b71fd15f10b73b4cac3f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/7b9bea90fa93e2252298e554d4aaca9095d52d3b6af8af16306de071280aefa5.png",
+          "bytes": 2548453,
+          "sha256": "7b9bea90fa93e2252298e554d4aaca9095d52d3b6af8af16306de071280aefa5",
+          "git_blob_sha": "32a9bc795a865beb8eeea9181a216cff11cf6f46"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/7baf43b8a66568a9354b382ab600f597e221e00d8563a3c348c18abdb0e4c450.png",
+          "bytes": 2165148,
+          "sha256": "7baf43b8a66568a9354b382ab600f597e221e00d8563a3c348c18abdb0e4c450",
+          "git_blob_sha": "cd6ab20c2366b2d16de20edfb635cf420cbdf236"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-010",
+      "bytes": 16933005,
+      "sha256": "1e13a1f374813984c8636cb37f68d5d0b3c279549956b51d69d24ad0605f09f1",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-010.zip.part001",
+          "bytes": 2500000,
+          "sha256": "b327defc2fd891fbc58457bcde21236a27e6180177f4c16e7d16fcb85471d81d",
+          "git_blob_sha": "fff534300b03edea5fc3d9fc419329e3f5c70aff"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-010.zip.part002",
+          "bytes": 2500000,
+          "sha256": "829ee6bde0dfa826dd8b4f6f333b308fbae84120e4a2c9b824dc613f5eb24ef7",
+          "git_blob_sha": "f140e565dbc28a6ff82484bd69ca20eedcd014dc"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-010.zip.part003",
+          "bytes": 2500000,
+          "sha256": "a5ef79c19480e965ad10a8934412595ceddd2e8036cc1812a00547fb5a8ab9a4",
+          "git_blob_sha": "4f321912a6516d6b6844d9b4dc9cbbeb0636bfd8"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-010.zip.part004",
+          "bytes": 2500000,
+          "sha256": "de6d423037c1948380ea25009ec39e3696f23186c5c9ba9909b1c333546ba2d1",
+          "git_blob_sha": "ecb0bf7e8ff916660106957321d3c25d5a262a8c"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-010.zip.part005",
+          "bytes": 2500000,
+          "sha256": "60b577a6e212e316589e03ddcebb8e7b4a607f0220d375926d0cf44d7f0e2466",
+          "git_blob_sha": "a55fe6ad2dcd93765a6be22d5a79d0c834f75254"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-010.zip.part006",
+          "bytes": 2500000,
+          "sha256": "5d9663c03ad4e8398406078a63e9ed00c35564771b643240ccfc0185c3617704",
+          "git_blob_sha": "b546681cd4c92e0c7094e163aab4bc4df17c4899"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-010.zip.part007",
+          "bytes": 1933005,
+          "sha256": "37642e875cf94400f2830d02107b188ef13862d104f6d0bd9a81cd4b8c3361d7",
+          "git_blob_sha": "ebc8f16b130d108e431ba0b20db589e2cdd7292d"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/7c57a24ba650ef979e0da56f50bab90bc6a3c942a701954070b73584cc2fc7eb.png",
+          "bytes": 2626779,
+          "sha256": "7c57a24ba650ef979e0da56f50bab90bc6a3c942a701954070b73584cc2fc7eb",
+          "git_blob_sha": "31ce8bbe00726e2703728e589e694db07a5f696d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/7da4c643d2ae2d56dee28f9147c740043fb90c9f4cefe6f83f80262b4f855cb2.json",
+          "bytes": 501,
+          "sha256": "7da4c643d2ae2d56dee28f9147c740043fb90c9f4cefe6f83f80262b4f855cb2",
+          "git_blob_sha": "f849173ce282f997c4a49acf826a66f9c28b17b1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/7dde9d1632771f634ad11350b8f10b803eb54c231fc47238f934e97d611b8c40.json",
+          "bytes": 3923,
+          "sha256": "7dde9d1632771f634ad11350b8f10b803eb54c231fc47238f934e97d611b8c40",
+          "git_blob_sha": "247a57488682764bf24e2ad901e3d634634fcbe1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/7df34d60db89acbf9be1588dcb0b0de9fea56c2af6a4a8f288724ee75be271f2.png",
+          "bytes": 3483829,
+          "sha256": "7df34d60db89acbf9be1588dcb0b0de9fea56c2af6a4a8f288724ee75be271f2",
+          "git_blob_sha": "0834d1c550c8b9ab758b0613daa983d808dd0b2b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/7e52ae99a13b9210d4450b723790a1f848833ec71e75b127abd3902707ae71a6.png",
+          "bytes": 3996375,
+          "sha256": "7e52ae99a13b9210d4450b723790a1f848833ec71e75b127abd3902707ae71a6",
+          "git_blob_sha": "89e3fb393412b8ac3bced7dd46f666621b392721"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/7f0d726aa940bfbcb0e588fdb2ec7931fff55ca4a0a07a894f2b1002a6456826.png",
+          "bytes": 4549833,
+          "sha256": "7f0d726aa940bfbcb0e588fdb2ec7931fff55ca4a0a07a894f2b1002a6456826",
+          "git_blob_sha": "6604cfc4246b4bf5eb491c34c82bfd0bdfab2b91"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/81e869678c4e17267bc08462415d731d43e9c71a884560a26bc5cd976031049c.png",
+          "bytes": 2692317,
+          "sha256": "81e869678c4e17267bc08462415d731d43e9c71a884560a26bc5cd976031049c",
+          "git_blob_sha": "95d75c6de28b68e3331f35f0b48d3725c761f846"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-011",
+      "bytes": 18167051,
+      "sha256": "a995b565fb3ab06d79b3e54f33c11431b4ab3bab01dc0568e4c72d01d10e1464",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-011.zip.part001",
+          "bytes": 2500000,
+          "sha256": "7c0b1fa166671ba2e1b36560f16b9185a3681f325d8773e8dfcfd78ef7df13e7",
+          "git_blob_sha": "dc7147c18b9dc1304d70b3776bd3a1279276c641"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-011.zip.part002",
+          "bytes": 2500000,
+          "sha256": "dedb4e5d1e5fef5dd0a449d40a32230a565a330930a3cfa8dd0ea2f2d42f33c3",
+          "git_blob_sha": "4c2736909e006431f441e1619e5574895398ccfe"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-011.zip.part003",
+          "bytes": 2500000,
+          "sha256": "d47273135f0ed2a095edec0bf39ce7a7d1c20fefa20c26a3f3c0957353a67f3a",
+          "git_blob_sha": "dc9dc000a7489d333bad126c82bf4158c2fc7859"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-011.zip.part004",
+          "bytes": 2500000,
+          "sha256": "8bcd8b9cdcae0ad0600eaff0eb4906ef99c9b55660f407ff16055c5774ec852a",
+          "git_blob_sha": "41b3b613fb1771a0bcdfddddb9cb1de56cc0f7c5"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-011.zip.part005",
+          "bytes": 2500000,
+          "sha256": "2e04ed8543a901e34474e0922a4ebdfe21fa2b48a4eeb9aeeeb243404bb47f3c",
+          "git_blob_sha": "f39c4e56f10497649c89cb98655d791b15580b92"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-011.zip.part006",
+          "bytes": 2500000,
+          "sha256": "7aebffe0daad29376d0d2000c99e200aa492a4f8ff546178fbe9f95824bd2195",
+          "git_blob_sha": "21adb91c9843278d840bdb038eac90d03b6c22f5"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-011.zip.part007",
+          "bytes": 2500000,
+          "sha256": "42e22b31d4143962ee0931e598fb88f1cf1221551833c30262fa5b595e3af6d3",
+          "git_blob_sha": "377728d7f83ef85fca54eb6fd195d05e21f83dbf"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-011.zip.part008",
+          "bytes": 667051,
+          "sha256": "685c35d1e2792ce2b2106395becf2bc1628cbf138e3abaf34085eaabbec4954e",
+          "git_blob_sha": "618078fbbf6128f5c46e2b67c62601d3447caaef"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/82dc9b2f99790cdac61500ba0d7918fe4ddaa6aec8be5ba4ba52b5ff250a98e0.png",
+          "bytes": 3445016,
+          "sha256": "82dc9b2f99790cdac61500ba0d7918fe4ddaa6aec8be5ba4ba52b5ff250a98e0",
+          "git_blob_sha": "45e0868b5b4dfff021da6f5dfac9afe79bfcc596"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/82dd2c13e551c08a13817a87940805301cf98648baf30fe94337eebef99462de.png",
+          "bytes": 3396277,
+          "sha256": "82dd2c13e551c08a13817a87940805301cf98648baf30fe94337eebef99462de",
+          "git_blob_sha": "7e9358e489c007618d132514065b54d7018094e5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/845ed215769705c0f19f65b6f72b2f8769efcd6d0d1a93d36ce32328eb55425d.png",
+          "bytes": 3063543,
+          "sha256": "845ed215769705c0f19f65b6f72b2f8769efcd6d0d1a93d36ce32328eb55425d",
+          "git_blob_sha": "cc8e1d270cbad4418c3967e8bc26a1ef97bfd9ad"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/89a957901e8dc432b92a77c8b70ee1ab531424adf7af2d8f6410ea5dddde89c8.png",
+          "bytes": 2451878,
+          "sha256": "89a957901e8dc432b92a77c8b70ee1ab531424adf7af2d8f6410ea5dddde89c8",
+          "git_blob_sha": "12937b368a621943f75caaaada8d114ee40c9dd5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/89e3a2fd136983e357aa40b5602ba132b0d2d4d3c06dfdf708e10a3bca5735f6.png",
+          "bytes": 3456035,
+          "sha256": "89e3a2fd136983e357aa40b5602ba132b0d2d4d3c06dfdf708e10a3bca5735f6",
+          "git_blob_sha": "e65c21fcd3887584cd9771033d823554d67877b8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/8a4a07b71860638f29a56e99cb9711b153313f8a12cf17119ceb298fe8eb824e.png",
+          "bytes": 2610009,
+          "sha256": "8a4a07b71860638f29a56e99cb9711b153313f8a12cf17119ceb298fe8eb824e",
+          "git_blob_sha": "e6d361da33cd35d60442fac684a9d5a66e832028"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-012",
+      "bytes": 18645850,
+      "sha256": "ba59cdb0ac96d1fb7d3ab679ee2b58564fde0e96ad57e4b9f551185179ac6866",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-012.zip.part001",
+          "bytes": 2500000,
+          "sha256": "359364d663308ca15bf1e52ac3fc9f0869104fd9c4c50b0cdfcd4a4525539555",
+          "git_blob_sha": "747f6feec4a1b7009e26fac4b6929ecb1a48857c"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-012.zip.part002",
+          "bytes": 2500000,
+          "sha256": "7d45791f632ba1600e6202dd1a7a9c99f7918733bcfaf5962aa1d5ed70c418af",
+          "git_blob_sha": "7c3ee3e09fa34d89e0d3b1bf33e423a8a2a83ab7"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-012.zip.part003",
+          "bytes": 2500000,
+          "sha256": "e712b52a4d816f3a3b9a64367f620fa185b3181d6fff27abc99eade00478c9f7",
+          "git_blob_sha": "70670c592d8f2efaf0a8148b9c964ec8ee8452a8"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-012.zip.part004",
+          "bytes": 2500000,
+          "sha256": "82c2363b04e265dfdf8d46a0a40f9e7916f225fb3fb96a8b3de73e1c437d8de2",
+          "git_blob_sha": "95a544fce144e187de65265a4969e7d11da575da"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-012.zip.part005",
+          "bytes": 2500000,
+          "sha256": "1fb1fc39a38806e865fc6f92fd68cfac44a54932886fa0ff1113bc4f4e9dd9fb",
+          "git_blob_sha": "a31b40a3102761589d401e3b90777089abb7ea9e"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-012.zip.part006",
+          "bytes": 2500000,
+          "sha256": "65f00f8f55cb486700efd4b8ce8a49ba05293479b045327d9aee6b8124f5d049",
+          "git_blob_sha": "a8b5d47f1559a79164bd8992e6c02d1af2d11be4"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-012.zip.part007",
+          "bytes": 2500000,
+          "sha256": "cd3b5f0c0fefe4c05a8aac684fb67d828f54b19c521a1a931288b9e3b3156a70",
+          "git_blob_sha": "bd916d27456f8aa9219a721b13113d243ad6627f"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-012.zip.part008",
+          "bytes": 1145850,
+          "sha256": "48213c7757b15378f5e30675f648c979464de95f2a9a31dda7b009dc4b936424",
+          "git_blob_sha": "d428b654209513ef68e17f82b93c89188e24979b"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/8b90e37c27beefeeb32e66f8712e5a4597a15026c2806a3bd96322a22ed58880.png",
+          "bytes": 3410111,
+          "sha256": "8b90e37c27beefeeb32e66f8712e5a4597a15026c2806a3bd96322a22ed58880",
+          "git_blob_sha": "27a41f3fbe45c2be63f99519e9096d4be8195ae8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/8bb634f4a62ceebe6b7df357adba431247efab9b02a1fbfb4995bbca1ab196db.json",
+          "bytes": 472,
+          "sha256": "8bb634f4a62ceebe6b7df357adba431247efab9b02a1fbfb4995bbca1ab196db",
+          "git_blob_sha": "74fa46dde2d7c6ad25cb849413d288b3a25e3f6c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/8c3f1307902d34121e25721bb710653957d94b32be851468fb3809e4d901b85b.png",
+          "bytes": 3038600,
+          "sha256": "8c3f1307902d34121e25721bb710653957d94b32be851468fb3809e4d901b85b",
+          "git_blob_sha": "d6664b726f23e8732064472fd45e84f4c8a924d3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/8e7818a582032dcdcae4356afae9e57546015e1108e68fd4d4a43fe27824ed44.png",
+          "bytes": 154365,
+          "sha256": "8e7818a582032dcdcae4356afae9e57546015e1108e68fd4d4a43fe27824ed44",
+          "git_blob_sha": "2e5db54d10edc39ef1df06d05bf909b9c2a5acf8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/8fe5b216f65ba7884245d87139927d6ffe5254968a99809e2b52efe6203badcd.png",
+          "bytes": 3485908,
+          "sha256": "8fe5b216f65ba7884245d87139927d6ffe5254968a99809e2b52efe6203badcd",
+          "git_blob_sha": "15646280c6c3d09cd9a1dd99c62f25317a67b2ff"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/90c6a1d59cae28993be633aec617aed51158d374dea506201a35ac13ad59c1c9.png",
+          "bytes": 2698558,
+          "sha256": "90c6a1d59cae28993be633aec617aed51158d374dea506201a35ac13ad59c1c9",
+          "git_blob_sha": "4f8b577801fcfe05642ac7b6ef5320e92f1cb133"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/9109824579acb5d04b749e69610adf1664512329c8cfeb59b8226542a3337214.blend",
+          "bytes": 9976796,
+          "sha256": "9109824579acb5d04b749e69610adf1664512329c8cfeb59b8226542a3337214",
+          "git_blob_sha": "0684200d059f0045859b428c6901087bbb1ad8ac"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/93403b479fefc7e8199a2de00af4dab302c61dc182f8cae0f8e080673df9e9a5.png",
+          "bytes": 34548,
+          "sha256": "93403b479fefc7e8199a2de00af4dab302c61dc182f8cae0f8e080673df9e9a5",
+          "git_blob_sha": "3cf564232336c6e8d628f496ad3209df270021bc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/9785d09d8013af7c94169bd38b7985d61ef4faa261b479c984c05e9ecebf1a92.png",
+          "bytes": 2229460,
+          "sha256": "9785d09d8013af7c94169bd38b7985d61ef4faa261b479c984c05e9ecebf1a92",
+          "git_blob_sha": "124bb53d9b13a407ff10c2bbfaea01664d7c64fc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/9887e1e96ba4e255ab4b9978d5c7ed1eb4180907476cbd53d10d103bae71fe44.png",
+          "bytes": 3003859,
+          "sha256": "9887e1e96ba4e255ab4b9978d5c7ed1eb4180907476cbd53d10d103bae71fe44",
+          "git_blob_sha": "2ca8919e260aaada113dd43a34a59d23269e2782"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-013",
+      "bytes": 19824400,
+      "sha256": "6613cef19a3f0f4cae0ec3b9c3cf766af3757db3179d68d99cc484e15a0b3814",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-013.zip.part001",
+          "bytes": 2500000,
+          "sha256": "0465af824cd44f73b61e59eb2d3d5762ee4305446e44cbed728dd06f664f5e0b",
+          "git_blob_sha": "3bb74a15c903643b2c4f4dfef8848fc2f90306d4"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-013.zip.part002",
+          "bytes": 2500000,
+          "sha256": "c58b3b8017cbb28421353e8ba9e1ffc6eed66341cfcdd7c5d3b7d859c9229851",
+          "git_blob_sha": "63e21394d46a18131169fc2229e9a9bc4d5207d2"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-013.zip.part003",
+          "bytes": 2500000,
+          "sha256": "7359ca3390bf01a9dc47c9b9f9d03cb2700469e4c7886d99ba0be4ad959db69e",
+          "git_blob_sha": "29998caa3fa68717651df91e2f308ba1f604a15a"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-013.zip.part004",
+          "bytes": 2500000,
+          "sha256": "ec4c6d3f58d2d123eaed607075bc5b74eb9289ddf9ec05afc6bff5ea4760acaa",
+          "git_blob_sha": "3fc2b4ae203960e15bebe16cd4aa72b771dea494"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-013.zip.part005",
+          "bytes": 2500000,
+          "sha256": "2c9056708e8265792918e9f2443080d2cebeb64476356ee2582a1e018e5218ee",
+          "git_blob_sha": "685f5c1fbef06774e1cd5fc6a605e60c879c1878"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-013.zip.part006",
+          "bytes": 2500000,
+          "sha256": "7391b66642ea352fe9bd2396817e857d77aeef9cfd16b081f8b516032bb3ba9b",
+          "git_blob_sha": "66e27a669c92ae47132ee2eaf944ad574001144c"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-013.zip.part007",
+          "bytes": 2500000,
+          "sha256": "a07fa8007150c4aaaa3c6a5016b13da2360587132269d66e9093632db529b5d1",
+          "git_blob_sha": "eba0ad8f30f23b296b378654e73a19b44f22cc23"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-013.zip.part008",
+          "bytes": 2324400,
+          "sha256": "c453a2289ad49f9fd7512e0bea7b1994ce3d0d1108e63ec2e7cc5d1a22edded8",
+          "git_blob_sha": "57606c3e34d4ab6cde8ecdc70cd07f08852fe315"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/9891ccd47bdb5129f968861a0473de5aa21eac949b7dbdf5d2097ff03aef90ee.png",
+          "bytes": 2964279,
+          "sha256": "9891ccd47bdb5129f968861a0473de5aa21eac949b7dbdf5d2097ff03aef90ee",
+          "git_blob_sha": "41efa3aade264a37dde62d519afbc840e5aa3cb0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/9bd4c09486ab3eb31de6c0184098e224c66e45dd2f25ba9d8e84c80066a8471b.png",
+          "bytes": 2911912,
+          "sha256": "9bd4c09486ab3eb31de6c0184098e224c66e45dd2f25ba9d8e84c80066a8471b",
+          "git_blob_sha": "543c9664447cdadb69c36e5d548288387bedac01"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/9c876d224395822615cd654af39b08bdcadcd57d5676a5821bba0927182aa391.png",
+          "bytes": 4045063,
+          "sha256": "9c876d224395822615cd654af39b08bdcadcd57d5676a5821bba0927182aa391",
+          "git_blob_sha": "730da9fb39925c20ccfbe1d019f6dd5fec5710ed"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/9e06cdb55ed3b0563d0f5cb695a0ffc6efbced66cd2f62b62ba6c39e88272f90.png",
+          "bytes": 3333945,
+          "sha256": "9e06cdb55ed3b0563d0f5cb695a0ffc6efbced66cd2f62b62ba6c39e88272f90",
+          "git_blob_sha": "bd677d72cd3df365b7d1be54d59fd7234b7137ee"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/a010745897554a4ebb6d6ddbb56d02f476b0cf998e7a4d322267827436f5b880.png",
+          "bytes": 3296317,
+          "sha256": "a010745897554a4ebb6d6ddbb56d02f476b0cf998e7a4d322267827436f5b880",
+          "git_blob_sha": "bf4536dc6fcc36bd29f5ca27d7f4d279fdc61472"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/a0a78e82701a665766e167987565a2990141a1d39953432ce531e2d2f5e715ed.png",
+          "bytes": 3576288,
+          "sha256": "a0a78e82701a665766e167987565a2990141a1d39953432ce531e2d2f5e715ed",
+          "git_blob_sha": "b0c49e698b6123a5029dc0d6d93639d782701e97"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-014",
+      "bytes": 18059986,
+      "sha256": "a3f3a3cce04e4b256b61d491372175c208f5b7d496f82529c10296f34a27062b",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-014.zip.part001",
+          "bytes": 2500000,
+          "sha256": "58decceb28c61d3c2211b05ac6c8b3307e7d859767b3883ba0b5cceea71a1c0d",
+          "git_blob_sha": "e42f1678171a8375276ba737a42b88fa74c37952"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-014.zip.part002",
+          "bytes": 2500000,
+          "sha256": "aeb30a679bdb43c41992e25f42f1b7c0de1ea8421326d5dd01a3cf2b05325998",
+          "git_blob_sha": "493308f9ce69b6553b512d7d04b2dc1a8444e472"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-014.zip.part003",
+          "bytes": 2500000,
+          "sha256": "aeb08413fa807e73843c2b133e009295df9a2b44f433a32fcd7bf2853105b81d",
+          "git_blob_sha": "f51e7a98250ba4a6e81bbe4497c810e8ba04f4c5"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-014.zip.part004",
+          "bytes": 2500000,
+          "sha256": "0fff9b1e4243c2f79080df563d246a51fdcef2c7e9ec970046ee78db1f2c5f7b",
+          "git_blob_sha": "3f677548312b50d0eb89f8616b50401fac08c39e"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-014.zip.part005",
+          "bytes": 2500000,
+          "sha256": "00094bc42efc16dd6fa1d91e5651f58d94ffc1774575508e679144dac272a3e7",
+          "git_blob_sha": "f7114a756ba12cb6bdbe761cb85b5d9616422782"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-014.zip.part006",
+          "bytes": 2500000,
+          "sha256": "1f415446286f268e064c7168dc39a504998e64f3610dffd5f237a81ffb56da9f",
+          "git_blob_sha": "543d62aded87958e32ba10326ba12d42002e257a"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-014.zip.part007",
+          "bytes": 2500000,
+          "sha256": "1cf881f6e0e6a4268b9c4ced487e097fd3d914b049a08b4bc2eb4d6a8d509d82",
+          "git_blob_sha": "dbf24323457392cf5ef4088de53bb9b1fb0b6670"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-014.zip.part008",
+          "bytes": 559986,
+          "sha256": "b1c547f089fa02917b85a61b3b5df7fe20cfe9fd9fb9933a53a5a06196068dda",
+          "git_blob_sha": "a279269ba27a035122e735929c00b3cc85e6a876"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/a2ba23bf3050c9cfac851807a6d195e503be28909cb55c4ce253bfa8db784181.png",
+          "bytes": 2390592,
+          "sha256": "a2ba23bf3050c9cfac851807a6d195e503be28909cb55c4ce253bfa8db784181",
+          "git_blob_sha": "b47dad3761f20ef61b80acf8e50a1990d462425f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/a30f76b6edd2c7aa52f39b545697171a856da0c517a952bedde8212f674bc584.json",
+          "bytes": 452,
+          "sha256": "a30f76b6edd2c7aa52f39b545697171a856da0c517a952bedde8212f674bc584",
+          "git_blob_sha": "ad35f40c6138268e2777c5e43e7d39e403bf2e09"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/a331492e59dbaa5d835fbca1abaf753e280698b381f28347f5e1b4bb922f3799.png",
+          "bytes": 3313435,
+          "sha256": "a331492e59dbaa5d835fbca1abaf753e280698b381f28347f5e1b4bb922f3799",
+          "git_blob_sha": "a49912b9862eebb43952332d43e7888c44b691b2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/a4937d41edbc63f8128a6d856189d639dab51fd044fbbc7aadd4cb8a1bcd5221.json",
+          "bytes": 4035,
+          "sha256": "a4937d41edbc63f8128a6d856189d639dab51fd044fbbc7aadd4cb8a1bcd5221",
+          "git_blob_sha": "8353cfbc51e3a9d3ce0b28a0ebef37ea76ed5be5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/a61827515c830cef7bd01a68470fc10075405c93630bb92d5a450187208bb411.png",
+          "bytes": 2567180,
+          "sha256": "a61827515c830cef7bd01a68470fc10075405c93630bb92d5a450187208bb411",
+          "git_blob_sha": "69995486d441d7d8e4ee05ffdc1e2b944d3a8f94"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/a78ec0ec948b7d03d87494dad85697d358a49bd925c5da2cb05c875e3443560d.png",
+          "bytes": 4135552,
+          "sha256": "a78ec0ec948b7d03d87494dad85697d358a49bd925c5da2cb05c875e3443560d",
+          "git_blob_sha": "31ecbc8692f93f5bcee5bf31660eca9eff072a5a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/a956274d43b53e7ce684d95d03872fb37bef1c828d25b278dfe3b9cf1a5e59d7.png",
+          "bytes": 2951465,
+          "sha256": "a956274d43b53e7ce684d95d03872fb37bef1c828d25b278dfe3b9cf1a5e59d7",
+          "git_blob_sha": "2240746b5b0f9d02e920e6c37322f2994f56fffc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/b1c308d39afe47911cd75408c8da550328bf60bb23d788542b3305409161200c.png",
+          "bytes": 2942503,
+          "sha256": "b1c308d39afe47911cd75408c8da550328bf60bb23d788542b3305409161200c",
+          "git_blob_sha": "bb4615f010eb7eda3c3905c0b967e5dc86afa722"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/b21b6ffbeb543d7ba3e9d864b36deb8eda86cc6096eb89ca57f6996b433796ec.png",
+          "bytes": 41545,
+          "sha256": "b21b6ffbeb543d7ba3e9d864b36deb8eda86cc6096eb89ca57f6996b433796ec",
+          "git_blob_sha": "93a17afd60b3cfb4602151c468d15734b0a869bd"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-015",
+      "bytes": 19577614,
+      "sha256": "68538b734829c7c85e9b978fb947e257839c86b259998ee19817e7983f5620f5",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-015.zip.part001",
+          "bytes": 2500000,
+          "sha256": "af13f66bfd32c53e0f68f3848e71d6551ed6533a6f0212cc2d1dd76c0e997041",
+          "git_blob_sha": "d51a2b0b258197761b1deb6fc33582e451a38f5e"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-015.zip.part002",
+          "bytes": 2500000,
+          "sha256": "72d1d9cda339e040f7999e2a266da2a5f68d5952b31c24d093b83a3c7d7bc7e0",
+          "git_blob_sha": "d0e60f1ce8bf2ea367cae3c8594b970f0eb6c1c7"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-015.zip.part003",
+          "bytes": 2500000,
+          "sha256": "4329a24a37d3a72d590a42ae2443516458be0a48fc51ae216cb4e70430083ed3",
+          "git_blob_sha": "b958d7ffb93f99d9946ea639b277df7af306b589"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-015.zip.part004",
+          "bytes": 2500000,
+          "sha256": "c6f2917f28991ac1d6e9ff821aaf6b6cce48d2b8c3312f5f4c8dc7c58a7b3d90",
+          "git_blob_sha": "f119aeb437ddcffc6768ff2341e34eade9662698"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-015.zip.part005",
+          "bytes": 2500000,
+          "sha256": "dc31a71f616de2e0f6fd85429c5f0a31e4cecf3e2984ae4239913a1e6d09c823",
+          "git_blob_sha": "b4aaa8a58d388b1e4c67ebfc396d2580d1950cef"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-015.zip.part006",
+          "bytes": 2500000,
+          "sha256": "eff2b5f37685d8b0774095ad06cfb0b5344c3304b9628cb34055d424255b8452",
+          "git_blob_sha": "c439200a8c484957e833db57edde4ede33b2d4e8"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-015.zip.part007",
+          "bytes": 2500000,
+          "sha256": "68c64bb6f03b74e9141ef7417ea5ddf052e8ace97fb7b9771fd2701f04c4c3ac",
+          "git_blob_sha": "cb5915aab8b866ed272dde0d8f5c50c26c23cdd8"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-015.zip.part008",
+          "bytes": 2077614,
+          "sha256": "9cc67c0817c9d346cd26909855754f547f62aafcb6c47807904c9e539cbb3f5c",
+          "git_blob_sha": "dd756e758d6082b04ef28c4ba4f0f46099f48cd5"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/b59a2297066c807429c8d7563fe17de5bdd4de6095b741e8f38f4d84814958c5.png",
+          "bytes": 3449262,
+          "sha256": "b59a2297066c807429c8d7563fe17de5bdd4de6095b741e8f38f4d84814958c5",
+          "git_blob_sha": "09fe1849d68b4466ddf14ff2242b96c6b774659a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/b5d8306ed7379d1623c35cb08c37968c3972a419baa0600f7c1a8077c73226a8.png",
+          "bytes": 3001958,
+          "sha256": "b5d8306ed7379d1623c35cb08c37968c3972a419baa0600f7c1a8077c73226a8",
+          "git_blob_sha": "ce5d9b0cc4b41091cd8cbd913417c19a1f1eae31"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/b68c4c216077a6eee67d76a7b9f87ff0310101f6ff26e1fd4e27b826d6a20a2b.png",
+          "bytes": 3253382,
+          "sha256": "b68c4c216077a6eee67d76a7b9f87ff0310101f6ff26e1fd4e27b826d6a20a2b",
+          "git_blob_sha": "967041f2b8f6ac140190e3b817cf540ec3a89769"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/b826f759fa53d44f02235a4616302714ed8d63a13ddb0a291b8e2713711e1b59.json",
+          "bytes": 405,
+          "sha256": "b826f759fa53d44f02235a4616302714ed8d63a13ddb0a291b8e2713711e1b59",
+          "git_blob_sha": "6e4e89f79b0d88ba1cdb51541bb20b34376f3ebe"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/b83a29d53cb42ca40a1000df0a3d96b9f1f58437ffb3a389b40b88afb966b4c8.png",
+          "bytes": 3747564,
+          "sha256": "b83a29d53cb42ca40a1000df0a3d96b9f1f58437ffb3a389b40b88afb966b4c8",
+          "git_blob_sha": "470853885965d9cd64e97a3f55a37c8815167a55"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/b881017c798909d044285e398c30f424179305ca52b7ebadb14da82f9a645964.png",
+          "bytes": 3135916,
+          "sha256": "b881017c798909d044285e398c30f424179305ca52b7ebadb14da82f9a645964",
+          "git_blob_sha": "db6d56b223cceb6e74f943b2f6de5e8ac76e1e03"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/b8e64eff65e0d7e5f6031cd4d95b8328ca6e83e9c8c6c864f48606eb099aa056.json",
+          "bytes": 435,
+          "sha256": "b8e64eff65e0d7e5f6031cd4d95b8328ca6e83e9c8c6c864f48606eb099aa056",
+          "git_blob_sha": "911a24bab19a00e49481ca0d7226b290aaf6cb4f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/b9e584ec3b4302f44c5030eaa47af23aecf70f60bcbabbec7f62ebb477925bae.png",
+          "bytes": 3308318,
+          "sha256": "b9e584ec3b4302f44c5030eaa47af23aecf70f60bcbabbec7f62ebb477925bae",
+          "git_blob_sha": "5e00061cd3bdfb744708ce36c2599e89f17f82dd"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-016",
+      "bytes": 19489059,
+      "sha256": "f57c131ad869b6b62f084c557c88ca1a9d3a0ed5e9029863a769ae4f34e34849",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-016.zip.part001",
+          "bytes": 2500000,
+          "sha256": "2d6ffa90b1caff43b9aa3edf94e56a17b883902bc12ea12f94c2dd3cfff6be23",
+          "git_blob_sha": "1b424e26b61328403e5f36f1032e7a766b79b700"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-016.zip.part002",
+          "bytes": 2500000,
+          "sha256": "95434f995492962bff9f6d1ad7bdef8d7195929172a532b114a5fff73ed797e0",
+          "git_blob_sha": "fd87935f1438a56c7cfccf40a430d3940d5d4480"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-016.zip.part003",
+          "bytes": 2500000,
+          "sha256": "574e239ab65a2e6141856b53922b5cc956f73a671f4460db02f240b0082396e7",
+          "git_blob_sha": "4e5ed5ac04d5a60563c01a5be77558b11c8f3929"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-016.zip.part004",
+          "bytes": 2500000,
+          "sha256": "7091199686ab3c4886c3b451c8f01e8959cf2a72fae56ad5d262b62f14f7eaf9",
+          "git_blob_sha": "458cb03ae4af6bc06fcbfb7340d7e2407bf6f5b5"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-016.zip.part005",
+          "bytes": 2500000,
+          "sha256": "d695e62c97e84e3363c4b996a6ba8138615afb5c5f5f379a293ea16544ad2218",
+          "git_blob_sha": "0fa59f898779c4048166a4254a49724f182c9f1a"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-016.zip.part006",
+          "bytes": 2500000,
+          "sha256": "41e30a2296031ea8e28afc94a1376841e37e5a36cd09ff877f20ddbe21166084",
+          "git_blob_sha": "d9099be3b2ca39fe41d260f09a933412269ad8a2"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-016.zip.part007",
+          "bytes": 2500000,
+          "sha256": "94666ff4fd91c32ea21b0abbb38aa081a0ffb90b7ff8777ebbb3b7eca56910dd",
+          "git_blob_sha": "02966320c2fab194a868b59c958b81c110a53cf7"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-016.zip.part008",
+          "bytes": 1989059,
+          "sha256": "75f146560a0080b82d1f22e9ed524f5b005564cb6eae544b0f6f83d4ccc59b82",
+          "git_blob_sha": "13b156e8ad01c5f331a0746dd67ba110df3b60d1"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/ba1b8fd9266849a04a9d6dd9db483171a3ad7d2c57aa698e4ed9fde3fd8ba679.png",
+          "bytes": 3263895,
+          "sha256": "ba1b8fd9266849a04a9d6dd9db483171a3ad7d2c57aa698e4ed9fde3fd8ba679",
+          "git_blob_sha": "e582c254106655f3834c3e042127055970014ba9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/be38b7c798056c68d4a9afff706ee5c31f926fa5637e0c5bc0f339c3b49f9cd3.json",
+          "bytes": 489,
+          "sha256": "be38b7c798056c68d4a9afff706ee5c31f926fa5637e0c5bc0f339c3b49f9cd3",
+          "git_blob_sha": "def7e81e0790efe3311169e4a93ddfb572103ee1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/be9d61b1885c40e034b7bbecc0c0457cca30148f2a24d3ab12103fb902721d8e.png",
+          "bytes": 3462724,
+          "sha256": "be9d61b1885c40e034b7bbecc0c0457cca30148f2a24d3ab12103fb902721d8e",
+          "git_blob_sha": "d36ba16e751a6d732116d620c52c2bec9728afcf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/bf2351398509b42700abf585773a969f46a89f09fef81c37d874e06cf0b6b82e.png",
+          "bytes": 3106020,
+          "sha256": "bf2351398509b42700abf585773a969f46a89f09fef81c37d874e06cf0b6b82e",
+          "git_blob_sha": "29f58d07aa311218589aa4430acbfb1c09cafd9b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/c2648bf34b47f947160b3d64fac1cd0197fb40cfdb6e704c13e4210eb7f7559a.png",
+          "bytes": 3394671,
+          "sha256": "c2648bf34b47f947160b3d64fac1cd0197fb40cfdb6e704c13e4210eb7f7559a",
+          "git_blob_sha": "8d695073a7be6adc378b89f669a936a39997f00e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/c455574d75d27c8a8faf5665c7339e7f591f6e84ba7e8b89ed1fb9b5c54e132a.png",
+          "bytes": 3191683,
+          "sha256": "c455574d75d27c8a8faf5665c7339e7f591f6e84ba7e8b89ed1fb9b5c54e132a",
+          "git_blob_sha": "3b5b422d7ac4202432fa35fd95370e6f0321b7b1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/c4b2122aac4943c925fbd0bf97f1e8a4cb97553951b35299b2f7a8524ebc0855.png",
+          "bytes": 3363484,
+          "sha256": "c4b2122aac4943c925fbd0bf97f1e8a4cb97553951b35299b2f7a8524ebc0855",
+          "git_blob_sha": "383794c7839a6f77055e361b2d5aa8de5794f8ab"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-017",
+      "bytes": 18741730,
+      "sha256": "5d80c4becde54f34e88329571f2b219e1054c7173ee9eaa519bb37b6eafaf4fc",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-017.zip.part001",
+          "bytes": 2500000,
+          "sha256": "0d5893d15d78bd765b4c814077f8591470d57fa72c80f5f57bfb647de510c260",
+          "git_blob_sha": "4c07114f62a870ae39538ceb54408d0758992086"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-017.zip.part002",
+          "bytes": 2500000,
+          "sha256": "e0f4b493f60b18ddb72bb48ba5ceb05268f9971dbd42c258d0ae74f655d45ebd",
+          "git_blob_sha": "377f2edda1924a895a1d4cf9bdc18a80387d2bf6"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-017.zip.part003",
+          "bytes": 2500000,
+          "sha256": "602f7f012be27c7bf1bccb1a80ad63a7a6a191ea60b9a13c3a0375dea15f05e3",
+          "git_blob_sha": "445f2e5d8f98d5472864bffb6575027fed560b26"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-017.zip.part004",
+          "bytes": 2500000,
+          "sha256": "e3f5a726d052c480770707fed48a7d4e86c4a9bb7289c62fe53d39b917c4d3ab",
+          "git_blob_sha": "dde48e4de0f08422ac4970cadeb8e860616a09e1"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-017.zip.part005",
+          "bytes": 2500000,
+          "sha256": "ef0bb05a76ff98d64962876aca55ab0a2cb3fad2ec0fdf5091cd591db827c176",
+          "git_blob_sha": "349e1e91763c560213349c1822718e6f5ac95096"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-017.zip.part006",
+          "bytes": 2500000,
+          "sha256": "0216c44c33c00c555e7d777d85523e5d59fd561535e6cc31818979633a47df12",
+          "git_blob_sha": "7f7ec892e9e4fb7d3e5203e6155be43b4b6d6b6e"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-017.zip.part007",
+          "bytes": 2500000,
+          "sha256": "e1087fe5fe9d94da5d49e7dff67422c216c6794f7050ac2d022008243c52fea4",
+          "git_blob_sha": "8772c12c9cc98df070c1fd5271cd83c9a9ca6244"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-017.zip.part008",
+          "bytes": 1241730,
+          "sha256": "4cd996c50f6ea47293ef2579946b75dad4631663d1eef0791f6be5cab10b3005",
+          "git_blob_sha": "7b4d173d560792fbe15bac9cdfe8e062e1a5a1c0"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/c53c7b37c571616c7186d679aaeeb90380a153056c7a6f2f22809b297affeba7.png",
+          "bytes": 3228341,
+          "sha256": "c53c7b37c571616c7186d679aaeeb90380a153056c7a6f2f22809b297affeba7",
+          "git_blob_sha": "c9610b113ae19051b69518576ebaa6a26611cae6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/c61033d5fdf755d75cf57e8748fb6249ca4356d15f780c222275f36c24fda855.png",
+          "bytes": 2458577,
+          "sha256": "c61033d5fdf755d75cf57e8748fb6249ca4356d15f780c222275f36c24fda855",
+          "git_blob_sha": "7f120e0c17afb9fc81d13b405ad01d135a8d4fbf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/c613aca8f05e9c4428e4a5cccabd516d9d280d987d9832279e054585a981bc98.png",
+          "bytes": 3594353,
+          "sha256": "c613aca8f05e9c4428e4a5cccabd516d9d280d987d9832279e054585a981bc98",
+          "git_blob_sha": "bf45f8d642744e2366408588d591649b3ffc6c38"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/c81e049f50d981216ac87d014f278eb28884a3dc38141bd0519b8c4c8c647d82.png",
+          "bytes": 3122242,
+          "sha256": "c81e049f50d981216ac87d014f278eb28884a3dc38141bd0519b8c4c8c647d82",
+          "git_blob_sha": "a73fc05b6d574f727834ad6a0aa476f7ccd59e4c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/c9a75fbc559ff1bce96249b2488a86fbc481dbe799b2340af5a2daf892beadcd.json",
+          "bytes": 479,
+          "sha256": "c9a75fbc559ff1bce96249b2488a86fbc481dbe799b2340af5a2daf892beadcd",
+          "git_blob_sha": "e462343d226941e46577bf98c61fcaa1bb458b01"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/cad3044d0e4b402cefaad6cff52827a99c42dc32a5a1ee969899bed3e7a37aea.png",
+          "bytes": 3483948,
+          "sha256": "cad3044d0e4b402cefaad6cff52827a99c42dc32a5a1ee969899bed3e7a37aea",
+          "git_blob_sha": "3dea6a6b7811515e1cf155535a2bb987ba7123f0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/cb7692ed6c2533a4457314e4d84bfa86e2d67988b827a7b28c1bf48346458043.png",
+          "bytes": 3150659,
+          "sha256": "cb7692ed6c2533a4457314e4d84bfa86e2d67988b827a7b28c1bf48346458043",
+          "git_blob_sha": "f5083d035935678043a9e7b0d3f076e0ad8213af"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-018",
+      "bytes": 19673168,
+      "sha256": "097470fe14e5122fbbef4d9a6544b0de348d8c92d6ef5993d4ed6f328237e013",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-018.zip.part001",
+          "bytes": 2500000,
+          "sha256": "be24aaefe569e6d89c35b0424b785674459db4379c9473c0e628475ee926d605",
+          "git_blob_sha": "87c54752cc4512932b3e6e4227403c01bb7ab3d6"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-018.zip.part002",
+          "bytes": 2500000,
+          "sha256": "bc8e4b16045527bc1b042420e2d3f31542d317e7b28102abf130240dbc3bbba7",
+          "git_blob_sha": "b03bb4c6a8c72506b6eb32fa7a315932b477a54d"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-018.zip.part003",
+          "bytes": 2500000,
+          "sha256": "40204f7f5b7316cc70606fba95da61d35e3fa979842561b506b883296d543da3",
+          "git_blob_sha": "0dcfc8141b5070cffb857e95724b9efee318d7c8"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-018.zip.part004",
+          "bytes": 2500000,
+          "sha256": "37061a96a17d06801b1f99353ecdc63e50c1c4809f858ed1fc1b51cc890ea33f",
+          "git_blob_sha": "6f570fc7568d38162c526e7a76596653f215679c"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-018.zip.part005",
+          "bytes": 2500000,
+          "sha256": "7de31d22a84d7e0de4c81fe0b729552a5c9b2bd8e5f38d6f2461ad13c60d0c44",
+          "git_blob_sha": "e903423b3fad605ccaf221358ffe6dc2bdd54085"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-018.zip.part006",
+          "bytes": 2500000,
+          "sha256": "46474af3c1841d42f882f7bf471d59e536fef2a6562152de7fa1594d05e6ef3e",
+          "git_blob_sha": "43767fe38ef9be76653f1a1d8f4ae4d8f5f374fa"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-018.zip.part007",
+          "bytes": 2500000,
+          "sha256": "763195a44e73bb836e833fdda7a9ef0a1dd4f782bb432af34b924ab0e79b1405",
+          "git_blob_sha": "2bbbfbf86e601d7dbc6c0a700c458132213a7e63"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-018.zip.part008",
+          "bytes": 2173168,
+          "sha256": "833dbd1db9004303117e202c97a4caf6b377d66a71c29cfd108779754fd28dda",
+          "git_blob_sha": "741b6853594516820ea9a3e550d9753def5e03a7"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/cbd57ea03b9c49a3c3430ba35511790d1758e7442b6e30f4c58af8515839ea34.png",
+          "bytes": 2625000,
+          "sha256": "cbd57ea03b9c49a3c3430ba35511790d1758e7442b6e30f4c58af8515839ea34",
+          "git_blob_sha": "ad7e322bacf21fc7ed442a16deb5e94ea467ee66"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/ccba2f0cd9bd3bec8a68ccb5cd86accdd8ca59c36f513745693261b7cf9ebc3d.png",
+          "bytes": 3921445,
+          "sha256": "ccba2f0cd9bd3bec8a68ccb5cd86accdd8ca59c36f513745693261b7cf9ebc3d",
+          "git_blob_sha": "99f5bf6df0d8b6f0130bfc7cecc2675b760c5d86"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/d21d69bc65d762f99ea79fdfd94de00ad5435ddfb96f049ecc9190ed5b1e80c5.png",
+          "bytes": 3645122,
+          "sha256": "d21d69bc65d762f99ea79fdfd94de00ad5435ddfb96f049ecc9190ed5b1e80c5",
+          "git_blob_sha": "8ceb2f0fe2531d82094d788d3020ba34fd265fe0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/d257d7eb727aef3e87c1799704a347228639f16717a5f9637ded061338effd97.png",
+          "bytes": 34149,
+          "sha256": "d257d7eb727aef3e87c1799704a347228639f16717a5f9637ded061338effd97",
+          "git_blob_sha": "21d8b1c4d5758c684b942d4990b8bfa623153fa6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/d4ee1af0b5fd30fa11367fd67a9e6b69ac87512d24bfa4198960bcb39dd909dc.png",
+          "bytes": 2836176,
+          "sha256": "d4ee1af0b5fd30fa11367fd67a9e6b69ac87512d24bfa4198960bcb39dd909dc",
+          "git_blob_sha": "a7f233e3122ce678aa5f8114ee311d8294adcca3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/d533d21cd821caf29747f65fc005802baec2fbf76979da487438fcc9e8c623d0.png",
+          "bytes": 3112501,
+          "sha256": "d533d21cd821caf29747f65fc005802baec2fbf76979da487438fcc9e8c623d0",
+          "git_blob_sha": "81dfec061041fc77fded72d740cadef37818174b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/d743121872ff26ddad2512ff71f97f29586c3a88f1d4cf5a273ff7f5828a6ff2.png",
+          "bytes": 3829718,
+          "sha256": "d743121872ff26ddad2512ff71f97f29586c3a88f1d4cf5a273ff7f5828a6ff2",
+          "git_blob_sha": "70bf671be88146d5385c265abf102875e5dc7569"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-019",
+      "bytes": 17134358,
+      "sha256": "889e128df7371ceffe452f468b9237e40c5acfdc8ee28f677cbd7893318686f7",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-019.zip.part001",
+          "bytes": 2500000,
+          "sha256": "8e7bd873553409c30085649cc3834f4bd56c01d220a10cdb5365b9e5cf5c1886",
+          "git_blob_sha": "2d4bd612cde307c8f146f1cdb8260e009b822b8f"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-019.zip.part002",
+          "bytes": 2500000,
+          "sha256": "5019465e68a0c89ec0f0debdb010d3c9bee7de7c14f29a6b0003224923e2c6f2",
+          "git_blob_sha": "cc2900875743ccc116996d09760ac01b0cb764e3"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-019.zip.part003",
+          "bytes": 2500000,
+          "sha256": "49074271a31af9eae6d604f2312519a1c5c5a6cec85b47a9aaa518144e15aaf1",
+          "git_blob_sha": "02f77826b83add85fa5819378b0e99e67e1c7d01"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-019.zip.part004",
+          "bytes": 2500000,
+          "sha256": "0f72d49c2de81e102238986ea5c8503a000521d3b0a4a4167293b0c79a1e6fec",
+          "git_blob_sha": "3388392535e4c2be5f29f774db4bbc57f65f6222"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-019.zip.part005",
+          "bytes": 2500000,
+          "sha256": "3dbcfd53d379bc617569898d9f5ec80518e6a005b118de16699715d4d72f3894",
+          "git_blob_sha": "ad8c23c2d11fc9181022a2bfbbec9da2304fc619"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-019.zip.part006",
+          "bytes": 2500000,
+          "sha256": "b56a0622222e3d15c45035f64354319e30352d22cfd9954780de81544d99596b",
+          "git_blob_sha": "00bb0f4a99f304b3d20e59fe2199ae0315c7c439"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-019.zip.part007",
+          "bytes": 2134358,
+          "sha256": "2c7302a7775fdfb42ab0356f82bcd884ee8858901e06ed92bc6ee0dc47c77397",
+          "git_blob_sha": "170bdf77765768cc273483fc7a5126557d8d955a"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/d965e0fb234e5dca0e4b579f6db93992fa22eab6710005b9aa68e7050b34f63a.png",
+          "bytes": 2595904,
+          "sha256": "d965e0fb234e5dca0e4b579f6db93992fa22eab6710005b9aa68e7050b34f63a",
+          "git_blob_sha": "291c030fec3fdf78ba727dcedd2345c0bfca6f81"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/d981c8b4060a53385216d087c01434219bf4d2e29647835478ae75231c606848.png",
+          "bytes": 3693869,
+          "sha256": "d981c8b4060a53385216d087c01434219bf4d2e29647835478ae75231c606848",
+          "git_blob_sha": "acd7c26eb58696e0283d0ede2b108bce1ccc53c8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/dbabdce26199a94a01b4b45bc8552c9042adc0b629f93fa07373967425aceff2.png",
+          "bytes": 4146070,
+          "sha256": "dbabdce26199a94a01b4b45bc8552c9042adc0b629f93fa07373967425aceff2",
+          "git_blob_sha": "84b661223272845c42b359265d10249c1a083176"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/dd35ca5fb66431cc948101120e5c3997882788a4d63e2a025faba0521130810c.png",
+          "bytes": 40825,
+          "sha256": "dd35ca5fb66431cc948101120e5c3997882788a4d63e2a025faba0521130810c",
+          "git_blob_sha": "4f8885299f3909a56a8fe81b37455e2500e2b3f6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/ddbf2b515c010ff2bfebdb5cc6a5a557c0bef10eb09519db24ca1030fa9c0074.png",
+          "bytes": 3771064,
+          "sha256": "ddbf2b515c010ff2bfebdb5cc6a5a557c0bef10eb09519db24ca1030fa9c0074",
+          "git_blob_sha": "947e42e113a0ef6538fc4a915bffac727a79e6bc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/e075fb0fb4f55bca709a02f03cc3d81736d7e847274f8813b7b9ddb16193da2a.png",
+          "bytes": 3285768,
+          "sha256": "e075fb0fb4f55bca709a02f03cc3d81736d7e847274f8813b7b9ddb16193da2a",
+          "git_blob_sha": "9287875c3b4fb3dbbb57cff9dc61f673326461e3"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-020",
+      "bytes": 18862415,
+      "sha256": "5c4be183e5758fa407a7af1cd7b951583dae2f69e8775b31d70d8a5fe893896d",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-020.zip.part001",
+          "bytes": 2500000,
+          "sha256": "4436d546cda2a481e79f34bd80e8fcacba1c13a6da6a337f38fb35709f1e0678",
+          "git_blob_sha": "06039387e8f7b06d5ae2eb6e5ef7390a7634f20d"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-020.zip.part002",
+          "bytes": 2500000,
+          "sha256": "2aff3863e85038c55845fd90def201d63b9bfa48c9a7856a69959f852bfcd339",
+          "git_blob_sha": "73dbe9029e294abef2716f22d1c1583eaf627f1d"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-020.zip.part003",
+          "bytes": 2500000,
+          "sha256": "ac1a3e8b000683ba532ea8a7810f57bed68eda1d2eec047086c285a68ae587d1",
+          "git_blob_sha": "29b92980913d150a3f7c733770590d994a4ff79a"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-020.zip.part004",
+          "bytes": 2500000,
+          "sha256": "a9516007c169f2efefd2642a019dabc590512dabdde5e44d86fe513a75e410ad",
+          "git_blob_sha": "12eb0e5574ab3e2c5faf7a2f5adfed174588d8b2"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-020.zip.part005",
+          "bytes": 2500000,
+          "sha256": "0fd41344d2df9421a6b47c82323f4a11dd9c7dcda18feac893edbe8186b91dbc",
+          "git_blob_sha": "41c8cec388f49640c22abb5c9f6490bad6d988ab"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-020.zip.part006",
+          "bytes": 2500000,
+          "sha256": "f083678c3402719de721b5ade3bd60f9b7d58903f64076cccf49a97fc3a93121",
+          "git_blob_sha": "81e99108b9b81e1031767d561b3aecf713867c03"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-020.zip.part007",
+          "bytes": 2500000,
+          "sha256": "b6d2d94d8f3b060d4046a6fcc1b7c0eab50828c8e293f5cf94bf6bb6cac59317",
+          "git_blob_sha": "90d6e201aa6dfb0de0af16f024a7016ce549cf13"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-020.zip.part008",
+          "bytes": 1362415,
+          "sha256": "d0198e06ba6cab26be04ea00ac2c05cde0193b85d96ce3c4f5bc4b651f8437e3",
+          "git_blob_sha": "ca05fa85418f41fdbde8796ef356f9f37146023e"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/e7549c8380713d241159cdb7696a4ec266a35ab353229b5a4ff0c89661cb7ae3.png",
+          "bytes": 3926154,
+          "sha256": "e7549c8380713d241159cdb7696a4ec266a35ab353229b5a4ff0c89661cb7ae3",
+          "git_blob_sha": "ab6d34f3430b95e413114f9adc8f537b7a9202f4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/e78949e26ea3ff4047f662d09789d458e87bc6e4e2aadaf03f4da23da583ace0.png",
+          "bytes": 3950696,
+          "sha256": "e78949e26ea3ff4047f662d09789d458e87bc6e4e2aadaf03f4da23da583ace0",
+          "git_blob_sha": "edbbc17133437f56143ba043b5faabcf3286e81a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/e78d9a89ec3b813fb4246b7b5efad33f4f89868b60f821be244c025cb7f44d54.png",
+          "bytes": 129784,
+          "sha256": "e78d9a89ec3b813fb4246b7b5efad33f4f89868b60f821be244c025cb7f44d54",
+          "git_blob_sha": "f371e3583d0f205ade326f1fa1e768cd0db711af"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/eb0f80b85f7e6aa483d2f46ea52ff2d460b08dc9f00ce2f62a70baad5f3bdf6b.png",
+          "bytes": 2849519,
+          "sha256": "eb0f80b85f7e6aa483d2f46ea52ff2d460b08dc9f00ce2f62a70baad5f3bdf6b",
+          "git_blob_sha": "5cef70eb124841af56e2b951ef6844925678e4b4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/eb887e2ec5f9f096a369442c0da3eddf926b2ae38a98d0e5ed47dd49616adbea.json",
+          "bytes": 526,
+          "sha256": "eb887e2ec5f9f096a369442c0da3eddf926b2ae38a98d0e5ed47dd49616adbea",
+          "git_blob_sha": "c3c9c26d36ae8f0d5e94747525777e90ff1143cb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/ebcf1592cbd7ded0e48d9ec7ba25391f844be1f715d8bd03e070c233a913da41.png",
+          "bytes": 4344933,
+          "sha256": "ebcf1592cbd7ded0e48d9ec7ba25391f844be1f715d8bd03e070c233a913da41",
+          "git_blob_sha": "b9be21942189e0610ab4bba2b4f07406b23afcba"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/f48cce1d149fbf6f9ca5fa54187eb7609e8af450e5a70511d661bd5583c5847a.png",
+          "bytes": 4179450,
+          "sha256": "f48cce1d149fbf6f9ca5fa54187eb7609e8af450e5a70511d661bd5583c5847a",
+          "git_blob_sha": "2f20102671b11e6f25c0cca647fa8d40b9e0f82d"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-021",
+      "bytes": 19670532,
+      "sha256": "b61dd9672a9dcf6cfea89ebbcd3244c4e6dc98694657fb7676b91c179ae9192d",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-021.zip.part001",
+          "bytes": 2500000,
+          "sha256": "518731067543d48318098392b1f1af8ffc0ac000557c95b860d0aa49790c969a",
+          "git_blob_sha": "e2cc7d6d1696d5c3877c0a989dff534a42887888"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-021.zip.part002",
+          "bytes": 2500000,
+          "sha256": "c769f5912b8045a81a102ba52bb09d8a6d7b1b849f9fa64b6f8066a0ec796769",
+          "git_blob_sha": "9c4269e20a7a459b9a07af6229ad20c23ec48fd2"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-021.zip.part003",
+          "bytes": 2500000,
+          "sha256": "90cf5737a9054c0be52ba53e2ebbb1c410a4f530e52af4044dcfa845d9d6312f",
+          "git_blob_sha": "04f4a01636eb6090b34742b19b7d542afd5c66eb"
+        },
+        {
+          "number": 4,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-021.zip.part004",
+          "bytes": 2500000,
+          "sha256": "be2816f244c83c84fe2ce8659f715ada441601780e8233327ae7c2cabd2cc825",
+          "git_blob_sha": "dc58ef13111ab58a4dbb6ae1767a8dddc289e1b6"
+        },
+        {
+          "number": 5,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-021.zip.part005",
+          "bytes": 2500000,
+          "sha256": "d4f1e798a83d2818390317f62a54c8b61b53d2c858ddc81dd8918da62731fa3d",
+          "git_blob_sha": "1123f222d537273e920bda0581b8dad12edf62fb"
+        },
+        {
+          "number": 6,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-021.zip.part006",
+          "bytes": 2500000,
+          "sha256": "ec7162b34427f84494e6828487ba31cb5db8f483e6139374bf459b37f8c9c7eb",
+          "git_blob_sha": "363f65f878e609301e358bfcf7ea618e12319f4f"
+        },
+        {
+          "number": 7,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-021.zip.part007",
+          "bytes": 2500000,
+          "sha256": "5f929964517274f473532a93a8c9bc2881886ad0a1d4de27a7497feda11b0b76",
+          "git_blob_sha": "1c999a2293b50144dd5afb1137ba32726cee05c2"
+        },
+        {
+          "number": 8,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-021.zip.part008",
+          "bytes": 2170532,
+          "sha256": "d26a82e8ac2c0d7aebeeceb96269fdcc1a4e58f97be07f357b8d40e7fbb764b8",
+          "git_blob_sha": "1386519916324e3c956661f5648f4dd580c8f3e3"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/f6d5fd70748cd255b33d4d31ccd9edac76493f936cbcf402cb089566003759c9.png",
+          "bytes": 1812443,
+          "sha256": "f6d5fd70748cd255b33d4d31ccd9edac76493f936cbcf402cb089566003759c9",
+          "git_blob_sha": "16c049d3c937c6af5a2cc5d6004d4d5d95d3733b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/f6d70403a4c1faba54e4649f56d649d9339d7fa86d3c2bfa123b794481878097.json",
+          "bytes": 3876,
+          "sha256": "f6d70403a4c1faba54e4649f56d649d9339d7fa86d3c2bfa123b794481878097",
+          "git_blob_sha": "03c47fab14dced6bd2918291273bef5d0e11186f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/f85fd33c5a53858dfc5b78b98bd1a2daacf72506d4b68520b0e0ef4c37022543.png",
+          "bytes": 2602342,
+          "sha256": "f85fd33c5a53858dfc5b78b98bd1a2daacf72506d4b68520b0e0ef4c37022543",
+          "git_blob_sha": "55026f8a82774344c4ba4fc2c0b407b629c04ed1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/f897d222bbb85462319de13120af4a2c478df485fe9b01052b70d864b07699f5.png",
+          "bytes": 3041758,
+          "sha256": "f897d222bbb85462319de13120af4a2c478df485fe9b01052b70d864b07699f5",
+          "git_blob_sha": "29ba77da63922f068df609c5747f7db7688bed35"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/f8a9c072ecd647bcf14877e8adb6fff18f4358556431d19e51009218b575b985.png",
+          "bytes": 2577786,
+          "sha256": "f8a9c072ecd647bcf14877e8adb6fff18f4358556431d19e51009218b575b985",
+          "git_blob_sha": "791c5fdad78af97f881907fcb365383d21d6f569"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/fc6613814b8ed43dc98034b39e09e48a3a3ed6ffacd6cd6d9582f0b3fe7bb366.json",
+          "bytes": 463,
+          "sha256": "fc6613814b8ed43dc98034b39e09e48a3a3ed6ffacd6cd6d9582f0b3fe7bb366",
+          "git_blob_sha": "498e32342db6b12546e7a745b789d15a4ad67021"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/fca4f9ea7b0da35c4e25d5c46ebc6669bc15cb54be310a9603700fb2f7afcba1.png",
+          "bytes": 3642134,
+          "sha256": "fca4f9ea7b0da35c4e25d5c46ebc6669bc15cb54be310a9603700fb2f7afcba1",
+          "git_blob_sha": "74543c1df6010d5327c0e7f9c08993c6cb52fbd6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/fcb84e252e8fc0f20d8e82b2e80a02be31f2e6a67fec516789d61cf4d8934f0f.png",
+          "bytes": 3150337,
+          "sha256": "fcb84e252e8fc0f20d8e82b2e80a02be31f2e6a67fec516789d61cf4d8934f0f",
+          "git_blob_sha": "c8df3ee3b855bb83691b0597a81ada9a061ce1eb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/fd1de9bbec326f71f6710e599a31e9330129a98420da74f08c2475270a5a1192.png",
+          "bytes": 3205990,
+          "sha256": "fd1de9bbec326f71f6710e599a31e9330129a98420da74f08c2475270a5a1192",
+          "git_blob_sha": "ff12d7943fbe1b92e49d1b98eea5318d1a97c430"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/ff20b6dc9601b326c7cf522964723516d2011513f2c2da0f14b232e68d4db256.json",
+          "bytes": 4575,
+          "sha256": "ff20b6dc9601b326c7cf522964723516d2011513f2c2da0f14b232e68d4db256",
+          "git_blob_sha": "f40081fcebf3f92a2d009f8fb32cadaf4a3f3871"
+        }
+      ]
+    },
+    {
+      "id": "original-source-art-022",
+      "bytes": 6485509,
+      "sha256": "ec71e553da9bd7c50b0c975b8ee94640935fc71c9a162ea1b05d65239b6ad822",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-022.zip.part001",
+          "bytes": 2500000,
+          "sha256": "bba1aaee570272a02b461e05ef36cf1ce6cd00343bf9983ea6bf3394ed68df2d",
+          "git_blob_sha": "8ea284e5112d7418d8c3514c476c8d97c1ac2e5a"
+        },
+        {
+          "number": 2,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-022.zip.part002",
+          "bytes": 2500000,
+          "sha256": "0d943249260ca8edfa649f2c4bb715204471abbebf65eef43fb587e67e7346c6",
+          "git_blob_sha": "0703e35777c89918b4c6bb9b0deccd1ea3037604"
+        },
+        {
+          "number": 3,
+          "path": "art/kits/dreamscape-modular-v1/_archives/original-source-art.volume-022.zip.part003",
+          "bytes": 1485509,
+          "sha256": "7afb4cba7ab39a0c55dd1f6facfcc8a73a1a2f02f32e5676da16dd15133a410a",
+          "git_blob_sha": "bda6cdc4effb63f8d80452181781d10970d4a352"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/ff6a0cb404752324aca9b4011dcef35a178d380911cce5ce17efa0d707c01400.png",
+          "bytes": 2957708,
+          "sha256": "ff6a0cb404752324aca9b4011dcef35a178d380911cce5ce17efa0d707c01400",
+          "git_blob_sha": "578a7b68f790ca3d550e64c0e99fdb40798c878b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/blobs/ff91bff608c97da3b29167ba0176953d94196e3585ef0504470a48935171dc05.png",
+          "bytes": 3634212,
+          "sha256": "ff91bff608c97da3b29167ba0176953d94196e3585ef0504470a48935171dc05",
+          "git_blob_sha": "0708578cd89dd6fc6371ac10f32aae3cb1efc553"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+          "bytes": 2300,
+          "sha256": "410bf196280f8c5e313df913d63f9310e7189d2eb1cfa6c800e967146f9e9284",
+          "git_blob_sha": "0945fb6897e1d02220f6dc0182abb81bb70aa225"
+        }
+      ]
+    }
+  ]
+}

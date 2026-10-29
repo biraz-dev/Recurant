@@ -1,0 +1,156 @@
+{
+  "id": "armory",
+  "title": "Armory",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 22,
+  "archives": [
+    {
+      "id": "armory-001",
+      "bytes": 1638686,
+      "sha256": "48650bed8f727afe399a82fed4d25d4b8e856c48958273950edd7358d38beb58",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/armory.volume-001.zip",
+          "bytes": 1638686,
+          "sha256": "48650bed8f727afe399a82fed4d25d4b8e856c48958273950edd7358d38beb58",
+          "git_blob_sha": "e1d35455961119b8f575f92d906c3ef07cf000c2"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/CLAUDE_README.md",
+          "bytes": 7199,
+          "sha256": "b084254fc5d732d8dc5612bc5601d7959f332661d0ae4e171e3dd3f370594cc0",
+          "git_blob_sha": "8ae7783ec1b0fc4f5ed80b8588e50cdd60f57e83"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/MATERIAL_NOTES.md",
+          "bytes": 2797,
+          "sha256": "e9424072398dc920e0c380fd3b8417b0d735c1a6af2fdfc797ce0142f7f25e4d",
+          "git_blob_sha": "dfe20183cb804764f155d282be485ac55729f2cc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "85ba4c95e00eedd09d7ba314290adf1eafe35a837420148b13a2b35a25e9763a",
+          "git_blob_sha": "b58d06f23e82f1ef6d1237618eb60aa33d53940d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/assembly/collision-navigation.json",
+          "bytes": 10364,
+          "sha256": "83e5d52ab116f7c389e9ab37078813c3347f4e043a645609926c4b688838aebf",
+          "git_blob_sha": "96cde86d49488774134099705f758e1e918dcfaa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/assembly/layout.json",
+          "bytes": 13500,
+          "sha256": "699a85424e984af060519de1b84091c5a0e31d30ae197160f1077f5da2c3dfd4",
+          "git_blob_sha": "ca9916d3ba598d8a7115eac4077e8e5450b5db56"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/assembly/native_320x240.png",
+          "bytes": 131991,
+          "sha256": "67c493c536d53f720a9fbec95c2b0ade050c1f299e2db5c191eae7342e5f116b",
+          "git_blob_sha": "839b2d93f3623a7724b46e48d276bde303a40ec9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/assembly/showcase.glb",
+          "bytes": 899488,
+          "sha256": "0cd85322beecfb1c82795d2434e41a97dbd717f3fcadbe5431fc7bea6d8376cb",
+          "git_blob_sha": "d1b84539723580e9fe658f0f816dbf80dae26625"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/concept/reference_native_320x240.png",
+          "bytes": 150695,
+          "sha256": "63d5fe70162f39c6050226197b501fbbaca2c983d56d26609d1d584438c36f4b",
+          "git_blob_sha": "b1551fca55724bd76d9578adbc7b0d80feeee51d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "3094ae7481cf9e8be7e9be5bed1551955a0847557a2d508dae510c40481c6879",
+          "git_blob_sha": "1981e98ece3d356d446d92eb6523e50919b320a1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/material-manifest.json",
+          "bytes": 7333,
+          "sha256": "0aa010e6d0caae049427c7775442ba1bb79780cdb6bf87c188ad5fd318e0dd33",
+          "git_blob_sha": "3240fdca49131644ae555d805eca2de3b6f1f93d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/materials/detail_diffuse_128.png",
+          "bytes": 34965,
+          "sha256": "38fbc00a505ff5ecafacda4c6ffd9dba8b0b18766f6605b318169a560c09ebb6",
+          "git_blob_sha": "c3f083d12bdd525fee57860a5c3e0b47e7e606ad"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/materials/detail_diffuse_256.png",
+          "bytes": 132741,
+          "sha256": "7648bbfd6e936f7c71cf66616fc72fc8b27114ead9922be9ec043afb6587cef2",
+          "git_blob_sha": "f8690f515aa0883fd7cd0a3d1f5db675917d1902"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/materials/ground_diffuse_128.png",
+          "bytes": 43617,
+          "sha256": "0c6536f9a1faba096d1e3d9979abeebb0ba69ee02b5c32a35ef8619bf5c74095",
+          "git_blob_sha": "2db824b0ec822f927042cfc38e5089676399e9bb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/materials/ground_diffuse_256.png",
+          "bytes": 171204,
+          "sha256": "e67d1fe934ef83f886edaec1ad57d38d5b5bc34fc0f50c98fe91c9ee40ad4d5b",
+          "git_blob_sha": "446d438f11d72896a47f677cd500c8add3376ef8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/materials/structure_diffuse_128.png",
+          "bytes": 31213,
+          "sha256": "3f821e32a2c316706efecc4c783e6b7b63eeafbaa610d69d48211e8ea8c1365b",
+          "git_blob_sha": "add089aae9da969ceced61ca3ad8a73f0f333bc8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/materials/structure_diffuse_256.png",
+          "bytes": 113721,
+          "sha256": "24d3c847fd8fade207d5c9e50ce22ccb54784595f3f3ce7fd4f42633f40a79d0",
+          "git_blob_sha": "9f3092b0dc5eb529eec3207ef5029cf39be1f1ba"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/materials/wall_diffuse_128.png",
+          "bytes": 39523,
+          "sha256": "4f1b346ad3788e3ccb32a0347fa4896170b0ef5850291a3f6cd5ffe99f3c6acd",
+          "git_blob_sha": "e704cc1f08fecffd15774fa47616314feb4c0024"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/materials/wall_diffuse_256.png",
+          "bytes": 149208,
+          "sha256": "3ad195a8043f7a7ac387e172ae7be31b0c4f62954fe5b1530192fb31954aacb1",
+          "git_blob_sha": "f896360e123ded259d62668cc1c6ada39e68d7c0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/prompts/ground_repeat_fix_v2.txt",
+          "bytes": 1128,
+          "sha256": "23658aecf451348e5cb2ca96e39dad53a9744468e4279d2c6f07389df024c4df",
+          "git_blob_sha": "2ca5afaf0d2fbf242c566a0d8f4ecb2ce9ba8611"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/prompts/material_atlas_v1.txt",
+          "bytes": 2387,
+          "sha256": "5a2ac762918551f5d92e5f0dc242e1db71c7173889a77847c2be488a475a4895",
+          "git_blob_sha": "6153b487ce2a807133a53c00ac7a26227dde6c1c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/armory/theme-manifest.json",
+          "bytes": 6753,
+          "sha256": "a0b49d144d5e234825eb60735460b1908780a022cfbdb106f7739699a13631bf",
+          "git_blob_sha": "eec2b5adec17ea6704a734c5fb76a00c3d659df8"
+        }
+      ]
+    }
+  ]
+}

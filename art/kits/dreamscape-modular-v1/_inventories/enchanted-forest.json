@@ -1,0 +1,174 @@
+{
+  "id": "enchanted-forest",
+  "title": "Enchanted Forest",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "enchanted-forest-001",
+      "bytes": 2401703,
+      "sha256": "3bd7e269c73b31da6789019708dfdfafc344f3a65c0fd9efad89028646785f15",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/enchanted-forest.volume-001.zip",
+          "bytes": 2401703,
+          "sha256": "3bd7e269c73b31da6789019708dfdfafc344f3a65c0fd9efad89028646785f15",
+          "git_blob_sha": "f4ac05da3017fc6da8ed1929743c9c20ce2775ec"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/CLAUDE_README.md",
+          "bytes": 7222,
+          "sha256": "3afcbe06515fbe9e4f1c86ce4e60020a4e849640d427da5ddc03d6ef51cc269b",
+          "git_blob_sha": "44343be4130730ab88a53dde145e6393a3d25ee5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/assembly/asset-validation.json",
+          "bytes": 2037,
+          "sha256": "bed8ded6e3d172611d4b8d7c923b45ff8c1021de65ac5d512344249658f4714d",
+          "git_blob_sha": "b99b25ed3fa975cd170e4f26881e0cabd4db067c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/assembly/collision-navigation.json",
+          "bytes": 10171,
+          "sha256": "d0c58dc6a4821d3a13564e3f95ec99f3114b537a67232b4e0ef57f85558513f6",
+          "git_blob_sha": "f7d0007d4cd0133bb1c81380b7a820589945e0ae"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/assembly/layout.json",
+          "bytes": 14433,
+          "sha256": "46314469e974d4a7afcd61d92d4f729c0aa1bcbee9ea8892363911abe49a374b",
+          "git_blob_sha": "cdccbb264faa4977630ca027d45e915876847ed3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/assembly/native_320x240.png",
+          "bytes": 149600,
+          "sha256": "9a2dff240d6c68ab9661a2c2a2b9514919d8703654d62c9764b689024136816c",
+          "git_blob_sha": "4acdf762c60239f58e9b32420201dfa5ee3693a4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/assembly/showcase.glb",
+          "bytes": 1043820,
+          "sha256": "46d7e0d3f8b11030f140862c9c52148d36c4f488415f380ef47a9173b64a5633",
+          "git_blob_sha": "2c6c33060980b76971592519e38adfa5997053c1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/concept/reference_native_320x240.png",
+          "bytes": 185749,
+          "sha256": "c0efbab1e318b27cf967c4faca0f0567cfa47e3f2cea1a48c51b00ee6a5de6b8",
+          "git_blob_sha": "491704a253638137279749430ba819cfb4d27dfe"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "4814b3d6fb31f0dfa3506827b135f66d854b24cf27af40c9ed1794df6f5f87c8",
+          "git_blob_sha": "946006571faa70ee13f6d0c7e6a97ac9e5d30b57"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/material_manifest.json",
+          "bytes": 13883,
+          "sha256": "1379827d998022833ed3c3ef59577873eaa519b76fd21ca30345164bb2a0fdcf",
+          "git_blob_sha": "b043886e3416e939de8bc842ab26c7227d52efae"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/materials/detail_diffuse_128.png",
+          "bytes": 43422,
+          "sha256": "25df85f80c96e1ff6eb03ccfa57c60824800f4be166ee421b6fd843460a50f4b",
+          "git_blob_sha": "089afd1b0e9d7486dd2f0222095cd1cdcf9c52df"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/materials/detail_diffuse_256.png",
+          "bytes": 163182,
+          "sha256": "95eec0a5b4d8d462058db80cdf5ae26e1e77fb5faf6bab8ffd572aae70e6290e",
+          "git_blob_sha": "33c9e90c6ebf3423c4150d5ba8e7b74eaebad1c1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/materials/ground_diffuse_128.png",
+          "bytes": 44033,
+          "sha256": "7166e7cf79dca969413528a03105d3b3100ba52b1e83fbe62736d7bb5198eca0",
+          "git_blob_sha": "898ef2f4c91bb53847155d0053d6d2fb005fb3ca"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/materials/ground_diffuse_256.png",
+          "bytes": 168705,
+          "sha256": "ff0ad47eb05e1db0e5399c21d75d1e38621ccd4ec6d3e7a1993590a88fb893d3",
+          "git_blob_sha": "75a2397cc076fa3bb85db50b527b65b3782daaea"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/materials/ground_repeat_diffuse_128.png",
+          "bytes": 47160,
+          "sha256": "de9a092bfb5d5796c34f2868c513ad87be63cbd7c10a46ca12ef09f7b23df973",
+          "git_blob_sha": "1254cb0d291e3bb401c50d3f1241a5c79aceac4b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/materials/ground_repeat_diffuse_256.png",
+          "bytes": 179394,
+          "sha256": "f696a5ec4711f669018fb2f2de8646c9c8bf2db3e8c7e11a733f93b18277a113",
+          "git_blob_sha": "483e4c41e94d83363fa115ad9851f8655b12cbee"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/materials/structure_diffuse_128.png",
+          "bytes": 45848,
+          "sha256": "16ad631dc1597b80b2e4953af9c769b15cfa61d54874cc3e4bdc2dc0c9b012c0",
+          "git_blob_sha": "8bbbf00135eee4ae0bc167ca14c99a0aa25e9e2f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/materials/structure_diffuse_256.png",
+          "bytes": 177296,
+          "sha256": "21cb02de1df68799ba14ecf8e99b4c2926da20b8cb8dc0c44144af836d03cf43",
+          "git_blob_sha": "60a33820f69850b22473d50d7e28a72e58b58c38"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/materials/wall_diffuse_128.png",
+          "bytes": 42732,
+          "sha256": "8fe5aa122a781c1344c05eb6c331e7a4d31e3a1297e94405921add44e09e5c97",
+          "git_blob_sha": "eca1892e5ffee17c39fee324a6425c87b13e6373"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/materials/wall_diffuse_256.png",
+          "bytes": 161393,
+          "sha256": "a4c678909095a532291c292dccbd1050c8e67c7ff0d16fb19c27773e086b813e",
+          "git_blob_sha": "939c7bbbe4cae3b0b2572f4435f380653f3b6f6d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/materials/wall_repeat_diffuse_128.png",
+          "bytes": 44542,
+          "sha256": "e2fea9b99499117dd74f92713655817540bb144f61831ae6e428db133d573824",
+          "git_blob_sha": "1889ed5d3a2c3713e34054ac27431acf6b88b4c5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/materials/wall_repeat_diffuse_256.png",
+          "bytes": 166981,
+          "sha256": "6202064a323516045e04a92247db8dba178a82b3efa00fde41098d9bca963d81",
+          "git_blob_sha": "a3c9a2f41e89a7ed9aa665b73b6fa2235a8e3c47"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/prompts/material_atlas_prompt.txt",
+          "bytes": 1836,
+          "sha256": "e5bc606433c47c5871f54edd08c359c0208846f55a4f5c1ce0cf86e7bc44fd2c",
+          "git_blob_sha": "8f7a16aef2da28d87b8a9771bc90a4c6029040fa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1912,
+          "sha256": "79be9b93bcb6c488def4f895fa65827726d536ec222a5f03bf66afc322c4302a",
+          "git_blob_sha": "f926796dd311dd5c49066c76cff8f3768d2020ac"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/enchanted-forest/theme-manifest.json",
+          "bytes": 6813,
+          "sha256": "36d9235f05716519afb5310edf46b3edac16ae6d1e6d2d2fdf439ff52baf1c11",
+          "git_blob_sha": "dc54c4f8a6e3b434f983c998b83ceaaaaf8dd964"
+        }
+      ]
+    }
+  ]
+}

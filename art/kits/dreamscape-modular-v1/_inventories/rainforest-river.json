@@ -1,0 +1,174 @@
+{
+  "id": "rainforest-river",
+  "title": "Rainforest River",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "rainforest-river-001",
+      "bytes": 2362331,
+      "sha256": "a85e3c08d49cc80048032ea37d6a2a6fe4e4dc615f84cd919c9657852e380ff5",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/rainforest-river.volume-001.zip",
+          "bytes": 2362331,
+          "sha256": "a85e3c08d49cc80048032ea37d6a2a6fe4e4dc615f84cd919c9657852e380ff5",
+          "git_blob_sha": "ad6d26909a8b6720eaa8f59e2c485c8793ee9783"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/CLAUDE_README.md",
+          "bytes": 7496,
+          "sha256": "b65b5221c431137cc1ab4f8d0fafeb3b17deef6ac78798dd9d391d44146d4fa2",
+          "git_blob_sha": "77bf199b7d5c1f49ea390adcc739c69de8bfd6e0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "db59593f3619ad3dbde083282130fb972e60aae65fd19f6456c5da32d8c29bcf",
+          "git_blob_sha": "eae158cb7dc56e934da776387b41140b08743ef4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/assembly/collision-navigation.json",
+          "bytes": 9896,
+          "sha256": "6048697a737340e501965c4684aa43b77a1119e6017a056a5af18cf9371e38cc",
+          "git_blob_sha": "7b43e9515c1316a65752766abe90d39fa04a5d70"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/assembly/layout.json",
+          "bytes": 15540,
+          "sha256": "97a74049b5f5ac7c9acff3ad5538c099e80c3b0f5efafbba010423861bcfd72b",
+          "git_blob_sha": "6bac499055248a94b10c9151617842bff6b1109b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/assembly/native_320x240.png",
+          "bytes": 164804,
+          "sha256": "3d9163f59038055d4d6246e7e79a4bad2bfc336ae92155b9a20a3c15892c3b13",
+          "git_blob_sha": "385d4d510a79ff10f867db6c0d2d4f3d3cbdf333"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/assembly/showcase.glb",
+          "bytes": 842472,
+          "sha256": "352241db1d78e0478b6244ddb81ad6a419ff0d23c2cb4106e03a02fa712a08df",
+          "git_blob_sha": "e0642ac81e15d323de3a61398e2417ef4f663e5a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/concept/reference_native_320x240.png",
+          "bytes": 193396,
+          "sha256": "22235fc70772dc3f167088024a9a217dd970036e60afe112717127e890e09da4",
+          "git_blob_sha": "408757ebe60fd76550cc4fb4cefa529fee9458ee"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "26d180d1153e45dae09a13fe0094a9a12693145ec824fec6104e710e1db99929",
+          "git_blob_sha": "56c8cb570d0ba37345bff5265160dc11ce41131c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/material_manifest.json",
+          "bytes": 14139,
+          "sha256": "5883ea3a3fb0b186ea15a96404f5e3b7db66680661e1037c19a286f93692adf0",
+          "git_blob_sha": "bb5d66a5c6bb9d7658704dbe38dc5828f8de7e95"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/materials/detail_diffuse_128.png",
+          "bytes": 37779,
+          "sha256": "36d80c3c0f566fab620a4053ea8a932252cde6e60a490cd9b8d3760ed2618ed5",
+          "git_blob_sha": "b4405a5def1e94f09d29841fc15462be285983e7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/materials/detail_diffuse_256.png",
+          "bytes": 134414,
+          "sha256": "dd4935fe1b710d75f9ed5955c5606466a14782ba267f9b25b65b4672924cc463",
+          "git_blob_sha": "13ce2f23193677b062f595e7529f47d9bb09445e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/materials/ground_diffuse_128.png",
+          "bytes": 44872,
+          "sha256": "cdb64d8eb372fd4b36197b98e3d31330b8467818102243c8d90b06ba2990bf6b",
+          "git_blob_sha": "4eed3962f39109c4c4292127c98d8437b0e9d0c4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/materials/ground_diffuse_256.png",
+          "bytes": 171790,
+          "sha256": "e762550857aaa8a5cb9841faa98d6e9ee86c97cf1864bddca1c232dabf079e48",
+          "git_blob_sha": "c1a8517fbfd5523af2728289c3c5a251988c2de3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/materials/ground_repeat_diffuse_128.png",
+          "bytes": 47101,
+          "sha256": "9fe3dff3f078b0820548c0edae800ad9167a9c0e4331092dd6d202907f52aaae",
+          "git_blob_sha": "0d006f1ba99367929e67c95fdd86b23326fff4a2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/materials/ground_repeat_diffuse_256.png",
+          "bytes": 179468,
+          "sha256": "cf88a9e17e71912b5be7ebfcfed4d90e14d1618d9bc8d7d92a64f24018ea57e9",
+          "git_blob_sha": "5f198573192f41aaf853d6eb36f6af5b2e58d817"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/materials/structure_diffuse_128.png",
+          "bytes": 43707,
+          "sha256": "ed0fd43f5cda16ea0a458b6e7aca7c521afe456f120121ca010770f2bd1ff032",
+          "git_blob_sha": "420c9cfc8544ba0bf6c57a73336575c70aa5323a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/materials/structure_diffuse_256.png",
+          "bytes": 166980,
+          "sha256": "6f67315b4922e99db64faacd944dc95ff64bedfec2079f25df092e9d520972ee",
+          "git_blob_sha": "a93e5ad486d941d5dbf66b186277aa754e8d16d3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/materials/wall_diffuse_128.png",
+          "bytes": 45224,
+          "sha256": "1b2b268d27a49f6baf9586a4801d77b5f0f92af8c080fe73c991fdeb42b92856",
+          "git_blob_sha": "5b1254251e3e456179feee92a42bdcd2c194cd54"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/materials/wall_diffuse_256.png",
+          "bytes": 174574,
+          "sha256": "34df71736760e3e31b437c26b2dba81de91ae95d07a015b17235256e5d765f6b",
+          "git_blob_sha": "8def4a097f9ebb87ddf3d5a42aeee4b6ea1e9ba1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/materials/wall_repeat_diffuse_128.png",
+          "bytes": 46485,
+          "sha256": "f38dd489aa0d1a816c1e673e3c8d89ae73cc9d9747a12f6b3f7331b31c9836e1",
+          "git_blob_sha": "246039d65ddf4179323c5f4c17fd9e57cbc7a663"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/materials/wall_repeat_diffuse_256.png",
+          "bytes": 179916,
+          "sha256": "8d86ae3bac1df5d012501600384daf70aa27c2e3a6b9e71c1bb12bb0469f40b0",
+          "git_blob_sha": "4becf89f7a20ec5393d5f3ff82faeea5468a5756"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/prompts/material_atlas_prompt.txt",
+          "bytes": 1829,
+          "sha256": "21a475e13795b6cdee25d2992d7731aeed4e4dbd2389b72ca384124f59149d97",
+          "git_blob_sha": "60644d01c5a2e9213e49dc57b6fa3b1683129dfe"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1968,
+          "sha256": "43071d7e0ae2b752d9a8d5e6fdf17e3a9fd5c0c32b396b47657654602b49b8df",
+          "git_blob_sha": "3a0a8a6e8591f24051b239d7a0d8e73d9358794c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rainforest-river/theme-manifest.json",
+          "bytes": 7171,
+          "sha256": "9f721de3158a378e94e0c33e50e9c963f1480b5b3fe3f63008a03c7e54a65180",
+          "git_blob_sha": "8db60043c71f9cbf3ce133bfd124f2e488277ded"
+        }
+      ]
+    }
+  ]
+}

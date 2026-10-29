@@ -1,0 +1,20 @@
+{
+  "asset": "sunflower_stem",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.025,
+        1.213988,
+        0.010641
+      ],
+      "size": [
+        0.95,
+        2.427975,
+        0.431727
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/sunflower_stem__GUIDE.glb"
+}

@@ -1,0 +1,174 @@
+{
+  "id": "desert-life-sanctuary",
+  "title": "Desert Life Sanctuary",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "desert-life-sanctuary-001",
+      "bytes": 2276526,
+      "sha256": "9cbf8bf1e321b1ed1a7b8adb612a293b678e0943c88e9435baa945f9e2e04df5",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/desert-life-sanctuary.volume-001.zip",
+          "bytes": 2276526,
+          "sha256": "9cbf8bf1e321b1ed1a7b8adb612a293b678e0943c88e9435baa945f9e2e04df5",
+          "git_blob_sha": "e869f1f5791aec06c4b06a19cd957881425c46b5"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/CLAUDE_README.md",
+          "bytes": 7525,
+          "sha256": "f87a0cd7b2d4e6f455ea1e7a7bb49803d41171eaf9723001db6103cbdb508c23",
+          "git_blob_sha": "9bb08511bdbb50144d58baeee7b9bf631d301c5c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "defc71f804915d31db85f985c1d4393ab10f7766ed0bc789528d26f4bf3e6910",
+          "git_blob_sha": "a8d38db822582da1b7596198fe8ec2e296e0daba"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/assembly/collision-navigation.json",
+          "bytes": 10422,
+          "sha256": "5bc84a57af51dfdc21d777f77bdccff5cf8439a037b94bf379a2360db8f58c67",
+          "git_blob_sha": "23c551ee64ee712029d485cf2179e6123d443bda"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/assembly/layout.json",
+          "bytes": 13796,
+          "sha256": "4ca13ff25fd7cc71f58acf85edba815b997fef2a8b02defb656ac31c0aea6d13",
+          "git_blob_sha": "620a61185cc82837e7f8aa36011e6b5542dbbc4a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/assembly/native_320x240.png",
+          "bytes": 150268,
+          "sha256": "090ebb01b975b0f85afdd327f64efa683c0d1782ec0225985f18fddc2b9f6b5a",
+          "git_blob_sha": "773b405bfd7e918b3ee5e2078fbda1da3d8cbb37"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/assembly/showcase.glb",
+          "bytes": 1003260,
+          "sha256": "f2c5c3458209b5edaab73262091b0f0a6ff343b5eaba535371f7d06852bc6386",
+          "git_blob_sha": "036c9ac9a0c6667a5c93f4eab4ff351a698176a2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/concept/reference_native_320x240.png",
+          "bytes": 155076,
+          "sha256": "a5c0dc057fa53260d9d3243d8710d5fd765598c16ba58ab58ab19eac6a583f02",
+          "git_blob_sha": "ef8ecc8ca82b11862176cf04c3c903403b714568"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "018aa3edf2f231ae6da1898830e68066a4346fc3a9c1dab9d9b058eba6241f7d",
+          "git_blob_sha": "98f1a8c1f09900852cfdc8476901d64b48558542"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/material_manifest.json",
+          "bytes": 14185,
+          "sha256": "17e44b6ad9f88bcf1584a3a7c9f831cde63f9cc32d8511e3ae16ded598dfb912",
+          "git_blob_sha": "af4aafe428238cdee97f85ccf04c0d175103df7a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/materials/detail_diffuse_128.png",
+          "bytes": 42764,
+          "sha256": "38d97a4e121bbf3828a132858be1d5c7a264cca6144c5c93487ecc105c652356",
+          "git_blob_sha": "cca7d3d6327b173212176eb03e1f275e8cc985fc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/materials/detail_diffuse_256.png",
+          "bytes": 165033,
+          "sha256": "d777da7e407b01f694f4e269716cfb22a57f7964d624d5ee8bb359a095453311",
+          "git_blob_sha": "f2cf012cfecb5f9d2cde55f02da35305c48dd990"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/materials/ground_diffuse_128.png",
+          "bytes": 40019,
+          "sha256": "d57cf628571e72976bfd5ac203aa7b4b23a4ae567f70df6d3daff1b8191ec44c",
+          "git_blob_sha": "45b1d22dac8ab56a075ccc7ae896c30e23e0d092"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/materials/ground_diffuse_256.png",
+          "bytes": 154621,
+          "sha256": "b00164ed90f1a71f99210112c4e2e0e97f158a1bce5acb5398b6b2e254085e06",
+          "git_blob_sha": "9bc01c58d8504430a7adfe5ef081b499fa08476d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/materials/ground_repeat_diffuse_128.png",
+          "bytes": 44473,
+          "sha256": "8ffe7d9f85efc171827e293ea6f6bb918ecf90c8f43a70c5fc912747551f2489",
+          "git_blob_sha": "1e76d626debfc112cfad4a060093715cf26393b6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/materials/ground_repeat_diffuse_256.png",
+          "bytes": 171189,
+          "sha256": "b2afcf6ae16943c8a683b29fcbc2c9eed07eaa662f853b0f1a118df992ee5029",
+          "git_blob_sha": "847333dece8bd95355c503da238db466bb96360c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/materials/structure_diffuse_128.png",
+          "bytes": 41127,
+          "sha256": "bcc90dbef431e3aab2fb89127da79f5d229aa47165ac63ccabc992a746ebc75c",
+          "git_blob_sha": "f6d087b70e26145b746198e2d76dfd9c31001c98"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/materials/structure_diffuse_256.png",
+          "bytes": 159146,
+          "sha256": "d282428bb441444366f4b6ab3cb2f7d6a7fd4a07e817ecdd30323315b7906e7c",
+          "git_blob_sha": "70f085594a2c96112b10ab42a3f06e746168e3f1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/materials/wall_diffuse_128.png",
+          "bytes": 40619,
+          "sha256": "5a2c2f6f41bc1b26248902675adc5580019945a503e55987f13bc82484585ec0",
+          "git_blob_sha": "ea522bc1c2cf74dcad175ded0ee6b28ab1983ff5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/materials/wall_diffuse_256.png",
+          "bytes": 154859,
+          "sha256": "516061a3dc7d193fc755fae4d35e35cedeadec77a129a623d9f718b44509197d",
+          "git_blob_sha": "e85369190cf1723b24326832a09f9f7761a4a171"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/materials/wall_repeat_diffuse_128.png",
+          "bytes": 43539,
+          "sha256": "300ad2e60cb40bd847b2adbce1ecbf7d31c314bc560ad852d87306833e70b90c",
+          "git_blob_sha": "2a506845eea0b9fd083017e0c34d99fb3ad47689"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/materials/wall_repeat_diffuse_256.png",
+          "bytes": 168131,
+          "sha256": "eb62c9bb437225c9d52f22152fda0da90c7acbacfc89faed01502d58ee6990cc",
+          "git_blob_sha": "e375afbff4dafe9bef0b0348465b7f68eb6b73eb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/prompts/material_atlas_prompt.txt",
+          "bytes": 1847,
+          "sha256": "042c98b1bbdd33f7b71e8d93f4bc43fb5b940b4bfde2e257c11d786a8b3a5119",
+          "git_blob_sha": "e8c0436a846875255149a1b2d980f21330aac8b4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1924,
+          "sha256": "99dfc1a662bd9e5a8d8365721aaeeacc51c352ae29630146089cf8b7db9fdadd",
+          "git_blob_sha": "de813747b9ef38ee4d6dca1e81eb1fae8c10f60e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/desert-life-sanctuary/theme-manifest.json",
+          "bytes": 7083,
+          "sha256": "b5e715cad194681c7922f909688c1a41c2d9ac67f108396357355cee72ffed8c",
+          "git_blob_sha": "3b3af93a15c6a7dc200d9b8e57a8a9910bfc791a"
+        }
+      ]
+    }
+  ]
+}

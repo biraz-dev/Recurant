@@ -1,0 +1,20 @@
+{
+  "asset": "urn",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.425,
+        0.0
+      ],
+      "size": [
+        0.7,
+        0.85,
+        0.66574
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/urn__GUIDE.glb"
+}

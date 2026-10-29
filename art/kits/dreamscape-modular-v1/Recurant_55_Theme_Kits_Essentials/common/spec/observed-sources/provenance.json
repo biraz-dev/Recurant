@@ -1,0 +1,32 @@
+{
+  "repository": "biraz-dev/Recurant",
+  "branch": "ccr-0aac5f81-70amxp",
+  "commit": "b9fdd98f37bcb419bcf2951103529ff571e5ea21",
+  "observed_at_utc": "2026-10-29T00:31:39Z",
+  "method": "Read-only GitHub connector. Original archive decoded and only two text documents extracted; archive SHA-256 checked against ASSET_INVENTORY.json. No repository code executed.",
+  "archive": {
+    "path": "art/kits/archives/sandstone-ruins-v1.volume-018.zip",
+    "bytes": 186960,
+    "sha256": "289626626f3099e932419d5ef984984500bbcf7ce55556c295781a29359a56d7"
+  },
+  "copied_sources": [
+    {
+      "path": "art/kits/sandstone-ruins-v1/spec/INTEGRATION_GUIDE.md",
+      "sha256": "447aa65ce5cb29dc48a68518f859a3e751d1368075f7217685542f22963c452d",
+      "bytes": 15760
+    },
+    {
+      "path": "art/kits/sandstone-ruins-v1/spec/module_catalog.json",
+      "sha256": "b7b8ba9388f0a741ba152052863d6dfa3fc69609c502546db0c55c9b43aec50e",
+      "bytes": 20215
+    }
+  ],
+  "local_prior_kit": "No level-kit or sandstone-ruins-v1 local directory was present in /workspace at inspection time. Original two text documents recovered from tracked archive volume018 instead.",
+  "not_run": [
+    "repository scripts",
+    "cargo builds",
+    "runtime imports",
+    "gameplay tests",
+    "target device profiling"
+  ]
+}

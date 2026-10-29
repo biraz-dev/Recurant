@@ -1,0 +1,20 @@
+{
+  "asset": "gear_machine_pair",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.025391,
+        0.923005,
+        0.0
+      ],
+      "size": [
+        1.738869,
+        1.846009,
+        0.8
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/gear_machine_pair__GUIDE.glb"
+}

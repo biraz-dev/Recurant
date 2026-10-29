@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "theme": "living-crystal-interior",
+  "atlas_source": "art_sources/material_atlas_v1.png",
+  "atlas_source_dimensions": [
+    1254,
+    1254
+  ],
+  "full_prompt": "prompts/material_atlas_v1.txt",
+  "generator": "built-in image_gen",
+  "input_reference": "Original biome concept inspected visually; not used as image-edit input",
+  "processing": "Exact atlas quadrant crop or selected full-frame built-in imagegen repeat edit, followed by nearest-neighbor resizing to256 and128. No programmatic seam blend, edge copying or PBR map invention.",
+  "palette": "clear amber, pale champagne crystal, icy slate blue, warm pale gold",
+  "materials": [
+    {
+      "id": "living-crystal-interior__wall",
+      "role": "wall",
+      "description": "densely intergrown translucent blue-gray crystalline planes with quiet pale gold fine veins",
+      "base_color_texture": "materials/wall_diffuse_256.png",
+      "low_res_texture": "materials/wall_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_practical_repeat",
+      "recommended_wrap": "REPEAT",
+      "nominal_meters_per_repeat": 2,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/wall_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 21.96,
+          "top_bottom": 18.68
+        },
+        "interior_adjacent_MAE_rgb255": 18.68,
+        "status": "visually_reviewed_practical_repeat_minor_seams",
+        "visual_review": "Targeted built-in image edit reduces the abrupt facet boundary; gold-vein density and repeating crystal rhythm remain visible.",
+        "review_scale": "256px native, 512px 2x2 composite"
+      },
+      "source_crop_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sha256": "a0c3c2fa28d7cf9ad497acf46e613308379cb7c50fc6d363ae1d2740b9960e6a",
+      "selected_source": "art_sources/wall_repeat_fix_v2.png",
+      "selected_prompt": "prompts/wall_repeat_fix_v2.txt",
+      "revision": "v2_builtin_imagegen_targeted_repeat_edit",
+      "previous_native": "art_sources/wall_diffuse_v1_256.png"
+    },
+    {
+      "id": "living-crystal-interior__ground",
+      "role": "ground",
+      "description": "polished pale champagne crystal slabs with fine blue-gray geometric joins",
+      "base_color_texture": "materials/ground_diffuse_256.png",
+      "low_res_texture": "materials/ground_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_practical_repeat",
+      "recommended_wrap": "REPEAT",
+      "nominal_meters_per_repeat": 2,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/ground_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 14.75,
+          "top_bottom": 18.88
+        },
+        "interior_adjacent_MAE_rgb255": 16.45,
+        "status": "visually_reviewed_practical_repeat_minor_seams",
+        "visual_review": "Crystal mosaic repeats coherently with fine facet/vein discontinuities.",
+        "review_scale": "256px native, 512px 2x2 composite"
+      },
+      "source_crop_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "4de89e6a6a910a09cfe3aae0fa2d1338c4a9beb3e05d09b3ae5741a589c5928b",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "living-crystal-interior__structure",
+      "role": "structure",
+      "description": "broad golden translucent crystal facets with a pale cream crystalline grain",
+      "base_color_texture": "materials/structure_diffuse_256.png",
+      "low_res_texture": "materials/structure_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/structure_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 34.94,
+          "top_bottom": 16.29
+        },
+        "interior_adjacent_MAE_rgb255": 15.26,
+        "status": "nonrepeat_by_design",
+        "visual_review": "Nonrepeat face-on panel: clamp UVs 0-1 or crop within module; not intended as a seamless surface."
+      },
+      "source_crop_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "1a44cddd330ddca5e858d636d59a89693f2672bf244c85bdb713b6939e3f9059",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "living-crystal-interior__detail",
+      "role": "detail",
+      "description": "flat amber crystal mosaic panel with concentric diamond crystalline motif",
+      "base_color_texture": "materials/detail_diffuse_256.png",
+      "low_res_texture": "materials/detail_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/detail_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 11.25,
+          "top_bottom": 21.64
+        },
+        "interior_adjacent_MAE_rgb255": 16.93,
+        "status": "nonrepeat_by_design",
+        "visual_review": "Nonrepeat face-on panel: clamp UVs 0-1 or crop within module; not intended as a seamless surface."
+      },
+      "source_crop_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "f306231d36076718af5f591d43f04b0edb0736e070f983ea7460ba8c9614a28e",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    }
+  ],
+  "qa_contact": "qa/material_contact_sheet.png",
+  "readme": "MATERIAL_NOTES.md",
+  "qa_visual_summary": "Four distinct face-on opaque diffuse surfaces inspected. No scene or text. All wall/ground 2x2 repeats visually reviewed and practical at native size with minor retained discontinuities; no mathematical seamlessness certification. Structure/detail are explicitly nonrepeat.",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

@@ -1,0 +1,150 @@
+{
+  "id": "crystal-hallway",
+  "title": "Crystal Hallway",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "crystal-hallway-001",
+      "bytes": 1547974,
+      "sha256": "c20b936c9879921d95e12d0ebba90ab45a2a4fa422b05a6d93553e2f1369ac07",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/crystal-hallway.volume-001.zip",
+          "bytes": 1547974,
+          "sha256": "c20b936c9879921d95e12d0ebba90ab45a2a4fa422b05a6d93553e2f1369ac07",
+          "git_blob_sha": "fd42867b3195f1e413e4a294b4d4afd56d806dd4"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/CLAUDE_README.md",
+          "bytes": 7276,
+          "sha256": "cf1eea0d5e658896ba7cf1d63a87eeb0e168f9024e0132d5e8f8cbe2aa494d4f",
+          "git_blob_sha": "8b2a36dab0b1dca59098b566622b34ea1f6cb2f8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/MATERIAL_NOTES.md",
+          "bytes": 2766,
+          "sha256": "a39ad82169d7e2f013dec24715937cab452f556f25243f6edc4807446f7a36eb",
+          "git_blob_sha": "4e1ed3558dcd53ab3d9362031b69f33bc895b025"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "eafbdc82a346f4cb046a78449631f4f5b4a715ada70468e352a6ac134fc4f2bc",
+          "git_blob_sha": "1d52568eec0410981b262807430537fd9461dd56"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/assembly/collision-navigation.json",
+          "bytes": 10225,
+          "sha256": "af1188e08ff6c82b42082242b3247e53ffec9b8a8fecaf974167450fbc72e000",
+          "git_blob_sha": "6b0fb724f2fa5f8afc0e7be3e63a8818aae0ea76"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/assembly/layout.json",
+          "bytes": 13491,
+          "sha256": "b39cfe8ad811e6ca21008110e3ee16731c61ce57fe84a373e76e0a9115256671",
+          "git_blob_sha": "a731612d8d5b0f917670e700482b2cd71b84d1bc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/assembly/native_320x240.png",
+          "bytes": 146065,
+          "sha256": "9eee36b78c7281f350741ce46c0f85bfce2701a123b989f2aba6871e5ad5fe3f",
+          "git_blob_sha": "c427a738825bfaaaa1655778d35034b3711b4c7f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/assembly/showcase.glb",
+          "bytes": 702320,
+          "sha256": "55f27fdc0c1a132fae817b451a290f5a3ec239084cb532e6e9a299f4b74ffbe6",
+          "git_blob_sha": "b1113b87e5cca3355b4e97604a68aa0ee2d4d97b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/concept/reference_native_320x240.png",
+          "bytes": 163487,
+          "sha256": "8e2bd8521ea7f6cf56942d98c2d75be7760b1be085d022793fb705c62e7b5a77",
+          "git_blob_sha": "9ed14de24712f9f243d4d470820891549200f1b1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "5b2f94d4dc488b67e825e471f92745441f53457a8500747ef7dde5aa531710f7",
+          "git_blob_sha": "d99c5f1d95b87118ce6f85dc71cb12e23c5acfef"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/material-manifest.json",
+          "bytes": 7340,
+          "sha256": "2343d14bdd4b6c6e9e2f4bd7327cb4d9b07284be377d0a505469c09cd596da44",
+          "git_blob_sha": "f580ea376be2166f2e2efae57eceafa4a52116cf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/materials/detail_diffuse_128.png",
+          "bytes": 37849,
+          "sha256": "e9804696bb256dfccab101a36af61aec7524949e27330bc9c6163295099c5e43",
+          "git_blob_sha": "21f9bf46741916cabe08f9c3b5512ad095da94b5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/materials/detail_diffuse_256.png",
+          "bytes": 137861,
+          "sha256": "31f5b014957d6e33d61fbf30ad78ea507fa24a93d4b01847ad14f309237fb33b",
+          "git_blob_sha": "22fdcf53039a6c07559c832ac420c9dbda9abac6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/materials/ground_diffuse_128.png",
+          "bytes": 36751,
+          "sha256": "e5ab96c3a96f399b7d2f085ad2d465213dd385342db5150ff09af79d25fa5cc4",
+          "git_blob_sha": "58f3ff8c62ada006e2eb6935a819464502da2856"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/materials/ground_diffuse_256.png",
+          "bytes": 136182,
+          "sha256": "3ce90f85e008a565331a0f11c91e7947f6fbb917897d044980f14f89b78d2863",
+          "git_blob_sha": "d98e7179c008bb6a193ddd21cb52dfc5188ab583"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/materials/structure_diffuse_128.png",
+          "bytes": 32451,
+          "sha256": "e6a99beb8b6528a41215e3217d60b057f78f2a71ca2a3b6c8758a2c9a195c7a2",
+          "git_blob_sha": "c88f764330b3d7202e6a7add32a68bf88809b36a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/materials/structure_diffuse_256.png",
+          "bytes": 118580,
+          "sha256": "9704d5db9e8c64d1a08c20e03a99ff27dbe32085bc40f0e5e909c69a47f4ae0e",
+          "git_blob_sha": "adf2eb22fdc7f7003ab33e0f24a901b9ce9e003a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/materials/wall_diffuse_128.png",
+          "bytes": 35186,
+          "sha256": "2e5e347f3c7f0974ad5852e3a3fa6c2e182cc544a8d9f1c36a1b9603849bd656",
+          "git_blob_sha": "f86e97c9784dcdfe7b085e037cb89f643c0c62fe"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/materials/wall_diffuse_256.png",
+          "bytes": 128325,
+          "sha256": "b3744a9a6b651863e8f7c47746b0bc647b9faa3d2c40f090af5a99a2d1232983",
+          "git_blob_sha": "8a3fb34edc2aa3e4f015cd490ed234db5ecb4854"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/prompts/material_atlas_v1.txt",
+          "bytes": 2434,
+          "sha256": "a3024ae9d5b0c4bf5c36bf45b2339606b219d39266d414974dac606f7f7d110c",
+          "git_blob_sha": "12522e26a84dcfeea78a99aba9e1d6056aafbeec"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystal-hallway/theme-manifest.json",
+          "bytes": 7023,
+          "sha256": "68269bc6d1bef31b390f20a39587fc306d085486961b86f538960f9a68c129bf",
+          "git_blob_sha": "2c010ffa43f0f1f180b7c11deb8f0e49b9e5c668"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "asset": "palm_tree",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.071798,
+        1.475,
+        0.0
+      ],
+      "size": [
+        2.756405,
+        2.95,
+        2.827291
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/palm_tree__GUIDE.glb"
+}

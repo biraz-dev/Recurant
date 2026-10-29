@@ -1,0 +1,144 @@
+{
+  "id": "palace-hallways",
+  "title": "Palace Hallways",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 20,
+  "archives": [
+    {
+      "id": "palace-hallways-001",
+      "bytes": 1735219,
+      "sha256": "7e4df9bb56a131713486c1a6ba2ba8f973e44db86b7631c31f0e6ba7645048d3",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/palace-hallways.volume-001.zip",
+          "bytes": 1735219,
+          "sha256": "7e4df9bb56a131713486c1a6ba2ba8f973e44db86b7631c31f0e6ba7645048d3",
+          "git_blob_sha": "664a1633503997de3e964ffb82f273240d898912"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/CLAUDE_README.md",
+          "bytes": 7812,
+          "sha256": "fd5e37dc572d4c9c084992e425105071a5eaf73daadc49bcde9e56dca79d8cce",
+          "git_blob_sha": "2fc5b9d030c1c65f85dcc253a675fead15bae3c8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "668a37aa1bb8c2c924d13c4b43ebd833a1283b63dc6afc4f48f93b3b5cdc16a7",
+          "git_blob_sha": "4fde96e5c723746e7f247b5ecba13e2310b49dd6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/assembly/collision-navigation.json",
+          "bytes": 10404,
+          "sha256": "1e5e8c93659ffc6f25ed5a72097f08fee3d3e08fda6c0bef705cbd28882483fb",
+          "git_blob_sha": "2b56d2f5a226dd9dad0b7064a11c57e153ba0b29"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/assembly/layout.json",
+          "bytes": 13556,
+          "sha256": "682db93dcf53c7090ef947844659aa2ab99568ba8fdf0315dcdf4f19fee1c867",
+          "git_blob_sha": "a28d5a70de38b0fdcf16e516627848f7e01b03d5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/assembly/native_320x240.png",
+          "bytes": 168600,
+          "sha256": "729d1ec2eccaa232c9cd7b84beaccfec3a4838a7f0a9230946bad217f7a2032e",
+          "git_blob_sha": "8374541d69f20b5e37d42a55fb06b1a9994d8627"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/assembly/showcase.glb",
+          "bytes": 821460,
+          "sha256": "9e332edcc4135206062a089ade85b21999e70d64e4506e65e9c622f6b730c13a",
+          "git_blob_sha": "d4faec2401b09f508f4b57eefa5cf75d6abe62dd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/concept/reference_native_320x240.png",
+          "bytes": 140380,
+          "sha256": "bc48feea3c4aa7514c04877159eebf6ed423b899b6e50c853eb69f911f0cf9ea",
+          "git_blob_sha": "77efe0b3bfa54f1a0e94f28e5aa4be3698c0bd1c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "1df2b28af815ac89e248b23139359fc07e9ce1d11264062e8ef3fbbfd1491383",
+          "git_blob_sha": "1418f7139c57518790ed3b8914eb445b9cedcf0b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/material-manifest.json",
+          "bytes": 7254,
+          "sha256": "41d644e65b6d59772b06adea4ce7845f2ae6945ae9ca461d6431ba4d61faac9c",
+          "git_blob_sha": "03e182abee277c4835a067793162ee3d65d36ed9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/materials/detail_diffuse_128.png",
+          "bytes": 42937,
+          "sha256": "3aded5128b5aac7a412c59b723ffcfb73bfd18be06eada9576dd4d0da2b4e575",
+          "git_blob_sha": "00571287bc424f1cac18b2ef497073d53bea4acc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/materials/detail_diffuse_256.png",
+          "bytes": 162519,
+          "sha256": "9faca53835b836d1f796b0b5e4cb7c18ef2f5516f4274b4a000c57709d50e383",
+          "git_blob_sha": "380c6e22c59e478f286ccdebb777efccf0c99213"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/materials/ground_diffuse_128.png",
+          "bytes": 39529,
+          "sha256": "178c45e29661408f885225916082cdf01a2fb114ddf91ac2b1d1b10e68dfbc23",
+          "git_blob_sha": "89288e6346545f374b503465ea6d8e4142c50d5a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/materials/ground_diffuse_256.png",
+          "bytes": 149542,
+          "sha256": "fea3363fbbb0f5c5bc66d730017b10ea1da4735516231fdc107f409d13c33d6b",
+          "git_blob_sha": "4b466bb613a5447b490afc2425509f61612e507b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/materials/structure_diffuse_128.png",
+          "bytes": 40816,
+          "sha256": "ef899d50999a13044d8c4c16b28ffffb50c15832b5ca5df987f0cc74fefe3514",
+          "git_blob_sha": "221a258f849e7c7c49dc72cf4a56e0ac3af5755b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/materials/structure_diffuse_256.png",
+          "bytes": 153747,
+          "sha256": "b883f1e395ef6286c366f93adcf866b4ca2a6e25813ce4300c0832a99068b576",
+          "git_blob_sha": "306ac29177c27f89c54b75990797adb499e3337a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/materials/wall_diffuse_128.png",
+          "bytes": 36813,
+          "sha256": "27793e8642b016c29a7f53b8d0ec741cc3c300b8ad6dc28e7e788a39de357154",
+          "git_blob_sha": "162b1eab23f4f47143bbb534e5a451b98bf400f2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/materials/wall_diffuse_256.png",
+          "bytes": 138548,
+          "sha256": "26c7778c41a16d943ad08c98ff02ef08672f5d224f9f9b66140c7234454e3c99",
+          "git_blob_sha": "1efc1a87300e38eb06287268eff8e1154be46c18"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/prompts/material-atlas.txt",
+          "bytes": 2791,
+          "sha256": "3e0fec6cc0138d3fbbae89f52b59298a458c5ada451c024b1e50f5fd0bff4de6",
+          "git_blob_sha": "542cf8bb8bde07e29fa15729f677a878ea3a1d10"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/palace-hallways/theme-manifest.json",
+          "bytes": 7149,
+          "sha256": "1dcbe89d1aafac1dd5268273f5cd4b26a346fff238953049db9e4d01fd52a239",
+          "git_blob_sha": "989b21419e784d34feb15d281e5b4ddd69ca0f90"
+        }
+      ]
+    }
+  ]
+}

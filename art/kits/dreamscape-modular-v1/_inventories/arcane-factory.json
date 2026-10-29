@@ -1,0 +1,150 @@
+{
+  "id": "arcane-factory",
+  "title": "Arcane Factory",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "arcane-factory-001",
+      "bytes": 1648605,
+      "sha256": "56d495841f0f3d4ce7cb1da02184c557d79f3677e293e226fa74928b3e8e67e1",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/arcane-factory.volume-001.zip",
+          "bytes": 1648605,
+          "sha256": "56d495841f0f3d4ce7cb1da02184c557d79f3677e293e226fa74928b3e8e67e1",
+          "git_blob_sha": "1d1fa38bc46c3c2a42438cab10ba50354876a581"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/CLAUDE_README.md",
+          "bytes": 7248,
+          "sha256": "2b0ada7a511af94b0c3b29d67da889f4d77aa48be0a6b94ec791acbf03702e0c",
+          "git_blob_sha": "a020437dba8a989359953ba282855df232e25d0b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/MATERIAL_NOTES.md",
+          "bytes": 2773,
+          "sha256": "877d8a064a1540edc1b2796ab6b3c667aa509cf72c71767e8d59082363a6583a",
+          "git_blob_sha": "5bcd0ac7d75fea99c09ac06ead4d23ec69dba00e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "c00551f8044d343bbf6dbfcfcd1701cb11cf04b0b192e82d2c119bf04caf9418",
+          "git_blob_sha": "55a6cab396af7610dc4c1780128a4f02f08a4509"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/assembly/collision-navigation.json",
+          "bytes": 10396,
+          "sha256": "2a79fe9e0d075c0752a1346a077be7108019f1b98c0a91dfe3bb4de80ce7227c",
+          "git_blob_sha": "e757202dabfc18a55fe5c092f60b8043cd043761"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/assembly/layout.json",
+          "bytes": 13518,
+          "sha256": "65826e3471fb7147b26c4de761f945d4f644d8f1b583ddb698353ca7be8221b8",
+          "git_blob_sha": "710f27af6c4669ddfa3c49f9f2920faf76dcfa7f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/assembly/native_320x240.png",
+          "bytes": 150419,
+          "sha256": "98a453994ea0189656549808cb2e7baf3674e3122ad32a58731342893b1d4779",
+          "git_blob_sha": "25020af4a63a59905360f4a210c0d2ba8ecf1259"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/assembly/showcase.glb",
+          "bytes": 743580,
+          "sha256": "bb7e4c78dd4bd6a38b3be2412b5086ea39f6b647672cb904e7ec55c251b5d8dc",
+          "git_blob_sha": "46f220261b68dc53e84880f804ec4b3dd56a469e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/concept/reference_native_320x240.png",
+          "bytes": 165413,
+          "sha256": "76b7007c120f651e55707dec4b19fca766e10f7a7766b069ab5c6ce9b93f3de9",
+          "git_blob_sha": "9b19697022dcd6926116639ff578321242262d0e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "802281522ed4547dd54f09e22b152d588fb093bb492b68a23924699580bcd78d",
+          "git_blob_sha": "dfdd801c7577611951e9f9b2df5f7ce65a276dbf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/material-manifest.json",
+          "bytes": 7330,
+          "sha256": "c053fabf185e6707b3004310f20d86ccabe46bb43316fb83865324d7731b89e4",
+          "git_blob_sha": "aac964690b2b22f025ddf8f5c60af58caa2711d0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/materials/detail_diffuse_128.png",
+          "bytes": 38648,
+          "sha256": "28f66bd9a73112ba7ddd07785b07977710a8837ef4255d1b407c4f89a460a721",
+          "git_blob_sha": "f8ee3293b634ff7258f8b4436b57a16fb14c65ac"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/materials/detail_diffuse_256.png",
+          "bytes": 142493,
+          "sha256": "d9440a7f990000e0dfb555ea7a6622542f60d99783e8063436b39ac16b301992",
+          "git_blob_sha": "627a6258bbb5900d4b64f2d976c753206771dbaf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/materials/ground_diffuse_128.png",
+          "bytes": 35398,
+          "sha256": "0fd4992a50b04933f448561b505e9f56bc0f5295a0ced5d44783a7224234e27f",
+          "git_blob_sha": "2805e0b89ac5774a3e96975f8e5c37eaed293687"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/materials/ground_diffuse_256.png",
+          "bytes": 131347,
+          "sha256": "f94ea95342e3b744dba48cad510edcdeb3c817decb5caee2bb41e6fe1bdaba23",
+          "git_blob_sha": "ecbc26cc9f285a4394137760927babfa540232ac"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/materials/structure_diffuse_128.png",
+          "bytes": 37887,
+          "sha256": "50ec1586d4b5eb531c7ea71739a1629151ce3c828704a774190457764260b7b7",
+          "git_blob_sha": "911e621a5c93b3547ce4b91ff236a4650501792b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/materials/structure_diffuse_256.png",
+          "bytes": 144179,
+          "sha256": "3c5f97631a455fad709dc5e24586639d4bb4a2b6699ec83802758990f020461a",
+          "git_blob_sha": "30d75abc6efe3456926187efb8bcb91e6e8249e1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/materials/wall_diffuse_128.png",
+          "bytes": 38663,
+          "sha256": "0eedf52c6f47c06a92204f1e7f37f4608846aa236d389fb3fe8b5d6f28c56bc0",
+          "git_blob_sha": "bd30c4a8cfab2f6b992a3711c4106b9801806bb1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/materials/wall_diffuse_256.png",
+          "bytes": 146095,
+          "sha256": "913549efe74eee6cd40aeee1ab0a2f35cae174c93050e24477091b1a5ece5758",
+          "git_blob_sha": "88ee6c32a6c675ed873d5d56058f5b6e243985df"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/prompts/material_atlas_v1.txt",
+          "bytes": 2416,
+          "sha256": "f08c43f63fc06b0ad8bb26bf03928d57a257d7d88d3539535916e33b4e9bb07f",
+          "git_blob_sha": "8ff5844e7a7257fd4c38507c912df67f05d042b2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/arcane-factory/theme-manifest.json",
+          "bytes": 6924,
+          "sha256": "ced0869b768a27c113a865e64af77fc1ad6abfac6c4a009dd055ce6fa2c8f684",
+          "git_blob_sha": "ba0fcece385ad50d02a538469f9b05bb8cd77f2a"
+        }
+      ]
+    }
+  ]
+}

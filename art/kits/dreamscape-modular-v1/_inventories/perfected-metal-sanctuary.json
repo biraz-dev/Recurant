@@ -1,0 +1,150 @@
+{
+  "id": "perfected-metal-sanctuary",
+  "title": "Perfected Metal Sanctuary",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "perfected-metal-sanctuary-001",
+      "bytes": 1692284,
+      "sha256": "1102c543742c7e3583d3eac81efc70c5b004a58d72ccbe2ed83d2f304e90263f",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/perfected-metal-sanctuary.volume-001.zip",
+          "bytes": 1692284,
+          "sha256": "1102c543742c7e3583d3eac81efc70c5b004a58d72ccbe2ed83d2f304e90263f",
+          "git_blob_sha": "3680a2432be038394d4324e1e53bde83d9ca3903"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/CLAUDE_README.md",
+          "bytes": 7294,
+          "sha256": "7836c308a0db01025e091e579e3e5958a678c1f8acbfb4457fad17f6a92d5575",
+          "git_blob_sha": "48116a3913fbe693f3679b921ecb93151520d5a9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/MATERIAL_NOTES.md",
+          "bytes": 2817,
+          "sha256": "fc242fe7f7db55b506a817dcf1c948d5b7ff30cedcc3de36c362cdbb7499ffec",
+          "git_blob_sha": "6dfb60b64c70a69bc8887fca229e6e71375cce6e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "de0d92353cb78210bbef0265300c0a833ac3ce4fcf3eed74a4367838d2ebfbf5",
+          "git_blob_sha": "1db49902b505977343794e97275905e83e184679"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/assembly/collision-navigation.json",
+          "bytes": 10378,
+          "sha256": "42a03a570522d7d9443a3b80adfe548bf76445b70835c99ad4792269bc44f555",
+          "git_blob_sha": "20517b3d7e061ffda7aa260a31ac093dc5cb0f11"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/assembly/layout.json",
+          "bytes": 13467,
+          "sha256": "38a89f232bce15478111ac9e3f59df18bd904d9a2d004bfe311a45aede487961",
+          "git_blob_sha": "f17f52f9154c47cdedd24e58d5a0c9b4584265a2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/assembly/native_320x240.png",
+          "bytes": 148141,
+          "sha256": "8adbeca4231ee65ff75173f332ca9ee72ffe2998a9e0ab730323219a73ee023b",
+          "git_blob_sha": "c6c611d4738eadda2b5b70315eea1c3efe35500d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/assembly/showcase.glb",
+          "bytes": 745072,
+          "sha256": "acf510800fc0552c01b0795dc0554a3ae888d37076f4ced5c6a11e19bea4bf2d",
+          "git_blob_sha": "de7b006ed5904c3125130557b782a25f1b44e0a6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/concept/reference_native_320x240.png",
+          "bytes": 161718,
+          "sha256": "bea8a73032ed91c85623249b7c18bc7d8be326d87b114f98b2b6e8d73d48ef2c",
+          "git_blob_sha": "4bde2363ca658155c77e5c821ef7a15a3bb60de8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "b52cbe4aec2d6558a6c0af77fdc533b6c0292d8e3c76fb4c8febe06b3de53263",
+          "git_blob_sha": "781b7c7f46df1747ba940c8347afb461e96d289c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/material-manifest.json",
+          "bytes": 7429,
+          "sha256": "94132bc579a3863bd43b1c96e893279922054b1677e7d7459a6f766ac4df1c50",
+          "git_blob_sha": "81914ddee921e829e75a57d91fe8a035fda5135c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/materials/detail_diffuse_128.png",
+          "bytes": 41213,
+          "sha256": "fc5c5b3abf856936243802d79a2b225ce50ca86e255b615d7a61aae719b0f034",
+          "git_blob_sha": "14d6366e1a060c8b4d2e46a75130cdca44498b0c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/materials/detail_diffuse_256.png",
+          "bytes": 157229,
+          "sha256": "529a8f19bd223e93527250928e65a7ce51267f5ef3f589087cadf88c74d605e4",
+          "git_blob_sha": "407a82c8878e8bd8714c682f40e2b18050889142"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/materials/ground_diffuse_128.png",
+          "bytes": 36068,
+          "sha256": "f6e05ccc336bc4b2100fadf901bda57ea7ee60397d0c572034cb291cc05ed95a",
+          "git_blob_sha": "73fc1d921ac0de91e0a3f2b27c569f1072b84a2d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/materials/ground_diffuse_256.png",
+          "bytes": 137921,
+          "sha256": "0374bb28cb775d4fccc7a35d3f5a991cc88d156f519c15bfa53e3b5da1afe600",
+          "git_blob_sha": "fc86b40d5aac18f84b43f99c2215f8640f9b7504"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/materials/structure_diffuse_128.png",
+          "bytes": 43464,
+          "sha256": "0c9d79f7abad9844bd2d1616af4ea6d5dec659d8503ac047e218e1e4a909c20c",
+          "git_blob_sha": "3bff308399d489216dd108e7c4cdada34b4c6d81"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/materials/structure_diffuse_256.png",
+          "bytes": 168313,
+          "sha256": "536612f4789bb0aac48b6b164f38664e8d3e4fed7db00b77b0ddde99b58aa169",
+          "git_blob_sha": "3a46d83a820bdb1339d5e3eedda94ff351209ca2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/materials/wall_diffuse_128.png",
+          "bytes": 32924,
+          "sha256": "387a316648df1982a032b3f086ecba3c0caadf330f3e645ea28ab262696379c7",
+          "git_blob_sha": "b788aabad82b916b6afcc8fbf972c6ce294adebc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/materials/wall_diffuse_256.png",
+          "bytes": 127441,
+          "sha256": "da005be92fcd85e79f30483cc121c1b70eb4946257a817a92c27f0dc1f177e1c",
+          "git_blob_sha": "4bb4d5e88886739e5bea422f671903420fb0ac81"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/prompts/material_atlas_v1.txt",
+          "bytes": 2451,
+          "sha256": "72c2fa0175867beb90f67643a8bc068f36c75c712a36eabee0397de268972dee",
+          "git_blob_sha": "68242d719a837ea77781f964dcad947ccd0ea86a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/perfected-metal-sanctuary/theme-manifest.json",
+          "bytes": 7116,
+          "sha256": "d29b9a122eeabf59dbe77ffb50bf9088954473c6f7acaba72fe4d43feae86e57",
+          "git_blob_sha": "c0fc2c9e9a562bd80c7f26d8a5339945e94a04a2"
+        }
+      ]
+    }
+  ]
+}

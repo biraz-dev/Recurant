@@ -1,0 +1,20 @@
+{
+  "asset": "dead_branch_tree",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        1.851269,
+        0.0
+      ],
+      "size": [
+        2.240038,
+        3.722514,
+        0.389971
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/dead_branch_tree__GUIDE.glb"
+}

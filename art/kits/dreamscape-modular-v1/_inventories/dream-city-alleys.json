@@ -1,0 +1,150 @@
+{
+  "id": "dream-city-alleys",
+  "title": "Dream City Alleys",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "dream-city-alleys-001",
+      "bytes": 1718261,
+      "sha256": "07664bd99da95ede8d136dac05e0cbdd4b7ed7957889482bbf7349e25e72b99a",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/dream-city-alleys.volume-001.zip",
+          "bytes": 1718261,
+          "sha256": "07664bd99da95ede8d136dac05e0cbdd4b7ed7957889482bbf7349e25e72b99a",
+          "git_blob_sha": "53cce04d13a4e159c7cb6c384cac59ec40bb475a"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/CLAUDE_README.md",
+          "bytes": 7725,
+          "sha256": "037f5e842b60d4b02b3fd7728f8110125ccebba55e43f3e8f7f3bc8407d675db",
+          "git_blob_sha": "a25ca40830a015d113e667a491cabc8d87f34667"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "f6da2eab1f677a70872d6e896dafe2cb87f92f0fdf4b0a299a345a2fe73138ff",
+          "git_blob_sha": "ccd5cb8791c845ea1bf895278d38787ff8e703e2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/assembly/collision-navigation.json",
+          "bytes": 10406,
+          "sha256": "bd30bb30f16011f03d6a067452c5f987398b59034198e4f1526c7c0f4a922025",
+          "git_blob_sha": "83b924be8182c2054895035866397ef10cf0d97d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/assembly/layout.json",
+          "bytes": 13624,
+          "sha256": "a083a21b96755432664728a780a7abe3b5516317e611f7a9e5bd2333a054f25c",
+          "git_blob_sha": "c5bf5c1f9cda1221e135025c9c7ebea2a9b2dcec"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/assembly/native_320x240.png",
+          "bytes": 146219,
+          "sha256": "5cbc35a911a056f876e77ad9f47eadeaa1d6e70faaeb93fbe785880e400c4302",
+          "git_blob_sha": "2ad2e889a700b0ddeade176166cd7e323de062f3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/assembly/showcase.glb",
+          "bytes": 885204,
+          "sha256": "618f2937bbfbd8a2e8d7b6715b577390fd3d76709049a9227f7ecaafcd335f13",
+          "git_blob_sha": "af7fc344852a59b8c20b2f58445c88d324446b3e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/concept/reference_native_320x240.png",
+          "bytes": 170196,
+          "sha256": "c99a19d2075ad6f0f45e5336e0a7d3456b62064656a6120683ea768e0a91ab1c",
+          "git_blob_sha": "a9148b167717afe700163f3b4e1c03ef2c201b72"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "fd5cf8f7f78460a3f4ae2d48c3187109b5a1d77a13f41a5a68c0748e915c9daa",
+          "git_blob_sha": "4f340f7ad799eb47637d4e15a99d2966de1768f6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/material-manifest.json",
+          "bytes": 7409,
+          "sha256": "747b4f736957eb3609ba5cbb9c7b1952531c5448e6cbe44402e3bbab0fcfd915",
+          "git_blob_sha": "6561cc7f1ffb163d3bba78f347fc6b02b937e341"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/materials/detail_diffuse_128.png",
+          "bytes": 39355,
+          "sha256": "ca26b52526f46eb133e4b59edbf8cb806620bb4ae48c9021965dc0f905d8beea",
+          "git_blob_sha": "3a229f7eedd7013806a29c3bfb6eed72b3d1f50b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/materials/detail_diffuse_256.png",
+          "bytes": 143920,
+          "sha256": "65d5b3beee92943e869f83ed4c76b70888f6cf12fa247616b3a2c5440bf662b3",
+          "git_blob_sha": "a25d87929568225d992482d69eb71501211394d9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/materials/ground_diffuse_128.png",
+          "bytes": 39867,
+          "sha256": "162cb9868cd8178146d6d8986486da029e62df5d6daa9e8d202c0d6349e46a19",
+          "git_blob_sha": "f8e5f20d66974cfa830f0107a9c91fa7bf6bcf14"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/materials/ground_diffuse_256.png",
+          "bytes": 153554,
+          "sha256": "95868d0d050582b8766e698487296252a654192ee3be79b000c99e13b1da5412",
+          "git_blob_sha": "84886ac4ccd5b48c3065199e77a614f98886c582"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/materials/structure_diffuse_128.png",
+          "bytes": 37727,
+          "sha256": "a6d9c1dbe22917f3d9eb4637a59276700026a7060919905fbad16fb9570cebb0",
+          "git_blob_sha": "c827b031fa1a484b5f5dec1951156a3c15bb8350"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/materials/structure_diffuse_256.png",
+          "bytes": 138247,
+          "sha256": "5e89616058257f970049a77e54c2a1fe9e7caa2cf2ecf8cb153281bc17929bfd",
+          "git_blob_sha": "e4ea877b69317d48a9214a0efbd364ba90b6c63e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/materials/wall_diffuse_128.png",
+          "bytes": 39439,
+          "sha256": "2f917d6a10387fe1d891983a5b1a8f046bbc529f176750e4b22157222ac08b52",
+          "git_blob_sha": "3db28bd2efc98f702e64970fef89dfc4d43531ac"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/materials/wall_diffuse_256.png",
+          "bytes": 152650,
+          "sha256": "1bff9a3776cde40d19ada601c1f1b7ca98b9ff7cde4caae0dc83e8f79cb5ba25",
+          "git_blob_sha": "b69861dc9da95f06ba514130eacae95629b7f7d2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/prompts/material-atlas.txt",
+          "bytes": 2369,
+          "sha256": "bc4e7e6da0e8cdcc656e1a41857e82160a37153c99c868a7fd12ee4c872f5b60",
+          "git_blob_sha": "22e7562f4aea03c0aff2c8cdfe56ad6c671c7147"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/prompts/seam-repair.txt",
+          "bytes": 1698,
+          "sha256": "052391ff81978abf5220289090bded2470b343bd714ea1bd6f2f38c6e96b17a2",
+          "git_blob_sha": "a46d14d754fb826d87648efc3b4dd1b6b9f48066"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dream-city-alleys/theme-manifest.json",
+          "bytes": 7082,
+          "sha256": "c7c436d07485677ce05ac36d9cda51607ed016ebd980c0397bc8ddb0de31f468",
+          "git_blob_sha": "2ea3b8294dbaa08861280998894febc201357cc0"
+        }
+      ]
+    }
+  ]
+}

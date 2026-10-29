@@ -1,0 +1,20 @@
+{
+  "asset": "crag_cluster",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.1,
+        0.642089,
+        -0.0
+      ],
+      "size": [
+        1.44,
+        1.315822,
+        0.726924
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/crag_cluster__GUIDE.glb"
+}

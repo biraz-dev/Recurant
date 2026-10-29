@@ -1,0 +1,44 @@
+{
+  "asset": "channel_crossing_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0,
+        -0.1,
+        0
+      ],
+      "size": [
+        2,
+        0.2,
+        1.5
+      ]
+    },
+    {
+      "center": [
+        0,
+        0.35,
+        -0.7
+      ],
+      "size": [
+        2,
+        0.7,
+        0.12
+      ]
+    },
+    {
+      "center": [
+        0,
+        0.35,
+        0.7
+      ],
+      "size": [
+        2,
+        0.7,
+        0.12
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/channel_crossing_2m__GUIDE.glb"
+}

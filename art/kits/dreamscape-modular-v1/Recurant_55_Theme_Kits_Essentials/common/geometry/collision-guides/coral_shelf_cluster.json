@@ -1,0 +1,20 @@
+{
+  "asset": "coral_shelf_cluster",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.22911,
+        0.37375,
+        0.124336
+      ],
+      "size": [
+        1.544258,
+        0.7475,
+        1.125837
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/coral_shelf_cluster__GUIDE.glb"
+}

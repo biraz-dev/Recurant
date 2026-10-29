@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "smith-workshop",
+  "title": "Smith Workshop",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/smith-workshop/materials/wall_diffuse_256.png",
+      "low_memory_basecolor": "themes/smith-workshop/materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "warm honey limestone blocks with natural gentle mottling"
+    },
+    "ground": {
+      "basecolor": "themes/smith-workshop/materials/ground_diffuse_256.png",
+      "low_memory_basecolor": "themes/smith-workshop/materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "worn warm slate flagstones with pale fine mortar"
+    },
+    "structure": {
+      "basecolor": "themes/smith-workshop/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/smith-workshop/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "old oak workbench timber with careful warm grain and restrained tool wear"
+    },
+    "detail": {
+      "basecolor": "themes/smith-workshop/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/smith-workshop/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "flat dark forged iron plate with small brass rivets and subtle hammer marks"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_pavers_2m",
+      "role": "walkable_floor",
+      "notes": "Pavers 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "timber_wall_plaster",
+      "role": "structure",
+      "notes": "2 m bay timber plaster wall with real structural posts."
+    },
+    {
+      "module_id": "timber_post_beam_gate",
+      "role": "structure",
+      "notes": "Open post-and-beam portal with 1.52 m clear lane."
+    },
+    {
+      "module_id": "smith_anvil",
+      "role": "distinctive_prop",
+      "notes": "Anvil with horn, stepped heel and solid stand."
+    },
+    {
+      "module_id": "forge_hearth",
+      "role": "distinctive_prop",
+      "notes": "Open-front forge hearth with hood and chimney; fire is a separate material/effect."
+    },
+    {
+      "module_id": "inn_table",
+      "role": "distinctive_prop",
+      "notes": "Rectangular inn table with four legs."
+    },
+    {
+      "module_id": "barrel",
+      "role": "distinctive_prop",
+      "notes": "Faceted barrel with two raised metal hoops."
+    },
+    {
+      "module_id": "crate",
+      "role": "distinctive_prop",
+      "notes": "Braced wooden crate with diagonal front reinforcement."
+    },
+    {
+      "module_id": "foundry_crucible",
+      "role": "distinctive_prop",
+      "notes": "Faceted crucible silhouette; filled top surface, not a physics container."
+    },
+    {
+      "module_id": "shelf_bookcase",
+      "role": "distinctive_prop",
+      "notes": "Solid-backed three-shelf cabinet; fill with separately instanced props."
+    },
+    {
+      "module_id": "lantern_box",
+      "role": "distinctive_prop",
+      "notes": "Box lantern with capped roof and hanging spindle; use separate emissive adapter."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/smith-workshop/assembly/layout.json",
+    "glb": "themes/smith-workshop/assembly/showcase.glb",
+    "preview": "themes/smith-workshop/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 7790,
+      "triangles": 3952,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "3d3cd8ee10a758883f0b4e613d0f0470352b7b7b6922152eab6c14465012a235",
+        "showcase.glb": "c8d6bd437be8df05d365849e71fe9cd8e7408cb51b7e042152d814cd73894c65"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "94c7f12c1b28c150cd926e3fd11e33b48eb051eae1dee05017ba2096ac8b9a0a"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/smith-workshop/material-manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

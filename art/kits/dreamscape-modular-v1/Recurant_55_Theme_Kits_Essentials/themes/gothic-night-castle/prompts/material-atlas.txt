@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: PRODUCTION GAME MATERIAL DIFFUSE TEXTURE ATLAS. Not a scene, not concept art.
+Make one exactly square atlas divided at its exact horizontal and vertical midpoint into FOUR independent equal square swatches. Top left WALL, top right GROUND, bottom left STRUCTURE, bottom right DETAIL. These are position instructions, NOT labels: draw absolutely NO text. All four swatches touch edge to edge, no gaps, margins, shadows, separators, captions, presentation borders or frames. Each swatch entirely fills its quadrant.
+All four images are entirely flat orthographic surface color viewed perpendicular to surface. No objects, no environment, no room, no perspective, no vanishing point, no scene lighting, no sky, no horizon, no cast shadows, no glossy reflections. Uniform neutral diffuse illumination; minute painted surface recess shading is fine.
+Style: elegant refined painterly pixel art for a dreamlike 1990s-style fantasy dungeon game, with dense intentional pixel clusters and authentic handpainted tactile surfaces. General craftsmanship reminiscent of Lands of Lore, but original design, never copied. Pixel clustered detail, not photoreal, not blurry, not smooth vector.
+
+Theme: gothic vampire castle.
+Palette: cold blue-gray marble, deep crimson, antique gold, pewter.
+TOP LEFT: elegant cold blue-gray limestone ashlar, subtle fine veins and refined wear, regular rectangular masonry. Tileable repeat in both axes, matching edges and aligned course heights.
+TOP RIGHT: pale blue-gray marble tiled floor with narrow charcoal borders in an orthogonal grid, no reflections. Tileable repeat in both axes, matching edges and exact grid alignment. Render from directly overhead, not angled.
+BOTTOM LEFT: carved gray stone with repeating fine gothic foliate ornament, shallow relief on flat square surface. This square will be wrapped 0–1 onto structural mesh elements; no object silhouette.
+BOTTOM RIGHT: flat deep crimson damask textile with antique gold ornamental pomegranate-and-thorn brocade, no curtain folds. Nonrepeating detail panel, square edge-to-edge material, no outer frame unless intrinsic to textile design.
+Hard constraints: four distinct useful material swatches, perfectly square exact quadrants. No scenery, no floating props, no text, no lighting gradients, no dramatic shadows.
+Important functional tiling constraint for top-right ground: exactly 4 x 4 complete square tiles, quadrant boundaries along mortar joint centerlines. Never clip a partial row or tile. Top-left wall: exactly SIX complete uniform-height masonry courses; top and bottom boundaries along mortar centers; no partial course. Opposite edges equal overall color and course alignment. No outer border distinct from normal mortar.

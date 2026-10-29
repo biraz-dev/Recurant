@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "theme": "crescent-iron-warship",
+  "atlas_source": "art_sources/material_atlas_v1.png",
+  "atlas_source_dimensions": [
+    1254,
+    1254
+  ],
+  "full_prompt": "prompts/material_atlas_v1.txt",
+  "generator": "built-in image_gen",
+  "input_reference": "Original biome concept inspected visually; not used as image-edit input",
+  "processing": "Exact atlas quadrant crop or selected full-frame built-in imagegen repeat edit, followed by nearest-neighbor resizing to256 and128. No programmatic seam blend, edge copying or PBR map invention.",
+  "palette": "near-black steel, graphite, desaturated blue-gray and very restrained deep red",
+  "materials": [
+    {
+      "id": "crescent-iron-warship__wall",
+      "role": "wall",
+      "description": "monolithic layered black metal panels with fine angular incisions",
+      "base_color_texture": "materials/wall_diffuse_256.png",
+      "low_res_texture": "materials/wall_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_practical_repeat",
+      "recommended_wrap": "REPEAT",
+      "nominal_meters_per_repeat": 2,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/wall_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 1.53,
+          "top_bottom": 12.94
+        },
+        "interior_adjacent_MAE_rgb255": 15.05,
+        "status": "visually_reviewed_practical_repeat_minor_seams",
+        "visual_review": "Targeted built-in image edit improves angular-panel periodicity. Geometric joints still reveal the repeat rhythm.",
+        "review_scale": "256px native, 512px 2x2 composite"
+      },
+      "source_crop_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sha256": "1328403846095cbbbfce46b6c9d2ec66e9231170a6a7b97263598ea2e5fa3cfe",
+      "selected_source": "art_sources/wall_repeat_fix_v2.png",
+      "selected_prompt": "prompts/wall_repeat_fix_v2.txt",
+      "revision": "v2_builtin_imagegen_targeted_repeat_edit",
+      "previous_native": "art_sources/wall_diffuse_v1_256.png"
+    },
+    {
+      "id": "crescent-iron-warship__ground",
+      "role": "ground",
+      "description": "worn dark graphite metal slabs with narrow straight dark joins",
+      "base_color_texture": "materials/ground_diffuse_256.png",
+      "low_res_texture": "materials/ground_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_practical_repeat",
+      "recommended_wrap": "REPEAT",
+      "nominal_meters_per_repeat": 2,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/ground_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 45.77,
+          "top_bottom": 16.78
+        },
+        "interior_adjacent_MAE_rgb255": 15.23,
+        "status": "visually_reviewed_practical_repeat_minor_seams",
+        "visual_review": "Graphite deck courses repeat coherently; occasional grain changes at boundaries.",
+        "review_scale": "256px native, 512px 2x2 composite"
+      },
+      "source_crop_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "45d54c2e221733a7278d492043b2949725a7260a8442e4c2563cebe3ecbb8fcb",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "crescent-iron-warship__structure",
+      "role": "structure",
+      "description": "forged black steel with sweeping pale graphite stress grain, no organic shapes",
+      "base_color_texture": "materials/structure_diffuse_256.png",
+      "low_res_texture": "materials/structure_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/structure_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 18.38,
+          "top_bottom": 26.12
+        },
+        "interior_adjacent_MAE_rgb255": 16.8,
+        "status": "nonrepeat_by_design",
+        "visual_review": "Nonrepeat face-on panel: clamp UVs 0-1 or crop within module; not intended as a seamless surface."
+      },
+      "source_crop_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "be6d637287f4f618d17a82aacdadc4eb2050c625c600092fdd272462b9857d4c",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "crescent-iron-warship__detail",
+      "role": "detail",
+      "description": "flat menacing black machine panel with minimal narrow deep-red recessed channels and sharp triangular subdivisions, original no insignia",
+      "base_color_texture": "materials/detail_diffuse_256.png",
+      "low_res_texture": "materials/detail_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/detail_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 3.9,
+          "top_bottom": 20.37
+        },
+        "interior_adjacent_MAE_rgb255": 8.86,
+        "status": "nonrepeat_by_design",
+        "visual_review": "Nonrepeat face-on panel: clamp UVs 0-1 or crop within module; not intended as a seamless surface."
+      },
+      "source_crop_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "3a1109fc702020fc6e542a455d0560dde7be953001ce88cad3af0acd4008d099",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    }
+  ],
+  "qa_contact": "qa/material_contact_sheet.png",
+  "readme": "MATERIAL_NOTES.md",
+  "qa_visual_summary": "Four distinct face-on opaque diffuse surfaces inspected. No scene or text. All wall/ground 2x2 repeats visually reviewed and practical at native size with minor retained discontinuities; no mathematical seamlessness certification. Structure/detail are explicitly nonrepeat.",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

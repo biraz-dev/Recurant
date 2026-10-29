@@ -1,0 +1,156 @@
+{
+  "id": "crescent-iron-warship",
+  "title": "Crescent Iron Warship",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 22,
+  "archives": [
+    {
+      "id": "crescent-iron-warship-001",
+      "bytes": 1616898,
+      "sha256": "77cbc400b7467418000a8b8bb4b33b92e63173659abc934d21fd58c8f50cad94",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/crescent-iron-warship.volume-001.zip",
+          "bytes": 1616898,
+          "sha256": "77cbc400b7467418000a8b8bb4b33b92e63173659abc934d21fd58c8f50cad94",
+          "git_blob_sha": "841003bdb142bf367a9887d2c4d63647df3be512"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/CLAUDE_README.md",
+          "bytes": 7317,
+          "sha256": "390e4eea5f193cb24a3091e4b9a8f570284d6813a742c540ff5283b245a3d36f",
+          "git_blob_sha": "b85ab1aa50b1364b090d1389edc11f5c4e372fcb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/MATERIAL_NOTES.md",
+          "bytes": 2847,
+          "sha256": "0f96cf0248d55a56867762454dbe425ec23fc14ea6770604b5c21705b842024c",
+          "git_blob_sha": "06464cf877c88925b19c8a561ccf08f29a7cbe06"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "67771140afe1543b3dcd37da1e5aa90d4e30dfca17739beff52b744935969049",
+          "git_blob_sha": "65e0f0a16b3509d339f24bbae41790e51763b8ff"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/assembly/collision-navigation.json",
+          "bytes": 13855,
+          "sha256": "428b8db3a57200f20d56710f84b83227aba90376b02d491dfea1e9341fa256da",
+          "git_blob_sha": "dd9ea227854b4afe267442316187b591706c4d45"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/assembly/layout.json",
+          "bytes": 18698,
+          "sha256": "0fbfbb39c02baa77d5c3d5ef9dc7576552862ada5b16a678d3646d7c7bde7345",
+          "git_blob_sha": "bdc37a6f8b075aa57ece51ed57feb4efa3081d52"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/assembly/native_320x240.png",
+          "bytes": 127115,
+          "sha256": "aab8bbe7b4e21a550d5d8f40b714db0aef9bad372ba8826f65b55210196e8552",
+          "git_blob_sha": "7dafd874601ec7889e8676a8baac196dad141a22"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/assembly/showcase.glb",
+          "bytes": 913996,
+          "sha256": "cb231e27a16a6da03e65bc3fccf15b2598e162afda7676a12e8990da09a962f5",
+          "git_blob_sha": "775bb3fdd4486df150ba9911d5f7bcb0f660b59d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/concept/reference_native_320x240.png",
+          "bytes": 136712,
+          "sha256": "3c41d90f9568ef6f827f3ef6d6e1df5301216e1258660cbd9f312463fa0a3f8a",
+          "git_blob_sha": "e61b5d4ab5ac192da4d110e19c30b59fce8ee5c8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "da42dcf2eabaed82a81724b4d54e95e68552b9e25bbaf83832a462a3a645edd4",
+          "git_blob_sha": "b19308a84d1c427b9fa1a993db6fb69ef6e34810"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/material-manifest.json",
+          "bytes": 7504,
+          "sha256": "444b04560268cdd7d2510bc398173d5340103bffa828aa65fa3627eba4e49994",
+          "git_blob_sha": "83c6ce70f432bd5ba97ff165e337ad066a2cbd27"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/materials/detail_diffuse_128.png",
+          "bytes": 32266,
+          "sha256": "b37faf0b606931a5d7f804b44da516c60205eb00fc0e802e70f300775d9384d1",
+          "git_blob_sha": "381ade466ac7c9cccee7cb3a84a6a18a138a2058"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/materials/detail_diffuse_256.png",
+          "bytes": 122445,
+          "sha256": "3a1109fc702020fc6e542a455d0560dde7be953001ce88cad3af0acd4008d099",
+          "git_blob_sha": "c5fc6f58585885a9f6ea0ad22c4d02805c5f012a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/materials/ground_diffuse_128.png",
+          "bytes": 38703,
+          "sha256": "17b23bcbd0cb22509383f12146b3b17ef9e7c6e3434c821bb8dd94023a194427",
+          "git_blob_sha": "07615e92ff365c004ed805162366c9241c35e0d4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/materials/ground_diffuse_256.png",
+          "bytes": 149763,
+          "sha256": "45d54c2e221733a7278d492043b2949725a7260a8442e4c2563cebe3ecbb8fcb",
+          "git_blob_sha": "23ed3f54ba6e5c0259d7e31956665f9baa7d8c1f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/materials/structure_diffuse_128.png",
+          "bytes": 40099,
+          "sha256": "a9b3e5fdd0d47227229df9afa73bb59cada70991c6a186aad9c3c5359f2803d9",
+          "git_blob_sha": "6d3b72215f3058148903a3b7445e55c8d4c8a8c9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/materials/structure_diffuse_256.png",
+          "bytes": 155682,
+          "sha256": "be6d637287f4f618d17a82aacdadc4eb2050c625c600092fdd272462b9857d4c",
+          "git_blob_sha": "6e4f3b1ea8fdb26c492b1bb154aa4c38ff90211a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/materials/wall_diffuse_128.png",
+          "bytes": 36069,
+          "sha256": "198ec8fd6cd394c6b0a74f6911a352be766248520cad307d98f4c91ca50af075",
+          "git_blob_sha": "7fffe262d5ac9586b94d8465d6819dc27b616e8a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/materials/wall_diffuse_256.png",
+          "bytes": 135960,
+          "sha256": "1328403846095cbbbfce46b6c9d2ec66e9231170a6a7b97263598ea2e5fa3cfe",
+          "git_blob_sha": "127b8cd179ae3bcfb49f89981183f7000df406aa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/prompts/material_atlas_v1.txt",
+          "bytes": 2476,
+          "sha256": "37396de9846746f466c0ae672bb3f73346388eb04cc85851381b050602b671a4",
+          "git_blob_sha": "dbccaa458b07537f5fd5b75bba31d6d748a9fecb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/prompts/wall_repeat_fix_v2.txt",
+          "bytes": 1134,
+          "sha256": "b8eb0dd667f1879bbf139c4b0ee29ab056b4ea125f38f580bb23eac1e2bc8b0d",
+          "git_blob_sha": "8ccc5326c7e06f3c682693e66b6fe300d02a1bfa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crescent-iron-warship/theme-manifest.json",
+          "bytes": 7193,
+          "sha256": "03e41cbd47c2cca96cb306278ec6d7435def967c9f0e84bcbbd27ebb26d2a798",
+          "git_blob_sha": "33d991fbc35b4f6e9f0ecd087fe7ee4edf388409"
+        }
+      ]
+    }
+  ]
+}

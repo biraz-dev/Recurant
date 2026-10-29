@@ -1,0 +1,317 @@
+{
+  "schema": "recurant.material-kit.v1",
+  "theme": "colossal-canopy",
+  "source": "art_sources/material_atlas_source.png",
+  "generation_tool": "built-in image_gen",
+  "status": "Production diffuse textures delivered and raster-reviewed; final in-engine acceptance remains.",
+  "layout": "2x2 quadrant atlas, wall top-left, ground top-right, structure bottom-left, detail bottom-right",
+  "materials": [
+    {
+      "slot": "wall",
+      "name": "Massive ancient sequoia bark with deep umber furrows and jade moss",
+      "intended_surface": "Massive ancient sequoia bark with deep umber furrows and jade moss",
+      "files": {
+        "256": "materials/wall_diffuse_256.png",
+        "128": "materials/wall_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "bounded_span_original_not_seamless",
+      "qa": {
+        "source_crop_px": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 19.398,
+          "vertical": 16.68
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 23.024,
+          "vertical": 16.158
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "repeat_alternative": {
+        "name": "Fine vertical copper-brown bark scales, very small jade moss flecks, no large branch forms",
+        "files": {
+          "256": "materials/wall_repeat_diffuse_256.png",
+          "128": "materials/wall_repeat_diffuse_128.png"
+        },
+        "colorspace": "sRGB",
+        "semantic": "diffuse color; not physically calibrated albedo",
+        "actual_size_px": [
+          256,
+          256
+        ],
+        "alpha": false,
+        "repeat_classification": "visually_usable_repeat_not_mathematically_certified",
+        "source": "art_sources/repeat_alternatives_pair_source.png",
+        "source_quadrant_px": [
+          0,
+          627,
+          627,
+          1254
+        ],
+        "processing": "Imagegen targeted quieter-motif correction; quadrant nearest-resampled to320 square, crop-only edge-similarity selection, nearest-resampled to256 and128. No pixel blending, painting, mirroring or synthetic map derivation.",
+        "crop_in_320_intermediate_px": [
+          0,
+          0,
+          320,
+          320
+        ],
+        "qa": {
+          "before_crop_metrics": {
+            "edge_horizontal": 25.503,
+            "edge_vertical": 27.447,
+            "internal_horizontal": 30.678,
+            "internal_vertical": 18.802,
+            "edge_to_internal_ratio_horizontal": 0.831,
+            "edge_to_internal_ratio_vertical": 1.46
+          },
+          "after_crop_metrics": {
+            "edge_horizontal": 40.24,
+            "edge_vertical": 22.553,
+            "internal_horizontal": 29.921,
+            "internal_vertical": 18.316,
+            "edge_to_internal_ratio_horizontal": 1.345,
+            "edge_to_internal_ratio_vertical": 1.231
+          },
+          "repeat_preview": "qa/repeat_alternatives_2x2.png",
+          "visual_review": "Visually inspected actual256-pixel texture repeated2x2. No dominant hard boundary or tonal step; painterly material identity retained. Fine motif discontinuities can remain, especially close-up. Use alternative on repeated wall/ground spans; keep original for architectural or landmark detail.",
+          "mathematically_seamless_certified": false,
+          "limits": "Crop can lower boundary color mismatch, but does not prove motif continuity or equal boundary pixels. In-engine distance, UV and lighting acceptance required."
+        }
+      },
+      "preferred_files": {
+        "256": "materials/wall_repeat_diffuse_256.png",
+        "128": "materials/wall_repeat_diffuse_128.png"
+      },
+      "preferred_usage": "Use repeat alternative on broad repeating surfaces; use original files on bounded slabs/bays for richer macro detail."
+    },
+    {
+      "slot": "ground",
+      "name": "Warm rose-ochre ancient path slabs with delicate grass-filled joints",
+      "intended_surface": "Warm rose-ochre ancient path slabs with delicate grass-filled joints",
+      "files": {
+        "256": "materials/ground_diffuse_256.png",
+        "128": "materials/ground_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "bounded_span_original_not_seamless",
+      "qa": {
+        "source_crop_px": [
+          627,
+          0,
+          1254,
+          627
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 18.641,
+          "vertical": 26.491
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 20.405,
+          "vertical": 21.232
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "repeat_alternative": {
+        "name": "Rose-ochre weathered stone grit with sparse short jade moss fibers, no large path slabs",
+        "files": {
+          "256": "materials/ground_repeat_diffuse_256.png",
+          "128": "materials/ground_repeat_diffuse_128.png"
+        },
+        "colorspace": "sRGB",
+        "semantic": "diffuse color; not physically calibrated albedo",
+        "actual_size_px": [
+          256,
+          256
+        ],
+        "alpha": false,
+        "repeat_classification": "visually_usable_repeat_not_mathematically_certified",
+        "source": "art_sources/repeat_alternatives_pair_source.png",
+        "source_quadrant_px": [
+          627,
+          627,
+          1254,
+          1254
+        ],
+        "processing": "Imagegen targeted quieter-motif correction; quadrant nearest-resampled to320 square, crop-only edge-similarity selection, nearest-resampled to256 and128. No pixel blending, painting, mirroring or synthetic map derivation.",
+        "crop_in_320_intermediate_px": [
+          0,
+          0,
+          320,
+          320
+        ],
+        "qa": {
+          "before_crop_metrics": {
+            "edge_horizontal": 43.115,
+            "edge_vertical": 40.896,
+            "internal_horizontal": 33.371,
+            "internal_vertical": 33.214,
+            "edge_to_internal_ratio_horizontal": 1.292,
+            "edge_to_internal_ratio_vertical": 1.231
+          },
+          "after_crop_metrics": {
+            "edge_horizontal": 32.117,
+            "edge_vertical": 32.656,
+            "internal_horizontal": 32.144,
+            "internal_vertical": 32.296,
+            "edge_to_internal_ratio_horizontal": 0.999,
+            "edge_to_internal_ratio_vertical": 1.011
+          },
+          "repeat_preview": "qa/repeat_alternatives_2x2.png",
+          "visual_review": "Visually inspected actual256-pixel texture repeated2x2. No dominant hard boundary or tonal step; painterly material identity retained. Fine motif discontinuities can remain, especially close-up. Use alternative on repeated wall/ground spans; keep original for architectural or landmark detail.",
+          "mathematically_seamless_certified": false,
+          "limits": "Crop can lower boundary color mismatch, but does not prove motif continuity or equal boundary pixels. In-engine distance, UV and lighting acceptance required."
+        }
+      },
+      "preferred_files": {
+        "256": "materials/ground_repeat_diffuse_256.png",
+        "128": "materials/ground_repeat_diffuse_128.png"
+      },
+      "preferred_usage": "Use repeat alternative on broad repeating surfaces; use original files on bounded slabs/bays for richer macro detail."
+    },
+    {
+      "slot": "structure",
+      "name": "Weathered mossy ochre masonry with restrained vine roots",
+      "intended_surface": "Weathered mossy ochre masonry with restrained vine roots",
+      "files": {
+        "256": "materials/structure_diffuse_256.png",
+        "128": "materials/structure_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "bounded_span_original_not_seamless",
+      "qa": {
+        "source_crop_px": [
+          0,
+          627,
+          627,
+          1254
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 23.594,
+          "vertical": 27.449
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 25.902,
+          "vertical": 26.635
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "preferred_usage": "Use on bounded structural/prop surfaces; clamp or align structural breaks instead of unrestricted repeat."
+    },
+    {
+      "slot": "detail",
+      "name": "Dense small-leaf emerald canopy and looping slender woody vines",
+      "intended_surface": "Dense small-leaf emerald canopy and looping slender woody vines",
+      "files": {
+        "256": "materials/detail_diffuse_256.png",
+        "128": "materials/detail_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "nonrepeat_detail",
+      "qa": {
+        "source_crop_px": [
+          627,
+          627,
+          1254,
+          1254
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 22.453,
+          "vertical": 18.268
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 19.702,
+          "vertical": 18.63
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "preferred_usage": "Use on bounded structural/prop surfaces; clamp or align structural breaks instead of unrestricted repeat."
+    }
+  ],
+  "import_recommendation": {
+    "filter": "nearest for pixel aesthetic; test trilinear on distant surfaces if shimmer occurs",
+    "wrap": "repeat for candidate structural textures only after seam acceptance; clamp for one-off detail patches",
+    "texture_resolution": "256 primary; 128 alternative",
+    "base_texel_density": "128 px/m at 2 m repeats for 256 textures"
+  },
+  "qa_notes": "All original 2x2 repeat sheets reviewed; original macro motifs are bounded-span materials with imperfect repeat continuity. Targeted imagegen edits supplied quieter wall/ground alternatives, then crop-only edge selection and nearest resize; all alternative 2x2 sheets reviewed as visually usable repeats. None is mathematically seamless-certified. No fake PBR maps.",
+  "raster_status": "FROZEN",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

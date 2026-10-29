@@ -1,0 +1,36 @@
+{
+  "id": "sandstone-ruins-existing",
+  "title": "Existing Sandstone Ruins",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 2,
+  "archives": [
+    {
+      "id": "sandstone-ruins-existing-001",
+      "bytes": 2240,
+      "sha256": "8cba2c89a769054a330b4032a155786ab5648607fffba0f89205b387d917c466",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/sandstone-ruins-existing.volume-001.zip",
+          "bytes": 2240,
+          "sha256": "8cba2c89a769054a330b4032a155786ab5648607fffba0f89205b387d917c466",
+          "git_blob_sha": "e3c5f03745115484d6cf33dc1028e44cc2219668"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sandstone-ruins-existing/REUSE_EXISTING.md",
+          "bytes": 2547,
+          "sha256": "d4120406081c818071e0fb15639f29ea4594990d79de5472355da9a7bb6b78ff",
+          "git_blob_sha": "e9fcd98874a1df850a16137af6585b8366e68567"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/sandstone-ruins-existing/reuse-manifest.json",
+          "bytes": 400,
+          "sha256": "840a5762bcdacff6b627baf3061a94b5cb1acd81a06fb5398817c48ed3fe3d49",
+          "git_blob_sha": "0dd33fb658fcf214428c16eff64d3398c226b8b8"
+        }
+      ]
+    }
+  ]
+}

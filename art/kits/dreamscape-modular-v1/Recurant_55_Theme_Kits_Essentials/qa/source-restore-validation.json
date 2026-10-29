@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "all_unique_source_blobs_hash_verified": true,
+  "onebit_actual_restore_verified": true,
+  "symlink_destination_rejected": true,
+  "source_alias_map": "Recurant_55_Theme_Kits_Source_Art/SOURCE_ALIAS_MAP.json"
+}

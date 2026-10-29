@@ -1,0 +1,630 @@
+{
+  "authority": "authoring guides only; zrpg_core::Map remains runtime authority",
+  "boxes": [
+    {
+      "instance_id": "i000",
+      "module_id": "floor_plain_2m",
+      "center": [
+        1.0,
+        -0.1,
+        1.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i001",
+      "module_id": "floor_plain_2m",
+      "center": [
+        3.0,
+        -0.1,
+        1.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i002",
+      "module_id": "floor_plain_2m",
+      "center": [
+        5.0,
+        -0.1,
+        1.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i003",
+      "module_id": "floor_plain_2m",
+      "center": [
+        1.0,
+        -0.1,
+        3.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i004",
+      "module_id": "floor_plain_2m",
+      "center": [
+        3.0,
+        -0.1,
+        3.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i005",
+      "module_id": "floor_plain_2m",
+      "center": [
+        5.0,
+        -0.1,
+        3.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i006",
+      "module_id": "floor_plain_2m",
+      "center": [
+        1.0,
+        -0.1,
+        5.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i007",
+      "module_id": "floor_plain_2m",
+      "center": [
+        3.0,
+        -0.1,
+        5.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i008",
+      "module_id": "floor_plain_2m",
+      "center": [
+        5.0,
+        -0.1,
+        5.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i009",
+      "module_id": "floor_plain_2m",
+      "center": [
+        1.0,
+        -0.1,
+        7.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i010",
+      "module_id": "floor_plain_2m",
+      "center": [
+        3.0,
+        -0.1,
+        7.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i011",
+      "module_id": "floor_plain_2m",
+      "center": [
+        5.0,
+        -0.1,
+        7.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i012",
+      "module_id": "floor_plain_2m",
+      "center": [
+        1.0,
+        -0.1,
+        9.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i013",
+      "module_id": "floor_plain_2m",
+      "center": [
+        3.0,
+        -0.1,
+        9.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i014",
+      "module_id": "floor_plain_2m",
+      "center": [
+        5.0,
+        -0.1,
+        9.0
+      ],
+      "size": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "role": "floor"
+    },
+    {
+      "instance_id": "i015",
+      "module_id": "colossal_trunk_quarter",
+      "center": [
+        1.251888,
+        2.977809,
+        12.790581
+      ],
+      "size": [
+        5.128318,
+        6.090413,
+        5.381161
+      ],
+      "role": "rear_boundary"
+    },
+    {
+      "instance_id": "i016",
+      "module_id": "colossal_trunk_quarter",
+      "center": [
+        3.251888,
+        2.977809,
+        12.790581
+      ],
+      "size": [
+        5.128318,
+        6.090413,
+        5.381161
+      ],
+      "role": "rear_boundary"
+    },
+    {
+      "instance_id": "i017",
+      "module_id": "colossal_trunk_quarter",
+      "center": [
+        5.251888,
+        2.977809,
+        12.790581
+      ],
+      "size": [
+        5.128318,
+        6.090413,
+        5.381161
+      ],
+      "role": "rear_boundary"
+    },
+    {
+      "instance_id": "i018",
+      "module_id": "root_arch_2m",
+      "center": [
+        2.1,
+        1.2,
+        8.0
+      ],
+      "size": [
+        0.35,
+        2.4,
+        0.4
+      ],
+      "role": "open_portal"
+    },
+    {
+      "instance_id": "i018",
+      "module_id": "root_arch_2m",
+      "center": [
+        3.9,
+        1.2,
+        8.0
+      ],
+      "size": [
+        0.35,
+        2.4,
+        0.4
+      ],
+      "role": "open_portal"
+    },
+    {
+      "instance_id": "i019",
+      "module_id": "colossal_trunk_quarter",
+      "center": [
+        1.0,
+        1.018623,
+        1.0
+      ],
+      "size": [
+        1.715424,
+        2.037245,
+        1.8
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i020",
+      "module_id": "tree_trunk",
+      "center": [
+        5.063541,
+        1.679621,
+        1.046166
+      ],
+      "size": [
+        2.122353,
+        3.359241,
+        2.184734
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i021",
+      "module_id": "fallen_log_2m",
+      "center": [
+        1.004245,
+        0.332714,
+        3.016858
+      ],
+      "size": [
+        1.808489,
+        0.665427,
+        0.909512
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i022",
+      "module_id": "broadleaf_clump",
+      "center": [
+        5.0,
+        0.325,
+        3.0
+      ],
+      "size": [
+        1.7,
+        0.65,
+        1.7
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i023",
+      "module_id": "fern_clump",
+      "center": [
+        1.0,
+        0.307609,
+        5.0
+      ],
+      "size": [
+        1.64,
+        0.615217,
+        1.453282
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i024",
+      "module_id": "root_corner_2m",
+      "center": [
+        5.012282,
+        0.258034,
+        5.043166
+      ],
+      "size": [
+        1.517988,
+        0.516068,
+        1.51508
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i025",
+      "module_id": "shelf_fungus",
+      "center": [
+        1.0,
+        0.395,
+        7.0
+      ],
+      "size": [
+        1.224745,
+        0.79,
+        1.224745
+      ],
+      "role": "blocked_cell_scenery"
+    },
+    {
+      "instance_id": "i026",
+      "module_id": "mushroom_tall",
+      "center": [
+        5.0,
+        1.023041,
+        7.0
+      ],
+      "size": [
+        1.711902,
+        2.046083,
+        1.8
+      ],
+      "role": "blocked_cell_scenery"
+    }
+  ],
+  "navigation": {
+    "cells": [
+      {
+        "cell": [
+          0,
+          0
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          0
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          0
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          1
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          1
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          1
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          2
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          2
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          2
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          3
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          3
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          3
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          4
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          4
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          4
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      }
+    ],
+    "edges": [
+      {
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          1,
+          1
+        ],
+        "bidirectional": true
+      },
+      {
+        "a": [
+          1,
+          1
+        ],
+        "b": [
+          1,
+          2
+        ],
+        "bidirectional": true
+      },
+      {
+        "a": [
+          1,
+          2
+        ],
+        "b": [
+          1,
+          3
+        ],
+        "bidirectional": true
+      },
+      {
+        "a": [
+          1,
+          3
+        ],
+        "b": [
+          1,
+          4
+        ],
+        "bidirectional": true
+      }
+    ],
+    "start_cell": [
+      1,
+      0
+    ],
+    "goal_cell": [
+      1,
+      4
+    ],
+    "missing_edges": "forbidden_between_declared_walkable_neighbours",
+    "diagonal": false
+  },
+  "travel_lane": {
+    "width_m": 1.2,
+    "headroom_m": 2.4,
+    "central_x_m": 3,
+    "z_range_m": [
+      0.2,
+      9.8
+    ]
+  },
+  "fluid_collision": "none; solid decks or beds separate"
+}

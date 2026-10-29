@@ -1,0 +1,13 @@
+Use case: stylized-concept
+Asset type: PRODUCTION GAME MATERIAL DIFFUSE TEXTURE ATLAS. Not a scene, not concept art.
+Make one exactly square atlas divided at its exact horizontal and vertical midpoint into FOUR independent equal square swatches. Top left WALL, top right GROUND, bottom left STRUCTURE, bottom right DETAIL. These are position instructions, NOT labels: draw absolutely NO text. All four swatches touch edge to edge, no gaps, margins, shadows, separators, captions, presentation borders or frames. Each swatch entirely fills its quadrant.
+All four images are entirely flat orthographic surface color viewed perpendicular to surface. No objects, no environment, no room, no perspective, no vanishing point, no scene lighting, no sky, no horizon, no cast shadows, no glossy reflections. Uniform neutral diffuse illumination; minute painted surface recess shading is fine.
+Style: elegant refined painterly pixel art for a dreamlike 1990s-style fantasy dungeon game, with dense intentional pixel clusters and authentic handpainted tactile surfaces. General craftsmanship reminiscent of Lands of Lore, but original design, never copied. Pixel clustered detail, not photoreal, not blurry, not smooth vector.
+
+Theme: dream city alleys.
+Palette: sunbleached peach, terracotta, warm sandstone, dusty teal.
+TOP LEFT: sunbleached peach and apricot lime plaster with irregular low-contrast faded patches, small areas of fine cracking. Tileable repeat in both axes, matching edges and aligned course heights.
+TOP RIGHT: warm buff and terra-cotta small cobblestone paving in orderly repeating rows, strictly top-down, no grass object. Tileable repeat in both axes, matching edges and exact grid alignment. Render from directly overhead, not angled.
+BOTTOM LEFT: weathered teal-painted timber narrow planks with pale exposed wood grain, flat diffuse. This square will be wrapped 0–1 onto structural mesh elements; no object silhouette.
+BOTTOM RIGHT: square ornamental glazed ceramic tile panel, original interlaced star-and-flower design in dusty teal mustard and coral, nonrepeating. Nonrepeating detail panel, square edge-to-edge material, no outer frame unless intrinsic to textile design.
+Hard constraints: four distinct useful material swatches, perfectly square exact quadrants. No scenery, no floating props, no text, no lighting gradients, no dramatic shadows.

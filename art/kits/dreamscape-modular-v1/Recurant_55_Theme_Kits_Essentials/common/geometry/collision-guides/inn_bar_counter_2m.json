@@ -1,0 +1,20 @@
+{
+  "asset": "inn_bar_counter_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.65,
+        0.0
+      ],
+      "size": [
+        2.1,
+        1.3,
+        0.85
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/inn_bar_counter_2m__GUIDE.glb"
+}

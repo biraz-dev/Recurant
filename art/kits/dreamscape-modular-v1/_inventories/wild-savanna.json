@@ -1,0 +1,156 @@
+{
+  "id": "wild-savanna",
+  "title": "Wild Savanna",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 22,
+  "archives": [
+    {
+      "id": "wild-savanna-001",
+      "bytes": 1716769,
+      "sha256": "e3064740e86b60479dafb2e597bcc5b899a68d12a4698fc33e6b62972c9e8de6",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/wild-savanna.volume-001.zip",
+          "bytes": 1716769,
+          "sha256": "e3064740e86b60479dafb2e597bcc5b899a68d12a4698fc33e6b62972c9e8de6",
+          "git_blob_sha": "ca82455426edf6dbcabe9a783b74085887879501"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/CLAUDE_README.md",
+          "bytes": 7280,
+          "sha256": "e755fdc9313aef8194a69799e9313d0e8a18078568b09a21d9cd69020feae6b6",
+          "git_blob_sha": "da2aef91c8dfa6012045d7583996841e08deba63"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/MATERIAL_NOTES.md",
+          "bytes": 4557,
+          "sha256": "66bcf1bdf5c9e5607d786821b9124c68b4306114d8bca740805b65a2505a86f5",
+          "git_blob_sha": "5f889acb4ec30e0827f17bc2573de0eda34cfbe6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "47c4ba768bf6763938ba899cfebde41943787d935b8f88048fdc79ce54209508",
+          "git_blob_sha": "5fc25ecd76b48cf5f217ddb2a98829d3329b982d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/assembly/collision-navigation.json",
+          "bytes": 9430,
+          "sha256": "6605e2c741c471651057a251ad6d1d6a44a5314423c403520aabfb5974a8fc73",
+          "git_blob_sha": "22bc6a70c271b47bb8a8a6c261388d83362925e8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/assembly/layout.json",
+          "bytes": 14881,
+          "sha256": "7adbbd445515bfce4e554a8b3a73f6de18ec0a87aeab4100bd9a34ec5a4cbaaf",
+          "git_blob_sha": "862cc7cd63ae145a954d812cb329097040b99b24"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/assembly/native_320x240.png",
+          "bytes": 144283,
+          "sha256": "5d2676ff095a28bcba271bf6eac45f851edf740ad89a506e15c05811ec7d5bd7",
+          "git_blob_sha": "b0138b4563c6b15d3cfe9c6f0ba7c01ecca17f6a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/assembly/showcase.glb",
+          "bytes": 736504,
+          "sha256": "589d2bd32929f4ccc4a6e47f60b03b824df5b284e56fbb8827b1677501c1adf5",
+          "git_blob_sha": "a79aae4960af55bfe9dd46c14d2a4b6e9590e028"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/concept/reference_native_320x240.png",
+          "bytes": 170012,
+          "sha256": "4752ec48c991b3b3e951b5128fe7bf5c15005d62d8960335441d77046ea8503f",
+          "git_blob_sha": "5d33440df9683d227a11ed59320179550912f291"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "d75d2d99c4a668d49a172286776b212faf810c5a4b57e54d96d7445f193ddd6b",
+          "git_blob_sha": "520afef86c2dd97b6f80635d35515b18128a1597"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/material-manifest.json",
+          "bytes": 7911,
+          "sha256": "3bd9ec9c4bb26c9847e1b4243daeefb10c0bd6e85103e303cbf01d823335f544",
+          "git_blob_sha": "def178bde05c3396c5aee7178608060ba9fcad2f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/materials/detail_diffuse_128.png",
+          "bytes": 37055,
+          "sha256": "b7a91949717e2a010760b3aa1047010acd13c8fa083e86f64528a45cebd59d09",
+          "git_blob_sha": "3d66f25f86a1d6c9bb0bbc5052f0454146be0d03"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/materials/detail_diffuse_256.png",
+          "bytes": 150040,
+          "sha256": "7879dfe9a89ade0cece1be62f5fc25145738c8e40227c16c1580df72eabba1b8",
+          "git_blob_sha": "4980c22c9139bf45e135e6fa4ed1149875196050"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/materials/ground_diffuse_128.png",
+          "bytes": 35827,
+          "sha256": "d21c986b71169c977b4f9d04ab741921352922638b161650b854a82d7a5f66cc",
+          "git_blob_sha": "df1eef372c9b3190bb7b2f2557ee9afe3c764800"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/materials/ground_diffuse_256.png",
+          "bytes": 144101,
+          "sha256": "2ea20c07f4dc91f00159740d41f7083c2a5e56c44b65d82aa0a3bcd5014ac1f1",
+          "git_blob_sha": "d8f2e2240a2609c8b1ccc035f00f39afb34d998c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/materials/structure_diffuse_128.png",
+          "bytes": 38458,
+          "sha256": "6f38766093b7b43f0b4cab2090bc4da024cafda5c5c1ac200c2d0561e745b269",
+          "git_blob_sha": "a097d2acd80e2059d053017be3997c2443eeb91f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/materials/structure_diffuse_256.png",
+          "bytes": 160604,
+          "sha256": "968c7d4b1fa41d826c221b8147bf69a58e60b2eed893f79d1cced3e638842114",
+          "git_blob_sha": "8ba07d9a1fcb94a67439b65047d22b95f3bc088f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/materials/wall_diffuse_128.png",
+          "bytes": 35325,
+          "sha256": "1ce98ae27c350d50638e3744aadad1057f0782685d085f8e9857d5f853556e94",
+          "git_blob_sha": "9cf5cfc743e0f5cf65d16eecf6cb64cb4def3fb7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/materials/wall_diffuse_256.png",
+          "bytes": 142482,
+          "sha256": "315e020ccbc89a2b56ff2619bba298c639d66e3edbd954bc898e81611a65b686",
+          "git_blob_sha": "b323e27e8ec3126fd129df8f7441c49c363811e5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/prompts/material_atlas_v1.txt",
+          "bytes": 1720,
+          "sha256": "fb64d66cbce146cb7dd7e99ee03b00be79dec774a5f3fa2e7ca001b7c84cca6d",
+          "git_blob_sha": "14b58956b455e3dddc9a5baa07a421cb8a18134c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/qa/material-qa.json",
+          "bytes": 2155,
+          "sha256": "fa74ae04e06a2789b94ae4e01e6a6c06cbdb73b45502ebf2826434cfa967e192",
+          "git_blob_sha": "aa2326733f6e35c983c0bb1a356b1fa08b1b5778"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/wild-savanna/theme-manifest.json",
+          "bytes": 6929,
+          "sha256": "3b4a66c19ab6a2c65a6565d8b122b65e5e3d3862b819aab57e725ad128ec9b29",
+          "git_blob_sha": "bc74af0abf5101ff994274714db9df2c107a3f39"
+        }
+      ]
+    }
+  ]
+}

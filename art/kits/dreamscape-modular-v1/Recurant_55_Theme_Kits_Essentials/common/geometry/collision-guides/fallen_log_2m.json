@@ -1,0 +1,20 @@
+{
+  "asset": "fallen_log_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.385524,
+        0.008443
+      ],
+      "size": [
+        2.0,
+        0.762539,
+        0.543114
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/fallen_log_2m__GUIDE.glb"
+}

@@ -1,0 +1,318 @@
+{
+  "schema": "recurant.material-kit.v1",
+  "theme": "eerie-frontier-wilderness",
+  "source": "art_sources/material_atlas_source.png",
+  "generation_tool": "built-in image_gen",
+  "status": "Production diffuse textures delivered and raster-reviewed; final in-engine acceptance remains.",
+  "layout": "2x2 quadrant atlas, wall top-left, ground top-right, structure bottom-left, detail bottom-right",
+  "materials": [
+    {
+      "slot": "wall",
+      "name": "Gnarled ancient bleached grey-brown tree bark with deep blue-grey fissures and ochre lichen",
+      "intended_surface": "Gnarled ancient bleached grey-brown tree bark with deep blue-grey fissures and ochre lichen",
+      "files": {
+        "256": "materials/wall_diffuse_256.png",
+        "128": "materials/wall_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "bounded_span_original_not_seamless",
+      "qa": {
+        "source_crop_px": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 38.206,
+          "vertical": 29.913
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 35.11,
+          "vertical": 26.311
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "repeat_alternative": {
+        "name": "Fine bleached grey-brown bark with evenly distributed ochre lichen pinflecks",
+        "files": {
+          "256": "materials/wall_repeat_diffuse_256.png",
+          "128": "materials/wall_repeat_diffuse_128.png"
+        },
+        "colorspace": "sRGB",
+        "semantic": "diffuse color; not physically calibrated albedo",
+        "actual_size_px": [
+          256,
+          256
+        ],
+        "alpha": false,
+        "repeat_classification": "visually_usable_repeat_not_mathematically_certified",
+        "source": "art_sources/repeat_alternatives_pair_source.png",
+        "source_quadrant_px": [
+          0,
+          627,
+          627,
+          1254
+        ],
+        "processing": "Imagegen targeted quieter-motif correction; quadrant nearest-resampled to320 square, crop-only edge-similarity selection, nearest-resampled to256 and128. No pixel blending, painting, mirroring or synthetic map derivation.",
+        "crop_in_320_intermediate_px": [
+          0,
+          0,
+          320,
+          320
+        ],
+        "qa": {
+          "before_crop_metrics": {
+            "edge_horizontal": 44.533,
+            "edge_vertical": 36.048,
+            "internal_horizontal": 39.015,
+            "internal_vertical": 28.707,
+            "edge_to_internal_ratio_horizontal": 1.141,
+            "edge_to_internal_ratio_vertical": 1.256
+          },
+          "after_crop_metrics": {
+            "edge_horizontal": 36.125,
+            "edge_vertical": 30.363,
+            "internal_horizontal": 38.071,
+            "internal_vertical": 27.959,
+            "edge_to_internal_ratio_horizontal": 0.949,
+            "edge_to_internal_ratio_vertical": 1.086
+          },
+          "repeat_preview": "qa/repeat_alternatives_2x2.png",
+          "visual_review": "Visually inspected actual256-pixel texture repeated2x2. No dominant hard boundary or tonal step; painterly material identity retained. Fine motif discontinuities can remain, especially close-up. Use alternative on repeated wall/ground spans; keep original for architectural or landmark detail.",
+          "mathematically_seamless_certified": false,
+          "limits": "Crop can lower boundary color mismatch, but does not prove motif continuity or equal boundary pixels. In-engine distance, UV and lighting acceptance required."
+        }
+      },
+      "preferred_files": {
+        "256": "materials/wall_repeat_diffuse_256.png",
+        "128": "materials/wall_repeat_diffuse_128.png"
+      },
+      "preferred_usage": "Use repeat alternative on broad repeating surfaces; use original files on bounded slabs/bays for richer macro detail."
+    },
+    {
+      "slot": "ground",
+      "name": "Rocky ochre-brown woodland earth, muted slate stones and small fallen leaves",
+      "intended_surface": "Rocky ochre-brown woodland earth, muted slate stones and small fallen leaves",
+      "files": {
+        "256": "materials/ground_diffuse_256.png",
+        "128": "materials/ground_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "bounded_span_original_not_seamless",
+      "qa": {
+        "source_crop_px": [
+          627,
+          0,
+          1254,
+          627
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 19.876,
+          "vertical": 20.979
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 23.634,
+          "vertical": 24.438
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "repeat_alternative": {
+        "name": "Warm umber woodland soil with tiny desaturated amber leaf fragments and small slate pebbles",
+        "files": {
+          "256": "materials/ground_repeat_diffuse_256.png",
+          "128": "materials/ground_repeat_diffuse_128.png"
+        },
+        "colorspace": "sRGB",
+        "semantic": "diffuse color; not physically calibrated albedo",
+        "actual_size_px": [
+          256,
+          256
+        ],
+        "alpha": false,
+        "repeat_classification": "visually_usable_repeat_not_mathematically_certified",
+        "source": "art_sources/repeat_alternatives_pair_source.png",
+        "source_quadrant_px": [
+          627,
+          627,
+          1254,
+          1254
+        ],
+        "processing": "Imagegen targeted quieter-motif correction; quadrant nearest-resampled to320 square, crop-only edge-similarity selection, nearest-resampled to256 and128. No pixel blending, painting, mirroring or synthetic map derivation.",
+        "crop_in_320_intermediate_px": [
+          0,
+          0,
+          320,
+          320
+        ],
+        "qa": {
+          "before_crop_metrics": {
+            "edge_horizontal": 31.13,
+            "edge_vertical": 37.884,
+            "internal_horizontal": 29.094,
+            "internal_vertical": 28.98,
+            "edge_to_internal_ratio_horizontal": 1.07,
+            "edge_to_internal_ratio_vertical": 1.307
+          },
+          "after_crop_metrics": {
+            "edge_horizontal": 28.324,
+            "edge_vertical": 31.169,
+            "internal_horizontal": 28.398,
+            "internal_vertical": 28.234,
+            "edge_to_internal_ratio_horizontal": 0.997,
+            "edge_to_internal_ratio_vertical": 1.104
+          },
+          "repeat_preview": "qa/repeat_alternatives_2x2.png",
+          "visual_review": "Visually inspected actual256-pixel texture repeated2x2. No dominant hard boundary or tonal step; painterly material identity retained. Fine motif discontinuities can remain, especially close-up. Use alternative on repeated wall/ground spans; keep original for architectural or landmark detail.",
+          "mathematically_seamless_certified": false,
+          "limits": "Crop can lower boundary color mismatch, but does not prove motif continuity or equal boundary pixels. In-engine distance, UV and lighting acceptance required."
+        }
+      },
+      "preferred_files": {
+        "256": "materials/ground_repeat_diffuse_256.png",
+        "128": "materials/ground_repeat_diffuse_128.png"
+      },
+      "preferred_usage": "Use repeat alternative on broad repeating surfaces; use original files on bounded slabs/bays for richer macro detail."
+    },
+    {
+      "slot": "structure",
+      "name": "Intertwined thick woody roots, silver-grey with warm dark umber grain",
+      "intended_surface": "Intertwined thick woody roots, silver-grey with warm dark umber grain",
+      "files": {
+        "256": "materials/structure_diffuse_256.png",
+        "128": "materials/structure_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "bounded_span_original_not_seamless",
+      "qa": {
+        "source_crop_px": [
+          0,
+          627,
+          627,
+          1254
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 25.384,
+          "vertical": 21.272
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 26.969,
+          "vertical": 27.051
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "preferred_usage": "Use on bounded structural/prop surfaces; clamp or align structural breaks instead of unrestricted repeat."
+    },
+    {
+      "slot": "detail",
+      "name": "Small desaturated amber ivy leaves mingled with forest-green moss, dense surface coverage",
+      "intended_surface": "Small desaturated amber ivy leaves mingled with forest-green moss, dense surface coverage",
+      "files": {
+        "256": "materials/detail_diffuse_256.png",
+        "128": "materials/detail_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "nonrepeat_detail",
+      "qa": {
+        "source_crop_px": [
+          627,
+          627,
+          1254,
+          1254
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 20.044,
+          "vertical": 18.603
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 23.037,
+          "vertical": 22.263
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "preferred_usage": "Use on bounded structural/prop surfaces; clamp or align structural breaks instead of unrestricted repeat."
+    }
+  ],
+  "import_recommendation": {
+    "filter": "nearest for pixel aesthetic; test trilinear on distant surfaces if shimmer occurs",
+    "wrap": "repeat for candidate structural textures only after seam acceptance; clamp for one-off detail patches",
+    "texture_resolution": "256 primary; 128 alternative",
+    "base_texel_density": "128 px/m at 2 m repeats for 256 textures"
+  },
+  "qa_notes": "All original 2x2 repeat sheets reviewed; original macro motifs are bounded-span materials with imperfect repeat continuity. Targeted imagegen edits supplied quieter wall/ground alternatives, then crop-only edge selection and nearest resize; all alternative 2x2 sheets reviewed as visually usable repeats. None is mathematically seamless-certified. No fake PBR maps.",
+  "public_title": "Wildworld Thicket",
+  "raster_status": "FROZEN",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

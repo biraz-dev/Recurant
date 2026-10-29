@@ -1,0 +1,150 @@
+{
+  "id": "clockwork",
+  "title": "Clockwork",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "clockwork-001",
+      "bytes": 1804369,
+      "sha256": "50f9a533976d5c11211d876143bc6fcf81b264c3249b99a583e9065fef79242b",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/clockwork.volume-001.zip",
+          "bytes": 1804369,
+          "sha256": "50f9a533976d5c11211d876143bc6fcf81b264c3249b99a583e9065fef79242b",
+          "git_blob_sha": "012255215cbbf0fab41d99c00884d13f1314f856"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/CLAUDE_README.md",
+          "bytes": 7214,
+          "sha256": "c4e5ed79b0b8c8102b84321e95ca28568121dbf9dca2ad1ab2d85e22b56e3986",
+          "git_blob_sha": "3982ef01193fd0fc7a16d1f3826e20061a46d350"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/MATERIAL_NOTES.md",
+          "bytes": 2729,
+          "sha256": "ea04a67a321733afbdf5369dcc674a16023021fffe0decf1884b6ea28f18a9a2",
+          "git_blob_sha": "fab5b95d5d263467de1b77051664376db50051b2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "6ff6e0756ed2bded12b25534c8536ff5a0ea0ef6c13926f103942338092c203b",
+          "git_blob_sha": "c3bee7c21f12373e54f1f87cdcc03fef6ec34f12"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/assembly/collision-navigation.json",
+          "bytes": 10394,
+          "sha256": "875c604c7720eba699ed65f6aea7b41948c9b685a172f45eff7fef2c9e2bbd5e",
+          "git_blob_sha": "49eaa19b155d68238471f516576e1f50389a1f2a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/assembly/layout.json",
+          "bytes": 13495,
+          "sha256": "2e2af528b2104222ee12612ca71eb75bbfc52f9b30cda9f7cb06f495fa6b8fa1",
+          "git_blob_sha": "cb9c8f341d0d6373036c8c31b849100769552069"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/assembly/native_320x240.png",
+          "bytes": 154047,
+          "sha256": "86719211127a1e29cc98238c189dfdbff973b7e8f5ddeb4050ef015e68a4f9fa",
+          "git_blob_sha": "156b7a1e898ec2e928952160c1450f0e4064694b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/assembly/showcase.glb",
+          "bytes": 875548,
+          "sha256": "95271126a13edfd6ad57ead5dd98307d018dbda4442f3f4d151d30820c5e07f6",
+          "git_blob_sha": "8017e619d1eb99e7ea3aa3f2678e97955c1c1686"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/concept/reference_native_320x240.png",
+          "bytes": 160776,
+          "sha256": "89adbc4f049ea571b29aa8454bdf7539e41b8e8115a8cd6fddc6f6809a104eec",
+          "git_blob_sha": "d20b4614c37a1cd662c15eb63be4bc3e3facfc2f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "d01a2df2522fbadba31df65502bcf5d29234c197ed2fda43a9f15622789f1793",
+          "git_blob_sha": "2edba2f3806d38959791823615ee03f01c2f00ea"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/material-manifest.json",
+          "bytes": 7243,
+          "sha256": "dbbbbb3199e78819519dd69e72a60cdafa1d4c02ebdbbec904384bf2114eea5c",
+          "git_blob_sha": "e1a4c4539a65018aa1ed45f73d8122d28b05f501"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/materials/detail_diffuse_128.png",
+          "bytes": 43151,
+          "sha256": "bdf9ef6e6f16aba202ebc2881489df12a1631e3ba6731b73acfe58cefb42caad",
+          "git_blob_sha": "93a05a0644d99564aa26ad54114818a3b96634f6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/materials/detail_diffuse_256.png",
+          "bytes": 165184,
+          "sha256": "75e4946ac75adf16cbe9ad246115ca584b00496b576d784a7d6896c4ef1f349d",
+          "git_blob_sha": "9e56536027af47f65d740fe1b7a9de9e66911058"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/materials/ground_diffuse_128.png",
+          "bytes": 39965,
+          "sha256": "871e8e2ba9dbca41e7e59c58e8c1abbb16fe9b7bd2f385ae9fb1bece325f5b44",
+          "git_blob_sha": "b0151feecee97902d1d84406d18347e19b59efcd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/materials/ground_diffuse_256.png",
+          "bytes": 152982,
+          "sha256": "e029f3319bc628a594e90e07c4fa8642135fd916dd6ac97d112a775c5fe1a4ae",
+          "git_blob_sha": "5f10efcac03581e4b522acde69dca917d1d8fdd8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/materials/structure_diffuse_128.png",
+          "bytes": 41037,
+          "sha256": "80482d3fc065db7d3bbe9b46730082816795c355c2b4c5364931f5eaea19abbd",
+          "git_blob_sha": "b4f6c2f6a14c72a1eda17c4e6196b9bec2d58e4a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/materials/structure_diffuse_256.png",
+          "bytes": 161214,
+          "sha256": "c61d8aaa90de7ca51441b3d46a79363d59259a2e73d893789072a64902690720",
+          "git_blob_sha": "d737571b8faa66b06165e007ae651279e8f119d8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/materials/wall_diffuse_128.png",
+          "bytes": 39648,
+          "sha256": "f5533552a4a9a0ee5cefcfa759ab199f1294d09ddb2301dde2c03f6c34a5f772",
+          "git_blob_sha": "aca8ab26f25a177ceb605bd3356298b14dccfc8f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/materials/wall_diffuse_256.png",
+          "bytes": 150829,
+          "sha256": "1a099a753809f0c0ddbda37658b11c71363da43562cb09a5e84fb2fe38915827",
+          "git_blob_sha": "353fe99b60b15114fc039a6288e34364ef711f94"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/prompts/material_atlas_v1.txt",
+          "bytes": 2385,
+          "sha256": "b7bcda3a51177c53ddff9b0339ca02e2143201f48b5103629bbcbffe96947915",
+          "git_blob_sha": "0d8b3191adf917b1d3978a9f8a944e146717dbde"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/clockwork/theme-manifest.json",
+          "bytes": 6795,
+          "sha256": "3c65cccdb0c5f637a2f117e421535968e5769d6daf98442516c4b4223373fbd7",
+          "git_blob_sha": "5e14cb66e5ddc26e93483496943b186ba05887ee"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "asset": "mushroom_tall",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.2,
+        1.335944,
+        0.0
+      ],
+      "size": [
+        2.4,
+        2.728111,
+        2.282536
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/mushroom_tall__GUIDE.glb"
+}

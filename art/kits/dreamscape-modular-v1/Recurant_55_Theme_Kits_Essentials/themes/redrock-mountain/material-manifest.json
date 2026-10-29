@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "theme": "redrock-mountain",
+  "public_title": "Redrock Mountain",
+  "manifest_base": "this theme directory",
+  "atlas_source": "art_sources/material_atlas_v1.png",
+  "atlas_source_dimensions": [
+    1254,
+    1254
+  ],
+  "atlas_source_sha256": "cad3044d0e4b402cefaad6cff52827a99c42dc32a5a1ee969899bed3e7a37aea",
+  "full_prompt": "prompts/material_atlas_v1.txt",
+  "generator": "built-in image_gen",
+  "input_reference": "Original scene concept describes palette only; no external art supplied to generator.",
+  "processing": "Exact quadrant crop; Lanczos resize to 256 then 128. QA images duplicate finished tiles 2x2 without alteration. No painting, seam synthesis, color edits, or fake PBR map generation.",
+  "palette": "burnt orange sandstone, muted vermilion, indigo shadow, peach-gold dawn",
+  "materials": [
+    {
+      "id": "redrock-mountain__wall",
+      "role": "wall",
+      "description": "flat warm red sandstone face with subtle horizontal strata and restrained cracks",
+      "base_color_texture": "materials/wall_diffuse_256.png",
+      "low_res_texture": "materials/wall_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_repeat_candidate",
+      "recommended_wrap": "REPEAT_WITH_QA_CAUTION",
+      "nominal_meters_per_repeat": 2,
+      "uv_policy": "1 repeat per 2 authoring metres, only after seam acceptance",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/wall_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 10.207,
+          "top_bottom": 13.535
+        },
+        "interior_adjacent_MAE_rgb255": 9.26,
+        "visual_findings": "Horizontal strata repeat as visible bands; hide module joins in rock breaks.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sha256": "ff1bbdc65ea915651a117d1e84b5b9a0ec715dfd13d0724b8aed59316cae7d0f",
+      "low_res_sha256": "5b5bd5ded0b523686f001d66570e15018cd0c3f62b4ec2cf1291f6c6d9c0dd76"
+    },
+    {
+      "id": "redrock-mountain__ground",
+      "role": "ground",
+      "description": "flat dusty red ochre gravel with small angular stones",
+      "base_color_texture": "materials/ground_diffuse_256.png",
+      "low_res_texture": "materials/ground_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_repeat_candidate",
+      "recommended_wrap": "REPEAT_WITH_QA_CAUTION",
+      "nominal_meters_per_repeat": 2,
+      "uv_policy": "1 repeat per 2 authoring metres, only after seam acceptance",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/ground_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 14.84,
+          "top_bottom": 13.78
+        },
+        "interior_adjacent_MAE_rgb255": 14.013,
+        "visual_findings": "Gravel density is visually consistent across borders; scattered pebbles repeat.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "28eba970407fb5778ae6c0271c41be3901ac39fcac82ca42cae4941480279b66",
+      "low_res_sha256": "bbd44559c3ab3634ad394a87b2fdd5f69bfab086d75c95ef27d27f04cb2b7137"
+    },
+    {
+      "id": "redrock-mountain__structure",
+      "role": "structure",
+      "description": "flat cool charcoal basalt with broad quiet fractured planes",
+      "base_color_texture": "materials/structure_diffuse_256.png",
+      "low_res_texture": "materials/structure_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_component_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "uv_policy": "0-1 per component",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/structure_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 9.201,
+          "top_bottom": 10.538
+        },
+        "interior_adjacent_MAE_rgb255": 8.868,
+        "visual_findings": "Broad basalt cracks have border interruptions; clamp per rock component.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "1b803f5351b229bbf7e8a9dc6a7d64243dd274b888585cf15b02d1aac2d88f31",
+      "low_res_sha256": "423116538ec625831b2a481bff53f49e35e481bf30c749ace826619f27945c8f"
+    },
+    {
+      "id": "redrock-mountain__detail",
+      "role": "detail",
+      "description": "flat iron mineral crust with sparse dull amber crystal flecks, not glowing lava",
+      "base_color_texture": "materials/detail_diffuse_256.png",
+      "low_res_texture": "materials/detail_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_component_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "uv_policy": "0-1 per component",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/detail_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 11.603,
+          "top_bottom": 12.717
+        },
+        "interior_adjacent_MAE_rgb255": 12.067,
+        "visual_findings": "Orange crystal spots become an obvious repeated motif; use one-off mineral patches.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "714b0c9436ad9e3d602993db6421c406cb6266e3c2726cf88f63583727d71a91",
+      "low_res_sha256": "2956a506484875d95f160ca610c2d9f5bb0c2e9ed3503a9c02bab948d38d2d79"
+    }
+  ],
+  "import_defaults": {
+    "filter": "nearest at runtime for pixel aesthetic; test motion shimmer",
+    "roughness": 0.85,
+    "metallic": 0,
+    "blend_mode": "opaque",
+    "default_emission": 0
+  },
+  "status": "production-authorized generated material candidates, asset-level QA complete; engine acceptance remains",
+  "known_limitations": [
+    "No mathematically seamless certification. Use the actual repeat diagnostics before enabling broad repeats.",
+    "Structure and detail are clamp panels, not unrestricted tiled fields.",
+    "No normal, roughness, AO, metallic, height, emission or alpha-cutout maps supplied.",
+    "No engine import, movement, collision or target performance validation is implied by these textures."
+  ],
+  "support_notes": "MATERIAL_NOTES.md",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

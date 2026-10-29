@@ -1,0 +1,206 @@
+{
+  "schema": "recurant.material-kit.v1",
+  "theme": "gothic-night-castle",
+  "generator": "builtin image_gen",
+  "source_atlas": "art_sources/material-atlas-master.png",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "prompt": "prompts/material-atlas.txt",
+  "derived_processing": "Quadrant crops, optionally restricted to whole masonry courses (see source_crop_px), and nearest-neighbour resizing only. No synthesized PBR maps or procedural seam repair.",
+  "lighting_note": "Diffuse stylized painted surface shading is baked; do not infer physical PBR maps.",
+  "qa_contacts": [
+    "qa/material-contact.png",
+    "qa/wall-ground-repeat-2x2.png"
+  ],
+  "qa_status": "Visual QA complete. See per-role notes; no claim of pixel-perfect seamlessness.",
+  "materials": [
+    {
+      "role": "wall",
+      "file_256": "materials/wall_diffuse_256.png",
+      "file_128": "materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "elegant cold blue-gray limestone ashlar, subtle fine veins and refined wear, regular rectangular masonry",
+      "repeat_intent": true,
+      "repeat_verified": true,
+      "wrap_recommendation": "REPEAT",
+      "uv_recommendation": "2 metres per repeat candidate",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 21.966,
+        "top_bottom_mae": 83.592,
+        "horizontal_internal_mae": 15.384,
+        "vertical_internal_mae": 16.507
+      },
+      "source_crop_px": [
+        0,
+        24,
+        627,
+        614
+      ],
+      "sha256": "efd6fdf1a6d611859b3a574b08a790b7fefc894b0438609c31287ec1748ae79d",
+      "repeat_quality": "Practical visually reviewed repeat; not pixel-edge-identical",
+      "qa_note": "2x2 visual QA accepted; whole-course crop where necessary. Minor mortar/cell-width variation remains; avoid unbroken giant walls.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "ground",
+      "file_256": "materials/ground_diffuse_256.png",
+      "file_128": "materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "pale blue-gray marble tiled floor with narrow charcoal borders in an orthogonal grid, no reflections",
+      "repeat_intent": true,
+      "repeat_verified": true,
+      "wrap_recommendation": "REPEAT",
+      "uv_recommendation": "2 metres per repeat candidate",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 15.438,
+        "top_bottom_mae": 16.613,
+        "horizontal_internal_mae": 16.469,
+        "vertical_internal_mae": 16.088
+      },
+      "source_crop_px": [
+        645,
+        12,
+        1243,
+        616
+      ],
+      "sha256": "d56e6ce4a8d14485a6ac434a15419dcd75726487e992bec9113c7b8faf983fc2",
+      "repeat_quality": "Practical visually reviewed tiled repeat; not pixel-edge-identical",
+      "qa_note": "2x2 visual QA accepted; complete square paving grid with intrinsic per-tile color variation.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "structure",
+      "file_256": "materials/structure_diffuse_256.png",
+      "file_128": "materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "carved gray stone with repeating fine gothic foliate ornament, shallow relief on flat square surface",
+      "repeat_intent": false,
+      "repeat_verified": false,
+      "wrap_recommendation": "CLAMP",
+      "uv_recommendation": "Local component UV0 0\u20131",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 46.431,
+        "top_bottom_mae": 74.665,
+        "horizontal_internal_mae": 26.144,
+        "vertical_internal_mae": 18.938
+      },
+      "source_crop_px": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "dab904d0da35e101c9b1a3cb28a855ab1f00ee30346a3ca6725a80d44b8c02cc",
+      "repeat_quality": "Intentional nonrepeat component material / decorative panel",
+      "qa_note": "Flat surface accepted; map once per component UV0 0\u20131, not across room-scale repeats.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    },
+    {
+      "role": "detail",
+      "file_256": "materials/detail_diffuse_256.png",
+      "file_128": "materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "intended_use": "flat deep crimson damask textile with antique gold ornamental pomegranate-and-thorn brocade, no curtain folds",
+      "repeat_intent": false,
+      "repeat_verified": false,
+      "wrap_recommendation": "CLAMP",
+      "uv_recommendation": "Local component UV0 0\u20131",
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 11.887,
+        "top_bottom_mae": 24.07,
+        "horizontal_internal_mae": 17.168,
+        "vertical_internal_mae": 16.116
+      },
+      "source_crop_px": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "8dd9aa4f4edb73f3cf26d419efe0529f0444823d19a109f5b07f9665043bfb26",
+      "repeat_quality": "Intentional nonrepeat component material / decorative panel",
+      "qa_note": "Flat surface accepted; map once per component UV0 0\u20131, not across room-scale repeats.",
+      "sizes_available": [
+        256,
+        128
+      ],
+      "map_kind": "diffuse / baseColor",
+      "real_height_information": false
+    }
+  ],
+  "material_type": "Opaque painted diffuse/base color only",
+  "recommended_sampler": {
+    "magnification": "NEAREST / POINT",
+    "minification": "NEAREST or nearest-mipmap-nearest; test fine textile weave at distance",
+    "color_management": "Interpret PNG as sRGB and convert to linear only inside renderer",
+    "compression": "Prefer lossless/uncompressed for pixel fidelity",
+    "alpha_mode": "OPAQUE"
+  },
+  "provenance": {
+    "mode": "builtin image_gen",
+    "primary_prompt": "prompts/material-atlas.txt",
+    "art_sources": [
+      "art_sources/material-atlas-master.png"
+    ],
+    "no_manual_pixel_painting": true,
+    "processing": "Crop and nearest-neighbor resize only; visual QA contact assembly is not production image editing."
+  },
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

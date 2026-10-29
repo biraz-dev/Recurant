@@ -1,0 +1,20 @@
+{
+  "asset": "tissue_wall_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.056597,
+        1.994357,
+        -0.057354
+      ],
+      "size": [
+        2.145425,
+        4.027427,
+        0.514708
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/tissue_wall_2m__GUIDE.glb"
+}

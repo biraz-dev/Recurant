@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "theme": "aquatic-living-laboratory",
+  "atlas_source": "art_sources/material_atlas_v1.png",
+  "atlas_source_dimensions": [
+    1254,
+    1254
+  ],
+  "full_prompt": "prompts/material_atlas_v1.txt",
+  "generator": "built-in image_gen",
+  "input_reference": "Original biome concept inspected visually; not used as image-edit input",
+  "processing": "Exact atlas quadrant crop or selected full-frame built-in imagegen repeat edit, followed by nearest-neighbor resizing to256 and128. No programmatic seam blend, edge copying or PBR map invention.",
+  "palette": "pale bone limestone, luminous seafoam turquoise, deep marine teal and small orchid accents",
+  "materials": [
+    {
+      "id": "aquatic-living-laboratory__wall",
+      "role": "wall",
+      "description": "quiet pale ivory organic limestone blocks with faint mineral veins, simple straight seams",
+      "base_color_texture": "materials/wall_diffuse_256.png",
+      "low_res_texture": "materials/wall_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_practical_repeat",
+      "recommended_wrap": "REPEAT",
+      "nominal_meters_per_repeat": 2,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/wall_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 12.36,
+          "top_bottom": 12.33
+        },
+        "interior_adjacent_MAE_rgb255": 14.49,
+        "status": "visually_reviewed_practical_repeat_minor_seams",
+        "visual_review": "Pale masonry repeats coherently; minor pixel-scale mortar discontinuities remain.",
+        "review_scale": "256px native, 512px 2x2 composite"
+      },
+      "source_crop_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sha256": "56bb59679ebdcee4270675a83b6c59df74f58257d523bb3a1630d7342a4e9fed",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "aquatic-living-laboratory__ground",
+      "role": "ground",
+      "description": "pale dry shell-limestone polygon paving, subtle jade hairline joints",
+      "base_color_texture": "materials/ground_diffuse_256.png",
+      "low_res_texture": "materials/ground_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_practical_repeat",
+      "recommended_wrap": "REPEAT",
+      "nominal_meters_per_repeat": 2,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/ground_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 18.76,
+          "top_bottom": 18.85
+        },
+        "interior_adjacent_MAE_rgb255": 21.24,
+        "status": "visually_reviewed_practical_repeat_minor_seams",
+        "visual_review": "Shell polygon paving repeats coherently; tiny grout jogs remain at a few seam crossings.",
+        "review_scale": "256px native, 512px 2x2 composite"
+      },
+      "source_crop_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "97c815395df51d2b4ad95dfcfa9ab12a639718d65bbddc393a9d1dfc25b005ec",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "aquatic-living-laboratory__structure",
+      "role": "structure",
+      "description": "sea-glass and bone mineral rib material, fine pale flowing striations through muted green glass",
+      "base_color_texture": "materials/structure_diffuse_256.png",
+      "low_res_texture": "materials/structure_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/structure_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 17.17,
+          "top_bottom": 48.46
+        },
+        "interior_adjacent_MAE_rgb255": 18.89,
+        "status": "nonrepeat_by_design",
+        "visual_review": "Nonrepeat face-on panel: clamp UVs 0-1 or crop within module; not intended as a seamless surface."
+      },
+      "source_crop_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "57ae4b9501c3e7064d94760f4cfafbe98cc908c93ee0ce591717c38a7b5d2981",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "aquatic-living-laboratory__detail",
+      "role": "detail",
+      "description": "flat decorative aqua glass panel with delicate fern-like aquatic frond tracery, tiny orchid accents",
+      "base_color_texture": "materials/detail_diffuse_256.png",
+      "low_res_texture": "materials/detail_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/detail_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 15.56,
+          "top_bottom": 57.37
+        },
+        "interior_adjacent_MAE_rgb255": 24.11,
+        "status": "nonrepeat_by_design",
+        "visual_review": "Nonrepeat face-on panel: clamp UVs 0-1 or crop within module; not intended as a seamless surface."
+      },
+      "source_crop_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "87b31b1edb23af36d6f7711db23013a6f8a88f39fbbb22737b58fa410d4c6e94",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    }
+  ],
+  "qa_contact": "qa/material_contact_sheet.png",
+  "readme": "MATERIAL_NOTES.md",
+  "qa_visual_summary": "Four distinct face-on opaque diffuse surfaces inspected. No scene or text. All wall/ground 2x2 repeats visually reviewed and practical at native size with minor retained discontinuities; no mathematical seamlessness certification. Structure/detail are explicitly nonrepeat.",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

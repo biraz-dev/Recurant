@@ -1,0 +1,156 @@
+{
+  "id": "blackwater-swamp",
+  "title": "Blackwater Swamp",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 22,
+  "archives": [
+    {
+      "id": "blackwater-swamp-001",
+      "bytes": 1606447,
+      "sha256": "fe69b0d8cb818f1f5a55e749d27d42a55f0e433cc07b66247cf9997bd5b19da1",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/blackwater-swamp.volume-001.zip",
+          "bytes": 1606447,
+          "sha256": "fe69b0d8cb818f1f5a55e749d27d42a55f0e433cc07b66247cf9997bd5b19da1",
+          "git_blob_sha": "c4d29a9edf410a6535a8ba58d77b8ac78428a339"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/CLAUDE_README.md",
+          "bytes": 7266,
+          "sha256": "c4e6afd6e68b879d60cafb3d5882397a3fdaeab5b1f876f06f9efd519998c00e",
+          "git_blob_sha": "b836881b1470297022b1911b14fb7156adb2ed47"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/MATERIAL_NOTES.md",
+          "bytes": 4311,
+          "sha256": "9972e163d3843e54a72ae3ec8019f7df2588cb0a520b1f3883c38c5d2ef45f2b",
+          "git_blob_sha": "6962a7472cc4883cea6f97cf9229e3cf1fa89a60"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "f14d0fbf0b7bca6a546381fff77454f0ea31574f106e55265548af2d3cc4994f",
+          "git_blob_sha": "2383954b7b2ebfa91bf61858b00dad1321876b94"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/assembly/collision-navigation.json",
+          "bytes": 9903,
+          "sha256": "7d926f5f899dec21d657cc8584f458fb3c0443077a7116a82d7da3a05ffb2d6a",
+          "git_blob_sha": "f76a44e33d4b8557c7880888d45cae8654eec3a9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/assembly/layout.json",
+          "bytes": 15641,
+          "sha256": "7265675a1a470c942bbf870c8e3c1a93027a1d907bb2c0ae23202cfd32f6efc1",
+          "git_blob_sha": "7f2085bc41ac133458e1490d396c6cb0a10f0b7b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/assembly/native_320x240.png",
+          "bytes": 133798,
+          "sha256": "fb9798159641766b8dc4550dbc95453e43c3cb9c5c848977a5a9802420de3c7c",
+          "git_blob_sha": "85264a277f57aa843ca82e3b5c0d1fb03c36f38d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/assembly/showcase.glb",
+          "bytes": 719516,
+          "sha256": "a9ce7fc8c6e9e2a0b21053d7de1e81ced7c20f19ac1e13a653c581db0267751b",
+          "git_blob_sha": "3d9b7ea0c39c38325c39ff73d74139eb69cbcfab"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/concept/reference_native_320x240.png",
+          "bytes": 172363,
+          "sha256": "77d12d421fe757296c05fde66c2624c0a562fbe290a5ab60f8d1007177bea235",
+          "git_blob_sha": "6201cfb52d89ef20fc12b9587f54a3c8fcdc81a7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "12c0ed2896348e3443a4daf61efb3532786ead7e812e9f6ae006a1191993b5c9",
+          "git_blob_sha": "ff75a686eb884af4a6288a6276219cc0b0cdd132"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/material-manifest.json",
+          "bytes": 7962,
+          "sha256": "012819d32a41a0275ce8a5773d52106561384b223ff07ec689c48127f790c56a",
+          "git_blob_sha": "0817a791eeb7988f33f96b3689f541185159467c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/materials/detail_diffuse_128.png",
+          "bytes": 36982,
+          "sha256": "2a68faabb6b69916fc4eea41cc72a1fde9202d18fd02c4fa2bc897503092ee80",
+          "git_blob_sha": "41b9d2e5d62d3fd60eacd2feddef2644c7b80268"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/materials/detail_diffuse_256.png",
+          "bytes": 150717,
+          "sha256": "eb0951b175cfe8d94beb2ec4a2c50fa8e66712eabb5730f602c196b41217409d",
+          "git_blob_sha": "c9537705f8c80a43b16983c1ff77a3073eef1fa4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/materials/ground_diffuse_128.png",
+          "bytes": 36727,
+          "sha256": "2de13c7ad4a7dba078540488035b4c158e630b5958031c6fc1ed1ca8b50879b6",
+          "git_blob_sha": "d561712b52aeffc2f7afc9fc26e6d28416277f75"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/materials/ground_diffuse_256.png",
+          "bytes": 150053,
+          "sha256": "9803bc59556aacaaea9aa9679686a9be766378ffbb0e54face678eee8ff34c80",
+          "git_blob_sha": "db6896408f0bb2b277b85a508ae7fbb76cc489a9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/materials/structure_diffuse_128.png",
+          "bytes": 27232,
+          "sha256": "bd7f0a86077ad95434c5a1013841876d66ce6f4f4569092b2eb1a2b98d0f82d0",
+          "git_blob_sha": "abb2701eb0357c6fa70603a67465ebc6bd9355ac"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/materials/structure_diffuse_256.png",
+          "bytes": 96861,
+          "sha256": "ab933299a070503e0b59bcbe5f6f2936c49ac163cd47e246356efc73221d560d",
+          "git_blob_sha": "16c301e339ee5b349ba9f18b89d2afc093b2d9bd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/materials/wall_diffuse_128.png",
+          "bytes": 37046,
+          "sha256": "544ed03fb90e4881bdf68a917d1ca677231d579054c5be2819d7bb4027ae877a",
+          "git_blob_sha": "d9ed6f7c732466cc2a23c0bdecd8a5fdb1fbdb6b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/materials/wall_diffuse_256.png",
+          "bytes": 149837,
+          "sha256": "e5a33c5ecacc49d47413c1abddec18b3d2dbc4a66e4ae89c389c26b5b6dc3a63",
+          "git_blob_sha": "6b7f2ff9ba67843924144ae1e874b2226edf2184"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/prompts/material_atlas_v1.txt",
+          "bytes": 1705,
+          "sha256": "8c4f062b04ced0d4bb4864734cc49999aacec3178173370ac9880538e6c7f656",
+          "git_blob_sha": "c732bbbcb6e954ea5446e691749130c01d52cc7d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/qa/material-qa.json",
+          "bytes": 2201,
+          "sha256": "59b9edb4cfe68f4386ff0c8a0f23b3512c1b8b8077f4995fd343c5382599ce7e",
+          "git_blob_sha": "ef38d2b7160516917472026f95c3f36e5f655582"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/blackwater-swamp/theme-manifest.json",
+          "bytes": 7087,
+          "sha256": "9a5d05596014f78d5bc8e6e278a4ff059eb905a2eee26362f40b5bde7f6287f4",
+          "git_blob_sha": "e0012d3fd17b64b045d8afce7f548c673ac73f09"
+        }
+      ]
+    }
+  ]
+}

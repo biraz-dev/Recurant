@@ -1,0 +1,65 @@
+{
+  "theme": "ancient-forest",
+  "all_flat_orthographic": true,
+  "all_four_distinct": true,
+  "no_text_frame_gutter": true,
+  "reviewed_contact_sheet": "qa/material_contact_sheet.png",
+  "reviewed_repeat_sheets": [
+    "qa/wall_repeat_2x2.png",
+    "qa/ground_repeat_2x2.png",
+    "qa/structure_repeat_2x2.png",
+    "qa/detail_repeat_2x2.png"
+  ],
+  "checks": [
+    {
+      "role": "wall",
+      "preview": "qa/wall_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 13.339,
+        "top_bottom": 13.505
+      },
+      "interior_adjacent_MAE_rgb255": 12.246,
+      "visual_findings": "Vertical bark rhythm repeats; broad value continuity is good, tiny furrows terminate.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "ground",
+      "preview": "qa/ground_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 17.25,
+        "top_bottom": 17.062
+      },
+      "interior_adjacent_MAE_rgb255": 15.026,
+      "visual_findings": "Fine root and leaf pattern is coherent, but exact edges are not matched.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "structure",
+      "preview": "qa/structure_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 13.339,
+        "top_bottom": 12.529
+      },
+      "interior_adjacent_MAE_rgb255": 13.112,
+      "visual_findings": "Moss clusters repeat at tile intervals; clamp boulder surface panels.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "detail",
+      "preview": "qa/detail_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 16.661,
+        "top_bottom": 14.553
+      },
+      "interior_adjacent_MAE_rgb255": 13.166,
+      "visual_findings": "Ferns and ivy have visible duplicated motifs; this is an opaque foliage surface, not a cutout.",
+      "opposing_edges_identical": false
+    }
+  ],
+  "native_and_preview_dimensions_verified": true,
+  "production_seam_acceptance": "not certified; use per-role findings"
+}

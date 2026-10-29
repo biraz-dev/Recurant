@@ -1,0 +1,156 @@
+{
+  "id": "golden-plains",
+  "title": "Golden Plains",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 22,
+  "archives": [
+    {
+      "id": "golden-plains-001",
+      "bytes": 1765808,
+      "sha256": "5712d6f36bd406db80bcd9cbf641b8945d62936bde4cefe5218563e0105e26f0",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/golden-plains.volume-001.zip",
+          "bytes": 1765808,
+          "sha256": "5712d6f36bd406db80bcd9cbf641b8945d62936bde4cefe5218563e0105e26f0",
+          "git_blob_sha": "6db3b27437fc2832711e487d3b7fa78d59a4940b"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/CLAUDE_README.md",
+          "bytes": 7243,
+          "sha256": "139a0b31cc7314ac2d73d0c734bb136af614491decdf5171cf8fe242a0352bfe",
+          "git_blob_sha": "55dfcf1a945326db8a546ce1a0bcf2d21b290fef"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/MATERIAL_NOTES.md",
+          "bytes": 4274,
+          "sha256": "d9241a53e79f976931252939d38a392928c66e785eda978d3f06596192ba99af",
+          "git_blob_sha": "5f8019f9c7cc3df69695e071c869e0c6c36690a5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "a486f0ff5d4f7d27e18eb441beb8a2bd1748d852d3e64c074fd41c1a2276bb45",
+          "git_blob_sha": "7d78917525e7ab025872d69357b0bdd903aa59f9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/assembly/collision-navigation.json",
+          "bytes": 9436,
+          "sha256": "e48a05bacc7c9281a1fa8c20cd1211f72e0534f79479f1f3777831fb3cf6294c",
+          "git_blob_sha": "d769b2d1e50e5c6423d31c8bba410e8a76aab68b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/assembly/layout.json",
+          "bytes": 14773,
+          "sha256": "0a29372914485f7d33e44828d48408474ea61380cc51e18c948587d7a40bd21f",
+          "git_blob_sha": "588a630d292898c0baabca2bef3f18e99f69eb4a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/assembly/native_320x240.png",
+          "bytes": 150538,
+          "sha256": "9e48f6e2afaaf04063eb8fffe94a1655059246b4597a6034dc509add099c0857",
+          "git_blob_sha": "4c14b1bab65458c2c2f5dd846ceeed1918a9db34"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/assembly/showcase.glb",
+          "bytes": 761448,
+          "sha256": "60ebe23fd488a8d1dc18b2507cf5feabac886edc7dbcbd682a11421bfb222b39",
+          "git_blob_sha": "18549487fc18c5f0d8a4202101d45daec57c615d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/concept/reference_native_320x240.png",
+          "bytes": 170364,
+          "sha256": "6e9cdec635b43342fed1183a5510967029036f552cc52665e4cfd17283aabd87",
+          "git_blob_sha": "a3c7ddbb730a3258f1dd093f203a62bc1a95bccb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "3910922aec1f1689d1538525f6394ceaed324fcb1f0495b7c9a55bd53643d306",
+          "git_blob_sha": "3dc766465a1f543f6da430ac40fbdfc3af866333"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/material-manifest.json",
+          "bytes": 7902,
+          "sha256": "e1d3a1a89590104996bc975265ef909d336a7f4e0f2158fedebaf72e158b4af6",
+          "git_blob_sha": "1b750dc0cf3e3bb4e47e70973e8bfdd26b950f15"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/materials/detail_diffuse_128.png",
+          "bytes": 35148,
+          "sha256": "f98924fde3dd94e15befba448bc6b61221e716a7acbf03fa8f08d7f520320147",
+          "git_blob_sha": "734c802183833dd63aff59a1d8a6466de19446f0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/materials/detail_diffuse_256.png",
+          "bytes": 143073,
+          "sha256": "6f4a5c14f139bd372f3bdb0e0bb6ba8f2d787c1bae530217c04c048cdbe86281",
+          "git_blob_sha": "d17f4c79c7455092378940820650c8a41e5c0028"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/materials/ground_diffuse_128.png",
+          "bytes": 39104,
+          "sha256": "41766617b2c9b2cd311ee49dc5263f9ce02c3f01793207474562e1e4b860077d",
+          "git_blob_sha": "74aaa1eac667b4a13d1457389a08d09682c1dc5d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/materials/ground_diffuse_256.png",
+          "bytes": 159841,
+          "sha256": "def9e018a5c70a87b2e4efdb3468e61980c5aae4dd68ebe83fedbc4559506a5c",
+          "git_blob_sha": "8a26d09465b25a5f5d4e727b4784f350e9ec6018"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/materials/structure_diffuse_128.png",
+          "bytes": 41605,
+          "sha256": "6bdfa1b3c28c90c6e7df059b16baf98481cdc996b5f4011d082f4ceee8bc9279",
+          "git_blob_sha": "2fa45c3a635c703a100144bb6e74ec116aa75d97"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/materials/structure_diffuse_256.png",
+          "bytes": 168607,
+          "sha256": "3bdde71296714def86a6d683796db677549e78aebe97375cf157b6bd9350cd37",
+          "git_blob_sha": "ff5de575d016d69be7ef6c680740579a44e0e4f0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/materials/wall_diffuse_128.png",
+          "bytes": 36133,
+          "sha256": "3222ebd3b9012e41c897838ac81d9c5a47899042e49e2aefde1c6bc5ce469954",
+          "git_blob_sha": "10b5021be387370bc4e29a92673936249d0ede9b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/materials/wall_diffuse_256.png",
+          "bytes": 144643,
+          "sha256": "dc9503f91f67776a1f7652f15e0993ffbbe82c81721e405b41d2dcfe0a499d39",
+          "git_blob_sha": "61c6c013c52444ce35bfb105e4ffea70f09f33ad"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/prompts/material_atlas_v1.txt",
+          "bytes": 1687,
+          "sha256": "13197bf3a93599e59ff527456dbae45198ed0dbdde4b7d3717b5b2572c7712c0",
+          "git_blob_sha": "71c38729ab40fec4560c53769dd86340e4d60023"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/qa/material-qa.json",
+          "bytes": 2174,
+          "sha256": "a2e460eeb7c29a7bff6fc397a55e2d21c778a3152fbc85a92d0a0d918aab3bcb",
+          "git_blob_sha": "9a1fa7edb876cfedede257206d9b4218abf79a0b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/golden-plains/theme-manifest.json",
+          "bytes": 6922,
+          "sha256": "91a4949e7ecd71f0369740fd3996c1bc79f7c1ecd82d290b5915e98e3a294324",
+          "git_blob_sha": "e1bc37d90b3138f095ba9061a09416be7c1bb15f"
+        }
+      ]
+    }
+  ]
+}

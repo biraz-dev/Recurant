@@ -1,0 +1,174 @@
+{
+  "id": "elemental-mountain-refuge",
+  "title": "Elemental Mountain Refuge",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "elemental-mountain-refuge-001",
+      "bytes": 2405550,
+      "sha256": "4e0702a9b54cf6280d301914a3f42839b10c91b3add4cd8ef88c945d4ff03541",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/elemental-mountain-refuge.volume-001.zip",
+          "bytes": 2405550,
+          "sha256": "4e0702a9b54cf6280d301914a3f42839b10c91b3add4cd8ef88c945d4ff03541",
+          "git_blob_sha": "d820d3172a53570e3e7e401f7ad0b5ae5aa68d08"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/CLAUDE_README.md",
+          "bytes": 7537,
+          "sha256": "c9a401a414cd14fe5d55d258ba6fafc0569979e4e109b6a64ecc82b338cca301",
+          "git_blob_sha": "4a69b7a6dfdb47fd0c6cca07c9d47b0cb4e68337"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "786914472050a4a32978587f0567741b82ade9aca64cd82f188536156b879999",
+          "git_blob_sha": "c80afa23605826135f479ab0a93c7ff1e8eced17"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/assembly/collision-navigation.json",
+          "bytes": 10223,
+          "sha256": "e8da65b8ef95bb23a57e641351b394399077ab17528e430181d6b02e319db640",
+          "git_blob_sha": "e5ed1cde2c6e3b5fdb3ccd2e5b71dbfe9b19bdeb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/assembly/layout.json",
+          "bytes": 14597,
+          "sha256": "d72102659feb9adeb3f81b4e919518ccf6a4bed1e737c5a09089792b429d754f",
+          "git_blob_sha": "4823849f2c23119e7122a2816a381f5e3edaaa8f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/assembly/native_320x240.png",
+          "bytes": 162066,
+          "sha256": "847a1035318dc8e9803e5e71b6ac2c1f643d2758270f98572ae1cbef6b5d7e99",
+          "git_blob_sha": "749e755b1fd3b780f403de0617aa89a9765f8050"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/assembly/showcase.glb",
+          "bytes": 955192,
+          "sha256": "3d4e0f5d303ddaa75fec6ec6f9edb947065a5dd312025b8a5dde49f96ba6c0b8",
+          "git_blob_sha": "d49dbd06fedd9064409c6ca1ae19dfc04cf8efc8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/concept/reference_native_320x240.png",
+          "bytes": 186855,
+          "sha256": "bd53d33398e85268ee7902e45a8fbd4b513a0626c784b35e7287d16862881390",
+          "git_blob_sha": "71f609c8ae41086adad7202d41b2f2f3a7762319"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "05b69c48901e702e2c499b870a01d83d769eaf83232d3abb872bbf02ff75b19c",
+          "git_blob_sha": "8199cf72fbdcae5a41bf990651beb6a7f087934a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/material_manifest.json",
+          "bytes": 14188,
+          "sha256": "5d7fbfc86d59e6b281c4a6394d30238453df6a76a50d5ff37758afb60c356b7a",
+          "git_blob_sha": "2b4704e84222420feb56f6eeb74433ff53c2e1da"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/materials/detail_diffuse_128.png",
+          "bytes": 44146,
+          "sha256": "31e8af6a8c4ad1020fdbd0a97d4952941679381958fb197b118d4f99c99e976a",
+          "git_blob_sha": "5fd826790dbf0da93911df3096738d0065888ec2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/materials/detail_diffuse_256.png",
+          "bytes": 167587,
+          "sha256": "d23edc060a8cfd137c254423614f28cefb06ed90e8c7d10baf1e8f83367e2dff",
+          "git_blob_sha": "e8880168d5a5298dcb071ef2cc2024a5a23b0e22"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/materials/ground_diffuse_128.png",
+          "bytes": 45008,
+          "sha256": "bf11c64c459beb373cf338407998582c74f819bb51ec5ae177e6ccc09e1ec0f4",
+          "git_blob_sha": "71cc8cc12c220eb72a3ed5234faf3f71e5dbdaa6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/materials/ground_diffuse_256.png",
+          "bytes": 171953,
+          "sha256": "a467d57966a76038a640699cc891c4ce129bee9c04120b7b8df8e3281275af9f",
+          "git_blob_sha": "1c219ea4e8af3d7e74157529cf4652fc8be4742b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/materials/ground_repeat_diffuse_128.png",
+          "bytes": 47842,
+          "sha256": "1024b899f888bad19cc82df4c1315954cad97835d81ff0d99142e23dcccf2e95",
+          "git_blob_sha": "380c85d5d41dd641300c7583e69096edd4c3745a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/materials/ground_repeat_diffuse_256.png",
+          "bytes": 184313,
+          "sha256": "95012adaaa712aa3b1cf98f34a0d00ad3eddd753d12ca615edd15ab9badc751f",
+          "git_blob_sha": "e5123ff82afc9914e499cb9fc0d3d01bd8a05550"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/materials/structure_diffuse_128.png",
+          "bytes": 39841,
+          "sha256": "d5a40b1cb0e26029eb61ec250348fbe47a084fdc6163ff9707e5c005968b6363",
+          "git_blob_sha": "67081914f5eb02d61b5a8215040552b51bf3b8d7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/materials/structure_diffuse_256.png",
+          "bytes": 149433,
+          "sha256": "57821f4bb79114b430f09c71b2a650a512501bbe1c87d0937bc972486a5be82d",
+          "git_blob_sha": "dc13686464665b94c9ca263984afcedcaea084d9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/materials/wall_diffuse_128.png",
+          "bytes": 44367,
+          "sha256": "90de60ec25e9b38eecb2f2103250f42c3def511ba767b93374e59cf611a6f299",
+          "git_blob_sha": "e16a024ac54e5d865eb64ad927ad6cc20ac2c411"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/materials/wall_diffuse_256.png",
+          "bytes": 170546,
+          "sha256": "6b7483e032d376bcaff7df502037d456d94a53c06308141b36d570131d6888d1",
+          "git_blob_sha": "f9203a82bd91ec0f61293bbde5b32fb10c4b8774"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/materials/wall_repeat_diffuse_128.png",
+          "bytes": 47560,
+          "sha256": "d27d35e56220b37a2c1e0f2f6b4892a87a06fe6ae3a764155b68a6b8f2ea61ea",
+          "git_blob_sha": "bc4ed1d63726aebcf682d5a624f589f7155d974a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/materials/wall_repeat_diffuse_256.png",
+          "bytes": 185026,
+          "sha256": "887b3640f801ecdfba4fbc0ebc88dd6ffe49e5b6086f16d1ef71a0c263c6176d",
+          "git_blob_sha": "5c9403173bba49801a08f1272d871216220bf384"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/prompts/material_atlas_prompt.txt",
+          "bytes": 1851,
+          "sha256": "5e2410bbf9a489db361d2b175763753f59295e53a145b59cd475243d131ffad1",
+          "git_blob_sha": "73c29f96508d35ee56e2f62637101d72d8cd1055"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1943,
+          "sha256": "50c3eb00762d9117b89ebb6ae920bcde69661e98b939780f4369affebb83b0e7",
+          "git_blob_sha": "6ca5013034ee827f67298ee348b23a4d5189b9e1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/elemental-mountain-refuge/theme-manifest.json",
+          "bytes": 7069,
+          "sha256": "cdcf886337e136f36fbde580c463b70759df0a55d8d6850df0bc9a00ba32a83b",
+          "git_blob_sha": "4dca5b2aae28abd2eb3eabf05c931b909962352d"
+        }
+      ]
+    }
+  ]
+}

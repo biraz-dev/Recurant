@@ -1,0 +1,150 @@
+{
+  "id": "transforming-machine-interior",
+  "title": "Transforming Machine Interior",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "transforming-machine-interior-001",
+      "bytes": 1598595,
+      "sha256": "4e968fce552b705745183857184475bc8d3b26964ad17d25b2b507f5ac95908c",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/transforming-machine-interior.volume-001.zip",
+          "bytes": 1598595,
+          "sha256": "4e968fce552b705745183857184475bc8d3b26964ad17d25b2b507f5ac95908c",
+          "git_blob_sha": "18e4bcf80af016c8445404b43fe6aa3d3d495288"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/CLAUDE_README.md",
+          "bytes": 7298,
+          "sha256": "9308bf04b81cdef4239ac25510c7d33a88b51577e7d4b0a44d504da5e0ff0e0c",
+          "git_blob_sha": "2a19e49205cc29b369eb1299f9152edcbe8b4eed"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/MATERIAL_NOTES.md",
+          "bytes": 2807,
+          "sha256": "9a7a653c644cfbc815b3c8f8fd8907138154fe4b2066963da33a354a4b4d4562",
+          "git_blob_sha": "278143841cd9a2774faedf219fbf807bf2e50d02"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "3afb2ba61f7d1d16afb1bf06c1a68909ede8b9de343306fa41e916cea74b41fe",
+          "git_blob_sha": "020a9de67fccc413576e88b1f185abc5efc1cf63"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/assembly/collision-navigation.json",
+          "bytes": 10452,
+          "sha256": "737ce7600d646b334d7c1db9cb32bbdc7ba3c66d262a32c991fd8424611abba4",
+          "git_blob_sha": "c5148e242bbc4159c865564748251a844eaba60b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/assembly/layout.json",
+          "bytes": 13539,
+          "sha256": "2fa51bd81a0d4d619e00e2969fc69605ffed202f033a367dab290269a6c62535",
+          "git_blob_sha": "ec271ad7a7dc3292903d538511258917176fcfe2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/assembly/native_320x240.png",
+          "bytes": 156978,
+          "sha256": "588899f7854f531eeeb4a84274a784c77bbf2e01190fd2ea495f82ca9b0c8ae2",
+          "git_blob_sha": "215bc64ec79d5c658570e54f1be19a12d6796f22"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/assembly/showcase.glb",
+          "bytes": 742964,
+          "sha256": "1bf6256b8d46341fc7bc5e9cf1f950b388f93ac3fbb62428ddd43f5799c1f000",
+          "git_blob_sha": "cb2fffb8af3bbd2149be736d5b2e982e7dd18746"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/concept/reference_native_320x240.png",
+          "bytes": 144380,
+          "sha256": "64f8ff48601e40fb8ffe41aac136bfeaa7a85c4bfadc8a51f701d3efb0cb17de",
+          "git_blob_sha": "382bccc70e4c6468b2a16e7129551f696de9ffbf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "5e7ba9bfe7cf15a549ff8f7329ab738ac414cde1ba2ddc0f3324170638c8c549",
+          "git_blob_sha": "6acce2f47c4442f139c28310c4b58ccdab84c078"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/material-manifest.json",
+          "bytes": 7436,
+          "sha256": "eeba426bd6b24a89f7af4f1640ea0f83e6d73ba382ddb2cbeced37fa7ae911a0",
+          "git_blob_sha": "b45ce7c49e4f11a07463471112f3e2387d5ab560"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/materials/detail_diffuse_128.png",
+          "bytes": 37075,
+          "sha256": "832f5c2327edeb16acc34f72754c53426b327e498cf9bb32c9b56895f44cb9b8",
+          "git_blob_sha": "5057e06cc4cf44bcc0a993948d3e3e1717f04b2e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/materials/detail_diffuse_256.png",
+          "bytes": 139706,
+          "sha256": "6ab3e5c3bc0ce3e838bdc92b125a883e708c25c3d555c63ecdbe7840af8e87d7",
+          "git_blob_sha": "cec0097d3d7feae4962d0213e8e9daf06b979d41"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/materials/ground_diffuse_128.png",
+          "bytes": 33847,
+          "sha256": "11c65f03e99cf9bc87d6c73f6f2fe621e2b2bef86f84e85977d7b8e13692d759",
+          "git_blob_sha": "f6c21b29a51519b39b756704c3f127114b2ff27d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/materials/ground_diffuse_256.png",
+          "bytes": 129745,
+          "sha256": "3458a8680afe1b76d3a5f4c46a509869961989ca9810c5a012eef2cfadb9c1a4",
+          "git_blob_sha": "2eae68689743fa7dcaa6d1932e6b14ad4dbffd7c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/materials/structure_diffuse_128.png",
+          "bytes": 33176,
+          "sha256": "d6f8c98e5715acf7b5df73f61259285951db20acd7073051daaf41bd5c3c685b",
+          "git_blob_sha": "fcebf3645fc492a194d9078127ffce597658fd4a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/materials/structure_diffuse_256.png",
+          "bytes": 120473,
+          "sha256": "e3728e56460710dd3b0116dd3de7dd48c92772f8a3a69c0e06b3cb3706dd0a2c",
+          "git_blob_sha": "07a6c91707c511350b17dc675179ff2fa1bcda4e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/materials/wall_diffuse_128.png",
+          "bytes": 41889,
+          "sha256": "f3ae94fbf417aa66eb3382e13c2b1a5d331aadd8580f35730a32e3ee07be9285",
+          "git_blob_sha": "ef74595da1b1bf88d57d1be2f237dbf1ce70dc64"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/materials/wall_diffuse_256.png",
+          "bytes": 157259,
+          "sha256": "5c16830dc710bf45efe734f507efba763bd83f8b659f2b569e2c75b1618d0a4d",
+          "git_blob_sha": "dc136eb55b644ec608f7ca6c0292d12fe3b96608"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/prompts/material_atlas_v1.txt",
+          "bytes": 2445,
+          "sha256": "a56f2f925e99cd73ae9dd11d6edda5cf960a234568441dd5074588ee18cb8f2f",
+          "git_blob_sha": "a3dc52be059c48017e12fa839b988f7873971c5c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/transforming-machine-interior/theme-manifest.json",
+          "bytes": 7166,
+          "sha256": "db6b0f12643f98273db73a81be4c4c3340651dfceab14c8b158e0e77cd7cebbd",
+          "git_blob_sha": "734e7cb9ad55959a9a204c167e892abad013a22a"
+        }
+      ]
+    }
+  ]
+}

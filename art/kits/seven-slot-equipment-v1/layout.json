@@ -1,0 +1,225 @@
+{
+  "version": "0.1-preview",
+  "status": "approved for art handoff; not runtime integrated",
+  "canvas": {
+    "width": 320,
+    "height": 240,
+    "coordinate_origin": "top-left",
+    "units": "native pixels",
+    "bounds": "x/y inclusive; x+width/y+height exclusive"
+  },
+  "rendering": {
+    "scale_filter": "nearest",
+    "integer_scaling_only": true,
+    "recommended_icon_size": [
+      16,
+      16
+    ]
+  },
+  "preview": "previews/equipment-320x240.png",
+  "panel": "assets/panel-320x240.png",
+  "silhouette": {
+    "asset": "assets/silhouette-54x124.png",
+    "rect": {
+      "x": 133,
+      "y": 75,
+      "width": 54,
+      "height": 124
+    },
+    "has_transparency": true,
+    "note": "Separately generated clean alpha variant; not pixel-identical to baked preview silhouette."
+  },
+  "title": {
+    "text": "EQUIPMENT",
+    "rect": {
+      "x": 112,
+      "y": 10,
+      "width": 96,
+      "height": 11
+    },
+    "asset": "assets/title-equipment.png"
+  },
+  "slot_count": 7,
+  "slots": [
+    {
+      "id": "head",
+      "label": "HEAD",
+      "rect": {
+        "x": 142,
+        "y": 28,
+        "width": 36,
+        "height": 35
+      },
+      "asset": "assets/slot-head.png",
+      "icon_rect": {
+        "x": 152,
+        "y": 37,
+        "width": 16,
+        "height": 16
+      },
+      "label_rect": {
+        "x": 148,
+        "y": 64,
+        "width": 24,
+        "height": 7
+      },
+      "label_asset": "assets/label-head.png"
+    },
+    {
+      "id": "body",
+      "label": "BODY",
+      "rect": {
+        "x": 70,
+        "y": 75,
+        "width": 39,
+        "height": 37
+      },
+      "asset": "assets/slot-body.png",
+      "icon_rect": {
+        "x": 81,
+        "y": 85,
+        "width": 16,
+        "height": 16
+      },
+      "label_rect": {
+        "x": 77,
+        "y": 113,
+        "width": 25,
+        "height": 7
+      },
+      "label_asset": "assets/label-body.png"
+    },
+    {
+      "id": "left_hand",
+      "label": "LEFT HAND",
+      "rect": {
+        "x": 70,
+        "y": 132,
+        "width": 39,
+        "height": 37
+      },
+      "asset": "assets/slot-left_hand.png",
+      "icon_rect": {
+        "x": 81,
+        "y": 142,
+        "width": 16,
+        "height": 16
+      },
+      "label_rect": {
+        "x": 64,
+        "y": 170,
+        "width": 49,
+        "height": 7
+      },
+      "label_asset": "assets/label-left_hand.png"
+    },
+    {
+      "id": "right_hand",
+      "label": "RIGHT HAND",
+      "rect": {
+        "x": 211,
+        "y": 132,
+        "width": 39,
+        "height": 37
+      },
+      "asset": "assets/slot-right_hand.png",
+      "icon_rect": {
+        "x": 222,
+        "y": 142,
+        "width": 16,
+        "height": 16
+      },
+      "label_rect": {
+        "x": 205,
+        "y": 170,
+        "width": 53,
+        "height": 7
+      },
+      "label_asset": "assets/label-right_hand.png"
+    },
+    {
+      "id": "ring_1",
+      "label": "RING 1",
+      "rect": {
+        "x": 110,
+        "y": 182,
+        "width": 29,
+        "height": 29
+      },
+      "asset": "assets/slot-ring_1.png",
+      "icon_rect": {
+        "x": 116,
+        "y": 188,
+        "width": 16,
+        "height": 16
+      },
+      "label_rect": {
+        "x": 110,
+        "y": 211,
+        "width": 30,
+        "height": 7
+      },
+      "label_asset": "assets/label-ring_1.png"
+    },
+    {
+      "id": "ring_2",
+      "label": "RING 2",
+      "rect": {
+        "x": 181,
+        "y": 182,
+        "width": 29,
+        "height": 29
+      },
+      "asset": "assets/slot-ring_2.png",
+      "icon_rect": {
+        "x": 187,
+        "y": 188,
+        "width": 16,
+        "height": 16
+      },
+      "label_rect": {
+        "x": 181,
+        "y": 211,
+        "width": 30,
+        "height": 7
+      },
+      "label_asset": "assets/label-ring_2.png"
+    },
+    {
+      "id": "amulet",
+      "label": "AMULET",
+      "rect": {
+        "x": 213,
+        "y": 75,
+        "width": 37,
+        "height": 37
+      },
+      "asset": "assets/slot-amulet.png",
+      "icon_rect": {
+        "x": 223,
+        "y": 85,
+        "width": 16,
+        "height": 16
+      },
+      "label_rect": {
+        "x": 213,
+        "y": 113,
+        "width": 35,
+        "height": 7
+      },
+      "label_asset": "assets/label-amulet.png"
+    }
+  ],
+  "semantics": {
+    "left_hand": "left-side UI slot; confirm player/anatomical mapping before binding gameplay",
+    "right_hand": "right-side UI slot; confirm player/anatomical mapping before binding gameplay",
+    "rings": "two distinct accessory slots, not duplicated IDs"
+  },
+  "integration_notes": [
+    "This layout intentionally contains only seven requested slots.",
+    "Existing repo reportedly has eleven slots and a stats panel; do not treat this kit as a same-size drop-in for that layout.",
+    "Cropped frames and labels are opaque, not alpha-clean. The panel and silhouette are clean standalone assets.",
+    "Full baked preview is the exact visual reference. Modular panel and silhouette are separately generated variants and may differ subtly.",
+    "Draw engine bitmap labels over background for localization/readability rather than relying on baked labels."
+  ]
+}

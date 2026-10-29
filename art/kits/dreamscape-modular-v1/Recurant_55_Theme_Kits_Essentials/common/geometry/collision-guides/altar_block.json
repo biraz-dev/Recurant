@@ -1,0 +1,20 @@
+{
+  "asset": "altar_block",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.7,
+        0.0
+      ],
+      "size": [
+        1.3,
+        1.4,
+        1.0
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/altar_block__GUIDE.glb"
+}

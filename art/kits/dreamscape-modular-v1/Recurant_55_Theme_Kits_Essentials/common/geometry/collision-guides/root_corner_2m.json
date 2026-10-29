@@ -1,0 +1,20 @@
+{
+  "asset": "root_corner_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.403918,
+        0.224507,
+        0.392852
+      ],
+      "size": [
+        1.240301,
+        0.516068,
+        1.236189
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/root_corner_2m__GUIDE.glb"
+}

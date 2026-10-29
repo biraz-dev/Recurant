@@ -1,0 +1,144 @@
+{
+  "id": "basalt-underworld",
+  "title": "Basalt Underworld",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 20,
+  "archives": [
+    {
+      "id": "basalt-underworld-001",
+      "bytes": 1696685,
+      "sha256": "381f9946b6d46b526172c50850475022e341c95b728080fcc2b66057a081ce34",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/basalt-underworld.volume-001.zip",
+          "bytes": 1696685,
+          "sha256": "381f9946b6d46b526172c50850475022e341c95b728080fcc2b66057a081ce34",
+          "git_blob_sha": "baf00d5d9e8f3eed06c479983234f8238f330ea9"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/CLAUDE_README.md",
+          "bytes": 7867,
+          "sha256": "e05c13654c6af2664324d39b83b8ce1643d9629ed23aa2d3750d6b513652832b",
+          "git_blob_sha": "da309c9abda25d9c43b950d8f55e94db1fa0e069"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "1a83483ba98aeebdcd5bbd076005db72ec712137438d73b4dd2097590231afbd",
+          "git_blob_sha": "92474e929dfbf562ed1d390c816455253e9c650c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/assembly/collision-navigation.json",
+          "bytes": 10419,
+          "sha256": "a602407c8212ab1738b7dc9a32b5d7fa36e8ade3118798d40ff8f04a002a02fb",
+          "git_blob_sha": "e3098b2899da79bd5a9eb6291407602f65b08db3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/assembly/layout.json",
+          "bytes": 14265,
+          "sha256": "61523b3fbcccdf8146fa25f35c8aae9640840a58557711de1cba6e8aea37055e",
+          "git_blob_sha": "f5d00b2ffeb802d87b3c3ae65cb6b78a9bd6e7ec"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/assembly/native_320x240.png",
+          "bytes": 125640,
+          "sha256": "264abddbc911885195536165cbfccac10efdb73f18dac3c7588ce4f9b35a1887",
+          "git_blob_sha": "6ed9b95129d63d92f9e67d096f256cf0fa7d7455"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/assembly/showcase.glb",
+          "bytes": 755056,
+          "sha256": "bd2b995a2a887af5a532515f7f7c1b1b8809e01b4d228bdba05b5b0b6405adaf",
+          "git_blob_sha": "3af36c77e66d2681d7e804abbf587faa1b0fef12"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/concept/reference_native_320x240.png",
+          "bytes": 134496,
+          "sha256": "c35494a683cac74560e6243f77101423800b5728b6af30ca216a97cca7a60262",
+          "git_blob_sha": "e8459f04b41160e3d83cfaa47a0bf3ca0bb633c3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "ae3680d7026d47f05d596710728de8adee16bf911bfa8ea0e62e3be5883a703c",
+          "git_blob_sha": "4a26043a190f3d8eb6d0684c540f8caaa55a6872"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/material-manifest.json",
+          "bytes": 7257,
+          "sha256": "171a8cc575e3187a32fab15d58399bbea0e4c63528e002830694563c8ce946f5",
+          "git_blob_sha": "6c6ff2d1763cca7d05932b499fa1609341238b4f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/materials/detail_diffuse_128.png",
+          "bytes": 43691,
+          "sha256": "04bcc26fffb905113033ddd545769defff5cdde0151aaac89396c1397effb718",
+          "git_blob_sha": "860e543c98b54b191e7d1b42c347a8b02a4e0ddb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/materials/detail_diffuse_256.png",
+          "bytes": 166280,
+          "sha256": "1cbc05b604bcfde2c0b0fd375bab5eb1df9cb225a508b56672d7d96c53c114d3",
+          "git_blob_sha": "b6c558f4d777edac379c2462b880a26c7f5acea4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/materials/ground_diffuse_128.png",
+          "bytes": 39442,
+          "sha256": "e7f85f002b89ee0fdc83ecabd18c9f63bc2f845ceba77c22e9ff158a0a0565c2",
+          "git_blob_sha": "1181e8673caa76d14e1cf4c31c4b28ff93186d92"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/materials/ground_diffuse_256.png",
+          "bytes": 150054,
+          "sha256": "47f294c17e3160e23a7916884c0b33d5f5d13fe8e6ead4153ca8584c3c722b0f",
+          "git_blob_sha": "c9a25bb90088ca0cecb119a77488e582cb48a73a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/materials/structure_diffuse_128.png",
+          "bytes": 41052,
+          "sha256": "b1540e3057b8934f6a5ef154f4809255323c7485fa4f948a9df8181ee4b162bb",
+          "git_blob_sha": "d6aeab13cf0257c74f585f5394b2776b14ca2130"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/materials/structure_diffuse_256.png",
+          "bytes": 154776,
+          "sha256": "d38d895a6765acc3b186a6f19b59a3cafeaf5ad03b3be1bf87e75f310fa7d967",
+          "git_blob_sha": "0740eeef2078371135f1bab86aae04bae458e2e9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/materials/wall_diffuse_128.png",
+          "bytes": 37686,
+          "sha256": "f1917bac48c5d878c5131522857674a8e78988f372a3a36667144ca7235bd151",
+          "git_blob_sha": "c936ae76adf9472d8cd29a8017d065ce5beffeb2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/materials/wall_diffuse_256.png",
+          "bytes": 141644,
+          "sha256": "405dde92fd94c3f9d427004ac7d4638b4b4f11dde0a1a8afc06f85f35215471a",
+          "git_blob_sha": "60592941d4de184affe83f8ac26df0887e8d65e2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/prompts/material-atlas.txt",
+          "bytes": 2845,
+          "sha256": "0db982a4950e7cbcc927dbb3ca2472e915426badf0e511d0eabc8fae069460cd",
+          "git_blob_sha": "5567aa0f9f98e8c2001cb93e6bbe748a693d0ff7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/basalt-underworld/theme-manifest.json",
+          "bytes": 7096,
+          "sha256": "7e5f43521c03344c990e9443711bf8cc2122e9f7c5c529564206bbc7dbcf7972",
+          "git_blob_sha": "30e7a05acdb17f2c0ff7474cf5402c35b3a44e81"
+        }
+      ]
+    }
+  ]
+}

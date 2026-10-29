@@ -1,0 +1,20 @@
+{
+  "asset": "root_straight_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.00936,
+        0.165349,
+        0.014947
+      ],
+      "size": [
+        2.053644,
+        0.534229,
+        0.585471
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/root_straight_2m__GUIDE.glb"
+}

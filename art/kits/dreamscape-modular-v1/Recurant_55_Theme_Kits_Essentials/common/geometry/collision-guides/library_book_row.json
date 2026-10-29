@@ -1,0 +1,20 @@
+{
+  "asset": "library_book_row",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        1.1,
+        -0.055
+      ],
+      "size": [
+        1.8,
+        2.2,
+        0.41
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/library_book_row__GUIDE.glb"
+}

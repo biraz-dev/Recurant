@@ -1,0 +1,20 @@
+{
+  "asset": "textile_curtain_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        1.542321,
+        0.0125
+      ],
+      "size": [
+        2.0,
+        3.084641,
+        0.205
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/textile_curtain_2m__GUIDE.glb"
+}

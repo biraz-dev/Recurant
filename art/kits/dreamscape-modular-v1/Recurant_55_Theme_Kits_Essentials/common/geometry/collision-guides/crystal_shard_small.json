@@ -1,0 +1,20 @@
+{
+  "asset": "crystal_shard_small",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.35,
+        -0.0
+      ],
+      "size": [
+        0.3,
+        0.7,
+        0.259808
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/crystal_shard_small__GUIDE.glb"
+}

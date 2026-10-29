@@ -1,0 +1,56 @@
+{
+  "asset": "textile_canopy_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -1.1,
+        1,
+        -0.9
+      ],
+      "size": [
+        0.1,
+        2,
+        0.1
+      ]
+    },
+    {
+      "center": [
+        1.1,
+        1,
+        -0.9
+      ],
+      "size": [
+        0.1,
+        2,
+        0.1
+      ]
+    },
+    {
+      "center": [
+        -1.1,
+        1,
+        0.9
+      ],
+      "size": [
+        0.1,
+        2,
+        0.1
+      ]
+    },
+    {
+      "center": [
+        1.1,
+        1,
+        0.9
+      ],
+      "size": [
+        0.1,
+        2,
+        0.1
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/textile_canopy_2m__GUIDE.glb"
+}

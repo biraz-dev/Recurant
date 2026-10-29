@@ -1,0 +1,150 @@
+{
+  "id": "embroidered-world",
+  "title": "Embroidered World",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "embroidered-world-001",
+      "bytes": 1938586,
+      "sha256": "58e015fc12987e27ed548d5f4f646af6747f0b38fba0f6c53a2b936a906c8556",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/embroidered-world.volume-001.zip",
+          "bytes": 1938586,
+          "sha256": "58e015fc12987e27ed548d5f4f646af6747f0b38fba0f6c53a2b936a906c8556",
+          "git_blob_sha": "69020bf02ea19aae23dbec5ddd577a627c20ad7a"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/CLAUDE_README.md",
+          "bytes": 7725,
+          "sha256": "2f7d98bc723f57f0b006058d3ee6813202dc2d8d8189cbc44330659aa417b141",
+          "git_blob_sha": "d41a799a1ae4d96e04e2abde5ae7e231db68b6b2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/assembly/asset-validation.json",
+          "bytes": 2037,
+          "sha256": "62ae3f56d4c4804e2cffb2800ddf65ced47889b897c3f23fc73c75bb5465e643",
+          "git_blob_sha": "057b5d328e0c7e1bc2a3b21e4278547aabe2b79c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/assembly/collision-navigation.json",
+          "bytes": 11197,
+          "sha256": "81d226a52139f62c516931af8cd4073a9e2eb959c80ab1086424e28e7dc6fc7c",
+          "git_blob_sha": "a7ae21ff7e92153a002d83b08a2c055d0e2b74fb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/assembly/layout.json",
+          "bytes": 13538,
+          "sha256": "12e47d524534dd997111000f4c47d62c8b02d4b3f81b30905a1da279f0c3ef27",
+          "git_blob_sha": "1b27038a5d8060644687dcfa9930f827b8635830"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/assembly/native_320x240.png",
+          "bytes": 161173,
+          "sha256": "18394b344264eca72a2c5d2992d4c913cb394ac0902d7f5381ff574226f1b3d2",
+          "git_blob_sha": "66b971ee8ea702f197b04bd97a7d1f36b1b4ea64"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/assembly/showcase.glb",
+          "bytes": 1046352,
+          "sha256": "c7429031523713fed7db387f0a5258993f5aceff2b45f9a3ab33cbd829f32049",
+          "git_blob_sha": "967495b412036502a423e62f5bdc26c6d3e9e802"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/concept/reference_native_320x240.png",
+          "bytes": 183142,
+          "sha256": "295fb97af32629a14425e151bb97e29df146548c5b516ef4e92b4cacae945dfd",
+          "git_blob_sha": "0b05e80c7985e6989e5da6c38eaeb9cc6246beca"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "2f9516b4e487aad402316ebc7e333f8b81780eec036811a39c1670c1be66aecf",
+          "git_blob_sha": "3568c4050b7e1fa96f14ccb9a63c1a78ab8f2ad4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/material-manifest.json",
+          "bytes": 7415,
+          "sha256": "550b4b9401092a256b804c92ec72fb9ff44029d3ea65e166e39a8d492a6e0d2c",
+          "git_blob_sha": "0ce25bb340ca2681073d2e6f1eeb58288f3787bc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/materials/detail_diffuse_128.png",
+          "bytes": 45429,
+          "sha256": "03b112346cd05bab111d97b15a4db64d1005ef211e09538136b37a42978c5339",
+          "git_blob_sha": "2611db62c7d89a1de72cf4bffcf4000b57d3c2df"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/materials/detail_diffuse_256.png",
+          "bytes": 172666,
+          "sha256": "ac3c68a4c047c76015339a5f46ad81a1b3381daf18cd4551e1572114a7bf2206",
+          "git_blob_sha": "7dd35bb3a3f10c9f899f505af2410081a82d14f4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/materials/ground_diffuse_128.png",
+          "bytes": 43219,
+          "sha256": "bdd6993b7a3b09e2b2a34e3c01f0516fa580fdde18cbcd35c5b5a44fae7e47d7",
+          "git_blob_sha": "ebcea8b6494aeec37f063623069b9fcd778bab37"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/materials/ground_diffuse_256.png",
+          "bytes": 157708,
+          "sha256": "405c3a65282d4426e85fb0fccd56cd3900a090834befcfcf1b8dc28e9a42c5c4",
+          "git_blob_sha": "c664cf8f0ae4827b3dec952d36080417aab5daf9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/materials/structure_diffuse_128.png",
+          "bytes": 46803,
+          "sha256": "364d09b29cc4e99ae693ff5f63d9007c76ff92c93a3b8d05e7adb4d3e521526b",
+          "git_blob_sha": "ce4f2820aa6612e89da79715d5faa8ff0368bd73"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/materials/structure_diffuse_256.png",
+          "bytes": 173241,
+          "sha256": "ae51c5f4a48c8661ff4494c023f43c2635f83971c1dbfbca45aa6485174894ab",
+          "git_blob_sha": "d2a1bf6e165ade0972dd410a2ea7a64c604acce8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/materials/wall_diffuse_128.png",
+          "bytes": 44257,
+          "sha256": "0d7c4fa820243021b6088dd08b32bbbfc1ab088698219c54d2a512ef9c1b2f02",
+          "git_blob_sha": "2d334f6f5b0090c20db21f13d45a49d9a03e8a36"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/materials/wall_diffuse_256.png",
+          "bytes": 167568,
+          "sha256": "872217713c6edb9dfaea21f88b39a30f1c2687b7edf3d788b74f7d61047b7658",
+          "git_blob_sha": "82a9278b08f0a92cdb07a8055857363277fd1547"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/prompts/material-atlas.txt",
+          "bytes": 2927,
+          "sha256": "e810d8147404c60cf2d35a2d538f4193692496cf5ea5a60f9e3c345ee5f49d03",
+          "git_blob_sha": "17fa0049fb00d7ff3331a6bdbb7a9e07887968ac"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/prompts/seam-repair.txt",
+          "bytes": 1332,
+          "sha256": "95a4d23a7947571902c106614cbd63718e000b9355d6e9122e5d39da27836bd2",
+          "git_blob_sha": "7eb13329b4238c34a33e2c22d586e5520d1072ee"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/embroidered-world/theme-manifest.json",
+          "bytes": 6903,
+          "sha256": "06a691d8f00e52cdf7d39b90d465a41d5d5ed13515a7ba9a60ac7f31007a176d",
+          "git_blob_sha": "8dcaa82b5a879dc9e5318553eb5e0f6694106f18"
+        }
+      ]
+    }
+  ]
+}

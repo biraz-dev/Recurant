@@ -1,0 +1,20 @@
+{
+  "asset": "fountain_base",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.275,
+        0.0
+      ],
+      "size": [
+        2.0,
+        0.55,
+        2.0
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/fountain_base__GUIDE.glb"
+}

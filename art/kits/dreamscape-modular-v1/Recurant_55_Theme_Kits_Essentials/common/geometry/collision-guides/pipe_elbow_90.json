@@ -1,0 +1,20 @@
+{
+  "asset": "pipe_elbow_90",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.181127,
+        0.16,
+        0.818873
+      ],
+      "size": [
+        0.679515,
+        0.304338,
+        0.679515
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/pipe_elbow_90__GUIDE.glb"
+}

@@ -1,0 +1,317 @@
+{
+  "schema": "recurant.material-kit.v1",
+  "theme": "fungus-wonderland",
+  "source": "art_sources/material_atlas_source.png",
+  "generation_tool": "built-in image_gen",
+  "status": "Production diffuse textures delivered and raster-reviewed; final in-engine acceptance remains.",
+  "layout": "2x2 quadrant atlas, wall top-left, ground top-right, structure bottom-left, detail bottom-right",
+  "materials": [
+    {
+      "slot": "wall",
+      "name": "Cool blue-slate cave rock with muted sea-green lichen",
+      "intended_surface": "Cool blue-slate cave rock with muted sea-green lichen",
+      "files": {
+        "256": "materials/wall_diffuse_256.png",
+        "128": "materials/wall_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "bounded_span_original_not_seamless",
+      "qa": {
+        "source_crop_px": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 24.418,
+          "vertical": 20.112
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 20.766,
+          "vertical": 18.84
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "repeat_alternative": {
+        "name": "Granular blue-slate cave stone with tiny muted sage lichen patches, no large cracks",
+        "files": {
+          "256": "materials/wall_repeat_diffuse_256.png",
+          "128": "materials/wall_repeat_diffuse_128.png"
+        },
+        "colorspace": "sRGB",
+        "semantic": "diffuse color; not physically calibrated albedo",
+        "actual_size_px": [
+          256,
+          256
+        ],
+        "alpha": false,
+        "repeat_classification": "visually_usable_repeat_not_mathematically_certified",
+        "source": "art_sources/repeat_alternatives_pair_source.png",
+        "source_quadrant_px": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "processing": "Imagegen targeted quieter-motif correction; quadrant nearest-resampled to320 square, crop-only edge-similarity selection, nearest-resampled to256 and128. No pixel blending, painting, mirroring or synthetic map derivation.",
+        "crop_in_320_intermediate_px": [
+          0,
+          0,
+          320,
+          320
+        ],
+        "qa": {
+          "before_crop_metrics": {
+            "edge_horizontal": 29.078,
+            "edge_vertical": 33.9,
+            "internal_horizontal": 30.276,
+            "internal_vertical": 28.313,
+            "edge_to_internal_ratio_horizontal": 0.96,
+            "edge_to_internal_ratio_vertical": 1.197
+          },
+          "after_crop_metrics": {
+            "edge_horizontal": 23.477,
+            "edge_vertical": 25.613,
+            "internal_horizontal": 29.598,
+            "internal_vertical": 27.615,
+            "edge_to_internal_ratio_horizontal": 0.793,
+            "edge_to_internal_ratio_vertical": 0.928
+          },
+          "repeat_preview": "qa/repeat_alternatives_2x2.png",
+          "visual_review": "Visually inspected actual256-pixel texture repeated2x2. No dominant hard boundary or tonal step; painterly material identity retained. Fine motif discontinuities can remain, especially close-up. Use alternative on repeated wall/ground spans; keep original for architectural or landmark detail.",
+          "mathematically_seamless_certified": false,
+          "limits": "Crop can lower boundary color mismatch, but does not prove motif continuity or equal boundary pixels. In-engine distance, UV and lighting acceptance required."
+        }
+      },
+      "preferred_files": {
+        "256": "materials/wall_repeat_diffuse_256.png",
+        "128": "materials/wall_repeat_diffuse_128.png"
+      },
+      "preferred_usage": "Use repeat alternative on broad repeating surfaces; use original files on bounded slabs/bays for richer macro detail."
+    },
+    {
+      "slot": "ground",
+      "name": "Broad worn grey-blue cavern flagstones with thin damp green joints",
+      "intended_surface": "Broad worn grey-blue cavern flagstones with thin damp green joints",
+      "files": {
+        "256": "materials/ground_diffuse_256.png",
+        "128": "materials/ground_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "bounded_span_original_not_seamless",
+      "qa": {
+        "source_crop_px": [
+          627,
+          0,
+          1254,
+          627
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 16.344,
+          "vertical": 20.962
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 16.857,
+          "vertical": 18.285
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "repeat_alternative": {
+        "name": "Compact small blue-grey slate gravel with sparse sage flecks, no giant flagstones",
+        "files": {
+          "256": "materials/ground_repeat_diffuse_256.png",
+          "128": "materials/ground_repeat_diffuse_128.png"
+        },
+        "colorspace": "sRGB",
+        "semantic": "diffuse color; not physically calibrated albedo",
+        "actual_size_px": [
+          256,
+          256
+        ],
+        "alpha": false,
+        "repeat_classification": "visually_usable_repeat_not_mathematically_certified",
+        "source": "art_sources/repeat_alternatives_pair_source.png",
+        "source_quadrant_px": [
+          627,
+          0,
+          1254,
+          627
+        ],
+        "processing": "Imagegen targeted quieter-motif correction; quadrant nearest-resampled to320 square, crop-only edge-similarity selection, nearest-resampled to256 and128. No pixel blending, painting, mirroring or synthetic map derivation.",
+        "crop_in_320_intermediate_px": [
+          0,
+          0,
+          320,
+          320
+        ],
+        "qa": {
+          "before_crop_metrics": {
+            "edge_horizontal": 37.43,
+            "edge_vertical": 34.699,
+            "internal_horizontal": 33.583,
+            "internal_vertical": 34.363,
+            "edge_to_internal_ratio_horizontal": 1.115,
+            "edge_to_internal_ratio_vertical": 1.01
+          },
+          "after_crop_metrics": {
+            "edge_horizontal": 27.661,
+            "edge_vertical": 30.715,
+            "internal_horizontal": 32.688,
+            "internal_vertical": 33.573,
+            "edge_to_internal_ratio_horizontal": 0.846,
+            "edge_to_internal_ratio_vertical": 0.915
+          },
+          "repeat_preview": "qa/repeat_alternatives_2x2.png",
+          "visual_review": "Visually inspected actual256-pixel texture repeated2x2. No dominant hard boundary or tonal step; painterly material identity retained. Fine motif discontinuities can remain, especially close-up. Use alternative on repeated wall/ground spans; keep original for architectural or landmark detail.",
+          "mathematically_seamless_certified": false,
+          "limits": "Crop can lower boundary color mismatch, but does not prove motif continuity or equal boundary pixels. In-engine distance, UV and lighting acceptance required."
+        }
+      },
+      "preferred_files": {
+        "256": "materials/ground_repeat_diffuse_256.png",
+        "128": "materials/ground_repeat_diffuse_128.png"
+      },
+      "preferred_usage": "Use repeat alternative on broad repeating surfaces; use original files on bounded slabs/bays for richer macro detail."
+    },
+    {
+      "slot": "structure",
+      "name": "Ivory mushroom-stem fibrous skin with pale sage mottling",
+      "intended_surface": "Ivory mushroom-stem fibrous skin with pale sage mottling",
+      "files": {
+        "256": "materials/structure_diffuse_256.png",
+        "128": "materials/structure_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "bounded_span_original_not_seamless",
+      "qa": {
+        "source_crop_px": [
+          0,
+          627,
+          627,
+          1254
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 20.198,
+          "vertical": 18.32
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 17.342,
+          "vertical": 9.287
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "preferred_usage": "Use on bounded structural/prop surfaces; clamp or align structural breaks instead of unrestricted repeat."
+    },
+    {
+      "slot": "detail",
+      "name": "Radial mushroom gills in pearl, sage and muted turquoise, decorative material not a whole mushroom",
+      "intended_surface": "Radial mushroom gills in pearl, sage and muted turquoise, decorative material not a whole mushroom",
+      "files": {
+        "256": "materials/detail_diffuse_256.png",
+        "128": "materials/detail_diffuse_128.png"
+      },
+      "actual_size_px": [
+        256,
+        256
+      ],
+      "alternative_size_px": [
+        128,
+        128
+      ],
+      "format": "PNG RGB8",
+      "colorspace": "sRGB",
+      "semantic": "diffuse color only; not physically calibrated albedo",
+      "alpha": false,
+      "repeat_classification": "nonrepeat_detail",
+      "qa": {
+        "source_crop_px": [
+          627,
+          627,
+          1254,
+          1254
+        ],
+        "resampling": "NEAREST",
+        "edge_mean_absolute_difference_0_255": {
+          "horizontal": 10.736,
+          "vertical": 32.348
+        },
+        "internal_adjacent_mean_difference": {
+          "horizontal": 19.325,
+          "vertical": 17.242
+        },
+        "repeat_preview": "qa/repeat_2x2.png",
+        "visual_review": "Original atlas and 2x2 repeat sheet visually reviewed. Surface identity/color pass; motif breaks may occur at repeat boundaries. Preserve as bounded-span original; use preferred_files for large wall/ground repeats where present.",
+        "known_limitations": [
+          "Generated opposing edges are not mathematically matched. Edge and motif discontinuities may be visible; not certified seamless.",
+          "Contains painted surface shading, but no intentionally baked cast shadows.",
+          "No normal, roughness, metallic, AO, height or emission maps are supplied."
+        ]
+      },
+      "preferred_usage": "Use on bounded structural/prop surfaces; clamp or align structural breaks instead of unrestricted repeat."
+    }
+  ],
+  "import_recommendation": {
+    "filter": "nearest for pixel aesthetic; test trilinear on distant surfaces if shimmer occurs",
+    "wrap": "repeat for candidate structural textures only after seam acceptance; clamp for one-off detail patches",
+    "texture_resolution": "256 primary; 128 alternative",
+    "base_texel_density": "128 px/m at 2 m repeats for 256 textures"
+  },
+  "qa_notes": "All original 2x2 repeat sheets reviewed; original macro motifs are bounded-span materials with imperfect repeat continuity. Targeted imagegen edits supplied quieter wall/ground alternatives, then crop-only edge selection and nearest resize; all alternative 2x2 sheets reviewed as visually usable repeats. None is mathematically seamless-certified. No fake PBR maps.",
+  "raster_status": "FROZEN",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

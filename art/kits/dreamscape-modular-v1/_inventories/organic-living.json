@@ -1,0 +1,174 @@
+{
+  "id": "organic-living",
+  "title": "Living Tissue Labyrinth",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "organic-living-001",
+      "bytes": 2115956,
+      "sha256": "54e7549764fb35e6a65cf150db9405ef1584147e728ff1d25959134cdbb907ae",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/organic-living.volume-001.zip",
+          "bytes": 2115956,
+          "sha256": "54e7549764fb35e6a65cf150db9405ef1584147e728ff1d25959134cdbb907ae",
+          "git_blob_sha": "d2b5d58ebd1f0a209acada3da34cb133d4b73619"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/CLAUDE_README.md",
+          "bytes": 7578,
+          "sha256": "9c6858f93b34ea4e35fd94581d85220095993816dfef138c9ef07343932d6843",
+          "git_blob_sha": "acbb2767cdc164d5cc8a222641eaadcb13a14519"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "4afe76f0c2f3c6753a80dec225bfdb9b9740503ea85c557c1c7be3ee3da770cb",
+          "git_blob_sha": "6ea6fee2500f7c9f33cee99596d1d9a64a5e8185"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/assembly/collision-navigation.json",
+          "bytes": 10541,
+          "sha256": "9e4a736a7cbc73ff54eaccb9f76c3b9c30ebb8bcad9df65a7ec830b35b5991ff",
+          "git_blob_sha": "555ec40b4afbdb24744c13da9bae1be1bfc91cc1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/assembly/layout.json",
+          "bytes": 13819,
+          "sha256": "4d26c72de236d090c3bf2207d58c5b0332dc685bb582d25de938ed2f216e79f6",
+          "git_blob_sha": "05430b14256b9231ce3b778f8e68a89625dcf5bf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/assembly/native_320x240.png",
+          "bytes": 148817,
+          "sha256": "53f5168b27d47ba91d066fea43650b9342816faf230dc9aa89a52ad6f374589b",
+          "git_blob_sha": "14bb956d60d544368f8336d4a18db2d5a1f45d70"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/assembly/showcase.glb",
+          "bytes": 765004,
+          "sha256": "08edb697acdcbbf7227566b1487fd533b310124dfc6cf8408d3fdc001b442877",
+          "git_blob_sha": "ea474b82c0808e5fc07ae7931f14ef302b44283d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/concept/reference_native_320x240.png",
+          "bytes": 157488,
+          "sha256": "45c66fdf7bea1840967cd2fa43e10c0aa709969dd9d512276f78728cec8cf1d2",
+          "git_blob_sha": "eaff54f4d1ea1d192233a5f565af4b39d60b3f51"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "4d8c4603517eb22e381b7614edaf88baa3519ce6bdf14eef645194fbd18956e8",
+          "git_blob_sha": "85a4f78b04dabc78db1bbdcd5b8726f30b341e54"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/material_manifest.json",
+          "bytes": 14243,
+          "sha256": "e121d45f022ad208d063d5a085e41071b0e0c8df4d44a494df00b8eab81ea4a3",
+          "git_blob_sha": "a86d8cd7f406d54bc7bad1bb4d9674c216496c1d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/materials/detail_diffuse_128.png",
+          "bytes": 39492,
+          "sha256": "abeb6d6a469213c5bbc63b60aee63e3f45b92e1faa17f16048ddf062f40d91c4",
+          "git_blob_sha": "db2f8bd3ceb4bc86e4af22d2ab1c4a2ab52852a5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/materials/detail_diffuse_256.png",
+          "bytes": 144781,
+          "sha256": "6617a52c9be0792e842ce1dc8e3038004666bb7b3980e8e80e3be87caee03eb6",
+          "git_blob_sha": "1e15d7b7c65fd006198f7d4d3eae6b39d9b881b6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/materials/ground_diffuse_128.png",
+          "bytes": 41295,
+          "sha256": "da6f579338d83c7925365e5e953ce486999b5d82fd11c7671efb910c919ed74c",
+          "git_blob_sha": "4c576c577f74b615651b03a45c692c7cce88e543"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/materials/ground_diffuse_256.png",
+          "bytes": 152652,
+          "sha256": "6f62879439cfa6c6944e549653a36209c7ffe0448a8ccb34732fc7ed47d75a35",
+          "git_blob_sha": "938ffd921fb835d577adaa44b2cb3e2da9d23c79"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/materials/ground_repeat_diffuse_128.png",
+          "bytes": 42737,
+          "sha256": "080b3c61e6506a122c419354d945fe335222dd902ecd94ae0a3713bdd597aaf7",
+          "git_blob_sha": "b569a0d4d3b8ba51d4cfbb9b4734a1558bbaa5b3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/materials/ground_repeat_diffuse_256.png",
+          "bytes": 160104,
+          "sha256": "077dee9130d8d6eddc5675bca321147bcfdf354f8ee5a013efebcce5ead37419",
+          "git_blob_sha": "6b5a68b6c18aba03e7e03c3b187d0c234cbe9207"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/materials/structure_diffuse_128.png",
+          "bytes": 40871,
+          "sha256": "193465077ecebe1e69e21dee4fdb0f75529cd1ec6a796c068abdba20e1773f50",
+          "git_blob_sha": "c062e9a21e58f0cac49e28d2643385024537ea4e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/materials/structure_diffuse_256.png",
+          "bytes": 150237,
+          "sha256": "df5c9708e79278d364855d1b2c1e34a1fc0c2e74134e9c9bdb424f1c3a362adc",
+          "git_blob_sha": "c96a190104f5f43e905aca9f68a378f3423ff85c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/materials/wall_diffuse_128.png",
+          "bytes": 37981,
+          "sha256": "279b1b2aeb87c11443a11e7b2f3f7d964c461b3f3abe289f4f1279127f539518",
+          "git_blob_sha": "ca28bc22cc012298b4d8f2a8ad0ed473ea1ec5cf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/materials/wall_diffuse_256.png",
+          "bytes": 138996,
+          "sha256": "82dfc2b375e9f2776d2e8a17307a7f627343ebcc7ba7b4b38c4de0fa0e8ffe03",
+          "git_blob_sha": "39697f26ba5aa4a124482c0c6f29f73128329b1b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/materials/wall_repeat_diffuse_128.png",
+          "bytes": 41343,
+          "sha256": "b824274bcc5be7b558bde9d3826d580d8f62630e9295801a93d6af9b3e98fde4",
+          "git_blob_sha": "3ca07e95412ad3cfc2521dbdff64ebd5cc6725bf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/materials/wall_repeat_diffuse_256.png",
+          "bytes": 153096,
+          "sha256": "32ff82ddb2d37a530bb4abb368e194f8d7433a6fdd4243b5d3c0f2dba60535d0",
+          "git_blob_sha": "cf8a261dfda0b6d9ee83f68605c748f1e47b7a7e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/prompts/material_atlas_prompt.txt",
+          "bytes": 1863,
+          "sha256": "05bd6db53552cff045e2944f3f1db1f2b03ca4e713a5ac1d1d503d0dd680cc55",
+          "git_blob_sha": "25a9b741dbc7c3c44a2eb6ca8ec4a1db67919496"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1942,
+          "sha256": "c91353a2e2ae74d1e0a8760598cc6ab42aac19109d6b7f995e5385b7c259f4eb",
+          "git_blob_sha": "93e7382d4a242295b7cb7a1430372c6bbdcd58fe"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/organic-living/theme-manifest.json",
+          "bytes": 6802,
+          "sha256": "14f829fb5bf2769d86e307c46c31c6961f47cc3cbc1b136a18c4570e1db71f4d",
+          "git_blob_sha": "a2e3b4d3cb4672ddde6a53fa44a57254f236f2e4"
+        }
+      ]
+    }
+  ]
+}

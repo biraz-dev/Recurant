@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "crescent-iron-warship",
+  "title": "Crescent Iron Warship",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/crescent-iron-warship/materials/wall_diffuse_256.png",
+      "low_memory_basecolor": "themes/crescent-iron-warship/materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "monolithic layered black metal panels with fine angular incisions"
+    },
+    "ground": {
+      "basecolor": "themes/crescent-iron-warship/materials/ground_diffuse_256.png",
+      "low_memory_basecolor": "themes/crescent-iron-warship/materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "worn dark graphite metal slabs with narrow straight dark joins"
+    },
+    "structure": {
+      "basecolor": "themes/crescent-iron-warship/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/crescent-iron-warship/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "forged black steel with sweeping pale graphite stress grain, no organic shapes"
+    },
+    "detail": {
+      "basecolor": "themes/crescent-iron-warship/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/crescent-iron-warship/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "flat menacing black machine panel with minimal narrow deep-red recessed channels and sharp triangular subdivisions, original no insignia"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_grate_2m",
+      "role": "walkable_floor",
+      "notes": "Grate 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "floor_plain_2m",
+      "role": "distinctive_prop",
+      "notes": "Plain 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "machine_wall_bulkhead",
+      "role": "structure",
+      "notes": "Industrial bulkhead wall with modeled perimeter structure."
+    },
+    {
+      "module_id": "machine_doorframe",
+      "role": "structure",
+      "notes": "Square bulkhead doorway with 1.4\u00d72.9m clear aperture."
+    },
+    {
+      "module_id": "machine_console",
+      "role": "distinctive_prop",
+      "notes": "Waist-high console with sloped top and three raised controls."
+    },
+    {
+      "module_id": "gear_16tooth",
+      "role": "distinctive_prop",
+      "notes": "16-tooth spur gear, real toothed silhouette and raised hub."
+    },
+    {
+      "module_id": "pipe_valve_riser",
+      "role": "distinctive_prop",
+      "notes": "Vertical pipe riser with front-mounted handwheel (static prop)."
+    },
+    {
+      "module_id": "vent_louver",
+      "role": "distinctive_prop",
+      "notes": "Twelve physical louver slats over a framed backing plate."
+    },
+    {
+      "module_id": "tank_vertical",
+      "role": "distinctive_prop",
+      "notes": "Cylindrical industrial vessel on square plinth."
+    },
+    {
+      "module_id": "industrial_ladder_3m",
+      "role": "distinctive_prop",
+      "notes": "3m ladder, 10 rungs; visual only until gameplay ladder support exists."
+    },
+    {
+      "module_id": "coil_stack",
+      "role": "distinctive_prop",
+      "notes": "Seven separate disc ribs around a central shaft."
+    },
+    {
+      "module_id": "gate_leaf_barred",
+      "role": "distinctive_prop",
+      "notes": "Narrow barred gate with separate bars and framing."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/crescent-iron-warship/assembly/layout.json",
+    "glb": "themes/crescent-iron-warship/assembly/showcase.glb",
+    "preview": "themes/crescent-iron-warship/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 9842,
+      "triangles": 5030,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "aab8bbe7b4e21a550d5d8f40b714db0aef9bad372ba8826f65b55210196e8552",
+        "showcase.glb": "cb231e27a16a6da03e65bc3fccf15b2598e162afda7676a12e8990da09a962f5"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "b1b060754e99fd4a72b9dad2fadd29bdcf926e58b63612ea335391c5ef2c46c8"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/crescent-iron-warship/material-manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

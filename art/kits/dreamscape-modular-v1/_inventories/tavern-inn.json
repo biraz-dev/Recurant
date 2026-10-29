@@ -1,0 +1,144 @@
+{
+  "id": "tavern-inn",
+  "title": "Tavern Inn",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 20,
+  "archives": [
+    {
+      "id": "tavern-inn-001",
+      "bytes": 1662547,
+      "sha256": "462d791058faf7db003e6d526af1ad9cb9a2e0012eaff9540dff7f6f68a76537",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/tavern-inn.volume-001.zip",
+          "bytes": 1662547,
+          "sha256": "462d791058faf7db003e6d526af1ad9cb9a2e0012eaff9540dff7f6f68a76537",
+          "git_blob_sha": "1e5878e552fb2e2ea8c93419d21182b34975f2ae"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/CLAUDE_README.md",
+          "bytes": 7697,
+          "sha256": "ec9100f37e803e0b4034b2fd3e94a44e4ddff1a2d228d8b3f09f0dfcda7d1dc7",
+          "git_blob_sha": "ff94e8b8f92f1543b8abe1c6af2b17d1159e656f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "20183990c33dfd1af4e92ef878151c69e809a55f62c8875c315767a2cb119af8",
+          "git_blob_sha": "b0c903bbe9b9a1699d330d1862c85e3f88c061ed"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/assembly/collision-navigation.json",
+          "bytes": 10400,
+          "sha256": "e76306c6222d2faa7ceffb53574f2faa8c047dc08ec42aae1a93b66506bde3b7",
+          "git_blob_sha": "d3b668ed785ac05b556a921cbccfd4469d90e0fb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/assembly/layout.json",
+          "bytes": 13554,
+          "sha256": "b7f41379466f757262f57ada709f49f7672b1133771534eee9af25d60388a83f",
+          "git_blob_sha": "83a439b07d11eb5822142aa0b14bc4e8e2b7e057"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/assembly/native_320x240.png",
+          "bytes": 129586,
+          "sha256": "e73febcf1db9028c54a06bba3d4a7b208349c725b1694bb0a3db3ff0ea1fb994",
+          "git_blob_sha": "728da532446b4db7b8d253863fe6bd25facc323d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/assembly/showcase.glb",
+          "bytes": 856988,
+          "sha256": "a38b41ecaeed445afb372ed65fbc005082117fbf24239b32f3288970518592a0",
+          "git_blob_sha": "de677458b14220d677c8d22931beef7efd598aab"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/concept/reference_native_320x240.png",
+          "bytes": 152046,
+          "sha256": "568a065844b3bdced7f57b33dd60f195e8f05d9ad0483989cf7e9c292155b87d",
+          "git_blob_sha": "1abac852aba7bc838e8f11780026f695a38c322a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "d6f5ba922e6b8227242f11e350cbd91a218df7c689acf0bb3f5c4971bed38dc5",
+          "git_blob_sha": "e43b342b1fce7173ebdcd97d9730f766088e1644"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/material-manifest.json",
+          "bytes": 7199,
+          "sha256": "4f017b202d0e25598c20ae28ba49f5111115b1003729f1e0ddbbe44ed6721420",
+          "git_blob_sha": "970334a365c5b244f7ab4f98e77b8895540dda45"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/materials/detail_diffuse_128.png",
+          "bytes": 42127,
+          "sha256": "29b916c3076d35d6c2e9d966a707c49df7af69f2c7b47092360514a98f0fa537",
+          "git_blob_sha": "c957a507a9f4114c597d4282ef74d7a3f3e643eb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/materials/detail_diffuse_256.png",
+          "bytes": 157913,
+          "sha256": "bc60ce7b9c55f34552fc40815fdec591cd7719c8a09a318617ca0f9ebe9b8e69",
+          "git_blob_sha": "04c6fc0e212474d81582656bd34d7b3c6ba7b0d3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/materials/ground_diffuse_128.png",
+          "bytes": 34385,
+          "sha256": "53b79cda42b276afa9938d2a051b08f6a8c960e4835091e5ebf1e66143ccd699",
+          "git_blob_sha": "74b025537584fd7e35b17e15686c3c7c929214a2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/materials/ground_diffuse_256.png",
+          "bytes": 132001,
+          "sha256": "9864f9917d3a41d59a30c63dfd804b51f5bc5e49bdc1321d6272b46544d2c84a",
+          "git_blob_sha": "184b3842c917c81965b6ba85e072929c0a274456"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/materials/structure_diffuse_128.png",
+          "bytes": 36250,
+          "sha256": "25775352038cfaf8e60efdd5c150b17a6bb0b774780b564c26658b1458407d85",
+          "git_blob_sha": "3def92001791365f08dc2184a355fe751e89ff66"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/materials/structure_diffuse_256.png",
+          "bytes": 133582,
+          "sha256": "f6b0c38eff76bdf2677c8d6067f89454671aa12312856b131a5406a127459f60",
+          "git_blob_sha": "dde6e5b4010c3343b5e3c13f123ba00d2522ba9f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/materials/wall_diffuse_128.png",
+          "bytes": 41718,
+          "sha256": "85413a2c53a6f50fc2e345c623f1010d414b768ffe5f1a6cc3ba723efde2e7ca",
+          "git_blob_sha": "fbe3d3a1a770be6ad2d19a610fe8fbf1d58e3d68"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/materials/wall_diffuse_256.png",
+          "bytes": 159251,
+          "sha256": "b5cafa2846dea4ef83860248a8223bae6be7ba2c9e88c3b0f4719d3e4f5f193b",
+          "git_blob_sha": "556b445a96374ff5ec37d9124b2e71d92c63abd6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/prompts/material-atlas.txt",
+          "bytes": 2898,
+          "sha256": "7ab06942456093989ba76a1960d2918d88676ba77b61d58647112bb674eb44cd",
+          "git_blob_sha": "d1b49b1e0f0b608a041a38d3b3de347d2110c84c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tavern-inn/theme-manifest.json",
+          "bytes": 6888,
+          "sha256": "e908e615a67e6aa8df843c02c36b764efe91e3b626be1d0c73cf0f05ff44c83d",
+          "git_blob_sha": "a321955bdf74508f569d56842048133c5b9e46a7"
+        }
+      ]
+    }
+  ]
+}

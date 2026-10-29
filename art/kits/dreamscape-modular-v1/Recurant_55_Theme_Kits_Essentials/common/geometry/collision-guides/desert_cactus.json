@@ -1,0 +1,20 @@
+{
+  "asset": "desert_cactus",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.005942,
+        0.55,
+        0.0
+      ],
+      "size": [
+        1.128116,
+        1.1,
+        0.46
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/desert_cactus__GUIDE.glb"
+}

@@ -1,0 +1,20 @@
+{
+  "asset": "weapon_display_rack",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "size": [
+        1.6,
+        1.5,
+        0.7
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/weapon_display_rack__GUIDE.glb"
+}

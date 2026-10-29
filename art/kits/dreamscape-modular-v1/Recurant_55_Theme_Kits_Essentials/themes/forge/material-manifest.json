@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "theme": "forge",
+  "atlas_source": "art_sources/material_atlas_v1.png",
+  "atlas_source_dimensions": [
+    1254,
+    1254
+  ],
+  "full_prompt": "prompts/material_atlas_v1.txt",
+  "generator": "built-in image_gen",
+  "input_reference": "Original biome concept inspected visually; not used as image-edit input",
+  "processing": "Exact atlas quadrant crop or selected full-frame built-in imagegen repeat edit, followed by nearest-neighbor resizing to256 and128. No programmatic seam blend, edge copying or PBR map invention.",
+  "palette": "sooty warm basalt, charcoal iron, restrained rust and ember orange",
+  "materials": [
+    {
+      "id": "forge__wall",
+      "role": "wall",
+      "description": "sooty dark warm basalt brick in horizontal courses",
+      "base_color_texture": "materials/wall_diffuse_256.png",
+      "low_res_texture": "materials/wall_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_practical_repeat",
+      "recommended_wrap": "REPEAT",
+      "nominal_meters_per_repeat": 2,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/wall_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 12.76,
+          "top_bottom": 17.0
+        },
+        "interior_adjacent_MAE_rgb255": 14.14,
+        "status": "visually_reviewed_practical_repeat_minor_seams",
+        "visual_review": "Dark basalt courses repeat coherently; some rock-grain discontinuities remain.",
+        "review_scale": "256px native, 512px 2x2 composite"
+      },
+      "source_crop_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sha256": "cc11eaae0346032d9d0710c329bb279fba5501a00e4351bb09333e70b8380432",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "forge__ground",
+      "role": "ground",
+      "description": "worn warm gray stone flagstones with restrained soot in fine joints",
+      "base_color_texture": "materials/ground_diffuse_256.png",
+      "low_res_texture": "materials/ground_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_practical_repeat",
+      "recommended_wrap": "REPEAT",
+      "nominal_meters_per_repeat": 2,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/ground_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 17.73,
+          "top_bottom": 18.45
+        },
+        "interior_adjacent_MAE_rgb255": 18.12,
+        "status": "visually_reviewed_practical_repeat_minor_seams",
+        "visual_review": "Warm flagstone layout repeats practically; small stone/grout jogs remain.",
+        "review_scale": "256px native, 512px 2x2 composite"
+      },
+      "source_crop_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "fbf090d6a7dcc8cebc0710870e563bc29ed0b6123fa8468e9af996718aa84010",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "forge__structure",
+      "role": "structure",
+      "description": "hammered black iron plate with soft dull pewter stipple and sparse rust",
+      "base_color_texture": "materials/structure_diffuse_256.png",
+      "low_res_texture": "materials/structure_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/structure_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 14.76,
+          "top_bottom": 27.38
+        },
+        "interior_adjacent_MAE_rgb255": 15.2,
+        "status": "nonrepeat_by_design",
+        "visual_review": "Nonrepeat face-on panel: clamp UVs 0-1 or crop within module; not intended as a seamless surface."
+      },
+      "source_crop_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "869d1472eea9fef3b56545371fce3e7d3dd85fa27ec2e4aa1885ea307cf416fe",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    },
+    {
+      "id": "forge__detail",
+      "role": "detail",
+      "description": "flat dark forge refractory panel crossed by fine ember-orange fissures, no flames or light spill",
+      "base_color_texture": "materials/detail_diffuse_256.png",
+      "low_res_texture": "materials/detail_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/detail_repeat_2x2.png",
+        "edge_MAE_rgb255": {
+          "left_right": 12.38,
+          "top_bottom": 11.73
+        },
+        "interior_adjacent_MAE_rgb255": 14.25,
+        "status": "nonrepeat_by_design",
+        "visual_review": "Nonrepeat face-on panel: clamp UVs 0-1 or crop within module; not intended as a seamless surface."
+      },
+      "source_crop_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "0858d07132015174aee4e68b48401ffae6f06e2e129c31c51168e0ac67e89bd9",
+      "selected_source": "art_sources/material_atlas_v1.png",
+      "selected_prompt": "prompts/material_atlas_v1.txt",
+      "revision": "v1_atlas_quadrant"
+    }
+  ],
+  "qa_contact": "qa/material_contact_sheet.png",
+  "readme": "MATERIAL_NOTES.md",
+  "qa_visual_summary": "Four distinct face-on opaque diffuse surfaces inspected. No scene or text. All wall/ground 2x2 repeats visually reviewed and practical at native size with minor retained discontinuities; no mathematical seamlessness certification. Structure/detail are explicitly nonrepeat.",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

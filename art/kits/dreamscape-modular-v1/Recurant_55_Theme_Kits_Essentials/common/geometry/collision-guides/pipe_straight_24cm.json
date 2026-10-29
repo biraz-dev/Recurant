@@ -1,0 +1,20 @@
+{
+  "asset": "pipe_straight_24cm",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.24,
+        0.0
+      ],
+      "size": [
+        2.0,
+        0.616285,
+        0.648
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/pipe_straight_24cm__GUIDE.glb"
+}

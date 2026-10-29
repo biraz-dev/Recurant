@@ -1,0 +1,193 @@
+{
+  "id": "textile_pavilion_demo",
+  "description": "Soft-world and toy forms arranged around a cloth canopy.",
+  "file": "assemblies/textile_pavilion_demo.glb",
+  "coordinate_system": "metres/Y-up/-Z-north",
+  "instances": [
+    {
+      "asset": "textile_rug_2m",
+      "position_m": [
+        -2,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_rug_2m",
+      "position_m": [
+        -2,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_rug_2m",
+      "position_m": [
+        -2,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_rug_2m",
+      "position_m": [
+        0,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_rug_2m",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_rug_2m",
+      "position_m": [
+        0,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_rug_2m",
+      "position_m": [
+        2,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_rug_2m",
+      "position_m": [
+        2,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_rug_2m",
+      "position_m": [
+        2,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_curtain_2m",
+      "position_m": [
+        -2,
+        0,
+        3
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_curtain_2m",
+      "position_m": [
+        0,
+        0,
+        3
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_curtain_2m",
+      "position_m": [
+        2,
+        0,
+        3
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_canopy_2m",
+      "position_m": [
+        0,
+        0,
+        1
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "textile_cushion",
+      "position_m": [
+        -1.6,
+        0,
+        -1.7
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "toy_block_cube",
+      "position_m": [
+        1.6,
+        0,
+        -1.6
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "toy_block_arch",
+      "position_m": [
+        2,
+        0,
+        0.4
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "toy_block_wedge",
+      "position_m": [
+        -2,
+        0,
+        0.8
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    }
+  ],
+  "bounds_m": {
+    "min": [
+      -3.0,
+      0.0,
+      -3.0
+    ],
+    "max": [
+      3.0,
+      3.0846410161513775,
+      3.115
+    ]
+  },
+  "notes": [
+    "Demonstrates visual assembly only. Collision/world navigation must be adapted through the current game grid pipeline."
+  ]
+}

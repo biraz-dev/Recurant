@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "recurant-modular-kits-2026-10-29",
+  "status": "new_asset_proposal_not_runtime_integration",
+  "repository_snapshot": {
+    "repository": "biraz-dev/Recurant",
+    "branch": "ccr-0aac5f81-70amxp",
+    "head": "b9fdd98f37bcb419bcf2951103529ff571e5ea21",
+    "checked_date_utc": "2026-10-29",
+    "repository_mutated": false,
+    "repository_code_executed": false
+  },
+  "observed_current": {
+    "game": {
+      "cell_size": 1,
+      "up": "+Y",
+      "east": "+X",
+      "north": "-Z",
+      "cell_center": "[x+0.5,surface_y,map_y+0.5]",
+      "dungeon_wall_height": 1,
+      "ruins_authoring_cell_m": 2,
+      "ruins_import_scale": 0.5,
+      "ruins_wall_height_game": 2
+    },
+    "camera": {
+      "vertical_fov_degrees": 60,
+      "near_clip_game": 0.05,
+      "back_offset_game": 0.25,
+      "dungeon_eye_game": 0.5,
+      "ruins_eye_game": 0.75
+    },
+    "legacy": {
+      "wall_size_m": [
+        2,
+        4,
+        0.4
+      ],
+      "door_size_m": [
+        4,
+        4,
+        1
+      ],
+      "door_clear_m": [
+        3,
+        3
+      ],
+      "floor_pivot": "center_top",
+      "wall_pivot": "base_center",
+      "stairs_pivot": "low_edge_center",
+      "stairs_ascent": "-Z",
+      "stairs_rise_m": 0.6,
+      "stairs_run_m": 2,
+      "discrepancy": "Original catalog says wall thickness0.4m; runtime comment says0.2m. Use actual bounds, not comment, for legacy dressing."
+    },
+    "import": {
+      "runtime": "embedded custom level.bin and PNGs",
+      "source": "individual GLB primitives plus level_layout.json",
+      "material_slots": [
+        "M_Sandstone",
+        "M_Floor",
+        "M_Carved",
+        "M_Rubble",
+        "M_Water"
+      ],
+      "node_transforms": "not applied by converter",
+      "embedded_gltf_textures": "not consumed; named external PNGs copied",
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0"
+      ],
+      "indices": "converter writes uint16; maximum asserted <65536",
+      "ruins_maps": "basecolor only",
+      "dungeon_maps": "basecolor, OpenGL normal, ORM"
+    },
+    "collision": {
+      "authority": "zrpg_core::Map",
+      "tiles": [
+        "Wall",
+        "Floor",
+        "StairsDown"
+      ],
+      "blocked_edge_bits": {
+        "N": 1,
+        "E": 2,
+        "S": 4,
+        "W": 8
+      },
+      "bidirectional": true,
+      "automatic_mesh_physics": false,
+      "line_of_sight": "intermediate cell walkability; not all blocked edges"
+    },
+    "sources": [
+      "https://github.com/biraz-dev/Recurant/blob/b9fdd98f37bcb419bcf2951103529ff571e5ea21/crates/zrpg/src/level.rs",
+      "https://github.com/biraz-dev/Recurant/blob/b9fdd98f37bcb419bcf2951103529ff571e5ea21/crates/zrpg/src/ruins.rs",
+      "https://github.com/biraz-dev/Recurant/blob/b9fdd98f37bcb419bcf2951103529ff571e5ea21/crates/zrpg/src/view.rs",
+      "https://github.com/biraz-dev/Recurant/blob/b9fdd98f37bcb419bcf2951103529ff571e5ea21/crates/zrpg/src/atmosphere.rs",
+      "https://github.com/biraz-dev/Recurant/blob/b9fdd98f37bcb419bcf2951103529ff571e5ea21/crates/zrpg/src/textures.rs",
+      "https://github.com/biraz-dev/Recurant/blob/b9fdd98f37bcb419bcf2951103529ff571e5ea21/crates/zrpg_core/src/map.rs",
+      "https://github.com/biraz-dev/Recurant/blob/b9fdd98f37bcb419bcf2951103529ff571e5ea21/tools/make_ruins.py",
+      "https://github.com/biraz-dev/Recurant/blob/b9fdd98f37bcb419bcf2951103529ff571e5ea21/ASSET_INVENTORY.json"
+    ]
+  },
+  "proposed_new": {
+    "coordinates": {
+      "units": "meters",
+      "handedness": "right",
+      "up": "+Y",
+      "right": "+X",
+      "forward": "-Z",
+      "north": "-Z",
+      "positive_yaw": "+Z toward +X",
+      "rotation_order": "X then Y then Z; Rz*Ry*Rx",
+      "grid_m": 2,
+      "to_game_scale": 0.5,
+      "cell_center_m": "[2*x+1,surface_y_m,2*z+1]"
+    },
+    "dimensions": {
+      "wall_width_m": 2,
+      "wall_height_m": 4,
+      "wall_thickness_m": 0.2,
+      "optional_short_wall_height_m": 2,
+      "floor_size_m": [
+        2,
+        0.2,
+        2
+      ],
+      "floor_top_y_m": 0,
+      "floor_bottom_y_m": -0.2,
+      "door_module_width_m": 2,
+      "door_clear_width_m": 1.4,
+      "door_clear_height_m": 2.4,
+      "travel_lane_width_m": 1.2,
+      "travel_lane_headroom_m": 2.4,
+      "warning": "2.4m doorway needs tall profile, not2m dungeon ceiling."
+    },
+    "pivots": {
+      "floor": "center_top",
+      "ceiling": "center_underside_at_Y0",
+      "wall": "base_center_on_edge_long_axis_X",
+      "column": "base_center",
+      "prop": "base_center_unless_declared_exception",
+      "arch": "base_center_on_opening_centerline",
+      "stairs": "explicit_low_edge_or_footprint_pivot; never_auto_center",
+      "origin": [
+        0,
+        0,
+        0
+      ]
+    },
+    "connectors": {
+      "floor": [
+        {
+          "id": "N",
+          "position": [
+            0,
+            0,
+            -1
+          ],
+          "normal": [
+            0,
+            0,
+            -1
+          ]
+        },
+        {
+          "id": "E",
+          "position": [
+            1,
+            0,
+            0
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "S",
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "W",
+          "position": [
+            -1,
+            0,
+            0
+          ],
+          "normal": [
+            -1,
+            0,
+            0
+          ]
+        }
+      ],
+      "wall": [
+        {
+          "id": "W",
+          "position": [
+            -1,
+            0,
+            0
+          ],
+          "normal": [
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "E",
+          "position": [
+            1,
+            0,
+            0
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "tolerance_m": 0.001
+    },
+    "materials": {
+      "slots": [
+        "wall",
+        "ground",
+        "structure",
+        "detail"
+      ],
+      "max_slots_per_module": 4,
+      "default_metallic": 0,
+      "default_roughness": 0.85,
+      "basecolor_space": "sRGB",
+      "optional_normal_space": "linear",
+      "optional_normal_convention": "OpenGL+Y; tangents generated or supplied",
+      "optional_orm_space": "linear",
+      "orm_channels": {
+        "R": "occlusion",
+        "G": "roughness",
+        "B": "metallic"
+      },
+      "uv_modes": {
+        "wall": "metric_face_planar_repeat_2m",
+        "ground": "metric_face_planar_repeat_2m",
+        "structure": "component_panel_0_1_clamp",
+        "detail": "component_panel_0_1_clamp"
+      },
+      "opaque_default": true,
+      "cutout": {
+        "alpha_mode": "MASK",
+        "cutoff": 0.5,
+        "double_sided": "only_if_needed"
+      },
+      "fluid": "opaque visual variant; no collider",
+      "emissive": "accent only; no automatic point light",
+      "legacy_material_adapter_required": true
+    },
+    "textures": {
+      "format": "PNG",
+      "default_size_px": [
+        256,
+        256
+      ],
+      "optional_low_memory_sizes_px": [
+        64,
+        128
+      ],
+      "default_max_dimension_px": 256,
+      "larger_exception": "explicit manifest justification and target profiling",
+      "source_directory": "art_sources",
+      "qa": [
+        "3x3 repeats for tiles",
+        "actual dimensions and alpha",
+        "native320x240 readability",
+        "camera-motion shimmer"
+      ],
+      "seamless_claim_requires_test": true,
+      "optional_data_maps": "not implied present"
+    },
+    "gltf": {
+      "version": "2.0",
+      "container": "GLB",
+      "primitive_mode": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0"
+      ],
+      "attribute_component_type": 5126,
+      "index_component_type": 5123,
+      "max_vertices_per_primitive": 65535,
+      "max_index": 65534,
+      "module_node_transforms": "identity;bake_transform_into_vertices",
+      "instance_transforms": "explicit separate layout",
+      "required_extensions": [],
+      "unsupported_baseline": [
+        "Draco",
+        "meshopt",
+        "KTX2",
+        "skins",
+        "morphs",
+        "lights",
+        "sparse_accessors"
+      ],
+      "embedded_PNGs": "optional preview; external bindings authoritative",
+      "uv1_required": false
+    },
+    "collision": {
+      "mode": "authoring_guides_only",
+      "boxes_units": "meters",
+      "boxes_size": "full_size_not_half_extents",
+      "door": "compound_side_and_lintel_boxes; never_full_bounds_box",
+      "fluid": "no_collider; separate_bed_or_deck",
+      "navigation": "explicit_walkable_cells_and_cardinal_allowed_edges",
+      "missing_edges": "forbidden_between_declared_walkable_neighbours",
+      "bits": {
+        "N": 1,
+        "E": 2,
+        "S": 4,
+        "W": 8
+      },
+      "diagonal": false,
+      "decor": "outside central lane; large props occupy blockedcells",
+      "not_supplied": [
+        "physics_controller",
+        "swimming",
+        "climbing",
+        "hazard_damage",
+        "interactions",
+        "door_state_logic"
+      ]
+    },
+    "budgets": {
+      "status": "proposed_targets_not_measured_limits",
+      "ordinary_module_triangles": 1500,
+      "landmark_triangles": 5000,
+      "visible_environment_triangles": 60000,
+      "environment_material_batches": 24,
+      "native_preview_px": [
+        320,
+        240
+      ]
+    },
+    "layout": {
+      "instance_fields": [
+        "instance_id",
+        "module_id",
+        "position_m",
+        "rotation_degrees_xyz",
+        "scale_xyz",
+        "role",
+        "cell"
+      ],
+      "navigation_fields": [
+        "cells:[{cell:[x,z],walkable,surface_y_m,kind}]",
+        "edges:[{a:[x,z],b:[x,z],bidirectional:true}]",
+        "start_cell",
+        "goal_cell"
+      ]
+    },
+    "path_policy": {
+      "relative_only": true,
+      "explicit_manifest_base": true,
+      "network_asset_uris": false,
+      "standalone_theme": "include shared dependency geometry/spec files"
+    },
+    "theme_requirements": [
+      "structural recipe",
+      "distinctive props and silhouettes",
+      "four-role bindings",
+      "example assembly",
+      "placement and collision intent",
+      "originality notes",
+      "asset QA and honest runtime limitations"
+    ],
+    "originality": "Inspiration not copies; original layouts/names/props, no source-world logos or recognizable characters.",
+    "runtime_integration_verified": false
+  }
+}

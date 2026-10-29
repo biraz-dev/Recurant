@@ -1,0 +1,878 @@
+{
+  "schema_version": "1.0",
+  "status": "proposed blockout kit; dimensions are design choices, not measurements from image",
+  "units": "meters",
+  "coordinate_system": {
+    "up": "+Y",
+    "forward": "-Z",
+    "right": "+X",
+    "handedness": "right",
+    "positive_yaw": "local +Z rotates toward world +X",
+    "grid_cell_size_m": 2,
+    "rotation_degrees_xyz_order": "apply X, then Y, then Z (Rz * Ry * Rx)"
+  },
+  "mesh_uv_contract": "UV0, planar mapping, nominal 1 repeat per 2 world meters; no lightmap UV set promised",
+  "export_material_binding": "Exports carry placeholder colors; bind external generated basecolor candidates using material IDs. Do not assume embedded generated textures.",
+  "materials": {
+    "M_Sandstone": {
+      "file": "art/runtime/256/materials/sandstone_blocks_basecolor.png",
+      "use": "walls, columns, doorway, rails; opaque",
+      "uv": "1 repeat per 2 world meters",
+      "source_file": "art/materials/sandstone_blocks_basecolor.png"
+    },
+    "M_Floor": {
+      "file": "art/runtime/256/materials/worn_floor_basecolor.png",
+      "use": "floor, bridge, stair treads; opaque",
+      "uv": "1 repeat per 2 world meters",
+      "source_file": "art/materials/worn_floor_basecolor.png"
+    },
+    "M_Carved": {
+      "file": "art/runtime/256/materials/sandstone_blocks_basecolor.png",
+      "use": "SAFE initial sandstone fallback on carved slots; full carved motif sheet is NOT globally tileable",
+      "uv": "Existing planar UVs use sandstone. Full motif sheet needs explicit UV selections; optional trim derivatives repeat U only and clamp V.",
+      "source_file": "art/materials/carved_trim_basecolor.png"
+    },
+    "M_Rubble": {
+      "file": "art/runtime/256/materials/rubble_stone_basecolor.png",
+      "use": "rubble; opaque",
+      "uv": "1 repeat per 2 world meters",
+      "source_file": "art/materials/rubble_stone_basecolor.png"
+    },
+    "M_Water": {
+      "file": "art/runtime/256/materials/water_basecolor.png",
+      "use": "water plane; start opaque, no collision",
+      "uv": "1 repeat per 2 world meters",
+      "source_file": "art/materials/water_basecolor.png"
+    }
+  },
+  "additional_art_candidates": [
+    {
+      "file": "art/runtime/256/materials/mossy_stone_basecolor.png",
+      "status": "optional material variants; no mesh slot required",
+      "source_file": "art/materials/mossy_stone_basecolor.png"
+    },
+    {
+      "file": "art/runtime/256/materials/compact_dirt_basecolor.png",
+      "status": "optional material variants; no mesh slot required",
+      "source_file": "art/materials/compact_dirt_basecolor.png"
+    },
+    {
+      "file": "art/runtime/256/foliage/fern_cluster_rgba.png",
+      "status": "RGBA card candidate; no foliage card mesh in module kit",
+      "source_file": "art/foliage/fern_cluster_rgba.png"
+    },
+    {
+      "file": "art/runtime/256/foliage/hanging_vines_rgba.png",
+      "status": "RGBA card candidate; no foliage card mesh in module kit",
+      "source_file": "art/foliage/hanging_vines_rgba.png"
+    }
+  ],
+  "texture_qa": "Runtime 256px derivatives supplied. Intended surface repeat candidates, not certified seamless. Carved original is a motif sheet, NOT a whole-image tile. Test repeat and alpha edges in engine.",
+  "modules": [
+    {
+      "module_id": "ruins_floor_2m",
+      "files": {
+        "glb": "meshes/ruins_floor_2m.glb",
+        "obj": "meshes/ruins_floor_2m.obj",
+        "mtl": "meshes/ruins_floor_2m.mtl"
+      },
+      "nominal_dimensions_m": {
+        "x": 2,
+        "y": 0.2,
+        "z": 2
+      },
+      "local_bounds_m": {
+        "min": [
+          -1.0,
+          -0.2,
+          -1.0
+        ],
+        "max": [
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      "pivot": "center of top walking surface",
+      "construction": "Four lightly chamfered floor slabs; top Y=0.",
+      "material_slots": [
+        "M_Floor"
+      ],
+      "collision": {
+        "type": "box",
+        "center_m": [
+          0,
+          -0.1,
+          0
+        ],
+        "half_extents_m": [
+          1,
+          0.1,
+          1
+        ]
+      },
+      "sockets": [
+        {
+          "name": "north",
+          "position_m": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "floor_edge"
+        },
+        {
+          "name": "east",
+          "position_m": [
+            1,
+            0,
+            0
+          ],
+          "kind": "floor_edge"
+        },
+        {
+          "name": "south",
+          "position_m": [
+            0,
+            0,
+            1
+          ],
+          "kind": "floor_edge"
+        },
+        {
+          "name": "west",
+          "position_m": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "floor_edge"
+        }
+      ],
+      "notes": "Ceiling instances rotate X=180 degrees: underside at anchor Y, slab above it.",
+      "exported_dimensions_m": [
+        2.0,
+        0.2,
+        2.0
+      ],
+      "triangles": 176
+    },
+    {
+      "module_id": "ruins_wall_2m",
+      "files": {
+        "glb": "meshes/ruins_wall_2m.glb",
+        "obj": "meshes/ruins_wall_2m.obj",
+        "mtl": "meshes/ruins_wall_2m.mtl"
+      },
+      "nominal_dimensions_m": {
+        "x": 2,
+        "y": 4,
+        "z": 0.4
+      },
+      "local_bounds_m": {
+        "min": [
+          -1.0,
+          0.0,
+          -0.2
+        ],
+        "max": [
+          1.0,
+          4.0,
+          0.2
+        ]
+      },
+      "pivot": "base center",
+      "construction": "Four coursed sandstone blocks; 2m width, 4m height, 0.4m depth.",
+      "material_slots": [
+        "M_Sandstone"
+      ],
+      "collision": {
+        "type": "box",
+        "center_m": [
+          0,
+          2,
+          0
+        ],
+        "half_extents_m": [
+          1,
+          2,
+          0.2
+        ]
+      },
+      "sockets": [
+        {
+          "name": "west",
+          "position_m": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "wall_end"
+        },
+        {
+          "name": "east",
+          "position_m": [
+            1,
+            0,
+            0
+          ],
+          "kind": "wall_end"
+        }
+      ],
+      "notes": "Base asset is 4 m. East/west-facing boundary instances use scale Y 0.9995 for a 2 mm top offset at wall corners; preserve explicit instance scale.",
+      "exported_dimensions_m": [
+        2.0,
+        4.0,
+        0.4
+      ],
+      "triangles": 176
+    },
+    {
+      "module_id": "ruins_column_4m",
+      "files": {
+        "glb": "meshes/ruins_column_4m.glb",
+        "obj": "meshes/ruins_column_4m.obj",
+        "mtl": "meshes/ruins_column_4m.mtl"
+      },
+      "nominal_dimensions_m": {
+        "x": 1,
+        "y": 4,
+        "z": 1
+      },
+      "local_bounds_m": {
+        "min": [
+          -0.5,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          4.0,
+          0.5
+        ]
+      },
+      "pivot": "base center",
+      "construction": "Square shaft with broad base and capital; 1m maximum width.",
+      "material_slots": [
+        "M_Carved",
+        "M_Sandstone"
+      ],
+      "collision": {
+        "type": "box",
+        "center_m": [
+          0,
+          2,
+          0
+        ],
+        "half_extents_m": [
+          0.5,
+          2,
+          0.5
+        ]
+      },
+      "sockets": [
+        {
+          "name": "top",
+          "position_m": [
+            0,
+            4,
+            0
+          ],
+          "kind": "support_top"
+        }
+      ],
+      "notes": "Base asset is 4 m. Supplied layout scales Y by 1.025 to 4.1 m to avoid coplanar wall/column tops; preserve its explicit instance scale.",
+      "exported_dimensions_m": [
+        1.0,
+        4.0,
+        1.0
+      ],
+      "triangles": 132
+    },
+    {
+      "module_id": "ruins_doorway_4m",
+      "files": {
+        "glb": "meshes/ruins_doorway_4m.glb",
+        "obj": "meshes/ruins_doorway_4m.obj",
+        "mtl": "meshes/ruins_doorway_4m.mtl"
+      },
+      "nominal_dimensions_m": {
+        "x": 4,
+        "y": 4,
+        "z": 1
+      },
+      "local_bounds_m": {
+        "min": [
+          -2.0,
+          0.0,
+          -0.5
+        ],
+        "max": [
+          2.0,
+          4.0,
+          0.5
+        ]
+      },
+      "pivot": "base center on opening centerline",
+      "construction": "Open doorway; outer width4m, height4m; unobstructed opening3m by3m.",
+      "material_slots": [
+        "M_Carved",
+        "M_Sandstone"
+      ],
+      "collision": {
+        "type": "compound_boxes",
+        "boxes": [
+          {
+            "center_m": [
+              -1.75,
+              1.5,
+              0
+            ],
+            "half_extents_m": [
+              0.25,
+              1.5,
+              0.5
+            ]
+          },
+          {
+            "center_m": [
+              1.75,
+              1.5,
+              0
+            ],
+            "half_extents_m": [
+              0.25,
+              1.5,
+              0.5
+            ]
+          },
+          {
+            "center_m": [
+              0,
+              3.5,
+              0
+            ],
+            "half_extents_m": [
+              2,
+              0.5,
+              0.5
+            ]
+          }
+        ]
+      },
+      "sockets": [
+        {
+          "name": "front",
+          "position_m": [
+            0,
+            0,
+            -0.5
+          ],
+          "kind": "opening_3m"
+        },
+        {
+          "name": "back",
+          "position_m": [
+            0,
+            0,
+            0.5
+          ],
+          "kind": "opening_3m"
+        }
+      ],
+      "notes": "Never use one bounding-box collider: it would seal the opening.",
+      "exported_dimensions_m": [
+        4.0,
+        4.0,
+        1.0
+      ],
+      "triangles": 308
+    },
+    {
+      "module_id": "ruins_bridge_deck_2m",
+      "files": {
+        "glb": "meshes/ruins_bridge_deck_2m.glb",
+        "obj": "meshes/ruins_bridge_deck_2m.obj",
+        "mtl": "meshes/ruins_bridge_deck_2m.mtl"
+      },
+      "nominal_dimensions_m": {
+        "x": 2,
+        "y": 0.4,
+        "z": 2
+      },
+      "local_bounds_m": {
+        "min": [
+          -1.0,
+          -0.4,
+          -1.0
+        ],
+        "max": [
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      "pivot": "center of top walking surface",
+      "construction": "Four chamfered deck slabs; 2m wide, 2m long, topY0. No railings.",
+      "material_slots": [
+        "M_Floor"
+      ],
+      "collision": {
+        "type": "box",
+        "center_m": [
+          0,
+          -0.2,
+          0
+        ],
+        "half_extents_m": [
+          1,
+          0.2,
+          1
+        ]
+      },
+      "sockets": [
+        {
+          "name": "north",
+          "position_m": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "floor_edge"
+        },
+        {
+          "name": "east",
+          "position_m": [
+            1,
+            0,
+            0
+          ],
+          "kind": "floor_edge"
+        },
+        {
+          "name": "south",
+          "position_m": [
+            0,
+            0,
+            1
+          ],
+          "kind": "floor_edge"
+        },
+        {
+          "name": "west",
+          "position_m": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "floor_edge"
+        }
+      ],
+      "notes": "",
+      "exported_dimensions_m": [
+        2.0,
+        0.4,
+        2.0
+      ],
+      "triangles": 176
+    },
+    {
+      "module_id": "ruins_stairs_2m_rise06",
+      "files": {
+        "glb": "meshes/ruins_stairs_2m_rise06.glb",
+        "obj": "meshes/ruins_stairs_2m_rise06.obj",
+        "mtl": "meshes/ruins_stairs_2m_rise06.mtl"
+      },
+      "nominal_dimensions_m": {
+        "x": 2,
+        "y": 0.6,
+        "z": 2
+      },
+      "local_bounds_m": {
+        "min": [
+          -1.0,
+          0.0,
+          -2.0
+        ],
+        "max": [
+          1.0,
+          0.6000000000000001,
+          0.0
+        ]
+      },
+      "pivot": "LOW edge center, not footprint center",
+      "construction": "Three closed risers; totalrise0.6m/run2m. Ascent toward local-Z. Bottom-front-center pivot.",
+      "material_slots": [
+        "M_Floor"
+      ],
+      "collision": {
+        "type": "convex_ramp",
+        "vertices_m": [
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            -1,
+            0,
+            -2
+          ],
+          [
+            1,
+            0,
+            -2
+          ],
+          [
+            -1,
+            0.6,
+            -2
+          ],
+          [
+            1,
+            0.6,
+            -2
+          ]
+        ],
+        "grid_movement": "logical edge transitions; interpolate camera over steps"
+      },
+      "sockets": [
+        {
+          "name": "low",
+          "position_m": [
+            0,
+            0,
+            0
+          ],
+          "kind": "floor_edge"
+        },
+        {
+          "name": "high",
+          "position_m": [
+            0,
+            0.6,
+            -2
+          ],
+          "kind": "floor_edge"
+        }
+      ],
+      "notes": "Bounds/pivot are deliberately asymmetric. See explicit placements; do not center this mesh automatically.",
+      "exported_dimensions_m": [
+        2.0,
+        0.6000000000000001,
+        2.0
+      ],
+      "triangles": 36
+    },
+    {
+      "module_id": "ruins_rubble_1m",
+      "files": {
+        "glb": "meshes/ruins_rubble_1m.glb",
+        "obj": "meshes/ruins_rubble_1m.obj",
+        "mtl": "meshes/ruins_rubble_1m.mtl"
+      },
+      "nominal_dimensions_m": {
+        "x": 1,
+        "y": 0.7,
+        "z": 1
+      },
+      "local_bounds_m": {
+        "min": [
+          -0.564912279330157,
+          0.0,
+          -0.4429456320570348
+        ],
+        "max": [
+          0.5189524605709235,
+          0.675,
+          0.5194473020608656
+        ]
+      },
+      "pivot": "base center (nominal)",
+      "construction": "Four deterministic loose stone chunks; scatter prop, not a structural unit.",
+      "material_slots": [
+        "M_Rubble"
+      ],
+      "collision": {
+        "type": "none_for_this_layout",
+        "reason": "decorative only, restricted to wall margins; add conservative boxes if moved into path"
+      },
+      "sockets": [],
+      "notes": "Dimensions and bounds are nominal: inspect exported mesh metadata for exact irregular geometry bounds.",
+      "exported_dimensions_m": [
+        1.0838647399010806,
+        0.675,
+        0.9623929341179005
+      ],
+      "triangles": 176
+    },
+    {
+      "module_id": "ruins_water_2m",
+      "files": {
+        "glb": "meshes/ruins_water_2m.glb",
+        "obj": "meshes/ruins_water_2m.obj",
+        "mtl": "meshes/ruins_water_2m.mtl"
+      },
+      "nominal_dimensions_m": {
+        "x": 2,
+        "y": 0,
+        "z": 2
+      },
+      "local_bounds_m": {
+        "min": [
+          -1,
+          0,
+          -1
+        ],
+        "max": [
+          1,
+          0,
+          1
+        ]
+      },
+      "pivot": "plane center",
+      "construction": "Single2m square water plane; no wave displacement or shader simulation.",
+      "material_slots": [
+        "M_Water"
+      ],
+      "collision": {
+        "type": "none",
+        "walkable_surface": "separate bed floor below"
+      },
+      "sockets": [
+        {
+          "name": "north",
+          "position_m": [
+            0,
+            0,
+            -1
+          ],
+          "kind": "floor_edge"
+        },
+        {
+          "name": "east",
+          "position_m": [
+            1,
+            0,
+            0
+          ],
+          "kind": "floor_edge"
+        },
+        {
+          "name": "south",
+          "position_m": [
+            0,
+            0,
+            1
+          ],
+          "kind": "floor_edge"
+        },
+        {
+          "name": "west",
+          "position_m": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "floor_edge"
+        }
+      ],
+      "notes": "Start opaque and unlit or lightly shaded; waves/refraction/physics are not supplied.",
+      "exported_dimensions_m": [
+        2,
+        0,
+        2
+      ],
+      "triangles": 2
+    },
+    {
+      "module_id": "ruins_statue_plinth_4m",
+      "files": {
+        "glb": "meshes/ruins_statue_plinth_4m.glb",
+        "obj": "meshes/ruins_statue_plinth_4m.obj",
+        "mtl": "meshes/ruins_statue_plinth_4m.mtl"
+      },
+      "nominal_dimensions_m": {
+        "x": 4,
+        "y": 0.4,
+        "z": 4
+      },
+      "local_bounds_m": {
+        "min": [
+          -2.0,
+          0.0,
+          -2.0
+        ],
+        "max": [
+          2.0,
+          0.4,
+          2.0
+        ]
+      },
+      "pivot": "base center",
+      "construction": "Pedestal only, NOT a sculpted statue. 4m square shallow ceremonial dais.",
+      "material_slots": [
+        "M_Carved",
+        "M_Sandstone"
+      ],
+      "collision": {
+        "type": "box",
+        "center_m": [
+          0,
+          0.2,
+          0
+        ],
+        "half_extents_m": [
+          2,
+          0.2,
+          2
+        ]
+      },
+      "sockets": [
+        {
+          "name": "statue_seat",
+          "position_m": [
+            0,
+            0.4,
+            0
+          ],
+          "kind": "prop_base"
+        }
+      ],
+      "notes": "",
+      "exported_dimensions_m": [
+        4.0,
+        0.4,
+        4.0
+      ],
+      "triangles": 88
+    },
+    {
+      "module_id": "ruins_rail_2m",
+      "files": {
+        "glb": "meshes/ruins_rail_2m.glb",
+        "obj": "meshes/ruins_rail_2m.obj",
+        "mtl": "meshes/ruins_rail_2m.mtl"
+      },
+      "nominal_dimensions_m": {
+        "x": 2,
+        "y": 0.6,
+        "z": 0.3
+      },
+      "local_bounds_m": {
+        "min": [
+          -1.0,
+          0.0,
+          -0.15
+        ],
+        "max": [
+          1.0,
+          0.6,
+          0.15
+        ]
+      },
+      "pivot": "base center",
+      "construction": "Low stone parapet; 2m wide, 0.6m high, 0.3m deep.",
+      "material_slots": [
+        "M_Sandstone"
+      ],
+      "collision": {
+        "type": "box",
+        "center_m": [
+          0,
+          0.3,
+          0
+        ],
+        "half_extents_m": [
+          1,
+          0.3,
+          0.15
+        ]
+      },
+      "sockets": [
+        {
+          "name": "west",
+          "position_m": [
+            -1,
+            0,
+            0
+          ],
+          "kind": "rail_end"
+        },
+        {
+          "name": "east",
+          "position_m": [
+            1,
+            0,
+            0
+          ],
+          "kind": "rail_end"
+        }
+      ],
+      "notes": "",
+      "exported_dimensions_m": [
+        2.0,
+        0.6,
+        0.3
+      ],
+      "triangles": 44
+    },
+    {
+      "module_id": "ruins_statue_proxy",
+      "files": {
+        "glb": "meshes/ruins_statue_proxy.glb",
+        "obj": "meshes/ruins_statue_proxy.obj",
+        "mtl": "meshes/ruins_statue_proxy.mtl"
+      },
+      "nominal_dimensions_m": {
+        "x": 2,
+        "y": 3.6,
+        "z": 1.9
+      },
+      "local_bounds_m": {
+        "min": [
+          -1.0,
+          0.0,
+          -0.9500000000000002
+        ],
+        "max": [
+          1.0,
+          3.6,
+          0.95
+        ]
+      },
+      "pivot": "base center; front local -Z",
+      "construction": "ABSTRACT SEATED HUMANOID BLOCKOUT ONLY. No sculpt, iconography, face, rig or historical reconstruction.",
+      "material_slots": [
+        "M_Carved"
+      ],
+      "collision": {
+        "type": "none",
+        "reason": "contained inside blocked plinth footprint"
+      },
+      "sockets": [],
+      "notes": "Not a finished statue. The layout rotates it 180 degrees to face the approach.",
+      "exported_dimensions_m": [
+        2.0,
+        3.6,
+        1.9000000000000001
+      ],
+      "triangles": 440
+    }
+  ],
+  "carved_trim_options": [
+    {
+      "file": "art/runtime/256/trim/carved_meander_strip.png",
+      "uv": "U repeat candidate; V clamp; requires purpose-authored strip UVs"
+    },
+    {
+      "file": "art/runtime/256/trim/carved_diamond_strip.png",
+      "uv": "U repeat candidate; V clamp; requires purpose-authored strip UVs"
+    }
+  ]
+}

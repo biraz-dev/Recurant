@@ -1,0 +1,20 @@
+{
+  "asset": "coral_branch",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.579576,
+        -0.031352
+      ],
+      "size": [
+        1.439223,
+        1.159152,
+        0.335683
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/coral_branch__GUIDE.glb"
+}

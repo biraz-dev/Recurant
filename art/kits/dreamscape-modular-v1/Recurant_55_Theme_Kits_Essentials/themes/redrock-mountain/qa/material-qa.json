@@ -1,0 +1,65 @@
+{
+  "theme": "redrock-mountain",
+  "all_flat_orthographic": true,
+  "all_four_distinct": true,
+  "no_text_frame_gutter": true,
+  "reviewed_contact_sheet": "qa/material_contact_sheet.png",
+  "reviewed_repeat_sheets": [
+    "qa/wall_repeat_2x2.png",
+    "qa/ground_repeat_2x2.png",
+    "qa/structure_repeat_2x2.png",
+    "qa/detail_repeat_2x2.png"
+  ],
+  "checks": [
+    {
+      "role": "wall",
+      "preview": "qa/wall_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 10.207,
+        "top_bottom": 13.535
+      },
+      "interior_adjacent_MAE_rgb255": 9.26,
+      "visual_findings": "Horizontal strata repeat as visible bands; hide module joins in rock breaks.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "ground",
+      "preview": "qa/ground_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 14.84,
+        "top_bottom": 13.78
+      },
+      "interior_adjacent_MAE_rgb255": 14.013,
+      "visual_findings": "Gravel density is visually consistent across borders; scattered pebbles repeat.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "structure",
+      "preview": "qa/structure_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 9.201,
+        "top_bottom": 10.538
+      },
+      "interior_adjacent_MAE_rgb255": 8.868,
+      "visual_findings": "Broad basalt cracks have border interruptions; clamp per rock component.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "detail",
+      "preview": "qa/detail_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 11.603,
+        "top_bottom": 12.717
+      },
+      "interior_adjacent_MAE_rgb255": 12.067,
+      "visual_findings": "Orange crystal spots become an obvious repeated motif; use one-off mineral patches.",
+      "opposing_edges_identical": false
+    }
+  ],
+  "native_and_preview_dimensions_verified": true,
+  "production_seam_acceptance": "not certified; use per-role findings"
+}

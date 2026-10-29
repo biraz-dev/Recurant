@@ -1,0 +1,174 @@
+{
+  "id": "mythic-mural-cavern",
+  "title": "Mythic Mural Cavern",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "mythic-mural-cavern-001",
+      "bytes": 2324102,
+      "sha256": "637111116d6227b366f8c39be8a00973e05c9837d5c6ef8a8bb004cea98df6c1",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/mythic-mural-cavern.volume-001.zip",
+          "bytes": 2324102,
+          "sha256": "637111116d6227b366f8c39be8a00973e05c9837d5c6ef8a8bb004cea98df6c1",
+          "git_blob_sha": "23d62e2832f9df9612979ad939ca95f1ab7e469d"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/CLAUDE_README.md",
+          "bytes": 7613,
+          "sha256": "9a8a114cff10d82ec05adc1145716522473ea5bf23042167b4c51d96cb71014c",
+          "git_blob_sha": "7b3b6931a7c84f3de07ee5297c5fe0ae6c97e1d6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/assembly/asset-validation.json",
+          "bytes": 2035,
+          "sha256": "b537ce057113d082cf58425ae81ad97bc0d8de8c37a9263089ed81781583e4f1",
+          "git_blob_sha": "301a12b1330abbd883114a6ec6fa74f1ffbad7b6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/assembly/collision-navigation.json",
+          "bytes": 10148,
+          "sha256": "71c5007af7bfe99a908154aebf9b87c8f8e345af8c6fd47b0da71a9391a1e6fb",
+          "git_blob_sha": "7c99594308443b91045ea068a767c9c5825758ed"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/assembly/layout.json",
+          "bytes": 14076,
+          "sha256": "70e24140bc5956cca9c4876068934895068d0f13ebe235ed4afa734df747ede2",
+          "git_blob_sha": "2920464d035ced151fb34d8c182c49b280da7ea4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/assembly/native_320x240.png",
+          "bytes": 154554,
+          "sha256": "ed0301c537f5f7c8055acac3f0ed32811f647db5c09512591e5fb5275381847c",
+          "git_blob_sha": "7fe689c623109a239be7459bdb2394ae2102ce8b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/assembly/showcase.glb",
+          "bytes": 747252,
+          "sha256": "09ec94cf845d16ca9684e4bf701a78fe873df800e27f2299178ac8b5b9dc41fc",
+          "git_blob_sha": "398356a4b7391891b73a5cedc0d0fd0cec83dfbc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/concept/reference_native_320x240.png",
+          "bytes": 166769,
+          "sha256": "6d4482f9584f76e2d150f5dd39b43bdcbe1e8145ced2a687f1200d919885baaf",
+          "git_blob_sha": "d4c3b785906abee0e6efabd470e31889c2bc6001"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "9140a7c94c3e2d827d01798ba2b73988c7b2d8ef773b0b744ba9b9709131a74c",
+          "git_blob_sha": "ffad57ae09a1c98987757c6684438eb0c6bcfccb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/material_manifest.json",
+          "bytes": 14275,
+          "sha256": "fdca5505ba77eae2acc4da2e6bae65aeded8504c1ea846f62fd0057a5a1f3237",
+          "git_blob_sha": "c39d7abe1ecd56737276aef653dcac5a23203c37"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/materials/detail_diffuse_128.png",
+          "bytes": 42098,
+          "sha256": "944b194e19b66397ab47b4d5ee6d08ad68250f8ff9337fb290708f0142c22736",
+          "git_blob_sha": "1dd8d0d9417c703c234e297b797da8f283203a5b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/materials/detail_diffuse_256.png",
+          "bytes": 161454,
+          "sha256": "3028efa824b570745c6c964f698fb8108eb5efc42b16f709030d2e7972303872",
+          "git_blob_sha": "85a46395815519d40c4e3eb1ac13ae82d5d250ff"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/materials/ground_diffuse_128.png",
+          "bytes": 44804,
+          "sha256": "8812b3ef5d63ae061ad2d9a1b2a4aa956adc6f24618a8146055c74407b29ca5f",
+          "git_blob_sha": "2a464018d14a5f6f63b46c64411acf3a4b8af2a7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/materials/ground_diffuse_256.png",
+          "bytes": 172613,
+          "sha256": "ee9f4e2f9262b9a16db28d31c01e568c2fef65270d0ea0450f094e4b0aae295f",
+          "git_blob_sha": "944c41fc80ad243ba774e3f86a262a193647e79c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/materials/ground_repeat_diffuse_128.png",
+          "bytes": 47466,
+          "sha256": "b4a1ed3ff9b55ccbc01e1332676df1aa679f1e1b06d8db5574f1867208e84a03",
+          "git_blob_sha": "54e46e1bb7f7d8aff798a1e6bd1db02d08f2e9e8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/materials/ground_repeat_diffuse_256.png",
+          "bytes": 182211,
+          "sha256": "f6898f001d16e2ce4b21f2fd802cf63b4ab6dceb6eb8ec3ad77cdc1ccb73fba1",
+          "git_blob_sha": "7144632b93c74558eb130ee1b7599aa84729d9d7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/materials/structure_diffuse_128.png",
+          "bytes": 42202,
+          "sha256": "04e329034fcc2373bad60b3e9a9bdb7d1fe36931c87dde3668f8165dd3a5177f",
+          "git_blob_sha": "3c251cf2a102ff2b32d19e0f5d2906e436d21989"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/materials/structure_diffuse_256.png",
+          "bytes": 160753,
+          "sha256": "5bee572a635dacd1839ceae5ed98f71d369f6e3e9d05fae3bdc5a32f81929ab9",
+          "git_blob_sha": "4a5b6db1f651dd3faaeb1dedc3cf37bb5764caa4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/materials/wall_diffuse_128.png",
+          "bytes": 42848,
+          "sha256": "589af0dc4dd8a90740c3499d9d2440c2ad728fa1e0b76e6c82894bfd19ebee90",
+          "git_blob_sha": "45dc0a1ece0df4583cd3feeb16e406805c4623eb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/materials/wall_diffuse_256.png",
+          "bytes": 164797,
+          "sha256": "98809ed5c746e78365340f5ed19b73c8bf972f0f9fc60898b1701f8c9965026a",
+          "git_blob_sha": "23b4c5203cad4af4189631fac6b71b1e90a56bb7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/materials/wall_repeat_diffuse_128.png",
+          "bytes": 45895,
+          "sha256": "c1ecdc3b70fb03666af09545a17943304fd59dc082e2a817a445d66be1f7e308",
+          "git_blob_sha": "f3bbc963818fe3842d0228130510c8a17e946181"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/materials/wall_repeat_diffuse_256.png",
+          "bytes": 175702,
+          "sha256": "25c2e7b2a7db979402cf9d38cb44c2486d1cb5c1704d2ee1f9ff1bbff1f6ee37",
+          "git_blob_sha": "7807ed86e9ace10014e6cafe8fa2c6cd4169a89e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/prompts/material_atlas_prompt.txt",
+          "bytes": 1897,
+          "sha256": "6e0b2ce68bd69d83cb9229c730dda633104a3afedbea6ad06b4df5add6bebd4b",
+          "git_blob_sha": "c99ded94175d7feb422c247b37ef1a8520ed7f43"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1947,
+          "sha256": "0649560607d9df5452c98f8ac59456233587cbb77a548092b0b37c2e8efd9c92",
+          "git_blob_sha": "d749fc8081a4ab21a5cf4e57de96fad39c2db509"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mythic-mural-cavern/theme-manifest.json",
+          "bytes": 7027,
+          "sha256": "d023e25819e5644e5da7ebf3c76adcc6b1ac6f341a6c1ab1d408c63a435c35d2",
+          "git_blob_sha": "9f1584ac5128f2bb2c77a0139e56488cfd909e49"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "native_size": [
+    320,
+    240
+  ],
+  "preview_size": [
+    1280,
+    960
+  ],
+  "slot_count": 7,
+  "slot_ids": [
+    "head",
+    "body",
+    "left_hand",
+    "right_hand",
+    "ring_1",
+    "ring_2",
+    "amulet"
+  ],
+  "silhouette_size": [
+    54,
+    124
+  ],
+  "silhouette_alpha_extrema": [
+    0,
+    254
+  ],
+  "png_count": 26,
+  "validation": "Dimensions, slot ID count, asset bounds and alpha checked programmatically. Layout/labels checked visually at 4x nearest scale.",
+  "limitations": [
+    "Not integrated or in-engine tested.",
+    "Generated art was normalized to 320x240; not a hand-authored indexed-palette sprite.",
+    "Opaque slot/label crops retain a small amount of local background.",
+    "Current seven-slot concept differs from repository eleven-slot model.",
+    "Transparent silhouette retains partial-alpha boundary pixels and is a matching variant, not exact preview extraction."
+  ],
+  "silhouette_downsample": "BOX; display enlargement NEAREST"
+}

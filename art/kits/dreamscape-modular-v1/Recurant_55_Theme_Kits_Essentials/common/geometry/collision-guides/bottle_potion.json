@@ -1,0 +1,20 @@
+{
+  "asset": "bottle_potion",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.375,
+        0.0
+      ],
+      "size": [
+        0.4,
+        0.75,
+        0.380423
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/bottle_potion__GUIDE.glb"
+}

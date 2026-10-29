@@ -1,0 +1,144 @@
+{
+  "id": "tatami-house",
+  "title": "Tatami House",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 20,
+  "archives": [
+    {
+      "id": "tatami-house-001",
+      "bytes": 1614144,
+      "sha256": "ad2802bc8c794aa1976de95018397949ec594ae289092d235b274b57bd3f5a9f",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/tatami-house.volume-001.zip",
+          "bytes": 1614144,
+          "sha256": "ad2802bc8c794aa1976de95018397949ec594ae289092d235b274b57bd3f5a9f",
+          "git_blob_sha": "56a7cdb0c5b3d5d56c04e88e0ce42cd1e8d1196c"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/CLAUDE_README.md",
+          "bytes": 7854,
+          "sha256": "5d0bda66c4efd03c1fa2a377b23b9197e7b11b012f40b81c667fd8ed8cd9c432",
+          "git_blob_sha": "e7a548804bf4c6dfcfcd9dd4bc89dfcb9e3bf491"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "9558b78760cac86c1682d6f394efded13509431752ff4baa9d00a8a845df48fc",
+          "git_blob_sha": "e21dd3d86af6116d11fc685dbdff78ce1260c54c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/assembly/collision-navigation.json",
+          "bytes": 10372,
+          "sha256": "10be9bff2dbba25dbbe4b3cc627f7aa579e39b814f4298b20e688f3b84644374",
+          "git_blob_sha": "8d8b5057c8cb659c165df69d7a95038b798950ff"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/assembly/layout.json",
+          "bytes": 13456,
+          "sha256": "27ac582b503435f0b289e2d1dc5446306016acd784825037224e038d3f1ee268",
+          "git_blob_sha": "a43658e93ddd2c999525d3fe47c47669b78aa6a2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/assembly/native_320x240.png",
+          "bytes": 150507,
+          "sha256": "3fa1cc345797825576714bc403316b2c4739393700e9e880da5ba41c0fbb55b9",
+          "git_blob_sha": "993a0d3006f46567a1e7c48b4fbcf5f87f535ce7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/assembly/showcase.glb",
+          "bytes": 776552,
+          "sha256": "8bd2dc1ee1aa2c881c095969da64bd146e42d97daa766b1fc853e47bfc10c16a",
+          "git_blob_sha": "4dbf64c235a5b1d402ab0851a2125dadb8690d16"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/concept/reference_native_320x240.png",
+          "bytes": 143485,
+          "sha256": "164888176c929155e9043e732cf3e446125432b0e64194196b77d1e1b8dfdc10",
+          "git_blob_sha": "a30fbf73c732deb62f4046155608cab7545c9e43"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "47fdf9fa91bde2ef8397adc5c23148f08e44fa14057d266b6349ceb9d89e25fb",
+          "git_blob_sha": "28ed8f48eb7a10f081910542cf7c7da8d690583d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/material-manifest.json",
+          "bytes": 7354,
+          "sha256": "d59942cdbc3a6c9b915aa4044c9e8c95d9c8ec2d3cf13f527d9cbfe7c87f41b5",
+          "git_blob_sha": "1c33c2a1cfe54d22e975f5d54f32f2f42dae71c5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/materials/detail_diffuse_128.png",
+          "bytes": 42784,
+          "sha256": "8cd5b2d17741c8c19d9c1ffcfdf1b2c0cedaae18112abc79fbde8d9ec6fbdef3",
+          "git_blob_sha": "978d0efd7fc17c63304797706203bfb96bd8ee00"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/materials/detail_diffuse_256.png",
+          "bytes": 166361,
+          "sha256": "ec0006bd0f962ad74c13e399bf4a6857dbacc505c7ecf39331edabce50a933af",
+          "git_blob_sha": "4c3d4f7ac65b678820031c474edbba68149d0c12"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/materials/ground_diffuse_128.png",
+          "bytes": 38110,
+          "sha256": "3032585ad5c4a9d14c055623c92bfff678910d6e2fd76fdadfd54ff1bb867f45",
+          "git_blob_sha": "67a62209f960e64b3f74688a81224451c087eb4a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/materials/ground_diffuse_256.png",
+          "bytes": 142860,
+          "sha256": "adbe7e5a14785d1c82334ebb70200d5c3fed38e4e47f397f1b84ad1ce9741e3c",
+          "git_blob_sha": "2a79057542fec2c1a7e5e81af423a19dcafd2d65"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/materials/structure_diffuse_128.png",
+          "bytes": 32453,
+          "sha256": "b17f143633eb08425fb12625da37ac5173647ceb2575e725fdb459f5ef27fd14",
+          "git_blob_sha": "76d948d2f66e140da2b9fd79f2f14b3ca9b3e381"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/materials/structure_diffuse_256.png",
+          "bytes": 123083,
+          "sha256": "71ad2dc664c6d799573964c8da172be2229dd20f02755a2337edc715e59bcb19",
+          "git_blob_sha": "08d11b7a10d860f11908667881ee91d93f751425"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/materials/wall_diffuse_128.png",
+          "bytes": 33648,
+          "sha256": "f1d1bd75eeeb68b53edba2788d9e48e59ecf08d637d6c1aaccfc0c030d4a2184",
+          "git_blob_sha": "06a06021d0614622c9cdef417176f436819d7de3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/materials/wall_diffuse_256.png",
+          "bytes": 127847,
+          "sha256": "0dfe9fd60f4a1319a81902abd30868a69285413e5a8e693d56e20c5a123ebb5c",
+          "git_blob_sha": "11edc9953ee65103a9655e055b49bd443740409f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/prompts/material-atlas.txt",
+          "bytes": 2970,
+          "sha256": "57bf794ce8c7261e894e6b6aec1e91a2dde31be6a97543ac1f9b6fed8a06e4d6",
+          "git_blob_sha": "90130990d4074abd29db2a050189c8430d97b371"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tatami-house/theme-manifest.json",
+          "bytes": 7054,
+          "sha256": "e85b2500bc6c62b3fbaccbc23d1f27694f9e46199ca1db24538dabdccd609f7c",
+          "git_blob_sha": "fecfece97fdb1d686474a878645265fd9ee76571"
+        }
+      ]
+    }
+  ]
+}

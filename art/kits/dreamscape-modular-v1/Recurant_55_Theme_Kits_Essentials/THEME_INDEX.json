@@ -1,0 +1,391 @@
+{
+  "new_theme_count": 54,
+  "existing_reuse_count": 1,
+  "catalogue_total": 55,
+  "themes": [
+    {
+      "theme_id": "enchanted-forest",
+      "title": "Enchanted Forest",
+      "family": "organic",
+      "manifest": "themes/enchanted-forest/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "colossal-canopy",
+      "title": "Colossal Canopy",
+      "family": "organic",
+      "manifest": "themes/colossal-canopy/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "volcanic-wildlands",
+      "title": "Volcanic Wildlands",
+      "family": "organic",
+      "manifest": "themes/volcanic-wildlands/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "rainforest-river",
+      "title": "Rainforest River",
+      "family": "organic",
+      "manifest": "themes/rainforest-river/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "fungus-wonderland",
+      "title": "Fungus Wonderland",
+      "family": "organic",
+      "manifest": "themes/fungus-wonderland/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "toxic-forest",
+      "title": "Toxic Forest",
+      "family": "organic",
+      "manifest": "themes/toxic-forest/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "natural-caverns",
+      "title": "Natural Caverns",
+      "family": "organic",
+      "manifest": "themes/natural-caverns/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "bone-cavern",
+      "title": "Bone Cavern",
+      "family": "organic",
+      "manifest": "themes/bone-cavern/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "organic-living",
+      "title": "Living Tissue Labyrinth",
+      "family": "organic",
+      "manifest": "themes/organic-living/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "eerie-frontier-wilderness",
+      "title": "Eerie Frontier Wilderness",
+      "family": "organic",
+      "manifest": "themes/eerie-frontier-wilderness/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "sunflower-sanctuary",
+      "title": "Sunflower Sanctuary",
+      "family": "organic",
+      "manifest": "themes/sunflower-sanctuary/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "desert-life-sanctuary",
+      "title": "Desert Life Sanctuary",
+      "family": "organic",
+      "manifest": "themes/desert-life-sanctuary/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "reclaimed-wild-city",
+      "title": "Reclaimed Wild City",
+      "family": "organic",
+      "manifest": "themes/reclaimed-wild-city/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "elemental-mountain-refuge",
+      "title": "Elemental Mountain Refuge",
+      "family": "organic",
+      "manifest": "themes/elemental-mountain-refuge/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "mythic-mural-cavern",
+      "title": "Mythic Mural Cavern",
+      "family": "organic",
+      "manifest": "themes/mythic-mural-cavern/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "rootbound-undercity",
+      "title": "Rootbound Undercity",
+      "family": "organic",
+      "manifest": "themes/rootbound-undercity/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "crypt-catacombs",
+      "title": "Crypt Catacombs",
+      "family": "architecture",
+      "manifest": "themes/crypt-catacombs/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "dingy-cellar",
+      "title": "Dingy Cellar",
+      "family": "architecture",
+      "manifest": "themes/dingy-cellar/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "dream-city-alleys",
+      "title": "Dream City Alleys",
+      "family": "architecture",
+      "manifest": "themes/dream-city-alleys/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "alabaster-temple",
+      "title": "Alabaster Temple",
+      "family": "architecture",
+      "manifest": "themes/alabaster-temple/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "subterranean-elven-realm",
+      "title": "Subterranean Elven Realm",
+      "family": "architecture",
+      "manifest": "themes/subterranean-elven-realm/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "gothic-night-castle",
+      "title": "Gothic Night Castle",
+      "family": "architecture",
+      "manifest": "themes/gothic-night-castle/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "palace-hallways",
+      "title": "Palace Hallways",
+      "family": "architecture",
+      "manifest": "themes/palace-hallways/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "potion-cellar",
+      "title": "Potion Cellar",
+      "family": "architecture",
+      "manifest": "themes/potion-cellar/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "tatami-house",
+      "title": "Tatami House",
+      "family": "architecture",
+      "manifest": "themes/tatami-house/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "tavern-inn",
+      "title": "Tavern Inn",
+      "family": "architecture",
+      "manifest": "themes/tavern-inn/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "lost-toy-world",
+      "title": "Lost Toy World",
+      "family": "architecture",
+      "manifest": "themes/lost-toy-world/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "embroidered-world",
+      "title": "Embroidered World",
+      "family": "architecture",
+      "manifest": "themes/embroidered-world/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "astral-sanctuary",
+      "title": "Astral Sanctuary",
+      "family": "architecture",
+      "manifest": "themes/astral-sanctuary/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "mindglass-sanctum",
+      "title": "Mindglass Sanctum",
+      "family": "architecture",
+      "manifest": "themes/mindglass-sanctum/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "basalt-underworld",
+      "title": "Basalt Underworld",
+      "family": "architecture",
+      "manifest": "themes/basalt-underworld/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "aquatic-living-laboratory",
+      "title": "Aquatic Living Laboratory",
+      "family": "technical",
+      "manifest": "themes/aquatic-living-laboratory/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "arcane-factory",
+      "title": "Arcane Factory",
+      "family": "technical",
+      "manifest": "themes/arcane-factory/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "armory",
+      "title": "Armory",
+      "family": "technical",
+      "manifest": "themes/armory/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "living-crystal-interior",
+      "title": "Living Crystal Interior",
+      "family": "technical",
+      "manifest": "themes/living-crystal-interior/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "clockwork",
+      "title": "Clockwork",
+      "family": "technical",
+      "manifest": "themes/clockwork/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "crystal-hallway",
+      "title": "Crystal Hallway",
+      "family": "technical",
+      "manifest": "themes/crystal-hallway/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "crystalline-machine-sanctuary",
+      "title": "Crystalline Machine Sanctuary",
+      "family": "technical",
+      "manifest": "themes/crystalline-machine-sanctuary/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "forge",
+      "title": "Forge",
+      "family": "technical",
+      "manifest": "themes/forge/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "foundry",
+      "title": "Foundry",
+      "family": "technical",
+      "manifest": "themes/foundry/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "crescent-iron-warship",
+      "title": "Crescent Iron Warship",
+      "family": "technical",
+      "manifest": "themes/crescent-iron-warship/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "machine-city",
+      "title": "Machine City",
+      "family": "technical",
+      "manifest": "themes/machine-city/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "transforming-machine-interior",
+      "title": "Transforming Machine Interior",
+      "family": "technical",
+      "manifest": "themes/transforming-machine-interior/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "perfected-metal-sanctuary",
+      "title": "Perfected Metal Sanctuary",
+      "family": "technical",
+      "manifest": "themes/perfected-metal-sanctuary/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "smith-workshop",
+      "title": "Smith Workshop",
+      "family": "technical",
+      "manifest": "themes/smith-workshop/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "storm-inventor-workshop",
+      "title": "Storm Inventor Workshop",
+      "family": "technical",
+      "manifest": "themes/storm-inventor-workshop/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "blackwater-swamp",
+      "title": "Blackwater Swamp",
+      "family": "landscape",
+      "manifest": "themes/blackwater-swamp/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "redrock-mountain",
+      "title": "Redrock Mountain",
+      "family": "landscape",
+      "manifest": "themes/redrock-mountain/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "ancient-forest",
+      "title": "Ancient Forest",
+      "family": "landscape",
+      "manifest": "themes/ancient-forest/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "tidal-island",
+      "title": "Tidal Island",
+      "family": "landscape",
+      "manifest": "themes/tidal-island/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "golden-plains",
+      "title": "Golden Plains",
+      "family": "landscape",
+      "manifest": "themes/golden-plains/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "genesis-garden",
+      "title": "Genesis Garden",
+      "family": "landscape",
+      "manifest": "themes/genesis-garden/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "wild-savanna",
+      "title": "Wild Savanna",
+      "family": "landscape",
+      "manifest": "themes/wild-savanna/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "onebit-spiritual-landscape",
+      "title": "One-Bit Spiritual Landscape",
+      "family": "landscape",
+      "manifest": "themes/onebit-spiritual-landscape/theme-manifest.json",
+      "new_kit": true
+    },
+    {
+      "theme_id": "sandstone-ruins-existing",
+      "title": "Existing Sandstone Ruins",
+      "new_kit": false,
+      "reuse_notes": "themes/sandstone-ruins-existing/REUSE_EXISTING.md"
+    }
+  ]
+}

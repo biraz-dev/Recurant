@@ -1,0 +1,20 @@
+{
+  "asset": "pipe_valve_riser",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        1.0,
+        -0.098915
+      ],
+      "size": [
+        0.54,
+        2.0,
+        0.502169
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/pipe_valve_riser__GUIDE.glb"
+}

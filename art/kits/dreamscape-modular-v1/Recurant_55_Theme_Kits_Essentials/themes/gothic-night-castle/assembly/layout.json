@@ -1,0 +1,856 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "gothic-night-castle",
+  "title": "Gothic Night Castle",
+  "manifest_base": "package_root",
+  "units": "meters",
+  "to_game_scale": 0.5,
+  "coordinate_system": "right-handed +Y up +X east -Z north",
+  "instances": [
+    {
+      "instance_id": "i000",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        1,
+        0,
+        1
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        0,
+        0
+      ]
+    },
+    {
+      "instance_id": "i001",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        3,
+        0,
+        1
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        1,
+        0
+      ]
+    },
+    {
+      "instance_id": "i002",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        5,
+        0,
+        1
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        2,
+        0
+      ]
+    },
+    {
+      "instance_id": "i003",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        1,
+        0,
+        3
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        0,
+        1
+      ]
+    },
+    {
+      "instance_id": "i004",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        3,
+        0,
+        3
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        1,
+        1
+      ]
+    },
+    {
+      "instance_id": "i005",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        5,
+        0,
+        3
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        2,
+        1
+      ]
+    },
+    {
+      "instance_id": "i006",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        1,
+        0,
+        5
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        0,
+        2
+      ]
+    },
+    {
+      "instance_id": "i007",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        3,
+        0,
+        5
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        1,
+        2
+      ]
+    },
+    {
+      "instance_id": "i008",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        5,
+        0,
+        5
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        2,
+        2
+      ]
+    },
+    {
+      "instance_id": "i009",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        1,
+        0,
+        7
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        0,
+        3
+      ]
+    },
+    {
+      "instance_id": "i010",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        3,
+        0,
+        7
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        1,
+        3
+      ]
+    },
+    {
+      "instance_id": "i011",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        5,
+        0,
+        7
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        2,
+        3
+      ]
+    },
+    {
+      "instance_id": "i012",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        1,
+        0,
+        9
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        0,
+        4
+      ]
+    },
+    {
+      "instance_id": "i013",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        3,
+        0,
+        9
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        1,
+        4
+      ]
+    },
+    {
+      "instance_id": "i014",
+      "module_id": "floor_pavers_2m",
+      "position_m": [
+        5,
+        0,
+        9
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "floor",
+      "cell": [
+        2,
+        4
+      ]
+    },
+    {
+      "instance_id": "i015",
+      "module_id": "masonry_inset_panel",
+      "position_m": [
+        1,
+        0,
+        10.34000015258789
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "rear_boundary",
+      "cell": [
+        0,
+        4
+      ]
+    },
+    {
+      "instance_id": "i016",
+      "module_id": "masonry_inset_panel",
+      "position_m": [
+        3,
+        0,
+        10.34000015258789
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "rear_boundary",
+      "cell": [
+        1,
+        4
+      ]
+    },
+    {
+      "instance_id": "i017",
+      "module_id": "masonry_inset_panel",
+      "position_m": [
+        5,
+        0,
+        10.34000015258789
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "rear_boundary",
+      "cell": [
+        2,
+        4
+      ]
+    },
+    {
+      "instance_id": "i018",
+      "module_id": "masonry_doorway_pointed",
+      "position_m": [
+        3,
+        0,
+        8
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "open_portal",
+      "cell": [
+        1,
+        3
+      ]
+    },
+    {
+      "instance_id": "i019",
+      "module_id": "masonry_buttress",
+      "position_m": [
+        0.7999999895691872,
+        -0.0,
+        1.0
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "blocked_cell_scenery",
+      "cell": [
+        0,
+        0
+      ]
+    },
+    {
+      "instance_id": "i020",
+      "module_id": "column_fluted",
+      "position_m": [
+        5.0,
+        -0.0,
+        1.0
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        15,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "blocked_cell_scenery",
+      "cell": [
+        2,
+        0
+      ]
+    },
+    {
+      "instance_id": "i021",
+      "module_id": "sarcophagus",
+      "position_m": [
+        1.0,
+        -0.0,
+        3.0
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        -15,
+        0
+      ],
+      "scale_xyz": [
+        0.8415513582879983,
+        0.8415513582879983,
+        0.8415513582879983
+      ],
+      "role": "blocked_cell_scenery",
+      "cell": [
+        0,
+        1
+      ]
+    },
+    {
+      "instance_id": "i022",
+      "module_id": "textile_banner_pointed",
+      "position_m": [
+        5.0,
+        0.25,
+        3.0
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        90,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "blocked_cell_scenery",
+      "cell": [
+        2,
+        1
+      ]
+    },
+    {
+      "instance_id": "i023",
+      "module_id": "lantern_box",
+      "position_m": [
+        1.0,
+        -0.0,
+        5.0
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "blocked_cell_scenery",
+      "cell": [
+        0,
+        2
+      ]
+    },
+    {
+      "instance_id": "i024",
+      "module_id": "urn",
+      "position_m": [
+        5.0,
+        -0.0,
+        5.0
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        15,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "blocked_cell_scenery",
+      "cell": [
+        2,
+        2
+      ]
+    },
+    {
+      "instance_id": "i025",
+      "module_id": "altar_block",
+      "position_m": [
+        1.0,
+        -0.0,
+        7.0
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        -15,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "blocked_cell_scenery",
+      "cell": [
+        0,
+        3
+      ]
+    },
+    {
+      "instance_id": "i026",
+      "module_id": "shelf_bookcase",
+      "position_m": [
+        5.084999993443489,
+        -0.0,
+        7.0
+      ],
+      "rotation_degrees_xyz": [
+        0,
+        90,
+        0
+      ],
+      "scale_xyz": [
+        1,
+        1,
+        1
+      ],
+      "role": "blocked_cell_scenery",
+      "cell": [
+        2,
+        3
+      ]
+    }
+  ],
+  "navigation": {
+    "cells": [
+      {
+        "cell": [
+          0,
+          0
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          0
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          0
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          1
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          1
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          1
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          2
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          2
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          2
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          3
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          3
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          3
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          0,
+          4
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      },
+      {
+        "cell": [
+          1,
+          4
+        ],
+        "walkable": true,
+        "surface_y_m": 0,
+        "kind": "Floor"
+      },
+      {
+        "cell": [
+          2,
+          4
+        ],
+        "walkable": false,
+        "surface_y_m": 0,
+        "kind": "SceneryBlocked"
+      }
+    ],
+    "edges": [
+      {
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          1,
+          1
+        ],
+        "bidirectional": true
+      },
+      {
+        "a": [
+          1,
+          1
+        ],
+        "b": [
+          1,
+          2
+        ],
+        "bidirectional": true
+      },
+      {
+        "a": [
+          1,
+          2
+        ],
+        "b": [
+          1,
+          3
+        ],
+        "bidirectional": true
+      },
+      {
+        "a": [
+          1,
+          3
+        ],
+        "b": [
+          1,
+          4
+        ],
+        "bidirectional": true
+      }
+    ],
+    "start_cell": [
+      1,
+      0
+    ],
+    "goal_cell": [
+      1,
+      4
+    ],
+    "missing_edges": "forbidden_between_declared_walkable_neighbours",
+    "diagonal": false
+  },
+  "usage": "diagnostic cutaway gallery, not a production level; choose instance route OR assembled GLB",
+  "material_role_overrides": "Applied per module primitive before packing. Recompute UVs on semantic change: target wall/ground uses metric dominant-normal projection /2; target structure/detail normalizes each disconnected face island to0\u20131. Module importers must apply both role and UV rebinding."
+}

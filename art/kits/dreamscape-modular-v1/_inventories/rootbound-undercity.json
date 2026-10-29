@@ -1,0 +1,174 @@
+{
+  "id": "rootbound-undercity",
+  "title": "Rootbound Undercity",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "rootbound-undercity-001",
+      "bytes": 2378011,
+      "sha256": "f90ebef0e9770b87b334730f15f8979eb6ed9eca521fd37981bea83c9d2290bd",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/rootbound-undercity.volume-001.zip",
+          "bytes": 2378011,
+          "sha256": "f90ebef0e9770b87b334730f15f8979eb6ed9eca521fd37981bea83c9d2290bd",
+          "git_blob_sha": "9e6a9ad5e585d092811d15f39773c264c0e79a86"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/CLAUDE_README.md",
+          "bytes": 7582,
+          "sha256": "94aca945d5a4fda8a04eff71c75f4de3f1185206b141ce5cf51c2e3bde0fd727",
+          "git_blob_sha": "04d74c624e2bef010962c26e2850fac98ca0f0a0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "3f936c414c4518bd40c4f1007cb2c8fdcf214622c5b4ce0a7dea133770860b61",
+          "git_blob_sha": "669a2ef8f0eeaaf575dd2f90c92edfb54cca3369"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/assembly/collision-navigation.json",
+          "bytes": 10211,
+          "sha256": "8e407a7e77d6c839f2b58c3c2461f2e394e73e7d43cab7e2e3b758c54768c50f",
+          "git_blob_sha": "b1664ad9e752096883e9ea621e24cac7cd3a1df3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/assembly/layout.json",
+          "bytes": 13985,
+          "sha256": "9b01bac96673b1c7cdf0eb39d339154b01da203fcadcee6a9da37254fad3ddf2",
+          "git_blob_sha": "2a77c39115a6a1b424173749bcbf859ea97d3d4f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/assembly/native_320x240.png",
+          "bytes": 151070,
+          "sha256": "2cd61eb6145966764e6421acbdfc3dd00d114bfbced0dbe1f164f31f0695511e",
+          "git_blob_sha": "d5b2f987a6401887305bf59f38a465b834bf00fa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/assembly/showcase.glb",
+          "bytes": 902964,
+          "sha256": "111442c1e31cb4ff3d7742014ba455a1aaebc13bf6dabafbd8a4d8060edfa4b9",
+          "git_blob_sha": "4f30e3930a3461c6d778dadefc8de2329f0d060f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/concept/reference_native_320x240.png",
+          "bytes": 185367,
+          "sha256": "fb02713f0a9653be9d7120598124c17d494d0bb8b3ade55d8a79f48cc5858420",
+          "git_blob_sha": "62f5d758ea3382323c896c7fd36e88ce24578e8b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "74d01cf91804f92fe3814ed7fa3de00f57ff4c38addb901934035de29579240a",
+          "git_blob_sha": "e149a2ef5cb794fa5c4fb787b71b2aee7a07e982"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/material_manifest.json",
+          "bytes": 14286,
+          "sha256": "c5be576b40f7373f41cb4338e9fca0a3c5a582ac75d2e1192ee04539f25ebc02",
+          "git_blob_sha": "e2864f95882ebc7b386b20aeb9c994c16a4f43df"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/materials/detail_diffuse_128.png",
+          "bytes": 44112,
+          "sha256": "85dc44bb3a1b35b66a582382a37bb1635d64d0faeb9096f8fd7a586bb6d654b9",
+          "git_blob_sha": "56b7f05c236065cec8099cab1b1c728c3159f470"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/materials/detail_diffuse_256.png",
+          "bytes": 164960,
+          "sha256": "d2639c1f06b8cb7ea6e09f7c0853501cd1df1ebfd2c1881e5200b8ff3bc5d3e0",
+          "git_blob_sha": "97a43bcfb5c7d38077c66c865caa7e290e9090e9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/materials/ground_diffuse_128.png",
+          "bytes": 43346,
+          "sha256": "199d2d62178e5e064a1522370b3ea5c7a873db34e6c00542a5ecdc6751e81a8d",
+          "git_blob_sha": "1e5921a0186be671254774ae7653b706d7175763"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/materials/ground_diffuse_256.png",
+          "bytes": 164969,
+          "sha256": "ea83e9ae60f5dfe29a10ad9994a1a89227f5b5d6d89eaa4e6b1518e3cc2e9e91",
+          "git_blob_sha": "f47d07eed4435a71c3022a478bc5b007f3accf7e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/materials/ground_repeat_diffuse_128.png",
+          "bytes": 46704,
+          "sha256": "8ff9d69eb1a914714ea057abfcc5b0e3315da5d93f667adeeb5b1a4e3f1b7b19",
+          "git_blob_sha": "fcb8c5c4d0c61310ae8d36ae1d32ec748ba25341"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/materials/ground_repeat_diffuse_256.png",
+          "bytes": 178774,
+          "sha256": "f0b95e82451d505d9d36ee38638f39fdef6694cf5779773d08e0cef7877c8836",
+          "git_blob_sha": "f7804a92f1abe89bd708d5dd6f19835c4ab334e1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/materials/structure_diffuse_128.png",
+          "bytes": 43199,
+          "sha256": "59f1af5e1689cd88bc2fabb6d452ead6b34f609a3f8246cbf09b008c5bacf34f",
+          "git_blob_sha": "e37db9d6927b85caed70fd624719b8909182a85a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/materials/structure_diffuse_256.png",
+          "bytes": 164656,
+          "sha256": "66616220747a704714fc07d1d007634a9e30ff0c399c9457e1ad65b2afceabf5",
+          "git_blob_sha": "6cdbd915bfdc3724d0ee0765256faa2a76596f1c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/materials/wall_diffuse_128.png",
+          "bytes": 43181,
+          "sha256": "43f31d318b4fa8ad55b08ffb39afcd551a38f83c40f128c5943ce12659e8a869",
+          "git_blob_sha": "9eefeca6df69970c31f6f3f3783ac7f940662494"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/materials/wall_diffuse_256.png",
+          "bytes": 164148,
+          "sha256": "80679b8141eb7ae78b6e2b5dd659affba977c5502af56036d459317ee44e5b4b",
+          "git_blob_sha": "1cb5aaef38f01afb7d6d82ecb191fec0a229e38b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/materials/wall_repeat_diffuse_128.png",
+          "bytes": 46146,
+          "sha256": "68e5cac1b777af8973451abe3d4d5316056dc522013c2045fbd58705b44f9c1c",
+          "git_blob_sha": "5b02d8c078fcf81612a0c4935962c5262e596e14"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/materials/wall_repeat_diffuse_256.png",
+          "bytes": 176594,
+          "sha256": "d4e53a0f3766dabb749c05f3bdecf641befbc31c5be5ebd215eca5b653099405",
+          "git_blob_sha": "171f55e236ebd3c130a9d3ec325e21e37e03106d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/prompts/material_atlas_prompt.txt",
+          "bytes": 1875,
+          "sha256": "2f93ba236ccc7e15906443cf2c65fd9c413f9c6f499fa229137e70c9b79c9c4f",
+          "git_blob_sha": "57bf0093c2300325b0915437c70eabe99344b5a6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1947,
+          "sha256": "0649560607d9df5452c98f8ac59456233587cbb77a548092b0b37c2e8efd9c92",
+          "git_blob_sha": "d749fc8081a4ab21a5cf4e57de96fad39c2db509"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/rootbound-undercity/theme-manifest.json",
+          "bytes": 7026,
+          "sha256": "e8bfa33b5ab0ed7eb80c6ab53ec77b77c09637b78d3b5c15e1fda4c9e82a04b8",
+          "git_blob_sha": "bb44c577461d70187c386841b9820c9d142ff6b4"
+        }
+      ]
+    }
+  ]
+}

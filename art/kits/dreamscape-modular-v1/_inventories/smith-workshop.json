@@ -1,0 +1,150 @@
+{
+  "id": "smith-workshop",
+  "title": "Smith Workshop",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "smith-workshop-001",
+      "bytes": 1702596,
+      "sha256": "de576de18484ef98a41bf6ef88a8283b673ca939578d1b4fa24eb16f00256e17",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/smith-workshop.volume-001.zip",
+          "bytes": 1702596,
+          "sha256": "de576de18484ef98a41bf6ef88a8283b673ca939578d1b4fa24eb16f00256e17",
+          "git_blob_sha": "c7a524a11e2697998efee314e1a66ab458f7f034"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/CLAUDE_README.md",
+          "bytes": 7182,
+          "sha256": "7f81f6824c3100f3cbf4b0f32e4040e3f150f3b5861e6d89e513e37102f3bcf1",
+          "git_blob_sha": "cfa22fd6baf304e3b1b2de188bf74c321ee5f22f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/MATERIAL_NOTES.md",
+          "bytes": 2717,
+          "sha256": "68dd553625ec9441a8a8908d68ea37f7c1be39e71e467c7191503eddff4f518f",
+          "git_blob_sha": "d776b26d6db1b0addce7917afae6ac01ba41d220"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "0fd92025fe4d670ffcdb18be35754b5e3096093f1e13cfe5257461343945b90f",
+          "git_blob_sha": "a8363b5c4ba2bfdba012c2913ff5aa020898ff26"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/assembly/collision-navigation.json",
+          "bytes": 10379,
+          "sha256": "f9b93b3f3c44891ea61592d575e6a5ca452efbfd045d623e1a17b20e6431b424",
+          "git_blob_sha": "4db25502f68ea03f6e4cad5c5a3a3a81e15d75bd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/assembly/layout.json",
+          "bytes": 13563,
+          "sha256": "1563e916a7de85cc50c423c27203528e0b0743a440035dcd3544e6be09d875bf",
+          "git_blob_sha": "b3864529019c050ff716222770c3568acc8ba402"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/assembly/native_320x240.png",
+          "bytes": 141134,
+          "sha256": "3d3cd8ee10a758883f0b4e613d0f0470352b7b7b6922152eab6c14465012a235",
+          "git_blob_sha": "c1d1d5b49bfc5df3321a081b2c801c1bfef5dabf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/assembly/showcase.glb",
+          "bytes": 869564,
+          "sha256": "c8d6bd437be8df05d365849e71fe9cd8e7408cb51b7e042152d814cd73894c65",
+          "git_blob_sha": "ecd48fc2d4967d299cd5c2410720744613002533"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/concept/reference_native_320x240.png",
+          "bytes": 157609,
+          "sha256": "348dcaf54e3f5f4f6d15b02e41da93c6147c208ae784e5edd8d467058a5cbaf4",
+          "git_blob_sha": "570ac2fca57b95d13c11c954f9a70e84ddd6754c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "7fc74038996fcd016be94a5e6da5d31e63d8d11db566069fc5448780ce992d50",
+          "git_blob_sha": "7fe9478b3499265236ebfbd9c78f0d9a361056dd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/material-manifest.json",
+          "bytes": 7232,
+          "sha256": "73b6ef875e65c61025f03dde6ddd33896373cb4a2b33e844386639123447df26",
+          "git_blob_sha": "1fdf1c89df8dd2710caafb1984fe42c12830e3bd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/materials/detail_diffuse_128.png",
+          "bytes": 35425,
+          "sha256": "26b97435937c700f0108447f14e323fb0b3cf6e45d1893695915e666460750c8",
+          "git_blob_sha": "73e291f19d087d0c78c44b9b641a65cd12f2718f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/materials/detail_diffuse_256.png",
+          "bytes": 133360,
+          "sha256": "d19cfe48f431fbae7d2235e549a8b053bde5bd315f16ac41db683acbad2fdfb5",
+          "git_blob_sha": "2b838d2306ccf746bd7995755358bf1eb77e5435"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/materials/ground_diffuse_128.png",
+          "bytes": 40478,
+          "sha256": "77df2ccb46f5e5659f3331070bbbf854f316087726c2a0b113037c397158d6e7",
+          "git_blob_sha": "367e0ea37b1bdec013b002591e3e645cc479d3b4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/materials/ground_diffuse_256.png",
+          "bytes": 152371,
+          "sha256": "d64055188f2334643748761dcd954aa640a6f5caf6c8a5d4bb7b9c9d396d9dca",
+          "git_blob_sha": "d81175f0a064a25f10efba00dda5f12a2df1fe8a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/materials/structure_diffuse_128.png",
+          "bytes": 39302,
+          "sha256": "6b53e098035c75eb7d29fe1420521d8344ea168e25d74279e2d2c04a1ed6f4a0",
+          "git_blob_sha": "ac5d44cfcad87a71e8f64aa7ac5a8b2321c40c5e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/materials/structure_diffuse_256.png",
+          "bytes": 147600,
+          "sha256": "91790d4599446e27c2389f54244a9a11bf7c340b012594443ef84e6e75d214ec",
+          "git_blob_sha": "eb697a00fb8cda363829537c050fd417fdd86fc9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/materials/wall_diffuse_128.png",
+          "bytes": 41744,
+          "sha256": "4feb267958815f14ffb11e8c08add73e2801d330fecb301ba545e972cb6e2397",
+          "git_blob_sha": "efd62e740341591026fb951fa9572ec3c37a8966"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/materials/wall_diffuse_256.png",
+          "bytes": 158169,
+          "sha256": "44c131d00abd1515430c7eb0d6bc13a9f90114a1bf98533b053781cd0bffce6c",
+          "git_blob_sha": "01e69a8c279addd349ac30ff59015a853bd2e9aa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/prompts/material_atlas_v1.txt",
+          "bytes": 2375,
+          "sha256": "def3530f58c3441b9a6800a0711a13d138d2500f19f7bcc1fd538a826baa286f",
+          "git_blob_sha": "32a53ce2fed7bd778ef3669205ce3885e2487d30"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/smith-workshop/theme-manifest.json",
+          "bytes": 6848,
+          "sha256": "bd9fbcedbab3cb7780cf31b0da96838b15c053ed5614e92dd04726da7cc9a0c0",
+          "git_blob_sha": "12a5d7d832f3fd35eb543e422186c0bc439a55d5"
+        }
+      ]
+    }
+  ]
+}

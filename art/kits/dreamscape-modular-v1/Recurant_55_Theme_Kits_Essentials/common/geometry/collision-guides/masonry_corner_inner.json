@@ -1,0 +1,32 @@
+{
+  "asset": "masonry_corner_inner",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        1,
+        2,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        0.2
+      ]
+    },
+    {
+      "center": [
+        0,
+        2,
+        1
+      ],
+      "size": [
+        0.2,
+        4,
+        2
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/masonry_corner_inner__GUIDE.glb"
+}

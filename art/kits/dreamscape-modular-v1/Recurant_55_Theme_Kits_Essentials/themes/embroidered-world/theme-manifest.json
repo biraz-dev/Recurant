@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "embroidered-world",
+  "title": "Embroidered World",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/embroidered-world/materials/wall_diffuse_256.png",
+      "low_memory_basecolor": "themes/embroidered-world/materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Deep indigo knitted cloth carrying separate small gold floral sprigs in a regular repeat"
+    },
+    "ground": {
+      "basecolor": "themes/embroidered-world/materials/ground_diffuse_256.png",
+      "low_memory_basecolor": "themes/embroidered-world/materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Warm ivory woven cloth with separated gold diamond medallions and tiny lavender flowers"
+    },
+    "structure": {
+      "basecolor": "themes/embroidered-world/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/embroidered-world/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "thick golden braided yarn textile arranged in orderly horizontal cable-knit rows, no freestanding yarn or scenery"
+    },
+    "detail": {
+      "basecolor": "themes/embroidered-world/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/embroidered-world/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "square hand-embroidered lavender and gold floral mandala on indigo cloth, visible tiny stitches, nonrepeat flat textile panel"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_plain_2m",
+      "role": "walkable_floor",
+      "notes": "Plain 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "textile_curtain_2m",
+      "role": "structure",
+      "notes": "Pleated 2m-wide curtain made from closed thin cloth strips, not alpha card."
+    },
+    {
+      "module_id": "timber_post_beam_gate",
+      "role": "structure",
+      "notes": "Open post-and-beam portal with 1.52 m clear lane."
+    },
+    {
+      "module_id": "textile_rug_2m",
+      "role": "distinctive_prop",
+      "notes": "Square raised woven rug with separate edge-binding geometry."
+    },
+    {
+      "module_id": "textile_cushion",
+      "role": "distinctive_prop",
+      "notes": "Low square cushion, compact static prop."
+    },
+    {
+      "module_id": "textile_canopy_2m",
+      "role": "distinctive_prop",
+      "notes": "Pitched cloth canopy and four support poles; clear height at eaves2m."
+    },
+    {
+      "module_id": "textile_banner_pointed",
+      "role": "distinctive_prop",
+      "notes": "Pennant-shaped hanging banner with solid thickness. Local origin is tip shoulder."
+    },
+    {
+      "module_id": "timber_post",
+      "role": "distinctive_prop",
+      "notes": "Square timber upright with foot shoe."
+    },
+    {
+      "module_id": "urn",
+      "role": "distinctive_prop",
+      "notes": "Faceted urn / potion container with broad body and narrow neck."
+    },
+    {
+      "module_id": "inn_bench",
+      "role": "distinctive_prop",
+      "notes": "Simple low-poly bench, 1.8 m long, ground standing."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/embroidered-world/assembly/layout.json",
+    "glb": "themes/embroidered-world/assembly/showcase.glb",
+    "preview": "themes/embroidered-world/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 10570,
+      "triangles": 5322,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "18394b344264eca72a2c5d2992d4c913cb394ac0902d7f5381ff574226f1b3d2",
+        "showcase.glb": "c7429031523713fed7db387f0a5258993f5aceff2b45f9a3ab33cbd829f32049"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "a7a03cb2eb723f6c29385586a0e4fbbb6195c8fd21f95940991c7a0ec68fc2a8"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/embroidered-world/material-manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

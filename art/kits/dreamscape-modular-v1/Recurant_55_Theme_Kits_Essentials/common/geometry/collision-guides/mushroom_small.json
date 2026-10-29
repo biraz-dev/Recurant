@@ -1,0 +1,20 @@
+{
+  "asset": "mushroom_small",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.044,
+        0.293908,
+        0.0
+      ],
+      "size": [
+        0.528,
+        0.600184,
+        0.502158
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/mushroom_small__GUIDE.glb"
+}

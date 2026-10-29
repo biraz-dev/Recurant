@@ -1,0 +1,150 @@
+{
+  "id": "alabaster-temple",
+  "title": "Alabaster Temple",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "alabaster-temple-001",
+      "bytes": 1445115,
+      "sha256": "4fd9d037621160a1ef81a1b70788812fc14bb00345f4f471cd7f8e95ebfeb819",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/alabaster-temple.volume-001.zip",
+          "bytes": 1445115,
+          "sha256": "4fd9d037621160a1ef81a1b70788812fc14bb00345f4f471cd7f8e95ebfeb819",
+          "git_blob_sha": "7f41be072f261158a0007e2245dee15018c35f17"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/CLAUDE_README.md",
+          "bytes": 7293,
+          "sha256": "0a240bc9b214eb95943aef21e6507224d03e5ce0188b0760133605b8e005b1b8",
+          "git_blob_sha": "3fa9cd29f67fdf1f7f9b3551a06fe680d76e6768"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "562cbf7eb21f55526cd5f5e0f3cb415cf03c2ea58fa64be6520dc8256fe34305",
+          "git_blob_sha": "f94ed135d43ddca0945abf67705eddc26e661518"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/assembly/collision-navigation.json",
+          "bytes": 10387,
+          "sha256": "fe3bf08a66cbd63cd79953131b27fbe870559507f33a035fe481e24cbf4611a7",
+          "git_blob_sha": "e9096344b0c60e1c9f5418f7fba268fae3265900"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/assembly/layout.json",
+          "bytes": 13424,
+          "sha256": "23564ad7e47aeb6fdccf066d4c797c127108d6324b43931113beaa2c0fab0c3c",
+          "git_blob_sha": "68a6d1799ed454e5a0321241bfa051f8ea5e3405"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/assembly/native_320x240.png",
+          "bytes": 152646,
+          "sha256": "7dcc118c075b7cfca5a091c8869498cb38338b0ed34c06bf911d10cecaa8d9c7",
+          "git_blob_sha": "13d43282e4eb6b491fe0a193dfc6f862038dc3ef"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/assembly/showcase.glb",
+          "bytes": 639732,
+          "sha256": "f72169b70c315c65a4b3723f50912c638b541e384f50ff16427e101eec4ee901",
+          "git_blob_sha": "65d8ae7eef076ced737e2edf44d2baefb5d3bfa9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/concept/reference_native_320x240.png",
+          "bytes": 138631,
+          "sha256": "1bb0f32a20805ff0ffc5c9e799865ab4abed0692fe78346e100adb183de98197",
+          "git_blob_sha": "e643a89f3a85f93db84c8e5c95cec2468fc7bc94"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "a6972efc5d85441ab6d4a4444180b9df4bb0bab4d47dea3334f564bb5e594737",
+          "git_blob_sha": "86cf97fef7350cdfa01e0348b521021592e2734d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/material-manifest.json",
+          "bytes": 7175,
+          "sha256": "723881ba22f11f76f331f13c22a04318e3e0bcbd9bba7a95fd0f0752b8ed87dd",
+          "git_blob_sha": "5e579f5c585c7897087efdd04e03347dd1328a49"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/materials/detail_diffuse_128.png",
+          "bytes": 39209,
+          "sha256": "ab8094b87fdfce0aae1515bbd61c0113a8d84547b2ad0e61a3ba6e20324603b9",
+          "git_blob_sha": "9c94d5501bce33d21a0b13d5bfcec90013936825"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/materials/detail_diffuse_256.png",
+          "bytes": 139605,
+          "sha256": "707763041538278b3462a3a9bbffb5a9323d0ecd58b21665c83b974230caee98",
+          "git_blob_sha": "a1c6802939cd2fc850460c7c596fecbfb60ea360"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/materials/ground_diffuse_128.png",
+          "bytes": 28953,
+          "sha256": "5b53700138e8ffaff8ed57d0e063cb0fa676633f6090fa3ce1f71bec585bf156",
+          "git_blob_sha": "9307ac44a26fda2617b603ac6ba0e5094a3ba901"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/materials/ground_diffuse_256.png",
+          "bytes": 104378,
+          "sha256": "59cad213a7eafa96dbd21e59e515b89628aafbf70cec23efaacafc05b11d1575",
+          "git_blob_sha": "8890ffba71c86bb12856a8d223a2038c93e2d5f2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/materials/structure_diffuse_128.png",
+          "bytes": 35086,
+          "sha256": "8cf5a6ddf8f7d21d9d3cf6da9b0e72465d795d89bd3e6edaf9e14c461b936295",
+          "git_blob_sha": "b587173adf1d08ee920f1cb7c8b8902f129a0f1f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/materials/structure_diffuse_256.png",
+          "bytes": 124817,
+          "sha256": "afa35894526d7e9ab807c9048acc61cac29398eeae34c5d4fd4738ebb8a62cfa",
+          "git_blob_sha": "875212d45f6a1e21fb5cb18523626517374b34cf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/materials/wall_diffuse_128.png",
+          "bytes": 31787,
+          "sha256": "b155ee577d17eb8ce027dc1a1d8e41902420ff2706536a1467b28bf9c2856300",
+          "git_blob_sha": "299121fb33e12c235f493435c65d48b97993d947"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/materials/wall_diffuse_256.png",
+          "bytes": 116357,
+          "sha256": "dd7e97819606f87a411769bf2843ca18d2448244bfbf7b0fd698783e510e800d",
+          "git_blob_sha": "a0cb1210fcc5ea5620df44386bced20bc95c603b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/prompts/material-atlas.txt",
+          "bytes": 1957,
+          "sha256": "41330ac396356b4299e53ba6c02866e52b75ad959707723c25ca7ffa2d239094",
+          "git_blob_sha": "8cd98bc5519fd98a87f64ee852a7cf6854a85964"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/prompts/seam-repair.txt",
+          "bytes": 1698,
+          "sha256": "052391ff81978abf5220289090bded2470b343bd714ea1bd6f2f38c6e96b17a2",
+          "git_blob_sha": "a46d14d754fb826d87648efc3b4dd1b6b9f48066"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/alabaster-temple/theme-manifest.json",
+          "bytes": 6885,
+          "sha256": "c64a390b2a57f76d8012dacf272d7f1f9a37fd67d7daab6711490a1bfca78913",
+          "git_blob_sha": "a80910253c874ef9ca5d98222bacd4ff76b37f0e"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "id": "eerie-frontier-wilderness",
+  "title": "Eerie Frontier Wilderness",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "eerie-frontier-wilderness-001",
+      "bytes": 2422532,
+      "sha256": "7099d5958f57e282158147c95b4e125c9c6472687542d4ca4d88cb68b59d172c",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/eerie-frontier-wilderness.volume-001.zip",
+          "bytes": 2422532,
+          "sha256": "7099d5958f57e282158147c95b4e125c9c6472687542d4ca4d88cb68b59d172c",
+          "git_blob_sha": "c90107199a83062199a080eebd0041744b1eb31f"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/CLAUDE_README.md",
+          "bytes": 7545,
+          "sha256": "44acdaa3f513b7968b79749381b5f377d221adccc6177ae68f7509cf0e5b38eb",
+          "git_blob_sha": "e7253ea8a4cacb2eb8772e95d8d7c4284cc1639b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "1d24652ede45d7797cc15036d8796af093f4e86e49d3af48388b61a313aa92e4",
+          "git_blob_sha": "8e0bdaa16959b3edc1e6ecc35852bd7dfd702e7a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/assembly/collision-navigation.json",
+          "bytes": 9950,
+          "sha256": "092475a0aea1ea3dbef85a5421de8bf1cde16542375b74732f9f9333b05f82e1",
+          "git_blob_sha": "530a43fc95f1e0ac3253401e857eb8c004c4bc2e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/assembly/layout.json",
+          "bytes": 14024,
+          "sha256": "3c6c4dd38e15c34b3eeb56abb438d62cff8ae22bdd63f24342b81479ba18fa9b",
+          "git_blob_sha": "fb120241ca50bafe43714d30ad46b62590142978"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/assembly/native_320x240.png",
+          "bytes": 158704,
+          "sha256": "256e43959c285abca8fcc3927ab0cd40a0778440e669bc673f12423a1ae57814",
+          "git_blob_sha": "53067f7638550729a6af930ac4fc94cbf8fe8468"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/assembly/showcase.glb",
+          "bytes": 819520,
+          "sha256": "bd4e85b74ec6b3ab505d2137c93fea86032c627c68807458b122af0704d23e64",
+          "git_blob_sha": "27f7fa84610ae32196c63fd825f5654ef684cf57"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/concept/reference_native_320x240.png",
+          "bytes": 182580,
+          "sha256": "1fc974bf79ec4b119ed51a0b1217c0882a830e1e39b4baebf2f708105d90ff5d",
+          "git_blob_sha": "1e56bc5b1abe57ee63512ee8d3ec373270fe2df0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "44a724237cf993d95ee0337d9ded2856e7d1ed0882bdb4eb31dd85c21edfdaed",
+          "git_blob_sha": "e134e93082260fb912c3415970a7282e1a22b4e3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/material_manifest.json",
+          "bytes": 14244,
+          "sha256": "3b9876cea01d4e5c7496d7c2a0359009c74f7d328582905b23e154048af6231c",
+          "git_blob_sha": "bd93ac705ac6df507b5437eaaf35a69a35f60e89"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/materials/detail_diffuse_128.png",
+          "bytes": 44613,
+          "sha256": "83f93ea877869a1958af4cda19828d453e4766a3f72fda0b8bdb4855acc1898f",
+          "git_blob_sha": "2650cdaf117cc32c57d520cd9cb819974e367a26"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/materials/detail_diffuse_256.png",
+          "bytes": 168952,
+          "sha256": "13bd68bf2fd7a72a1932a49a602837bdc6952e387e5a2e38a8daa5d643008252",
+          "git_blob_sha": "c6bf6a97d508c05e3d8ed1de2c99f2e40de02040"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/materials/ground_diffuse_128.png",
+          "bytes": 44961,
+          "sha256": "01f51647aec7d5426e5ef3640296f3f2ffb1484cdbef068a2a5bf839dd9b8dc2",
+          "git_blob_sha": "b226062d5534d64fc4911f6fc74dedd6c818120b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/materials/ground_diffuse_256.png",
+          "bytes": 171914,
+          "sha256": "b230d0a80f5266cef16d8d1badad746e2fef93bd4708ac5695933c82f45efdbc",
+          "git_blob_sha": "ce3722e04c11b04573703af569865a89f10e8a00"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/materials/ground_repeat_diffuse_128.png",
+          "bytes": 46402,
+          "sha256": "82f1c3070fdcf3cb0e8e8c65b4e670de1d588d050614bb10d025a6784358c0b9",
+          "git_blob_sha": "3c70749025f7db638ec30f2334667c21190d1f31"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/materials/ground_repeat_diffuse_256.png",
+          "bytes": 176497,
+          "sha256": "4a7e96845ef42ed9cebab69ba122e228c8cba8ecee585f611946b1f40a633456",
+          "git_blob_sha": "bee1a8289c082e10c1054422431d06f5587f1380"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/materials/structure_diffuse_128.png",
+          "bytes": 45514,
+          "sha256": "afac15a5f0cd06ac67ee18e992b5c87a61ecbc00d81a1745137f555454e5f4ae",
+          "git_blob_sha": "eb61d0507cc7579ff27d27fc13f08437b198e911"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/materials/structure_diffuse_256.png",
+          "bytes": 176118,
+          "sha256": "254c265bc79e0c4ced97cd56da42f65f1682ad6b4d4d708ba822afbbe84c1220",
+          "git_blob_sha": "309adcd34c763b0b38456c1052825c0fe1d46962"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/materials/wall_diffuse_128.png",
+          "bytes": 46000,
+          "sha256": "a9e5c4b8d518ab109042cc25ce5a9ed35c76ff32388705b9c657afa9b6e2a237",
+          "git_blob_sha": "ddbcb3dfecf0cf7c799d0f47450965ce23cf2c2e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/materials/wall_diffuse_256.png",
+          "bytes": 176329,
+          "sha256": "6a4e3140f28ab55e50efb3e99952821d0e12e5fa645116500b1e47e4a1a5d508",
+          "git_blob_sha": "768a85ac4ff214a563f1d482b9275420aaad7383"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/materials/wall_repeat_diffuse_128.png",
+          "bytes": 46884,
+          "sha256": "65b3d4029bfd61c155b63ceb213839db714f68f78d227fce4cd9723c0378b4b5",
+          "git_blob_sha": "07e107e296aaa521453b0c66dd14f62fe5f76c84"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/materials/wall_repeat_diffuse_256.png",
+          "bytes": 177639,
+          "sha256": "2dcc2c81174e042f8f5ec8c721b2ee1dbccfdaf32475179ddf4f8437a0cddb26",
+          "git_blob_sha": "087e4f1c50d6cc3be8631e2a8fc6c9f820700980"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/prompts/material_atlas_prompt.txt",
+          "bytes": 1850,
+          "sha256": "6fd3f697f5b9fa24e47e78b8b4f231670d32bd9f23ac03b9c8339ebbbed6d54e",
+          "git_blob_sha": "ca96eced6c44ff2731293b1c654e39716e07d632"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1942,
+          "sha256": "c91353a2e2ae74d1e0a8760598cc6ab42aac19109d6b7f995e5385b7c259f4eb",
+          "git_blob_sha": "93e7382d4a242295b7cb7a1430372c6bbdcd58fe"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/eerie-frontier-wilderness/theme-manifest.json",
+          "bytes": 7081,
+          "sha256": "45db318db0f3dd459c8be5a9612c4f540999ae5585b0f6294fbe19d08f8e31e2",
+          "git_blob_sha": "91f35f6ff8a3ee1ee3156ae99fa35231ff884421"
+        }
+      ]
+    }
+  ]
+}

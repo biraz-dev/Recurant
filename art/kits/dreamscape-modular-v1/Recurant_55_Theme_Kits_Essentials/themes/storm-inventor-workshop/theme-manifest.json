@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "storm-inventor-workshop",
+  "title": "Storm Inventor Workshop",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/storm-inventor-workshop/materials/wall_diffuse_256.png",
+      "low_memory_basecolor": "themes/storm-inventor-workshop/materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "warm russet old brick courses with pale gray fine mortar"
+    },
+    "ground": {
+      "basecolor": "themes/storm-inventor-workshop/materials/ground_diffuse_256.png",
+      "low_memory_basecolor": "themes/storm-inventor-workshop/materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "dark wet-looking terracotta square paving with muted rain-blue flecks, no reflections of objects"
+    },
+    "structure": {
+      "basecolor": "themes/storm-inventor-workshop/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/storm-inventor-workshop/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "aged copper sheet with blue-green patina and tiny flush rivets"
+    },
+    "detail": {
+      "basecolor": "themes/storm-inventor-workshop/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/storm-inventor-workshop/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "flat deep blue glass electrical plate with delicate copper conductor lines and restrained pale electric blue filaments"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_inset_2m",
+      "role": "walkable_floor",
+      "notes": "Inset 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "machine_wall_panel",
+      "role": "structure",
+      "notes": "Industrial panel wall with modeled perimeter structure."
+    },
+    {
+      "module_id": "machine_doorframe",
+      "role": "structure",
+      "notes": "Square bulkhead doorway with 1.4\u00d72.9m clear aperture."
+    },
+    {
+      "module_id": "coil_generator",
+      "role": "distinctive_prop",
+      "notes": "Vertical electrical/arcane coil device with repeated annular ribs."
+    },
+    {
+      "module_id": "coil_stack",
+      "role": "distinctive_prop",
+      "notes": "Seven separate disc ribs around a central shaft."
+    },
+    {
+      "module_id": "pipe_tee_2m",
+      "role": "distinctive_prop",
+      "notes": "Three-way T-pipe fitting, three centreline connectors."
+    },
+    {
+      "module_id": "machine_console",
+      "role": "distinctive_prop",
+      "notes": "Waist-high console with sloped top and three raised controls."
+    },
+    {
+      "module_id": "gear_machine_pair",
+      "role": "distinctive_prop",
+      "notes": "Two offset mounted gears over common plinth, no animation baked."
+    },
+    {
+      "module_id": "bottle_potion",
+      "role": "distinctive_prop",
+      "notes": "Potion bottle geometry with shoulder and long neck, opaque preview material."
+    },
+    {
+      "module_id": "shelf_bookcase",
+      "role": "distinctive_prop",
+      "notes": "Solid-backed three-shelf cabinet; fill with separately instanced props."
+    },
+    {
+      "module_id": "tank_vertical",
+      "role": "distinctive_prop",
+      "notes": "Cylindrical industrial vessel on square plinth."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/storm-inventor-workshop/assembly/layout.json",
+    "glb": "themes/storm-inventor-workshop/assembly/showcase.glb",
+    "preview": "themes/storm-inventor-workshop/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 4916,
+      "triangles": 2562,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "e2a95f18c198d51e4834d2cebe53950b6342a5669c362c9c6ee2894880875349",
+        "showcase.glb": "902d105cefc36e1dedf7ed4cc30a1047cb803aad17a3c96b13c9437cac0ff470"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "2224e4820acca3049703c984d3f1d99f18681168393e0916d013e0417fb0d263"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/storm-inventor-workshop/material-manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

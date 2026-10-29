@@ -1,0 +1,144 @@
+{
+  "id": "gothic-night-castle",
+  "title": "Gothic Night Castle",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 20,
+  "archives": [
+    {
+      "id": "gothic-night-castle-001",
+      "bytes": 1754325,
+      "sha256": "fad9c302fa5965340dc2edd624e817be7f88ceb0a2fd1b676c5e656e6b0eaf9b",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/gothic-night-castle.volume-001.zip",
+          "bytes": 1754325,
+          "sha256": "fad9c302fa5965340dc2edd624e817be7f88ceb0a2fd1b676c5e656e6b0eaf9b",
+          "git_blob_sha": "a62394cdb4f3af940dacef17c21423e6351b215e"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/CLAUDE_README.md",
+          "bytes": 7719,
+          "sha256": "d9f455f4023f76a60449f4d4d6cd50b673a155e7e839383c8eae2446cf483d55",
+          "git_blob_sha": "7b2411283561c932acbcf5f82004e3fa17d8cd0e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "4fe81cc0057b11686a9cfe0c3f14dcda967928d2fcc5d5aa3c3f2ae4fb25f811",
+          "git_blob_sha": "6452262a93676bec60f87554ebff8fb539673e89"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/assembly/collision-navigation.json",
+          "bytes": 10380,
+          "sha256": "962d36a72794b296aa3a66e906233147c8767eac0a8e22667f580e50f844743a",
+          "git_blob_sha": "666967496c3ad8ded14dcbc218008a169fd13e11"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/assembly/layout.json",
+          "bytes": 13508,
+          "sha256": "5963bbcf1231615ad5c2585f37876fe9540cd5b628b2ac201b6ebec2c439590b",
+          "git_blob_sha": "626312159bb7af15a3e2e72d0c3163fb76a83525"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/assembly/native_320x240.png",
+          "bytes": 140304,
+          "sha256": "e6bcb7e3e654ae3a23126d49daf0e63361d66af54cca4dbd2bf3d0cb2a1378f9",
+          "git_blob_sha": "aba023d795ea1276de95a146f1010d351d5afa27"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/assembly/showcase.glb",
+          "bytes": 881356,
+          "sha256": "7bbc0feb4761b3d3611a78e3a2584a6a9a47640475b67755e4b17259eb79f73d",
+          "git_blob_sha": "074e58b5ff5f5297960afeb59cd01dcfb42cf268"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/concept/reference_native_320x240.png",
+          "bytes": 158616,
+          "sha256": "1bc0f3ee4e6a5694adcef83e2a6506efc755afd848a027d8cbb4937cd0b2bb0f",
+          "git_blob_sha": "bd55b1fdf4beb05636d1cd78cdd6c1aef27afc9f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "48cec31cd4d656ced7b6a5a582c12a84019815fc409a3e66ee5de439be434732",
+          "git_blob_sha": "341a45549b9c733ba287bdf871fb9deef7ac92aa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/material-manifest.json",
+          "bytes": 7179,
+          "sha256": "ff4e829945809bc78d5c1a367322523b3ae0e76c3520d7b393df69df9f93d0cd",
+          "git_blob_sha": "98630b6399f988f2956e2da8cd3dd813335143fc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/materials/detail_diffuse_128.png",
+          "bytes": 41302,
+          "sha256": "c6f65dcdc42b4a0668d363835e12de87b52cf59514cd655327a4cf3c528c0bd7",
+          "git_blob_sha": "9771b6299112f1748e8422225032c9bc999a294d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/materials/detail_diffuse_256.png",
+          "bytes": 154339,
+          "sha256": "8dd9aa4f4edb73f3cf26d419efe0529f0444823d19a109f5b07f9665043bfb26",
+          "git_blob_sha": "0f55230293d1258b86ab6f4f832a0a99a42b8d71"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/materials/ground_diffuse_128.png",
+          "bytes": 39269,
+          "sha256": "87cb090a8244292adfa3c92eb7d8a303fda8b36549f6b72ba2953a094b000aaa",
+          "git_blob_sha": "47bfffa84ba2b9426dca55ab67c2181a6f2f6030"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/materials/ground_diffuse_256.png",
+          "bytes": 147777,
+          "sha256": "d56e6ce4a8d14485a6ac434a15419dcd75726487e992bec9113c7b8faf983fc2",
+          "git_blob_sha": "309af5de56e6c924338e6c5375e2d7230fbfe6ac"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/materials/structure_diffuse_128.png",
+          "bytes": 43757,
+          "sha256": "13850a009bef1d9cedc91f82e3fca2a8aef31540f5fd8c0233d6c05899eac0f1",
+          "git_blob_sha": "b4a0a354fc107a32a6a368708275332a4d6fc2c3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/materials/structure_diffuse_256.png",
+          "bytes": 161971,
+          "sha256": "dab904d0da35e101c9b1a3cb28a855ab1f00ee30346a3ca6725a80d44b8c02cc",
+          "git_blob_sha": "86c3dac106d940e1d7b884f023bb8377b9fb943e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/materials/wall_diffuse_128.png",
+          "bytes": 39414,
+          "sha256": "49db8f932e769023a179aaee71c0dcbc65c4252677c1c9db84e2ab656ee6d655",
+          "git_blob_sha": "867e3f13f0c2eafc2580256bc469aa5a08f30d0c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/materials/wall_diffuse_256.png",
+          "bytes": 150152,
+          "sha256": "efd6fdf1a6d611859b3a574b08a790b7fefc894b0438609c31287ec1748ae79d",
+          "git_blob_sha": "23a9acefcfe0361180c83db2d406a4c35db78d34"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/prompts/material-atlas.txt",
+          "bytes": 2763,
+          "sha256": "148356c8e76109c33c409bec377f0086d9358d91563da2fedf8fe8067adf0b6d",
+          "git_blob_sha": "c50404ec126068bd9fea7f835b5cd19c93539314"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/gothic-night-castle/theme-manifest.json",
+          "bytes": 7159,
+          "sha256": "d22c044d36058a05f3c090ca60d50922b144547d493663a32874766d3b415108",
+          "git_blob_sha": "b63650060c94d2634445715b1db4f544e38ce3bd"
+        }
+      ]
+    }
+  ]
+}

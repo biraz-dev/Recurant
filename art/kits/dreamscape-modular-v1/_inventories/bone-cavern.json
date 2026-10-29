@@ -1,0 +1,174 @@
+{
+  "id": "bone-cavern",
+  "title": "Bone Cavern",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "bone-cavern-001",
+      "bytes": 2243836,
+      "sha256": "9e35ef6a8dbb7fa84c6230325aadaab4e4e72649e948b898d718c1a34c0cb55b",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/bone-cavern.volume-001.zip",
+          "bytes": 2243836,
+          "sha256": "9e35ef6a8dbb7fa84c6230325aadaab4e4e72649e948b898d718c1a34c0cb55b",
+          "git_blob_sha": "7c8c4df1a55221c5b3f2f48b415bee0e27a7af7d"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/CLAUDE_README.md",
+          "bytes": 7469,
+          "sha256": "8e0396b065af03c00a6cf79a70490022c78f85aa0eb943e2d30d6ff72ba2ee61",
+          "git_blob_sha": "87259b2fbe93ac32ba97aff7c22ac348aeedcbbb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "088c4766fdaf0d767e36c680be3aaccace7f167710625d750d7db66a6757a7ad",
+          "git_blob_sha": "68cd710d7a2cf129be9f402eca6da8067a65a221"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/assembly/collision-navigation.json",
+          "bytes": 10177,
+          "sha256": "bcaa157f85bd32d318172489847ae02fc1ac98388a2111967ae500eebb33b370",
+          "git_blob_sha": "07c0e7d2d3830450ba9d954ca076c45658e8aeae"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/assembly/layout.json",
+          "bytes": 14390,
+          "sha256": "8c8257058926aeec8963dcf01a875d36b6d60f3b61264a43701343787f4be0dc",
+          "git_blob_sha": "37f35a24cd38c85ddcf5b7a483ef5110afea3225"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/assembly/native_320x240.png",
+          "bytes": 151642,
+          "sha256": "2bbbdaa0534a35978a2a0bfeba0d23e7039f2a42c17db9ff4785945a8f299a84",
+          "git_blob_sha": "9099546dde6661533ec22d41bb22487772091ac9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/assembly/showcase.glb",
+          "bytes": 790460,
+          "sha256": "cb05f02f459d30d8b671c1d8189b4e4df1ba872658edbb525c5b358c510abe50",
+          "git_blob_sha": "bca92ea7b33f2372cf61948f0fb70f56599ad3d9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/concept/reference_native_320x240.png",
+          "bytes": 156427,
+          "sha256": "27ca4d7b118f2d94beaad4de223d1f777d8ea5e0879087643d360bd0502a8cc9",
+          "git_blob_sha": "e5ad215b331ed1d8998d0e52c17e9a85fce40842"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "9570e381b6995d807c9dc471e5d5ac3a4cbd3d7cf26c5370da683595f3534383",
+          "git_blob_sha": "f9095408271814e11c3cec0bb8faab7f451b793f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/material_manifest.json",
+          "bytes": 14151,
+          "sha256": "85e7d4671f09dc420e00122925c589abdffac5cbb6ebc6cd8730ca3fcc06118a",
+          "git_blob_sha": "b13fcb6529e8126e5984f1d0ddb95e33f133ed97"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/materials/detail_diffuse_128.png",
+          "bytes": 43661,
+          "sha256": "e6abc1e2dcdaeeb3bf79644277a3b3b03450c4921d89869f8971456125ce83a5",
+          "git_blob_sha": "8ea86ba0070f5f562f931f92d8b66f2fb2b3c97c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/materials/detail_diffuse_256.png",
+          "bytes": 163634,
+          "sha256": "5da6747f4788fb59e64078e52f1e97e3782fbf8d666b36d3ee0a06c510742c0b",
+          "git_blob_sha": "2a15087b3ee538bad33b5c04f435f15ac2520cbd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/materials/ground_diffuse_128.png",
+          "bytes": 42070,
+          "sha256": "06d9176f9ae9dc7f40dc7c21ddad299d691edf8cfaf7d1b0e2aa15e899a7e171",
+          "git_blob_sha": "be60f419950c46acf4f20ea6555d011f3c34c261"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/materials/ground_diffuse_256.png",
+          "bytes": 160456,
+          "sha256": "62d156cce9aa1c674e0aa84a71b3783f1fc0a526d8780e3723bef6402657febb",
+          "git_blob_sha": "1d041c3d7a53525ccd712c9ff85af0beca1c5999"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/materials/ground_repeat_diffuse_128.png",
+          "bytes": 46746,
+          "sha256": "2a6674845f8986fa40f68989f05c21b3c342ded266d75bbc9b48074addb22679",
+          "git_blob_sha": "08e59fd4af69c86e63b679c06f959201eb6f2cbf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/materials/ground_repeat_diffuse_256.png",
+          "bytes": 176143,
+          "sha256": "4e80540045b8459efef486628b95f1596c472e38600f906d79a896d6262b679e",
+          "git_blob_sha": "a7fdeea7bb6a2eefe987ede120801664cdb34f72"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/materials/structure_diffuse_128.png",
+          "bytes": 41053,
+          "sha256": "26cc8968ebff0a0a5567b77d94b3a32ac92b022702294cf8e265f660877a8018",
+          "git_blob_sha": "fd041f2a169139abd9343bf9f2a8bb94b110831d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/materials/structure_diffuse_256.png",
+          "bytes": 152930,
+          "sha256": "23c5a55ad26cf39da59d9583d66b7cc395d1e19dc59e3cf7c950deb1c4ffa018",
+          "git_blob_sha": "adab466fdc9f27093e8644ddc73be325aeec9536"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/materials/wall_diffuse_128.png",
+          "bytes": 41953,
+          "sha256": "34c7ad813fba11380ff46dca86664c0627c0dd09035f412801655224af0bcbdb",
+          "git_blob_sha": "d0614c91ae1df74a7796b7b428ef082bfef02019"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/materials/wall_diffuse_256.png",
+          "bytes": 157800,
+          "sha256": "8e1fdff91dfe5d383a8367364021a30938ba576a4381f29175fb331431bad6c3",
+          "git_blob_sha": "407ae94e2c3a8d3c7ef151c5dd3a3a85aecb1dce"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/materials/wall_repeat_diffuse_128.png",
+          "bytes": 43132,
+          "sha256": "8143935830fa50013394e4747911fc40e37ab71f098f543ddd25306d8cfc3bc3",
+          "git_blob_sha": "c31f751b99e67fe8e64710301b1b2aaa88a32d24"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/materials/wall_repeat_diffuse_256.png",
+          "bytes": 160420,
+          "sha256": "bd7b5d5304d7dd0186e7024fb4ec9ce2098d867c9702b4d3a28c6ba16702ced1",
+          "git_blob_sha": "9ee4f546765e89e32bb2557f7908f008f0579624"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/prompts/material_atlas_prompt.txt",
+          "bytes": 1825,
+          "sha256": "cfe2ba77008a8f51bf4233069569f7bb847c89efe1dfc8c5b02472d24a68c3cb",
+          "git_blob_sha": "52cf4db3542c7a2bdf3039fd074a93b50234f3c4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1887,
+          "sha256": "4affc4d7ba869526040474edbe1638d4591519fd7e228093ecb4cb79923bf3bd",
+          "git_blob_sha": "fb434e0968929c6b330e2f114719b1ca8b09be6b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/bone-cavern/theme-manifest.json",
+          "bytes": 6828,
+          "sha256": "83a20710ee2ac62b27ee36e709776ea1ab6b9c2baa9d600fd610dd96cba31ca5",
+          "git_blob_sha": "a36ac536d8e599ed1a840f9f160c762076ea802a"
+        }
+      ]
+    }
+  ]
+}

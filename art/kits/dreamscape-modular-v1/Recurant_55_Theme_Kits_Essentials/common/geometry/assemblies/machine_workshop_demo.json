@@ -1,0 +1,163 @@
+{
+  "id": "machine_workshop_demo",
+  "description": "Open-front machinery bay with grated deck, gears, vessel and control station.",
+  "file": "assemblies/machine_workshop_demo.glb",
+  "coordinate_system": "metres/Y-up/-Z-north",
+  "instances": [
+    {
+      "asset": "floor_grate_2m",
+      "position_m": [
+        -1,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_grate_2m",
+      "position_m": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_grate_2m",
+      "position_m": [
+        -1,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_grate_2m",
+      "position_m": [
+        1,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_grate_2m",
+      "position_m": [
+        1,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "floor_grate_2m",
+      "position_m": [
+        1,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "machine_doorframe",
+      "position_m": [
+        0,
+        0,
+        3
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "machine_wall_ribbed",
+      "position_m": [
+        -2,
+        0,
+        -2
+      ],
+      "rotation_y_radians": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "asset": "machine_wall_ribbed",
+      "position_m": [
+        -2,
+        0,
+        0
+      ],
+      "rotation_y_radians": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "asset": "machine_wall_ribbed",
+      "position_m": [
+        -2,
+        0,
+        2
+      ],
+      "rotation_y_radians": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "asset": "tank_vertical",
+      "position_m": [
+        1.3,
+        0,
+        1.8
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "gear_machine_pair",
+      "position_m": [
+        -1.2,
+        0,
+        1.6
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "machine_console",
+      "position_m": [
+        1.2,
+        0,
+        -1.8
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "coil_stack",
+      "position_m": [
+        -1.4,
+        0,
+        -1.8
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    }
+  ],
+  "bounds_m": {
+    "min": [
+      -2.1,
+      -0.16,
+      -3.0
+    ],
+    "max": [
+      2.0,
+      4.0,
+      3.175
+    ]
+  },
+  "notes": [
+    "Demonstrates visual assembly only. Collision/world navigation must be adapted through the current game grid pipeline."
+  ]
+}

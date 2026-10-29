@@ -1,0 +1,12 @@
+Use case: stylized-concept.
+Asset type: production diffuse texture atlas for the original Recurant foundry biome, not an environment illustration.
+Create exactly FOUR equal SQUARE flat material texture swatches in a clean 2 by 2 atlas. The whole image is square. Each swatch fills exactly one quarter edge-to-edge. No gutter, no frame, no lines separating quadrants, no text. These will be cropped at the exact half-width and half-height into four independent square textures.
+TOP LEFT wall material: large dark reddish basalt masonry blocks with soot.
+TOP RIGHT ground material: square dark iron foundry deck plating with shallow broad industrial grooves.
+BOTTOM LEFT structural material: aged oxidized iron and dull copper plate with narrow flush rivets.
+BOTTOM RIGHT distinctive detail material: flat refractory black ceramic panel with restrained orange-filled thin channel pattern, no flames or light spill.
+Palette: charcoal basalt, dark rust, dull copper, restrained molten orange.
+Style: elegant refined hand-painted pixel art, intentional crisp clustered pixels and carefully grouped rich colors; high-end early-1990s VGA fantasy adventure craftsmanship, painterly richness reminiscent of Lands of Lore, quiet dreamlike restraint. Original material designs, no franchise copies. Texture-scale small details rather than coarse mosaic. Design for each swatch to remain readable at 256 by 256 pixels.
+Viewing and illumination: perfectly flat orthographic face-on, uniform neutral diffuse illumination; no scene, horizon, depth perspective, 3D bevel shadows, cast shadows, specular hotspots, directional light gradient, vignette, ambient occlusion, rendered object or room. This is opaque base color artwork only, not a material ball or concept painting. Color accents are painted surface pigment/glass, not a lighting pass.
+Tiling: top-left and top-right must tile seamlessly in both axes, with matching opposite borders and no central focal motif; continue patterns cleanly at swatch edges. Bottom-left and bottom-right may be complete nonrepeating square panels, but remain flat front-facing surface materials. Do not put illustration objects such as gears or crystals in space: depict only their flat surface material or flush inset.
+No lettering, labels, symbols, logos, watermark, HUD, chart, border, comparison lighting, normal map or roughness map. No transparency. Exactly four swatches, not sixteen.

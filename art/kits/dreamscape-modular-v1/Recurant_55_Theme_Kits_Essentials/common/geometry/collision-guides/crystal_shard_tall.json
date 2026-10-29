@@ -1,0 +1,20 @@
+{
+  "asset": "crystal_shard_tall",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        1.75,
+        0.0
+      ],
+      "size": [
+        0.64,
+        3.5,
+        0.554256
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/crystal_shard_tall__GUIDE.glb"
+}

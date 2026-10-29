@@ -1,0 +1,174 @@
+{
+  "id": "volcanic-wildlands",
+  "title": "Volcanic Wildlands",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "volcanic-wildlands-001",
+      "bytes": 2318621,
+      "sha256": "2fcc183badd84eeca3567a80d49e51fa1890616113f1163489b09326ec528699",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/volcanic-wildlands.volume-001.zip",
+          "bytes": 2318621,
+          "sha256": "2fcc183badd84eeca3567a80d49e51fa1890616113f1163489b09326ec528699",
+          "git_blob_sha": "e1ce2cf2fa240b935a9c2e153f85d74f7e4b482a"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/CLAUDE_README.md",
+          "bytes": 7427,
+          "sha256": "5adffe4d68402cff80bf2843546ff1f34993cd7f84bd5dffe1d0af676ed48d59",
+          "git_blob_sha": "4d376dc1cac3f2b1d8129c1363f5b137df8f1e83"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "c5b16cf2b0e211b3a9bc9f1b646e5d7f82a171e2f41f121849f0160a0f8a23fc",
+          "git_blob_sha": "fdd527f5c0f88101472388c4a5fac478e0518e35"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/assembly/collision-navigation.json",
+          "bytes": 10261,
+          "sha256": "b4d75b48fd53d215001f664e06c3ab9a04d08d6aa74f942b0abcd3bf39ec05aa",
+          "git_blob_sha": "d68f5b84764154c674dd01b8fa40aaaabd45fab9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/assembly/layout.json",
+          "bytes": 14840,
+          "sha256": "9714a2143782b928df20748d2770961f92a0ddafb8c28b91ce3a5275656dbfbf",
+          "git_blob_sha": "b4635aaeab34f628c685128baf215020536a2f35"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/assembly/native_320x240.png",
+          "bytes": 147005,
+          "sha256": "0eb232109a87d1034f7652ed983ccdf3fb0fd4c4f85a3c3301cdf330afa53b34",
+          "git_blob_sha": "ede572e9f59a04671537dd1a3e0c97679596f49a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/assembly/showcase.glb",
+          "bytes": 800936,
+          "sha256": "c8975de7ddf0bc27d8aa062eb0de732cc65a9b33aea48ccec00f9a0cfd06738d",
+          "git_blob_sha": "0107655d31d227f7ce21e417751d0ac1030e0693"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/concept/reference_native_320x240.png",
+          "bytes": 170212,
+          "sha256": "2324b8f6dcb88db17123b16641e3390cc814d066a3684470a97d92763852cb46",
+          "git_blob_sha": "d8b74b6e71e0d5f2c875ada74be7ede05f5fee93"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "c8da6a25a75428789c93b8fe236511db3bb733272c29473f802c396901916dd8",
+          "git_blob_sha": "c99bef5cb932cb2b543fe181034f76f245aff5e8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/material_manifest.json",
+          "bytes": 14162,
+          "sha256": "cded6ff27d52d4542764ffda228c563672deb408fc54523a5bdb31ef772de15b",
+          "git_blob_sha": "68e869d4c217b6635dc7b4fa5092c3ea55474244"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/materials/detail_diffuse_128.png",
+          "bytes": 44621,
+          "sha256": "153142c52354315368a31d7088089f7d737fdbe2397b50051f4281acdd9fc2e2",
+          "git_blob_sha": "d9db9769ae948a9074f390657abd48d65d81ccf9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/materials/detail_diffuse_256.png",
+          "bytes": 173141,
+          "sha256": "9dbd3f068f3851619400492eb873f67f29cd2d6c7574ceb2c193636972e25ec2",
+          "git_blob_sha": "34b119d37fd3b5ce28ac206fd831fd617d9180d4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/materials/ground_diffuse_128.png",
+          "bytes": 42438,
+          "sha256": "bc4fce3247a5d0fdbcecbd87d2b18c86d032e95d2028f04633fbe091a1d9b61a",
+          "git_blob_sha": "22e3b946dc60fdb34be540bd681e3e1742899502"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/materials/ground_diffuse_256.png",
+          "bytes": 161810,
+          "sha256": "d1f228a640c0595cde15ead30660c4a13a1f39aa5a0ebd7751783fe24301b2c9",
+          "git_blob_sha": "ceb4f612bcd274c2c1eceda90b74d15873be7d5b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/materials/ground_repeat_diffuse_128.png",
+          "bytes": 45397,
+          "sha256": "dda9d676e534565622c734bbf84c2f9ae5cc3d748ef8c508c4c560d0f90d767b",
+          "git_blob_sha": "ed3d5fd166236572a03d8b701d9642519141d6c2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/materials/ground_repeat_diffuse_256.png",
+          "bytes": 174635,
+          "sha256": "4e2ea24a9f7b194539421cd9f82e3e32dc87a3eb953cb7ddd8398da1ca840f3f",
+          "git_blob_sha": "32f36d6d76c6441e84b26e23e6294244af15f15b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/materials/structure_diffuse_128.png",
+          "bytes": 44580,
+          "sha256": "ab4a77de5a2d9ee75a033f9ba50077ed28894412f8f5593502213c30cc57a7fe",
+          "git_blob_sha": "05645d42184ecf0d9aaee3c814ec6349577f3827"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/materials/structure_diffuse_256.png",
+          "bytes": 170446,
+          "sha256": "cf4fdf2e35366b6b7ead8a62029c72acaee42267ecaa657bf18489a108d70936",
+          "git_blob_sha": "a95680fd01ad9def4f32d44067ee7cb0d6e3b654"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/materials/wall_diffuse_128.png",
+          "bytes": 40197,
+          "sha256": "cecae1008eb8253402fef7dc043449df7d48f68bbeba5f7b074145834f5233de",
+          "git_blob_sha": "3695e707f7239f0f0fc7c0785cf86fd4624a8829"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/materials/wall_diffuse_256.png",
+          "bytes": 150634,
+          "sha256": "39884739b7bc651f8127a816d641199c94f64a38d170953c4664b550623e1ea0",
+          "git_blob_sha": "0ca7a6ec4cd3a2552a1ad4a6be69142364ed8005"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/materials/wall_repeat_diffuse_128.png",
+          "bytes": 44340,
+          "sha256": "cf03ce5d75f2c5b2344ecfc42a2ffae94ace5ee2412486f0100272c5bc293dbc",
+          "git_blob_sha": "a88a15cffe0b79b58f2d1bcd0aa7686107e15e3e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/materials/wall_repeat_diffuse_256.png",
+          "bytes": 170534,
+          "sha256": "42d6d41925092826f15efe1d2adec46947fc35e84c43894f3bf73ac0d363b0c2",
+          "git_blob_sha": "679c8066b0a55baa1fe3c4a491fccdd9cf981dca"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/prompts/material_atlas_prompt.txt",
+          "bytes": 1797,
+          "sha256": "d0a9ca21580af92534c3fad4f6e5c0a9fef982260bb6d32f5705e5374b794bc6",
+          "git_blob_sha": "f9db0089f4ce6048f1fc2a54c67f895c23996ec5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1968,
+          "sha256": "43071d7e0ae2b752d9a8d5e6fdf17e3a9fd5c0c32b396b47657654602b49b8df",
+          "git_blob_sha": "3a0a8a6e8591f24051b239d7a0d8e73d9358794c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/volcanic-wildlands/theme-manifest.json",
+          "bytes": 6911,
+          "sha256": "7a97e182fb4542b7e679461dcf291ed372f69bbf8ec6c8bf6d72b3de8896e0a5",
+          "git_blob_sha": "418e2e728e90f065c33c9cc7f5e8ef6066d9234d"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "id": "reclaimed-wild-city",
+  "title": "Reclaimed Wild City",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "reclaimed-wild-city-001",
+      "bytes": 2353068,
+      "sha256": "ecf21192a460034c7c54be9ca6c0b68b75837c884ccaf44db3d64890f5626d69",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/reclaimed-wild-city.volume-001.zip",
+          "bytes": 2353068,
+          "sha256": "ecf21192a460034c7c54be9ca6c0b68b75837c884ccaf44db3d64890f5626d69",
+          "git_blob_sha": "68bd662d9c88e31aea24eb92e1370de8aeeba0b4"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/CLAUDE_README.md",
+          "bytes": 7425,
+          "sha256": "285f4e4ee9c910e855e5efb2ea92c667672b83356d4da42d8672fca74ad56aed",
+          "git_blob_sha": "908094ce85d32ab8be1bdc2c13950d35c13ef129"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "ad56e095fa131eecc41cb22005239ffdf6bbdf27b4bde5e4ed911f4003b36fc9",
+          "git_blob_sha": "dca43b7ccbd9bb46c558a47e764e5a5a22310d63"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/assembly/collision-navigation.json",
+          "bytes": 10196,
+          "sha256": "c78159f770c3a19b4ab1439652e54ff3b60f1911c73eadbf2dbc1f0b9ac83530",
+          "git_blob_sha": "bfedbf829ed9fce0f5ead9d27caf7161e49a13dc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/assembly/layout.json",
+          "bytes": 13977,
+          "sha256": "13a20f8643811a1a6a17cdbc8bef5eaec8eae4eccdfe3c6d6d1f59930c873bf8",
+          "git_blob_sha": "64cbcc9736f1d343781cc4f7a502859715fe923a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/assembly/native_320x240.png",
+          "bytes": 155340,
+          "sha256": "d36f19e6c0e3a63ede1ff0e05243f31c38293b4444e5b889e8e47fc0566280f9",
+          "git_blob_sha": "b034abcddd4f0f3f74b34b2872df8e887108767c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/assembly/showcase.glb",
+          "bytes": 863640,
+          "sha256": "0efe12573cf6022d6134396ffada2b04aa2e60f3f3b256b7c88dfa8085d055d6",
+          "git_blob_sha": "4ad5ac93a9d8f9ae4788a7f12080d6804d911a4d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/concept/reference_native_320x240.png",
+          "bytes": 179031,
+          "sha256": "185a6de666c37d682de37933fd1212518b8ddb3f9ea6f17d529e45947bdf9dbc",
+          "git_blob_sha": "26071a5500877bfa63694391e3218bc757311918"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "e76711884ebd902afe675ad79e74b6b458688986feb4b84f99004d2dc4bbf931",
+          "git_blob_sha": "11e5cb59ae79760ceee0054839057422bf036768"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/material_manifest.json",
+          "bytes": 14088,
+          "sha256": "83939928f49aa472f9ac70dd821867d6185582cd9908e49b3cf4e86da7edfcf1",
+          "git_blob_sha": "87adef1804ae508e93fdf1d38172dc70c2c43046"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/materials/detail_diffuse_128.png",
+          "bytes": 42545,
+          "sha256": "e4e222fa2f77e1f4f21ddca3568e8bf8c7d272fd2b7b36e8b750a6ab35df21c5",
+          "git_blob_sha": "8ef659bdba341968ff1fc78ef35144d24db83e7e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/materials/detail_diffuse_256.png",
+          "bytes": 159936,
+          "sha256": "bf7127669e796814214b8d13441f8c1620163ae791571178379047d77b348a29",
+          "git_blob_sha": "92b08a15d4cab45dddf733c4a52fdbce9bbb4f3e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/materials/ground_diffuse_128.png",
+          "bytes": 42589,
+          "sha256": "1e070428d7922ec1e85f3dab5fbce7986ed32378c73c518cc6f3ce416960a9a7",
+          "git_blob_sha": "b56fda777ffb5ee0014f03b62be11e84b6c75939"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/materials/ground_diffuse_256.png",
+          "bytes": 163597,
+          "sha256": "a3c38fe71b61f4aae1298eb404861eb2877195d940ef46f4c4a4827fa4f6782c",
+          "git_blob_sha": "1acdc5f40d9633715042ed018468fcec57c3510b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/materials/ground_repeat_diffuse_128.png",
+          "bytes": 47176,
+          "sha256": "befc4957d1da731f7e0a983f2e9bcb7118d0f3eaf87820df3d54238782b4940c",
+          "git_blob_sha": "59f2e866ba3cddeba632c1d27f8fafbe2a8d8992"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/materials/ground_repeat_diffuse_256.png",
+          "bytes": 181525,
+          "sha256": "6dd4f3345cd0d891956b444cd1f0f1a6d4aa4cb9398f74e3d133d90de1af2d5d",
+          "git_blob_sha": "22005265e94823698c77af0b66458bcefd81a869"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/materials/structure_diffuse_128.png",
+          "bytes": 42072,
+          "sha256": "8b14d92068ed208cff24def79b623db6da33f83152767824f631d8915b64ab3b",
+          "git_blob_sha": "a0c7a884c57d2ed94d8d72dc7aecdd8019cf1777"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/materials/structure_diffuse_256.png",
+          "bytes": 160524,
+          "sha256": "d273758b396338edf4d8854759f455639b05fa4a02a7adc848351e829bc59d9d",
+          "git_blob_sha": "89545964623553ad6303880c833a7518c8cd6cd7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/materials/wall_diffuse_128.png",
+          "bytes": 43151,
+          "sha256": "13ee16f190933119ee5a2b5a710267151f625427407b060d55199249c20316fa",
+          "git_blob_sha": "7a0cd037c92ad9fe68ddbcb9a6f2763fa0fc1999"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/materials/wall_diffuse_256.png",
+          "bytes": 164479,
+          "sha256": "b6c43e175a43d3c17f56da968ac562febaf0e358f52f097894cc6f6122df8dd8",
+          "git_blob_sha": "a1bb234d6a11133b689f9b040da2f47b7c3ef8d5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/materials/wall_repeat_diffuse_128.png",
+          "bytes": 45943,
+          "sha256": "897e4e3451def675b1010a506982f93e1419d3af82e5a5c94c567b53d4b4247f",
+          "git_blob_sha": "c69b7d28c4f5bc1b7d00d72e908d9ac9b392c796"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/materials/wall_repeat_diffuse_256.png",
+          "bytes": 177385,
+          "sha256": "083e4eb94882435cf2f151c2f0e4de0fc9e913977102e76c13e75e686e8a6e46",
+          "git_blob_sha": "e74f6cd467c5ce8a87c5f70794486e287d1bf50f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/prompts/material_atlas_prompt.txt",
+          "bytes": 1794,
+          "sha256": "f033db28957591cc062eaa9e762164f73327c3b5b8afd0af233cbdccb4176e6f",
+          "git_blob_sha": "a0fa1fc804bd1d625a7fad81275ed5a4b46bf2fb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1943,
+          "sha256": "50c3eb00762d9117b89ebb6ae920bcde69661e98b939780f4369affebb83b0e7",
+          "git_blob_sha": "6ca5013034ee827f67298ee348b23a4d5189b9e1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/reclaimed-wild-city/theme-manifest.json",
+          "bytes": 6980,
+          "sha256": "3de3b200ab56bf110d9d737293edda4154baf8c15eb52731b06d5df880fb22f4",
+          "git_blob_sha": "2415e8a5e85b01dc8868f5312bffa077aeb069bf"
+        }
+      ]
+    }
+  ]
+}

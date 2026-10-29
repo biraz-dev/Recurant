@@ -1,0 +1,65 @@
+{
+  "theme": "genesis-garden",
+  "all_flat_orthographic": true,
+  "all_four_distinct": true,
+  "no_text_frame_gutter": true,
+  "reviewed_contact_sheet": "qa/material_contact_sheet.png",
+  "reviewed_repeat_sheets": [
+    "qa/wall_repeat_2x2.png",
+    "qa/ground_repeat_2x2.png",
+    "qa/structure_repeat_2x2.png",
+    "qa/detail_repeat_2x2.png"
+  ],
+  "checks": [
+    {
+      "role": "wall",
+      "preview": "qa/wall_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 22.577,
+        "top_bottom": 26.828
+      },
+      "interior_adjacent_MAE_rgb255": 15.989,
+      "visual_findings": "Gold mineral veins are discontinuous at borders and repeat visibly; not seamless-certified.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "ground",
+      "preview": "qa/ground_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 15.934,
+        "top_bottom": 18.333
+      },
+      "interior_adjacent_MAE_rgb255": 10.763,
+      "visual_findings": "Pale stone value is coherent, but long mineral cracks reveal repeated boundaries.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "structure",
+      "preview": "qa/structure_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 12.107,
+        "top_bottom": 17.37
+      },
+      "interior_adjacent_MAE_rgb255": 10.316,
+      "visual_findings": "Gold ripple lines reveal repetition; opaque painted fluid only, no physical emission.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "detail",
+      "preview": "qa/detail_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 21.332,
+        "top_bottom": 17.318
+      },
+      "interior_adjacent_MAE_rgb255": 15.738,
+      "visual_findings": "Branching gold bark forms a strong repeated motif; clamp each hero tree component.",
+      "opposing_edges_identical": false
+    }
+  ],
+  "native_and_preview_dimensions_verified": true,
+  "production_seam_acceptance": "not certified; use per-role findings"
+}

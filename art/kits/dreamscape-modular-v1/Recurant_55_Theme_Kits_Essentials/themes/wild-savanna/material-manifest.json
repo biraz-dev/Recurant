@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "theme": "wild-savanna",
+  "public_title": "Wild Savanna",
+  "manifest_base": "this theme directory",
+  "atlas_source": "art_sources/material_atlas_v1.png",
+  "atlas_source_dimensions": [
+    1254,
+    1254
+  ],
+  "atlas_source_sha256": "30415b8625f0623a408f2889e115db25bfa2fe58697ef7867c656360b89b4e3a",
+  "full_prompt": "prompts/material_atlas_v1.txt",
+  "generator": "built-in image_gen",
+  "input_reference": "Original scene concept describes palette only; no external art supplied to generator.",
+  "processing": "Exact quadrant crop; Lanczos resize to 256 then 128. QA images duplicate finished tiles 2x2 without alteration. No painting, seam synthesis, color edits, or fake PBR map generation.",
+  "palette": "sun-dried ochre grass, red earth, soft sage acacias, violet distant mesas, apricot sky",
+  "materials": [
+    {
+      "id": "wild-savanna__wall",
+      "role": "wall",
+      "description": "flat weathered ochre sandstone with broad quiet cracks and earth-red stains",
+      "base_color_texture": "materials/wall_diffuse_256.png",
+      "low_res_texture": "materials/wall_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_repeat_candidate",
+      "recommended_wrap": "REPEAT_WITH_QA_CAUTION",
+      "nominal_meters_per_repeat": 2,
+      "uv_policy": "1 repeat per 2 authoring metres, only after seam acceptance",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/wall_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 14.148,
+          "top_bottom": 13.689
+        },
+        "interior_adjacent_MAE_rgb255": 10.823,
+        "visual_findings": "Ochre color is coherent; broad red stain motifs repeat.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sha256": "315e020ccbc89a2b56ff2619bba298c639d66e3edbd954bc898e81611a65b686",
+      "low_res_sha256": "1ce98ae27c350d50638e3744aadad1057f0782685d085f8e9857d5f853556e94"
+    },
+    {
+      "id": "wild-savanna__ground",
+      "role": "ground",
+      "description": "flat dusty terracotta earth with small warm pebbles and fine dry cracks",
+      "base_color_texture": "materials/ground_diffuse_256.png",
+      "low_res_texture": "materials/ground_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_repeat_candidate",
+      "recommended_wrap": "REPEAT_WITH_QA_CAUTION",
+      "nominal_meters_per_repeat": 2,
+      "uv_policy": "1 repeat per 2 authoring metres, only after seam acceptance",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/ground_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 13.896,
+          "top_bottom": 13.939
+        },
+        "interior_adjacent_MAE_rgb255": 11.182,
+        "visual_findings": "Red-earth gravel repeats quietly, though exact border pixels differ.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "2ea20c07f4dc91f00159740d41f7083c2a5e56c44b65d82aa0a3bcd5014ac1f1",
+      "low_res_sha256": "d21c986b71169c977b4f9d04ab741921352922638b161650b854a82d7a5f66cc"
+    },
+    {
+      "id": "wild-savanna__structure",
+      "role": "structure",
+      "description": "flat short sun-dried tawny savanna grass groundcover with muted olive undergrowth",
+      "base_color_texture": "materials/structure_diffuse_256.png",
+      "low_res_texture": "materials/structure_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_component_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "uv_policy": "0-1 per component",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/structure_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 21.835,
+          "top_bottom": 19.983
+        },
+        "interior_adjacent_MAE_rgb255": 17.485,
+        "visual_findings": "Grass forms a repeated diagonal pattern; clamp separate terrain/grass patches.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "968c7d4b1fa41d826c221b8147bf69a58e60b2eed893f79d1cced3e638842114",
+      "low_res_sha256": "6f38766093b7b43f0b4cab2090bc4da024cafda5c5c1ac200c2d0561e745b269"
+    },
+    {
+      "id": "wild-savanna__detail",
+      "role": "detail",
+      "description": "flat gray-brown acacia bark with fine irregular grooves and subtle pale lichen",
+      "base_color_texture": "materials/detail_diffuse_256.png",
+      "low_res_texture": "materials/detail_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_component_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "uv_policy": "0-1 per component",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/detail_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 21.19,
+          "top_bottom": 15.43
+        },
+        "interior_adjacent_MAE_rgb255": 14.633,
+        "visual_findings": "Vertical acacia grain repeats; clamp trunk components and orient grain vertically.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "7879dfe9a89ade0cece1be62f5fc25145738c8e40227c16c1580df72eabba1b8",
+      "low_res_sha256": "b7a91949717e2a010760b3aa1047010acd13c8fa083e86f64528a45cebd59d09"
+    }
+  ],
+  "import_defaults": {
+    "filter": "nearest at runtime for pixel aesthetic; test motion shimmer",
+    "roughness": 0.85,
+    "metallic": 0,
+    "blend_mode": "opaque",
+    "default_emission": 0
+  },
+  "status": "production-authorized generated material candidates, asset-level QA complete; engine acceptance remains",
+  "known_limitations": [
+    "No mathematically seamless certification. Use the actual repeat diagnostics before enabling broad repeats.",
+    "Structure and detail are clamp panels, not unrestricted tiled fields.",
+    "No normal, roughness, AO, metallic, height, emission or alpha-cutout maps supplied.",
+    "No engine import, movement, collision or target performance validation is implied by these textures."
+  ],
+  "support_notes": "MATERIAL_NOTES.md",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

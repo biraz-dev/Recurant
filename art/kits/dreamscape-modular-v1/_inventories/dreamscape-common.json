@@ -1,0 +1,3048 @@
+{
+  "id": "dreamscape-common",
+  "title": "Shared geometry, authoring sources and root documentation",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 496,
+  "archives": [
+    {
+      "id": "dreamscape-common-001",
+      "bytes": 1115485,
+      "sha256": "b68c061529d4ccbc2b4ecb28729ed0da0302cb3a16ed76d118a2c0a819e28f19",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/dreamscape-common.volume-001.zip",
+          "bytes": 1115485,
+          "sha256": "b68c061529d4ccbc2b4ecb28729ed0da0302cb3a16ed76d118a2c0a819e28f19",
+          "git_blob_sha": "5d6270efa2287a396ae4fe6e8339250f1dbec67b"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/CLAUDE_START_HERE.md",
+          "bytes": 3664,
+          "sha256": "78bba10d8872c9a2484594e43e3d14257b7bd606475823a706b03f4078aaeef4",
+          "git_blob_sha": "6880a2ef85249c02aab045c0adc016d75ac12fb9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/FILE_INVENTORY.json",
+          "bytes": 318331,
+          "sha256": "7dccbc9fc77445b3943d26ae8de58aa9daac82967a4856427f87d81440deae11",
+          "git_blob_sha": "c8ad262f98101cbb359cef0171a57abd9ee32cc0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/PROVENANCE_AND_USE.md",
+          "bytes": 2059,
+          "sha256": "65d00694ed4f40057e43c17225a16f683081420e744fb0ef7113a6b2e1701a6b",
+          "git_blob_sha": "4cfcac71c9b64f7da269fc9a3c6cc3b4f3f51709"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/QA_VISUAL_REVIEW.md",
+          "bytes": 1954,
+          "sha256": "7e88b15a006a393fece2ed80a90d76dcb3e09d18244deb425b79bc586c51122a",
+          "git_blob_sha": "9c7ebb06316965f8aeb8d5391015e1dd37e3be28"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/README.md",
+          "bytes": 3212,
+          "sha256": "68403a75337ef9d574cde977e510c945720fa34136a8ce715930b71bd8ddf4e6",
+          "git_blob_sha": "183b13f86bf64bfed72fc621348ba9e5738b334e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/SHA256SUMS.txt",
+          "bytes": 201786,
+          "sha256": "df59ded80c6e2993663f91342c4996848736caa37840afcdfe50c94f04c373c2",
+          "git_blob_sha": "0ce833f3f5f72b5077806c05af7d6411ff0ea4c3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/SOURCE_AND_QA_SCOPE.json",
+          "bytes": 16034,
+          "sha256": "1761eb51c4a77e247a81de1cb6ac66dcecd142eb01bcceef2e5c13eb23261c20",
+          "git_blob_sha": "667600a539d951c55c6360e9b9197e5e0de4552c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/THEME_CATALOGUE.md",
+          "bytes": 8312,
+          "sha256": "a455b0bb81300ab7b9e8ace8f971d491c3af80e6e5cb12ed7aa093bb8e03b564",
+          "git_blob_sha": "ea1f43db50013c77a48ef218a532cb91197a4eb5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/THEME_INDEX.json",
+          "bytes": 11323,
+          "sha256": "2d43cc5408ed95175b09325280c492e0023d2f0340404bcf61417e7b4b95bad1",
+          "git_blob_sha": "a9b467bfae2932b71443d060b155b5bb9cc76745"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/VALIDATION_REPORT.json",
+          "bytes": 377,
+          "sha256": "3bfd74962d7d0f816edcc7aa12980b03297d914439be3859ca4acd37c389a24c",
+          "git_blob_sha": "44497bc92ec9ce319e3b0f176c79cc384e4e5c29"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/assembly-src/assemble_themes.py",
+          "bytes": 23793,
+          "sha256": "7110085797bf4bb0a47980ebb62bd5234f151126327d098e4cac6c259e8e5c18",
+          "git_blob_sha": "8304fddbb1cd2ad64dd318f4c93fe20769fcea8a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/assembly-src/make_qa_contacts.py",
+          "bytes": 1067,
+          "sha256": "7ee7c00039c8794d4407dd0c74faf35dabe12348a10ed344e06c1c60c27b7a30",
+          "git_blob_sha": "6805907973c733f610860551aa463ecbd9e49e6c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/assembly-src/render_material_qa.py",
+          "bytes": 806,
+          "sha256": "73f1577ba379d6304090c6f6774d1f1acf25581409e53d278f3820fbaecb84d9",
+          "git_blob_sha": "89521e798a6d4787b379ebd338e50ad76d7de7c5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/assembly-src/render_themes.py",
+          "bytes": 4766,
+          "sha256": "a83db907660f826217c09f72e9516cc1890cc93956ac2e974e845aad7ae06514",
+          "git_blob_sha": "f6f806db2782e7a15f5127ebf0778fa2fca37030"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/assembly-src/theme_recipes.py",
+          "bytes": 13295,
+          "sha256": "d435ec792e142558cfcd72d43b089f000beb2226f5074904362cf59962502973",
+          "git_blob_sha": "d6cd98288c38c40cfd632dc702a1ef04e614b0bd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/assembly-src/validate_package.py",
+          "bytes": 5925,
+          "sha256": "04adfb0bcf1057e8b84d68a8b60dc3bea9db06507642b5efc0d5798c393cbfec",
+          "git_blob_sha": "47de4f4a479eba5a605bb7c1ecbe2d991427912d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/CLAUDE_GEOMETRY_HANDOFF.md",
+          "bytes": 6463,
+          "sha256": "89b6b7e3264f8268aa8687c7afb4571c6b3c2bb29ee91f77a178e89ec527b899",
+          "git_blob_sha": "8e2beaecf57410908938f625393c8f6f20dfd87e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/README.md",
+          "bytes": 7845,
+          "sha256": "df570f4f58162e3c5221e910b162eeda5eac60e72143f3aad992ddec4ba83dc6",
+          "git_blob_sha": "9b4e73556ca37192c412d789003d30d72a41ac1f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/assemblies/crystal_sanctum_demo.glb",
+          "bytes": 118692,
+          "sha256": "5205b483afbb63e7b0fbd8009ef5b1360bbc814726afbf22d0ddf1ce4e3cf1f3",
+          "git_blob_sha": "7ec22a8bf06c64cb28292e520ceae6d53b274aee"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/assemblies/crystal_sanctum_demo.json",
+          "bytes": 3420,
+          "sha256": "7838c68639b0c8ea13baf48de294c1c15fd5ec758345d837bb65a6c90008f752",
+          "git_blob_sha": "76c016956de036c06ab4bcb08064d69a0b79e118"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/assemblies/machine_workshop_demo.glb",
+          "bytes": 189612,
+          "sha256": "288d3cb0bd56e7b276b4202328dd394f563cf37d0a33b22852b10b24d9f4b824",
+          "git_blob_sha": "bd0eae1b97db707b2e831869b0cfc1930769a360"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/assemblies/machine_workshop_demo.json",
+          "bytes": 2821,
+          "sha256": "e4b7e827e2ccd13987bc02c82c230d89ff11d5c786a1c6a6dacd1252eda45e39",
+          "git_blob_sha": "e96a8cdd2e6cd782ea158af0adfdc1414e340204"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/assemblies/masonry_cloister_demo.glb",
+          "bytes": 164964,
+          "sha256": "9947a01555f1761d41e8ae7b2154b62e17648b7afab2b4d4f25f6e0fb9c256ae",
+          "git_blob_sha": "372e08c33d39cd3f75a7d350df6a9e0325940358"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/assemblies/masonry_cloister_demo.json",
+          "bytes": 3303,
+          "sha256": "d6f781989c3d05cb2e68d56a58ceb34d9019d82429e5ffb90c3fd41861bf840f",
+          "git_blob_sha": "427def4bfbd59df1fbcb9803a79a0a9f764ef2d1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/assemblies/organic_passage_demo.glb",
+          "bytes": 164600,
+          "sha256": "37623aec91fa56318e28a242fe947834e1aea185f9fc3cc4845e54f7b0fae63f",
+          "git_blob_sha": "2dd29e0d1a2e0e421598da123ae8040e2689c144"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/assemblies/organic_passage_demo.json",
+          "bytes": 2158,
+          "sha256": "60e94d11478d02040f50f6b82a925a51ae58eabb9c45d834165b82e2f0cdb7dd",
+          "git_blob_sha": "337743c8840c1686e2c45313c7c1e368f0b0edd1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/assemblies/textile_pavilion_demo.glb",
+          "bytes": 315436,
+          "sha256": "814fb0bc6134ead2dc137fa2030a855711ec6edd78cdcee01e38beb21b6a6f95",
+          "git_blob_sha": "c9f8595571ca873bd6dff2ac4d8eb62480914d42"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/assemblies/textile_pavilion_demo.json",
+          "bytes": 3224,
+          "sha256": "055d1a88e1fc974f3e78015ed8de3bf5d60479e9a30eac8f201886dee66397ce",
+          "git_blob_sha": "c27b5ec9acfac42626f69d989d32926cecd904a9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/assemblies/timber_inn_demo.glb",
+          "bytes": 104976,
+          "sha256": "097479b0443ba96c2efd341330b0b391a57f6077e0638dab803571c959c60686",
+          "git_blob_sha": "d715f704073222855dc3197a34b560aaf0d66b4f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/assemblies/timber_inn_demo.json",
+          "bytes": 3891,
+          "sha256": "0a813d699f45f28d76d9a9f07dec7697269aec86f319505c989bf8bba243e9de",
+          "git_blob_sha": "914b42352bedc82a8b3c60914fa17f0e5962af35"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/asset-index.csv",
+          "bytes": 15733,
+          "sha256": "c4394c79f035340074dc540209b8936aaf29a4f9c9d245b84ec2041f9f1b4490",
+          "git_blob_sha": "2b2c04fa4efa87a90899e35e2637a06ce788c92b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/acacia_tree.json",
+          "bytes": 334,
+          "sha256": "e402efe93ce0d84abfaefc153f8f8003dd1aa74f9d0c9ddf9b055055ea9e2925",
+          "git_blob_sha": "147242c92bf4fa8c14befbe7cc11a33940ed8a54"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/acacia_tree__GUIDE.glb",
+          "bytes": 2252,
+          "sha256": "e0ea71afb0912239f2ac660bd98748d37cf8ff7c46b365a0ae395ab3e1dd50b8",
+          "git_blob_sha": "c0735615ab77993b17b2a45b94a91f9650a942fc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/altar_block.json",
+          "bytes": 304,
+          "sha256": "4075b30191d8931745f6061aac0622f82a3a8b6ae93887435bfe1e00f234ab58",
+          "git_blob_sha": "8ab11b4db1836fcff98fcd6791d6d2b6b48ba71e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/altar_block__GUIDE.glb",
+          "bytes": 2204,
+          "sha256": "07eb2ceba68cfbd557325614926f7103562403e28c6c2be771a055a241a80d30",
+          "git_blob_sha": "05ce6081e1418de56166c704a077a068c12ffc96"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/arch_wide_4m.json",
+          "bytes": 595,
+          "sha256": "89660272fb68c6fe97503ea0c9cb5d5b29f36479ec108c11f2aad2f37033f751",
+          "git_blob_sha": "7a8e48f2f5bc1b1e4d4f54ec8164166f58dd6a35"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/arch_wide_4m__GUIDE.glb",
+          "bytes": 3036,
+          "sha256": "1b4a101aab19e166cd3ff48055bd751b31072cf503bf3787b4dd98ee699bfe43",
+          "git_blob_sha": "cadc0911cec6b6cbc9abcbf16e430c59cb8cad25"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/astral_ring_focus.json",
+          "bytes": 321,
+          "sha256": "f36909e40d0ad329bcaf0e05f000c56867a93a83cb39d163aa23be9f9dcd7270",
+          "git_blob_sha": "e0a04dc2d59365251a4d29aec1a866b66e79cad2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/astral_ring_focus__GUIDE.glb",
+          "bytes": 2244,
+          "sha256": "bcc1ed5ab9445df5da27a2166cc130b855dffc92a32cb9ef6f67f5531ca62de2",
+          "git_blob_sha": "607f2d9b0221dcec9be1b745ac9919b8d16f1922"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/barrel.json",
+          "bytes": 299,
+          "sha256": "213bd4ec0fefbdb98558beba959a5908c826150e1b64a9157b8e70a36641c71a",
+          "git_blob_sha": "e8bad4b2118b04b69c51e7f3479a2e9dd3e5095a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/barrel__GUIDE.glb",
+          "bytes": 2224,
+          "sha256": "758da1be865db98cb3e8cc53b2913c1c7b4c0ebb3d584f2c605221119da87e40",
+          "git_blob_sha": "59cc935af3e366c62acf770977b9e5a77a456039"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/basalt_column.json",
+          "bytes": 333,
+          "sha256": "91572c4dedf5d2e53094323fbba38424b876d0586c75a4772c90eaa42cd15d33",
+          "git_blob_sha": "460023403f693421c9b8908d0cd93b4bf5f8544f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/basalt_column__GUIDE.glb",
+          "bytes": 2240,
+          "sha256": "bf03eeb93ce6e90ce70c6f0e2732c1493f6aadda8a8be34194f6712d3b67f5b6",
+          "git_blob_sha": "dcedc63998f7472f735b91fd7110c40bb7175641"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/bone_long.json",
+          "bytes": 332,
+          "sha256": "058845cd2cddf49fae63859717561c0d9b07cb24c367690944a5814d5b46bca4",
+          "git_blob_sha": "0dce676b6a4297cadb40f4c0927b91edf0256ce6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/bone_long__GUIDE.glb",
+          "bytes": 2248,
+          "sha256": "b3e83166bde10a7b7d0a54f2c11472ac5e44436cdc3a5f3782f477dbf30370c0",
+          "git_blob_sha": "4b2177413c370563a2f4ce751ae88317046a54c2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/bottle_potion.json",
+          "bytes": 316,
+          "sha256": "9aa77db2b80164e5e0b52988fda318b3ab946eecbca978705c20b6eb65c7dda4",
+          "git_blob_sha": "aa1033c8aed501ffb71141ff0adf094402829ee0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/bottle_potion__GUIDE.glb",
+          "bytes": 2228,
+          "sha256": "2cb8c6ba7718c19116e7bfb9579c44d5f0530a6f7c95a143ec6660c71f8e27b3",
+          "git_blob_sha": "a8be2bc511b67c7ed4598a3a4cbcef8f4a771dbc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/boulder_large.json",
+          "bytes": 330,
+          "sha256": "3c40e21eb8386fdc09945751bf36fd37d26bd50ea337579cf5b928910dd35d9b",
+          "git_blob_sha": "28a36d4381e7935ae9419f2ff03581341d143351"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/boulder_large__GUIDE.glb",
+          "bytes": 2236,
+          "sha256": "2c1bdf588eb4fabb9fc841ba4bd6c72cba2a31184b6c55e7be7b0a260ef573af",
+          "git_blob_sha": "645fe242c3ecc30211f0f736f577f8aef4274e07"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/boulder_small.json",
+          "bytes": 335,
+          "sha256": "e80a38cd52068f8d372eb573816e5696ef7f07259dbb2d41d6af2b7d51ac9613",
+          "git_blob_sha": "1b233a33d56e3e84093e21658a4fb613e59883ba"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/boulder_small__GUIDE.glb",
+          "bytes": 2240,
+          "sha256": "8d8a98472a715f09d35739a87d1c9331b09d5965bbd1e75139331ec0ca911255",
+          "git_blob_sha": "2cd768b08a3d611d1f5019304c27f853663d6c5a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/bridge_metal_2x4.json",
+          "bytes": 586,
+          "sha256": "830884d3d731eeb397ffd2cb96e78e4872a697e6987d325505b8749384347cf7",
+          "git_blob_sha": "124a1e7070c03c465f04b2b338eed2f65c29eabf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/bridge_metal_2x4__GUIDE.glb",
+          "bytes": 3916,
+          "sha256": "b890d01166990e4b8ca9d97598870e3049dffd8667471c40208a49b410efaedb",
+          "git_blob_sha": "04d2ab4fe60ebf368fd92b691082b4edec127db3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/bridge_stone_2x4.json",
+          "bytes": 586,
+          "sha256": "891ecbdbf73269a5c80b5b5bf578ecf7a5fd5ff2764fb16d6363ed50ce402855",
+          "git_blob_sha": "eb8db9e02079285ac972a1b4abf1b8551ae7e596"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/bridge_stone_2x4__GUIDE.glb",
+          "bytes": 3916,
+          "sha256": "3b6e2f847ed663bcfc9429b4193b256244130098dd1cd1308f4a991eb24f70d5",
+          "git_blob_sha": "c55ba7f3df44016429d7c72e5c500e3fc6050ac2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/bridge_timber_2x4.json",
+          "bytes": 588,
+          "sha256": "da833f6a3430c11a1e1d53fe41d9474b687ca255ae100affbcd71bc76cd245ad",
+          "git_blob_sha": "2e09305faf8506d09fcfc1b5ee81aadc4b35abc4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/bridge_timber_2x4__GUIDE.glb",
+          "bytes": 3920,
+          "sha256": "82bc5e62a0a297827eec6cb97f68f05a8330153a9186c75005d516f1986a73d0",
+          "git_blob_sha": "b42ecda99782f1f15b67d17eff24df1e0eab7cab"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/broadleaf_clump.json",
+          "bytes": 315,
+          "sha256": "6a2e0be966fbfa04754621b6ec553fa34a7b475a51c6f20e5c1176779f085827",
+          "git_blob_sha": "7dfa3f670f4694528d772c6d22484283715ec15a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/broadleaf_clump__GUIDE.glb",
+          "bytes": 2244,
+          "sha256": "7bc067cb74c97b2a31ef86d3b49a8f65a1fa0db3d91beb0811e9070e99184e27",
+          "git_blob_sha": "91a170499cde35440d9d77f230f16f6eec7ff743"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/cattail_reed_cluster.json",
+          "bytes": 111,
+          "sha256": "e08385e9040d7f5f7ba4a218f76101596912dda80c479b81834e9464841b8444",
+          "git_blob_sha": "b9159dd4bb0b1299df120480371b1ec74e6c2680"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/cave_arch_2m.json",
+          "bytes": 592,
+          "sha256": "f9706e2b57b6c5f5250c09a557d087900e3d5684870ba67d21a5308e7151f7c8",
+          "git_blob_sha": "8807daf389b53896ef3c2da62af9768d0bb154bf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/cave_arch_2m__GUIDE.glb",
+          "bytes": 3080,
+          "sha256": "101a5accdaff0ebd9a8fb9aa8bcc3abe47137ce6af7c64fcdea3b65818218a92",
+          "git_blob_sha": "e783b4770761dbb5d0d9b48784253be293b82b91"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/cave_wall_2m.json",
+          "bytes": 296,
+          "sha256": "ae1e58c379cf34095078b7db350bf732152e1545fe821e31861ebd1c7cf53490",
+          "git_blob_sha": "b0a11707ff47530ed4129e8ff0ac3183e2796241"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/cave_wall_2m__GUIDE.glb",
+          "bytes": 2192,
+          "sha256": "8700b9dae767dfa3948b58181142127ac08a27444323945e5e29dced2406e342",
+          "git_blob_sha": "24a0fde86553000917a6a3ca26bd53022fb16a83"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/ceiling_barrel_vault_4x2.json",
+          "bytes": 115,
+          "sha256": "2cd67cc1e67f71b6e2699daa0d95f7833704c87ea0281583cfe726cbcd33cd2b",
+          "git_blob_sha": "b383708446d340b0c4a5cfb24d369ac427537e80"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/ceiling_coffer_2m.json",
+          "bytes": 318,
+          "sha256": "210cf4ec3aa8d2b911677a14e507d392b56d7339d36bcbfd55c994aa6fe26fcb",
+          "git_blob_sha": "96fe4fcf2bee97ad1ba98cc47a554e6e3eb6f06e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/ceiling_coffer_2m__GUIDE.glb",
+          "bytes": 2200,
+          "sha256": "6c28a036be5494494d0dec6f9379f6d2faafd8898198ed0598fa007819072714",
+          "git_blob_sha": "23850935f1a1fb0ae589e99f7d576fc8c45ba320"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/ceiling_flat_2m.json",
+          "bytes": 304,
+          "sha256": "9e6390bc1a047904a7c8e82a9f72dbb328ceef0b1a30745225fb133ac36633c0",
+          "git_blob_sha": "55ca1339fcd6795f8ac2c45fd423536ea0442894"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/ceiling_flat_2m__GUIDE.glb",
+          "bytes": 2180,
+          "sha256": "e1cf8294c67ab02fb60be37812773aef0c564fe47644f73a61f7b7a6418bb85c",
+          "git_blob_sha": "43ab2cd0bcdde5aeb7485f23ed66a28b4665a5ce"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/ceremonial_pedestal.json",
+          "bytes": 323,
+          "sha256": "17328ddce276ab4cca5b805c0e0b513eb3c0ea859b4a2cccb889d64e0be87c89",
+          "git_blob_sha": "e080b95f57030294f0ef7422104c94e7bdec3bd3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/ceremonial_pedestal__GUIDE.glb",
+          "bytes": 2244,
+          "sha256": "8e634bcf0f80e1352eb569abf09521748d946baaff803b3dc9453a85836ae7af",
+          "git_blob_sha": "0a5dcdcac482ce4d1dd8738a591fe4f0ecdbc23b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/channel_crossing_2m.json",
+          "bytes": 592,
+          "sha256": "75acfe2f9ffffa4ccaffcb075bd4a21f2aaf114f5e46ff3c5f129e387b68a53c",
+          "git_blob_sha": "d6fd50fb32bebb9ddd084ccf711070cbe9bb2e2e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/channel_crossing_2m__GUIDE.glb",
+          "bytes": 3920,
+          "sha256": "aa9026f031264b35acf4a7527a949ba4865bca613b62782d9f2f4099c1aa254c",
+          "git_blob_sha": "7e6d70cebabe2b0f52c0a3e31efef7324d2f55a0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/cliff_face_2m.json",
+          "bytes": 328,
+          "sha256": "e8876bd3c15db5e737b81c6bde47ad72047ca69782a3a5c070ba7193ed1e2ed9",
+          "git_blob_sha": "ec071bff9a55ee3d64154861ecbc1e4bcdb324ad"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/cliff_face_2m__GUIDE.glb",
+          "bytes": 2236,
+          "sha256": "1e7d93263eb25109fb2b10c3f2a93ce4eefc91cca93cfa2b97c1a336965d77f3",
+          "git_blob_sha": "4a42a12f2b92b2371bac52db31a6556e79db196f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/coil_generator.json",
+          "bytes": 315,
+          "sha256": "7f89e844b1d5d158d5ffd684ad23f47c2fab8f0bffdedb61f71d5caded2fc134",
+          "git_blob_sha": "3cde41fb071c0444baa459cb97db9eb3395650ae"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/coil_generator__GUIDE.glb",
+          "bytes": 2212,
+          "sha256": "0ca5cd3ab85f35c50b84cb20012ff86caaac4f26155a27951e6cbe2062f2c2ec",
+          "git_blob_sha": "fec26aee239743ca1b64ef431aec554aad6d090a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/coil_stack.json",
+          "bytes": 305,
+          "sha256": "0582a8916bbf58c57e077c98d220cdfc7c79f842fa75f240390be3fca88fac94",
+          "git_blob_sha": "a0d12f664561f6a5a7501100f68c5675537df75d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/coil_stack__GUIDE.glb",
+          "bytes": 2220,
+          "sha256": "b8f4a9e1468b40a670503d8537a4955cae9b92f54f8aa55dd30e432a6e8a1804",
+          "git_blob_sha": "20bda5718b26a5d46292d21a626ba85d9f6b1eea"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/colossal_trunk_quarter.json",
+          "bytes": 352,
+          "sha256": "4a615d20c7f9bc8b66f38175467e0e5b45247eec0efe274bc08976aef6df6f24",
+          "git_blob_sha": "90f15af7ea064d48b03069065cafdec0a771285e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/colossal_trunk_quarter__GUIDE.glb",
+          "bytes": 2272,
+          "sha256": "d9a975e4c9263e7020d6add7bf4433a8f57aa3cc71306ab3e348828a628db2f1",
+          "git_blob_sha": "eff3a99f6a2fa691ecc87d0aa1daba4f80c82706"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/column_broken.json",
+          "bytes": 308,
+          "sha256": "e8917446291dae519fac458b0b6fdf250665a84525dde36465ea7696b033a405",
+          "git_blob_sha": "c3472140e8e758110f842347f87d356620b915bc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/column_broken__GUIDE.glb",
+          "bytes": 2240,
+          "sha256": "07b843f17982f1f4b0e25801ff33169e594461cedfb4862425ba9193dfc65202",
+          "git_blob_sha": "145c662f450660262af497e5ae57d45dbb2b5f02"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/column_fluted.json",
+          "bytes": 308,
+          "sha256": "e35130e0be9bad192548fd3a314684ae9de8ff8efe97fbdbd7401d1c2de12ff0",
+          "git_blob_sha": "f7f755499e25baf70deff14c0742b3ee216bfd94"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/column_fluted__GUIDE.glb",
+          "bytes": 2224,
+          "sha256": "a3486f897a157d5dda2c936248d4b879cbeb03daa011b09f338153dc9a1a90e0",
+          "git_blob_sha": "3608f8516495a01a9477a2338a18fe52d4cf65f4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/column_round.json",
+          "bytes": 306,
+          "sha256": "8bd18abbe614bd2f328cb79d672db6a3e675f1575b7fd592ea216db9f6164a86",
+          "git_blob_sha": "462638f2fc7848cd61d555221d5f83b943575be8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/column_round__GUIDE.glb",
+          "bytes": 2220,
+          "sha256": "c462ad793cc537ab504b1aeba085214608de6c0aada0d9c4071a3855ce3069d3",
+          "git_blob_sha": "18c35007c533a2c85a5d2ac8e24fe5d5939f5cfe"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/column_square.json",
+          "bytes": 308,
+          "sha256": "d039dc8c84cc35c731555ce8f0836cc99e42d2cb2e385089ca04e72dd211170a",
+          "git_blob_sha": "4adfcdccd0e19bace31c67bf5e6e0152f3ee47bc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/column_square__GUIDE.glb",
+          "bytes": 2224,
+          "sha256": "4428602b7ad7844bb315415eb790a282f111f98e6f7c23d6670a9c908236a835",
+          "git_blob_sha": "1a1b18192f48004dc01f533f7bfadede2e6d77ec"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/coral_branch.json",
+          "bytes": 332,
+          "sha256": "13d18b515d7860e32099c15f1c382a048351ca1e621eef9dd088279d1a101d0e",
+          "git_blob_sha": "b8806d4bbf811cba8739fab6884266b905dd4c1a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/coral_branch__GUIDE.glb",
+          "bytes": 2240,
+          "sha256": "12be70ca4600206a78aa7df4a092b965b56cf990afbf447850cc08823fe30380",
+          "git_blob_sha": "1a4e2b878a060028329ed09f1c0be5eb14779b00"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/coral_shelf_cluster.json",
+          "bytes": 346,
+          "sha256": "09f5d5be20d8fbe953c00676121391b1a0119318e94db7714a2565eea54043d6",
+          "git_blob_sha": "2090c5be6901199b8d470920d3df49220abcdcbe"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/coral_shelf_cluster__GUIDE.glb",
+          "bytes": 2252,
+          "sha256": "1d61e97a73a40a64d0e96f5a862d23cfe1d92c5e60050cad73fd15b9e5d12bb0",
+          "git_blob_sha": "9d52b2078a92d6b4273223d69959ffac1d4008ae"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crag_cluster.json",
+          "bytes": 324,
+          "sha256": "f54104961d9d690f3eb407bc18f20fd2fccd8e3b9705810a3249a849535705e8",
+          "git_blob_sha": "9c52b943404b926b66d82b9fc9646ba4e363cff6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crag_cluster__GUIDE.glb",
+          "bytes": 2256,
+          "sha256": "a3ac53c0d058643ed5a5cd3d812747cbf1c1e442b44f4b6ca1e13aa776b12c1a",
+          "git_blob_sha": "b464ac08644b07705bd34d65a1ad8eeafdd50ec1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crate.json",
+          "bytes": 297,
+          "sha256": "da10cd79e8863a9cf073275825c0535d02af13698230c291824c1644b4050306",
+          "git_blob_sha": "9398d831dbc3bee7695dba8db85337da03b98846"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crate__GUIDE.glb",
+          "bytes": 2224,
+          "sha256": "2d2c389545cba0aee0c833b4af5e100f0ada7dfe450627c8b0f8025ea87c62b8",
+          "git_blob_sha": "0999bea52d012f1f0d1f4daad3693a1c4ec3d650"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_cluster.json",
+          "bytes": 344,
+          "sha256": "2ee60ba2994534e54a1c96737373c974e960c4a48444454bafb61be53f98a548",
+          "git_blob_sha": "e77ff010b026c86573264f32906e024e204930f5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_cluster__GUIDE.glb",
+          "bytes": 2256,
+          "sha256": "b261befe5cf16c29029a2f0f075297820175deec13307087409fc23f9d66118f",
+          "git_blob_sha": "ee6abdf1f5b82a264f1a67937c7c5392c25767d4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_floor_2m.json",
+          "bytes": 309,
+          "sha256": "44c98e98ea27deeffc7a4caf787cef57c99d8462c19ea1577e579f33025a7dc9",
+          "git_blob_sha": "ce64c7cbecaee3dacd7fdce92b2d3091a7a17987"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_floor_2m__GUIDE.glb",
+          "bytes": 2188,
+          "sha256": "133a797f33ebf308adead01718ff3994e61c7eaebeea171a0707a68b792abe9c",
+          "git_blob_sha": "6539be2d3542e6298813f5a5fa311ebdbd2be8ee"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_obelisk.json",
+          "bytes": 318,
+          "sha256": "368e7706ac51120c94f1a2c52c4151c5c816b64a85f95a848ee4ada55f7dc236",
+          "git_blob_sha": "0c9d5183b63096c0a2dcd98e70a538215dc6f881"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_obelisk__GUIDE.glb",
+          "bytes": 2224,
+          "sha256": "1f41f83fb1fef3481b14659a96e9a30f77f451fefda971e8d14fc69a7df5cf0f",
+          "git_blob_sha": "406cbca827c8ec1932d3a5b71fc4190d1793e31e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_pointed_arch.json",
+          "bytes": 612,
+          "sha256": "2cfa10d4956c867a1840710110b92a02cd7a1aed042b13ac10b9e51d87145569",
+          "git_blob_sha": "0d20f8fa9094704df8fecb93959f08ae70603883"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_pointed_arch__GUIDE.glb",
+          "bytes": 3100,
+          "sha256": "7dd99b048556132bc9e01ce4da0b92fc6c67c79865adafac9eb8a84bbd0fa017",
+          "git_blob_sha": "244b326fbb4c7992fce442130eea6d4647076098"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_shard_small.json",
+          "bytes": 327,
+          "sha256": "92e146b44af69d9bf0f93d497f7632d9fb7b0b921f15b7e83fa3cf8ac09342d6",
+          "git_blob_sha": "4af13db7847eb18ed05c22357b8a305b72da0006"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_shard_small__GUIDE.glb",
+          "bytes": 2252,
+          "sha256": "e9741a3e82d73ee02630558042eeec570701eebc19ee1701fb89a69a195f73af",
+          "git_blob_sha": "6bb0629c8bcef29228ea3a2815a13b81c2ee21a1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_shard_tall.json",
+          "bytes": 325,
+          "sha256": "2f13d449b7181c9a71b660da780b29f65e7017fa90c7d045526b04cc30b74ce4",
+          "git_blob_sha": "6d8cfe1e76fa6ec46e4ea42d4169eb6dfe06cb6c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_shard_tall__GUIDE.glb",
+          "bytes": 2232,
+          "sha256": "428cb5189d50513e5253a0172da341b8a46fe6dbbc406151828f847290030f07",
+          "git_blob_sha": "aa51ee4bb790f207e3fa05255b203e08f4e5f7a6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_wall_ribs.json",
+          "bytes": 327,
+          "sha256": "20d7dc2fa602025e1b19e0065721e97b15b7297e4a6a6127bf66951091d74cbd",
+          "git_blob_sha": "268ba9ddc1ae88160f155eb3d8261fad2f9b94d8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/crystal_wall_ribs__GUIDE.glb",
+          "bytes": 2204,
+          "sha256": "1d41efc1a3578e64ca19389da8cd80ee4c2e16727d938cdb7277992c9ab80a30",
+          "git_blob_sha": "39706ca76dda40375a20942e5a5ccdd77bb562e8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/culvert_vault_2m.json",
+          "bytes": 107,
+          "sha256": "2f79713ea665999f470805124a3114591b96a65461230efd1fb9d9c054521f8e",
+          "git_blob_sha": "c3606dfa85dd382f8ac719be978561aa23ef2cc7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/dead_branch_tree.json",
+          "bytes": 334,
+          "sha256": "070f562efc5a3e68adad17d0909c21db9c8dbb98df75481b3dbcc1d707288bc2",
+          "git_blob_sha": "b00bbb3b8604d270af269793354162ea2d59bc2b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/dead_branch_tree__GUIDE.glb",
+          "bytes": 2260,
+          "sha256": "17358aa664277a2212216f51f985a00ad2171de000745ab81d61b584106f1204",
+          "git_blob_sha": "4de0de174ba7ed0f862997fbc8f9edd01042a2b9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/desert_cactus.json",
+          "bytes": 320,
+          "sha256": "ed53ced416c08803b3cdfe80bff6731888aff8687c2ce609fcf6694679f6cbe2",
+          "git_blob_sha": "481cdbe0cfd490cb13cf5d13539b5ac89f885ca0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/desert_cactus__GUIDE.glb",
+          "bytes": 2240,
+          "sha256": "de341e8896b38f6903ebbdf765ec1a8307f61ebbc1c568dd646d812bb4464da0",
+          "git_blob_sha": "8a93e80ce9569196349eacb1ac3e039cae9075e0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/door_leaf_plank_1p36.json",
+          "bytes": 325,
+          "sha256": "84e45901249f8c4468396051a396788b57f6a5ac527d5e450122cde6ead5ebb3",
+          "git_blob_sha": "91bf9491258b3b7f7db41ace6197b090d86c012f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/door_leaf_plank_1p36__GUIDE.glb",
+          "bytes": 2236,
+          "sha256": "a6b718bfcb29baefd0eb06abc78d2df3b28e6b81f77f8c04353aeb818bcba2b3",
+          "git_blob_sha": "36015f04406e883ad211620e0ec0c90c331b5b18"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/dry_grass_tuft.json",
+          "bytes": 105,
+          "sha256": "ebecf8d1b1dbdcecfe5552661440903ad64033394f66ae4a8a55461ce45d59eb",
+          "git_blob_sha": "b44b3861a815ef20f76e4bb297a9b9160fc30936"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/fallen_log_2m.json",
+          "bytes": 328,
+          "sha256": "c8c486f2b6a0fe3db795790212ef63a5c58c32383723e6a4dbe3957d025bc95f",
+          "git_blob_sha": "805c186978ec97d1f8d5ccfd293c336513fa2a39"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/fallen_log_2m__GUIDE.glb",
+          "bytes": 2228,
+          "sha256": "47d0c8cc7153cb6ab22438dcc7f009e9fc6741ed4d13b7b4a7ac908a252dc604",
+          "git_blob_sha": "68bbf39162744b8ba8a75131a063d1b0d9bac4cb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/fern_clump.json",
+          "bytes": 319,
+          "sha256": "689bf45c5b57d7c941b49cdeca1d8f89b8095089a442cc3a6e105cc3fb60c2db",
+          "git_blob_sha": "304082d4b8740e43c2ea18b92b9196b69bc1f22c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/fern_clump__GUIDE.glb",
+          "bytes": 2248,
+          "sha256": "3793f7f6cde49624207126f8f8173f3ebdc348219866ff4fa1dc247fe88eec2a",
+          "git_blob_sha": "67308a8904990e71552e44b33d7831ded75a9ae0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/floor_cracked_2m.json",
+          "bytes": 307,
+          "sha256": "a6033c3662b94813a5cf25e9a5b5ca45f0e39b57fc3183005bb886bc444cb6be",
+          "git_blob_sha": "f2d9a4aba3d319308e1bba1697aa50839e47f10b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/floor_cracked_2m__GUIDE.glb",
+          "bytes": 2188,
+          "sha256": "15a9b406226c1c4f1d965b0257ea229924da9f311bf3caaa8acd0989d3bbf65a",
+          "git_blob_sha": "84ab45649769221517819692d88d855ecc886cb3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/floor_grate_2m.json",
+          "bytes": 303,
+          "sha256": "e6fdd979037505c5a2d35ddf55f1283c0a5a952da2c45cb627e0fa65ff7331b7",
+          "git_blob_sha": "4c49d0e1976e76265b2ead637b0f2c467b7e4e72"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/floor_grate_2m__GUIDE.glb",
+          "bytes": 2184,
+          "sha256": "902d18d85c993d9a7c332b1322abe2c8e5dfc713dbce45ba625348efe3e3a9c3",
+          "git_blob_sha": "76ee61cd14c9f7b34fa52a09f352d12edd955af0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/floor_inset_2m.json",
+          "bytes": 303,
+          "sha256": "1924dcc5dbb5dddf4a5e27828c96c24e4f281fece3fdcea588b8f066853508bd",
+          "git_blob_sha": "10ba788cf04baa422123d14f702bf555f1ba6e32"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/floor_inset_2m__GUIDE.glb",
+          "bytes": 2184,
+          "sha256": "aa3b78ea53e77c4ef5a56ed79dc10bec6fca2f5ddf74467ee333656117c07771",
+          "git_blob_sha": "d4b1b126eac47c0cc671bbe8744478929d8a2503"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/floor_pavers_2m.json",
+          "bytes": 305,
+          "sha256": "074df0dae3240942d1990309517cf18eeed15559050f8c9f8358a841aa3803e4",
+          "git_blob_sha": "1a1169baecbdd3b687147f9d5737510b7dbca504"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/floor_pavers_2m__GUIDE.glb",
+          "bytes": 2184,
+          "sha256": "5a1888d8b10123137d9383f2cc9daa1304a8bc757fa2bed16c5ff0b9a0d31c0c",
+          "git_blob_sha": "0757a3da7f123fca578e62ea09294ff45e6ea957"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/floor_plain_2m.json",
+          "bytes": 303,
+          "sha256": "271c22e0b410d6f35968f2a982a36a08f5cb33f8e3e52beb2640fa8403dff80e",
+          "git_blob_sha": "17e99222a9d28989870749f5142dc41995b6e09b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/floor_plain_2m__GUIDE.glb",
+          "bytes": 2184,
+          "sha256": "1610e1ee61ff72bf6c49b095fe80abaa3b74b8dcd07c988abe0054eb27373a5a",
+          "git_blob_sha": "db8a7967085f398835cdef424ff61447999c0837"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/forge_hearth.json",
+          "bytes": 307,
+          "sha256": "6d40d8cb45e49b4367ed5d08fad84d7eca598c49c4bb52e6af66d04234e35234",
+          "git_blob_sha": "22be606d3e3ac86f153ecdc2090c72d84912d9ec"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/forge_hearth__GUIDE.glb",
+          "bytes": 2188,
+          "sha256": "207fbb8401a3da06a6eb36e4c4a5e688783af4efca09dd18058818cf7972d206",
+          "git_blob_sha": "f3aa35e99ec49c4373ee6bcfc93618db991c5cd0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/foundry_crucible.json",
+          "bytes": 317,
+          "sha256": "a3c119f8ff851b5e84fee9f544df2db3cd357c5e2782da574e91cc545dcee26c",
+          "git_blob_sha": "71940202df0841716e8b2aa3f3406b6f6e2b1435"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/foundry_crucible__GUIDE.glb",
+          "bytes": 2204,
+          "sha256": "bfca7e57a2d947c193233b5386211bfb95b8f11e59fba705b7a35957c39d1e0d",
+          "git_blob_sha": "40898033741aae7725508b932d1b85c98bd5140f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/fountain_base.json",
+          "bytes": 311,
+          "sha256": "722b34a7ac00a0d6a51e2445a04e0841b0fda2f3fee0314a9fde1d027c184f40",
+          "git_blob_sha": "1c52a2d396d938100442585d141b6cee78769434"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/fountain_base__GUIDE.glb",
+          "bytes": 2176,
+          "sha256": "835259bbe2ad9df45a9c6fdc6e09b3375ef8b1adf575a14eee01477ba5a652ee",
+          "git_blob_sha": "a96e9d580a6fb5bc9204d068341e3be457824a5d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/gate_leaf_barred.json",
+          "bytes": 316,
+          "sha256": "ad51e1608661e9c0f9c77e079ccafd99567e338d3b526d46d0645a8135adaa3d",
+          "git_blob_sha": "f94ccd9e5cbfbc227f06a718cfef71038ccee108"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/gate_leaf_barred__GUIDE.glb",
+          "bytes": 2248,
+          "sha256": "a115fcd786ce7a4f8a51e1183e7aaa6fe5a56ab61575cb1f5879e6ff45938eaf",
+          "git_blob_sha": "db20dbbf7a33f0d1e3146b66532da947bed35776"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/gear_10tooth.json",
+          "bytes": 319,
+          "sha256": "ab0ed2d7d78327bf6b380a50c112a42475970dbaf4f001230f20714dd20c6744",
+          "git_blob_sha": "720d27446c2872c372ee360040ef6eb2da92c5e8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/gear_10tooth__GUIDE.glb",
+          "bytes": 2252,
+          "sha256": "3997df884f5ffbcebfbe195db2739885e166a2a25a6f15100fd8e2d0439887b7",
+          "git_blob_sha": "f8f6cc4e461da77300bf0559a3da3cd4c1a03247"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/gear_16tooth.json",
+          "bytes": 318,
+          "sha256": "6e0d50042da4ace852db72f09c4373b7efa4a763167ad22aeaf48f5e0d9bd480",
+          "git_blob_sha": "6884c314a515d8cb19ccc4293fc9e7161c34e79b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/gear_16tooth__GUIDE.glb",
+          "bytes": 2256,
+          "sha256": "2715d2a82d3eff97d309670dc741a6c73c136b4a8fdc9bedbd138a565934634b",
+          "git_blob_sha": "4f7922d77e6b9b5b74de30b1db0d8acb218dacec"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/gear_machine_pair.json",
+          "bytes": 337,
+          "sha256": "0dadb26410b3319539f3015efbf60a4291c532d4d7e8d5abe319243ad9c41ed8",
+          "git_blob_sha": "cb2a50313f85e0a1edfe75e4647b3c5b3f170547"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/gear_machine_pair__GUIDE.glb",
+          "bytes": 2264,
+          "sha256": "99fee58d1bf648a65ff2d22d4c7b07b4b412810222088e4b615fa0515bbc1590",
+          "git_blob_sha": "09311529925e4514f28edc03b12cc24858ac9a10"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/grass_clump.json",
+          "bytes": 102,
+          "sha256": "22d9b600c498a8da7724df42378ca1a4e90a67c530d590845c97d60a6d4725a7",
+          "git_blob_sha": "b5666ab146ce5f8b4280da2fc29652ce9b55bb31"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/industrial_ladder_3m.json",
+          "bytes": 329,
+          "sha256": "a5b8c804eec2e4af400449bab7bb49a708a5c6a4338ec6171c51dd76299ab8fe",
+          "git_blob_sha": "4f856fc8e4197202c3323e59ee49732a314cce1e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/industrial_ladder_3m__GUIDE.glb",
+          "bytes": 2240,
+          "sha256": "6629edac052e1db194df6f8bdd8c2c8a89c45aff4f619a53a0041984dbb2d0bf",
+          "git_blob_sha": "d8b956e01f8601e9cb5d4cc53953be5c34bdf41a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/inn_bar_counter_2m.json",
+          "bytes": 320,
+          "sha256": "6aa7dde9edcc97f0c28cfb00e3fe16382c2b8785539a12a2d8a0e09ab81dcd81",
+          "git_blob_sha": "ac9b5dc7bf5e88b55dd1c9d92359038c42f0fe33"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/inn_bar_counter_2m__GUIDE.glb",
+          "bytes": 2252,
+          "sha256": "49de38e08580328493c8970346394ab475b3e3e9da286fce21284f7e3ec27b8f",
+          "git_blob_sha": "97c436f5f9578f0fbea9fe782375a695ab634e75"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/inn_bed_single.json",
+          "bytes": 315,
+          "sha256": "cb9ebc9bf74f9da4b5402783a974eba20b735b5df3b6bddd47a955757f6c4eb0",
+          "git_blob_sha": "376a7c7b89e7592806408ec2310a4788ef0d5545"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/inn_bed_single__GUIDE.glb",
+          "bytes": 2224,
+          "sha256": "88dcbfff785f9c404fc0424ecc343e0c8ef33000ebf6f93b13fcdb06fdfd8aff",
+          "git_blob_sha": "8bb019c6d2557547abbb0cfcf366b33998221239"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/inn_bench.json",
+          "bytes": 302,
+          "sha256": "047933afe11701f93fea3588b6fb7dd0d744d2db413520c9a7e52013fbe4597f",
+          "git_blob_sha": "ddb82b2be5cf09c1c11e52b8c3a2ca211e983151"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/inn_bench__GUIDE.glb",
+          "bytes": 2216,
+          "sha256": "d2431a583be4288bd01f32edf61461c9fddb49583a0edf12f08116ea1fbb8aa4",
+          "git_blob_sha": "01949f9b8a44674deed4a160f5e0638973b75f62"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/inn_table.json",
+          "bytes": 303,
+          "sha256": "50a1bfd22e78dc6be9d72fe252727ad3f8f236178bdccf8af065f745d34cd124",
+          "git_blob_sha": "fb3c873ccdb3e59c4dae56ebaa333a3e05c291d4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/inn_table__GUIDE.glb",
+          "bytes": 2232,
+          "sha256": "a5dff8a3b52ae4ada900a734f838137cfce51e8258984bc0b26dfa74e2e460da",
+          "git_blob_sha": "63bd7dfdb31e8de9f9f72a5723e74b5b38e5bdf2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/landing_2m.json",
+          "bytes": 295,
+          "sha256": "af2c465ead1e512b465cd84be143262f77930b191500a2011f3cbfacd5115afc",
+          "git_blob_sha": "ccafe8be12b44a919186be79d2f828f3c5184060"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/landing_2m__GUIDE.glb",
+          "bytes": 2176,
+          "sha256": "1f6662071212a36a2facd24c38344d8294705301309112ecc64c4126ab7a7452",
+          "git_blob_sha": "1143cf937186a651d80c85f32ec8233254427562"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/lantern_box.json",
+          "bytes": 305,
+          "sha256": "7e5995aea871dc5d0874ff9133b85be98f1a6460f83e8b9f3bc3d03d3db382af",
+          "git_blob_sha": "eb30ded33992bd6347dd1eb42734144f254930e7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/lantern_box__GUIDE.glb",
+          "bytes": 2220,
+          "sha256": "a23cc34150f50ddda9a1db79ea47b4b1692d6c648a11d726e6ee3a6bb2bf4553",
+          "git_blob_sha": "1db95c41cdc77184b9e31fe3999f6e6bf86cc9d9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/library_book_row.json",
+          "bytes": 318,
+          "sha256": "32541e9e7ea94a65711f36748fbcf6d40f8630ba603ac4dca6eadcb71b896a8c",
+          "git_blob_sha": "b34d18deb497ea4dd1d461a1b616610a034936a2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/library_book_row__GUIDE.glb",
+          "bytes": 2244,
+          "sha256": "ef482fe760a3480ccde551aaa8e03143b5137a49fbe68bfca37874fc9dbac9f4",
+          "git_blob_sha": "53e1d5ce3c0d975dc83cdd0089506c4cc50816a8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/machine_console.json",
+          "bytes": 315,
+          "sha256": "f02f89cb5252d0472df28e15bd090241e2ed6f59ec0feadd66cb515f28823004",
+          "git_blob_sha": "3663542085ca53af6ecab508f1f018e32e8b99ca"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/machine_console__GUIDE.glb",
+          "bytes": 2240,
+          "sha256": "922a238f4025041c458f9082ecf2a9cad1531e6f3aad9c64be3e407e30d6e033",
+          "git_blob_sha": "cc5c303dad0a983ab6b2cfceddf55719ac469e5f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/machine_doorframe.json",
+          "bytes": 735,
+          "sha256": "4d4202ed4874ffc9e6104cad7e2a1d3c425a754235f3cd5ec7a18700847cf6eb",
+          "git_blob_sha": "f0ccbb4eaf3aae41f9eca28229af8e76511aa44c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/machine_doorframe__GUIDE.glb",
+          "bytes": 3888,
+          "sha256": "b7d47d7620300bf011ce079adc7940981f2960fb2ec0138f963d2f58c7bd8335",
+          "git_blob_sha": "d5a95d45d4c8ce8fbb12d14399704c60fe29cd17"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/machine_wall_bulkhead.json",
+          "bytes": 338,
+          "sha256": "0bb105ab947f7daed9265c8225a825c791b2df4505c1b1206cdbf70cfb602834",
+          "git_blob_sha": "833de7816c3803399f4daf9df681b8fc43a56c07"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/machine_wall_bulkhead__GUIDE.glb",
+          "bytes": 2224,
+          "sha256": "6fa819ec3b49a9c35adf9f196d455190e1d1b3a4a4a6083095c8c93a10ba785b",
+          "git_blob_sha": "051f7c6d60de3523e34132239d9bc199a7f7d6f6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/machine_wall_panel.json",
+          "bytes": 321,
+          "sha256": "c970bdc3d1409ffa468e299170ff320e97ca0306bccfa1ff865cf0875273a581",
+          "git_blob_sha": "6d18925339f761b24a40017f131836e4da01e1ee"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/machine_wall_panel__GUIDE.glb",
+          "bytes": 2204,
+          "sha256": "e651869cb0ee79a45c0581a6876a4902cd28fef3f592333d0ad09179b85fc254",
+          "git_blob_sha": "2f72e5719d9997e0be8082ce86c16a6bb29646f4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/machine_wall_ribbed.json",
+          "bytes": 322,
+          "sha256": "cd64f07aa618fa1ebf9b88f439c7589a166e6fe00f96e37ee54ba2052fb4fc41",
+          "git_blob_sha": "865ba2621a5e35b136fa84429e51d3ca8ba46d46"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/machine_wall_ribbed__GUIDE.glb",
+          "bytes": 2208,
+          "sha256": "a89e50fda2bdcad97b320ddafb2c88cfce9e2a2757d74cc45306c48d1c81d8bf",
+          "git_blob_sha": "05a5d8ca9e1b02642012ce9dea5a62f3a8006ecc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_buttress.json",
+          "bytes": 314,
+          "sha256": "adc77917f51bf51e83168f73790028a4f8e6341f4aef63840578294297a69491",
+          "git_blob_sha": "d15bbaf358a65e3a3a57dded54c697a525be112e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_buttress__GUIDE.glb",
+          "bytes": 2232,
+          "sha256": "5a63cf06532312c5ce69a33d8ea4b8f6d5b77fdc156192f166f9f82f684b6671",
+          "git_blob_sha": "5952bdbee247c43f4a32ec4f097bcac18d3c1c10"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_capital_bracket.json",
+          "bytes": 331,
+          "sha256": "79d7327d0a0d59d8330be956355c86531d271f42f8ccb0c9b1058420b5e93bef",
+          "git_blob_sha": "67a8926ffd667f746f9f5fd0130844f53f7e0a82"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_capital_bracket__GUIDE.glb",
+          "bytes": 2256,
+          "sha256": "7997d32b7ef07057d401fc9cdba0bef036c86c5e1c2523482a684a852e18f074",
+          "git_blob_sha": "f8a9bbf0a16e2a10db37d198e17f32f4d06f7c50"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_corner_inner.json",
+          "bytes": 442,
+          "sha256": "735c96d0869311455e20e74e711ba5e000de60fc8fa82b470cdabf46f455e07e",
+          "git_blob_sha": "8d1ff0924351934243acd11929f982b3ffc76689"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_corner_inner__GUIDE.glb",
+          "bytes": 3052,
+          "sha256": "25c4a2e1d7cbc68e896b6db3c83f763681aadf1f2fad55fe0a76551ce0a864a4",
+          "git_blob_sha": "960b24c203f3e036da798ef6844d77cf90595603"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_corner_outer.json",
+          "bytes": 442,
+          "sha256": "fbb8cce6d3fd455573e1ad8e9145a846d2b34eb5b21d5b6b0b3adcfc21fd8066",
+          "git_blob_sha": "79cc41a90b9f6832ccecd440d2ccca6798cefb67"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_corner_outer__GUIDE.glb",
+          "bytes": 3052,
+          "sha256": "3ea54bf0da14d1ef77ed07bf205607981997598fd0bd711ff5e2cbca22a24413",
+          "git_blob_sha": "6d819e965f6f13c17469028181b97656e870acde"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_crenellation_2m.json",
+          "bytes": 331,
+          "sha256": "1bb807f2785a9e81a1f210e670575ed641e579f4eb817bb959f9eb27421629d3",
+          "git_blob_sha": "a7d1aef480fd0a3f99b56ce8e5c93992fefa0fd8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_crenellation_2m__GUIDE.glb",
+          "bytes": 2216,
+          "sha256": "3b2ff55a2a1e9c4f4e75f6d33d3408ad6ccf2733872bb3c236e771d701e36799",
+          "git_blob_sha": "d7ff5829694558da7e6ba1b4bc7c925bedfd393d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_doorway_pointed.json",
+          "bytes": 745,
+          "sha256": "ef7c84f323fc6e9e7fb4e6f7b99ad031f5514ad7d24237c505fd83cb3e754990",
+          "git_blob_sha": "69a8c9d000b2cb2b8795a2bb127977eac9d0d331"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_doorway_pointed__GUIDE.glb",
+          "bytes": 3900,
+          "sha256": "33cc5b3ca4f7b4994ff60558b79e7af97174a516fb81182a642b69d621a4c16e",
+          "git_blob_sha": "2136ae00ae0f55b07ddc16092ced12ba96c79a49"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_doorway_round.json",
+          "bytes": 741,
+          "sha256": "7501c997e0b16385eaf30e2a84989c662139aa70d4341dfeb1b22eefdf6891fa",
+          "git_blob_sha": "cedce882a2e9daa996edd5b021e0fe21d49a7ebc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_doorway_round__GUIDE.glb",
+          "bytes": 3896,
+          "sha256": "89c7628a370be7c40cbb174a5c44eb123d642eb181468e7e13173bb130829cfa",
+          "git_blob_sha": "903707c3fba60d277b13a7ea5f014040105efd05"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_inset_panel.json",
+          "bytes": 323,
+          "sha256": "4408c4890f03b43d4c6dcb71d1ab1c3a4e8fa9920918e9dfd551c05012319aff",
+          "git_blob_sha": "77155b671bfa05338a818d580a996c41f1c9bfc3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_inset_panel__GUIDE.glb",
+          "bytes": 2208,
+          "sha256": "873ddb3f75d3eee9ec3c68b5423d58f4eb2de1e1adcaabe96dd1a6039f949f96",
+          "git_blob_sha": "9ba0ffa88ec205639548b7d37212e7901cdb6a2c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_parapet_2m.json",
+          "bytes": 322,
+          "sha256": "b79d68c117ab9138ef18368f5df9b56f5a15932e42e556ed714dc9652efc2484",
+          "git_blob_sha": "22b03fbb3fd53f20d1957ee38452847897a00852"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_parapet_2m__GUIDE.glb",
+          "bytes": 2216,
+          "sha256": "5c15d39e6a24dd77c80c250fbb3a76f139726da970ae89c3708b4a6a967cf16a",
+          "git_blob_sha": "51fb225d0e05207e75e1398e7304118f314a1710"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_wall_2x2.json",
+          "bytes": 306,
+          "sha256": "fa5d618c9912c14a610dab585674da77f8150245f673417cdae1cc6e52f1a2b1",
+          "git_blob_sha": "284f204d0a38c24955e5d8f03984447a53e92040"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_wall_2x2__GUIDE.glb",
+          "bytes": 2200,
+          "sha256": "ab0f085bd7816d31cbc993d58b5d7f6729ba26398c7a3a6246b5bc57f4897abe",
+          "git_blob_sha": "fdd468dd97e7c019e513da843115681d448fb8bd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_wall_2x4.json",
+          "bytes": 306,
+          "sha256": "e85c0f4102976eb17b830d9ab670a7ea4b0803269890e4a736450d1638dccb35",
+          "git_blob_sha": "7eb93de2cca0ced5b8043d85a38de10a5d4c4a18"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_wall_2x4__GUIDE.glb",
+          "bytes": 2200,
+          "sha256": "0ef6e5eb0b8a1ea7de58b490b449987e2e3721230e149a08784f16a4354fe37e",
+          "git_blob_sha": "17e52f82138f78a87133e7c9395c9df19709e966"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_wall_ashlar.json",
+          "bytes": 310,
+          "sha256": "a4311e2d3279d397d67db51acaeba2a2aea4867b5f0016aa49c5985fa56a1d24",
+          "git_blob_sha": "95a0537ca12d3de4fe7401724568554e9c8f9605"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_wall_ashlar__GUIDE.glb",
+          "bytes": 2208,
+          "sha256": "2c40da7d5af973a88a956cc8ecae9019ca8f761b9f05f83fb9381bfa703c3feb",
+          "git_blob_sha": "0af6bd637315ce34e26745a9c723e0adb0c464de"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_wall_broken.json",
+          "bytes": 314,
+          "sha256": "fbf8629013450cd702adcd2c4934a23227a8813d1e348d2377ee79c2bfc60c66",
+          "git_blob_sha": "d452aa65a1888390d5dd7a89a9bec33aeb785239"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/masonry_wall_broken__GUIDE.glb",
+          "bytes": 2220,
+          "sha256": "bc65b802dba7ff9a7f67069d94616e5b1d1dd6ede0f9038f7959360b29ed3724",
+          "git_blob_sha": "0fac22b16a11e27bf96c4e7e5d894587fbff87a4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/mushroom_cluster.json",
+          "bytes": 339,
+          "sha256": "1a2dde98b67de4a65acca53164974d30835eab8d91d434256855b1c0f218f917",
+          "git_blob_sha": "18fa5860baf7c3b39ec9a5c3d2075b977f535135"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/mushroom_cluster__GUIDE.glb",
+          "bytes": 2264,
+          "sha256": "04678813096186027cf66e9a657b76c3fd230aa48467e8d74ea765bfad402ed7",
+          "git_blob_sha": "2ebe7acb4ef6529b168b723693f7f953ba99a236"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/mushroom_small.json",
+          "bytes": 329,
+          "sha256": "8d0bcbf6b72c893385a1b740cc965d4cbbdcee93a425f1be2f05e8e8e3353e74",
+          "git_blob_sha": "9144763782a7f01d873250935a6b54ffacdfb934"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/mushroom_small__GUIDE.glb",
+          "bytes": 2260,
+          "sha256": "17552e329b5081f9bc56080c2bff881962353ebe35371b8443e86ed823be3817",
+          "git_blob_sha": "382dbd4cc2db912bc72d67f771b6efe7e05ae8d1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/mushroom_tall.json",
+          "bytes": 323,
+          "sha256": "89006de2ff5db14eeb5b89242e8c376b3aee36523c787bbdbd56bea339790a6c",
+          "git_blob_sha": "195391856c3e816b097b32b9caeaa7be39b0b232"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/mushroom_tall__GUIDE.glb",
+          "bytes": 2240,
+          "sha256": "b1c35454a8bc0cd5110f9c29d23b222846f6c74d350e1e2478a5e5ce9790ff57",
+          "git_blob_sha": "5fdddf044fc8004bf01760afb2f1073bd5d48991"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/organic_pod.json",
+          "bytes": 304,
+          "sha256": "5342db4631f00e61d0531d1048793dbc5cf70415925b711aaba420bf447cdc59",
+          "git_blob_sha": "f0dd8651ec91ef9d12331fdc0eeedbe39f2a50ce"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/organic_pod__GUIDE.glb",
+          "bytes": 2220,
+          "sha256": "653f645370dd733ed7f28078aa7f76b21f0ef004fa519e0f60b32c75fb5b9eb7",
+          "git_blob_sha": "83b49586d1df083d78d386dd988edbe85b6176f4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/palm_tree.json",
+          "bytes": 318,
+          "sha256": "13cfc00867923c7084d491e86c01b5a412112bc315c329a685c03d8318e5ff50",
+          "git_blob_sha": "4d26d7d65507ea2488ff0a6193e190c29540ef44"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/palm_tree__GUIDE.glb",
+          "bytes": 2224,
+          "sha256": "905d144aacda992c41fe41275016105647af29a73424c8fdbc523d04aaafa73b",
+          "git_blob_sha": "965cf7f29e3958a4b0be1a967724a328d85c07c9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/pipe_elbow_90.json",
+          "bytes": 334,
+          "sha256": "fd204d35e7bba49ade1bc16a6248841690fcac659b9b34e50b8c07cfdecc79bf",
+          "git_blob_sha": "412b159212b5481781038b53f2bebcde19d12374"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/pipe_elbow_90__GUIDE.glb",
+          "bytes": 2256,
+          "sha256": "34ef1a3d29feeb9c1bc62868152815a9a3fc5105418d8d9f0dfdc9073360edee",
+          "git_blob_sha": "3df7cff01e58bd378e5914cc0e2a8018d192cf37"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/pipe_straight_12cm.json",
+          "bytes": 326,
+          "sha256": "78b0debf61126ce1a6fd3e25e280394c2b3fcbd1caf4253f43ccdb8112d62c7b",
+          "git_blob_sha": "ba50664994c0ea8cf09080752fdcb8282ac4f294"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/pipe_straight_12cm__GUIDE.glb",
+          "bytes": 2240,
+          "sha256": "467643e9a204fe2895fa44dffa3070a62d814da303da1a860022374f2f3ff47c",
+          "git_blob_sha": "ac821244490dacfd4c2398b64dec60ab92d33c4d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/pipe_straight_24cm.json",
+          "bytes": 326,
+          "sha256": "c64a6143436264863fcb5a0eef5d1c9e263064d7b1440f625b1076d9e5da6eee",
+          "git_blob_sha": "21de5a83e3701abf56766735d604493ee46c06d4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/pipe_straight_24cm__GUIDE.glb",
+          "bytes": 2236,
+          "sha256": "2b825198488828c1b65830dffd85c26b051b2144985a1f9f2d8584dda8320b25",
+          "git_blob_sha": "575845174905093e7a0c51fcd62581200e640e40"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/pipe_tee_2m.json",
+          "bytes": 312,
+          "sha256": "13d1ea8edb883a03b719effc9614fdebfe4e678fdd60de67d683685b92f6f42b",
+          "git_blob_sha": "f738b1ee5fce8539aadf36a35edc67ea695095f4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/pipe_tee_2m__GUIDE.glb",
+          "bytes": 2208,
+          "sha256": "50a6a3d9ad0219bd29f187f4f9f4702b888d3b347a7763267207435c814d0032",
+          "git_blob_sha": "bf5f3763b541287d96b92bacc7486c13217a2dd2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/pipe_valve_riser.json",
+          "bytes": 326,
+          "sha256": "5e09f6fdac10dd67ac9ce55591fe02edac94e3226ef05bb2f4c0337dba31d329",
+          "git_blob_sha": "8625571a40e417a7be45ca6256b399a942393212"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/pipe_valve_riser__GUIDE.glb",
+          "bytes": 2232,
+          "sha256": "9619b6d4d8342a2175ac5c6dc7137140c6c1eba5dd27d0b0d15250b78e86f669",
+          "git_blob_sha": "a406746c5c4af4eae01d27eec13d75747de2e7e5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/railing_iron_2m.json",
+          "bytes": 313,
+          "sha256": "a02ae93fe8126f0b0da878c3cdefcbc113e272033b351d9f13f2be30a7a1d6f9",
+          "git_blob_sha": "65d08a0741b608664cadc82af06d5c3ed76dd40d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/railing_iron_2m__GUIDE.glb",
+          "bytes": 2216,
+          "sha256": "3fd80684a1784322a4ab9b97a99484137f7dad7ae5cbc983c45c544847a94fd8",
+          "git_blob_sha": "b77103dc890844e254abe586ecb5d5201b916cc5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/railing_timber_2m.json",
+          "bytes": 322,
+          "sha256": "2228926d97ff3ae3a6e84ecd6c1ffe6e7c4c8457b15a5a9e36beb7cc99f7a395",
+          "git_blob_sha": "2006ea7bedfd826777c1cc296a5879db36de0e4e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/railing_timber_2m__GUIDE.glb",
+          "bytes": 2248,
+          "sha256": "758136c600751c0316659aa7c08a89ef203914a729da32765a78f3550bd64b3e",
+          "git_blob_sha": "db3fd210a1f77d2f3a0bdb641aedcbdbdafa4a37"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/raised_walkway_2m.json",
+          "bytes": 584,
+          "sha256": "9a53138ca099d3bfb904a0595488cd0ef867f1d477e89b1a69155280621b8d3b",
+          "git_blob_sha": "de9b9832adb62f9d1d19f382ba9d7ba66309f524"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/raised_walkway_2m__GUIDE.glb",
+          "bytes": 3888,
+          "sha256": "3243effbc39742765320175ac222da29b3dce8f6ba55aa27d22f7b8bd62d204f",
+          "git_blob_sha": "5f2a55f94ae1d04ed3a1e78555cb80cf5fc3709b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/ramp_rise1_run2.json",
+          "bytes": 106,
+          "sha256": "84bd50619a225c510284c53b7e36a1dd70bf1b1dbf375380e33a3e70313c2d03",
+          "git_blob_sha": "a1cf4d335bba1b1e97bf859e5e260bf17db78ab7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/rock_slab.json",
+          "bytes": 323,
+          "sha256": "ae6ad5b685f0a2f5b4403c368173f03a27bbf65cc06f19c647b83b4206c8a2cd",
+          "git_blob_sha": "50ee9943bd0e5229d37e81921846d86e0c935497"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/rock_slab__GUIDE.glb",
+          "bytes": 2232,
+          "sha256": "8f00e7dc8f5a91ec6e5adc59b8b9e6e88b750b233db3d7dda47711d2396206ce",
+          "git_blob_sha": "2765d146d1409973859ccfc05e1ecbed476d0a9b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/roof_pitch_left_2m.json",
+          "bytes": 109,
+          "sha256": "c74f82f99ae1b84991a2904aa6b574ffa8fa60d63f4b6b49e12db10d29144dc5",
+          "git_blob_sha": "280ccb60ab89fe307d12e7c40596be066fc267e9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/roof_pitch_right_2m.json",
+          "bytes": 110,
+          "sha256": "21e6bac649e5a8d40f1ceddd0245f4d759cf91c1e3cec22cda50cd4f4f787971",
+          "git_blob_sha": "bf627177c9e1f7a4cab6b913d3b7142dd3eceb4a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/root_arch_2m.json",
+          "bytes": 592,
+          "sha256": "f5afccccb4be6d5e73532abe5112f8e42997ca90d1e5a5fc06d2478c653a8a3f",
+          "git_blob_sha": "afa865bc90ff59f7c4069c5099fb9bcc5f1646f2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/root_arch_2m__GUIDE.glb",
+          "bytes": 3084,
+          "sha256": "6633404e1da3336993271c667d601ae3ebb8c9ea8454d66c864b909acb0f3fc4",
+          "git_blob_sha": "7f47a6862af5c8bc1e313fef69236d3674aa3955"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/root_corner_2m.json",
+          "bytes": 341,
+          "sha256": "7de3ffa416195406af88a4d6b4c1a3c15d1501e439ec8dc5327470162a891bd0",
+          "git_blob_sha": "56362d70cd29748c926aca44b6b0dc2776d56604"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/root_corner_2m__GUIDE.glb",
+          "bytes": 2256,
+          "sha256": "74fd3599b4b7848a3e760c1d6ca0705156b9e41c978b3a5fc7a73b193a38bbb7",
+          "git_blob_sha": "4da1bcdc940e357a701596cbf934d842d0b7e798"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/root_straight_2m.json",
+          "bytes": 344,
+          "sha256": "a25e0190a75518c50190962026d441c6d3401db846080b8894f7955b288bcc50",
+          "git_blob_sha": "15ebf60c5645dcb708c8b7dcb6b6a14800160a51"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/root_straight_2m__GUIDE.glb",
+          "bytes": 2264,
+          "sha256": "a7ed7e481effcc8fec2896abc6b8f542d077279464e3f8f3c1a54d3660f8a4f7",
+          "git_blob_sha": "e9d39621eaf636fba187c72963f21f20b565335d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/rope_bridge_2x4.json",
+          "bytes": 582,
+          "sha256": "225a8494d7fc091e5e2907e12342aa56b57e47280d900edfb1d4407622948826",
+          "git_blob_sha": "4f4dd6ce269f2323eb795ec3b84a87dd18e0caf2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/rope_bridge_2x4__GUIDE.glb",
+          "bytes": 3884,
+          "sha256": "83b3a3798a405dc34825a6725cf8ec49be84cc090885deffe0f7f347e5275b7c",
+          "git_blob_sha": "fa9b1fcfc78b7021fe3201f3578892f225c21ff1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/rubble_scatter.json",
+          "bytes": 337,
+          "sha256": "29483c5fbed2c63285b9ca651886121677ba9f1af5b85e6cced31d81333443b8",
+          "git_blob_sha": "683fb264a73b076184bd002406c900da787872c6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/rubble_scatter__GUIDE.glb",
+          "bytes": 2240,
+          "sha256": "12f7955bb62a0ac0d2b29c15c81f7a74750ac5ce9b1ce905daf91eb047e57d28",
+          "git_blob_sha": "10af26184b08ed5f7e73c7b4c6c7d3adc8802295"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/sarcophagus.json",
+          "bytes": 304,
+          "sha256": "c06e58b87c46e36fcb49acd183763c1df33dcf0229684891a666de68ba54f3ba",
+          "git_blob_sha": "2ecf8b4a10b02d55b245eb455ab223ce1eb0a0f5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/sarcophagus__GUIDE.glb",
+          "bytes": 2188,
+          "sha256": "9539d78f0102f4b439a649f369881faf730de476de0348f1e1fce76f107412ec",
+          "git_blob_sha": "8959939e0587a6a0cfe6341f5d269c95f3f87461"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/shelf_bookcase.json",
+          "bytes": 314,
+          "sha256": "4ce29b28ebd98c4396c90fb5be2b72d8bb14c979b4e7b8710d348b01420a5694",
+          "git_blob_sha": "397e4b8d0ef6a5c038343b226b838d686f1760ad"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/shelf_bookcase__GUIDE.glb",
+          "bytes": 2224,
+          "sha256": "47e760d159a54cb977b4a33db8342f3ba002c1740bb0307a3a6dca6aa33a3bb4",
+          "git_blob_sha": "7f3bc67d91954abce6b41b5e9c997fbd8bfef012"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/shelf_fungus.json",
+          "bytes": 309,
+          "sha256": "aba353526a490d3ea26b007d9fc2f1849c9dc8d35714635b56bdf8a1b8cfaddf",
+          "git_blob_sha": "a780951cb7acd54ba73c26380af2f99d1b0197b2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/shelf_fungus__GUIDE.glb",
+          "bytes": 2176,
+          "sha256": "dc70b4072b5c460f60f5298d3605ee9264a620264ef2528d1a77a5b3f3f0ddda",
+          "git_blob_sha": "01ba4e4558457112b0449446c564371abd43951b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/shore_bank_2m.json",
+          "bytes": 302,
+          "sha256": "7d39a702aac5df3ea108f3f59040fd129fcb5a0faa46f7505852c78e7f9fff98",
+          "git_blob_sha": "9c769c8757e792933b046ff2e9769631b128e173"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/shore_bank_2m__GUIDE.glb",
+          "bytes": 2196,
+          "sha256": "f7729f22dec5b5817effbdc70a4ac1e31429b4b12e094d3d6c409b8870fe6970",
+          "git_blob_sha": "4ac2b8d6e6506310e4e98df64a66f2f4f1c6756f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/smith_anvil.json",
+          "bytes": 307,
+          "sha256": "eae1662ad710dce0822eea6c3ec89e1f48eb22597935190b2bf2c796ac58d6d5",
+          "git_blob_sha": "994f032c932613a393544292276a985104d01d99"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/smith_anvil__GUIDE.glb",
+          "bytes": 2232,
+          "sha256": "c378d1f11265408997ac54cfdebee5417fe0949d859e0fe44aeba466cbf30f0e",
+          "git_blob_sha": "2b6ae877063bb6dd428480ad6ecd7a8410013484"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/stairs_rise1_run2.json",
+          "bytes": 108,
+          "sha256": "9672ca4c2b5a84fcec7a95bcd1a5e18fe02cd17a6192e73d73e0f4916a660282",
+          "git_blob_sha": "a0c6599959324710250511e54e3fbbdcbd225723"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/stairs_rise2_run4.json",
+          "bytes": 108,
+          "sha256": "8190e22befba0b199adbada07a4c2dfae78e104405d335719e0c0ed339034784",
+          "git_blob_sha": "1f55af0199749398ba5fae1836dcf25bbc576777"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/stalactite.json",
+          "bytes": 329,
+          "sha256": "ac2c645196cf52369eb77f6e1e4db51e19c3c9a714e1239da2414a71beb1eeea",
+          "git_blob_sha": "ed9867e949779d11bda920f780445039d955eafc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/stalactite__GUIDE.glb",
+          "bytes": 2232,
+          "sha256": "ae4962e6fa314db8671d3fbe6e26bba4d9afeae5707e0e6be9f33a1c229f46a7",
+          "git_blob_sha": "763f2dce65fcdd63b7bb21c49fac7911564139ea"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/stalagmite.json",
+          "bytes": 327,
+          "sha256": "a37c313b1ce44db90775d434085def118ab7b28a934b7ebfd8e7f582be0e47be",
+          "git_blob_sha": "a6b5939d729ed5047ac3524f3f337d3be4480cff"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/stalagmite__GUIDE.glb",
+          "bytes": 2248,
+          "sha256": "8887fb50591d4e20b86ffd4dbfaab43bc0c5ec4d2b527367a54bb4345986160e",
+          "git_blob_sha": "831452f45245b07b9c9a9b55afabe49f97d7ec17"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/standing_stone.json",
+          "bytes": 312,
+          "sha256": "666a6eb78d9d0aeaefb71e0e53b9e8ec4b448cb966bf4498d92a9c26b2bd819c",
+          "git_blob_sha": "5c06ef918714d20bbbdcc40580d4c53cae528241"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/standing_stone__GUIDE.glb",
+          "bytes": 2244,
+          "sha256": "7493ee7930d6af6e3727d23f27e1a8479d37f18903763100bef80bcc7fb69e40",
+          "git_blob_sha": "08a3e007e8e22e34b2ba42377038869e3bfc23ed"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/sunflower_stem.json",
+          "bytes": 333,
+          "sha256": "f7c59697c6f9dfe61d5f9e8da18908e5561581485f11d14160b37372869803de",
+          "git_blob_sha": "97603a34ff59e34e372ce7927057002b13b62007"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/sunflower_stem__GUIDE.glb",
+          "bytes": 2244,
+          "sha256": "bf79b6a7b7755e358f7220406e2b36f63e7cbe6d1cab85fb8574a3cca3dbe68c",
+          "git_blob_sha": "663508a058056c2c921e5a4d16942216f78de6c6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/tank_vertical.json",
+          "bytes": 309,
+          "sha256": "da4c047e68d61e756440d40477c48f72e150d4a16aae862d8463cdb8b6591662",
+          "git_blob_sha": "bbce694581446d8e189166b77b2fe184cbbb9ccc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/tank_vertical__GUIDE.glb",
+          "bytes": 2236,
+          "sha256": "f423a0d088146c3986bb0a0dd220c2f8b67ebecd34f4ce36241f682222b9638b",
+          "git_blob_sha": "bfcbaa8b24d5b0daff3b17e161b03e787b278389"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/tatami_mat_1x2.json",
+          "bytes": 314,
+          "sha256": "0f6ac59266e8f13eb3f8b6d8787543008ab2ea26d3ccb35bf687658f5dcdf4ec",
+          "git_blob_sha": "adbefe288190691cefffcdadade32ad645c3fccc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/tatami_mat_1x2__GUIDE.glb",
+          "bytes": 2180,
+          "sha256": "cc9d843560f7f3f2a63c8c3531c4c71113718e56ac3bed0b2eb456038b42c9a5",
+          "git_blob_sha": "fd9bc4ddbad13b0992f15d0d39814f54eeaa430f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/textile_banner_pointed.json",
+          "bytes": 337,
+          "sha256": "bdcc13ff2fd482ec1a8820826c79888778a48f1d267fbaca67d8a50edfb062aa",
+          "git_blob_sha": "b1f2c9115f99497411106ba578231a56427ca1bf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/textile_banner_pointed__GUIDE.glb",
+          "bytes": 2244,
+          "sha256": "41666ab2f3221bf8ea657354270778cef4a39b83cf8a8c1a6bb3e9c96420e57b",
+          "git_blob_sha": "57127f48cf8b944e0fd3c698fc6514ddc7550716"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/textile_canopy_2m.json",
+          "bytes": 724,
+          "sha256": "db2817433c571600bf9dbc5907cb78e54425e5856ec02caaee822fa5325c57c9",
+          "git_blob_sha": "218e5ec998ab0fd39c02c6237d45c9e76a87c29d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/textile_canopy_2m__GUIDE.glb",
+          "bytes": 4756,
+          "sha256": "b074c9be3dc21f43c2bfe5bde32b122a741f1da6bf9870b14a9a56ef9739b657",
+          "git_blob_sha": "13aab27ad273384a8a1d14e5985d2c6e8c3fb720"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/textile_curtain_2m.json",
+          "bytes": 333,
+          "sha256": "b31bd6883684507bb7ac27567f40bc1e176d8c32e6df68449e3a4ff2a397cfc8",
+          "git_blob_sha": "7c943865f3b69cc8da33ac8e739e556a8ec381da"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/textile_curtain_2m__GUIDE.glb",
+          "bytes": 2236,
+          "sha256": "6277c4dd5debabfe8f7a5928ba882b9c4d15e0a45e53900161a3f1e897b98f68",
+          "git_blob_sha": "9b44876f97ebe222293be6e3c8807ac56ecfec09"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/textile_cushion.json",
+          "bytes": 313,
+          "sha256": "5b39c130f83d23227dccb0fb22b3223e0a8a5d190248acad38df5a93cca6b1b5",
+          "git_blob_sha": "9fc6e1ce27b0792ae551cf5f655f9a5d4bacbd0e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/textile_cushion__GUIDE.glb",
+          "bytes": 2244,
+          "sha256": "5a2253848aa96ecb3c35c8458a2ec5c2ebbb127d1379257f44cecd0de367476b",
+          "git_blob_sha": "58a0280ec449fb9da7d48dccbb2cd034d3e45a88"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/textile_rug_2m.json",
+          "bytes": 305,
+          "sha256": "5833463439d528167ebe5c931515f10191c05dd5ee0b1c530d3c55290f32c33d",
+          "git_blob_sha": "4fcb0614e3c1db010cf2afb56dc288b62b8720fc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/textile_rug_2m__GUIDE.glb",
+          "bytes": 2180,
+          "sha256": "8eb568aa78b1abf681631534bd4fd8032d7b23248cda1779b62b85623a804c6c",
+          "git_blob_sha": "c0993d47ac51e7255a6bfdab6c66be8e0c725c49"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_beam_2m.json",
+          "bytes": 313,
+          "sha256": "06330ce620c6e334b7ca64f1810ab71a18d73ee45a5faa46f6be74d014603eb4",
+          "git_blob_sha": "8bf78b1fac07bc1aeac23dc4cbddbf8cbf8d91b3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_beam_2m__GUIDE.glb",
+          "bytes": 2212,
+          "sha256": "776cf70a7823610f134209e2efde525eef8d310b2c2971d46b0840cd195bb0fe",
+          "git_blob_sha": "7aa4fdb56bff64962f074fabf9e46ef7a93c93e4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_gable_2m.json",
+          "bytes": 325,
+          "sha256": "eaa11972d37c57b01e5e49e92e937ebb18add07c87f10bc68e465ff2a2c340ea",
+          "git_blob_sha": "15a0a4b47920ceda4143c56494c6963b551453bf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_gable_2m__GUIDE.glb",
+          "bytes": 2260,
+          "sha256": "4d9f6426585e154d57b26bea5d862e0b05c44478f421662062e852f779bd264e",
+          "git_blob_sha": "1cc0dd0b7053d708c780232893578143f1604e48"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_post.json",
+          "bytes": 306,
+          "sha256": "c12ec07ccb9611ce149edda8626fd67cbd686945c780b09b86fc7aca5e51f27e",
+          "git_blob_sha": "298dde3715bd11376bd2861d4bb14b3fd3b6a986"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_post__GUIDE.glb",
+          "bytes": 2220,
+          "sha256": "dccc8c53262a1b938a1b864161ccd40b81caee4698eb43ab0e12fbb65fec147b",
+          "git_blob_sha": "090569ae1c8894dcc1e0a66e7c7bd653eb0358cd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_post_beam_gate.json",
+          "bytes": 753,
+          "sha256": "ebd31d520eea6ecd2d3f2871a51de88459c1277384b9f37b62dac3cb52785f0c",
+          "git_blob_sha": "323b50e3572840e3d9f30fbcae26273730820fa6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_post_beam_gate__GUIDE.glb",
+          "bytes": 3940,
+          "sha256": "d4de64c85801cdde1282c282e921afc1740a989d15000744e5c8d9cc4c0077a8",
+          "git_blob_sha": "61418880e31f24938a2b8935fc8c5ae40ad862b4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_short_post.json",
+          "bytes": 318,
+          "sha256": "286bd5063c860eb8494fe06e538d9eb1e05f5c3616f33bb59afdc19d2c23f039",
+          "git_blob_sha": "a060e25d676150eaedb2b5d181c790a65b9f808f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_short_post__GUIDE.glb",
+          "bytes": 2248,
+          "sha256": "2590adc4db3efff68bb37b71c0b3c46daed861680adee169b42e4d717399cf63",
+          "git_blob_sha": "0c3036aa6c3009c15e53be070825f260bc8b6d71"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_wall_lattice.json",
+          "bytes": 323,
+          "sha256": "07373e18649e6ae79025810eda7776d1e37281fdeecbe0c38a1aa07c85c8a5df",
+          "git_blob_sha": "0ca3abf3ebfbd7ca71aa03e5c33862f0a83414cf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_wall_lattice__GUIDE.glb",
+          "bytes": 2208,
+          "sha256": "f7ad6c04b011fabc78742e0852f48c1cb78cef86741664aaf978dc59dc2902f9",
+          "git_blob_sha": "a97a5ddbd83549e63a88bf3b6598eb861abbd80a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_wall_paper.json",
+          "bytes": 319,
+          "sha256": "d1023710fb0f2996233b77d0f26dc9dc925d86cbfb9437965e6cdd9f9d196b85",
+          "git_blob_sha": "7c88bfd311b995f419080647190b67523a90736b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_wall_paper__GUIDE.glb",
+          "bytes": 2204,
+          "sha256": "0669abb995ffc8ddfe82295dd77acc62cc8c06f27aa34b8f920e683c4d9c97f1",
+          "git_blob_sha": "9618928ad45539d02f8e23717418254639f520ad"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_wall_plank.json",
+          "bytes": 319,
+          "sha256": "e82bdfd86decc9721caa7711cfc26d846a9b8b7ada6601ef1e8be13a016df322",
+          "git_blob_sha": "67249df83d0a92ba6c0f02925762348f39a9f3e7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_wall_plank__GUIDE.glb",
+          "bytes": 2204,
+          "sha256": "697efb452c58cba5e581e21ee701f046afce65ce755aa3ceacc097c930abd405",
+          "git_blob_sha": "d7cbd31cb05db624b1ed5b986a19e6d4fc380274"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_wall_plaster.json",
+          "bytes": 326,
+          "sha256": "33664672dc8c60efbea86af41fa87e3cf64bb4ff0acef71456c83a6e46db01b5",
+          "git_blob_sha": "e8b4a4894cfb12461b94381bc37d6200219a4e18"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/timber_wall_plaster__GUIDE.glb",
+          "bytes": 2208,
+          "sha256": "e35a58aeac9cbfd0b8a097b6b5ba90469965bf46cbccb36f8eb8856c743f2097",
+          "git_blob_sha": "a18963aa3d2e6c351ffc54b77aad325e364de818"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/tissue_rib_arch.json",
+          "bytes": 602,
+          "sha256": "96758d18147793988b4a8c730d606f896a3a340cb5017a036c9fa725fa972249",
+          "git_blob_sha": "6a49cfa770de7a3aaeb2e293ce6354b1b963f40b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/tissue_rib_arch__GUIDE.glb",
+          "bytes": 3088,
+          "sha256": "5b2e87f7f9eaa9432a496a1491e51adbf723f0c5e13f81b170462509ad1d4988",
+          "git_blob_sha": "2248e5cfe1bdd0f1ccde03db01e44ccf9a6a6dd9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/tissue_wall_2m.json",
+          "bytes": 341,
+          "sha256": "5e33234bdb449ed3a9fc30f6e2f7cb121150dff6a61966a33a8a0117d0b7f52a",
+          "git_blob_sha": "35066db7dea14397434e8062ddde5d31afbb2e5a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/tissue_wall_2m__GUIDE.glb",
+          "bytes": 2260,
+          "sha256": "16d40c0e6d4fd2d9b1ad0ab32c708e0c5913645a751897cc329d3a8b1a0fa253",
+          "git_blob_sha": "6c92f79c83a52491d8cf5f5f33aa50ed9db322c4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/toy_block_arch.json",
+          "bytes": 310,
+          "sha256": "3480fa577db8dbdfd97452a6429c16bf93590615e4de060670fb5000246e7a33",
+          "git_blob_sha": "1a247cbb8714e0c1e9b559de26e50bf1c0b82ddb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/toy_block_arch__GUIDE.glb",
+          "bytes": 2184,
+          "sha256": "5b6b01996bebad62cf077e8e1fce6c83571745a9c70c9641b7d3accc82956eaa",
+          "git_blob_sha": "9a0228ebd263226813503b85631f248dd1d23635"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/toy_block_cube.json",
+          "bytes": 310,
+          "sha256": "e4486ce0aa179540cc2804c81754472ed5eff3531945a803995232ba31cfaacb",
+          "git_blob_sha": "009710552e7e358af6caafbad544dad0b90a8f21"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/toy_block_cube__GUIDE.glb",
+          "bytes": 2164,
+          "sha256": "49abcf0e966c15efc8d4fd8aaaaafd39caae8780b9cd89823248ba33ff894a2a",
+          "git_blob_sha": "c4611b77aa60965f292d7c3801eb63339202a1b8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/toy_block_wedge.json",
+          "bytes": 312,
+          "sha256": "1eafd93ba69e6e14229cb066a4fcdbbdcb07c250021b591d9787984b9f893ba9",
+          "git_blob_sha": "0091e453e82100a82ed25701aab195c54c13ad89"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/toy_block_wedge__GUIDE.glb",
+          "bytes": 2168,
+          "sha256": "1bfc46eca779f9c59144b1e0bf928116f4539b1a7b3e650b096de1b918196d9d",
+          "git_blob_sha": "1dea1eeb2feaa30d8ba818b9599f4d24ae85c9ae"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/tree_trunk.json",
+          "bytes": 327,
+          "sha256": "4cb65c1a9940a18c12e723539e919ce6b7860f7231d3ba1b8208ffe86cfb63d7",
+          "git_blob_sha": "c223b14f17fa292d6bce7cfacc2bb7d631db979a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/tree_trunk__GUIDE.glb",
+          "bytes": 2248,
+          "sha256": "6e568cb5c2c6ad3d2cfb9f4fee8be978dd746eba2fc71ad4bca17acfc2457a1e",
+          "git_blob_sha": "8414adcbbe2662c610ca4a057bad6545e53d5407"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/urn.json",
+          "bytes": 295,
+          "sha256": "41cfe67999d5bf5d8610fe6c7d841c8caaff0656dc5d0a8cde1676560e1cad58",
+          "git_blob_sha": "1e1b05cea27f5bad9565ae581723f12ee8a96bcf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/urn__GUIDE.glb",
+          "bytes": 2220,
+          "sha256": "228ff3b3a29aa2c4ace8ab91fe519e5b951e809b18a86a2d7485877308c1dfad",
+          "git_blob_sha": "6b8b4a768114e5119c67dfd5b501de5fa1ef76d5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/vent_louver.json",
+          "bytes": 308,
+          "sha256": "b82e7a2d892252dd10dfb779d3f06ef3890cee0faa56d59d0890848ebb1c6532",
+          "git_blob_sha": "df6d6d795887c916432695bb8f23ff8f631b65fa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/vent_louver__GUIDE.glb",
+          "bytes": 2236,
+          "sha256": "bff1e98c9e0040db79b30e5c88ac0446d2a245f0b730debc04a673ba0fdb872d",
+          "git_blob_sha": "5c9c344569acd3b1d8771595ff610d7ca909f3fe"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/wall_shrine_niche.json",
+          "bytes": 322,
+          "sha256": "9f4e31c9ffa5bc208b90d694541cae7859cc5bee18d0806b0cce1b96925b0e75",
+          "git_blob_sha": "52db800abf46ed7aa3893a94d1323644edf02474"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/wall_shrine_niche__GUIDE.glb",
+          "bytes": 2204,
+          "sha256": "e45cc0272652a2da36e864cd72dba8aa7ab1c359df8397cdb8f98fc4376bebfb",
+          "git_blob_sha": "00142b3198ce686daaf9383b139144ece0281e97"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/wall_window_open_2m.json",
+          "bytes": 726,
+          "sha256": "5381f39ac76825df8a62c8cde60de5ec9144312cd57412050b0e837f36677415",
+          "git_blob_sha": "f44cfae63f6a9cd5e8584e96f18dd9fa71ff2476"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/wall_window_open_2m__GUIDE.glb",
+          "bytes": 4736,
+          "sha256": "e11a2f9a7b954f017fef89791cc8d0f9e4a421bb6de9e81cd75c21aeaeeef0e9",
+          "git_blob_sha": "48c1d9249805c333b8c852e3ea5ce0b8f6137ce8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/water_channel_2m.json",
+          "bytes": 584,
+          "sha256": "6bbc2f093316551b9025807fc994367e32d15b1583e4ea70f2fb394fa142fb54",
+          "git_blob_sha": "da9c31bd30977e61c21759aa5146548685ce1d02"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/water_channel_2m__GUIDE.glb",
+          "bytes": 3872,
+          "sha256": "9d69c3fa37db1d6e78cfc91a6e1720ce008b63ed165b5d9fa0a8f108575a0d92",
+          "git_blob_sha": "f1ed932799c437007f17509c3fdf298a08b06002"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/water_surface_2m.json",
+          "bytes": 107,
+          "sha256": "429c9d55231f0104e0cb07676fab100c53073c786c3dd6300222cbc806355510",
+          "git_blob_sha": "4442563e005e9c99f81c344a72fdce558890d752"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/weapon_display_rack.json",
+          "bytes": 321,
+          "sha256": "a19cf32bfad5a07dc1d4ffe0b46d15e2101f6d7a485734a798f2c15af819ea32",
+          "git_blob_sha": "9444c6b46b278e22237c9976b001cf5816f69fad"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/weapon_display_rack__GUIDE.glb",
+          "bytes": 2232,
+          "sha256": "8d8fd91a93b56a28e862b09157a6b9c6018026dd2372cc3db9cf2851a079eeb8",
+          "git_blob_sha": "1fabaae76d73239ab65e5af3bc4476a4b3302a90"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/collision-guides/wheat_seedhead_cluster.json",
+          "bytes": 113,
+          "sha256": "21736a2e95334a4c556be801ac662897ab77cd37cc69e7b7d16bfe24f59318a8",
+          "git_blob_sha": "d5da4ccdef4ed87dd36cc636991638f6ba5cce8c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/geometry-manifest.json",
+          "bytes": 333647,
+          "sha256": "781f03616edc0032baee10a6379000e52c475fa644144e12a7c85ec194aba4ba",
+          "git_blob_sha": "ad85359b14d7fdc5713a400938695e2a026c2068"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/acacia_tree.glb",
+          "bytes": 31524,
+          "sha256": "5fb1055be7dc07baeab0df9e5a4bd986c58e500893353c4ce6a1ecd84ae28919",
+          "git_blob_sha": "7a827c6e8c15eee7cdb3bdaf5e61ad6099d1ff67"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/altar_block.glb",
+          "bytes": 4104,
+          "sha256": "3890d3222c244e58747d705c2759d1ebcfd2b9d597d23cab5c5f95e60ed62742",
+          "git_blob_sha": "038da76bf9b06a76368eeaf78edc8e074825934e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/arch_wide_4m.glb",
+          "bytes": 20196,
+          "sha256": "0e31102c55331a02628ecb74ef01c50993f0ff1f793e1b1bc7f1cde5300670ad",
+          "git_blob_sha": "8418a15f6844c0f8ba6d316e21a6165d43b85320"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/astral_ring_focus.glb",
+          "bytes": 21296,
+          "sha256": "d194f92bbe995c7dfc970c6f04b2407e079bcd4bd893df5b34503a20b98b005c",
+          "git_blob_sha": "fdffe112d923d02254571164375da68530d1110c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/barrel.glb",
+          "bytes": 15428,
+          "sha256": "eea2ad044300ea2d3e93b2f133ac5b726a07726ff522eccd120d5987998942fc",
+          "git_blob_sha": "cf08c1504f05b22fc4fd8f86ab076d03cd834f62"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/basalt_column.glb",
+          "bytes": 4456,
+          "sha256": "53be2b2720efbb8eb3bd4c378c2c5e927a08d058ba7954a78ac843cbc0ebbdbd",
+          "git_blob_sha": "a4595aa9160fd4c0b211bbdaaed8bcdf15770fd3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/bone_long.glb",
+          "bytes": 10692,
+          "sha256": "7637e57ee85134db1581585562cc7980eaa7bddb40b18961b74871859c3500e0",
+          "git_blob_sha": "d3e2eab124bb7f8e8f99689f6bbbddffe57e3296"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/bottle_potion.glb",
+          "bytes": 8572,
+          "sha256": "d0c92c990148e3d49505008d2ddb46ba282f35b07636bc0c3e9a7d8a0cfa43f9",
+          "git_blob_sha": "dd934ed7765c08bd0cd4ee5109cbf3942be73d98"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/boulder_large.glb",
+          "bytes": 4452,
+          "sha256": "c222712185bc7d78be8736849a8fcbd3b198d3d47764a48157599f4da7e1bc31",
+          "git_blob_sha": "6f7c8e873a25a510e885d127a5cbf54d6a98c813"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/boulder_small.glb",
+          "bytes": 4452,
+          "sha256": "be0ba55b2d9af4806a18d423a138e2d2cf0808d03c5c4815b6734b16b0e22fdf",
+          "git_blob_sha": "b4c07d19abfb566722942db7f1ffcfcee649e24e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/bridge_metal_2x4.glb",
+          "bytes": 14312,
+          "sha256": "bf673551b8979d3b713d1ac3f19bd3d533bb0403bb9742d648af057d2b8b595e",
+          "git_blob_sha": "e3a3da760dc9509738c6415d3d364a6e2d0c19b3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/bridge_stone_2x4.glb",
+          "bytes": 13172,
+          "sha256": "6ab52fbda58d224c1dce0544978a57906ce7b2d0110b2ecb10f7efddfea07a4a",
+          "git_blob_sha": "f26020c4f5a43fa36d3bc99a30e87d6a0e02e6f6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/bridge_timber_2x4.glb",
+          "bytes": 28656,
+          "sha256": "0a5e56729cba39d1b7eaa7d2978bd3f5f205fe3636e019c4aaac866b98151d33",
+          "git_blob_sha": "bb1c3270a0de1d94c0c0ee145a02e7576c56dbbb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/broadleaf_clump.glb",
+          "bytes": 8080,
+          "sha256": "f9da25422ac0757be772ca9feb334aa3e5d0f235545d8b7a45e1e6c2a76a2b29",
+          "git_blob_sha": "ad7ec2abc08b86fb9d867a356243a97d73f41b0b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/cattail_reed_cluster.glb",
+          "bytes": 19460,
+          "sha256": "89f49a98c50284ea6c08ed18338f7a6a44dbac5c664e472a99d18254aa939849",
+          "git_blob_sha": "6eaf5415649863a0e6ef39b5ab5c0876bdcebf8b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/cave_arch_2m.glb",
+          "bytes": 13228,
+          "sha256": "3ffa450067bf8532762e4ebeb505afd45151a56616dc861a99bbf6c78772dd7e",
+          "git_blob_sha": "0dd64134e953482947483c2dc2f35dcdb72f63e7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/cave_wall_2m.glb",
+          "bytes": 14256,
+          "sha256": "cd393bd0b3210df91d8177cb79f2aa1d0946a4fc83a37abee3b4490c61983e9a",
+          "git_blob_sha": "de09592d4bb6ac49ba9816e3ba924b7ca855ecfc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/ceiling_barrel_vault_4x2.glb",
+          "bytes": 14908,
+          "sha256": "432fe2b2f20893ada3d3fe0a0a961e9a57f3d6b813ccebe2a342aaad6d55ba1d",
+          "git_blob_sha": "075ea108e8b80be065912f89efe448379d3aa1fc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/ceiling_coffer_2m.glb",
+          "bytes": 6588,
+          "sha256": "51a08f5552dc2f50a2699cc8911fa1d1bc5a72e222bad4cb8a3a1445502b3364",
+          "git_blob_sha": "e6635130c6204bad7c3a414a6554cfa43b40b829"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/ceiling_flat_2m.glb",
+          "bytes": 2232,
+          "sha256": "7b6f0b355d22d78e0b96bdde8e53c5456522fdf0894e56aff3b1cf284cb4eb85",
+          "git_blob_sha": "526a3dab0cadbb29521e0cf57b0930f98e38aa31"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/ceremonial_pedestal.glb",
+          "bytes": 8800,
+          "sha256": "58065e0871635fea978787056c9bfc69359222b2d30a1415732082a39e71fc69",
+          "git_blob_sha": "5cdc39a0364382ad0f5d6f3b2ec7f0f436ffcd9c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/channel_crossing_2m.glb",
+          "bytes": 4916,
+          "sha256": "79c954551e755a59ee1bdcd53dd3cd156ae524e96dc29f87949ffe602c3f68d2",
+          "git_blob_sha": "0f013faa1267e4d76b01327081090edb2d150ab5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/cliff_face_2m.glb",
+          "bytes": 7736,
+          "sha256": "83bc571a3d995164b3761b39c1013f05117eb5661cb1aa40b7eab1a6bb42c4d3",
+          "git_blob_sha": "8959e8ec4e9a98ea7f3018bd77dbb9b768ccb531"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/coil_generator.glb",
+          "bytes": 7588,
+          "sha256": "a283826b9006e6b792efc42a6e2be5576c701f4014c1c1d19ef3831cfb804488",
+          "git_blob_sha": "ab505a0539f67fbe34802424429247c296097ce3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/coil_stack.glb",
+          "bytes": 22684,
+          "sha256": "c73109a5827863777063f686ca0c352c0e359e6c4c2c5026433e68718c651266",
+          "git_blob_sha": "cf00521a61e9feecc58bcae054f73e12a0dd73cd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/colossal_trunk_quarter.glb",
+          "bytes": 16228,
+          "sha256": "76c85222153c252be6bee2f8cc17f5572f989e910121e43993f0d8f09202f568",
+          "git_blob_sha": "7792e296fe5b1ec2f19829d7f94c436d17634ac6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/column_broken.glb",
+          "bytes": 5920,
+          "sha256": "97a062317f5b968938d4af7473f3b0568a742835e24754af78978eaf536d7cb1",
+          "git_blob_sha": "03f24143ff2d02c8cb9f5fa60479aaf3994b0651"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/column_fluted.glb",
+          "bytes": 15228,
+          "sha256": "1b051ae9b563202900638d91efeb8d21690254bf37b42489d641a5586d76f1aa",
+          "git_blob_sha": "dfab9ffd1bcaafdbbf95b5f740b899b13f65f91c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/column_round.glb",
+          "bytes": 5904,
+          "sha256": "6bd174f4339a333428a0dfc25b7c0b5a1fe522adc3f27dba04fe23501f5dc9e7",
+          "git_blob_sha": "2ec9de44dc741d408a3380c6edddf3ddbbc07646"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/column_square.glb",
+          "bytes": 4924,
+          "sha256": "2633ba10001836b49977e53cb0a54892a75c21f75ddaf1dbd3c0b1c915c365d2",
+          "git_blob_sha": "f46cf1013bbc1a9b56d5678bfb84162b229a0b52"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/coral_branch.glb",
+          "bytes": 14304,
+          "sha256": "1c7ac4a436884b0a5a32beaddf4bcf1ed4fa228f5021e71e8c9ccf048f33a48f",
+          "git_blob_sha": "3aba5240c90cdcd4cd39745f2eac296e47fd2c46"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/coral_shelf_cluster.glb",
+          "bytes": 16600,
+          "sha256": "63136507e0fdaca925fc49ac574ae9183fdc0298a7bedee057cc187a114f1497",
+          "git_blob_sha": "c6dc0ef4e766ec4cc369f656ec2450ff8bf5e21f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/crag_cluster.glb",
+          "bytes": 4036,
+          "sha256": "0beda1ab8f36460fe9a0c75cfcab64aa34fc0fd63f59d69d8f49f09ceba5caa1",
+          "git_blob_sha": "ae042e169598f50ea2c0bad1b2e8f63cd9733fb4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/crate.glb",
+          "bytes": 6672,
+          "sha256": "e0c634fcd43ee9d8b8d25ef85d0676024fa838dbfaf221176ab84a4c96d75ace",
+          "git_blob_sha": "7dc7c34c1590d638ce2f3ab20627af258dbbdbe2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/crystal_cluster.glb",
+          "bytes": 9920,
+          "sha256": "731aed6f1e9a5e16fa14486948cef1e4795b2d4df5f9530fe893c5ce6e883aee",
+          "git_blob_sha": "a5201f3c9721a183d2d4c1983862c6a7864c49ef"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/crystal_floor_2m.glb",
+          "bytes": 7524,
+          "sha256": "6ff759a0b2ee494800b8bc13b818d0518f3d65e38a8b3e7be7092326f6db5957",
+          "git_blob_sha": "124ac8f0f29077179027ed7d672ba115bc5212a8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/crystal_obelisk.glb",
+          "bytes": 3596,
+          "sha256": "f405d5d82c9101151cbe7ee1203c150f0e7e6044b09300b11dbd8b2f61f14a83",
+          "git_blob_sha": "5928938f3bf9dd162171e261ec1ee182a9f42bd9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/crystal_pointed_arch.glb",
+          "bytes": 8524,
+          "sha256": "e737c2f7e0171abc49ffb4c85732bef9bebd60a6817f6a06a39f24205eced688",
+          "git_blob_sha": "ea8c28c23ab3c65354707ead29b37e110ef3b263"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/crystal_shard_small.glb",
+          "bytes": 3624,
+          "sha256": "432dd0c1d447c3ca3a2c6644af772bb32445dc319363077f79ab73fb7a6d32ea",
+          "git_blob_sha": "3646ba29b6d8c3c748aaf1cc8fade022abed7312"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/crystal_shard_tall.glb",
+          "bytes": 3604,
+          "sha256": "5b2dc995e659d32e5e31ed4758b8521da7b1cfa0bdab80e14c5e0f1db3211c3d",
+          "git_blob_sha": "0a0fe5b735d78549701266c4223e943696a4ef3b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/crystal_wall_ribs.glb",
+          "bytes": 15224,
+          "sha256": "1421ccd7aead5dfb0496c76ff769e4b21f2ab45635d0b1262e984e7e0796dab2",
+          "git_blob_sha": "8841d16eaea159479a30a903473f6dce629c9ceb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/culvert_vault_2m.glb",
+          "bytes": 13156,
+          "sha256": "fab41f242ea0e7c766d6fb5587c4c1be41621648b52fd80a23f524a4cab70e6e",
+          "git_blob_sha": "f8b8c5bddf2b3291de27ae178dbb4e7c31cbc030"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/dead_branch_tree.glb",
+          "bytes": 9644,
+          "sha256": "66460c885b0be8320c8ab7cc332abe29a197e12275a05f547ed1123847780270",
+          "git_blob_sha": "856c0fa86b3cea8430d5d274cb5721329f359184"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/desert_cactus.glb",
+          "bytes": 9184,
+          "sha256": "32afad69a0c1f2147c4b92110bd672bb9eaa0cd96f6b04f013b0d960242a1fb1",
+          "git_blob_sha": "e2bcb6398b0eac777ef6e69e21ad33dc6e59d319"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/door_leaf_plank_1p36.glb",
+          "bytes": 6664,
+          "sha256": "6e44de5f3c79fedda9fc0c8f3f9038996cb05f9dad664e30a302f1d2f04a202b",
+          "git_blob_sha": "9dc9e1fb4c47661ff6417a734918050e0709f7d8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/dry_grass_tuft.glb",
+          "bytes": 12164,
+          "sha256": "344e6cf95748b6fb0fcafb8eb4d0746099549f68074ae4fbb038880528a3eff5",
+          "git_blob_sha": "3665c07a6cb5c0f06e38317471bd7d608ea7f92c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/fallen_log_2m.glb",
+          "bytes": 9624,
+          "sha256": "1b97f0bd203087a4dc216b6bdddc46603ad4183c739e0b4a222294cfd086bc1d",
+          "git_blob_sha": "8bb71a4750f5a0b2bbe2a31947df82247cf598c0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/fern_clump.glb",
+          "bytes": 48200,
+          "sha256": "0baca387fc25c5f66b487a117feaed2b6d6369aeab7f40a5f7ae64dc771b92b6",
+          "git_blob_sha": "ee43e481940cf04bc0a4657b8920104704d4b8e5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/floor_cracked_2m.glb",
+          "bytes": 5824,
+          "sha256": "59699be61cd50ed87f822f2171172c830c8214bd7343e0dcdc9d07a1a552fee1",
+          "git_blob_sha": "ee0f4ca55cd24fb6c7140f47a573259cd370672c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/floor_grate_2m.glb",
+          "bytes": 14012,
+          "sha256": "544e01aa3f8efab5a2b68eb2ac3e7c506861978585d6a2f50e57aa50b93221b0",
+          "git_blob_sha": "e0a444daaa80f91468db63eefdc5ba0f9d9d36b4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/floor_inset_2m.glb",
+          "bytes": 6608,
+          "sha256": "c58885cdbb8fbeaa1aa337044a4ba42f29df0a0ee5da128d071e749b2c20d643",
+          "git_blob_sha": "95bd6d574dc52cf75905a9a0b19a443be4bf0c9b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/floor_pavers_2m.glb",
+          "bytes": 14908,
+          "sha256": "a1af0521db4fa36ab9c87b44df89ac4a53c4237f5eb22d233455a87b40f85a82",
+          "git_blob_sha": "0c2808316b1822e810de290cea66dc5d3665c1f0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/floor_plain_2m.glb",
+          "bytes": 2232,
+          "sha256": "5cf03c887f92d1b91188785ed4381b396b105dcd684762b822491f714db24a61",
+          "git_blob_sha": "37c65b3294e378a41902155776fe5096b6f62886"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/forge_hearth.glb",
+          "bytes": 8760,
+          "sha256": "0691f8f15a6e28bb57e4656cd4d8b602ca5e81e88f6e0c0e6ecb720245286dc5",
+          "git_blob_sha": "65be16bcf3279b3a4746c8ad0bc228aacbf8591b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/foundry_crucible.glb",
+          "bytes": 7696,
+          "sha256": "2696802609e5a68b4fe51a4833716495d2fee958c3d99d131443f8febb32d242",
+          "git_blob_sha": "d08ea9f9ad801b17330c85af6f59c6fab39a18ba"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/fountain_base.glb",
+          "bytes": 9488,
+          "sha256": "1c915114fb5cbcf181e6eb95a8a201e0ec67c93710d457ee2827eb3eb20732bd",
+          "git_blob_sha": "594f93e22cf7c1c6d88976fc82c90c762b0b8cbb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/gate_leaf_barred.glb",
+          "bytes": 17284,
+          "sha256": "56544548b1d0edb0610ad1acde015d4a760f9ec3b08fb37fcbd4cbc88b649ce9",
+          "git_blob_sha": "173467f7f4ff3daf09cee0d98092ab34380151df"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/gear_10tooth.glb",
+          "bytes": 20352,
+          "sha256": "fa67ac81fc8e8ae28d62049e1f50ea305344869e4220c8efbebd7a06b3b373ec",
+          "git_blob_sha": "205b7d432a4dd476717974b185355e0f82499636"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/gear_16tooth.glb",
+          "bytes": 29944,
+          "sha256": "75729b4b5d596a3134b6acf54f5efceeb96273a19f4816b06750dbf232e2c288",
+          "git_blob_sha": "d1cd515b824f171611c89c347f0277f641b0e476"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/gear_machine_pair.glb",
+          "bytes": 44492,
+          "sha256": "c07e5402fc8163a5865b78a0e59af116f8d0b494a1574168b738e11c04de164f",
+          "git_blob_sha": "bdbfcc3f4382e2dbc447db6068e95bab85cc9662"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/grass_clump.glb",
+          "bytes": 10520,
+          "sha256": "d3ef25ce4ca8c238655ae3511198275e576808b00b48b89dd21f6ccec6261846",
+          "git_blob_sha": "1ccf8929a144a340e74500f3ff874b5b4b0fb3d5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/industrial_ladder_3m.glb",
+          "bytes": 17824,
+          "sha256": "4b91145b1b82073e60f00e3d70eb08f46f196cc04a720e0f86ed3d1de3852179",
+          "git_blob_sha": "a54c4ecc184dd6919276888caaf7bb78e66b1995"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/inn_bar_counter_2m.glb",
+          "bytes": 4144,
+          "sha256": "452c37b7c1d3d8379cb0cd1940f9b54e3051ca1e2a4cf60533f7862165debe5c",
+          "git_blob_sha": "97b3bb340b77e343a1bc0a720753dd48b1c299a8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/inn_bed_single.glb",
+          "bytes": 5260,
+          "sha256": "99da406b600eea7886d945c431b510c691a7c57d3702ee2ed22124f241696f49",
+          "git_blob_sha": "a6c0b1c8772b223e666f68e8debd1c1a89513062"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/inn_bench.glb",
+          "bytes": 3956,
+          "sha256": "e8785e62a982fa6de3023a720c076678f18b6d474597cb9b5d6250fff472431b",
+          "git_blob_sha": "1bf903d796a512917d9e9b5000ae9b3832d22360"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/inn_table.glb",
+          "bytes": 5656,
+          "sha256": "dbfd2900b41fe4c25558ea1a8220384dc6cb67213329021502ad9aee68e5d212",
+          "git_blob_sha": "91d24e60f244582ce5fefeeb3d0f75e658424f0f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/landing_2m.glb",
+          "bytes": 2224,
+          "sha256": "5ab210a2f3eaf5aad1b54c9cfa6db5c7e879de840f73580ecaa693b1ccf22b57",
+          "git_blob_sha": "e1600d692ebee934b6dab53d7daee80bf0c53010"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/lantern_box.glb",
+          "bytes": 5404,
+          "sha256": "48a7e64b930fed11b4c90ba1d9a35c6ace9a891f6aa77fc8e3b2cf2ab6d94e69",
+          "git_blob_sha": "4399fc66d308aaf78eb900999da88ffe07dafd28"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/library_book_row.glb",
+          "bytes": 7528,
+          "sha256": "f842b135badb73a9096c719decb672ca8d86e96056068a7015e3f05ba0318988",
+          "git_blob_sha": "a9a460fceba58d8bee0118ba9ca559c198bb71bf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/machine_console.glb",
+          "bytes": 6680,
+          "sha256": "e6b1912366c50beb8691cf3c6a4b28ecbf906513c8f8c49013d3c15ed2213d17",
+          "git_blob_sha": "91d01ab865066bffa7d67ea639047ccf85a621b6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/machine_doorframe.glb",
+          "bytes": 8204,
+          "sha256": "8b3ccbdb610eae434126ffe010b0c27c45a2ae58cd43f6816b7145eade6b62e6",
+          "git_blob_sha": "1a9fc0308cf2663282de4aefa54517e369b8bc73"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/machine_wall_bulkhead.glb",
+          "bytes": 10180,
+          "sha256": "7cde4287122f926037a7594dbd376a8e28fe2d7129ba8edeca87f35ecc19166e",
+          "git_blob_sha": "7a4a0f01d69e2d6738be661ca1eed2457f0e4a2b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/machine_wall_panel.glb",
+          "bytes": 7896,
+          "sha256": "0137705d6ca5d34e8ce4951e8e483a7b7099c9f615b8a9924f0dee290cbece94",
+          "git_blob_sha": "87f8dda0a8968fc4a7eae44e6bcd8e9bd7be1387"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/machine_wall_ribbed.glb",
+          "bytes": 13600,
+          "sha256": "022954dcabfd7010d285368d414c32b427145ed4d9225e2818fdd9a3a90b3dfc",
+          "git_blob_sha": "98d29226af201c96affbe5ea76f5cc85bfa6aabc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_buttress.glb",
+          "bytes": 4068,
+          "sha256": "58a08badda81f2cc8bc0a2abeb113d0ca88b90c86c0b9955dddb76799f42f655",
+          "git_blob_sha": "83f187b34c1d45516130ce9acfabd514df439da5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_capital_bracket.glb",
+          "bytes": 5232,
+          "sha256": "2fc48b9cb63ccb1fc758480192bacc5aeada3914b938566b463fbd8b92238d06",
+          "git_blob_sha": "a55eba84434ecef086fcf058968bcaab52096f3a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_corner_inner.glb",
+          "bytes": 3380,
+          "sha256": "2ff8e1e2d9ebeb7585c9176078733ed69441087b23cf87362714edddb36c149b",
+          "git_blob_sha": "a8c7afe6b07111e281b50662d4dea3399fdf6524"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_corner_outer.glb",
+          "bytes": 4940,
+          "sha256": "26f6c245f75d8f2360ad3a0313518d4b055995611c1be827f63e17fa180e6dea",
+          "git_blob_sha": "1f22b7c8f52073200c5e832e2b94c26c2be3ba14"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_crenellation_2m.glb",
+          "bytes": 6928,
+          "sha256": "25a0b1326838643bdf890ce73b53828b25bd6374a1fd247b4174154dc33f78d6",
+          "git_blob_sha": "9fbc63cdbf31339ba04f1a35926bcc928741ad8f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_doorway_pointed.glb",
+          "bytes": 22628,
+          "sha256": "2f97dd98f45727b762febdff6d0fc1555d904d694075af998b1674e263c06d75",
+          "git_blob_sha": "5e28d6bb90f471923fc0842d4360cb1db478cf1b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_doorway_round.glb",
+          "bytes": 29344,
+          "sha256": "ccef54815103841b63fc057c76156d5e6628e52678207ca068a18580507b9dce",
+          "git_blob_sha": "d933860010937d14d5794caf0577cbfb06d62bfa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_inset_panel.glb",
+          "bytes": 5996,
+          "sha256": "6b31daf9e5436d88c0626a716570d240f98f061c9820c652e805d3eb61effb3f",
+          "git_blob_sha": "546728e1b74d996cfda94dc149e726c4ccc2b774"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_parapet_2m.glb",
+          "bytes": 4108,
+          "sha256": "06a6414e0b52091f8e9675f16c76e83de49ec2cf29e0abd47312fe4f9e929eb3",
+          "git_blob_sha": "d8dfce248004c4117a00c19b3fb8725b8461d8ce"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_wall_2x2.glb",
+          "bytes": 2252,
+          "sha256": "50a69f7e521bd90fa90c8976f95d3e98624fb5e155f704dc5751d2e4f565bcae",
+          "git_blob_sha": "743ec9e15bce4b499b667937c60b5b232c81087a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_wall_2x4.glb",
+          "bytes": 2252,
+          "sha256": "a63bb46192325810610a1ce6b78d08e64f49387bbbaca5a320e9205d5a32cf21",
+          "git_blob_sha": "5497e03f7f25aac6f82933bd953f365b2e11a3f2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_wall_ashlar.glb",
+          "bytes": 19076,
+          "sha256": "9ba46b47024184aa7abc0cf704c1ee6a506d6d5dcefc17d87ed1659dc2ed5d34",
+          "git_blob_sha": "c9f25cde793add18956170b07c834beb29515db1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/masonry_wall_broken.glb",
+          "bytes": 6484,
+          "sha256": "1270ed6b823c761a094cf5a83d6ac8eeb2f66b10c34e5209dfee14151f690279",
+          "git_blob_sha": "a10df6b454d324aca5f33abf7079598726c62532"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/mushroom_cluster.glb",
+          "bytes": 21048,
+          "sha256": "0113eec575807f378d32b46b12d42428d6eb9e12686e355cbf47f02febf3680c",
+          "git_blob_sha": "147b003c1113549ae3a1bf89761f44bd465fceca"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/mushroom_small.glb",
+          "bytes": 9504,
+          "sha256": "2cf378f008dfd4add126d8177d299cd5f5dfd2b1d0cd2592bac3db129f45729f",
+          "git_blob_sha": "49cf63ec8bda76ea01bf4788ab59d88fd9421745"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/mushroom_tall.glb",
+          "bytes": 9476,
+          "sha256": "ecbeb059f22572f895468d6ca29c2d58ad83549567dddeb14b6120dfb5f0420f",
+          "git_blob_sha": "23f62c85646d40fee8ce868760b4b2cf80e01d56"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/organic_pod.glb",
+          "bytes": 7100,
+          "sha256": "99caa44c99f609a972ac1f172eb872d590afba883b9ff1bf5d404dbb2fe2d90f",
+          "git_blob_sha": "0358244c2708a18e4a1e58c3f975fe723f50a0e0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/palm_tree.glb",
+          "bytes": 10044,
+          "sha256": "873010c35c083224b890059d52b39a1460039108633344f07659ea2cbb9cc267",
+          "git_blob_sha": "ba32cf86af5dcd5e542fcc483f6b3a67f9cd0c72"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/pipe_elbow_90.glb",
+          "bytes": 15772,
+          "sha256": "d22bea635f68fbe692256572049298c12cc9444fd08b226b5cbbc7fc3f6fc930",
+          "git_blob_sha": "60e9d871e4256cc6477c63eb9d0a20c7a8a86b42"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/pipe_straight_12cm.glb",
+          "bytes": 8968,
+          "sha256": "3653beb76dee58a8604cf3ef7d7eea6fb65a8e8f85eac60912a5418388cc612c",
+          "git_blob_sha": "7618d8bd1a82cf93ba70a65f0101f8bc9b389910"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/pipe_straight_24cm.glb",
+          "bytes": 8968,
+          "sha256": "ef4dac82ec1e7a055fd40cde1bb7f8865edf94395f22008933ed2df7c9873406",
+          "git_blob_sha": "b1e148b12273c7ec26186d7b4bed9c9f137cc128"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/pipe_tee_2m.glb",
+          "bytes": 6276,
+          "sha256": "aedacb50d6dda0cb645ba6f9e5d1ee21b30babd7d36627fa1f5416fbeb233442",
+          "git_blob_sha": "e7697a4360cff01b6660a7398bdaa41a1cf90f92"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/pipe_valve_riser.glb",
+          "bytes": 19368,
+          "sha256": "208b49949d2b03552f569d8efc7e1db2003cf8f1a110fa48c88dc21eab299e1d",
+          "git_blob_sha": "4fac36743fff69622b1d98c9b1108643b9573570"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/railing_iron_2m.glb",
+          "bytes": 13480,
+          "sha256": "f0c6b91365aa387664a912af5869e0ce0628c7150cbc974272c9811744cd6b09",
+          "git_blob_sha": "e2767358e2f57c27d2ce4418234e1fae97998df4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/railing_timber_2m.glb",
+          "bytes": 8868,
+          "sha256": "efa566e56df65f75fb866c21ac32beb0e56badef41ad0b64068e5d0eb86bdc28",
+          "git_blob_sha": "5438085567b3536b980483d8b7f623e8286c90e7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/raised_walkway_2m.glb",
+          "bytes": 4880,
+          "sha256": "c4d2882276f7b8a2614b29909f2ced6abc6bdbd0df296d928babf0b4a74ac1e9",
+          "git_blob_sha": "138180637fc690154360e3df2c0efabb71958e60"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/ramp_rise1_run2.glb",
+          "bytes": 2236,
+          "sha256": "409314bf30e7ae996cebe2bf88d199e6a2513c36eb22fb3bd1f52791def2e6c1",
+          "git_blob_sha": "3be5679a23080142b0241b1277f239b1b4f2e45f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/rock_slab.glb",
+          "bytes": 4448,
+          "sha256": "97e7dc4d62c225e5d700a80df660df8a5884c8693fcf481ddd954357f8ca403a",
+          "git_blob_sha": "fe587b40b455a6ee12febc931d2a2146148d78ce"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/roof_pitch_left_2m.glb",
+          "bytes": 2268,
+          "sha256": "1df8b8f69719653473e5b4416663e10d635a869f4ffb80ff66363c2a9af6cbd0",
+          "git_blob_sha": "c23c05ee4605334c275d577d64b23fa3ea6cc437"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/roof_pitch_right_2m.glb",
+          "bytes": 2288,
+          "sha256": "21d8185aeaa159535e614c7f81da57fb414595302e34022eac657dcfd45de125",
+          "git_blob_sha": "b5de08c099db58641c0411e7ae58d0156159685d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/root_arch_2m.glb",
+          "bytes": 13484,
+          "sha256": "dbbb543a245d799728939c5c29412e2c8c9959ade3412bf3c346bdb9f9724f0e",
+          "git_blob_sha": "421eff7a27fda56f5d0e379bcd7c9be01fe3cd0e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/root_corner_2m.glb",
+          "bytes": 6040,
+          "sha256": "b7c2cd7de5844b2c6370b398d21a58921ba5ac85955fe0e891e34b29317efa43",
+          "git_blob_sha": "7137e1d36917689556e720d23f31eeb8ef10570b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/root_straight_2m.glb",
+          "bytes": 7532,
+          "sha256": "4ce3f18abe16e07f07c89c3a0d78544380ec28e05710c80a730d5f7d12dce32b",
+          "git_blob_sha": "32f08e4a8adeeb859ab3671f40cbd5a64774ae52"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/rope_bridge_2x4.glb",
+          "bytes": 49536,
+          "sha256": "f51b9c7ad1b6928781849ec4e904d9cd8feaad0d2c664f99503a648ad3905587",
+          "git_blob_sha": "bb786468c7e044d39aece34942c52adbe9343538"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/rubble_scatter.glb",
+          "bytes": 22032,
+          "sha256": "d2be826576e124326806971a175d5f3fe90c09760ce20153b9177e5300c0510f",
+          "git_blob_sha": "49e83284d22240337c3948e5e3e3e36683d35fe9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/sarcophagus.glb",
+          "bytes": 4100,
+          "sha256": "e80ab6f372f138aec0f1e2a94b1fef4f5ebe6f95cd2ac26381b2c61461345c01",
+          "git_blob_sha": "bf0d4c2dec4f59ae3cd4ed836b88481feb89a80d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/shelf_bookcase.glb",
+          "bytes": 5796,
+          "sha256": "79759a1559d0574b71c994b9712cb1e7736017ebd24971bf59d0b2ef6fb47d40",
+          "git_blob_sha": "300d1c5a0456e25d5dcd0bfb0a8952e1119d0ae6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/shelf_fungus.glb",
+          "bytes": 6572,
+          "sha256": "4107b99177a90f2f5e9ef9c50a68b0b4f987f17c129cf6b8f77fe282abf3b19b",
+          "git_blob_sha": "3d8462100b3aad915ef41d499de5cf36dee3dc21"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/shore_bank_2m.glb",
+          "bytes": 3932,
+          "sha256": "17975d1e075fd264bade7c3018fe61e5790bc55551a124edf5bd48c7ced03945",
+          "git_blob_sha": "9f69aa05c59e425f5ab1734cc10855d9febb0f8e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/smith_anvil.glb",
+          "bytes": 4780,
+          "sha256": "8ff9b3aa8befbae74d6e128fa6f7bcce8475c9a29bf2f4bec0ca9ee1676be3e3",
+          "git_blob_sha": "e518e12797d1b43f882f43e45de6a0e7dbed09ef"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/stairs_rise1_run2.glb",
+          "bytes": 4772,
+          "sha256": "4934763fc1b56b44231ace842979d71422ad5ecbf3b879cb36e5a4e22ec705ca",
+          "git_blob_sha": "2debb8cfb2ae03da7f86562357aa2c80cb78a00f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/stairs_rise2_run4.glb",
+          "bytes": 8116,
+          "sha256": "8a5518b1a46022e5832e19d38e5fea6038764efd1df2cf43025d00e98df3c600",
+          "git_blob_sha": "aa87115a400878c2670640b19a583befa06eb569"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/stalactite.glb",
+          "bytes": 2504,
+          "sha256": "33c75ae4a92c86d33ef6f47eee401b2f94be758264a6e813e1aaf4d28a759d18",
+          "git_blob_sha": "361f8a52ba949c023df1153cf379f57b9ebeccc3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/stalagmite.glb",
+          "bytes": 2500,
+          "sha256": "54f0a510e4bf6cc3dc63a1e9d3cf9d046170d70248242dec04e7a91da813ab5b",
+          "git_blob_sha": "245f83f78a0bcb539acf06d0e605ff98aac657b4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/standing_stone.glb",
+          "bytes": 6072,
+          "sha256": "7cfab2ae60203ba1752375507ea9e59931c423f1cb2523429520d208e84c4bfb",
+          "git_blob_sha": "7b93a944169c947dab154fb052b9e598f6a8728e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/sunflower_stem.glb",
+          "bytes": 16240,
+          "sha256": "c64d0aa9a0d79679112f46c67f1dd3931fca6aacc74a6ae7a811105e1c5e4543",
+          "git_blob_sha": "025934c16fa3554bf75c4d0d1510fdb3149ed266"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/tank_vertical.glb",
+          "bytes": 8516,
+          "sha256": "ceb4ccbc7b599de332dc122e8e9a514385a70fc6fa3cd08021d49bd6eb619b09",
+          "git_blob_sha": "78c91a0b2f9724c62160ebbd40d10ae2275c226c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/tatami_mat_1x2.glb",
+          "bytes": 4876,
+          "sha256": "79930db2202410357ff17c5c5a40e29dca4af1110605b82309105b5df33761b4",
+          "git_blob_sha": "7fbb8c5f9f3d96a13bca4ce753844bd40fbd958f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/textile_banner_pointed.glb",
+          "bytes": 4852,
+          "sha256": "996959f52f8f138a3dfa10ef9ca6d4f25406c5864c27775c61e6a287c2a382ec",
+          "git_blob_sha": "0ec0b428933b8c3d30ccf0caefc42618d5d9d8f1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/textile_canopy_2m.glb",
+          "bytes": 9268,
+          "sha256": "e031a005498e8c25772d3c69e4850255df5d9f843d96305d9b5fed5ea529fe5a",
+          "git_blob_sha": "6395a4b5907ba5ab025e951625c0aee0b4559eba"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/textile_curtain_2m.glb",
+          "bytes": 84412,
+          "sha256": "af4c437ae6e648278d8a0380b39b2507a9258a65063da26e1faff2903f88179f",
+          "git_blob_sha": "e01eaf2b6af1d2d0dbba582642bd7854007d2390"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/textile_cushion.glb",
+          "bytes": 2292,
+          "sha256": "d97e7b02539e6ad2c032175d8033fa579a085d29d888aafdb39d8c4f86d21e8f",
+          "git_blob_sha": "7d6659a1bcab62afb1b6837d4d8c7439391d23c5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/textile_rug_2m.glb",
+          "bytes": 7684,
+          "sha256": "c94556f0e5bb49c512860022fb8505d9211650dc4f96b3a3b5a081e642155b8c",
+          "git_blob_sha": "4c8d2972f71c382be46a95e66c134d3578d1e01b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/timber_beam_2m.glb",
+          "bytes": 2272,
+          "sha256": "f875a19cb80cc9e4028a57db271faa870ceae0c0f5e8f9754496cc3cf42b42a2",
+          "git_blob_sha": "a8c38e41dca5f1a8958690b52a7ed0786fa987d7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/timber_gable_2m.glb",
+          "bytes": 5984,
+          "sha256": "da2a9dcf9adb050a53a64da00a28d26eb72911c4defc10a1af8187fa833d3eb7",
+          "git_blob_sha": "4ff406783ecd0f595ca6107a9a55a1fb1fab7152"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/timber_post.glb",
+          "bytes": 3980,
+          "sha256": "f30b7490469dd31dedc3d66bb9289ae6465880d866abdb41e144268181a64cb8",
+          "git_blob_sha": "88a41ffc341b99d1ed12bfc65a07b0633467d824"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/timber_post_beam_gate.glb",
+          "bytes": 6644,
+          "sha256": "e20c820d10bc08abe23285e14de755febb65ff4864eeca92a7114cbec324c182",
+          "git_blob_sha": "08c4ee05586b00e71620d538bfac7fce75a8da37"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/timber_short_post.glb",
+          "bytes": 4008,
+          "sha256": "6a04e9acce106e46167677aacc58f34a5eb44b98d9df3763e8f09add09995fc3",
+          "git_blob_sha": "6daa43006107fc1232ba1eb9e9b24758cc3e2c52"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/timber_wall_lattice.glb",
+          "bytes": 24124,
+          "sha256": "a990bb7404c28e5648a0f311024aacd9456c83380a71a7a440cb95d06803799e",
+          "git_blob_sha": "332bc797a1241c05bb7328046b6ff486300a2d27"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/timber_wall_paper.glb",
+          "bytes": 25636,
+          "sha256": "40f20f98a3f4c46c12616c8dcc251dcfb3ad4cd66848c78eba44ef8ca59c0998",
+          "git_blob_sha": "f66f2dc7103a90e6cabd6c5c804da106210501ba"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/timber_wall_plank.glb",
+          "bytes": 15556,
+          "sha256": "4da108e137c650fe0b736d4ea175e8603b054f5de41d64946c0498b73e9e8fd4",
+          "git_blob_sha": "a4c0b4355576f7b343f43ce76db583c192d5cb96"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/timber_wall_plaster.glb",
+          "bytes": 11356,
+          "sha256": "aa6fda5af373bb9911664c913637c1a44fd6a864fba5fd3293ae27155a180838",
+          "git_blob_sha": "aa725dc4d59612e6b64355330d8a0ca924277011"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/tissue_rib_arch.glb",
+          "bytes": 15172,
+          "sha256": "fe21c792e192c5f5a992a48b0e9f58e287462faaa454bd18bb3dca73c7b15f7f",
+          "git_blob_sha": "967b05b713a5509290dd5abb7e3eb28de2679fae"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/tissue_wall_2m.glb",
+          "bytes": 25700,
+          "sha256": "2c82046ccb36df4894e8ef67765a48f50b5056b6b0233dd362e41b40681799ce",
+          "git_blob_sha": "e1c6a7451928148c204d32be3d509276c13a417f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/toy_block_arch.glb",
+          "bytes": 9800,
+          "sha256": "9b3a4f5b4a037676148f5723d7e3d9a4441e47e043cc935ccb74beaaaee4ea9d",
+          "git_blob_sha": "fb5cbadb83148e97ea171bcb2feb168fe9632d48"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/toy_block_cube.glb",
+          "bytes": 2212,
+          "sha256": "77d3d14886102bbc379f7afd6c41291e0612b424c0e7753d5b2024da7622b7fe",
+          "git_blob_sha": "8fa6ea2aaf6f650ee884d2a5edf5f23b1317e169"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/toy_block_wedge.glb",
+          "bytes": 2028,
+          "sha256": "91b648ea2aebe01a26e725c45102439e9ef272d2b2940b32bf5b30e208d2a24b",
+          "git_blob_sha": "09ebb3476172d016a74cf0a4aa3a429880f5c482"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/tree_trunk.glb",
+          "bytes": 16208,
+          "sha256": "426f85bd440280e3e547577e9a7c337784f7ef25798d906dd847d8b6d2271d55",
+          "git_blob_sha": "3110f1fbbcad8946fe074b8300958a07e2606b39"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/urn.glb",
+          "bytes": 10044,
+          "sha256": "4ca0a266bdda2f72940c0c1b50b91c0f2a9874d8c63d7f879da58fc5e265bffb",
+          "git_blob_sha": "c7109f90c4e66de1973e289686b3bbe00a843692"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/vent_louver.glb",
+          "bytes": 13388,
+          "sha256": "54f880e82ce898d168da38d889adba32a141ea1418d97a60fed0775481a47271",
+          "git_blob_sha": "42e30add63b34c5b4d25020734f595cd03251f60"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/wall_shrine_niche.glb",
+          "bytes": 12048,
+          "sha256": "5881c639e0a3b6db1de77e1fe78747fcbc612de5b83299b6e11e7fa1d9c83114",
+          "git_blob_sha": "cebdcb1fb28ea4c2438ba6aa77ebb661424cd583"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/wall_window_open_2m.glb",
+          "bytes": 9748,
+          "sha256": "15431d8a6c11308a1ecbfc9b90ff01c054563699385f06f421fbad19ac4dd526",
+          "git_blob_sha": "79da7ebbef644045778e63865ea1e2e93bf47a10"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/water_channel_2m.glb",
+          "bytes": 4888,
+          "sha256": "97bb1ed5fe49ba94b30df33ba063db06db34229fe48dd0f93d60056438cd086b",
+          "git_blob_sha": "f0ca6e15d164efc747cc20d77af4f3f1b10cb399"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/water_surface_2m.glb",
+          "bytes": 2232,
+          "sha256": "86839334cb064284190b5b902f80e672439d029d2a3f412a108518b43d10a4cf",
+          "git_blob_sha": "8e75df33d7f970ea861c3f63f45b9d9f9539773f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/weapon_display_rack.glb",
+          "bytes": 10896,
+          "sha256": "383cdbc4c6d127d4d0d0da9c55ee9659a7d0d35942a52342c495c84a4f2dc17a",
+          "git_blob_sha": "ce5bcaab0f7e73a2e71ad432d231eea3aef6069f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/meshes/wheat_seedhead_cluster.glb",
+          "bytes": 28400,
+          "sha256": "21fda6037e2d140b31797d0c1a0262796b29c7dffcdd4cdd9b70f5faa483978b",
+          "git_blob_sha": "97d0cf35bf21c20cc7b85c5b59c75657e442830e"
+        }
+      ]
+    },
+    {
+      "id": "dreamscape-common-002",
+      "bytes": 1807498,
+      "sha256": "c1c006aa030d160a992b81543023d1dcb214ceed30de3787bcc0a460e431ff63",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/dreamscape-common.volume-002.zip",
+          "bytes": 1807498,
+          "sha256": "c1c006aa030d160a992b81543023d1dcb214ceed30de3787bcc0a460e431ff63",
+          "git_blob_sha": "5a7137d2b10e3f6fdbe0c8a06139987dfe601810"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/previews/all_150_meshes_contact.png",
+          "bytes": 1740350,
+          "sha256": "323c37e9e1a6872e3847ca3fff1058dd50c9ddbd226a8e1a10eddffe15fd21cf",
+          "git_blob_sha": "66c5c8828f18e5e3f6a0fa02e421a09c2691d277"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/qa/VISUAL_REVIEW.md",
+          "bytes": 2947,
+          "sha256": "eb606ef37dfcf9565f13223ee55eefcf72a5c11046ef6760c18247accdcadfdd",
+          "git_blob_sha": "edd9fcec7c677c26586076563bd15cdf80e093b6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/qa/deliverable-validation.json",
+          "bytes": 129950,
+          "sha256": "82a1db9d0429492bc9c4468142310dfef12650dcefedc58d36102ef74994acac",
+          "git_blob_sha": "49d9f57533f73195cf797e27d23a8e947d63051d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/qa/geometry-validation.json",
+          "bytes": 56501,
+          "sha256": "daef5a8293335b9c8853bc5cc0f53f663f5dd1e07ec19dbace0e6042238d22c1",
+          "git_blob_sha": "919f34089a246a5214a6ba520b1ab753ffb91c32"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/qa/reproducibility.json",
+          "bytes": 26510,
+          "sha256": "3a7642c81abf1de1c3c68d829263c909f4c6344308a6688cc7868b587e135e94",
+          "git_blob_sha": "1957b7ce317bd41d3b4c1a35fbad03c9b417faa8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/src/generate_geometry.py",
+          "bytes": 63844,
+          "sha256": "5c3845d797e1d1e223d277dbdffec6248565a85cb075e877a1096806624c5b81",
+          "git_blob_sha": "c5c805edc85df71ac7ea1ef26b5a0fea79f4a2a2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/src/make_contact_sheets.py",
+          "bytes": 3072,
+          "sha256": "4adb84a2efd873e1ba48d513bbe8375daba8166207ba7d0b6bb927f1acb25ca9",
+          "git_blob_sha": "50bfac9462581e17f0828fea0b15d72e353dcedc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/src/render_blender.py",
+          "bytes": 4848,
+          "sha256": "f50f3e7afd390025258a7b376feca7547c345d1509fc56c25df93fad7ef608bd",
+          "git_blob_sha": "d39050c0f54cd259707414b67ef174def73ed435"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/geometry/src/validate_deliverables.py",
+          "bytes": 6278,
+          "sha256": "fbff8c98df36e45f17c8504323952b259a2c0775deb4576bd4691d8a8ac31db2",
+          "git_blob_sha": "a9f087c19e367e32852bbb705996be3a5312b05f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/spec/COLLISION_AND_IMPORT.md",
+          "bytes": 6899,
+          "sha256": "fd78db75dc56e3163ad9a97e34bf99aba58491eaa6b9a4f8a6d68c56df9d889a",
+          "git_blob_sha": "4ea03a31b58db6159ee4024e252cdf384fd6f452"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/spec/README.md",
+          "bytes": 8850,
+          "sha256": "2a6de75e8aa342db0441ea9f92ceee205e4d4046b8c656c19c8d7cc113e9e2f0",
+          "git_blob_sha": "cb70129b539f74ee6d63347e6971385cbf0a8676"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/spec/asset_contract.json",
+          "bytes": 10663,
+          "sha256": "f6f8c5cb6d9eb2f22b9dee7258fc3e62a183e1fa4c62454544d3eae3e619585c",
+          "git_blob_sha": "a9a5871e6fb1c1f3c4b26d4b49387df8dab8b2af"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/spec/geometry_manifest.schema.json",
+          "bytes": 5161,
+          "sha256": "371a699284de7c1c600cead82f8f4598147eecca205e1a7e826664ee11a5b8fe",
+          "git_blob_sha": "239afeadb171a55d71fe468f57e4fdd921d9a3c2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/spec/observed-sources/legacy_INTEGRATION_GUIDE.md",
+          "bytes": 15760,
+          "sha256": "447aa65ce5cb29dc48a68518f859a3e751d1368075f7217685542f22963c452d",
+          "git_blob_sha": "538275246934b3e248a9c9a2686bf4502aebde1a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/spec/observed-sources/legacy_module_catalog.json",
+          "bytes": 20215,
+          "sha256": "b7b8ba9388f0a741ba152052863d6dfa3fc69609c502546db0c55c9b43aec50e",
+          "git_blob_sha": "42c27cc89834ad10f8de431515a1bd4f62d8e437"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/spec/observed-sources/provenance.json",
+          "bytes": 1299,
+          "sha256": "0c956382d02996dcf929d1a62de872f66240c99bfb0b307e2ebbd2b197a71991",
+          "git_blob_sha": "8afcfb0b88ef094f000c5106ef7e800ddc95b863"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/spec/theme_manifest.schema.json",
+          "bytes": 4173,
+          "sha256": "757bc9b182838b9919bff92af0bc66bf7611827bf1fd830da04d4be763db77d1",
+          "git_blob_sha": "2c0135fc6f552525085c18b6aef1fcf7888c031f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/common/spec/validation_report.json",
+          "bytes": 828,
+          "sha256": "1911790dffa0c410d3dde7ade2a825b0cd030d8cd9a37841b6328b436c1989bf",
+          "git_blob_sha": "ecd4a7d5ad27187fdf98a4d22b3394c255662788"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/guides/ARCHITECTURAL_MATERIALS.md",
+          "bytes": 10775,
+          "sha256": "e4673a899603a3bf1a4f016f8393b25d9bc52f1c403bc2cefc5e31fa6a91723b",
+          "git_blob_sha": "b318f12aae6b73e7f6c79352fbb2f117c7092b1f"
+        }
+      ]
+    },
+    {
+      "id": "dreamscape-common-003",
+      "bytes": 2433654,
+      "sha256": "18ba1254b050e26bb5ee9dc9dcf55142cfdb02800a1ad92a0f2cf533fd3b182d",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/dreamscape-common.volume-003.zip",
+          "bytes": 2433654,
+          "sha256": "18ba1254b050e26bb5ee9dc9dcf55142cfdb02800a1ad92a0f2cf533fd3b182d",
+          "git_blob_sha": "8fb4022a479863e88768cbb3feef09058d419b4a"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/qa/architecture_overview_contact.png",
+          "bytes": 932350,
+          "sha256": "03cb8f6f240e7d84bb5f932fb06ebfcd9147f91d99929d11a3660825115022ae",
+          "git_blob_sha": "60997c7e00c6e3c3aadee66b2c5a2522f3d1e150"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/qa/landscape_overview_contact.png",
+          "bytes": 483445,
+          "sha256": "c75225e13dd6b4f3e66812c158d010141de4250125a898dcc4dfd8c2994762ff",
+          "git_blob_sha": "f3887fa547a721ea088ad133908e8b9cd8b95e0a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/qa/organic_overview_contact.png",
+          "bytes": 1022418,
+          "sha256": "0abde80b8ad03cd78c99e5bde43054e0a5d49d91f89009b67d883fa7899cbfad",
+          "git_blob_sha": "76ee48900c82e22b9efac3f0260e83eeecdfb4d2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/qa/source-restore-validation.json",
+          "bytes": 235,
+          "sha256": "6423ec5fb8e270c496a10785e4f40e9dfd0302e957a49086305fd43a34a52fc1",
+          "git_blob_sha": "3339b1dcd777664e6ccb5ce5c617660a261fea4c"
+        }
+      ]
+    },
+    {
+      "id": "dreamscape-common-004",
+      "bytes": 949696,
+      "sha256": "d3d6929b5733c993b1ead6522173203b9799ab24603ca2ae3f9f21c373d7b1d6",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/dreamscape-common.volume-004.zip",
+          "bytes": 949696,
+          "sha256": "d3d6929b5733c993b1ead6522173203b9799ab24603ca2ae3f9f21c373d7b1d6",
+          "git_blob_sha": "c5dd06ac8c349a99eceb4813f349c3ddcf6b87a1"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/qa/technical_overview_contact.png",
+          "bytes": 942647,
+          "sha256": "5d17bcaeec1a6c4bc7953a17a177bb02bdc29fe6bdd4661838076ace1e6d424f",
+          "git_blob_sha": "2a64338aee2945c6360b4f61a531fd7526df7f75"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/qa/visual-review-summary.json",
+          "bytes": 63611,
+          "sha256": "112ba49d33b0f7f6392d8e6c730cef738fd265b2e65ec7d3231765b34f6ab8b3",
+          "git_blob_sha": "c59a4eae0b853fbf11618b9c06b2cf3a6e26662b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/requirements-assets.txt",
+          "bytes": 24,
+          "sha256": "e4e4537179c790634d7f40987bc3d3336476b3805180046b50e320f370282628",
+          "git_blob_sha": "a7334041433d5fa94a8537313044f389ecd9d777"
+        }
+      ]
+    }
+  ]
+}

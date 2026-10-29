@@ -1,0 +1,20 @@
+{
+  "asset": "masonry_crenellation_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "size": [
+        2.0,
+        1.25,
+        0.3
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/masonry_crenellation_2m__GUIDE.glb"
+}

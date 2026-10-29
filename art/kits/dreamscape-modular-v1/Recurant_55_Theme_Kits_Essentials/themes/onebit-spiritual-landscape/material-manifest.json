@@ -1,0 +1,211 @@
+{
+  "schema": "recurant.material-kit.v1",
+  "theme": "onebit-spiritual-landscape",
+  "generator": "builtin image_gen",
+  "source_atlas": "art_sources/material-atlas-master.png",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "prompt": "prompts/atlas-prompt.txt",
+  "derived_processing": "Four exact atlas quadrant crops, NEAREST to 256x256, luminance threshold at 128, RGB; NEAREST 256->128.",
+  "source_palette_warning": "Original generator output may include grayscale/antialiasing despite binary prompt; preserved source is not certified 1-bit.",
+  "delivery_palette": [
+    "#000000",
+    "#FFFFFF"
+  ],
+  "palette_conversion_authority": "User explicitly requested 1bit; threshold/palette conversion enforces this requirement.",
+  "lighting_note": "Binary art is not PBR. Use unlit baseColor and nearest sampling, or a final luminance threshold. Ordinary lit shading, fog, postprocessing, antialiasing and linear filtering can introduce gray. Textures alone cannot guarantee binary rendered output.",
+  "qa_contacts": [
+    "qa/material-contact.png",
+    "qa/wall-ground-repeat-2x2.png",
+    "qa/wall-ground-repeat-3x3.png"
+  ],
+  "qa_status": "Visual QA complete: four-role contact plus actual wall/ground 2x2 and 3x3 repeats reviewed; exactly two delivery RGB colors. No seamless certification or motion QA.",
+  "materials": [
+    {
+      "role": "wall",
+      "file_256": "materials/wall_diffuse_256.png",
+      "file_128": "materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "sizes_available": [
+        256,
+        128
+      ],
+      "intended_use": "Pale weathered stone with sparse pits and short vertical hatching",
+      "map_kind": "binary baseColor / unlit color",
+      "real_height_information": false,
+      "repeat_intent": true,
+      "repeat_verified": true,
+      "seamless_certified": false,
+      "wrap_recommendation": "REPEAT",
+      "uv_recommendation": "2 metres per repeat candidate",
+      "source_crop_px": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "threshold_luminance_0_255": 128,
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 42.832,
+        "top_bottom_mae": 26.895,
+        "horizontal_internal_mae": 36.324,
+        "vertical_internal_mae": 26.973
+      },
+      "sha256": "677ec07e19c1991810db660c964cae73a207a236a1444bd020220c7d94cef4ba",
+      "low_memory_sha256": "0b3927fc3b414a83d9519b4486f86e581881f30e8bb7cf997ce4ebfe5c4de9d5",
+      "qa_note": "Actual 2x2 and 3x3 repeats visually inspected: continuous pale pitted surface, no strong hard seam; repeated vertical density clusters remain. Not mathematically seamless.",
+      "repeat_quality": "Visually reviewed repeat candidate; not pixel-edge-identical"
+    },
+    {
+      "role": "ground",
+      "file_256": "materials/ground_diffuse_256.png",
+      "file_128": "materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "sizes_available": [
+        256,
+        128
+      ],
+      "intended_use": "Pale granular stone and sand, tiny dark granules and restrained hatch clusters",
+      "map_kind": "binary baseColor / unlit color",
+      "real_height_information": false,
+      "repeat_intent": true,
+      "repeat_verified": true,
+      "seamless_certified": false,
+      "wrap_recommendation": "REPEAT",
+      "uv_recommendation": "2 metres per repeat candidate",
+      "source_crop_px": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "threshold_luminance_0_255": 128,
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 66.738,
+        "top_bottom_mae": 64.746,
+        "horizontal_internal_mae": 57.434,
+        "vertical_internal_mae": 59.348
+      },
+      "sha256": "053884e63909b98b37a95ec376e2d413fe802abfd4cf52e8b841bddcbdde2f79",
+      "low_memory_sha256": "c782eb371a3012cc09d0ab6c24568d5fbedcfdda2fef90603ef1c1466f89a244",
+      "qa_note": "Actual 2x2 and 3x3 repeats visually inspected: continuous granular field, no strong hard seam; repeated grain density patches remain. Not mathematically seamless.",
+      "repeat_quality": "Visually reviewed repeat candidate; not pixel-edge-identical"
+    },
+    {
+      "role": "structure",
+      "file_256": "materials/structure_diffuse_256.png",
+      "file_128": "materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "sizes_available": [
+        256,
+        128
+      ],
+      "intended_use": "Ancient monolith surface with bold vertical geological fractures",
+      "map_kind": "binary baseColor / unlit color",
+      "real_height_information": false,
+      "repeat_intent": false,
+      "repeat_verified": false,
+      "seamless_certified": false,
+      "wrap_recommendation": "CLAMP",
+      "uv_recommendation": "Local component UV0 0-1",
+      "source_crop_px": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "threshold_luminance_0_255": 128,
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 24.902,
+        "top_bottom_mae": 73.711,
+        "horizontal_internal_mae": 45.605,
+        "vertical_internal_mae": 25.219
+      },
+      "sha256": "b0aca3e1e2b943098dcc153d49f484db5bb1567e0b5878643bb67e69dcc45c9a",
+      "low_memory_sha256": "0bea6af987137dc9099c9ddc2d1385a07b549a99b549e12490a825eb443b8e76",
+      "qa_note": "Distinct broad vertical cracks read clearly at 256 and 128; clamp panel, no repeat claim.",
+      "repeat_quality": "Non-repeating clamp panel"
+    },
+    {
+      "role": "detail",
+      "file_256": "materials/detail_diffuse_256.png",
+      "file_128": "materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": false,
+      "size": [
+        256,
+        256
+      ],
+      "alternate_size": [
+        128,
+        128
+      ],
+      "sizes_available": [
+        256,
+        128
+      ],
+      "intended_use": "Dense dark broken engraving and stipple field with small white voids",
+      "map_kind": "binary baseColor / unlit color",
+      "real_height_information": false,
+      "repeat_intent": false,
+      "repeat_verified": false,
+      "seamless_certified": false,
+      "wrap_recommendation": "CLAMP",
+      "uv_recommendation": "Local component UV0 0-1",
+      "source_crop_px": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "threshold_luminance_0_255": 128,
+      "seam_metrics_rgb_0_255": {
+        "left_right_mae": 71.719,
+        "top_bottom_mae": 92.637,
+        "horizontal_internal_mae": 58.703,
+        "vertical_internal_mae": 65.402
+      },
+      "sha256": "432b11120259cef76eb934974c2b3bcc2782652ed791ad9fd4399853ab2ffe15",
+      "low_memory_sha256": "611320b1982a0d72536d9ea211c428dce72faa808c80e0759ab0196a7de97cec",
+      "qa_note": "Dark stipple/broken hatch field differs clearly from other roles; clamp panel, no repeat claim. Fine marks may shimmer in motion.",
+      "repeat_quality": "Non-repeating clamp panel"
+    }
+  ],
+  "runtime_integration_verified": false,
+  "pbr_maps_supplied": [],
+  "common_spec": "common/spec/asset_contract.json",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

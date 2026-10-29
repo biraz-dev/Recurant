@@ -1,0 +1,20 @@
+{
+  "asset": "rock_slab",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.063322,
+        0.115,
+        -0.078016
+      ],
+      "size": [
+        2.032474,
+        0.23,
+        1.84517
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/rock_slab__GUIDE.glb"
+}

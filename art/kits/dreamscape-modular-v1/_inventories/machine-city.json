@@ -1,0 +1,156 @@
+{
+  "id": "machine-city",
+  "title": "Machine City",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 22,
+  "archives": [
+    {
+      "id": "machine-city-001",
+      "bytes": 1595322,
+      "sha256": "81a4b14008bc93fa891ebcbf8472b9952016f307e872bf69600224f2498bdb4f",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/machine-city.volume-001.zip",
+          "bytes": 1595322,
+          "sha256": "81a4b14008bc93fa891ebcbf8472b9952016f307e872bf69600224f2498bdb4f",
+          "git_blob_sha": "acbf6098aae547fe7488914fa33e06e28dbe0d43"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/CLAUDE_README.md",
+          "bytes": 7305,
+          "sha256": "5eacf867cf0358cda498a97c143cfbe128027aac568f223bac5c7dd68f66b9a1",
+          "git_blob_sha": "e229c0499efa2e3cea549b7f1c9cfb9c9c7fc716"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/MATERIAL_NOTES.md",
+          "bytes": 2883,
+          "sha256": "48ebc997068d6f43faa32cba0928d4b0631e06bc2b370cd43ff2b326b7375ed2",
+          "git_blob_sha": "e31902f19617631298c0acdb1c55f37696dd4ee7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/assembly/asset-validation.json",
+          "bytes": 2037,
+          "sha256": "6f9caa951348948970dc931c0bf6c728f111e4849a4a5ba5e29b3a949e9220d3",
+          "git_blob_sha": "b92373074d1d5d96c2a969338c0d2037abbb597e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/assembly/collision-navigation.json",
+          "bytes": 13839,
+          "sha256": "7cf15466909d908930305e719840540672430e8ddece26a6f896eca22cf3f5d6",
+          "git_blob_sha": "a359b2e7a66a7e985da832811ff477ff0c655aec"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/assembly/layout.json",
+          "bytes": 18709,
+          "sha256": "42ce142967d514d4e2d115a835b6bc9cc69c0e461f2c48ddd4afd19119da2859",
+          "git_blob_sha": "99f87c9399fc4ce3e917440f99fe739e60a7374b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/assembly/native_320x240.png",
+          "bytes": 153412,
+          "sha256": "32599cbdfe455079cbee82f35d3ca032e87d4d39b86f115a4671d469956ced63",
+          "git_blob_sha": "2cc279a91d1545e5a4a7ce9854b2f8a6d31fb095"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/assembly/showcase.glb",
+          "bytes": 896688,
+          "sha256": "30d06358002a37bbccd7d2949b19ae7d00bf67bfc3661c69279ad5d720576c00",
+          "git_blob_sha": "d7314a1368d98a38d5cad38d3af027055ff2ed7d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/concept/reference_native_320x240.png",
+          "bytes": 153475,
+          "sha256": "0f76ebac22cfd2fde38c1c9cc47f9953d3e4568bf315b392737d594657171215",
+          "git_blob_sha": "c8d2d1aae2838d7efb9493349823a9bd5fc590ed"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "92e1db51ae6d10149d196e0c4b5289f988ce4af9854a011181c34c9b6d0e7774",
+          "git_blob_sha": "eb03b614d238119a15da2de08abc25553582d0fe"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/material-manifest.json",
+          "bytes": 7518,
+          "sha256": "dbf11e10df1eb1fd729513f3886558384df49d958034798ddc2562244ddb9b24",
+          "git_blob_sha": "9b66a3cbdbeba690db5a94b868e055f79816cc8b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/materials/detail_diffuse_128.png",
+          "bytes": 35179,
+          "sha256": "acd73bb35899e5c38244bb1f20e79cb197fa4fbcd943741837b109aef16ca3c1",
+          "git_blob_sha": "e7ce8161be3823c9bfb460443d018a89eefb957f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/materials/detail_diffuse_256.png",
+          "bytes": 131887,
+          "sha256": "60215b065d604b7f6abfc2dfe217cc72ca3310ac1ded79c7a8cb4d65ade67398",
+          "git_blob_sha": "8b0d0ed7e59593a7bd55b06c815473ddab78b378"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/materials/ground_diffuse_128.png",
+          "bytes": 33028,
+          "sha256": "a5b64fa6f4da14f6df2b9ff33cbe23a4bb0ac7bfbc3c2cbe0944ee04c5737a02",
+          "git_blob_sha": "b58df407aa8bf67e064c958e5e76083bfd505edf"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/materials/ground_diffuse_256.png",
+          "bytes": 116706,
+          "sha256": "d35f47dde4a74eea7f771e604d981047b183def9751abc9c9f4b20e1b6ff81a3",
+          "git_blob_sha": "0d5db51dd40f4b00331026aa6ffac356f224e826"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/materials/structure_diffuse_128.png",
+          "bytes": 36877,
+          "sha256": "16b056a5ec918ab8a72fcfb5f2cf93b1ffe85cfff759a1dc430f3bf834e59170",
+          "git_blob_sha": "f71a794a8c335ae373a75bd578713282303971d0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/materials/structure_diffuse_256.png",
+          "bytes": 140691,
+          "sha256": "9fb31adab8bd0343cba2e2c886e93bf7a957fecae7cb61afdddfe000e5e02111",
+          "git_blob_sha": "228734606d7b30f4aad904546f5da355bb909962"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/materials/wall_diffuse_128.png",
+          "bytes": 37418,
+          "sha256": "98d5207762bd7d88c1ddf86dc56e5a66e6d58743173c8f7e2591479e7338c06a",
+          "git_blob_sha": "9e381764af2406b4521c4a80d9dbc6c4c5e5eb0d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/materials/wall_diffuse_256.png",
+          "bytes": 142387,
+          "sha256": "963b8126aa7801708abe1cbe6cf2d14cdd2a6f2d0c6a9d842145defd07a37003",
+          "git_blob_sha": "c4feecc9a207a6fe24db25e1c5b2a892b18b7c35"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/prompts/ground_repeat_fix_v2.txt",
+          "bytes": 1145,
+          "sha256": "cfd4431145a89360842f51839b981417770f168d8b55087dec8057d6816bc1e9",
+          "git_blob_sha": "cbdf4263cc6090c20ff1b6f044b369b99a12612b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/prompts/material_atlas_v1.txt",
+          "bytes": 2469,
+          "sha256": "51693520bb8da50eabe38b6cf017b0323f8145523ab05fd4794a0de3dd6669f9",
+          "git_blob_sha": "591a4e4087019463805440ca94a5a264968776f7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/machine-city/theme-manifest.json",
+          "bytes": 7085,
+          "sha256": "f98953046a5b59459375a0c666199253323b6b64b6c1411ca152d6cc08201089",
+          "git_blob_sha": "844865dadcb119a7fd5bc9b04a61cceea3eab88f"
+        }
+      ]
+    }
+  ]
+}

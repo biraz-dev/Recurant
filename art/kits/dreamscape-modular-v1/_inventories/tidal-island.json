@@ -1,0 +1,156 @@
+{
+  "id": "tidal-island",
+  "title": "Tidal Island",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 22,
+  "archives": [
+    {
+      "id": "tidal-island-001",
+      "bytes": 1721349,
+      "sha256": "a668061ac0d7fe61b6d686a00b16a44e93c6f70fd90c2d8a455cd39e166d06ab",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/tidal-island.volume-001.zip",
+          "bytes": 1721349,
+          "sha256": "a668061ac0d7fe61b6d686a00b16a44e93c6f70fd90c2d8a455cd39e166d06ab",
+          "git_blob_sha": "a686618e1d6bea9e8d141a78d31b5700007c7e5e"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/CLAUDE_README.md",
+          "bytes": 7266,
+          "sha256": "5fc6d00670caec956ff2a95984ef46222e2cb24f4e5333522cd864018353e18a",
+          "git_blob_sha": "7e1807893c27933f138a4754d40a2f8463af5feb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/MATERIAL_NOTES.md",
+          "bytes": 4379,
+          "sha256": "d80c0ce35a9e69b55bb84da140623a13f3605d2f31e80370fbb3e3f6eca3fbb9",
+          "git_blob_sha": "1bc0c4ce0b2d9a4383c67eff1a8166a996848bdd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "b79cad5f5a99cf7a3ccb0e60ebded32a5aa7e8c9b09971e4e2d6d8687f19b66d",
+          "git_blob_sha": "ab78f91e014f7c60356de1854c336232e70d8d1c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/assembly/collision-navigation.json",
+          "bytes": 10220,
+          "sha256": "8c3e7138e7cfad3523c898a4c0e7b111d755ae960a5417072b25ad16145ce33d",
+          "git_blob_sha": "22bb1f19000a2cefe67d46d91b5af60e1cd2bba6"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/assembly/layout.json",
+          "bytes": 15344,
+          "sha256": "a9442ace7fbc942f2d9ba5a61aa19dd266c37dfe3f4e4751f04c254dae9d78a4",
+          "git_blob_sha": "bc2cd28f5483a9636f07abfe3670f0ac4f822492"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/assembly/native_320x240.png",
+          "bytes": 133748,
+          "sha256": "ef7f4c54639d76734d5a23bb29dc0de2843f189d926ea4396605d34dab6c2201",
+          "git_blob_sha": "95b6338889c68d39170a5a205efcad8556bcc24a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/assembly/showcase.glb",
+          "bytes": 709760,
+          "sha256": "75e3ef0d0f1b0c557310b5896d83c3107de5f2a385d57857f10c6876a090132c",
+          "git_blob_sha": "c89898bd3cb9fc8b32242c51c418e2fc7d5fe67a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/concept/reference_native_320x240.png",
+          "bytes": 169794,
+          "sha256": "55fba4a0f493e423fed245ec318a459ea1432f92f25d88c23a97ee86045e14dc",
+          "git_blob_sha": "8e3876381b30c957fc92c88012912450b48cdc08"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "47990e1d37b46a6dc74530449573616b41341610ed5da65e4c390a7be2952e7a",
+          "git_blob_sha": "699c11a7d8fffebab61cb6bfed3e4f9875567580"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/material-manifest.json",
+          "bytes": 8004,
+          "sha256": "96d3ed3ff5b9b2bf2fbdb14ae3c7863152970c0c28556627255e25fc00e3e205",
+          "git_blob_sha": "0eb04ac7f15ace7109e8d62d5a9ceec2fbd79c80"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/materials/detail_diffuse_128.png",
+          "bytes": 39499,
+          "sha256": "e816620913cf65bd2532185891b72131ea84ab1e4a9c00c944e450657bbe65e6",
+          "git_blob_sha": "84c3d27548df7530e20b9582817685f260492b01"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/materials/detail_diffuse_256.png",
+          "bytes": 161247,
+          "sha256": "884db949652d0922de321d53958ce259c4aa7bfddcb1e66330e8cdb8eaf3d4e6",
+          "git_blob_sha": "50c66af03683061a7fc41b78b134904312b7defb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/materials/ground_diffuse_128.png",
+          "bytes": 34666,
+          "sha256": "c9ef168a44cf9a6be8636a432a8caf00a9f414ae357d55b4832ea34748b5d9f4",
+          "git_blob_sha": "b86b9aae8ba2715e28f50f894621a33ffca52e05"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/materials/ground_diffuse_256.png",
+          "bytes": 146713,
+          "sha256": "6a14568a35c892876927e7c52f543db443639fb6646714df46c84e9ddacd281c",
+          "git_blob_sha": "166ced76fa021657f041c1584e873ed3e989d18f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/materials/structure_diffuse_128.png",
+          "bytes": 35780,
+          "sha256": "82cb4caead3815dcded048b5f24b92385b3e2035aa931e957fb5e439bca459cc",
+          "git_blob_sha": "cc0946fe982a1882821a9a7040633458107bf50c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/materials/structure_diffuse_256.png",
+          "bytes": 131194,
+          "sha256": "f67be457f83acf3cc9f9fa7e61b745cd294d4b66c8012b1ebfb1f08a9ec79615",
+          "git_blob_sha": "066dcd963ebc29793e9cd49dd55fc1028602d128"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/materials/wall_diffuse_128.png",
+          "bytes": 41226,
+          "sha256": "a680b9e72675a8b3e030f759d88a676f826c453b13a5fccba20884228395ceeb",
+          "git_blob_sha": "4e085022452c542bafab0b292abff98d9583a2e2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/materials/wall_diffuse_256.png",
+          "bytes": 168496,
+          "sha256": "e7694ff65c1c01c63fc4980874a8aa8824fbde7012404e6c5ffcd9f58832275a",
+          "git_blob_sha": "5d2d346d60a9b8eb0bd9643b0496f8da31adf5d4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/prompts/material_atlas_v1.txt",
+          "bytes": 1714,
+          "sha256": "77369f39f1d4f1d57e72fdb70be21ff44f959f809826df858d72327b4b88af21",
+          "git_blob_sha": "f1b70b48e71c15710641269d7fad2789f7f837ba"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/qa/material-qa.json",
+          "bytes": 2254,
+          "sha256": "ff193a2f05cda8ad869ad5bd2e2f72584fae4b6ea2b273a4bf8aed887c6f31e5",
+          "git_blob_sha": "8b4a35a52ef3cc39d5f2eefb94a1d4c3ee6d1123"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/tidal-island/theme-manifest.json",
+          "bytes": 6867,
+          "sha256": "5e139ad69b3bbfdc0fd0fdff50979bc85aafe34834fe0aad1bcf28f05da3c9f9",
+          "git_blob_sha": "7e77064a1c330fc6e895cf691802171914fc5d92"
+        }
+      ]
+    }
+  ]
+}

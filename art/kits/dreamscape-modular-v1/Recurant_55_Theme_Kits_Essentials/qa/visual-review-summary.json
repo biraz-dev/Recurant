@@ -1,0 +1,1033 @@
+{
+  "new_theme_count": 54,
+  "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+  "runtime_status": "NOT_RUN",
+  "themes": [
+    {
+      "theme_id": "enchanted-forest",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "5eb8df8d1d64a813fbb9887b633e2e130bd6b7c5434c8d7a9006f19986f81bb0",
+          "native_320x240.png": "9a2dff240d6c68ab9661a2c2a2b9514919d8703654d62c9764b689024136816c",
+          "showcase.glb": "46d7e0d3f8b11030f140862c9c52148d36c4f488415f380ef47a9173b64a5633"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "colossal-canopy",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "cc24c56445cdea53b9892cf2ee4eb0f74c5e3776ddf71ce2341a568ddffe6654",
+          "native_320x240.png": "f40c2ad98c061ad148d0f2e6bfb85e82b26059e8a13910d9b11d7986e3578d86",
+          "showcase.glb": "10129550fce15ba8659b2d314a2617366a1b5663cf7e3b779d45ebd1a9ca74db"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "volcanic-wildlands",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "942796ff0684d647ef6510bf43484ca3e29bf9a62204b621f9068a38591b909f",
+          "native_320x240.png": "0eb232109a87d1034f7652ed983ccdf3fb0fd4c4f85a3c3301cdf330afa53b34",
+          "showcase.glb": "c8975de7ddf0bc27d8aa062eb0de732cc65a9b33aea48ccec00f9a0cfd06738d"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "rainforest-river",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "ff9dc6b36607de4ed4a921f4d7502bbca3ab425af730f36d7dff69be2387db52",
+          "native_320x240.png": "3d9163f59038055d4d6246e7e79a4bad2bfc336ae92155b9a20a3c15892c3b13",
+          "showcase.glb": "352241db1d78e0478b6244ddb81ad6a419ff0d23c2cb4106e03a02fa712a08df"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "fungus-wonderland",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "7f7fa5a28e4c6fda34bb68ee2eacb92509feb77c546054bfbdb58f1008686f14",
+          "native_320x240.png": "62222114aa152c8f07abddaddf792b741c739002a7dd4c5cdef82bf67a200f60",
+          "showcase.glb": "31c28cc173f1eca2d99ca1a7fa39d38209a3a3e3bbb63c3f1f2a546fbd1ed01f"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "toxic-forest",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "0a91c751bdf49c51ec39d5ce4b6bbd96ab5df092e75341c1ec4a32372d1741cc",
+          "native_320x240.png": "172903b4435875331ebfde51768ef733992a4dbf5f66ea8e3e58011686d35798",
+          "showcase.glb": "c31364f074d9b9aecacda638425ad700d711b0ae4eb64999bb5ac19d09d80a11"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "natural-caverns",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "788e4dadb77e2ae28c795982d59d469a4d9a1b003dfcd7fa12ee3539bb93aeff",
+          "native_320x240.png": "aa64280f8db2ab4235ce8459d1a9f6141eaced3eeb1460181aa5232c1c8c1772",
+          "showcase.glb": "64454e9f5c92084befc03a018470b3a4598bad189037fc56135953ad6c91b4bd"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "bone-cavern",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "9d3a177f496869f2195dc26460305458f4fb2d5d0742488548882bf8042abf88",
+          "native_320x240.png": "2bbbdaa0534a35978a2a0bfeba0d23e7039f2a42c17db9ff4785945a8f299a84",
+          "showcase.glb": "cb05f02f459d30d8b671c1d8189b4e4df1ba872658edbb525c5b358c510abe50"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "organic-living",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "a0e7dbb61c2b3144dd62a1611d4bdd68d4677cd5bbe1db875848665278bcc266",
+          "native_320x240.png": "53f5168b27d47ba91d066fea43650b9342816faf230dc9aa89a52ad6f374589b",
+          "showcase.glb": "08edb697acdcbbf7227566b1487fd533b310124dfc6cf8408d3fdc001b442877"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "eerie-frontier-wilderness",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "edc55b57cea03e22b86c208b380acf8adc6caee0affcdba84135fb5e3750aa78",
+          "native_320x240.png": "256e43959c285abca8fcc3927ab0cd40a0778440e669bc673f12423a1ae57814",
+          "showcase.glb": "bd4e85b74ec6b3ab505d2137c93fea86032c627c68807458b122af0704d23e64"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "sunflower-sanctuary",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "a09eaa7e931260e1ee740a3657f5f446e651ad55d3684664536b1967bd68e341",
+          "native_320x240.png": "8a061848b24abd19608ba088bfaaa7eb502d39add83f0fe82bce1b080e4d5102",
+          "showcase.glb": "e2a56734b1a789139d3b65de0e25bc6c11b5dba97b9d208f3095c33d3968ffc0"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "desert-life-sanctuary",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "97e55ad7d9a64bb23148ab03af4370a5877f0d7c3e240db64186b40751662081",
+          "native_320x240.png": "090ebb01b975b0f85afdd327f64efa683c0d1782ec0225985f18fddc2b9f6b5a",
+          "showcase.glb": "f2c5c3458209b5edaab73262091b0f0a6ff343b5eaba535371f7d06852bc6386"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "reclaimed-wild-city",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "ef71a500e2f42d7c9fab445991c4befb92a671a0db9888a7da3edf52deadf1df",
+          "native_320x240.png": "d36f19e6c0e3a63ede1ff0e05243f31c38293b4444e5b889e8e47fc0566280f9",
+          "showcase.glb": "0efe12573cf6022d6134396ffada2b04aa2e60f3f3b256b7c88dfa8085d055d6"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "elemental-mountain-refuge",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "15a1b3eba85579430748ae4a33aaaf188e311639c558012d066b49e9ed5025d7",
+          "native_320x240.png": "847a1035318dc8e9803e5e71b6ac2c1f643d2758270f98572ae1cbef6b5d7e99",
+          "showcase.glb": "3d4e0f5d303ddaa75fec6ec6f9edb947065a5dd312025b8a5dde49f96ba6c0b8"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "mythic-mural-cavern",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "c7075a384cabae6fc99b422e2e43602e14f7312a2a5068f511ae3947f4ad131a",
+          "native_320x240.png": "ed0301c537f5f7c8055acac3f0ed32811f647db5c09512591e5fb5275381847c",
+          "showcase.glb": "09ec94cf845d16ca9684e4bf701a78fe873df800e27f2299178ac8b5b9dc41fc"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "rootbound-undercity",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "39062ba3aa2ddd39ce2396760820c281326445cf637ac86b68160a226dbedf67",
+          "native_320x240.png": "2cd61eb6145966764e6421acbdfc3dd00d114bfbced0dbe1f164f31f0695511e",
+          "showcase.glb": "111442c1e31cb4ff3d7742014ba455a1aaebc13bf6dabafbd8a4d8060edfa4b9"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "crypt-catacombs",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "289d28d3a2bd95c33ecf9d26c3eae1a4c39f86b69d48bb9caf9cbf059b75b018",
+          "native_320x240.png": "46bc95b34259364c25928ac51a0ac50415720c2c083c37856f61d9e49cce0946",
+          "showcase.glb": "9f8b997acff0341c3753605af26382cb519bcff7786113ef2a05bb9a5db0a124"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "dingy-cellar",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "48c515c9f7febbc4f27540f4a9715b335b10f782bf2da8520377cd37f6543fa9",
+          "native_320x240.png": "05fa9f6949ed75ab328b869a70c973b2ce94d1d597899bcb23c804b9d1a418ff",
+          "showcase.glb": "f00605daab3545c1574f4458bbee07107c72fd1b4d1043a47def63bd375365c4"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "dream-city-alleys",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "af62b13edeb43399f93bb20f362f1606fa55683ff4d41996b8f42e9ba5154b9b",
+          "native_320x240.png": "5cbc35a911a056f876e77ad9f47eadeaa1d6e70faaeb93fbe785880e400c4302",
+          "showcase.glb": "618f2937bbfbd8a2e8d7b6715b577390fd3d76709049a9227f7ecaafcd335f13"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "alabaster-temple",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "a5b14ec5f7d93d7019ff4e80fd08a91913d2f1e92b9d37858f1d03c5c04a320e",
+          "native_320x240.png": "7dcc118c075b7cfca5a091c8869498cb38338b0ed34c06bf911d10cecaa8d9c7",
+          "showcase.glb": "f72169b70c315c65a4b3723f50912c638b541e384f50ff16427e101eec4ee901"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "subterranean-elven-realm",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "cacdc0cc4dac0133e562411dc625aa92c3581ed19915bc9b290965db62abf9b2",
+          "native_320x240.png": "a62afb8f64dde0004cf63294acb9850b7325fa4f6fb833484b90677fc81e43e2",
+          "showcase.glb": "1eaf6cddc1d5fbbd2fa0f23b2dc9b7d8a5a4671cb2fcb07ea8ef478cf5e6a3f1"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "gothic-night-castle",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "b15097f1520ab85ab4ac731d49f8b06f90bf5b22c3764529b3ea00503bb1fbdd",
+          "native_320x240.png": "e6bcb7e3e654ae3a23126d49daf0e63361d66af54cca4dbd2bf3d0cb2a1378f9",
+          "showcase.glb": "7bbc0feb4761b3d3611a78e3a2584a6a9a47640475b67755e4b17259eb79f73d"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "palace-hallways",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "01226c99305426005601dd85769636d081b5258ffe3c84e59e2e73c0f742d65c",
+          "native_320x240.png": "729d1ec2eccaa232c9cd7b84beaccfec3a4838a7f0a9230946bad217f7a2032e",
+          "showcase.glb": "9e332edcc4135206062a089ade85b21999e70d64e4506e65e9c622f6b730c13a"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "potion-cellar",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "d9460bbdf3376b87f55ae455161f442371d7fa7df0b3694cea03041ced33065c",
+          "native_320x240.png": "588b40c67416d7858866a03fc7fb5768ca97befcd62383a7d15f49e1dc6fc302",
+          "showcase.glb": "3c6bff91cd854e0bf4da4d5806802853f6d79c4108f400eb3eb7a8ee4dc56297"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "tatami-house",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "5f0ddbefe34a9c6f2a7ad6bf11e1e0e735ac995abcb0d7b52ca37cee4a93e38a",
+          "native_320x240.png": "3fa1cc345797825576714bc403316b2c4739393700e9e880da5ba41c0fbb55b9",
+          "showcase.glb": "8bd2dc1ee1aa2c881c095969da64bd146e42d97daa766b1fc853e47bfc10c16a"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "tavern-inn",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "bf134cd6ada49532e137f6e26d8c37c0bfd34a076d4356a3c2082a45161e6947",
+          "native_320x240.png": "e73febcf1db9028c54a06bba3d4a7b208349c725b1694bb0a3db3ff0ea1fb994",
+          "showcase.glb": "a38b41ecaeed445afb372ed65fbc005082117fbf24239b32f3288970518592a0"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "lost-toy-world",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "c581dbc0928552f00159370b65f510c710bf559930ee81a5eca73fc4d208a994",
+          "native_320x240.png": "b0ba0c4a369ac1298715c3f2420cfb0ea2291587c3a7f28e965f947fbc543123",
+          "showcase.glb": "3c5a15ca7e3288424cbc653337fab0977d5bd57c5122d137b430e39c1af9bb5e"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "embroidered-world",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "a7a03cb2eb723f6c29385586a0e4fbbb6195c8fd21f95940991c7a0ec68fc2a8",
+          "native_320x240.png": "18394b344264eca72a2c5d2992d4c913cb394ac0902d7f5381ff574226f1b3d2",
+          "showcase.glb": "c7429031523713fed7db387f0a5258993f5aceff2b45f9a3ab33cbd829f32049"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "astral-sanctuary",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "05eb9d6bfea8e14acdefbbed9cdedc00e6093a915497f5412c87f8dc9b91143f",
+          "native_320x240.png": "ef443802681e42fb1adbe65263da5980ba4cc341df8685db2598c6bfbe5d1bd8",
+          "showcase.glb": "799cd484dc69817f55d081a7f6544dceb419732f8e4409d42d160366bc2e21f7"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "mindglass-sanctum",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "18286938bd0cd3b1af52c9144415b3589c75489455c05da347ca6ef8eff314bc",
+          "native_320x240.png": "299c0d19e3c92da519f59ccf669c38b77de23b08c97dacc04cbdd8937e1d7c87",
+          "showcase.glb": "4a2979f72a539125a537bd3a8d7f15b770e9a01379ab7038123a7656aa2fd899"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "basalt-underworld",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "c05836dd37b8f4b26a35038ec02766b4656ede9c6b717039aaec91302ae36b95",
+          "native_320x240.png": "264abddbc911885195536165cbfccac10efdb73f18dac3c7588ce4f9b35a1887",
+          "showcase.glb": "bd2b995a2a887af5a532515f7f7c1b1b8809e01b4d228bdba05b5b0b6405adaf"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "aquatic-living-laboratory",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "e7071e6e8fdf1ea5af6353af21390f61443d2e3338a0473152a9e6ff093b1864",
+          "native_320x240.png": "98a93ba36ee6cd0fd802a0051af31d96583a54d872f3a40193bae69e8487b1af",
+          "showcase.glb": "7d1b4f790711d7f99b036e54e1c3ad689718fe191c5b823d1e3d423b4abc4552"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "arcane-factory",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "697088fc77c8e2ae2f1bc5a9fd2fafee27ddfde5c38dad205060abe3ce769595",
+          "native_320x240.png": "98a453994ea0189656549808cb2e7baf3674e3122ad32a58731342893b1d4779",
+          "showcase.glb": "bb7e4c78dd4bd6a38b3be2412b5086ea39f6b647672cb904e7ec55c251b5d8dc"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "armory",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "ea0ef2db38df0270ca3c52fd5b5f5858969a95eb7018686bee273f4f553bf541",
+          "native_320x240.png": "67c493c536d53f720a9fbec95c2b0ade050c1f299e2db5c191eae7342e5f116b",
+          "showcase.glb": "0cd85322beecfb1c82795d2434e41a97dbd717f3fcadbe5431fc7bea6d8376cb"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "living-crystal-interior",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "b68d1ca1087b7fb7baad4cc8cde1ca27d22d025ee478858890b380b5687d57bf",
+          "native_320x240.png": "053bd8c4537b63ee54ab7db73efac479111dd89bcbf63135f1a25660ddefab27",
+          "showcase.glb": "48f7f7a43cd4e9d423b1cec919d75b1a2c0a081d1ce7bbb339a944b48ebe9084"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "clockwork",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "19f59c08d375b12fa97f1d0f5fa98260b072714455da27b9dc29f5f924b1cbc8",
+          "native_320x240.png": "86719211127a1e29cc98238c189dfdbff973b7e8f5ddeb4050ef015e68a4f9fa",
+          "showcase.glb": "95271126a13edfd6ad57ead5dd98307d018dbda4442f3f4d151d30820c5e07f6"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "crystal-hallway",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "ee5333bff398003c1d5a58b9d5ac4a6040d8b6dc008ff836ceb519f6aa686eed",
+          "native_320x240.png": "9eee36b78c7281f350741ce46c0f85bfce2701a123b989f2aba6871e5ad5fe3f",
+          "showcase.glb": "55f27fdc0c1a132fae817b451a290f5a3ec239084cb532e6e9a299f4b74ffbe6"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "crystalline-machine-sanctuary",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "0f6cba4f1bd65094efc4088c269a53c0c042e1fbbc7468d1131dcb15c6e2a051",
+          "native_320x240.png": "0ac29791176b2f8d61e5690ea58c728cbbea3046ce6e1bbef98c28d0175a2516",
+          "showcase.glb": "01720137c003b6a5a09a31f6e29c6f2080cd2a2fcd4ea70b1967d22b4ccbc4fc"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "forge",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "5759fcad281e71fbddc53eae4347116691319fc0453968dba05b995b9170e883",
+          "native_320x240.png": "c44fc664547a41742daa2b34fc848c24c0da0bd385dc65739c2db0edc1c633fe",
+          "showcase.glb": "2be5f7078511be1f5ad774213dec452bc94fdcb7daa2da1b4dc8a4aae80465ff"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "foundry",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "b5c01e851c52b2260ab40a03c2c5e1d186f1061cc7db445653a3050fab7831c2",
+          "native_320x240.png": "9f7f3fcf4a6339ae12c7b668822432591a54d31ce8533443c8bc909c5a3e4a0c",
+          "showcase.glb": "923f61bce3662fd91fe423228eee603e325c626ac5641a2a3e431ae1965077ac"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "crescent-iron-warship",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "b1b060754e99fd4a72b9dad2fadd29bdcf926e58b63612ea335391c5ef2c46c8",
+          "native_320x240.png": "aab8bbe7b4e21a550d5d8f40b714db0aef9bad372ba8826f65b55210196e8552",
+          "showcase.glb": "cb231e27a16a6da03e65bc3fccf15b2598e162afda7676a12e8990da09a962f5"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "machine-city",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "0b8c614169cd6197af0753f1719fa79678d023696da2f1109a33def2ded29a2b",
+          "native_320x240.png": "32599cbdfe455079cbee82f35d3ca032e87d4d39b86f115a4671d469956ced63",
+          "showcase.glb": "30d06358002a37bbccd7d2949b19ae7d00bf67bfc3661c69279ad5d720576c00"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "transforming-machine-interior",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "e79832c8c48d3ab9cb021e49812d3612f911287740be4661e84484ab97549c59",
+          "native_320x240.png": "588899f7854f531eeeb4a84274a784c77bbf2e01190fd2ea495f82ca9b0c8ae2",
+          "showcase.glb": "1bf6256b8d46341fc7bc5e9cf1f950b388f93ac3fbb62428ddd43f5799c1f000"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "perfected-metal-sanctuary",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "7c72137c03db3961972299dc5014a4035bf023f8344429fa51fa170b51d8b746",
+          "native_320x240.png": "8adbeca4231ee65ff75173f332ca9ee72ffe2998a9e0ab730323219a73ee023b",
+          "showcase.glb": "acf510800fc0552c01b0795dc0554a3ae888d37076f4ced5c6a11e19bea4bf2d"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "smith-workshop",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "94c7f12c1b28c150cd926e3fd11e33b48eb051eae1dee05017ba2096ac8b9a0a",
+          "native_320x240.png": "3d3cd8ee10a758883f0b4e613d0f0470352b7b7b6922152eab6c14465012a235",
+          "showcase.glb": "c8d6bd437be8df05d365849e71fe9cd8e7408cb51b7e042152d814cd73894c65"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "storm-inventor-workshop",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "2224e4820acca3049703c984d3f1d99f18681168393e0916d013e0417fb0d263",
+          "native_320x240.png": "e2a95f18c198d51e4834d2cebe53950b6342a5669c362c9c6ee2894880875349",
+          "showcase.glb": "902d105cefc36e1dedf7ed4cc30a1047cb803aad17a3c96b13c9437cac0ff470"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "blackwater-swamp",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "63e02d132086213d46c58ea76c31703cbcea68d4d6b2442740916f3d4ef14834",
+          "native_320x240.png": "fb9798159641766b8dc4550dbc95453e43c3cb9c5c848977a5a9802420de3c7c",
+          "showcase.glb": "a9ce7fc8c6e9e2a0b21053d7de1e81ced7c20f19ac1e13a653c581db0267751b"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "redrock-mountain",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "4f195526779c99aa3e0b78d140c3fcbf7f8a5d1c8989ec80ccf7934fcc0c186c",
+          "native_320x240.png": "fc295fb4ee3845fc5bef152cffffb7f6859a948be88766242342f36fb5009b68",
+          "showcase.glb": "16d4f4e1328623871574a4902b4eabc3423c409e63b61bb03a7e8481e2ea191d"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "ancient-forest",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "4f9c3155e8d6d13fb7fc3855679d0944726ea19b15143461da9a3982d03b4e2c",
+          "native_320x240.png": "26efa3ba1af0135be46cd02901a7cd1743006e1b5bdef7d0bb9cb61f771f4194",
+          "showcase.glb": "178622080df57b3a7948ba1902eb253b9f4ee356a65fc3d1eba5209707d1c490"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "tidal-island",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "6b7ad0a1f4fa6f863500bc0548999f7d3cc776846ee53e439a4eadcfd837c7d6",
+          "native_320x240.png": "ef7f4c54639d76734d5a23bb29dc0de2843f189d926ea4396605d34dab6c2201",
+          "showcase.glb": "75e3ef0d0f1b0c557310b5896d83c3107de5f2a385d57857f10c6876a090132c"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "golden-plains",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "a8779405da60fded830d396af896e50d5f281d9ffeefb4471a019f0600676dba",
+          "native_320x240.png": "9e48f6e2afaaf04063eb8fffe94a1655059246b4597a6034dc509add099c0857",
+          "showcase.glb": "60ebe23fd488a8d1dc18b2507cf5feabac886edc7dbcbd682a11421bfb222b39"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "genesis-garden",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "8cdf2e2a6555d4a9c4f6611186372cf9d75873f8be393c6a1c2ed86c06d5e8a0",
+          "native_320x240.png": "55530fab1c1cae6d9285c4079bd16694632227280fe747957417b1e9d38f16fe",
+          "showcase.glb": "1985eb6c6ae48e29ced80c59563203c336d0267565941fbaa7529508c8c7e1fa"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "wild-savanna",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "90985fea01d72600a0bb335c8a6346a71b0e843e1ddcd76dfa8a22ef2d4ff9fd",
+          "native_320x240.png": "5d2676ff095a28bcba271bf6eac45f851edf740ad89a506e15c05811ec7d5bd7",
+          "showcase.glb": "589d2bd32929f4ccc4a6e47f60b03b824df5b284e56fbb8827b1677501c1adf5"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    },
+    {
+      "theme_id": "onebit-spiritual-landscape",
+      "visual_review": {
+        "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+        "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+        "files_sha256": {
+          "overview.png": "6239ca153b6d11ca3a712c6d9683ea914480efae9a95e5ddfcf1a104392fd8ca",
+          "native_320x240.png": "1e8d16356ca01401d785fbafa224e6f04400b6a9f9c9c26ce152e488ed8cd6ec",
+          "showcase.glb": "c3358441569f7af99e32d3b02b79cba3ef2069445ac13644cd67019bdd6f08c4"
+        },
+        "known_limits": [
+          "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+          "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+          "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+          "Texture repeat candidates are not mathematically seamless-certified.",
+          "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+        ]
+      }
+    }
+  ]
+}

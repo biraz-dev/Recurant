@@ -1,0 +1,156 @@
+{
+  "id": "living-crystal-interior",
+  "title": "Living Crystal Interior",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 22,
+  "archives": [
+    {
+      "id": "living-crystal-interior-001",
+      "bytes": 1743697,
+      "sha256": "513e3ee4cdab8e3c5b97ff607f44f175d51c378126d6fb4cb049da6560a275bc",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/living-crystal-interior.volume-001.zip",
+          "bytes": 1743697,
+          "sha256": "513e3ee4cdab8e3c5b97ff607f44f175d51c378126d6fb4cb049da6560a275bc",
+          "git_blob_sha": "74b5121c92b8cb8dfae0fb021d8ba0e2e288d8c8"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/CLAUDE_README.md",
+          "bytes": 7293,
+          "sha256": "50a7b80e5cb1d2838ad4bcfc4391878525c4e11863a7ce566de6f4d15bcd9dff",
+          "git_blob_sha": "4a40d5cc7586999d226967fbd670be5ad3be8ed5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/MATERIAL_NOTES.md",
+          "bytes": 2854,
+          "sha256": "cacaafda967edc509e8caf38b5686aa2c32baf19fdc99d4bad7f7ae32f3309b6",
+          "git_blob_sha": "a678f51a0054df37e5825346912a2e3bcb0b4e2c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "47b4210b687d7ce5ea031f017a3c9779e1bec6237b8e8158ab131bee57325e27",
+          "git_blob_sha": "720c7897521fa1b4ce52a601612938a51a6e5acc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/assembly/collision-navigation.json",
+          "bytes": 10250,
+          "sha256": "44d93f4b5a5a23e4b970fae54e9fb28b42472d3c21c22ae4b70be47480e6e32d",
+          "git_blob_sha": "21e93cfe91644a1023dca8901c053bab8d07017a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/assembly/layout.json",
+          "bytes": 13543,
+          "sha256": "0c250234c28affb0d8e15ef2612dc73b9d9c857836ff8e7ce0c9d2b6f74cc75c",
+          "git_blob_sha": "1781eec3fde6e347d6933572d0cbc173cd10864c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/assembly/native_320x240.png",
+          "bytes": 160581,
+          "sha256": "053bd8c4537b63ee54ab7db73efac479111dd89bcbf63135f1a25660ddefab27",
+          "git_blob_sha": "35739a38fc47c1e8076f15d953849e396f0e64b7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/assembly/showcase.glb",
+          "bytes": 769012,
+          "sha256": "48f7f7a43cd4e9d423b1cec919d75b1a2c0a081d1ce7bbb339a944b48ebe9084",
+          "git_blob_sha": "aefc036a9dcd43690f74cb9ee74d7d7744f253f0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/concept/reference_native_320x240.png",
+          "bytes": 164518,
+          "sha256": "99556ca7997cc170b8f2d17026c96f8b583599fe36ea87cf2f6a5c7077ba7f81",
+          "git_blob_sha": "a41f9d61463c85c219e64d50cf4848bf67fd9647"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "762376301e5ecb71267117c0d09a583314c65997fe997b14cbd45ed2732cccf9",
+          "git_blob_sha": "b4d9858965dd4c9a15408bc4939d1cbd8eb6fcc9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/material-manifest.json",
+          "bytes": 7483,
+          "sha256": "0abbc9be5aefba48a5412d2be8e97ff0fd5facc5e9d2ca7b9787b844c5a1ced7",
+          "git_blob_sha": "32d1a09f19c152c12e980916b7f2bd32114099e7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/materials/detail_diffuse_128.png",
+          "bytes": 40181,
+          "sha256": "5a01b918d50761c09f5f2cf51ff935e18badaeddaa7896f67bdc025b59e0a0af",
+          "git_blob_sha": "acb3338e51bfbc6502c75efba6f3bedd91b1ecad"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/materials/detail_diffuse_256.png",
+          "bytes": 148042,
+          "sha256": "f306231d36076718af5f591d43f04b0edb0736e070f983ea7460ba8c9614a28e",
+          "git_blob_sha": "0d1b3449869f5aac70f9e58f785497b7885f1c93"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/materials/ground_diffuse_128.png",
+          "bytes": 40887,
+          "sha256": "00b5da7de4fced4831ebde8097a5b779d9fbb79ad3d4edd56d87f66e5a6bdf46",
+          "git_blob_sha": "f13da01dadbd98407de8072d24c2a32ac875658d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/materials/ground_diffuse_256.png",
+          "bytes": 154689,
+          "sha256": "4de89e6a6a910a09cfe3aae0fa2d1338c4a9beb3e05d09b3ae5741a589c5928b",
+          "git_blob_sha": "1f3df17c41ab2e6103e9c58ecbbb2ffe624bc5a5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/materials/structure_diffuse_128.png",
+          "bytes": 39280,
+          "sha256": "a182dc108c7b9e27a0f0fdeecf81a2701918a8d7830877f17a1a02d91f4b9451",
+          "git_blob_sha": "e66df2db179671c47aaf198cf0481918acf3e454"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/materials/structure_diffuse_256.png",
+          "bytes": 146745,
+          "sha256": "1a44cddd330ddca5e858d636d59a89693f2672bf244c85bdb713b6939e3f9059",
+          "git_blob_sha": "1e56be821cb79212aacf2acf3133d65795a1a6ae"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/materials/wall_diffuse_128.png",
+          "bytes": 41440,
+          "sha256": "7eaebc39fbfb88e12fbe63d15f0a2e2c905fa72775c3bb056946d4b5e1792400",
+          "git_blob_sha": "f39c1938b5fed35efd10062804b0ef1b63b64118"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/materials/wall_diffuse_256.png",
+          "bytes": 152690,
+          "sha256": "a0c3c2fa28d7cf9ad497acf46e613308379cb7c50fc6d363ae1d2740b9960e6a",
+          "git_blob_sha": "5f00748e8b030824401045c10f8fb4954d435239"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/prompts/material_atlas_v1.txt",
+          "bytes": 2443,
+          "sha256": "43040b5ed987eb19ecc74c841348439c2d3415b7b3c30c51a2b1ab579737ed8e",
+          "git_blob_sha": "0819f2b192c9c52a032029e4a307fa581f48e26a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/prompts/wall_repeat_fix_v2.txt",
+          "bytes": 1151,
+          "sha256": "36ff4d30ffdf0749593e2bbf3f0f5ae0bc1c7e4eb0735e569eb976c4431816a8",
+          "git_blob_sha": "22fd70f3adb62040aaaf701c7b778376399b1b44"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/living-crystal-interior/theme-manifest.json",
+          "bytes": 7116,
+          "sha256": "b524f364ecb0503f88b059e4c0c106eedbbff6821d7bb40ea00c197463bc6784",
+          "git_blob_sha": "5ea0fc995b348a77a1e67cebb401b15d81d051a9"
+        }
+      ]
+    }
+  ]
+}

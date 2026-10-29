@@ -1,0 +1,203 @@
+{
+  "id": "crystal_sanctum_demo",
+  "description": "Faceted corridor assembly with mineral slabs and a pedestal focus.",
+  "file": "assemblies/crystal_sanctum_demo.glb",
+  "coordinate_system": "metres/Y-up/-Z-north",
+  "instances": [
+    {
+      "asset": "crystal_floor_2m",
+      "position_m": [
+        -2,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_floor_2m",
+      "position_m": [
+        -2,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_floor_2m",
+      "position_m": [
+        -2,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_floor_2m",
+      "position_m": [
+        0,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_floor_2m",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_floor_2m",
+      "position_m": [
+        0,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_floor_2m",
+      "position_m": [
+        2,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_floor_2m",
+      "position_m": [
+        2,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_floor_2m",
+      "position_m": [
+        2,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_wall_ribs",
+      "position_m": [
+        -2,
+        0,
+        3
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_wall_ribs",
+      "position_m": [
+        2,
+        0,
+        3
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_pointed_arch",
+      "position_m": [
+        0,
+        0,
+        3
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_shard_tall",
+      "position_m": [
+        -2.5,
+        0,
+        -2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_shard_tall",
+      "position_m": [
+        -2.5,
+        0,
+        0
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_shard_tall",
+      "position_m": [
+        -2.5,
+        0,
+        2
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "crystal_cluster",
+      "position_m": [
+        2.2,
+        0,
+        1.6
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "ceremonial_pedestal",
+      "position_m": [
+        1.8,
+        0,
+        -1.8
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    },
+    {
+      "asset": "astral_ring_focus",
+      "position_m": [
+        1.8,
+        1.35,
+        -1.8
+      ],
+      "rotation_y_radians": 0,
+      "scale": 1
+    }
+  ],
+  "bounds_m": {
+    "min": [
+      -3.0,
+      -0.26,
+      -3.0
+    ],
+    "max": [
+      3.0,
+      4.0,
+      3.17
+    ]
+  },
+  "notes": [
+    "Demonstrates visual assembly only. Collision/world navigation must be adapted through the current game grid pipeline."
+  ]
+}

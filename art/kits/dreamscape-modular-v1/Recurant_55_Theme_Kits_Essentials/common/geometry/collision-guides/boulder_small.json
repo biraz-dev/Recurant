@@ -1,0 +1,20 @@
+{
+  "asset": "boulder_small",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.004513,
+        0.37375,
+        0.050937
+      ],
+      "size": [
+        1.11488,
+        0.7475,
+        1.130531
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/boulder_small__GUIDE.glb"
+}

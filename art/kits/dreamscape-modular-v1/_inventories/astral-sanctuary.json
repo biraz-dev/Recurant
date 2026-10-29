@@ -1,0 +1,144 @@
+{
+  "id": "astral-sanctuary",
+  "title": "Astral Sanctuary",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 20,
+  "archives": [
+    {
+      "id": "astral-sanctuary-001",
+      "bytes": 1729002,
+      "sha256": "58c277f442901af55e960266afe315779043736012d6ad700c8bc50e64ca5c42",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/astral-sanctuary.volume-001.zip",
+          "bytes": 1729002,
+          "sha256": "58c277f442901af55e960266afe315779043736012d6ad700c8bc50e64ca5c42",
+          "git_blob_sha": "8b838328ddf7cb3eeb5341caa3d96b34ba51df1e"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/CLAUDE_README.md",
+          "bytes": 7858,
+          "sha256": "32c9b6c5cde025ed313decfb4d64695e216b0f8add50dc793c0685efeb4c20c2",
+          "git_blob_sha": "35ac08ec69554476792adc42aee5550075129b00"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "05d43c268df500fd6f2d33523ec9998128f62d7afe156b393429acace39234bd",
+          "git_blob_sha": "7d5311dc0e67879e9f7cad6aff49739012afc1a5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/assembly/collision-navigation.json",
+          "bytes": 10242,
+          "sha256": "d210b1af634bbfd3692882965b56c0e9e48a27f582edff78e85438ad61f5f273",
+          "git_blob_sha": "bfbddeb94513888f606b4dd65fa5bc2d0f7f8179"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/assembly/layout.json",
+          "bytes": 13502,
+          "sha256": "f1c01329f69e5fff3c2fff56e6492380f1ed793be1acd61d27d2bead4f0a233d",
+          "git_blob_sha": "1b54536df6151b670fa1759bab35cb38b8694070"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/assembly/native_320x240.png",
+          "bytes": 165980,
+          "sha256": "ef443802681e42fb1adbe65263da5980ba4cc341df8685db2598c6bfbe5d1bd8",
+          "git_blob_sha": "6527fc43c1a876a5f43fd0fcf65adae0e885e885"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/assembly/showcase.glb",
+          "bytes": 763732,
+          "sha256": "799cd484dc69817f55d081a7f6544dceb419732f8e4409d42d160366bc2e21f7",
+          "git_blob_sha": "0ec5668ae011c3ed5a8eb12680cd71355748db88"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/concept/reference_native_320x240.png",
+          "bytes": 162365,
+          "sha256": "5d6794b798d68842a9550ac1f2c230aaf25c5b6500d9172a5ee6665cb40f1aad",
+          "git_blob_sha": "8e4d5c077ce613c15bdaf7ce16ceddce8ac6b5a9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "dcc9e5aee35f13d37e8dda9997b5588b81fe73594852c544abe04d7f936f0f0c",
+          "git_blob_sha": "8069d7137330f61ba906604f3637ecf103cafa9a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/material-manifest.json",
+          "bytes": 7302,
+          "sha256": "90e33a06c86ff5dee64b29fb74d490e97295a5c21afd743f3c31038b7881357c",
+          "git_blob_sha": "bccea26eb9a3bc11b59a10d904f5f543bce1c656"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/materials/detail_diffuse_128.png",
+          "bytes": 41222,
+          "sha256": "2dd6f00d2612c0d2015e804eb043ab8fc4f99bb284670ea5a1afbf223e446360",
+          "git_blob_sha": "209d8a37fe41f9c1f3a91c724ee99100bc67ec63"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/materials/detail_diffuse_256.png",
+          "bytes": 157158,
+          "sha256": "877fad1914917353a05593041f2cf94c6500cf9b00fd1dd8accbaeb84aea5d09",
+          "git_blob_sha": "36b05bac4997d4fa27dba176b0228e9d416c48a8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/materials/ground_diffuse_128.png",
+          "bytes": 39806,
+          "sha256": "0a95da16c641be360db87f9444e9ddc6dfa34331befda87d36464280d52a3b21",
+          "git_blob_sha": "12dbb749cd616b9b4fa2a6198e58b8b1deaa1a48"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/materials/ground_diffuse_256.png",
+          "bytes": 147256,
+          "sha256": "2a09e389670a7db2469a74b1e359520533a97ab81c0ea95e73e665b04134bea8",
+          "git_blob_sha": "14891cb809a57997d1705b1d70785fe0cf5c349d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/materials/structure_diffuse_128.png",
+          "bytes": 40234,
+          "sha256": "ddd3e0e24caca4f980584b06190b71228ee734e18fcabfd2d88a83c4a7a0addf",
+          "git_blob_sha": "0f6caaa71a89af6c26e3a7b2488f9852ba633b7d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/materials/structure_diffuse_256.png",
+          "bytes": 151131,
+          "sha256": "303206eb24b340127b137c7e5f20e3fc1d571ac180443aea7d3ea4187c3ef4ee",
+          "git_blob_sha": "4c75f923ca9435bc7508d52bec61d0763bfe18e4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/materials/wall_diffuse_128.png",
+          "bytes": 37576,
+          "sha256": "0e180d8badb5df5b9b05bae02b1d11868bf297de7be23a9fa4e14cdb668b71f1",
+          "git_blob_sha": "46979f28a1bb6fb500c2c05a4126e967f7a2b951"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/materials/wall_diffuse_256.png",
+          "bytes": 140691,
+          "sha256": "68f07a00dffabe6927f57317fcd9fa0baf8c81de03ec6e677f7ccdbe974cf24b",
+          "git_blob_sha": "6625e1a6f52a2976f0f618d5877a2e5c27e69c84"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/prompts/material-atlas.txt",
+          "bytes": 2815,
+          "sha256": "20dc6789e8299b412b433e7be18c71145278ffa78d8a142945bfab0cad1852d1",
+          "git_blob_sha": "b243962db0933cbca2bd51e8c1060bfedfa778c1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/astral-sanctuary/theme-manifest.json",
+          "bytes": 7200,
+          "sha256": "625c05d440bb08cbc04f0e1553a673f532eca12122fa75456f476b5d142e4bdb",
+          "git_blob_sha": "1ef633fef7e0cf9ccbd7c80f0a5ea9d58be3f63c"
+        }
+      ]
+    }
+  ]
+}

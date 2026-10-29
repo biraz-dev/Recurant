@@ -1,0 +1,144 @@
+{
+  "id": "lost-toy-world",
+  "title": "Lost Toy World",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 20,
+  "archives": [
+    {
+      "id": "lost-toy-world-001",
+      "bytes": 1617979,
+      "sha256": "95f8457462a104981288714c04f22bea4f8a2990d0d7d309a815d34074c2a0a6",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/lost-toy-world.volume-001.zip",
+          "bytes": 1617979,
+          "sha256": "95f8457462a104981288714c04f22bea4f8a2990d0d7d309a815d34074c2a0a6",
+          "git_blob_sha": "308b1ade1fb7579ccc01940a03b60426b0a35555"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/CLAUDE_README.md",
+          "bytes": 7973,
+          "sha256": "8f7a67f173752c5b64d660e306f9ac5773a84bc43cb64d4e973730b215a4c2ef",
+          "git_blob_sha": "6fea18d0f6ba084832cf978460b33b6002019a0a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "312c9b6da88aa8ed9b0d4752d0e2943ebade7a1ee4e2679e3250c7e8496632c4",
+          "git_blob_sha": "3ed7f9cd092e39054bd79cdc3812655c3a5711f8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/assembly/collision-navigation.json",
+          "bytes": 10384,
+          "sha256": "1005a8f5b5eea6370e5e06d864b723e0f8435387321ba2167cc1c5e85c623be9",
+          "git_blob_sha": "f24c17063bfa788617969e52f86f017af204d71a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/assembly/layout.json",
+          "bytes": 13513,
+          "sha256": "93b824af46096da23839bb554a2fe7770f2a5231c6f0bded7ed39b355f16b08e",
+          "git_blob_sha": "2eec7d82549803a398b0de14c8420e6e74001c37"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/assembly/native_320x240.png",
+          "bytes": 143882,
+          "sha256": "b0ba0c4a369ac1298715c3f2420cfb0ea2291587c3a7f28e965f947fbc543123",
+          "git_blob_sha": "f5621a4b6c8505db9b651b2dbdda6ae1d2408cb4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/assembly/showcase.glb",
+          "bytes": 714112,
+          "sha256": "3c5a15ca7e3288424cbc653337fab0977d5bd57c5122d137b430e39c1af9bb5e",
+          "git_blob_sha": "ae2b63c169dfded0c8676ca1d02e8e5ec44aac4e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/concept/reference_native_320x240.png",
+          "bytes": 142963,
+          "sha256": "1b5d2739580bc6c57d414082025769a316b9cdd7ac0dd46cdaaa010ac4b087e7",
+          "git_blob_sha": "c300ab3f44f9dd4b2baec9b72fe17a73febe96b9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "fb586425ab1db9e6f3ec011bfb3fac9d9ba8dd7c7968de8452863e2647e39a6d",
+          "git_blob_sha": "8797f71a11006aa724adf83462bc243795f26d09"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/material-manifest.json",
+          "bytes": 7316,
+          "sha256": "777230962bbb1a991e03c3cf6af4f0fdb33374e614b6888b29fa5beb2edad58f",
+          "git_blob_sha": "863f659f13281944e00ff4d4c15cc678d6258bd2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/materials/detail_diffuse_128.png",
+          "bytes": 42044,
+          "sha256": "d9de1874fabffc58c0553bb2e7e29ff115e8170cf8f1e958e5224572bca773df",
+          "git_blob_sha": "9e627dfe4eb13ebceaf4d550aaaeefec7cec2159"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/materials/detail_diffuse_256.png",
+          "bytes": 163061,
+          "sha256": "455b28ab0e93657299caa0adb2107e8d13a67eb0572a51526998e968040778a3",
+          "git_blob_sha": "dabc0b629c447a5854bddbbcb68e726905b4f7ab"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/materials/ground_diffuse_128.png",
+          "bytes": 37741,
+          "sha256": "77d79ad92ba22864b243b6cd92183390453035795e0890c57b33cdc6b0b0ec41",
+          "git_blob_sha": "e50e08b1e6792e190aa88b407911184faec23bc4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/materials/ground_diffuse_256.png",
+          "bytes": 143792,
+          "sha256": "c8120b3510af4fc64369fba8840a36f13965bb9a2e159a7b390ffcec3ca0a7f7",
+          "git_blob_sha": "0d5cd3ba1c97a4727706334a62e1b4d7b95d315e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/materials/structure_diffuse_128.png",
+          "bytes": 32528,
+          "sha256": "e58c0d7001e2f2f2a4b53f63e2fb42ef549fc168dbcf1c61af061028fd62eb06",
+          "git_blob_sha": "63bbd4774ef2365163501f8b71639b8a6ece7657"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/materials/structure_diffuse_256.png",
+          "bytes": 121964,
+          "sha256": "22b09209abc48b7ae5d5130bb06ba89e28410184304f099735ae15e47091a14b",
+          "git_blob_sha": "11e68c4cac52ee5a60d2fc6080faec6e676f8e17"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/materials/wall_diffuse_128.png",
+          "bytes": 37095,
+          "sha256": "6c2b47a299055de94a130c823ea235bdb33bc74cd02d284db8ba9e6521cd9e02",
+          "git_blob_sha": "841bbe4dc1c36376a83f8551040b7cb513888310"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/materials/wall_diffuse_256.png",
+          "bytes": 140243,
+          "sha256": "aaa0c5849b707fe00cf18024936bcb4e65c890d5075e76c920ee7679ca3428a8",
+          "git_blob_sha": "d4ab8c224c14015caade2bb0d6b89135618a9b8f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/prompts/material-atlas.txt",
+          "bytes": 3032,
+          "sha256": "811793fbce378f4842e3520c7bed8dc3afe5923ced47b37bd7cdb435e030555b",
+          "git_blob_sha": "fcfcc229f5c9e79d556173feddd03674d93d0884"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/lost-toy-world/theme-manifest.json",
+          "bytes": 7089,
+          "sha256": "5088ab690b9804957900fd311a4626f212472ed22865eb815ce0a8a433bf5f27",
+          "git_blob_sha": "4aa09c9d8a92fd2a9da889fd7d9af77cdaa079d4"
+        }
+      ]
+    }
+  ]
+}

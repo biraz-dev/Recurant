@@ -1,0 +1,144 @@
+{
+  "id": "mindglass-sanctum",
+  "title": "Mindglass Sanctum",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 20,
+  "archives": [
+    {
+      "id": "mindglass-sanctum-001",
+      "bytes": 1733550,
+      "sha256": "27c906a6553baf0f536bc5ec74462a10eef4f9abf95c811f143eb1974be5dec8",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/mindglass-sanctum.volume-001.zip",
+          "bytes": 1733550,
+          "sha256": "27c906a6553baf0f536bc5ec74462a10eef4f9abf95c811f143eb1974be5dec8",
+          "git_blob_sha": "e6b0bdc967d2e8e49e38a15af0930a7cdc68fa23"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/CLAUDE_README.md",
+          "bytes": 7830,
+          "sha256": "f42f7cda28f5a12ac15a63fd08c7c2672b949290b396628ba2f2daab4b1c8e19",
+          "git_blob_sha": "7163db220a46eca20891373b8d8135930b3cc900"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "89624590577f8e0f4fde2e02252c6860dd6101f38d345bd63b8d2fe1662989ce",
+          "git_blob_sha": "4e246d61a33e56eff0c0de3795abbc83e9ca88db"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/assembly/collision-navigation.json",
+          "bytes": 10144,
+          "sha256": "78c97fdd20352de5c4169751ed0e346165220d37f4d72a114cc8413e3c824231",
+          "git_blob_sha": "49af7c24ff2b7fae6921850f4a538be27d70ca41"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/assembly/layout.json",
+          "bytes": 13481,
+          "sha256": "dfb15e78e1b523c3b7d9ff887e2333e9f5b9e47c80606237918dfb3e42b7e1ff",
+          "git_blob_sha": "1a31ffa7327bf8be906adf93710f8cde1a141b79"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/assembly/native_320x240.png",
+          "bytes": 159614,
+          "sha256": "299c0d19e3c92da519f59ccf669c38b77de23b08c97dacc04cbdd8937e1d7c87",
+          "git_blob_sha": "0735e66e1c913247670c059e8fa040f94f322269"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/assembly/showcase.glb",
+          "bytes": 740044,
+          "sha256": "4a2979f72a539125a537bd3a8d7f15b770e9a01379ab7038123a7656aa2fd899",
+          "git_blob_sha": "0e1b3355f2f7a201675ab4d67296ddbace93f1ee"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/concept/reference_native_320x240.png",
+          "bytes": 140568,
+          "sha256": "970251b5a079dcea43838ef2fa8ff96200be11d3bede72bdf19ac38270d7fc88",
+          "git_blob_sha": "6f4d87155367c13cfce5a5f38c3253d11b5fa833"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "11a8f11d0f48f40474fde343b6d7e654fa4fe970875ee32d3a87c38f382fa222",
+          "git_blob_sha": "961a1cf6ce27b51dccef183bcfd6c6c92b65076c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/material-manifest.json",
+          "bytes": 7249,
+          "sha256": "01e5e953b1f4c12091e23b873a760ada970984ee5c2633ce799e151e628237f0",
+          "git_blob_sha": "6a0185e9af1bfce50f16681f791fb8ec0fb2746a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/materials/detail_diffuse_128.png",
+          "bytes": 43559,
+          "sha256": "633b75d34105fdf944eccbdb63b917324ad6b129a0c021c3d96e386ccb4b3f64",
+          "git_blob_sha": "8281e614323429b6a5b2014adc09e11d69e38f06"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/materials/detail_diffuse_256.png",
+          "bytes": 166728,
+          "sha256": "bf1c73859d497d4965856178853ef346c8e409915ea858921ee308ec69d8bcfb",
+          "git_blob_sha": "1233a1fff90d94dd4bb18a606e5c22b9d86dbe71"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/materials/ground_diffuse_128.png",
+          "bytes": 40791,
+          "sha256": "75e0f617571712d04cc1bbda459a234d2d4022724f288ac605fc4115395ca450",
+          "git_blob_sha": "a0aec0cfc4434e517e31798f228810c78902e97a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/materials/ground_diffuse_256.png",
+          "bytes": 158292,
+          "sha256": "1da750b6a765a23d9d8fa5a5d4aaf8302ae860c63823ab824947299b10eebba5",
+          "git_blob_sha": "54b81bdc164d1cc43c27b94160e69d8dcae47c3f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/materials/structure_diffuse_128.png",
+          "bytes": 36731,
+          "sha256": "975346218eb1c46479f57eca6310bab010e0aa91f945f9696d94a10d7361499c",
+          "git_blob_sha": "e9f4c33d747fa87eff4292af3f1bc1dfc51ba161"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/materials/structure_diffuse_256.png",
+          "bytes": 138795,
+          "sha256": "7a705b3a9ca158f560fd6e60c553cde11452c44b2797ddcae333072dd12686d6",
+          "git_blob_sha": "fbe7193f4719e82150309907eb6a15078bee883c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/materials/wall_diffuse_128.png",
+          "bytes": 39433,
+          "sha256": "22925a8f8b97665f39b43846f5c55807622d5891cbda61f11c0bae74e1eeeb4b",
+          "git_blob_sha": "ac6146e7e65d7397d7d8f961148ac3a436dc295b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/materials/wall_diffuse_256.png",
+          "bytes": 152132,
+          "sha256": "98d7cfd0c58d3cb96a410abd717061b46d2eb12fdd9b9146dd2bd560c8208c65",
+          "git_blob_sha": "3bb0c8f819a2988f6f08925f830ce2f3e3ce9685"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/prompts/material-atlas.txt",
+          "bytes": 2805,
+          "sha256": "179c1c41352d4b4a997adcca5e6affc13017da3c5cb07f44bb9a3c3ae79b41e6",
+          "git_blob_sha": "b6262501dae7f55d2f3dbe473239410540becd77"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/mindglass-sanctum/theme-manifest.json",
+          "bytes": 7176,
+          "sha256": "df86427269c23eb519faafe99062ad9fb66f256f6b87b52616570bf28b6ea60b",
+          "git_blob_sha": "7dbaa3eadc1a19881034b9ddaa06df67662e0d7f"
+        }
+      ]
+    }
+  ]
+}

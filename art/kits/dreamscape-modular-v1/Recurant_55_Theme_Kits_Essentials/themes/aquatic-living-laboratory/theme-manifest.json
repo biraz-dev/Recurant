@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "aquatic-living-laboratory",
+  "title": "Aquatic Living Laboratory",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/aquatic-living-laboratory/materials/wall_diffuse_256.png",
+      "low_memory_basecolor": "themes/aquatic-living-laboratory/materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "quiet pale ivory organic limestone blocks with faint mineral veins, simple straight seams"
+    },
+    "ground": {
+      "basecolor": "themes/aquatic-living-laboratory/materials/ground_diffuse_256.png",
+      "low_memory_basecolor": "themes/aquatic-living-laboratory/materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "pale dry shell-limestone polygon paving, subtle jade hairline joints"
+    },
+    "structure": {
+      "basecolor": "themes/aquatic-living-laboratory/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/aquatic-living-laboratory/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "sea-glass and bone mineral rib material, fine pale flowing striations through muted green glass"
+    },
+    "detail": {
+      "basecolor": "themes/aquatic-living-laboratory/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/aquatic-living-laboratory/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "flat decorative aqua glass panel with delicate fern-like aquatic frond tracery, tiny orchid accents"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_inset_2m",
+      "role": "walkable_floor",
+      "notes": "Inset 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "tissue_wall_2m",
+      "role": "structure",
+      "notes": "Living wall with five irregular vascular ribs over a membrane backing."
+    },
+    {
+      "module_id": "tissue_rib_arch",
+      "role": "structure",
+      "notes": "Continuous bony/organic rib arch, separate from the backing membrane."
+    },
+    {
+      "module_id": "tank_vertical",
+      "role": "distinctive_prop",
+      "notes": "Cylindrical industrial vessel on square plinth."
+    },
+    {
+      "module_id": "coral_branch",
+      "role": "distinctive_prop",
+      "notes": "Forked reef-coral solid with seven visible branch tips."
+    },
+    {
+      "module_id": "organic_pod",
+      "role": "distinctive_prop",
+      "notes": "Closed tapered hanging/growing seed pod."
+    },
+    {
+      "module_id": "pipe_valve_riser",
+      "role": "distinctive_prop",
+      "notes": "Vertical pipe riser with front-mounted handwheel (static prop)."
+    },
+    {
+      "module_id": "coral_shelf_cluster",
+      "role": "distinctive_prop",
+      "notes": "Layered low-poly coral plates for shoreline and underwater scenes."
+    },
+    {
+      "module_id": "machine_console",
+      "role": "distinctive_prop",
+      "notes": "Waist-high console with sloped top and three raised controls."
+    },
+    {
+      "module_id": "crystal_cluster",
+      "role": "distinctive_prop",
+      "notes": "Four asymmetric faceted crystal prisms with divergent growth."
+    },
+    {
+      "module_id": "broadleaf_clump",
+      "role": "distinctive_prop",
+      "notes": "Eight thick diamond leaves, actual double-volume geometry, not alpha cards."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/aquatic-living-laboratory/assembly/layout.json",
+    "glb": "themes/aquatic-living-laboratory/assembly/showcase.glb",
+    "preview": "themes/aquatic-living-laboratory/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 6236,
+      "triangles": 3290,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "98a93ba36ee6cd0fd802a0051af31d96583a54d872f3a40193bae69e8487b1af",
+        "showcase.glb": "7d1b4f790711d7f99b036e54e1c3ad689718fe191c5b823d1e3d423b4abc4552"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "e7071e6e8fdf1ea5af6353af21390f61443d2e3338a0473152a9e6ff093b1864"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/aquatic-living-laboratory/material-manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

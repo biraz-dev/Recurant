@@ -1,0 +1,1802 @@
+{
+  "schema": "recurant.lossless-source-aliases.v1",
+  "restore_target": "Recurant_55_Theme_Kits_Essentials",
+  "unique_blobs": [
+    {
+      "path": "blobs/9109824579acb5d04b749e69610adf1664512329c8cfeb59b8226542a3337214.blend",
+      "sha256": "9109824579acb5d04b749e69610adf1664512329c8cfeb59b8226542a3337214",
+      "bytes": 9976796
+    },
+    {
+      "path": "blobs/a61827515c830cef7bd01a68470fc10075405c93630bb92d5a450187208bb411.png",
+      "sha256": "a61827515c830cef7bd01a68470fc10075405c93630bb92d5a450187208bb411",
+      "bytes": 2567180
+    },
+    {
+      "path": "blobs/c61033d5fdf755d75cf57e8748fb6249ca4356d15f780c222275f36c24fda855.png",
+      "sha256": "c61033d5fdf755d75cf57e8748fb6249ca4356d15f780c222275f36c24fda855",
+      "bytes": 2458577
+    },
+    {
+      "path": "blobs/47ade06b93a268969e2326dabc70cea641d795f614ddff2f55101f11b168a426.png",
+      "sha256": "47ade06b93a268969e2326dabc70cea641d795f614ddff2f55101f11b168a426",
+      "bytes": 2319028
+    },
+    {
+      "path": "blobs/b83a29d53cb42ca40a1000df0a3d96b9f1f58437ffb3a389b40b88afb966b4c8.png",
+      "sha256": "b83a29d53cb42ca40a1000df0a3d96b9f1f58437ffb3a389b40b88afb966b4c8",
+      "bytes": 3747564
+    },
+    {
+      "path": "blobs/1a28276381cb8a7568c837a411c78768b2bcb0f86f0410263f427904997c17ab.json",
+      "sha256": "1a28276381cb8a7568c837a411c78768b2bcb0f86f0410263f427904997c17ab",
+      "bytes": 3945
+    },
+    {
+      "path": "blobs/c455574d75d27c8a8faf5665c7339e7f591f6e84ba7e8b89ed1fb9b5c54e132a.png",
+      "sha256": "c455574d75d27c8a8faf5665c7339e7f591f6e84ba7e8b89ed1fb9b5c54e132a",
+      "bytes": 3191683
+    },
+    {
+      "path": "blobs/40a43e63233073ca1eb8c6854d5b19f9fe779ff54d3d92fdcc4ea9e1daa09dd2.png",
+      "sha256": "40a43e63233073ca1eb8c6854d5b19f9fe779ff54d3d92fdcc4ea9e1daa09dd2",
+      "bytes": 3651838
+    },
+    {
+      "path": "blobs/eb887e2ec5f9f096a369442c0da3eddf926b2ae38a98d0e5ed47dd49616adbea.json",
+      "sha256": "eb887e2ec5f9f096a369442c0da3eddf926b2ae38a98d0e5ed47dd49616adbea",
+      "bytes": 526
+    },
+    {
+      "path": "blobs/50f6353af253ac2a6e8f3d88d73a78ed9e8b5a5752fb7c972615bfee74cd3e75.png",
+      "sha256": "50f6353af253ac2a6e8f3d88d73a78ed9e8b5a5752fb7c972615bfee74cd3e75",
+      "bytes": 3489156
+    },
+    {
+      "path": "blobs/b5d8306ed7379d1623c35cb08c37968c3972a419baa0600f7c1a8077c73226a8.png",
+      "sha256": "b5d8306ed7379d1623c35cb08c37968c3972a419baa0600f7c1a8077c73226a8",
+      "bytes": 3001958
+    },
+    {
+      "path": "blobs/4f611a20accd70d73ac093dec96c52cf149dff07132f62e49dcd5fe78b4efc38.json",
+      "sha256": "4f611a20accd70d73ac093dec96c52cf149dff07132f62e49dcd5fe78b4efc38",
+      "bytes": 446
+    },
+    {
+      "path": "blobs/9bd4c09486ab3eb31de6c0184098e224c66e45dd2f25ba9d8e84c80066a8471b.png",
+      "sha256": "9bd4c09486ab3eb31de6c0184098e224c66e45dd2f25ba9d8e84c80066a8471b",
+      "bytes": 2911912
+    },
+    {
+      "path": "blobs/dd35ca5fb66431cc948101120e5c3997882788a4d63e2a025faba0521130810c.png",
+      "sha256": "dd35ca5fb66431cc948101120e5c3997882788a4d63e2a025faba0521130810c",
+      "bytes": 40825
+    },
+    {
+      "path": "blobs/25f2d3428eb11358808b0e3e3d01f85ace892cb9e5b15a99022a81599125f922.png",
+      "sha256": "25f2d3428eb11358808b0e3e3d01f85ace892cb9e5b15a99022a81599125f922",
+      "bytes": 155289
+    },
+    {
+      "path": "blobs/8b90e37c27beefeeb32e66f8712e5a4597a15026c2806a3bd96322a22ed58880.png",
+      "sha256": "8b90e37c27beefeeb32e66f8712e5a4597a15026c2806a3bd96322a22ed58880",
+      "bytes": 3410111
+    },
+    {
+      "path": "blobs/ff6a0cb404752324aca9b4011dcef35a178d380911cce5ce17efa0d707c01400.png",
+      "sha256": "ff6a0cb404752324aca9b4011dcef35a178d380911cce5ce17efa0d707c01400",
+      "bytes": 2957708
+    },
+    {
+      "path": "blobs/3d29031a4f6afac679cb463fe47a01cd685dc0d7eebcdc097b97ab52b9177c1c.json",
+      "sha256": "3d29031a4f6afac679cb463fe47a01cd685dc0d7eebcdc097b97ab52b9177c1c",
+      "bytes": 425
+    },
+    {
+      "path": "blobs/81e869678c4e17267bc08462415d731d43e9c71a884560a26bc5cd976031049c.png",
+      "sha256": "81e869678c4e17267bc08462415d731d43e9c71a884560a26bc5cd976031049c",
+      "bytes": 2692317
+    },
+    {
+      "path": "blobs/c4b2122aac4943c925fbd0bf97f1e8a4cb97553951b35299b2f7a8524ebc0855.png",
+      "sha256": "c4b2122aac4943c925fbd0bf97f1e8a4cb97553951b35299b2f7a8524ebc0855",
+      "bytes": 3363484
+    },
+    {
+      "path": "blobs/7b9bea90fa93e2252298e554d4aaca9095d52d3b6af8af16306de071280aefa5.png",
+      "sha256": "7b9bea90fa93e2252298e554d4aaca9095d52d3b6af8af16306de071280aefa5",
+      "bytes": 2548453
+    },
+    {
+      "path": "blobs/c2648bf34b47f947160b3d64fac1cd0197fb40cfdb6e704c13e4210eb7f7559a.png",
+      "sha256": "c2648bf34b47f947160b3d64fac1cd0197fb40cfdb6e704c13e4210eb7f7559a",
+      "bytes": 3394671
+    },
+    {
+      "path": "blobs/7baf43b8a66568a9354b382ab600f597e221e00d8563a3c348c18abdb0e4c450.png",
+      "sha256": "7baf43b8a66568a9354b382ab600f597e221e00d8563a3c348c18abdb0e4c450",
+      "bytes": 2165148
+    },
+    {
+      "path": "blobs/a331492e59dbaa5d835fbca1abaf753e280698b381f28347f5e1b4bb922f3799.png",
+      "sha256": "a331492e59dbaa5d835fbca1abaf753e280698b381f28347f5e1b4bb922f3799",
+      "bytes": 3313435
+    },
+    {
+      "path": "blobs/7dde9d1632771f634ad11350b8f10b803eb54c231fc47238f934e97d611b8c40.json",
+      "sha256": "7dde9d1632771f634ad11350b8f10b803eb54c231fc47238f934e97d611b8c40",
+      "bytes": 3923
+    },
+    {
+      "path": "blobs/37884085e437e3b6edb4162a3a447f5875b450002fdc9d7cb28abfe98bccfe47.png",
+      "sha256": "37884085e437e3b6edb4162a3a447f5875b450002fdc9d7cb28abfe98bccfe47",
+      "bytes": 3082296
+    },
+    {
+      "path": "blobs/732bc09b4930d85811496af293ff702fa572fb5f898747647f6b6f80db266c80.png",
+      "sha256": "732bc09b4930d85811496af293ff702fa572fb5f898747647f6b6f80db266c80",
+      "bytes": 3618123
+    },
+    {
+      "path": "blobs/7e52ae99a13b9210d4450b723790a1f848833ec71e75b127abd3902707ae71a6.png",
+      "sha256": "7e52ae99a13b9210d4450b723790a1f848833ec71e75b127abd3902707ae71a6",
+      "bytes": 3996375
+    },
+    {
+      "path": "blobs/43b9cbe6592e42a37e1c4259c68d106a6435a50e17700c577167c967ac206d9d.png",
+      "sha256": "43b9cbe6592e42a37e1c4259c68d106a6435a50e17700c577167c967ac206d9d",
+      "bytes": 2246394
+    },
+    {
+      "path": "blobs/240ae7a8a21c8d1a8bd39429b03e9e42c0a30d5cb08dd0e34616ebe21ed5493b.png",
+      "sha256": "240ae7a8a21c8d1a8bd39429b03e9e42c0a30d5cb08dd0e34616ebe21ed5493b",
+      "bytes": 3598407
+    },
+    {
+      "path": "blobs/0d3065110b748f2af3babc924c2f7530c2656df77f6ca857ae6fea4a038eef54.json",
+      "sha256": "0d3065110b748f2af3babc924c2f7530c2656df77f6ca857ae6fea4a038eef54",
+      "bytes": 420
+    },
+    {
+      "path": "blobs/eb0f80b85f7e6aa483d2f46ea52ff2d460b08dc9f00ce2f62a70baad5f3bdf6b.png",
+      "sha256": "eb0f80b85f7e6aa483d2f46ea52ff2d460b08dc9f00ce2f62a70baad5f3bdf6b",
+      "bytes": 2849519
+    },
+    {
+      "path": "blobs/d743121872ff26ddad2512ff71f97f29586c3a88f1d4cf5a273ff7f5828a6ff2.png",
+      "sha256": "d743121872ff26ddad2512ff71f97f29586c3a88f1d4cf5a273ff7f5828a6ff2",
+      "bytes": 3829718
+    },
+    {
+      "path": "blobs/dbabdce26199a94a01b4b45bc8552c9042adc0b629f93fa07373967425aceff2.png",
+      "sha256": "dbabdce26199a94a01b4b45bc8552c9042adc0b629f93fa07373967425aceff2",
+      "bytes": 4146070
+    },
+    {
+      "path": "blobs/ba1b8fd9266849a04a9d6dd9db483171a3ad7d2c57aa698e4ed9fde3fd8ba679.png",
+      "sha256": "ba1b8fd9266849a04a9d6dd9db483171a3ad7d2c57aa698e4ed9fde3fd8ba679",
+      "bytes": 3263895
+    },
+    {
+      "path": "blobs/bf2351398509b42700abf585773a969f46a89f09fef81c37d874e06cf0b6b82e.png",
+      "sha256": "bf2351398509b42700abf585773a969f46a89f09fef81c37d874e06cf0b6b82e",
+      "bytes": 3106020
+    },
+    {
+      "path": "blobs/60be132f40daefc0b78b50bcd6b6fb75e32aa364c3e9ab78c8d0bfd2cf3e2853.json",
+      "sha256": "60be132f40daefc0b78b50bcd6b6fb75e32aa364c3e9ab78c8d0bfd2cf3e2853",
+      "bytes": 504
+    },
+    {
+      "path": "blobs/d257d7eb727aef3e87c1799704a347228639f16717a5f9637ded061338effd97.png",
+      "sha256": "d257d7eb727aef3e87c1799704a347228639f16717a5f9637ded061338effd97",
+      "bytes": 34149
+    },
+    {
+      "path": "blobs/e78d9a89ec3b813fb4246b7b5efad33f4f89868b60f821be244c025cb7f44d54.png",
+      "sha256": "e78d9a89ec3b813fb4246b7b5efad33f4f89868b60f821be244c025cb7f44d54",
+      "bytes": 129784
+    },
+    {
+      "path": "blobs/9785d09d8013af7c94169bd38b7985d61ef4faa261b479c984c05e9ecebf1a92.png",
+      "sha256": "9785d09d8013af7c94169bd38b7985d61ef4faa261b479c984c05e9ecebf1a92",
+      "bytes": 2229460
+    },
+    {
+      "path": "blobs/d965e0fb234e5dca0e4b579f6db93992fa22eab6710005b9aa68e7050b34f63a.png",
+      "sha256": "d965e0fb234e5dca0e4b579f6db93992fa22eab6710005b9aa68e7050b34f63a",
+      "bytes": 2595904
+    },
+    {
+      "path": "blobs/220cc8c3caecc7bae53745e9d8ac80c2416846ee819f822ea831ce1445f56190.png",
+      "sha256": "220cc8c3caecc7bae53745e9d8ac80c2416846ee819f822ea831ce1445f56190",
+      "bytes": 3769067
+    },
+    {
+      "path": "blobs/8fe5b216f65ba7884245d87139927d6ffe5254968a99809e2b52efe6203badcd.png",
+      "sha256": "8fe5b216f65ba7884245d87139927d6ffe5254968a99809e2b52efe6203badcd",
+      "bytes": 3485908
+    },
+    {
+      "path": "blobs/89a957901e8dc432b92a77c8b70ee1ab531424adf7af2d8f6410ea5dddde89c8.png",
+      "sha256": "89a957901e8dc432b92a77c8b70ee1ab531424adf7af2d8f6410ea5dddde89c8",
+      "bytes": 2451878
+    },
+    {
+      "path": "blobs/90c6a1d59cae28993be633aec617aed51158d374dea506201a35ac13ad59c1c9.png",
+      "sha256": "90c6a1d59cae28993be633aec617aed51158d374dea506201a35ac13ad59c1c9",
+      "bytes": 2698558
+    },
+    {
+      "path": "blobs/fc6613814b8ed43dc98034b39e09e48a3a3ed6ffacd6cd6d9582f0b3fe7bb366.json",
+      "sha256": "fc6613814b8ed43dc98034b39e09e48a3a3ed6ffacd6cd6d9582f0b3fe7bb366",
+      "bytes": 463
+    },
+    {
+      "path": "blobs/7c57a24ba650ef979e0da56f50bab90bc6a3c942a701954070b73584cc2fc7eb.png",
+      "sha256": "7c57a24ba650ef979e0da56f50bab90bc6a3c942a701954070b73584cc2fc7eb",
+      "bytes": 2626779
+    },
+    {
+      "path": "blobs/a010745897554a4ebb6d6ddbb56d02f476b0cf998e7a4d322267827436f5b880.png",
+      "sha256": "a010745897554a4ebb6d6ddbb56d02f476b0cf998e7a4d322267827436f5b880",
+      "bytes": 3296317
+    },
+    {
+      "path": "blobs/be38b7c798056c68d4a9afff706ee5c31f926fa5637e0c5bc0f339c3b49f9cd3.json",
+      "sha256": "be38b7c798056c68d4a9afff706ee5c31f926fa5637e0c5bc0f339c3b49f9cd3",
+      "bytes": 489
+    },
+    {
+      "path": "blobs/a956274d43b53e7ce684d95d03872fb37bef1c828d25b278dfe3b9cf1a5e59d7.png",
+      "sha256": "a956274d43b53e7ce684d95d03872fb37bef1c828d25b278dfe3b9cf1a5e59d7",
+      "bytes": 2951465
+    },
+    {
+      "path": "blobs/d981c8b4060a53385216d087c01434219bf4d2e29647835478ae75231c606848.png",
+      "sha256": "d981c8b4060a53385216d087c01434219bf4d2e29647835478ae75231c606848",
+      "bytes": 3693869
+    },
+    {
+      "path": "blobs/9c876d224395822615cd654af39b08bdcadcd57d5676a5821bba0927182aa391.png",
+      "sha256": "9c876d224395822615cd654af39b08bdcadcd57d5676a5821bba0927182aa391",
+      "bytes": 4045063
+    },
+    {
+      "path": "blobs/44d3fbda0484d381d2a90374ed31b619824ffcb184a1ef352bba649928b6324b.png",
+      "sha256": "44d3fbda0484d381d2a90374ed31b619824ffcb184a1ef352bba649928b6324b",
+      "bytes": 3021588
+    },
+    {
+      "path": "blobs/89e3a2fd136983e357aa40b5602ba132b0d2d4d3c06dfdf708e10a3bca5735f6.png",
+      "sha256": "89e3a2fd136983e357aa40b5602ba132b0d2d4d3c06dfdf708e10a3bca5735f6",
+      "bytes": 3456035
+    },
+    {
+      "path": "blobs/e075fb0fb4f55bca709a02f03cc3d81736d7e847274f8813b7b9ddb16193da2a.png",
+      "sha256": "e075fb0fb4f55bca709a02f03cc3d81736d7e847274f8813b7b9ddb16193da2a",
+      "bytes": 3285768
+    },
+    {
+      "path": "blobs/49b9acca028a41b0f9d81ca9dfa7b2da7c7d665ae3e644057b5434bc8150ccca.png",
+      "sha256": "49b9acca028a41b0f9d81ca9dfa7b2da7c7d665ae3e644057b5434bc8150ccca",
+      "bytes": 1950112
+    },
+    {
+      "path": "blobs/5a36f0ed576a4eeba42a104067ab6ade47376d50022c4027425baa11f9c4c2f0.png",
+      "sha256": "5a36f0ed576a4eeba42a104067ab6ade47376d50022c4027425baa11f9c4c2f0",
+      "bytes": 3428110
+    },
+    {
+      "path": "blobs/c53c7b37c571616c7186d679aaeeb90380a153056c7a6f2f22809b297affeba7.png",
+      "sha256": "c53c7b37c571616c7186d679aaeeb90380a153056c7a6f2f22809b297affeba7",
+      "bytes": 3228341
+    },
+    {
+      "path": "blobs/f897d222bbb85462319de13120af4a2c478df485fe9b01052b70d864b07699f5.png",
+      "sha256": "f897d222bbb85462319de13120af4a2c478df485fe9b01052b70d864b07699f5",
+      "bytes": 3041758
+    },
+    {
+      "path": "blobs/f48cce1d149fbf6f9ca5fa54187eb7609e8af450e5a70511d661bd5583c5847a.png",
+      "sha256": "f48cce1d149fbf6f9ca5fa54187eb7609e8af450e5a70511d661bd5583c5847a",
+      "bytes": 4179450
+    },
+    {
+      "path": "blobs/e78949e26ea3ff4047f662d09789d458e87bc6e4e2aadaf03f4da23da583ace0.png",
+      "sha256": "e78949e26ea3ff4047f662d09789d458e87bc6e4e2aadaf03f4da23da583ace0",
+      "bytes": 3950696
+    },
+    {
+      "path": "blobs/c613aca8f05e9c4428e4a5cccabd516d9d280d987d9832279e054585a981bc98.png",
+      "sha256": "c613aca8f05e9c4428e4a5cccabd516d9d280d987d9832279e054585a981bc98",
+      "bytes": 3594353
+    },
+    {
+      "path": "blobs/1f9b9556c3bc324b1acae13be7a594142f5eafb5d82bc35ef380aa0625a5109e.png",
+      "sha256": "1f9b9556c3bc324b1acae13be7a594142f5eafb5d82bc35ef380aa0625a5109e",
+      "bytes": 3916909
+    },
+    {
+      "path": "blobs/7f0d726aa940bfbcb0e588fdb2ec7931fff55ca4a0a07a894f2b1002a6456826.png",
+      "sha256": "7f0d726aa940bfbcb0e588fdb2ec7931fff55ca4a0a07a894f2b1002a6456826",
+      "bytes": 4549833
+    },
+    {
+      "path": "blobs/a0a78e82701a665766e167987565a2990141a1d39953432ce531e2d2f5e715ed.png",
+      "sha256": "a0a78e82701a665766e167987565a2990141a1d39953432ce531e2d2f5e715ed",
+      "bytes": 3576288
+    },
+    {
+      "path": "blobs/a78ec0ec948b7d03d87494dad85697d358a49bd925c5da2cb05c875e3443560d.png",
+      "sha256": "a78ec0ec948b7d03d87494dad85697d358a49bd925c5da2cb05c875e3443560d",
+      "bytes": 4135552
+    },
+    {
+      "path": "blobs/539218cabc7f73159a04420bf447e8bae6172838064a0cf43bdcccf8af27cdc0.png",
+      "sha256": "539218cabc7f73159a04420bf447e8bae6172838064a0cf43bdcccf8af27cdc0",
+      "bytes": 3773255
+    },
+    {
+      "path": "blobs/33e2c4ffb373ae90a1e03d72f450e7ec68404185cdb719d6a491c20d7789adbc.png",
+      "sha256": "33e2c4ffb373ae90a1e03d72f450e7ec68404185cdb719d6a491c20d7789adbc",
+      "bytes": 3557218
+    },
+    {
+      "path": "blobs/797732e97cd21fcc44bc4d041e038c29aa9ce4d25f4b131d5511896d48db75dd.png",
+      "sha256": "797732e97cd21fcc44bc4d041e038c29aa9ce4d25f4b131d5511896d48db75dd",
+      "bytes": 3933850
+    },
+    {
+      "path": "blobs/c81e049f50d981216ac87d014f278eb28884a3dc38141bd0519b8c4c8c647d82.png",
+      "sha256": "c81e049f50d981216ac87d014f278eb28884a3dc38141bd0519b8c4c8c647d82",
+      "bytes": 3122242
+    },
+    {
+      "path": "blobs/21a2714a3c8193c6c84a1dc1f1e2e93f4e5857e5f29ab0120eaeac7eb252a4f5.png",
+      "sha256": "21a2714a3c8193c6c84a1dc1f1e2e93f4e5857e5f29ab0120eaeac7eb252a4f5",
+      "bytes": 3489513
+    },
+    {
+      "path": "blobs/b8e64eff65e0d7e5f6031cd4d95b8328ca6e83e9c8c6c864f48606eb099aa056.json",
+      "sha256": "b8e64eff65e0d7e5f6031cd4d95b8328ca6e83e9c8c6c864f48606eb099aa056",
+      "bytes": 435
+    },
+    {
+      "path": "blobs/f85fd33c5a53858dfc5b78b98bd1a2daacf72506d4b68520b0e0ef4c37022543.png",
+      "sha256": "f85fd33c5a53858dfc5b78b98bd1a2daacf72506d4b68520b0e0ef4c37022543",
+      "bytes": 2602342
+    },
+    {
+      "path": "blobs/fd1de9bbec326f71f6710e599a31e9330129a98420da74f08c2475270a5a1192.png",
+      "sha256": "fd1de9bbec326f71f6710e599a31e9330129a98420da74f08c2475270a5a1192",
+      "bytes": 3205990
+    },
+    {
+      "path": "blobs/a30f76b6edd2c7aa52f39b545697171a856da0c517a952bedde8212f674bc584.json",
+      "sha256": "a30f76b6edd2c7aa52f39b545697171a856da0c517a952bedde8212f674bc584",
+      "bytes": 452
+    },
+    {
+      "path": "blobs/106e0fbe9020776297dd08ddc4cbad3358c64e75b44288d395b1258861d660fa.png",
+      "sha256": "106e0fbe9020776297dd08ddc4cbad3358c64e75b44288d395b1258861d660fa",
+      "bytes": 2538006
+    },
+    {
+      "path": "blobs/7df34d60db89acbf9be1588dcb0b0de9fea56c2af6a4a8f288724ee75be271f2.png",
+      "sha256": "7df34d60db89acbf9be1588dcb0b0de9fea56c2af6a4a8f288724ee75be271f2",
+      "bytes": 3483829
+    },
+    {
+      "path": "blobs/ebcf1592cbd7ded0e48d9ec7ba25391f844be1f715d8bd03e070c233a913da41.png",
+      "sha256": "ebcf1592cbd7ded0e48d9ec7ba25391f844be1f715d8bd03e070c233a913da41",
+      "bytes": 4344933
+    },
+    {
+      "path": "blobs/18384568b2c209bb60d17746f1b36a13b2c3e8151647410a0ad293bea846a3af.png",
+      "sha256": "18384568b2c209bb60d17746f1b36a13b2c3e8151647410a0ad293bea846a3af",
+      "bytes": 2958187
+    },
+    {
+      "path": "blobs/00f73c1af5383e63567c2b4062be86d65180c77a4b8de11cc526161d9f574251.png",
+      "sha256": "00f73c1af5383e63567c2b4062be86d65180c77a4b8de11cc526161d9f574251",
+      "bytes": 3539453
+    },
+    {
+      "path": "blobs/ff20b6dc9601b326c7cf522964723516d2011513f2c2da0f14b232e68d4db256.json",
+      "sha256": "ff20b6dc9601b326c7cf522964723516d2011513f2c2da0f14b232e68d4db256",
+      "bytes": 4575
+    },
+    {
+      "path": "blobs/0a74d9cb4797504befcef868209ef457aed5d7a4fba1853d208e7bcacdc4c4b9.png",
+      "sha256": "0a74d9cb4797504befcef868209ef457aed5d7a4fba1853d208e7bcacdc4c4b9",
+      "bytes": 3777313
+    },
+    {
+      "path": "blobs/e7549c8380713d241159cdb7696a4ec266a35ab353229b5a4ff0c89661cb7ae3.png",
+      "sha256": "e7549c8380713d241159cdb7696a4ec266a35ab353229b5a4ff0c89661cb7ae3",
+      "bytes": 3926154
+    },
+    {
+      "path": "blobs/69b1bd0a279e7677214424320baf02ff267a0844053bcb32f1d238eb372218be.json",
+      "sha256": "69b1bd0a279e7677214424320baf02ff267a0844053bcb32f1d238eb372218be",
+      "bytes": 3960
+    },
+    {
+      "path": "blobs/d533d21cd821caf29747f65fc005802baec2fbf76979da487438fcc9e8c623d0.png",
+      "sha256": "d533d21cd821caf29747f65fc005802baec2fbf76979da487438fcc9e8c623d0",
+      "bytes": 3112501
+    },
+    {
+      "path": "blobs/473c329bdaf0f9892b459399f69455376a3e1aded61bf9e03248a2469378ed31.png",
+      "sha256": "473c329bdaf0f9892b459399f69455376a3e1aded61bf9e03248a2469378ed31",
+      "bytes": 3488337
+    },
+    {
+      "path": "blobs/7a8e70107c4bc4c9bbf0b86ac00e41a7c8a59ebeb5a317be0e4139edc7c0bc70.png",
+      "sha256": "7a8e70107c4bc4c9bbf0b86ac00e41a7c8a59ebeb5a317be0e4139edc7c0bc70",
+      "bytes": 3183154
+    },
+    {
+      "path": "blobs/9e06cdb55ed3b0563d0f5cb695a0ffc6efbced66cd2f62b62ba6c39e88272f90.png",
+      "sha256": "9e06cdb55ed3b0563d0f5cb695a0ffc6efbced66cd2f62b62ba6c39e88272f90",
+      "bytes": 3333945
+    },
+    {
+      "path": "blobs/686c4552cd77713ca6977b65c4c39869acc2ec8cc6a414f1d6be30491720ef43.json",
+      "sha256": "686c4552cd77713ca6977b65c4c39869acc2ec8cc6a414f1d6be30491720ef43",
+      "bytes": 464
+    },
+    {
+      "path": "blobs/b21b6ffbeb543d7ba3e9d864b36deb8eda86cc6096eb89ca57f6996b433796ec.png",
+      "sha256": "b21b6ffbeb543d7ba3e9d864b36deb8eda86cc6096eb89ca57f6996b433796ec",
+      "bytes": 41545
+    },
+    {
+      "path": "blobs/8e7818a582032dcdcae4356afae9e57546015e1108e68fd4d4a43fe27824ed44.png",
+      "sha256": "8e7818a582032dcdcae4356afae9e57546015e1108e68fd4d4a43fe27824ed44",
+      "bytes": 154365
+    },
+    {
+      "path": "blobs/538590a3d96b46a4ca873bee1da0a52dbc22aa8970ce3e33edb60ecee1ac6cbc.png",
+      "sha256": "538590a3d96b46a4ca873bee1da0a52dbc22aa8970ce3e33edb60ecee1ac6cbc",
+      "bytes": 2670540
+    },
+    {
+      "path": "blobs/63111decb5e0d64556c6b7c253e3ab68204ee9b607f6afd173c5b1e9aa38dfaa.png",
+      "sha256": "63111decb5e0d64556c6b7c253e3ab68204ee9b607f6afd173c5b1e9aa38dfaa",
+      "bytes": 2695003
+    },
+    {
+      "path": "blobs/fcb84e252e8fc0f20d8e82b2e80a02be31f2e6a67fec516789d61cf4d8934f0f.png",
+      "sha256": "fcb84e252e8fc0f20d8e82b2e80a02be31f2e6a67fec516789d61cf4d8934f0f",
+      "bytes": 3150337
+    },
+    {
+      "path": "blobs/cbd57ea03b9c49a3c3430ba35511790d1758e7442b6e30f4c58af8515839ea34.png",
+      "sha256": "cbd57ea03b9c49a3c3430ba35511790d1758e7442b6e30f4c58af8515839ea34",
+      "bytes": 2625000
+    },
+    {
+      "path": "blobs/93403b479fefc7e8199a2de00af4dab302c61dc182f8cae0f8e080673df9e9a5.png",
+      "sha256": "93403b479fefc7e8199a2de00af4dab302c61dc182f8cae0f8e080673df9e9a5",
+      "bytes": 34548
+    },
+    {
+      "path": "blobs/774540fa5ec13df367cbf5256c43c9f10fa62d678134d432f5d38ca77cd3da92.png",
+      "sha256": "774540fa5ec13df367cbf5256c43c9f10fa62d678134d432f5d38ca77cd3da92",
+      "bytes": 123853
+    },
+    {
+      "path": "blobs/f6d5fd70748cd255b33d4d31ccd9edac76493f936cbcf402cb089566003759c9.png",
+      "sha256": "f6d5fd70748cd255b33d4d31ccd9edac76493f936cbcf402cb089566003759c9",
+      "bytes": 1812443
+    },
+    {
+      "path": "blobs/5cd850a9131302e5ab1d6d7b788f2bf5bb1eb838740fac3e4cecce9d7e8cc5c3.png",
+      "sha256": "5cd850a9131302e5ab1d6d7b788f2bf5bb1eb838740fac3e4cecce9d7e8cc5c3",
+      "bytes": 2856864
+    },
+    {
+      "path": "blobs/7da4c643d2ae2d56dee28f9147c740043fb90c9f4cefe6f83f80262b4f855cb2.json",
+      "sha256": "7da4c643d2ae2d56dee28f9147c740043fb90c9f4cefe6f83f80262b4f855cb2",
+      "bytes": 501
+    },
+    {
+      "path": "blobs/16ec5160bb3a1d883bde00f8bee0b9345326c7882238c6d8334705f5ddaa6b0d.png",
+      "sha256": "16ec5160bb3a1d883bde00f8bee0b9345326c7882238c6d8334705f5ddaa6b0d",
+      "bytes": 2524218
+    },
+    {
+      "path": "blobs/216666006a7055e1fb234e25ef7f0413840f0cf8b36398bce4e3b3aec3a03ccf.png",
+      "sha256": "216666006a7055e1fb234e25ef7f0413840f0cf8b36398bce4e3b3aec3a03ccf",
+      "bytes": 3540499
+    },
+    {
+      "path": "blobs/3a8cb85d7dd37669bbe76c0dcfdcf75f525e45e7394308abe781b137aba853ad.png",
+      "sha256": "3a8cb85d7dd37669bbe76c0dcfdcf75f525e45e7394308abe781b137aba853ad",
+      "bytes": 2808749
+    },
+    {
+      "path": "blobs/ccba2f0cd9bd3bec8a68ccb5cd86accdd8ca59c36f513745693261b7cf9ebc3d.png",
+      "sha256": "ccba2f0cd9bd3bec8a68ccb5cd86accdd8ca59c36f513745693261b7cf9ebc3d",
+      "bytes": 3921445
+    },
+    {
+      "path": "blobs/6f83b0faa18fc64d7491bc951fc080578d55442b6558e875fe6b7f8f2151251b.png",
+      "sha256": "6f83b0faa18fc64d7491bc951fc080578d55442b6558e875fe6b7f8f2151251b",
+      "bytes": 4279661
+    },
+    {
+      "path": "blobs/8c3f1307902d34121e25721bb710653957d94b32be851468fb3809e4d901b85b.png",
+      "sha256": "8c3f1307902d34121e25721bb710653957d94b32be851468fb3809e4d901b85b",
+      "bytes": 3038600
+    },
+    {
+      "path": "blobs/512afaaeb62529d43495862e7ef43457d814368983fa7dc84c4dff46966e07f2.png",
+      "sha256": "512afaaeb62529d43495862e7ef43457d814368983fa7dc84c4dff46966e07f2",
+      "bytes": 3661247
+    },
+    {
+      "path": "blobs/f8a9c072ecd647bcf14877e8adb6fff18f4358556431d19e51009218b575b985.png",
+      "sha256": "f8a9c072ecd647bcf14877e8adb6fff18f4358556431d19e51009218b575b985",
+      "bytes": 2577786
+    },
+    {
+      "path": "blobs/38ac632aaec1811c1161d8f6167911d0d7dd8d7fec1755a4f49c4bd2ecd0f12d.png",
+      "sha256": "38ac632aaec1811c1161d8f6167911d0d7dd8d7fec1755a4f49c4bd2ecd0f12d",
+      "bytes": 3704272
+    },
+    {
+      "path": "blobs/0096f3fd5e9dbaa2ebe9b6bf287a3d05fdfc8b31bcae7f9aebcb37c9b6e30f03.png",
+      "sha256": "0096f3fd5e9dbaa2ebe9b6bf287a3d05fdfc8b31bcae7f9aebcb37c9b6e30f03",
+      "bytes": 1842560
+    },
+    {
+      "path": "blobs/4da489f495a3b21337ec4ea2f03b7c905410209c44b8ae0ab15a271719daa0a7.png",
+      "sha256": "4da489f495a3b21337ec4ea2f03b7c905410209c44b8ae0ab15a271719daa0a7",
+      "bytes": 3219231
+    },
+    {
+      "path": "blobs/66c5f9dafd801efbb6b5da47a944d40974134db5e4f5b3d3032e056051a69249.png",
+      "sha256": "66c5f9dafd801efbb6b5da47a944d40974134db5e4f5b3d3032e056051a69249",
+      "bytes": 2468739
+    },
+    {
+      "path": "blobs/82dc9b2f99790cdac61500ba0d7918fe4ddaa6aec8be5ba4ba52b5ff250a98e0.png",
+      "sha256": "82dc9b2f99790cdac61500ba0d7918fe4ddaa6aec8be5ba4ba52b5ff250a98e0",
+      "bytes": 3445016
+    },
+    {
+      "path": "blobs/a2ba23bf3050c9cfac851807a6d195e503be28909cb55c4ce253bfa8db784181.png",
+      "sha256": "a2ba23bf3050c9cfac851807a6d195e503be28909cb55c4ce253bfa8db784181",
+      "bytes": 2390592
+    },
+    {
+      "path": "blobs/82dd2c13e551c08a13817a87940805301cf98648baf30fe94337eebef99462de.png",
+      "sha256": "82dd2c13e551c08a13817a87940805301cf98648baf30fe94337eebef99462de",
+      "bytes": 3396277
+    },
+    {
+      "path": "blobs/190a94f662f8f32cd457b54ead0a7833cb051273b9c3db801d3894eee0e3d220.json",
+      "sha256": "190a94f662f8f32cd457b54ead0a7833cb051273b9c3db801d3894eee0e3d220",
+      "bytes": 470
+    },
+    {
+      "path": "blobs/1d966ca8bb78bed7bf1de71ce04c803729db71dccfd6afc57039e658c17a16a7.png",
+      "sha256": "1d966ca8bb78bed7bf1de71ce04c803729db71dccfd6afc57039e658c17a16a7",
+      "bytes": 3181195
+    },
+    {
+      "path": "blobs/fca4f9ea7b0da35c4e25d5c46ebc6669bc15cb54be310a9603700fb2f7afcba1.png",
+      "sha256": "fca4f9ea7b0da35c4e25d5c46ebc6669bc15cb54be310a9603700fb2f7afcba1",
+      "bytes": 3642134
+    },
+    {
+      "path": "blobs/d4ee1af0b5fd30fa11367fd67a9e6b69ac87512d24bfa4198960bcb39dd909dc.png",
+      "sha256": "d4ee1af0b5fd30fa11367fd67a9e6b69ac87512d24bfa4198960bcb39dd909dc",
+      "bytes": 2836176
+    },
+    {
+      "path": "blobs/0667b2abea6040bc0cb6f87ea7b19c2300ddedb9abb0d8e4b963498f3836c96a.png",
+      "sha256": "0667b2abea6040bc0cb6f87ea7b19c2300ddedb9abb0d8e4b963498f3836c96a",
+      "bytes": 3761624
+    },
+    {
+      "path": "blobs/00a5b6707ae1a7070644c7f8692dd81b34f97d8308abebd99d1b6165b78dccbf.png",
+      "sha256": "00a5b6707ae1a7070644c7f8692dd81b34f97d8308abebd99d1b6165b78dccbf",
+      "bytes": 4257393
+    },
+    {
+      "path": "blobs/d21d69bc65d762f99ea79fdfd94de00ad5435ddfb96f049ecc9190ed5b1e80c5.png",
+      "sha256": "d21d69bc65d762f99ea79fdfd94de00ad5435ddfb96f049ecc9190ed5b1e80c5",
+      "bytes": 3645122
+    },
+    {
+      "path": "blobs/63113579477ddfbb395c08eb20b560064045689b4e5f43ce9501ef2e46b88779.png",
+      "sha256": "63113579477ddfbb395c08eb20b560064045689b4e5f43ce9501ef2e46b88779",
+      "bytes": 3710091
+    },
+    {
+      "path": "blobs/b59a2297066c807429c8d7563fe17de5bdd4de6095b741e8f38f4d84814958c5.png",
+      "sha256": "b59a2297066c807429c8d7563fe17de5bdd4de6095b741e8f38f4d84814958c5",
+      "bytes": 3449262
+    },
+    {
+      "path": "blobs/cad3044d0e4b402cefaad6cff52827a99c42dc32a5a1ee969899bed3e7a37aea.png",
+      "sha256": "cad3044d0e4b402cefaad6cff52827a99c42dc32a5a1ee969899bed3e7a37aea",
+      "bytes": 3483948
+    },
+    {
+      "path": "blobs/f6d70403a4c1faba54e4649f56d649d9339d7fa86d3c2bfa123b794481878097.json",
+      "sha256": "f6d70403a4c1faba54e4649f56d649d9339d7fa86d3c2bfa123b794481878097",
+      "bytes": 3876
+    },
+    {
+      "path": "blobs/73e15091b9cdc1d97ff84f2537a14813e918f434966f4f84f2c058ec0a9ef79a.png",
+      "sha256": "73e15091b9cdc1d97ff84f2537a14813e918f434966f4f84f2c058ec0a9ef79a",
+      "bytes": 3116423
+    },
+    {
+      "path": "blobs/23105dc1c2e007df40132d872b5df45b4c296d98de057e3ad413c983e30f519b.png",
+      "sha256": "23105dc1c2e007df40132d872b5df45b4c296d98de057e3ad413c983e30f519b",
+      "bytes": 3741910
+    },
+    {
+      "path": "blobs/0d820bd43a32cdc46d491f0ac0763744ebba6ed8f33b1acab3e0c298eed74a8e.png",
+      "sha256": "0d820bd43a32cdc46d491f0ac0763744ebba6ed8f33b1acab3e0c298eed74a8e",
+      "bytes": 3070466
+    },
+    {
+      "path": "blobs/b9e584ec3b4302f44c5030eaa47af23aecf70f60bcbabbec7f62ebb477925bae.png",
+      "sha256": "b9e584ec3b4302f44c5030eaa47af23aecf70f60bcbabbec7f62ebb477925bae",
+      "bytes": 3308318
+    },
+    {
+      "path": "blobs/b826f759fa53d44f02235a4616302714ed8d63a13ddb0a291b8e2713711e1b59.json",
+      "sha256": "b826f759fa53d44f02235a4616302714ed8d63a13ddb0a291b8e2713711e1b59",
+      "bytes": 405
+    },
+    {
+      "path": "blobs/02f31bf848c3cae5b3001d96655c03fe25b35b4ddfc5241e0749044930195fb8.png",
+      "sha256": "02f31bf848c3cae5b3001d96655c03fe25b35b4ddfc5241e0749044930195fb8",
+      "bytes": 2874367
+    },
+    {
+      "path": "blobs/ff91bff608c97da3b29167ba0176953d94196e3585ef0504470a48935171dc05.png",
+      "sha256": "ff91bff608c97da3b29167ba0176953d94196e3585ef0504470a48935171dc05",
+      "bytes": 3634212
+    },
+    {
+      "path": "blobs/c9a75fbc559ff1bce96249b2488a86fbc481dbe799b2340af5a2daf892beadcd.json",
+      "sha256": "c9a75fbc559ff1bce96249b2488a86fbc481dbe799b2340af5a2daf892beadcd",
+      "bytes": 479
+    },
+    {
+      "path": "blobs/cb7692ed6c2533a4457314e4d84bfa86e2d67988b827a7b28c1bf48346458043.png",
+      "sha256": "cb7692ed6c2533a4457314e4d84bfa86e2d67988b827a7b28c1bf48346458043",
+      "bytes": 3150659
+    },
+    {
+      "path": "blobs/3058fab1a8b8814a5a31b89261ec5be4d9cbc507a29761821b39d3db1211e80b.png",
+      "sha256": "3058fab1a8b8814a5a31b89261ec5be4d9cbc507a29761821b39d3db1211e80b",
+      "bytes": 3106348
+    },
+    {
+      "path": "blobs/9891ccd47bdb5129f968861a0473de5aa21eac949b7dbdf5d2097ff03aef90ee.png",
+      "sha256": "9891ccd47bdb5129f968861a0473de5aa21eac949b7dbdf5d2097ff03aef90ee",
+      "bytes": 2964279
+    },
+    {
+      "path": "blobs/be9d61b1885c40e034b7bbecc0c0457cca30148f2a24d3ab12103fb902721d8e.png",
+      "sha256": "be9d61b1885c40e034b7bbecc0c0457cca30148f2a24d3ab12103fb902721d8e",
+      "bytes": 3462724
+    },
+    {
+      "path": "blobs/845ed215769705c0f19f65b6f72b2f8769efcd6d0d1a93d36ce32328eb55425d.png",
+      "sha256": "845ed215769705c0f19f65b6f72b2f8769efcd6d0d1a93d36ce32328eb55425d",
+      "bytes": 3063543
+    },
+    {
+      "path": "blobs/b881017c798909d044285e398c30f424179305ca52b7ebadb14da82f9a645964.png",
+      "sha256": "b881017c798909d044285e398c30f424179305ca52b7ebadb14da82f9a645964",
+      "bytes": 3135916
+    },
+    {
+      "path": "blobs/632bd509eed3d9134859dd01ae9cf9015b8dbca5698a064888ed443e7ac6f718.png",
+      "sha256": "632bd509eed3d9134859dd01ae9cf9015b8dbca5698a064888ed443e7ac6f718",
+      "bytes": 2706125
+    },
+    {
+      "path": "blobs/b68c4c216077a6eee67d76a7b9f87ff0310101f6ff26e1fd4e27b826d6a20a2b.png",
+      "sha256": "b68c4c216077a6eee67d76a7b9f87ff0310101f6ff26e1fd4e27b826d6a20a2b",
+      "bytes": 3253382
+    },
+    {
+      "path": "blobs/51c843c43fa1cae554ab79d21cead2a98267c21c4d0db537338bc31545e0f720.png",
+      "sha256": "51c843c43fa1cae554ab79d21cead2a98267c21c4d0db537338bc31545e0f720",
+      "bytes": 2706850
+    },
+    {
+      "path": "blobs/ddbf2b515c010ff2bfebdb5cc6a5a557c0bef10eb09519db24ca1030fa9c0074.png",
+      "sha256": "ddbf2b515c010ff2bfebdb5cc6a5a557c0bef10eb09519db24ca1030fa9c0074",
+      "bytes": 3771064
+    },
+    {
+      "path": "blobs/a4937d41edbc63f8128a6d856189d639dab51fd044fbbc7aadd4cb8a1bcd5221.json",
+      "sha256": "a4937d41edbc63f8128a6d856189d639dab51fd044fbbc7aadd4cb8a1bcd5221",
+      "bytes": 4035
+    },
+    {
+      "path": "blobs/b1c308d39afe47911cd75408c8da550328bf60bb23d788542b3305409161200c.png",
+      "sha256": "b1c308d39afe47911cd75408c8da550328bf60bb23d788542b3305409161200c",
+      "bytes": 2942503
+    },
+    {
+      "path": "blobs/4fa9b38672809cc2d80ef7b951594588fb987b94b74c642d443ad642a0849d49.png",
+      "sha256": "4fa9b38672809cc2d80ef7b951594588fb987b94b74c642d443ad642a0849d49",
+      "bytes": 3398624
+    },
+    {
+      "path": "blobs/0a18698092dc3df2f1a0b14464e2b5411b2dce148ef2f0562eb7c499a66af7d6.png",
+      "sha256": "0a18698092dc3df2f1a0b14464e2b5411b2dce148ef2f0562eb7c499a66af7d6",
+      "bytes": 3495559
+    },
+    {
+      "path": "blobs/9887e1e96ba4e255ab4b9978d5c7ed1eb4180907476cbd53d10d103bae71fe44.png",
+      "sha256": "9887e1e96ba4e255ab4b9978d5c7ed1eb4180907476cbd53d10d103bae71fe44",
+      "bytes": 3003859
+    },
+    {
+      "path": "blobs/8bb634f4a62ceebe6b7df357adba431247efab9b02a1fbfb4995bbca1ab196db.json",
+      "sha256": "8bb634f4a62ceebe6b7df357adba431247efab9b02a1fbfb4995bbca1ab196db",
+      "bytes": 472
+    },
+    {
+      "path": "blobs/8a4a07b71860638f29a56e99cb9711b153313f8a12cf17119ceb298fe8eb824e.png",
+      "sha256": "8a4a07b71860638f29a56e99cb9711b153313f8a12cf17119ceb298fe8eb824e",
+      "bytes": 2610009
+    },
+    {
+      "path": "blobs/456ea264badaa224e2b3b7db6b29ba25bfc67a83bf2047c3ba0aab15aa4e608c.png",
+      "sha256": "456ea264badaa224e2b3b7db6b29ba25bfc67a83bf2047c3ba0aab15aa4e608c",
+      "bytes": 3793717
+    },
+    {
+      "path": "blobs/36f7035cd884ab0f41282e773915bd9610ba57adc7be2a0ee192b536b084f8b8.png",
+      "sha256": "36f7035cd884ab0f41282e773915bd9610ba57adc7be2a0ee192b536b084f8b8",
+      "bytes": 3032030
+    },
+    {
+      "path": "blobs/30415b8625f0623a408f2889e115db25bfa2fe58697ef7867c656360b89b4e3a.png",
+      "sha256": "30415b8625f0623a408f2889e115db25bfa2fe58697ef7867c656360b89b4e3a",
+      "bytes": 3796583
+    },
+    {
+      "path": "blobs/3af9d47fd7d1b0189b15c5dd37ba7ee17121d992bce124c8e002359973c6897b.json",
+      "sha256": "3af9d47fd7d1b0189b15c5dd37ba7ee17121d992bce124c8e002359973c6897b",
+      "bytes": 4207
+    },
+    {
+      "path": "blobs/336f05e1e0169a56ae4d65d2a742210d4b5e4c67c0cc6e8e83dc297d7925f7e7.png",
+      "sha256": "336f05e1e0169a56ae4d65d2a742210d4b5e4c67c0cc6e8e83dc297d7925f7e7",
+      "bytes": 3062402
+    }
+  ],
+  "files": [
+    {
+      "target": "common/geometry/Recurant_modular_geometry_library.blend",
+      "blob": "blobs/9109824579acb5d04b749e69610adf1664512329c8cfeb59b8226542a3337214.blend",
+      "sha256": "9109824579acb5d04b749e69610adf1664512329c8cfeb59b8226542a3337214",
+      "bytes": 9976796
+    },
+    {
+      "target": "themes/alabaster-temple/art_sources/material-atlas-initial.png",
+      "blob": "blobs/a61827515c830cef7bd01a68470fc10075405c93630bb92d5a450187208bb411.png",
+      "sha256": "a61827515c830cef7bd01a68470fc10075405c93630bb92d5a450187208bb411",
+      "bytes": 2567180
+    },
+    {
+      "target": "themes/alabaster-temple/art_sources/material-atlas-master.png",
+      "blob": "blobs/c61033d5fdf755d75cf57e8748fb6249ca4356d15f780c222275f36c24fda855.png",
+      "sha256": "c61033d5fdf755d75cf57e8748fb6249ca4356d15f780c222275f36c24fda855",
+      "bytes": 2458577
+    },
+    {
+      "target": "themes/alabaster-temple/art_sources/material-atlas-repair.png",
+      "blob": "blobs/c61033d5fdf755d75cf57e8748fb6249ca4356d15f780c222275f36c24fda855.png",
+      "sha256": "c61033d5fdf755d75cf57e8748fb6249ca4356d15f780c222275f36c24fda855",
+      "bytes": 2458577
+    },
+    {
+      "target": "themes/alabaster-temple/concept/source-studies/source-01.png",
+      "blob": "blobs/47ade06b93a268969e2326dabc70cea641d795f614ddff2f55101f11b168a426.png",
+      "sha256": "47ade06b93a268969e2326dabc70cea641d795f614ddff2f55101f11b168a426",
+      "bytes": 2319028
+    },
+    {
+      "target": "themes/ancient-forest/art_sources/material_atlas_v1.png",
+      "blob": "blobs/b83a29d53cb42ca40a1000df0a3d96b9f1f58437ffb3a389b40b88afb966b4c8.png",
+      "sha256": "b83a29d53cb42ca40a1000df0a3d96b9f1f58437ffb3a389b40b88afb966b4c8",
+      "bytes": 3747564
+    },
+    {
+      "target": "themes/ancient-forest/art_sources/theme_spec.json",
+      "blob": "blobs/1a28276381cb8a7568c837a411c78768b2bcb0f86f0410263f427904997c17ab.json",
+      "sha256": "1a28276381cb8a7568c837a411c78768b2bcb0f86f0410263f427904997c17ab",
+      "bytes": 3945
+    },
+    {
+      "target": "themes/ancient-forest/concept/source-studies/source-01.png",
+      "blob": "blobs/c455574d75d27c8a8faf5665c7339e7f591f6e84ba7e8b89ed1fb9b5c54e132a.png",
+      "sha256": "c455574d75d27c8a8faf5665c7339e7f591f6e84ba7e8b89ed1fb9b5c54e132a",
+      "bytes": 3191683
+    },
+    {
+      "target": "themes/aquatic-living-laboratory/art_sources/material_atlas_v1.png",
+      "blob": "blobs/40a43e63233073ca1eb8c6854d5b19f9fe779ff54d3d92fdcc4ea9e1daa09dd2.png",
+      "sha256": "40a43e63233073ca1eb8c6854d5b19f9fe779ff54d3d92fdcc4ea9e1daa09dd2",
+      "bytes": 3651838
+    },
+    {
+      "target": "themes/aquatic-living-laboratory/art_sources/theme_spec.json",
+      "blob": "blobs/eb887e2ec5f9f096a369442c0da3eddf926b2ae38a98d0e5ed47dd49616adbea.json",
+      "sha256": "eb887e2ec5f9f096a369442c0da3eddf926b2ae38a98d0e5ed47dd49616adbea",
+      "bytes": 526
+    },
+    {
+      "target": "themes/aquatic-living-laboratory/concept/source-studies/source-01.png",
+      "blob": "blobs/50f6353af253ac2a6e8f3d88d73a78ed9e8b5a5752fb7c972615bfee74cd3e75.png",
+      "sha256": "50f6353af253ac2a6e8f3d88d73a78ed9e8b5a5752fb7c972615bfee74cd3e75",
+      "bytes": 3489156
+    },
+    {
+      "target": "themes/arcane-factory/art_sources/material_atlas_v1.png",
+      "blob": "blobs/b5d8306ed7379d1623c35cb08c37968c3972a419baa0600f7c1a8077c73226a8.png",
+      "sha256": "b5d8306ed7379d1623c35cb08c37968c3972a419baa0600f7c1a8077c73226a8",
+      "bytes": 3001958
+    },
+    {
+      "target": "themes/arcane-factory/art_sources/theme_spec.json",
+      "blob": "blobs/4f611a20accd70d73ac093dec96c52cf149dff07132f62e49dcd5fe78b4efc38.json",
+      "sha256": "4f611a20accd70d73ac093dec96c52cf149dff07132f62e49dcd5fe78b4efc38",
+      "bytes": 446
+    },
+    {
+      "target": "themes/arcane-factory/concept/source-studies/source-01.png",
+      "blob": "blobs/9bd4c09486ab3eb31de6c0184098e224c66e45dd2f25ba9d8e84c80066a8471b.png",
+      "sha256": "9bd4c09486ab3eb31de6c0184098e224c66e45dd2f25ba9d8e84c80066a8471b",
+      "bytes": 2911912
+    },
+    {
+      "target": "themes/armory/art_sources/ground_diffuse_v1_128.png",
+      "blob": "blobs/dd35ca5fb66431cc948101120e5c3997882788a4d63e2a025faba0521130810c.png",
+      "sha256": "dd35ca5fb66431cc948101120e5c3997882788a4d63e2a025faba0521130810c",
+      "bytes": 40825
+    },
+    {
+      "target": "themes/armory/art_sources/ground_diffuse_v1_256.png",
+      "blob": "blobs/25f2d3428eb11358808b0e3e3d01f85ace892cb9e5b15a99022a81599125f922.png",
+      "sha256": "25f2d3428eb11358808b0e3e3d01f85ace892cb9e5b15a99022a81599125f922",
+      "bytes": 155289
+    },
+    {
+      "target": "themes/armory/art_sources/ground_repeat_fix_v2.png",
+      "blob": "blobs/8b90e37c27beefeeb32e66f8712e5a4597a15026c2806a3bd96322a22ed58880.png",
+      "sha256": "8b90e37c27beefeeb32e66f8712e5a4597a15026c2806a3bd96322a22ed58880",
+      "bytes": 3410111
+    },
+    {
+      "target": "themes/armory/art_sources/material_atlas_v1.png",
+      "blob": "blobs/ff6a0cb404752324aca9b4011dcef35a178d380911cce5ce17efa0d707c01400.png",
+      "sha256": "ff6a0cb404752324aca9b4011dcef35a178d380911cce5ce17efa0d707c01400",
+      "bytes": 2957708
+    },
+    {
+      "target": "themes/armory/art_sources/theme_spec.json",
+      "blob": "blobs/3d29031a4f6afac679cb463fe47a01cd685dc0d7eebcdc097b97ab52b9177c1c.json",
+      "sha256": "3d29031a4f6afac679cb463fe47a01cd685dc0d7eebcdc097b97ab52b9177c1c",
+      "bytes": 425
+    },
+    {
+      "target": "themes/armory/concept/source-studies/source-01.png",
+      "blob": "blobs/81e869678c4e17267bc08462415d731d43e9c71a884560a26bc5cd976031049c.png",
+      "sha256": "81e869678c4e17267bc08462415d731d43e9c71a884560a26bc5cd976031049c",
+      "bytes": 2692317
+    },
+    {
+      "target": "themes/astral-sanctuary/art_sources/material-atlas-master.png",
+      "blob": "blobs/c4b2122aac4943c925fbd0bf97f1e8a4cb97553951b35299b2f7a8524ebc0855.png",
+      "sha256": "c4b2122aac4943c925fbd0bf97f1e8a4cb97553951b35299b2f7a8524ebc0855",
+      "bytes": 3363484
+    },
+    {
+      "target": "themes/astral-sanctuary/concept/source-studies/source-01.png",
+      "blob": "blobs/7b9bea90fa93e2252298e554d4aaca9095d52d3b6af8af16306de071280aefa5.png",
+      "sha256": "7b9bea90fa93e2252298e554d4aaca9095d52d3b6af8af16306de071280aefa5",
+      "bytes": 2548453
+    },
+    {
+      "target": "themes/basalt-underworld/art_sources/material-atlas-master.png",
+      "blob": "blobs/c2648bf34b47f947160b3d64fac1cd0197fb40cfdb6e704c13e4210eb7f7559a.png",
+      "sha256": "c2648bf34b47f947160b3d64fac1cd0197fb40cfdb6e704c13e4210eb7f7559a",
+      "bytes": 3394671
+    },
+    {
+      "target": "themes/basalt-underworld/concept/source-studies/source-01.png",
+      "blob": "blobs/7baf43b8a66568a9354b382ab600f597e221e00d8563a3c348c18abdb0e4c450.png",
+      "sha256": "7baf43b8a66568a9354b382ab600f597e221e00d8563a3c348c18abdb0e4c450",
+      "bytes": 2165148
+    },
+    {
+      "target": "themes/blackwater-swamp/art_sources/material_atlas_v1.png",
+      "blob": "blobs/a331492e59dbaa5d835fbca1abaf753e280698b381f28347f5e1b4bb922f3799.png",
+      "sha256": "a331492e59dbaa5d835fbca1abaf753e280698b381f28347f5e1b4bb922f3799",
+      "bytes": 3313435
+    },
+    {
+      "target": "themes/blackwater-swamp/art_sources/theme_spec.json",
+      "blob": "blobs/7dde9d1632771f634ad11350b8f10b803eb54c231fc47238f934e97d611b8c40.json",
+      "sha256": "7dde9d1632771f634ad11350b8f10b803eb54c231fc47238f934e97d611b8c40",
+      "bytes": 3923
+    },
+    {
+      "target": "themes/blackwater-swamp/concept/source-studies/source-01.png",
+      "blob": "blobs/37884085e437e3b6edb4162a3a447f5875b450002fdc9d7cb28abfe98bccfe47.png",
+      "sha256": "37884085e437e3b6edb4162a3a447f5875b450002fdc9d7cb28abfe98bccfe47",
+      "bytes": 3082296
+    },
+    {
+      "target": "themes/bone-cavern/art_sources/material_atlas_source.png",
+      "blob": "blobs/732bc09b4930d85811496af293ff702fa572fb5f898747647f6b6f80db266c80.png",
+      "sha256": "732bc09b4930d85811496af293ff702fa572fb5f898747647f6b6f80db266c80",
+      "bytes": 3618123
+    },
+    {
+      "target": "themes/bone-cavern/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/7e52ae99a13b9210d4450b723790a1f848833ec71e75b127abd3902707ae71a6.png",
+      "sha256": "7e52ae99a13b9210d4450b723790a1f848833ec71e75b127abd3902707ae71a6",
+      "bytes": 3996375
+    },
+    {
+      "target": "themes/bone-cavern/concept/source-studies/source-01.png",
+      "blob": "blobs/43b9cbe6592e42a37e1c4259c68d106a6435a50e17700c577167c967ac206d9d.png",
+      "sha256": "43b9cbe6592e42a37e1c4259c68d106a6435a50e17700c577167c967ac206d9d",
+      "bytes": 2246394
+    },
+    {
+      "target": "themes/clockwork/art_sources/material_atlas_v1.png",
+      "blob": "blobs/240ae7a8a21c8d1a8bd39429b03e9e42c0a30d5cb08dd0e34616ebe21ed5493b.png",
+      "sha256": "240ae7a8a21c8d1a8bd39429b03e9e42c0a30d5cb08dd0e34616ebe21ed5493b",
+      "bytes": 3598407
+    },
+    {
+      "target": "themes/clockwork/art_sources/theme_spec.json",
+      "blob": "blobs/0d3065110b748f2af3babc924c2f7530c2656df77f6ca857ae6fea4a038eef54.json",
+      "sha256": "0d3065110b748f2af3babc924c2f7530c2656df77f6ca857ae6fea4a038eef54",
+      "bytes": 420
+    },
+    {
+      "target": "themes/clockwork/concept/source-studies/source-01.png",
+      "blob": "blobs/eb0f80b85f7e6aa483d2f46ea52ff2d460b08dc9f00ce2f62a70baad5f3bdf6b.png",
+      "sha256": "eb0f80b85f7e6aa483d2f46ea52ff2d460b08dc9f00ce2f62a70baad5f3bdf6b",
+      "bytes": 2849519
+    },
+    {
+      "target": "themes/colossal-canopy/art_sources/material_atlas_source.png",
+      "blob": "blobs/d743121872ff26ddad2512ff71f97f29586c3a88f1d4cf5a273ff7f5828a6ff2.png",
+      "sha256": "d743121872ff26ddad2512ff71f97f29586c3a88f1d4cf5a273ff7f5828a6ff2",
+      "bytes": 3829718
+    },
+    {
+      "target": "themes/colossal-canopy/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/dbabdce26199a94a01b4b45bc8552c9042adc0b629f93fa07373967425aceff2.png",
+      "sha256": "dbabdce26199a94a01b4b45bc8552c9042adc0b629f93fa07373967425aceff2",
+      "bytes": 4146070
+    },
+    {
+      "target": "themes/colossal-canopy/concept/source-studies/source-01.png",
+      "blob": "blobs/ba1b8fd9266849a04a9d6dd9db483171a3ad7d2c57aa698e4ed9fde3fd8ba679.png",
+      "sha256": "ba1b8fd9266849a04a9d6dd9db483171a3ad7d2c57aa698e4ed9fde3fd8ba679",
+      "bytes": 3263895
+    },
+    {
+      "target": "themes/crescent-iron-warship/art_sources/material_atlas_v1.png",
+      "blob": "blobs/bf2351398509b42700abf585773a969f46a89f09fef81c37d874e06cf0b6b82e.png",
+      "sha256": "bf2351398509b42700abf585773a969f46a89f09fef81c37d874e06cf0b6b82e",
+      "bytes": 3106020
+    },
+    {
+      "target": "themes/crescent-iron-warship/art_sources/theme_spec.json",
+      "blob": "blobs/60be132f40daefc0b78b50bcd6b6fb75e32aa364c3e9ab78c8d0bfd2cf3e2853.json",
+      "sha256": "60be132f40daefc0b78b50bcd6b6fb75e32aa364c3e9ab78c8d0bfd2cf3e2853",
+      "bytes": 504
+    },
+    {
+      "target": "themes/crescent-iron-warship/art_sources/wall_diffuse_v1_128.png",
+      "blob": "blobs/d257d7eb727aef3e87c1799704a347228639f16717a5f9637ded061338effd97.png",
+      "sha256": "d257d7eb727aef3e87c1799704a347228639f16717a5f9637ded061338effd97",
+      "bytes": 34149
+    },
+    {
+      "target": "themes/crescent-iron-warship/art_sources/wall_diffuse_v1_256.png",
+      "blob": "blobs/e78d9a89ec3b813fb4246b7b5efad33f4f89868b60f821be244c025cb7f44d54.png",
+      "sha256": "e78d9a89ec3b813fb4246b7b5efad33f4f89868b60f821be244c025cb7f44d54",
+      "bytes": 129784
+    },
+    {
+      "target": "themes/crescent-iron-warship/art_sources/wall_repeat_fix_v2.png",
+      "blob": "blobs/9785d09d8013af7c94169bd38b7985d61ef4faa261b479c984c05e9ecebf1a92.png",
+      "sha256": "9785d09d8013af7c94169bd38b7985d61ef4faa261b479c984c05e9ecebf1a92",
+      "bytes": 2229460
+    },
+    {
+      "target": "themes/crescent-iron-warship/concept/source-studies/source-01.png",
+      "blob": "blobs/d965e0fb234e5dca0e4b579f6db93992fa22eab6710005b9aa68e7050b34f63a.png",
+      "sha256": "d965e0fb234e5dca0e4b579f6db93992fa22eab6710005b9aa68e7050b34f63a",
+      "bytes": 2595904
+    },
+    {
+      "target": "themes/crypt-catacombs/art_sources/material-atlas-initial.png",
+      "blob": "blobs/220cc8c3caecc7bae53745e9d8ac80c2416846ee819f822ea831ce1445f56190.png",
+      "sha256": "220cc8c3caecc7bae53745e9d8ac80c2416846ee819f822ea831ce1445f56190",
+      "bytes": 3769067
+    },
+    {
+      "target": "themes/crypt-catacombs/art_sources/material-atlas-master.png",
+      "blob": "blobs/8fe5b216f65ba7884245d87139927d6ffe5254968a99809e2b52efe6203badcd.png",
+      "sha256": "8fe5b216f65ba7884245d87139927d6ffe5254968a99809e2b52efe6203badcd",
+      "bytes": 3485908
+    },
+    {
+      "target": "themes/crypt-catacombs/art_sources/material-atlas-repair.png",
+      "blob": "blobs/8fe5b216f65ba7884245d87139927d6ffe5254968a99809e2b52efe6203badcd.png",
+      "sha256": "8fe5b216f65ba7884245d87139927d6ffe5254968a99809e2b52efe6203badcd",
+      "bytes": 3485908
+    },
+    {
+      "target": "themes/crypt-catacombs/concept/source-studies/source-01.png",
+      "blob": "blobs/89a957901e8dc432b92a77c8b70ee1ab531424adf7af2d8f6410ea5dddde89c8.png",
+      "sha256": "89a957901e8dc432b92a77c8b70ee1ab531424adf7af2d8f6410ea5dddde89c8",
+      "bytes": 2451878
+    },
+    {
+      "target": "themes/crystal-hallway/art_sources/material_atlas_v1.png",
+      "blob": "blobs/90c6a1d59cae28993be633aec617aed51158d374dea506201a35ac13ad59c1c9.png",
+      "sha256": "90c6a1d59cae28993be633aec617aed51158d374dea506201a35ac13ad59c1c9",
+      "bytes": 2698558
+    },
+    {
+      "target": "themes/crystal-hallway/art_sources/theme_spec.json",
+      "blob": "blobs/fc6613814b8ed43dc98034b39e09e48a3a3ed6ffacd6cd6d9582f0b3fe7bb366.json",
+      "sha256": "fc6613814b8ed43dc98034b39e09e48a3a3ed6ffacd6cd6d9582f0b3fe7bb366",
+      "bytes": 463
+    },
+    {
+      "target": "themes/crystal-hallway/concept/source-studies/source-01.png",
+      "blob": "blobs/7c57a24ba650ef979e0da56f50bab90bc6a3c942a701954070b73584cc2fc7eb.png",
+      "sha256": "7c57a24ba650ef979e0da56f50bab90bc6a3c942a701954070b73584cc2fc7eb",
+      "bytes": 2626779
+    },
+    {
+      "target": "themes/crystalline-machine-sanctuary/art_sources/material_atlas_v1.png",
+      "blob": "blobs/a010745897554a4ebb6d6ddbb56d02f476b0cf998e7a4d322267827436f5b880.png",
+      "sha256": "a010745897554a4ebb6d6ddbb56d02f476b0cf998e7a4d322267827436f5b880",
+      "bytes": 3296317
+    },
+    {
+      "target": "themes/crystalline-machine-sanctuary/art_sources/theme_spec.json",
+      "blob": "blobs/be38b7c798056c68d4a9afff706ee5c31f926fa5637e0c5bc0f339c3b49f9cd3.json",
+      "sha256": "be38b7c798056c68d4a9afff706ee5c31f926fa5637e0c5bc0f339c3b49f9cd3",
+      "bytes": 489
+    },
+    {
+      "target": "themes/crystalline-machine-sanctuary/concept/source-studies/source-01.png",
+      "blob": "blobs/a956274d43b53e7ce684d95d03872fb37bef1c828d25b278dfe3b9cf1a5e59d7.png",
+      "sha256": "a956274d43b53e7ce684d95d03872fb37bef1c828d25b278dfe3b9cf1a5e59d7",
+      "bytes": 2951465
+    },
+    {
+      "target": "themes/desert-life-sanctuary/art_sources/material_atlas_source.png",
+      "blob": "blobs/d981c8b4060a53385216d087c01434219bf4d2e29647835478ae75231c606848.png",
+      "sha256": "d981c8b4060a53385216d087c01434219bf4d2e29647835478ae75231c606848",
+      "bytes": 3693869
+    },
+    {
+      "target": "themes/desert-life-sanctuary/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/9c876d224395822615cd654af39b08bdcadcd57d5676a5821bba0927182aa391.png",
+      "sha256": "9c876d224395822615cd654af39b08bdcadcd57d5676a5821bba0927182aa391",
+      "bytes": 4045063
+    },
+    {
+      "target": "themes/desert-life-sanctuary/concept/source-studies/source-01.png",
+      "blob": "blobs/44d3fbda0484d381d2a90374ed31b619824ffcb184a1ef352bba649928b6324b.png",
+      "sha256": "44d3fbda0484d381d2a90374ed31b619824ffcb184a1ef352bba649928b6324b",
+      "bytes": 3021588
+    },
+    {
+      "target": "themes/dingy-cellar/art_sources/material-atlas-initial.png",
+      "blob": "blobs/89e3a2fd136983e357aa40b5602ba132b0d2d4d3c06dfdf708e10a3bca5735f6.png",
+      "sha256": "89e3a2fd136983e357aa40b5602ba132b0d2d4d3c06dfdf708e10a3bca5735f6",
+      "bytes": 3456035
+    },
+    {
+      "target": "themes/dingy-cellar/art_sources/material-atlas-master.png",
+      "blob": "blobs/e075fb0fb4f55bca709a02f03cc3d81736d7e847274f8813b7b9ddb16193da2a.png",
+      "sha256": "e075fb0fb4f55bca709a02f03cc3d81736d7e847274f8813b7b9ddb16193da2a",
+      "bytes": 3285768
+    },
+    {
+      "target": "themes/dingy-cellar/art_sources/material-atlas-repair.png",
+      "blob": "blobs/e075fb0fb4f55bca709a02f03cc3d81736d7e847274f8813b7b9ddb16193da2a.png",
+      "sha256": "e075fb0fb4f55bca709a02f03cc3d81736d7e847274f8813b7b9ddb16193da2a",
+      "bytes": 3285768
+    },
+    {
+      "target": "themes/dingy-cellar/concept/source-studies/source-01.png",
+      "blob": "blobs/49b9acca028a41b0f9d81ca9dfa7b2da7c7d665ae3e644057b5434bc8150ccca.png",
+      "sha256": "49b9acca028a41b0f9d81ca9dfa7b2da7c7d665ae3e644057b5434bc8150ccca",
+      "bytes": 1950112
+    },
+    {
+      "target": "themes/dream-city-alleys/art_sources/material-atlas-initial.png",
+      "blob": "blobs/5a36f0ed576a4eeba42a104067ab6ade47376d50022c4027425baa11f9c4c2f0.png",
+      "sha256": "5a36f0ed576a4eeba42a104067ab6ade47376d50022c4027425baa11f9c4c2f0",
+      "bytes": 3428110
+    },
+    {
+      "target": "themes/dream-city-alleys/art_sources/material-atlas-master.png",
+      "blob": "blobs/c53c7b37c571616c7186d679aaeeb90380a153056c7a6f2f22809b297affeba7.png",
+      "sha256": "c53c7b37c571616c7186d679aaeeb90380a153056c7a6f2f22809b297affeba7",
+      "bytes": 3228341
+    },
+    {
+      "target": "themes/dream-city-alleys/art_sources/material-atlas-repair.png",
+      "blob": "blobs/c53c7b37c571616c7186d679aaeeb90380a153056c7a6f2f22809b297affeba7.png",
+      "sha256": "c53c7b37c571616c7186d679aaeeb90380a153056c7a6f2f22809b297affeba7",
+      "bytes": 3228341
+    },
+    {
+      "target": "themes/dream-city-alleys/concept/source-studies/source-01.png",
+      "blob": "blobs/f897d222bbb85462319de13120af4a2c478df485fe9b01052b70d864b07699f5.png",
+      "sha256": "f897d222bbb85462319de13120af4a2c478df485fe9b01052b70d864b07699f5",
+      "bytes": 3041758
+    },
+    {
+      "target": "themes/eerie-frontier-wilderness/art_sources/material_atlas_source.png",
+      "blob": "blobs/f48cce1d149fbf6f9ca5fa54187eb7609e8af450e5a70511d661bd5583c5847a.png",
+      "sha256": "f48cce1d149fbf6f9ca5fa54187eb7609e8af450e5a70511d661bd5583c5847a",
+      "bytes": 4179450
+    },
+    {
+      "target": "themes/eerie-frontier-wilderness/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/e78949e26ea3ff4047f662d09789d458e87bc6e4e2aadaf03f4da23da583ace0.png",
+      "sha256": "e78949e26ea3ff4047f662d09789d458e87bc6e4e2aadaf03f4da23da583ace0",
+      "bytes": 3950696
+    },
+    {
+      "target": "themes/eerie-frontier-wilderness/concept/source-studies/source-01.png",
+      "blob": "blobs/c613aca8f05e9c4428e4a5cccabd516d9d280d987d9832279e054585a981bc98.png",
+      "sha256": "c613aca8f05e9c4428e4a5cccabd516d9d280d987d9832279e054585a981bc98",
+      "bytes": 3594353
+    },
+    {
+      "target": "themes/elemental-mountain-refuge/art_sources/material_atlas_source.png",
+      "blob": "blobs/1f9b9556c3bc324b1acae13be7a594142f5eafb5d82bc35ef380aa0625a5109e.png",
+      "sha256": "1f9b9556c3bc324b1acae13be7a594142f5eafb5d82bc35ef380aa0625a5109e",
+      "bytes": 3916909
+    },
+    {
+      "target": "themes/elemental-mountain-refuge/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/7f0d726aa940bfbcb0e588fdb2ec7931fff55ca4a0a07a894f2b1002a6456826.png",
+      "sha256": "7f0d726aa940bfbcb0e588fdb2ec7931fff55ca4a0a07a894f2b1002a6456826",
+      "bytes": 4549833
+    },
+    {
+      "target": "themes/elemental-mountain-refuge/concept/source-studies/source-01.png",
+      "blob": "blobs/a0a78e82701a665766e167987565a2990141a1d39953432ce531e2d2f5e715ed.png",
+      "sha256": "a0a78e82701a665766e167987565a2990141a1d39953432ce531e2d2f5e715ed",
+      "bytes": 3576288
+    },
+    {
+      "target": "themes/embroidered-world/art_sources/material-atlas-initial.png",
+      "blob": "blobs/a78ec0ec948b7d03d87494dad85697d358a49bd925c5da2cb05c875e3443560d.png",
+      "sha256": "a78ec0ec948b7d03d87494dad85697d358a49bd925c5da2cb05c875e3443560d",
+      "bytes": 4135552
+    },
+    {
+      "target": "themes/embroidered-world/art_sources/material-atlas-master.png",
+      "blob": "blobs/539218cabc7f73159a04420bf447e8bae6172838064a0cf43bdcccf8af27cdc0.png",
+      "sha256": "539218cabc7f73159a04420bf447e8bae6172838064a0cf43bdcccf8af27cdc0",
+      "bytes": 3773255
+    },
+    {
+      "target": "themes/embroidered-world/art_sources/material-atlas-repair.png",
+      "blob": "blobs/539218cabc7f73159a04420bf447e8bae6172838064a0cf43bdcccf8af27cdc0.png",
+      "sha256": "539218cabc7f73159a04420bf447e8bae6172838064a0cf43bdcccf8af27cdc0",
+      "bytes": 3773255
+    },
+    {
+      "target": "themes/embroidered-world/concept/source-studies/source-01.png",
+      "blob": "blobs/33e2c4ffb373ae90a1e03d72f450e7ec68404185cdb719d6a491c20d7789adbc.png",
+      "sha256": "33e2c4ffb373ae90a1e03d72f450e7ec68404185cdb719d6a491c20d7789adbc",
+      "bytes": 3557218
+    },
+    {
+      "target": "themes/enchanted-forest/art_sources/material_atlas_source.png",
+      "blob": "blobs/797732e97cd21fcc44bc4d041e038c29aa9ce4d25f4b131d5511896d48db75dd.png",
+      "sha256": "797732e97cd21fcc44bc4d041e038c29aa9ce4d25f4b131d5511896d48db75dd",
+      "bytes": 3933850
+    },
+    {
+      "target": "themes/enchanted-forest/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/dbabdce26199a94a01b4b45bc8552c9042adc0b629f93fa07373967425aceff2.png",
+      "sha256": "dbabdce26199a94a01b4b45bc8552c9042adc0b629f93fa07373967425aceff2",
+      "bytes": 4146070
+    },
+    {
+      "target": "themes/enchanted-forest/concept/source-studies/source-01.png",
+      "blob": "blobs/c81e049f50d981216ac87d014f278eb28884a3dc38141bd0519b8c4c8c647d82.png",
+      "sha256": "c81e049f50d981216ac87d014f278eb28884a3dc38141bd0519b8c4c8c647d82",
+      "bytes": 3122242
+    },
+    {
+      "target": "themes/forge/art_sources/material_atlas_v1.png",
+      "blob": "blobs/21a2714a3c8193c6c84a1dc1f1e2e93f4e5857e5f29ab0120eaeac7eb252a4f5.png",
+      "sha256": "21a2714a3c8193c6c84a1dc1f1e2e93f4e5857e5f29ab0120eaeac7eb252a4f5",
+      "bytes": 3489513
+    },
+    {
+      "target": "themes/forge/art_sources/theme_spec.json",
+      "blob": "blobs/b8e64eff65e0d7e5f6031cd4d95b8328ca6e83e9c8c6c864f48606eb099aa056.json",
+      "sha256": "b8e64eff65e0d7e5f6031cd4d95b8328ca6e83e9c8c6c864f48606eb099aa056",
+      "bytes": 435
+    },
+    {
+      "target": "themes/forge/concept/source-studies/source-01.png",
+      "blob": "blobs/f85fd33c5a53858dfc5b78b98bd1a2daacf72506d4b68520b0e0ef4c37022543.png",
+      "sha256": "f85fd33c5a53858dfc5b78b98bd1a2daacf72506d4b68520b0e0ef4c37022543",
+      "bytes": 2602342
+    },
+    {
+      "target": "themes/foundry/art_sources/material_atlas_v1.png",
+      "blob": "blobs/fd1de9bbec326f71f6710e599a31e9330129a98420da74f08c2475270a5a1192.png",
+      "sha256": "fd1de9bbec326f71f6710e599a31e9330129a98420da74f08c2475270a5a1192",
+      "bytes": 3205990
+    },
+    {
+      "target": "themes/foundry/art_sources/theme_spec.json",
+      "blob": "blobs/a30f76b6edd2c7aa52f39b545697171a856da0c517a952bedde8212f674bc584.json",
+      "sha256": "a30f76b6edd2c7aa52f39b545697171a856da0c517a952bedde8212f674bc584",
+      "bytes": 452
+    },
+    {
+      "target": "themes/foundry/concept/source-studies/source-01.png",
+      "blob": "blobs/106e0fbe9020776297dd08ddc4cbad3358c64e75b44288d395b1258861d660fa.png",
+      "sha256": "106e0fbe9020776297dd08ddc4cbad3358c64e75b44288d395b1258861d660fa",
+      "bytes": 2538006
+    },
+    {
+      "target": "themes/fungus-wonderland/art_sources/material_atlas_source.png",
+      "blob": "blobs/7df34d60db89acbf9be1588dcb0b0de9fea56c2af6a4a8f288724ee75be271f2.png",
+      "sha256": "7df34d60db89acbf9be1588dcb0b0de9fea56c2af6a4a8f288724ee75be271f2",
+      "bytes": 3483829
+    },
+    {
+      "target": "themes/fungus-wonderland/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/ebcf1592cbd7ded0e48d9ec7ba25391f844be1f715d8bd03e070c233a913da41.png",
+      "sha256": "ebcf1592cbd7ded0e48d9ec7ba25391f844be1f715d8bd03e070c233a913da41",
+      "bytes": 4344933
+    },
+    {
+      "target": "themes/fungus-wonderland/concept/source-studies/source-01.png",
+      "blob": "blobs/18384568b2c209bb60d17746f1b36a13b2c3e8151647410a0ad293bea846a3af.png",
+      "sha256": "18384568b2c209bb60d17746f1b36a13b2c3e8151647410a0ad293bea846a3af",
+      "bytes": 2958187
+    },
+    {
+      "target": "themes/genesis-garden/art_sources/material_atlas_v1.png",
+      "blob": "blobs/00f73c1af5383e63567c2b4062be86d65180c77a4b8de11cc526161d9f574251.png",
+      "sha256": "00f73c1af5383e63567c2b4062be86d65180c77a4b8de11cc526161d9f574251",
+      "bytes": 3539453
+    },
+    {
+      "target": "themes/genesis-garden/art_sources/theme_spec.json",
+      "blob": "blobs/ff20b6dc9601b326c7cf522964723516d2011513f2c2da0f14b232e68d4db256.json",
+      "sha256": "ff20b6dc9601b326c7cf522964723516d2011513f2c2da0f14b232e68d4db256",
+      "bytes": 4575
+    },
+    {
+      "target": "themes/genesis-garden/concept/source-studies/source-01.png",
+      "blob": "blobs/0a74d9cb4797504befcef868209ef457aed5d7a4fba1853d208e7bcacdc4c4b9.png",
+      "sha256": "0a74d9cb4797504befcef868209ef457aed5d7a4fba1853d208e7bcacdc4c4b9",
+      "bytes": 3777313
+    },
+    {
+      "target": "themes/golden-plains/art_sources/material_atlas_v1.png",
+      "blob": "blobs/e7549c8380713d241159cdb7696a4ec266a35ab353229b5a4ff0c89661cb7ae3.png",
+      "sha256": "e7549c8380713d241159cdb7696a4ec266a35ab353229b5a4ff0c89661cb7ae3",
+      "bytes": 3926154
+    },
+    {
+      "target": "themes/golden-plains/art_sources/theme_spec.json",
+      "blob": "blobs/69b1bd0a279e7677214424320baf02ff267a0844053bcb32f1d238eb372218be.json",
+      "sha256": "69b1bd0a279e7677214424320baf02ff267a0844053bcb32f1d238eb372218be",
+      "bytes": 3960
+    },
+    {
+      "target": "themes/golden-plains/concept/source-studies/source-01.png",
+      "blob": "blobs/d533d21cd821caf29747f65fc005802baec2fbf76979da487438fcc9e8c623d0.png",
+      "sha256": "d533d21cd821caf29747f65fc005802baec2fbf76979da487438fcc9e8c623d0",
+      "bytes": 3112501
+    },
+    {
+      "target": "themes/gothic-night-castle/art_sources/material-atlas-master.png",
+      "blob": "blobs/473c329bdaf0f9892b459399f69455376a3e1aded61bf9e03248a2469378ed31.png",
+      "sha256": "473c329bdaf0f9892b459399f69455376a3e1aded61bf9e03248a2469378ed31",
+      "bytes": 3488337
+    },
+    {
+      "target": "themes/gothic-night-castle/concept/source-studies/source-01.png",
+      "blob": "blobs/7a8e70107c4bc4c9bbf0b86ac00e41a7c8a59ebeb5a317be0e4139edc7c0bc70.png",
+      "sha256": "7a8e70107c4bc4c9bbf0b86ac00e41a7c8a59ebeb5a317be0e4139edc7c0bc70",
+      "bytes": 3183154
+    },
+    {
+      "target": "themes/living-crystal-interior/art_sources/material_atlas_v1.png",
+      "blob": "blobs/9e06cdb55ed3b0563d0f5cb695a0ffc6efbced66cd2f62b62ba6c39e88272f90.png",
+      "sha256": "9e06cdb55ed3b0563d0f5cb695a0ffc6efbced66cd2f62b62ba6c39e88272f90",
+      "bytes": 3333945
+    },
+    {
+      "target": "themes/living-crystal-interior/art_sources/theme_spec.json",
+      "blob": "blobs/686c4552cd77713ca6977b65c4c39869acc2ec8cc6a414f1d6be30491720ef43.json",
+      "sha256": "686c4552cd77713ca6977b65c4c39869acc2ec8cc6a414f1d6be30491720ef43",
+      "bytes": 464
+    },
+    {
+      "target": "themes/living-crystal-interior/art_sources/wall_diffuse_v1_128.png",
+      "blob": "blobs/b21b6ffbeb543d7ba3e9d864b36deb8eda86cc6096eb89ca57f6996b433796ec.png",
+      "sha256": "b21b6ffbeb543d7ba3e9d864b36deb8eda86cc6096eb89ca57f6996b433796ec",
+      "bytes": 41545
+    },
+    {
+      "target": "themes/living-crystal-interior/art_sources/wall_diffuse_v1_256.png",
+      "blob": "blobs/8e7818a582032dcdcae4356afae9e57546015e1108e68fd4d4a43fe27824ed44.png",
+      "sha256": "8e7818a582032dcdcae4356afae9e57546015e1108e68fd4d4a43fe27824ed44",
+      "bytes": 154365
+    },
+    {
+      "target": "themes/living-crystal-interior/art_sources/wall_repeat_fix_v2.png",
+      "blob": "blobs/538590a3d96b46a4ca873bee1da0a52dbc22aa8970ce3e33edb60ecee1ac6cbc.png",
+      "sha256": "538590a3d96b46a4ca873bee1da0a52dbc22aa8970ce3e33edb60ecee1ac6cbc",
+      "bytes": 2670540
+    },
+    {
+      "target": "themes/living-crystal-interior/concept/source-studies/source-01.png",
+      "blob": "blobs/63111decb5e0d64556c6b7c253e3ab68204ee9b607f6afd173c5b1e9aa38dfaa.png",
+      "sha256": "63111decb5e0d64556c6b7c253e3ab68204ee9b607f6afd173c5b1e9aa38dfaa",
+      "bytes": 2695003
+    },
+    {
+      "target": "themes/lost-toy-world/art_sources/material-atlas-master.png",
+      "blob": "blobs/fcb84e252e8fc0f20d8e82b2e80a02be31f2e6a67fec516789d61cf4d8934f0f.png",
+      "sha256": "fcb84e252e8fc0f20d8e82b2e80a02be31f2e6a67fec516789d61cf4d8934f0f",
+      "bytes": 3150337
+    },
+    {
+      "target": "themes/lost-toy-world/concept/source-studies/source-01.png",
+      "blob": "blobs/cbd57ea03b9c49a3c3430ba35511790d1758e7442b6e30f4c58af8515839ea34.png",
+      "sha256": "cbd57ea03b9c49a3c3430ba35511790d1758e7442b6e30f4c58af8515839ea34",
+      "bytes": 2625000
+    },
+    {
+      "target": "themes/machine-city/art_sources/ground_diffuse_v1_128.png",
+      "blob": "blobs/93403b479fefc7e8199a2de00af4dab302c61dc182f8cae0f8e080673df9e9a5.png",
+      "sha256": "93403b479fefc7e8199a2de00af4dab302c61dc182f8cae0f8e080673df9e9a5",
+      "bytes": 34548
+    },
+    {
+      "target": "themes/machine-city/art_sources/ground_diffuse_v1_256.png",
+      "blob": "blobs/774540fa5ec13df367cbf5256c43c9f10fa62d678134d432f5d38ca77cd3da92.png",
+      "sha256": "774540fa5ec13df367cbf5256c43c9f10fa62d678134d432f5d38ca77cd3da92",
+      "bytes": 123853
+    },
+    {
+      "target": "themes/machine-city/art_sources/ground_repeat_fix_v2.png",
+      "blob": "blobs/f6d5fd70748cd255b33d4d31ccd9edac76493f936cbcf402cb089566003759c9.png",
+      "sha256": "f6d5fd70748cd255b33d4d31ccd9edac76493f936cbcf402cb089566003759c9",
+      "bytes": 1812443
+    },
+    {
+      "target": "themes/machine-city/art_sources/material_atlas_v1.png",
+      "blob": "blobs/5cd850a9131302e5ab1d6d7b788f2bf5bb1eb838740fac3e4cecce9d7e8cc5c3.png",
+      "sha256": "5cd850a9131302e5ab1d6d7b788f2bf5bb1eb838740fac3e4cecce9d7e8cc5c3",
+      "bytes": 2856864
+    },
+    {
+      "target": "themes/machine-city/art_sources/theme_spec.json",
+      "blob": "blobs/7da4c643d2ae2d56dee28f9147c740043fb90c9f4cefe6f83f80262b4f855cb2.json",
+      "sha256": "7da4c643d2ae2d56dee28f9147c740043fb90c9f4cefe6f83f80262b4f855cb2",
+      "bytes": 501
+    },
+    {
+      "target": "themes/machine-city/concept/source-studies/source-01.png",
+      "blob": "blobs/16ec5160bb3a1d883bde00f8bee0b9345326c7882238c6d8334705f5ddaa6b0d.png",
+      "sha256": "16ec5160bb3a1d883bde00f8bee0b9345326c7882238c6d8334705f5ddaa6b0d",
+      "bytes": 2524218
+    },
+    {
+      "target": "themes/mindglass-sanctum/art_sources/material-atlas-master.png",
+      "blob": "blobs/216666006a7055e1fb234e25ef7f0413840f0cf8b36398bce4e3b3aec3a03ccf.png",
+      "sha256": "216666006a7055e1fb234e25ef7f0413840f0cf8b36398bce4e3b3aec3a03ccf",
+      "bytes": 3540499
+    },
+    {
+      "target": "themes/mindglass-sanctum/concept/source-studies/source-01.png",
+      "blob": "blobs/3a8cb85d7dd37669bbe76c0dcfdcf75f525e45e7394308abe781b137aba853ad.png",
+      "sha256": "3a8cb85d7dd37669bbe76c0dcfdcf75f525e45e7394308abe781b137aba853ad",
+      "bytes": 2808749
+    },
+    {
+      "target": "themes/mythic-mural-cavern/art_sources/material_atlas_source.png",
+      "blob": "blobs/ccba2f0cd9bd3bec8a68ccb5cd86accdd8ca59c36f513745693261b7cf9ebc3d.png",
+      "sha256": "ccba2f0cd9bd3bec8a68ccb5cd86accdd8ca59c36f513745693261b7cf9ebc3d",
+      "bytes": 3921445
+    },
+    {
+      "target": "themes/mythic-mural-cavern/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/6f83b0faa18fc64d7491bc951fc080578d55442b6558e875fe6b7f8f2151251b.png",
+      "sha256": "6f83b0faa18fc64d7491bc951fc080578d55442b6558e875fe6b7f8f2151251b",
+      "bytes": 4279661
+    },
+    {
+      "target": "themes/mythic-mural-cavern/concept/source-studies/source-01.png",
+      "blob": "blobs/8c3f1307902d34121e25721bb710653957d94b32be851468fb3809e4d901b85b.png",
+      "sha256": "8c3f1307902d34121e25721bb710653957d94b32be851468fb3809e4d901b85b",
+      "bytes": 3038600
+    },
+    {
+      "target": "themes/natural-caverns/art_sources/material_atlas_source.png",
+      "blob": "blobs/512afaaeb62529d43495862e7ef43457d814368983fa7dc84c4dff46966e07f2.png",
+      "sha256": "512afaaeb62529d43495862e7ef43457d814368983fa7dc84c4dff46966e07f2",
+      "bytes": 3661247
+    },
+    {
+      "target": "themes/natural-caverns/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/7e52ae99a13b9210d4450b723790a1f848833ec71e75b127abd3902707ae71a6.png",
+      "sha256": "7e52ae99a13b9210d4450b723790a1f848833ec71e75b127abd3902707ae71a6",
+      "bytes": 3996375
+    },
+    {
+      "target": "themes/natural-caverns/concept/source-studies/source-01.png",
+      "blob": "blobs/f8a9c072ecd647bcf14877e8adb6fff18f4358556431d19e51009218b575b985.png",
+      "sha256": "f8a9c072ecd647bcf14877e8adb6fff18f4358556431d19e51009218b575b985",
+      "bytes": 2577786
+    },
+    {
+      "target": "themes/onebit-spiritual-landscape/art_sources/material-atlas-master.png",
+      "blob": "blobs/38ac632aaec1811c1161d8f6167911d0d7dd8d7fec1755a4f49c4bd2ecd0f12d.png",
+      "sha256": "38ac632aaec1811c1161d8f6167911d0d7dd8d7fec1755a4f49c4bd2ecd0f12d",
+      "bytes": 3704272
+    },
+    {
+      "target": "themes/onebit-spiritual-landscape/concept/source.png",
+      "blob": "blobs/0096f3fd5e9dbaa2ebe9b6bf287a3d05fdfc8b31bcae7f9aebcb37c9b6e30f03.png",
+      "sha256": "0096f3fd5e9dbaa2ebe9b6bf287a3d05fdfc8b31bcae7f9aebcb37c9b6e30f03",
+      "bytes": 1842560
+    },
+    {
+      "target": "themes/organic-living/art_sources/material_atlas_source.png",
+      "blob": "blobs/4da489f495a3b21337ec4ea2f03b7c905410209c44b8ae0ab15a271719daa0a7.png",
+      "sha256": "4da489f495a3b21337ec4ea2f03b7c905410209c44b8ae0ab15a271719daa0a7",
+      "bytes": 3219231
+    },
+    {
+      "target": "themes/organic-living/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/e78949e26ea3ff4047f662d09789d458e87bc6e4e2aadaf03f4da23da583ace0.png",
+      "sha256": "e78949e26ea3ff4047f662d09789d458e87bc6e4e2aadaf03f4da23da583ace0",
+      "bytes": 3950696
+    },
+    {
+      "target": "themes/organic-living/concept/source-studies/source-01.png",
+      "blob": "blobs/66c5f9dafd801efbb6b5da47a944d40974134db5e4f5b3d3032e056051a69249.png",
+      "sha256": "66c5f9dafd801efbb6b5da47a944d40974134db5e4f5b3d3032e056051a69249",
+      "bytes": 2468739
+    },
+    {
+      "target": "themes/palace-hallways/art_sources/material-atlas-master.png",
+      "blob": "blobs/82dc9b2f99790cdac61500ba0d7918fe4ddaa6aec8be5ba4ba52b5ff250a98e0.png",
+      "sha256": "82dc9b2f99790cdac61500ba0d7918fe4ddaa6aec8be5ba4ba52b5ff250a98e0",
+      "bytes": 3445016
+    },
+    {
+      "target": "themes/palace-hallways/concept/source-studies/source-01.png",
+      "blob": "blobs/a2ba23bf3050c9cfac851807a6d195e503be28909cb55c4ce253bfa8db784181.png",
+      "sha256": "a2ba23bf3050c9cfac851807a6d195e503be28909cb55c4ce253bfa8db784181",
+      "bytes": 2390592
+    },
+    {
+      "target": "themes/perfected-metal-sanctuary/art_sources/material_atlas_v1.png",
+      "blob": "blobs/82dd2c13e551c08a13817a87940805301cf98648baf30fe94337eebef99462de.png",
+      "sha256": "82dd2c13e551c08a13817a87940805301cf98648baf30fe94337eebef99462de",
+      "bytes": 3396277
+    },
+    {
+      "target": "themes/perfected-metal-sanctuary/art_sources/theme_spec.json",
+      "blob": "blobs/190a94f662f8f32cd457b54ead0a7833cb051273b9c3db801d3894eee0e3d220.json",
+      "sha256": "190a94f662f8f32cd457b54ead0a7833cb051273b9c3db801d3894eee0e3d220",
+      "bytes": 470
+    },
+    {
+      "target": "themes/perfected-metal-sanctuary/concept/source-studies/source-01.png",
+      "blob": "blobs/1d966ca8bb78bed7bf1de71ce04c803729db71dccfd6afc57039e658c17a16a7.png",
+      "sha256": "1d966ca8bb78bed7bf1de71ce04c803729db71dccfd6afc57039e658c17a16a7",
+      "bytes": 3181195
+    },
+    {
+      "target": "themes/potion-cellar/art_sources/material-atlas-master.png",
+      "blob": "blobs/fca4f9ea7b0da35c4e25d5c46ebc6669bc15cb54be310a9603700fb2f7afcba1.png",
+      "sha256": "fca4f9ea7b0da35c4e25d5c46ebc6669bc15cb54be310a9603700fb2f7afcba1",
+      "bytes": 3642134
+    },
+    {
+      "target": "themes/potion-cellar/concept/source-studies/source-01.png",
+      "blob": "blobs/d4ee1af0b5fd30fa11367fd67a9e6b69ac87512d24bfa4198960bcb39dd909dc.png",
+      "sha256": "d4ee1af0b5fd30fa11367fd67a9e6b69ac87512d24bfa4198960bcb39dd909dc",
+      "bytes": 2836176
+    },
+    {
+      "target": "themes/rainforest-river/art_sources/material_atlas_source.png",
+      "blob": "blobs/0667b2abea6040bc0cb6f87ea7b19c2300ddedb9abb0d8e4b963498f3836c96a.png",
+      "sha256": "0667b2abea6040bc0cb6f87ea7b19c2300ddedb9abb0d8e4b963498f3836c96a",
+      "bytes": 3761624
+    },
+    {
+      "target": "themes/rainforest-river/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/00a5b6707ae1a7070644c7f8692dd81b34f97d8308abebd99d1b6165b78dccbf.png",
+      "sha256": "00a5b6707ae1a7070644c7f8692dd81b34f97d8308abebd99d1b6165b78dccbf",
+      "bytes": 4257393
+    },
+    {
+      "target": "themes/rainforest-river/concept/source-studies/source-01.png",
+      "blob": "blobs/d21d69bc65d762f99ea79fdfd94de00ad5435ddfb96f049ecc9190ed5b1e80c5.png",
+      "sha256": "d21d69bc65d762f99ea79fdfd94de00ad5435ddfb96f049ecc9190ed5b1e80c5",
+      "bytes": 3645122
+    },
+    {
+      "target": "themes/reclaimed-wild-city/art_sources/material_atlas_source.png",
+      "blob": "blobs/63113579477ddfbb395c08eb20b560064045689b4e5f43ce9501ef2e46b88779.png",
+      "sha256": "63113579477ddfbb395c08eb20b560064045689b4e5f43ce9501ef2e46b88779",
+      "bytes": 3710091
+    },
+    {
+      "target": "themes/reclaimed-wild-city/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/7f0d726aa940bfbcb0e588fdb2ec7931fff55ca4a0a07a894f2b1002a6456826.png",
+      "sha256": "7f0d726aa940bfbcb0e588fdb2ec7931fff55ca4a0a07a894f2b1002a6456826",
+      "bytes": 4549833
+    },
+    {
+      "target": "themes/reclaimed-wild-city/concept/source-studies/source-01.png",
+      "blob": "blobs/b59a2297066c807429c8d7563fe17de5bdd4de6095b741e8f38f4d84814958c5.png",
+      "sha256": "b59a2297066c807429c8d7563fe17de5bdd4de6095b741e8f38f4d84814958c5",
+      "bytes": 3449262
+    },
+    {
+      "target": "themes/redrock-mountain/art_sources/material_atlas_v1.png",
+      "blob": "blobs/cad3044d0e4b402cefaad6cff52827a99c42dc32a5a1ee969899bed3e7a37aea.png",
+      "sha256": "cad3044d0e4b402cefaad6cff52827a99c42dc32a5a1ee969899bed3e7a37aea",
+      "bytes": 3483948
+    },
+    {
+      "target": "themes/redrock-mountain/art_sources/theme_spec.json",
+      "blob": "blobs/f6d70403a4c1faba54e4649f56d649d9339d7fa86d3c2bfa123b794481878097.json",
+      "sha256": "f6d70403a4c1faba54e4649f56d649d9339d7fa86d3c2bfa123b794481878097",
+      "bytes": 3876
+    },
+    {
+      "target": "themes/redrock-mountain/concept/source-studies/source-01.png",
+      "blob": "blobs/73e15091b9cdc1d97ff84f2537a14813e918f434966f4f84f2c058ec0a9ef79a.png",
+      "sha256": "73e15091b9cdc1d97ff84f2537a14813e918f434966f4f84f2c058ec0a9ef79a",
+      "bytes": 3116423
+    },
+    {
+      "target": "themes/rootbound-undercity/art_sources/material_atlas_source.png",
+      "blob": "blobs/23105dc1c2e007df40132d872b5df45b4c296d98de057e3ad413c983e30f519b.png",
+      "sha256": "23105dc1c2e007df40132d872b5df45b4c296d98de057e3ad413c983e30f519b",
+      "bytes": 3741910
+    },
+    {
+      "target": "themes/rootbound-undercity/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/6f83b0faa18fc64d7491bc951fc080578d55442b6558e875fe6b7f8f2151251b.png",
+      "sha256": "6f83b0faa18fc64d7491bc951fc080578d55442b6558e875fe6b7f8f2151251b",
+      "bytes": 4279661
+    },
+    {
+      "target": "themes/rootbound-undercity/concept/source-studies/source-01.png",
+      "blob": "blobs/0d820bd43a32cdc46d491f0ac0763744ebba6ed8f33b1acab3e0c298eed74a8e.png",
+      "sha256": "0d820bd43a32cdc46d491f0ac0763744ebba6ed8f33b1acab3e0c298eed74a8e",
+      "bytes": 3070466
+    },
+    {
+      "target": "themes/smith-workshop/art_sources/material_atlas_v1.png",
+      "blob": "blobs/b9e584ec3b4302f44c5030eaa47af23aecf70f60bcbabbec7f62ebb477925bae.png",
+      "sha256": "b9e584ec3b4302f44c5030eaa47af23aecf70f60bcbabbec7f62ebb477925bae",
+      "bytes": 3308318
+    },
+    {
+      "target": "themes/smith-workshop/art_sources/theme_spec.json",
+      "blob": "blobs/b826f759fa53d44f02235a4616302714ed8d63a13ddb0a291b8e2713711e1b59.json",
+      "sha256": "b826f759fa53d44f02235a4616302714ed8d63a13ddb0a291b8e2713711e1b59",
+      "bytes": 405
+    },
+    {
+      "target": "themes/smith-workshop/concept/source-studies/source-01.png",
+      "blob": "blobs/02f31bf848c3cae5b3001d96655c03fe25b35b4ddfc5241e0749044930195fb8.png",
+      "sha256": "02f31bf848c3cae5b3001d96655c03fe25b35b4ddfc5241e0749044930195fb8",
+      "bytes": 2874367
+    },
+    {
+      "target": "themes/storm-inventor-workshop/art_sources/material_atlas_v1.png",
+      "blob": "blobs/ff91bff608c97da3b29167ba0176953d94196e3585ef0504470a48935171dc05.png",
+      "sha256": "ff91bff608c97da3b29167ba0176953d94196e3585ef0504470a48935171dc05",
+      "bytes": 3634212
+    },
+    {
+      "target": "themes/storm-inventor-workshop/art_sources/theme_spec.json",
+      "blob": "blobs/c9a75fbc559ff1bce96249b2488a86fbc481dbe799b2340af5a2daf892beadcd.json",
+      "sha256": "c9a75fbc559ff1bce96249b2488a86fbc481dbe799b2340af5a2daf892beadcd",
+      "bytes": 479
+    },
+    {
+      "target": "themes/storm-inventor-workshop/concept/source-studies/source-01.png",
+      "blob": "blobs/cb7692ed6c2533a4457314e4d84bfa86e2d67988b827a7b28c1bf48346458043.png",
+      "sha256": "cb7692ed6c2533a4457314e4d84bfa86e2d67988b827a7b28c1bf48346458043",
+      "bytes": 3150659
+    },
+    {
+      "target": "themes/subterranean-elven-realm/art_sources/material-atlas-master.png",
+      "blob": "blobs/3058fab1a8b8814a5a31b89261ec5be4d9cbc507a29761821b39d3db1211e80b.png",
+      "sha256": "3058fab1a8b8814a5a31b89261ec5be4d9cbc507a29761821b39d3db1211e80b",
+      "bytes": 3106348
+    },
+    {
+      "target": "themes/subterranean-elven-realm/concept/source-studies/source-01.png",
+      "blob": "blobs/9891ccd47bdb5129f968861a0473de5aa21eac949b7dbdf5d2097ff03aef90ee.png",
+      "sha256": "9891ccd47bdb5129f968861a0473de5aa21eac949b7dbdf5d2097ff03aef90ee",
+      "bytes": 2964279
+    },
+    {
+      "target": "themes/sunflower-sanctuary/art_sources/material_atlas_source.png",
+      "blob": "blobs/be9d61b1885c40e034b7bbecc0c0457cca30148f2a24d3ab12103fb902721d8e.png",
+      "sha256": "be9d61b1885c40e034b7bbecc0c0457cca30148f2a24d3ab12103fb902721d8e",
+      "bytes": 3462724
+    },
+    {
+      "target": "themes/sunflower-sanctuary/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/9c876d224395822615cd654af39b08bdcadcd57d5676a5821bba0927182aa391.png",
+      "sha256": "9c876d224395822615cd654af39b08bdcadcd57d5676a5821bba0927182aa391",
+      "bytes": 4045063
+    },
+    {
+      "target": "themes/sunflower-sanctuary/concept/source-studies/source-01.png",
+      "blob": "blobs/845ed215769705c0f19f65b6f72b2f8769efcd6d0d1a93d36ce32328eb55425d.png",
+      "sha256": "845ed215769705c0f19f65b6f72b2f8769efcd6d0d1a93d36ce32328eb55425d",
+      "bytes": 3063543
+    },
+    {
+      "target": "themes/tatami-house/art_sources/material-atlas-master.png",
+      "blob": "blobs/b881017c798909d044285e398c30f424179305ca52b7ebadb14da82f9a645964.png",
+      "sha256": "b881017c798909d044285e398c30f424179305ca52b7ebadb14da82f9a645964",
+      "bytes": 3135916
+    },
+    {
+      "target": "themes/tatami-house/concept/source-studies/source-01.png",
+      "blob": "blobs/632bd509eed3d9134859dd01ae9cf9015b8dbca5698a064888ed443e7ac6f718.png",
+      "sha256": "632bd509eed3d9134859dd01ae9cf9015b8dbca5698a064888ed443e7ac6f718",
+      "bytes": 2706125
+    },
+    {
+      "target": "themes/tavern-inn/art_sources/material-atlas-master.png",
+      "blob": "blobs/b68c4c216077a6eee67d76a7b9f87ff0310101f6ff26e1fd4e27b826d6a20a2b.png",
+      "sha256": "b68c4c216077a6eee67d76a7b9f87ff0310101f6ff26e1fd4e27b826d6a20a2b",
+      "bytes": 3253382
+    },
+    {
+      "target": "themes/tavern-inn/concept/source-studies/source-01.png",
+      "blob": "blobs/51c843c43fa1cae554ab79d21cead2a98267c21c4d0db537338bc31545e0f720.png",
+      "sha256": "51c843c43fa1cae554ab79d21cead2a98267c21c4d0db537338bc31545e0f720",
+      "bytes": 2706850
+    },
+    {
+      "target": "themes/tidal-island/art_sources/material_atlas_v1.png",
+      "blob": "blobs/ddbf2b515c010ff2bfebdb5cc6a5a557c0bef10eb09519db24ca1030fa9c0074.png",
+      "sha256": "ddbf2b515c010ff2bfebdb5cc6a5a557c0bef10eb09519db24ca1030fa9c0074",
+      "bytes": 3771064
+    },
+    {
+      "target": "themes/tidal-island/art_sources/theme_spec.json",
+      "blob": "blobs/a4937d41edbc63f8128a6d856189d639dab51fd044fbbc7aadd4cb8a1bcd5221.json",
+      "sha256": "a4937d41edbc63f8128a6d856189d639dab51fd044fbbc7aadd4cb8a1bcd5221",
+      "bytes": 4035
+    },
+    {
+      "target": "themes/tidal-island/concept/source-studies/source-01.png",
+      "blob": "blobs/b1c308d39afe47911cd75408c8da550328bf60bb23d788542b3305409161200c.png",
+      "sha256": "b1c308d39afe47911cd75408c8da550328bf60bb23d788542b3305409161200c",
+      "bytes": 2942503
+    },
+    {
+      "target": "themes/toxic-forest/art_sources/material_atlas_source.png",
+      "blob": "blobs/4fa9b38672809cc2d80ef7b951594588fb987b94b74c642d443ad642a0849d49.png",
+      "sha256": "4fa9b38672809cc2d80ef7b951594588fb987b94b74c642d443ad642a0849d49",
+      "bytes": 3398624
+    },
+    {
+      "target": "themes/toxic-forest/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/ebcf1592cbd7ded0e48d9ec7ba25391f844be1f715d8bd03e070c233a913da41.png",
+      "sha256": "ebcf1592cbd7ded0e48d9ec7ba25391f844be1f715d8bd03e070c233a913da41",
+      "bytes": 4344933
+    },
+    {
+      "target": "themes/toxic-forest/concept/source-studies/source-01.png",
+      "blob": "blobs/0a18698092dc3df2f1a0b14464e2b5411b2dce148ef2f0562eb7c499a66af7d6.png",
+      "sha256": "0a18698092dc3df2f1a0b14464e2b5411b2dce148ef2f0562eb7c499a66af7d6",
+      "bytes": 3495559
+    },
+    {
+      "target": "themes/transforming-machine-interior/art_sources/material_atlas_v1.png",
+      "blob": "blobs/9887e1e96ba4e255ab4b9978d5c7ed1eb4180907476cbd53d10d103bae71fe44.png",
+      "sha256": "9887e1e96ba4e255ab4b9978d5c7ed1eb4180907476cbd53d10d103bae71fe44",
+      "bytes": 3003859
+    },
+    {
+      "target": "themes/transforming-machine-interior/art_sources/theme_spec.json",
+      "blob": "blobs/8bb634f4a62ceebe6b7df357adba431247efab9b02a1fbfb4995bbca1ab196db.json",
+      "sha256": "8bb634f4a62ceebe6b7df357adba431247efab9b02a1fbfb4995bbca1ab196db",
+      "bytes": 472
+    },
+    {
+      "target": "themes/transforming-machine-interior/concept/source-studies/source-01.png",
+      "blob": "blobs/8a4a07b71860638f29a56e99cb9711b153313f8a12cf17119ceb298fe8eb824e.png",
+      "sha256": "8a4a07b71860638f29a56e99cb9711b153313f8a12cf17119ceb298fe8eb824e",
+      "bytes": 2610009
+    },
+    {
+      "target": "themes/volcanic-wildlands/art_sources/material_atlas_source.png",
+      "blob": "blobs/456ea264badaa224e2b3b7db6b29ba25bfc67a83bf2047c3ba0aab15aa4e608c.png",
+      "sha256": "456ea264badaa224e2b3b7db6b29ba25bfc67a83bf2047c3ba0aab15aa4e608c",
+      "bytes": 3793717
+    },
+    {
+      "target": "themes/volcanic-wildlands/art_sources/repeat_alternatives_pair_source.png",
+      "blob": "blobs/00a5b6707ae1a7070644c7f8692dd81b34f97d8308abebd99d1b6165b78dccbf.png",
+      "sha256": "00a5b6707ae1a7070644c7f8692dd81b34f97d8308abebd99d1b6165b78dccbf",
+      "bytes": 4257393
+    },
+    {
+      "target": "themes/volcanic-wildlands/concept/source-studies/source-01.png",
+      "blob": "blobs/36f7035cd884ab0f41282e773915bd9610ba57adc7be2a0ee192b536b084f8b8.png",
+      "sha256": "36f7035cd884ab0f41282e773915bd9610ba57adc7be2a0ee192b536b084f8b8",
+      "bytes": 3032030
+    },
+    {
+      "target": "themes/wild-savanna/art_sources/material_atlas_v1.png",
+      "blob": "blobs/30415b8625f0623a408f2889e115db25bfa2fe58697ef7867c656360b89b4e3a.png",
+      "sha256": "30415b8625f0623a408f2889e115db25bfa2fe58697ef7867c656360b89b4e3a",
+      "bytes": 3796583
+    },
+    {
+      "target": "themes/wild-savanna/art_sources/theme_spec.json",
+      "blob": "blobs/3af9d47fd7d1b0189b15c5dd37ba7ee17121d992bce124c8e002359973c6897b.json",
+      "sha256": "3af9d47fd7d1b0189b15c5dd37ba7ee17121d992bce124c8e002359973c6897b",
+      "bytes": 4207
+    },
+    {
+      "target": "themes/wild-savanna/concept/source-studies/source-01.png",
+      "blob": "blobs/336f05e1e0169a56ae4d65d2a742210d4b5e4c67c0cc6e8e83dc297d7925f7e7.png",
+      "sha256": "336f05e1e0169a56ae4d65d2a742210d4b5e4c67c0cc6e8e83dc297d7925f7e7",
+      "bytes": 3062402
+    }
+  ]
+}

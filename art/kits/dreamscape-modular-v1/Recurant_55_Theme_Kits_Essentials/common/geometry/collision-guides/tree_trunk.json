@@ -1,0 +1,20 @@
+{
+  "asset": "tree_trunk",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.096714,
+        1.977154,
+        -0.0
+      ],
+      "size": [
+        2.07839,
+        4.072807,
+        2.185349
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/tree_trunk__GUIDE.glb"
+}

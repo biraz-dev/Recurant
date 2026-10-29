@@ -1,0 +1,20 @@
+{
+  "asset": "toy_block_arch",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.6,
+        0.0
+      ],
+      "size": [
+        1.0,
+        1.2,
+        0.5
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/toy_block_arch__GUIDE.glb"
+}

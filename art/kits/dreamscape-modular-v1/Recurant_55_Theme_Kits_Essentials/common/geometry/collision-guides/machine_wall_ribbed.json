@@ -1,0 +1,20 @@
+{
+  "asset": "machine_wall_ribbed",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        2.0,
+        -0.05
+      ],
+      "size": [
+        2.0,
+        4.0,
+        0.3
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/machine_wall_ribbed__GUIDE.glb"
+}

@@ -1,0 +1,20 @@
+{
+  "asset": "floor_inset_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0,
+        -0.1,
+        0
+      ],
+      "size": [
+        2,
+        0.2,
+        2
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/floor_inset_2m__GUIDE.glb"
+}

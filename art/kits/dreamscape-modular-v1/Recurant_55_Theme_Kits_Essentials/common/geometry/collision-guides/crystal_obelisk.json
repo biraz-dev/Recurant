@@ -1,0 +1,20 @@
+{
+  "asset": "crystal_obelisk",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        2.0,
+        -0.0
+      ],
+      "size": [
+        1.1,
+        4.0,
+        0.952628
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/crystal_obelisk__GUIDE.glb"
+}

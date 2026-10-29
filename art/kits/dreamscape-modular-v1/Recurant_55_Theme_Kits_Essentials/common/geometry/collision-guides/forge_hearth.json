@@ -1,0 +1,20 @@
+{
+  "asset": "forge_hearth",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        1.75,
+        0.0
+      ],
+      "size": [
+        1.6,
+        3.5,
+        1.0
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/forge_hearth__GUIDE.glb"
+}

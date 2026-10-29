@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "clockwork",
+  "title": "Clockwork",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/clockwork/materials/wall_diffuse_256.png",
+      "low_memory_basecolor": "themes/clockwork/materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "dark indigo stone blockwork with thin muted brass joints"
+    },
+    "ground": {
+      "basecolor": "themes/clockwork/materials/ground_diffuse_256.png",
+      "low_memory_basecolor": "themes/clockwork/materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "worn ochre square stone slabs with fine aged bronze seams"
+    },
+    "structure": {
+      "basecolor": "themes/clockwork/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/clockwork/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "aged golden bronze plate with tiny flush rivets and subtle machinery wear"
+    },
+    "detail": {
+      "basecolor": "themes/clockwork/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/clockwork/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "flat bronze gear-faced inset panel with concentric fine machined circles, no perspective"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_inset_2m",
+      "role": "walkable_floor",
+      "notes": "Inset 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "machine_wall_ribbed",
+      "role": "structure",
+      "notes": "Industrial ribbed wall with modeled perimeter structure."
+    },
+    {
+      "module_id": "machine_doorframe",
+      "role": "structure",
+      "notes": "Square bulkhead doorway with 1.4\u00d72.9m clear aperture."
+    },
+    {
+      "module_id": "gear_machine_pair",
+      "role": "distinctive_prop",
+      "notes": "Two offset mounted gears over common plinth, no animation baked."
+    },
+    {
+      "module_id": "gear_16tooth",
+      "role": "distinctive_prop",
+      "notes": "16-tooth spur gear, real toothed silhouette and raised hub."
+    },
+    {
+      "module_id": "coil_stack",
+      "role": "distinctive_prop",
+      "notes": "Seven separate disc ribs around a central shaft."
+    },
+    {
+      "module_id": "pipe_tee_2m",
+      "role": "distinctive_prop",
+      "notes": "Three-way T-pipe fitting, three centreline connectors."
+    },
+    {
+      "module_id": "gear_10tooth",
+      "role": "distinctive_prop",
+      "notes": "10-tooth spur gear, real toothed silhouette and raised hub."
+    },
+    {
+      "module_id": "tank_vertical",
+      "role": "distinctive_prop",
+      "notes": "Cylindrical industrial vessel on square plinth."
+    },
+    {
+      "module_id": "machine_console",
+      "role": "distinctive_prop",
+      "notes": "Waist-high console with sloped top and three raised controls."
+    },
+    {
+      "module_id": "pipe_valve_riser",
+      "role": "distinctive_prop",
+      "notes": "Vertical pipe riser with front-mounted handwheel (static prop)."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/clockwork/assembly/layout.json",
+    "glb": "themes/clockwork/assembly/showcase.glb",
+    "preview": "themes/clockwork/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 6856,
+      "triangles": 3494,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "86719211127a1e29cc98238c189dfdbff973b7e8f5ddeb4050ef015e68a4f9fa",
+        "showcase.glb": "95271126a13edfd6ad57ead5dd98307d018dbda4442f3f4d151d30820c5e07f6"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "19f59c08d375b12fa97f1d0f5fa98260b072714455da27b9dc29f5f924b1cbc8"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/clockwork/material-manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

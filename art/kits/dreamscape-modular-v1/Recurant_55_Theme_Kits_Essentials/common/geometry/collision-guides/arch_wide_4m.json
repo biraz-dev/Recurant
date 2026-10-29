@@ -1,0 +1,43 @@
+{
+  "asset": "arch_wide_4m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -1.75,
+        1.25,
+        0
+      ],
+      "size": [
+        0.5,
+        2.5,
+        0.35
+      ]
+    },
+    {
+      "center": [
+        1.75,
+        1.25,
+        0
+      ],
+      "size": [
+        0.5,
+        2.5,
+        0.35
+      ]
+    }
+  ],
+  "clear_openings": [
+    {
+      "width_m": 3,
+      "height_m": 2.5,
+      "through_axis": "Z",
+      "center": [
+        0,
+        1.25,
+        0
+      ]
+    }
+  ],
+  "preview_glb": "collision-guides/arch_wide_4m__GUIDE.glb"
+}

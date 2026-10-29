@@ -1,0 +1,43 @@
+{
+  "asset": "tissue_rib_arch",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.91,
+        1.2,
+        0
+      ],
+      "size": [
+        0.34,
+        2.4,
+        0.34
+      ]
+    },
+    {
+      "center": [
+        0.91,
+        1.2,
+        0
+      ],
+      "size": [
+        0.34,
+        2.4,
+        0.34
+      ]
+    }
+  ],
+  "clear_openings": [
+    {
+      "width_m": 1.4,
+      "height_m": 2.4,
+      "through_axis": "Z",
+      "center": [
+        0,
+        1.2,
+        0
+      ]
+    }
+  ],
+  "preview_glb": "collision-guides/tissue_rib_arch__GUIDE.glb"
+}

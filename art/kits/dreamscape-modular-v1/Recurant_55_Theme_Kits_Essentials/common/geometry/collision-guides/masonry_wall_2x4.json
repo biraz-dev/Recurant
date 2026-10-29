@@ -1,0 +1,20 @@
+{
+  "asset": "masonry_wall_2x4",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0,
+        2.0,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        0.2
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/masonry_wall_2x4__GUIDE.glb"
+}

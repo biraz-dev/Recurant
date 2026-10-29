@@ -1,0 +1,65 @@
+{
+  "theme": "wild-savanna",
+  "all_flat_orthographic": true,
+  "all_four_distinct": true,
+  "no_text_frame_gutter": true,
+  "reviewed_contact_sheet": "qa/material_contact_sheet.png",
+  "reviewed_repeat_sheets": [
+    "qa/wall_repeat_2x2.png",
+    "qa/ground_repeat_2x2.png",
+    "qa/structure_repeat_2x2.png",
+    "qa/detail_repeat_2x2.png"
+  ],
+  "checks": [
+    {
+      "role": "wall",
+      "preview": "qa/wall_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 14.148,
+        "top_bottom": 13.689
+      },
+      "interior_adjacent_MAE_rgb255": 10.823,
+      "visual_findings": "Ochre color is coherent; broad red stain motifs repeat.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "ground",
+      "preview": "qa/ground_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 13.896,
+        "top_bottom": 13.939
+      },
+      "interior_adjacent_MAE_rgb255": 11.182,
+      "visual_findings": "Red-earth gravel repeats quietly, though exact border pixels differ.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "structure",
+      "preview": "qa/structure_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 21.835,
+        "top_bottom": 19.983
+      },
+      "interior_adjacent_MAE_rgb255": 17.485,
+      "visual_findings": "Grass forms a repeated diagonal pattern; clamp separate terrain/grass patches.",
+      "opposing_edges_identical": false
+    },
+    {
+      "role": "detail",
+      "preview": "qa/detail_repeat_2x2.png",
+      "status": "visually_reviewed_with_limitations",
+      "edge_MAE_rgb255": {
+        "left_right": 21.19,
+        "top_bottom": 15.43
+      },
+      "interior_adjacent_MAE_rgb255": 14.633,
+      "visual_findings": "Vertical acacia grain repeats; clamp trunk components and orient grain vertically.",
+      "opposing_edges_identical": false
+    }
+  ],
+  "native_and_preview_dimensions_verified": true,
+  "production_seam_acceptance": "not certified; use per-role findings"
+}

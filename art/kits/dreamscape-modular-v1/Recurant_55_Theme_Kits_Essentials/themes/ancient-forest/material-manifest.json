@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "theme": "ancient-forest",
+  "public_title": "Ancient Forest",
+  "manifest_base": "this theme directory",
+  "atlas_source": "art_sources/material_atlas_v1.png",
+  "atlas_source_dimensions": [
+    1254,
+    1254
+  ],
+  "atlas_source_sha256": "b83a29d53cb42ca40a1000df0a3d96b9f1f58437ffb3a389b40b88afb966b4c8",
+  "full_prompt": "prompts/material_atlas_v1.txt",
+  "generator": "built-in image_gen",
+  "input_reference": "Original scene concept describes palette only; no external art supplied to generator.",
+  "processing": "Exact quadrant crop; Lanczos resize to 256 then 128. QA images duplicate finished tiles 2x2 without alteration. No painting, seam synthesis, color edits, or fake PBR map generation.",
+  "palette": "deep evergreen, rich jade, moss-gold, turquoise atmospheric shadow",
+  "materials": [
+    {
+      "id": "ancient-forest__wall",
+      "role": "wall",
+      "description": "flat ancient dark warm bark with broad vertical furrows and muted moss",
+      "base_color_texture": "materials/wall_diffuse_256.png",
+      "low_res_texture": "materials/wall_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_repeat_candidate",
+      "recommended_wrap": "REPEAT_WITH_QA_CAUTION",
+      "nominal_meters_per_repeat": 2,
+      "uv_policy": "1 repeat per 2 authoring metres, only after seam acceptance",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/wall_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 13.339,
+          "top_bottom": 13.505
+        },
+        "interior_adjacent_MAE_rgb255": 12.246,
+        "visual_findings": "Vertical bark rhythm repeats; broad value continuity is good, tiny furrows terminate.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sha256": "ace98884e064c677ad267c58c38bcaeaaa0b6ea46df99b3226d288117d06ba27",
+      "low_res_sha256": "dec478337337854a36df4a8a559e9e6734a59ad4fc09b1a40fb11c79a27556ed"
+    },
+    {
+      "id": "ancient-forest__ground",
+      "role": "ground",
+      "description": "flat woodland earth with fine leaf litter and small root fibers, no large objects",
+      "base_color_texture": "materials/ground_diffuse_256.png",
+      "low_res_texture": "materials/ground_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_repeat_candidate",
+      "recommended_wrap": "REPEAT_WITH_QA_CAUTION",
+      "nominal_meters_per_repeat": 2,
+      "uv_policy": "1 repeat per 2 authoring metres, only after seam acceptance",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/ground_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 17.25,
+          "top_bottom": 17.062
+        },
+        "interior_adjacent_MAE_rgb255": 15.026,
+        "visual_findings": "Fine root and leaf pattern is coherent, but exact edges are not matched.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "7d648208586dda1b99cc9e03d9e4812b5324da8e99310f442280a9a5ff39706d",
+      "low_res_sha256": "a178a4f96a6f82f2d8aa7fdb2d415c860389f9ef5cf0bb2045fd57c95e584164"
+    },
+    {
+      "id": "ancient-forest__structure",
+      "role": "structure",
+      "description": "flat soft jade moss over quiet dark stone with tiny cracks",
+      "base_color_texture": "materials/structure_diffuse_256.png",
+      "low_res_texture": "materials/structure_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_component_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "uv_policy": "0-1 per component",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/structure_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 13.339,
+          "top_bottom": 12.529
+        },
+        "interior_adjacent_MAE_rgb255": 13.112,
+        "visual_findings": "Moss clusters repeat at tile intervals; clamp boulder surface panels.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "b958bfe05fc6abc2f6077faa8cc697e8cc82530f09c35409b53696b0a7ef3472",
+      "low_res_sha256": "cee8f97c1b8a475edd8096733c0fc1faccd73224d7a724014dddfc9a6acb7bc2"
+    },
+    {
+      "id": "ancient-forest__detail",
+      "role": "detail",
+      "description": "flat dense overlapping small fern and ivy leaf surface in muted varied greens",
+      "base_color_texture": "materials/detail_diffuse_256.png",
+      "low_res_texture": "materials/detail_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_component_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "uv_policy": "0-1 per component",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/detail_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 16.661,
+          "top_bottom": 14.553
+        },
+        "interior_adjacent_MAE_rgb255": 13.166,
+        "visual_findings": "Ferns and ivy have visible duplicated motifs; this is an opaque foliage surface, not a cutout.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "5f4121fe00ad413e38c0fd12bc832032c43f59f08bed7608fc5d9be1c227328b",
+      "low_res_sha256": "3e95d82c65ca04231edd9c9b8cd82535011ca56c75c6267bdf03ae212aa6831c"
+    }
+  ],
+  "import_defaults": {
+    "filter": "nearest at runtime for pixel aesthetic; test motion shimmer",
+    "roughness": 0.85,
+    "metallic": 0,
+    "blend_mode": "opaque",
+    "default_emission": 0
+  },
+  "status": "production-authorized generated material candidates, asset-level QA complete; engine acceptance remains",
+  "known_limitations": [
+    "No mathematically seamless certification. Use the actual repeat diagnostics before enabling broad repeats.",
+    "Structure and detail are clamp panels, not unrestricted tiled fields.",
+    "No normal, roughness, AO, metallic, height, emission or alpha-cutout maps supplied.",
+    "No engine import, movement, collision or target performance validation is implied by these textures."
+  ],
+  "support_notes": "MATERIAL_NOTES.md",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

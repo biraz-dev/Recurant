@@ -1,0 +1,144 @@
+{
+  "id": "subterranean-elven-realm",
+  "title": "Subterranean Elven Realm",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 20,
+  "archives": [
+    {
+      "id": "subterranean-elven-realm-001",
+      "bytes": 1619429,
+      "sha256": "2a5ae3e1438244b17c1f7f4e568274cb6362a959389b5ccda2bf738ea1d4e89c",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/subterranean-elven-realm.volume-001.zip",
+          "bytes": 1619429,
+          "sha256": "2a5ae3e1438244b17c1f7f4e568274cb6362a959389b5ccda2bf738ea1d4e89c",
+          "git_blob_sha": "7d2457d33de9b638c13eda2051bc760f5ff950a8"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/CLAUDE_README.md",
+          "bytes": 7885,
+          "sha256": "b79050b2bf72cc221ce6554b1dc77ef730aeabdd7e25f3879525b8219fd39029",
+          "git_blob_sha": "ce494d21d24b465b43527b2161280837a4443b7a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "363b917ffb7e25d23174d6d1dca18cc8932fedff24a75f65dafcc5d50d4f63c0",
+          "git_blob_sha": "7d53e93b5837a0178cbdcea94d5da2586b923b21"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/assembly/collision-navigation.json",
+          "bytes": 10191,
+          "sha256": "665345192171bcca33f4f22a78e070d7db77187f5a30d9ed1e3cc9d3d9fb344e",
+          "git_blob_sha": "4e5e7ca9ba746cf4e4472121d4957ce1f629159a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/assembly/layout.json",
+          "bytes": 13617,
+          "sha256": "357c46c6c53ca5c3dd123cf92a622b81164918fe5aeb44d68f10a38212e249cb",
+          "git_blob_sha": "295571898b45d5bf2024b1776e3102810ede44ea"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/assembly/native_320x240.png",
+          "bytes": 131400,
+          "sha256": "a62afb8f64dde0004cf63294acb9850b7325fa4f6fb833484b90677fc81e43e2",
+          "git_blob_sha": "47431317a1dcd113fcc3afa382f5c981be7c0899"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/assembly/showcase.glb",
+          "bytes": 731820,
+          "sha256": "1eaf6cddc1d5fbbd2fa0f23b2dc9b7d8a5a4671cb2fcb07ea8ef478cf5e6a3f1",
+          "git_blob_sha": "393e3bcd8b44b79aaaaf3110b9099e306c9fb0f7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/concept/reference_native_320x240.png",
+          "bytes": 157618,
+          "sha256": "1e009fc8849a3fece85e4d40103563187f8105ddbb37748af3231e9049204ea5",
+          "git_blob_sha": "5e721c33345ab8585d74b71f54aaa51d19f63cac"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "34e22f1bd99a6f71a289f1f4459d8aae088711a1cca70c9cfa7b3cd337105f30",
+          "git_blob_sha": "be2a2dbfa410151fa31dd4910bbd90ad27348691"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/material-manifest.json",
+          "bytes": 7248,
+          "sha256": "4374a41e518fd635436cdfb68590bad888c0a88dca2652c4d03f7b3ee442caab",
+          "git_blob_sha": "e97356ae05a5ff63e873f27d8f22a2ba67aca35b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/materials/detail_diffuse_128.png",
+          "bytes": 40742,
+          "sha256": "dd90b08da87fcc0c1789ce066660c6a17c674d00aaa3ea40ae1a6fd6118e1f05",
+          "git_blob_sha": "7b923dc2ab34d78483ed7ddab089a67c4982eff5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/materials/detail_diffuse_256.png",
+          "bytes": 151807,
+          "sha256": "b99f68791e189982a595cec9dc1d3ac68495074b74a3f106512b34cf0bae9701",
+          "git_blob_sha": "31203c6df61ffc077f45c5c850f5970f91287cd7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/materials/ground_diffuse_128.png",
+          "bytes": 35250,
+          "sha256": "c38bf69ea8f2ae363d2fbd70450e0716cf51e4cbe28e9fe9cd850fe20b4c7e1a",
+          "git_blob_sha": "75e7507fbc601700a9b46a59b7122a4bda59d0c3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/materials/ground_diffuse_256.png",
+          "bytes": 131775,
+          "sha256": "d6fde75bec512f7ad74c8d74aa061044e25c4cc2edeb07d52359e7c00ce73e96",
+          "git_blob_sha": "ecc5d8585c4791e3a5c388d9e7260331bcf7ecf0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/materials/structure_diffuse_128.png",
+          "bytes": 37288,
+          "sha256": "3c9a63e09f27c760508bea31a8fc5d6335b9b303da8d3c75c2d5414090dc0e76",
+          "git_blob_sha": "9ff6ceb60e3b3cdad0f2eca5446d8b293ac70441"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/materials/structure_diffuse_256.png",
+          "bytes": 139091,
+          "sha256": "7a1225c9074b41e8dfab543906f95ca983f715ad80aa64b0df98559b224f8e20",
+          "git_blob_sha": "3d9c089f8357b7cef8add8bd216c48179d315eac"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/materials/wall_diffuse_128.png",
+          "bytes": 37331,
+          "sha256": "92e833d8b03246dc3d7f34ca666f546d08deabf56c7f32afcadc57846da2f72b",
+          "git_blob_sha": "0e7e19af692f51f3a3d9533bbaa3a4daaeb24b9c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/materials/wall_diffuse_256.png",
+          "bytes": 141327,
+          "sha256": "3cb9b088345390bfc4b821060b085696248826d6fc2d3c30e91727394f0cf209",
+          "git_blob_sha": "fa0a60b4ad3a3f84a173371be49ed6201981f403"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/prompts/material-atlas.txt",
+          "bytes": 2849,
+          "sha256": "4119b83e46f3cf3434ec47256a9b1a2e156efb7ae8aa1fe5772e832ea0eb694f",
+          "git_blob_sha": "b49f7e748ebf4db40d8ce84c65f3d120a511a69b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/subterranean-elven-realm/theme-manifest.json",
+          "bytes": 7321,
+          "sha256": "b98e448115d50054baff3a6d424ff743c9d423b0c45a545df4a92d2be5854792",
+          "git_blob_sha": "3bb060216bf3373fc25725001485a0fd281f2da8"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "asset": "bridge_metal_2x4",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0,
+        -0.12,
+        0
+      ],
+      "size": [
+        2,
+        0.24,
+        4
+      ]
+    },
+    {
+      "center": [
+        -0.96,
+        0.6,
+        0
+      ],
+      "size": [
+        0.14,
+        1.2,
+        4
+      ]
+    },
+    {
+      "center": [
+        0.96,
+        0.6,
+        0
+      ],
+      "size": [
+        0.14,
+        1.2,
+        4
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/bridge_metal_2x4__GUIDE.glb"
+}

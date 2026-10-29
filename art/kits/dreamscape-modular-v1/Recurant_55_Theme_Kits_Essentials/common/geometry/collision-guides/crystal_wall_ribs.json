@@ -1,0 +1,20 @@
+{
+  "asset": "crystal_wall_ribs",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        2.0,
+        -0.026292
+      ],
+      "size": [
+        2.0,
+        4.0,
+        0.372583
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/crystal_wall_ribs__GUIDE.glb"
+}

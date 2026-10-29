@@ -1,0 +1,55 @@
+{
+  "asset": "timber_post_beam_gate",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.88,
+        1.8,
+        0
+      ],
+      "size": [
+        0.24,
+        3.6,
+        0.3
+      ]
+    },
+    {
+      "center": [
+        0.88,
+        1.8,
+        0
+      ],
+      "size": [
+        0.24,
+        3.6,
+        0.3
+      ]
+    },
+    {
+      "center": [
+        0,
+        3.65,
+        0
+      ],
+      "size": [
+        2.2,
+        0.25,
+        0.4
+      ]
+    }
+  ],
+  "clear_openings": [
+    {
+      "width_m": 1.52,
+      "height_m": 2.74,
+      "through_axis": "Z",
+      "center": [
+        0,
+        1.37,
+        0
+      ]
+    }
+  ],
+  "preview_glb": "collision-guides/timber_post_beam_gate__GUIDE.glb"
+}

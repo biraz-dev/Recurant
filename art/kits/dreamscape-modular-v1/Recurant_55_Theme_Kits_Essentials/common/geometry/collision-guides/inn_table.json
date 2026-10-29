@@ -1,0 +1,20 @@
+{
+  "asset": "inn_table",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.425,
+        0.0
+      ],
+      "size": [
+        1.6,
+        0.85,
+        0.9
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/inn_table__GUIDE.glb"
+}

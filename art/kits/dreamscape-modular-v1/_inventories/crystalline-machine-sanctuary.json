@@ -1,0 +1,150 @@
+{
+  "id": "crystalline-machine-sanctuary",
+  "title": "Crystalline Machine Sanctuary",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "crystalline-machine-sanctuary-001",
+      "bytes": 1703364,
+      "sha256": "47c19debc82b40680d338a3cdb5af37487f20dea1ad9976509105e7cba982803",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/crystalline-machine-sanctuary.volume-001.zip",
+          "bytes": 1703364,
+          "sha256": "47c19debc82b40680d338a3cdb5af37487f20dea1ad9976509105e7cba982803",
+          "git_blob_sha": "ad1ee1a945da932a7cf057ddce3f5642675ea778"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/CLAUDE_README.md",
+          "bytes": 7308,
+          "sha256": "4a92113a247c8c662b02e6ec487b0e82f76a8331174c40a9de7c48ce333dbb4d",
+          "git_blob_sha": "941a61f78fac252d2906fa9b5a7e1e54bca26888"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/MATERIAL_NOTES.md",
+          "bytes": 2757,
+          "sha256": "b36cb197255f65ba946a2eb719fc66616be346afe78632e524a94af40558ad80",
+          "git_blob_sha": "6ab0250a59aed9c02d2cf3e4b4cca28cf7930c76"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "603d943090409112f70fc340ed703ccee9285b5370ea274778fd55fcb5bcd84c",
+          "git_blob_sha": "61fd7832f0452c6d15a8a1e704283cf4ea9bfca2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/assembly/collision-navigation.json",
+          "bytes": 10396,
+          "sha256": "6dfa73f45bb0d3e710554ce967f5aabbaf42b3967c47e53ba274b534b11f363b",
+          "git_blob_sha": "0ff2a2038e6a067f2e8deac581a5d4e74d925321"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/assembly/layout.json",
+          "bytes": 13577,
+          "sha256": "902c5e41d306f5629cb5e8e7d13006506ed1b3999e613bb80405e5def6de1b89",
+          "git_blob_sha": "000febf7404e9e4766cee9cbad6e5204a729db67"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/assembly/native_320x240.png",
+          "bytes": 166043,
+          "sha256": "0ac29791176b2f8d61e5690ea58c728cbbea3046ce6e1bbef98c28d0175a2516",
+          "git_blob_sha": "4e5d20f63cda9aecab8b1eefa067b74cf9bf3d1c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/assembly/showcase.glb",
+          "bytes": 734596,
+          "sha256": "01720137c003b6a5a09a31f6e29c6f2080cd2a2fcd4ea70b1967d22b4ccbc4fc",
+          "git_blob_sha": "69ac2b7d0a5726740526b25e7b0bf48701049aa1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/concept/reference_native_320x240.png",
+          "bytes": 155842,
+          "sha256": "0738f61c291080c70ff37d7de9d37f392fae759f1aa714e8e0db073a0a3fe076",
+          "git_blob_sha": "6367d042803f0f57a09824d10b99deb600d86c64"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "6c2079b161565b68832076c9dd262815157d5c46a24e2c07ba7511c224646f28",
+          "git_blob_sha": "3a1beff7787f4194459ddae7729738e72f49203c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/material-manifest.json",
+          "bytes": 7410,
+          "sha256": "bd1aace728f36d8ec05b50e0e71ba0286e3d98c747fdf867f9a83041c8db1c0e",
+          "git_blob_sha": "0b089d049593f4efcc496508edc04beb5846d1d7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/materials/detail_diffuse_128.png",
+          "bytes": 39678,
+          "sha256": "4b038ace81111559a1cbe22f587bb8b0a10eaefbaf311f9f79476ffd01665931",
+          "git_blob_sha": "3fdcfdd718c032150bffa736d043a5eba4d6c27f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/materials/detail_diffuse_256.png",
+          "bytes": 149215,
+          "sha256": "effd66955851c5c74bcb01146afdc68eca8dced1418601972c1d6edc64c19d04",
+          "git_blob_sha": "f2363c80a2d58a4c08c8bfa2b1aab601a2bb343d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/materials/ground_diffuse_128.png",
+          "bytes": 37849,
+          "sha256": "c4b495a49cca6bfbd0b911422e84a35e7464619cb125965897173c26cb2a5304",
+          "git_blob_sha": "f05a45875b7ba3420619a40345371fcabddcdde8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/materials/ground_diffuse_256.png",
+          "bytes": 145126,
+          "sha256": "f75aadfdb2c22cbac723bce0381193aedf78bfd01e757b8ac2bd7c700f913c7e",
+          "git_blob_sha": "cd2bce21a9567f968fc57e2af06bc071e4131255"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/materials/structure_diffuse_128.png",
+          "bytes": 41609,
+          "sha256": "5af1fee80706152d156857612961aa08dbead152b1b75e0d39ca3d6fec299449",
+          "git_blob_sha": "d9ed2d102bd19acfffebc30e8b3d3ae62a8c3249"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/materials/structure_diffuse_256.png",
+          "bytes": 159981,
+          "sha256": "13aa3bd57dd454d21e7948f1fffa157d6c51d64d703c565f43a122b41454053c",
+          "git_blob_sha": "5722cde5ee879255b8356394fb13d51ecba8d3f2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/materials/wall_diffuse_128.png",
+          "bytes": 35920,
+          "sha256": "d37c9a866230a5f4e2fe4ab75df59bf843d45352e5e1cb5a4e51f146a4d5571a",
+          "git_blob_sha": "6cd7f4db56b09880c5e918c59a4e85f825bbb3e1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/materials/wall_diffuse_256.png",
+          "bytes": 134832,
+          "sha256": "450ccf598f6beec97e343ada85f123bf83eb091d91c34e13892157cebaa9029f",
+          "git_blob_sha": "3d8ac8f16245efb2f5d492303e556ccea95b3b74"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/prompts/material_atlas_v1.txt",
+          "bytes": 2465,
+          "sha256": "71a824c25005e7c436b3f35c0515496b4212b51b2b10ccd892ccd29885d4cd30",
+          "git_blob_sha": "c621b7be850bef5093750f4f2d3b80227e833928"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crystalline-machine-sanctuary/theme-manifest.json",
+          "bytes": 7154,
+          "sha256": "41ff75cf8aac4f01293dc5bdc4259c8091441c3edee2151f1371c08671e829a8",
+          "git_blob_sha": "81dc5c4172834b6de1b3db8a73ba8f1c9f8d505f"
+        }
+      ]
+    }
+  ]
+}

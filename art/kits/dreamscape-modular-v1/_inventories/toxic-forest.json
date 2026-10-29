@@ -1,0 +1,174 @@
+{
+  "id": "toxic-forest",
+  "title": "Toxic Forest",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 25,
+  "archives": [
+    {
+      "id": "toxic-forest-001",
+      "bytes": 2291890,
+      "sha256": "8db5b96c56cf80404d0597a45c4d667662383f4cbf6df0d5ea6f8120315e1209",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/toxic-forest.volume-001.zip",
+          "bytes": 2291890,
+          "sha256": "8db5b96c56cf80404d0597a45c4d667662383f4cbf6df0d5ea6f8120315e1209",
+          "git_blob_sha": "8b69167774f323a9deee5da35a0d3470381f267a"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/CLAUDE_README.md",
+          "bytes": 7453,
+          "sha256": "69db105e37cbb8fa902f4aeeed5939dbac041bd922c12146c5d74f36fba39b90",
+          "git_blob_sha": "55d4e39824e25cb4b3a192c5169cc38722fac158"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "21afb813a05d4e2417359382f81375e9a26258b9d8d17bc250ff999f3df86912",
+          "git_blob_sha": "06958811070d9fb1d5a5b62f1c38e37690368ebc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/assembly/collision-navigation.json",
+          "bytes": 10551,
+          "sha256": "48ea8f8c0c5aacf8a7b90ad2652cd191e129d04a13ef96c29bf3c6e81ad97f9d",
+          "git_blob_sha": "043ba73e80f46a55ab675c0c2b69e04fda13f78d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/assembly/layout.json",
+          "bytes": 14060,
+          "sha256": "4d969614e6da1f911ff4087b427480d6a39548e5cc3e23189d919437337a3c2e",
+          "git_blob_sha": "c32a8a04d0caa6e9612f5f7c6dac4b867b3ce498"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/assembly/native_320x240.png",
+          "bytes": 153735,
+          "sha256": "172903b4435875331ebfde51768ef733992a4dbf5f66ea8e3e58011686d35798",
+          "git_blob_sha": "bc16d7b5839e84254ef3647eccc703b3110387a2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/assembly/showcase.glb",
+          "bytes": 891868,
+          "sha256": "c31364f074d9b9aecacda638425ad700d711b0ae4eb64999bb5ac19d09d80a11",
+          "git_blob_sha": "5d7dede368b7a5ff2632bfc461f5a5d753344c9a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/concept/reference_native_320x240.png",
+          "bytes": 183407,
+          "sha256": "35ee1d0e7dd37deba8f343eb714a6d7ae3ba6990a1e96a3b541a7a4ce198806b",
+          "git_blob_sha": "3281f8855e41b84e6a49c5cb9e90595c091bd2a8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "71128c3967ed0e54a63a99975489fd9ec46cb6ced3ea2700f1bae92d3159aece",
+          "git_blob_sha": "8c07df48a4a2449d92cbc997f90f04808a0590f8"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/material_manifest.json",
+          "bytes": 14125,
+          "sha256": "bc97dd803e3a2f910be67991a7384f164d0ff26fe9cbfb1df4814b4423913e7e",
+          "git_blob_sha": "08070dba9554f51c3fb1d3372388dfd3d2b69aa5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/materials/detail_diffuse_128.png",
+          "bytes": 41694,
+          "sha256": "20fe33452794279dd8789b2f315812a1eb431754c1d9601538af2040d2e833ad",
+          "git_blob_sha": "56208474fbf13ed00f9d85353a57f0e05f14860f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/materials/detail_diffuse_256.png",
+          "bytes": 153872,
+          "sha256": "94b13b23822f7e7c1ca22688b6617dcf2f5a2279cb16f08e528e4cbfceb5f2d1",
+          "git_blob_sha": "7f770e611309705099a29e9aa97296fc826f9312"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/materials/ground_diffuse_128.png",
+          "bytes": 42809,
+          "sha256": "8f6d4d9040bf61cde448abcf1eb08c3edf8265da33dc27f775d192cff0a965c8",
+          "git_blob_sha": "2df5aa14c3f059254b2cc1d71f021214a0ace3e7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/materials/ground_diffuse_256.png",
+          "bytes": 160067,
+          "sha256": "eb237f40d023ab650e6ba98e6fca7e1539b6606bd3c8fe8366eb58dd574c71d1",
+          "git_blob_sha": "915a6645d2b4b983c93e3cbdbabc9bd9f49cf4e1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/materials/ground_repeat_diffuse_128.png",
+          "bytes": 47186,
+          "sha256": "dff76f5028e8c28071336f8361e361f1604d78e78d8f051cc5422d7866775da5",
+          "git_blob_sha": "24ed3b5a7884fe3da692dbb969bd7583aeccf4a9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/materials/ground_repeat_diffuse_256.png",
+          "bytes": 179787,
+          "sha256": "ec14d4957a9029a92ee0dd62a5ce9969f0462ef9018492d2f31eede052f41a79",
+          "git_blob_sha": "e4adeb185281a7cdebafac8f97eba0c358047d6b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/materials/structure_diffuse_128.png",
+          "bytes": 40258,
+          "sha256": "1b4d741188b137933994340c6228273ea8f5cfd503098cf1129b320df878a5ec",
+          "git_blob_sha": "25aa369fae753c961c5a76a307737f485d49ffed"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/materials/structure_diffuse_256.png",
+          "bytes": 146197,
+          "sha256": "e1e764f9202da4fd9a1419dcdd5148e3ced3334e9e0179724beb09aaf5c9ba29",
+          "git_blob_sha": "29b935a6c14c0b38ab99f8e937a108ab164b5d74"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/materials/wall_diffuse_128.png",
+          "bytes": 42590,
+          "sha256": "9bf8f192fdaefc44fd68bcf5e0a53a65a5aa0e882386a2ad241341c901dc04be",
+          "git_blob_sha": "c3e63b2743af8ec4a753d70f3d15426f188b0b2d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/materials/wall_diffuse_256.png",
+          "bytes": 155896,
+          "sha256": "ef59116af62af3858299e8e08e56f19481c81fae7f4c581ae851fd2a4aa51eee",
+          "git_blob_sha": "233fd7e7a3756a939ccb85246657c28643a3e2b7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/materials/wall_repeat_diffuse_128.png",
+          "bytes": 45743,
+          "sha256": "44cf8170c7640c2fc3d34c07f5e2a27140f387d012cda705d22cb48f3db69fd4",
+          "git_blob_sha": "57beeae29838eda91046cafe1f6973299b5d21d4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/materials/wall_repeat_diffuse_256.png",
+          "bytes": 171055,
+          "sha256": "1f61df92297e1cdfb91f730196427142a4b893e5cf0dda0034bb9a714b67d949",
+          "git_blob_sha": "cba0c88dd04626efee1f741566da7e769091365c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/prompts/material_atlas_prompt.txt",
+          "bytes": 1805,
+          "sha256": "202f3d73ffb436a81ad0be4a63093a8890b73167d1488cccc8eb7e38e80824b2",
+          "git_blob_sha": "70c8b761e1af2e665d96cd9e229b2581a272e38b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/prompts/repeat_alternatives_prompt.txt",
+          "bytes": 1895,
+          "sha256": "8269c2811c5049a15f81dbac0f47fa4bdc64e074187490b3777ff4575dee4aaa",
+          "git_blob_sha": "f22dfde6160c46f3a1a2018d8e8940995ef811a3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/toxic-forest/theme-manifest.json",
+          "bytes": 6825,
+          "sha256": "f3e48f2a02dca707b8fb9fade41dd3bad862a6fe760c1c85b5cbdc8076d11052",
+          "git_blob_sha": "513ae08c775b40102c165cdc47663d7524d69258"
+        }
+      ]
+    }
+  ]
+}

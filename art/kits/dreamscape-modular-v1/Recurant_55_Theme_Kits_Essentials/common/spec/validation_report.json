@@ -1,0 +1,22 @@
+{
+  "status": "passed_document_and_schema_checks",
+  "checked_at_utc": "2026-10-29T00:37:16Z",
+  "checks": {
+    "json_parse": "passed for all spec JSON files",
+    "json_schema_draft_2020_12_meta_validation": "passed for both schemas",
+    "legacy_text_sha256_vs_repository_inventory": "passed for both preserved documents",
+    "original_archive_sha256_vs_repository_inventory": "passed",
+    "repository_head": "b9fdd98f37bcb419bcf2951103529ff571e5ea21"
+  },
+  "not_run": [
+    "GLB import",
+    "geometry manifest instances against schema (geometry worker ongoing)",
+    "theme manifest normalization",
+    "repository scripts",
+    "game build",
+    "runtime/controller tests",
+    "target device profiling"
+  ],
+  "repository_changes": false,
+  "scope": "contract documents only; runtime integration remains unverified"
+}

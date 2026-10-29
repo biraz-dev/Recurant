@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "potion-cellar",
+  "title": "Potion Cellar",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/potion-cellar/materials/wall_diffuse_256.png",
+      "low_memory_basecolor": "themes/potion-cellar/materials/wall_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "warm dark rough limestone blocks with fine dry moss stains in joints, subdued alchemical cellar masonry"
+    },
+    "ground": {
+      "basecolor": "themes/potion-cellar/materials/ground_diffuse_256.png",
+      "low_memory_basecolor": "themes/potion-cellar/materials/ground_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "worn charcoal and amber stone pavers, orthogonal flat floor pattern, subtle old mineral stains"
+    },
+    "structure": {
+      "basecolor": "themes/potion-cellar/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/potion-cellar/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "aged honey-brown wooden worktop planks with fine end-grain, small knife scratches and quiet dusty wear"
+    },
+    "detail": {
+      "basecolor": "themes/potion-cellar/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/potion-cellar/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "square flat painted ceramic apothecary decorative panel with nonlettered interlaced leaf and bottle-shaped ornamental silhouettes in moss and muted violet, no actual standing bottles"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_pavers_2m",
+      "role": "walkable_floor",
+      "notes": "Pavers 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "masonry_wall_ashlar",
+      "role": "structure",
+      "notes": "Staggered ashlar courses with actual relief and mortar gaps."
+    },
+    {
+      "module_id": "masonry_doorway_round",
+      "role": "structure",
+      "notes": "Round arch through-wall, 1.4 m wide / 2.4 m clear rectangular passage."
+    },
+    {
+      "module_id": "shelf_bookcase",
+      "role": "distinctive_prop",
+      "notes": "Solid-backed three-shelf cabinet; fill with separately instanced props."
+    },
+    {
+      "module_id": "bottle_potion",
+      "role": "distinctive_prop",
+      "notes": "Potion bottle geometry with shoulder and long neck, opaque preview material."
+    },
+    {
+      "module_id": "barrel",
+      "role": "distinctive_prop",
+      "notes": "Faceted barrel with two raised metal hoops."
+    },
+    {
+      "module_id": "inn_table",
+      "role": "distinctive_prop",
+      "notes": "Rectangular inn table with four legs."
+    },
+    {
+      "module_id": "crate",
+      "role": "distinctive_prop",
+      "notes": "Braced wooden crate with diagonal front reinforcement."
+    },
+    {
+      "module_id": "urn",
+      "role": "distinctive_prop",
+      "notes": "Faceted urn / potion container with broad body and narrow neck."
+    },
+    {
+      "module_id": "lantern_box",
+      "role": "distinctive_prop",
+      "notes": "Box lantern with capped roof and hanging spindle; use separate emissive adapter."
+    },
+    {
+      "module_id": "library_book_row",
+      "role": "distinctive_prop",
+      "notes": "Five book-spine solids on a shelf-ready slab; no text or copied symbols."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/potion-cellar/assembly/layout.json",
+    "glb": "themes/potion-cellar/assembly/showcase.glb",
+    "preview": "themes/potion-cellar/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 9312,
+      "triangles": 4732,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "588b40c67416d7858866a03fc7fb5768ca97befcd62383a7d15f49e1dc6fc302",
+        "showcase.glb": "3c6bff91cd854e0bf4da4d5806802853f6d79c4108f400eb3eb7a8ee4dc56297"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "d9460bbdf3376b87f55ae455161f442371d7fa7df0b3694cea03041ced33065c"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/potion-cellar/material-manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

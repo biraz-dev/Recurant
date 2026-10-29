@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "rainforest-river",
+  "title": "Rainforest River",
+  "manifest_base": "package_root",
+  "geometry_manifest": "common/geometry/geometry-manifest.json",
+  "material_bindings": {
+    "wall": {
+      "basecolor": "themes/rainforest-river/materials/wall_repeat_diffuse_256.png",
+      "low_memory_basecolor": "themes/rainforest-river/materials/wall_repeat_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Humid buttress-root bark, bronze brown with moss and looping rootlets"
+    },
+    "ground": {
+      "basecolor": "themes/rainforest-river/materials/ground_repeat_diffuse_256.png",
+      "low_memory_basecolor": "themes/rainforest-river/materials/ground_repeat_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "tile_repeat_2m",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Mossy rounded riverbank stones with teal-grey pebbles and damp brown soil"
+    },
+    "structure": {
+      "basecolor": "themes/rainforest-river/materials/structure_diffuse_256.png",
+      "low_memory_basecolor": "themes/rainforest-river/materials/structure_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Layered water-worn jade slate with eroded edges and small lichen"
+    },
+    "detail": {
+      "basecolor": "themes/rainforest-river/materials/detail_diffuse_256.png",
+      "low_memory_basecolor": "themes/rainforest-river/materials/detail_diffuse_128.png",
+      "color_space": "sRGB",
+      "uv_mode": "panel_clamp_0_1",
+      "alpha_mode": "OPAQUE",
+      "metallic": 0,
+      "roughness": 0.85,
+      "seamless_certified": false,
+      "description": "Turquoise river water viewed straight down with pale jade ripples, no reflections of sky or objects"
+    }
+  },
+  "asset_recipe": [
+    {
+      "module_id": "floor_plain_2m",
+      "role": "walkable_floor",
+      "notes": "Plain 2\u00d72 m floor tile with top at local Y=0."
+    },
+    {
+      "module_id": "water_surface_2m",
+      "role": "distinctive_prop",
+      "notes": "Opaque placeholder water plane solid for material replacement; not collision."
+    },
+    {
+      "module_id": "cave_wall_2m",
+      "role": "structure",
+      "notes": "Four overlapping faceted stone masses making an irregular cave wall."
+    },
+    {
+      "module_id": "root_arch_2m",
+      "role": "structure",
+      "notes": "Root-grown arch with 1.4 m clear central lane."
+    },
+    {
+      "module_id": "palm_tree",
+      "role": "distinctive_prop",
+      "notes": "Tropical palm with tapered trunk and seven thick drooping leaf volumes."
+    },
+    {
+      "module_id": "broadleaf_clump",
+      "role": "distinctive_prop",
+      "notes": "Eight thick diamond leaves, actual double-volume geometry, not alpha cards."
+    },
+    {
+      "module_id": "cattail_reed_cluster",
+      "role": "distinctive_prop",
+      "notes": "Five marsh reeds with separate seed heads and blades."
+    },
+    {
+      "module_id": "fern_clump",
+      "role": "distinctive_prop",
+      "notes": "Six fern fronds built from stems and 48 solid leaflet blades."
+    },
+    {
+      "module_id": "tree_trunk",
+      "role": "distinctive_prop",
+      "notes": "Tapered trunk with five flaring buttress roots. Set outside travel lane."
+    },
+    {
+      "module_id": "coral_branch",
+      "role": "distinctive_prop",
+      "notes": "Forked reef-coral solid with seven visible branch tips."
+    },
+    {
+      "module_id": "fallen_log_2m",
+      "role": "distinctive_prop",
+      "notes": "2m fallen log with exposed endgrain discs and broken branch."
+    },
+    {
+      "module_id": "shore_bank_2m",
+      "role": "distinctive_prop",
+      "notes": "Two shallow shoreline terraces rising toward +Z, top delta9cm."
+    }
+  ],
+  "assembly": {
+    "route": "assembled_glb",
+    "layout": "themes/rainforest-river/assembly/layout.json",
+    "glb": "themes/rainforest-river/assembly/showcase.glb",
+    "preview": "themes/rainforest-river/assembly/native_320x240.png",
+    "notes": "GLB is texture-bound cutaway showcase. All instance transforms baked into vertices. Import GLB OR layout, not both."
+  },
+  "runtime_integration_verified": false,
+  "originality_notes": "Original generated surface art and original parametric geometry; generic public names, no source-world logos, characters or copied layouts.",
+  "qa": {
+    "asset_assembly_generated": true,
+    "metrics": {
+      "vertices": 5073,
+      "triangles": 2351,
+      "primitives": 4,
+      "embedded_pngs": 4
+    },
+    "lane_guide_clear": true,
+    "lane_guide_conflicts": [],
+    "navigation_connected": true,
+    "runtime_integration_verified": false,
+    "preview_status": "actual GLB rendered by Blender Cycles CPU; visual inspection recorded separately",
+    "texture_status": "diffuse candidates; no PBR data maps or seamless certification",
+    "duplicate_scene_routes": "do not import both assembly GLB and layout instances",
+    "rendered_views": [
+      "native_320x240.png"
+    ],
+    "native_preview_camera": {
+      "vertical_fov_degrees": 60,
+      "eye_height_m": 1.5,
+      "resolution_px": [
+        320,
+        240
+      ],
+      "back_offset_m": 0,
+      "note": "diagnostic fixed camera; runtime controller/back-offset untested"
+    },
+    "visual_review": {
+      "status": "PASS_STATIC_ASSET_PREVIEW_WITH_LIMITS",
+      "scope": "Actual GLB overview and native320x240 contact-cell inspection, plus full-size pilot and onebit views. Independent second-agent review corroborated all themed views.",
+      "files_sha256": {
+        "native_320x240.png": "3d9163f59038055d4d6246e7e79a4bad2bfc336ae92155b9a20a3c15892c3b13",
+        "showcase.glb": "352241db1d78e0478b6244ddb81ad6a419ff0d23c2cb4106e03a02fa712a08df"
+      },
+      "known_limits": [
+        "Diagnostic cutaway galleries reuse a common test layout and do not reproduce full concept worlds.",
+        "Bright pale/crystal surfaces may lose fine detail in this studio lighting.",
+        "Dense diffuse/engraved textures can shimmer; motion and target performance not tested.",
+        "Texture repeat candidates are not mathematically seamless-certified.",
+        "Onebit contour/Bayer display is a separate render-pipeline proposal, not baked game behavior."
+      ],
+      "omitted_recreatable_overview_sha256": "ff9dc6b36607de4ed4a921f4d7502bbca3ab425af730f36d7dff69be2387db52"
+    },
+    "derived_overview_delivery": "Not bundled; reviewed in authoring, regenerate with render_themes.py."
+  },
+  "dependencies": [
+    "common/geometry",
+    "common/spec"
+  ],
+  "material_source_manifest": "themes/rainforest-river/material_manifest.json",
+  "source_art_delivery": {
+    "status": "optional separate lossless source bundle",
+    "restore": "Recurant_55_Theme_Kits_Source_Art/restore_source_art.py",
+    "source_paths_resolve_after_restore": true
+  }
+}

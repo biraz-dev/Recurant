@@ -1,0 +1,20 @@
+{
+  "asset": "timber_gable_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.5,
+        -0.03
+      ],
+      "size": [
+        2.113137,
+        1.113137,
+        0.36
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/timber_gable_2m__GUIDE.glb"
+}

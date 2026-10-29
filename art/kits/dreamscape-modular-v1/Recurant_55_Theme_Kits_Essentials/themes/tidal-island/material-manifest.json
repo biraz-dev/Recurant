@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "theme": "tidal-island",
+  "public_title": "Tidal Island",
+  "manifest_base": "this theme directory",
+  "atlas_source": "art_sources/material_atlas_v1.png",
+  "atlas_source_dimensions": [
+    1254,
+    1254
+  ],
+  "atlas_source_sha256": "ddbf2b515c010ff2bfebdb5cc6a5a557c0bef10eb09519db24ca1030fa9c0074",
+  "full_prompt": "prompts/material_atlas_v1.txt",
+  "generator": "built-in image_gen",
+  "input_reference": "Original scene concept describes palette only; no external art supplied to generator.",
+  "processing": "Exact quadrant crop; Lanczos resize to 256 then 128. QA images duplicate finished tiles 2x2 without alteration. No painting, seam synthesis, color edits, or fake PBR map generation.",
+  "palette": "turquoise lagoon, pale coral sand, lilac basalt, sea-glass blue, soft warm cloud light",
+  "materials": [
+    {
+      "id": "tidal-island__wall",
+      "role": "wall",
+      "description": "flat pale lilac gray weathered coastal basalt with subtle salt wear",
+      "base_color_texture": "materials/wall_diffuse_256.png",
+      "low_res_texture": "materials/wall_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_repeat_candidate",
+      "recommended_wrap": "REPEAT_WITH_QA_CAUTION",
+      "nominal_meters_per_repeat": 2,
+      "uv_policy": "1 repeat per 2 authoring metres, only after seam acceptance",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/wall_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 21.471,
+          "top_bottom": 24.582
+        },
+        "interior_adjacent_MAE_rgb255": 22.007,
+        "visual_findings": "Some horizontal edge/value discontinuity is visible in the 2x2 diagnostic; conceal joins with separate rock forms.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sha256": "e7694ff65c1c01c63fc4980874a8aa8824fbde7012404e6c5ffcd9f58832275a",
+      "low_res_sha256": "a680b9e72675a8b3e030f759d88a676f826c453b13a5fccba20884228395ceeb"
+    },
+    {
+      "id": "tidal-island__ground",
+      "role": "ground",
+      "description": "flat cream coral sand with fine wind ripples and a few tiny shell granules",
+      "base_color_texture": "materials/ground_diffuse_256.png",
+      "low_res_texture": "materials/ground_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_repeat_candidate",
+      "recommended_wrap": "REPEAT_WITH_QA_CAUTION",
+      "nominal_meters_per_repeat": 2,
+      "uv_policy": "1 repeat per 2 authoring metres, only after seam acceptance",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/ground_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 14.828,
+          "top_bottom": 12.383
+        },
+        "interior_adjacent_MAE_rgb255": 11.544,
+        "visual_findings": "Fine sand ripple direction and brightness are consistent; exact grains do not match.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "6a14568a35c892876927e7c52f543db443639fb6646714df46c84e9ddacd281c",
+      "low_res_sha256": "c9ef168a44cf9a6be8636a432a8caf00a9f414ae357d55b4832ea34748b5d9f4"
+    },
+    {
+      "id": "tidal-island__structure",
+      "role": "structure",
+      "description": "flat shallow clear turquoise water ripple surface, no objects or landscape reflections",
+      "base_color_texture": "materials/structure_diffuse_256.png",
+      "low_res_texture": "materials/structure_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_component_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "uv_policy": "0-1 per component",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/structure_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 10.581,
+          "top_bottom": 13.16
+        },
+        "interior_adjacent_MAE_rgb255": 8.619,
+        "visual_findings": "Fine ripple seams and periodic highlights visible; clamp individual pool panels.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "f67be457f83acf3cc9f9fa7e61b745cd294d4b66c8012b1ebfb1f08a9ec79615",
+      "low_res_sha256": "82cb4caead3815dcded048b5f24b92385b3e2035aa931e957fb5e439bca459cc"
+    },
+    {
+      "id": "tidal-island__detail",
+      "role": "detail",
+      "description": "flat pale porous coral limestone with tiny pearl and peach mineral pores",
+      "base_color_texture": "materials/detail_diffuse_256.png",
+      "low_res_texture": "materials/detail_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_component_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "uv_policy": "0-1 per component",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/detail_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 19.796,
+          "top_bottom": 21.172
+        },
+        "interior_adjacent_MAE_rgb255": 17.621,
+        "visual_findings": "Pore pattern is quiet but repeats; suitable for coral-rock components, no coral mesh implied by texture.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "884db949652d0922de321d53958ce259c4aa7bfddcb1e66330e8cdb8eaf3d4e6",
+      "low_res_sha256": "e816620913cf65bd2532185891b72131ea84ab1e4a9c00c944e450657bbe65e6"
+    }
+  ],
+  "import_defaults": {
+    "filter": "nearest at runtime for pixel aesthetic; test motion shimmer",
+    "roughness": 0.85,
+    "metallic": 0,
+    "blend_mode": "opaque",
+    "default_emission": 0
+  },
+  "status": "production-authorized generated material candidates, asset-level QA complete; engine acceptance remains",
+  "known_limitations": [
+    "No mathematically seamless certification. Use the actual repeat diagnostics before enabling broad repeats.",
+    "Structure and detail are clamp panels, not unrestricted tiled fields.",
+    "No normal, roughness, AO, metallic, height, emission or alpha-cutout maps supplied.",
+    "No engine import, movement, collision or target performance validation is implied by these textures."
+  ],
+  "support_notes": "MATERIAL_NOTES.md",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

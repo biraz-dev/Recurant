@@ -1,0 +1,20 @@
+{
+  "asset": "machine_wall_bulkhead",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        2.013214,
+        -0.065
+      ],
+      "size": [
+        2.0,
+        4.026428,
+        0.33
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/machine_wall_bulkhead__GUIDE.glb"
+}

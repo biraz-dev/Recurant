@@ -1,0 +1,150 @@
+{
+  "id": "storm-inventor-workshop",
+  "title": "Storm Inventor Workshop",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "storm-inventor-workshop-001",
+      "bytes": 1810107,
+      "sha256": "973ca74729e70aef5c2307e36385dfe46422931ced0d0cd5a5a9af81eb4f0abd",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/storm-inventor-workshop.volume-001.zip",
+          "bytes": 1810107,
+          "sha256": "973ca74729e70aef5c2307e36385dfe46422931ced0d0cd5a5a9af81eb4f0abd",
+          "git_blob_sha": "582abe8753bb4ee270a6bb85044eeab9691ba9c6"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/CLAUDE_README.md",
+          "bytes": 7288,
+          "sha256": "a3f017ebce32954dbeaffb9360d05eddf1ebe71f7fa4e334fa5dba9d4eb07dd5",
+          "git_blob_sha": "0912149d079f1ca6fa517df7fef522b10a03e90f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/MATERIAL_NOTES.md",
+          "bytes": 2787,
+          "sha256": "0af50609e1309c3cd0ea20d94bbe355ea2c5110874a71e6f550e6ee764f60eb9",
+          "git_blob_sha": "fdb22947d4f27d35abdb8bbf202dee2d96ed4972"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "c241786ee6477edfdb340c49aa786b2c534021236665d57960fbab8ffb1ad46e",
+          "git_blob_sha": "402d50ef84959b14a869fab8deb4c62c1ba48b22"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/assembly/collision-navigation.json",
+          "bytes": 10398,
+          "sha256": "c2fe46665715e165ad794b5082db93570631d964d574470fcaea0dcefa46f2d0",
+          "git_blob_sha": "2f8c8b1fa4de4c4eb973d5cfc670e7fc57178ec4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/assembly/layout.json",
+          "bytes": 13532,
+          "sha256": "a11cd3ad05ea4094b46438c6ae4794def80d66b441abf96fae7d11ee22d70a07",
+          "git_blob_sha": "a728f100c3d6b1fa14740e081e1d2fd14b2fa9b7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/assembly/native_320x240.png",
+          "bytes": 157641,
+          "sha256": "e2a95f18c198d51e4834d2cebe53950b6342a5669c362c9c6ee2894880875349",
+          "git_blob_sha": "691b5b296bc524007133c24d78a94ab9dec08725"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/assembly/showcase.glb",
+          "bytes": 808336,
+          "sha256": "902d105cefc36e1dedf7ed4cc30a1047cb803aad17a3c96b13c9437cac0ff470",
+          "git_blob_sha": "dc47326aa7ba19264f147c0776de8bc45b91e66c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/concept/reference_native_320x240.png",
+          "bytes": 173023,
+          "sha256": "32242b69951029ca8b6ab2b0de929a7a17e0cc6e910d911fa2e330c59a7cfbae",
+          "git_blob_sha": "f7d05a783d5249463ab210b68c1b17056fabfb0b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "d92eb7c605fe28ebc0ed6715d0454a2b9896abc261f0e9a9af134f0a3c8e139d",
+          "git_blob_sha": "7a53fc1cee8455568d6050f6e96e2c5c2ecbb4d9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/material-manifest.json",
+          "bytes": 7402,
+          "sha256": "bd24b70585c11bd5c68ec51a1bfe4f3faecace2c6d452333aaaad7636ee78870",
+          "git_blob_sha": "5748d611b916530f4b1f6f8e00d314449eddc16a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/materials/detail_diffuse_128.png",
+          "bytes": 40399,
+          "sha256": "2976956da8ff2d110784b81afea1bcc7e3c037be083a948e875b0a2a4174ba79",
+          "git_blob_sha": "cee7bcb27268a680a6fdcc0cc98812f39523afa7"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/materials/detail_diffuse_256.png",
+          "bytes": 151172,
+          "sha256": "3fead14ff7ccb37911d322b1affe66869d8d2c552dae05b8540eef34da7518b3",
+          "git_blob_sha": "295132c120d0507c7652977681ff8a2285a7e451"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/materials/ground_diffuse_128.png",
+          "bytes": 39438,
+          "sha256": "e41c1f24e85f65771c528967e2e0035f10b041b75b09162cd611e61ae69f3cdd",
+          "git_blob_sha": "e1b42e3de60ba1ca60257c646121f6b069c7a3c2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/materials/ground_diffuse_256.png",
+          "bytes": 152149,
+          "sha256": "febfd939fbc777dc8581c0e63e0e22a7c4d7e6f059ecf798fb17c8027a3cd89a",
+          "git_blob_sha": "5548e6e4bbe4ecde7c0dfffa4e35edd1387b888e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/materials/structure_diffuse_128.png",
+          "bytes": 41524,
+          "sha256": "c2585f67bcd9bd900ef93c5780f54deaacb520e5f7bbdaaa67e494d2d5550259",
+          "git_blob_sha": "42d7771afc602170535c4af74c233a845c1d7654"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/materials/structure_diffuse_256.png",
+          "bytes": 160764,
+          "sha256": "e2098192a894f810f3536f2fecc55de8d7001016356ed165c62b595180f27217",
+          "git_blob_sha": "2eff2d2815042da9116c45e249098eadc295affa"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/materials/wall_diffuse_128.png",
+          "bytes": 42779,
+          "sha256": "909e3fcc06ecb48f9d8347379970211572265ea2bf09786e8f42ad8b8566fe35",
+          "git_blob_sha": "93a58ce32f3ea2e91c057078e2ceb77a780208db"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/materials/wall_diffuse_256.png",
+          "bytes": 166545,
+          "sha256": "3914cc2eb623445fc5f3b1b0de1588ff6d05ec9701867f2bba0214defb1db072",
+          "git_blob_sha": "7563080328a971129012579d5464c84b646ab485"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/prompts/material_atlas_v1.txt",
+          "bytes": 2458,
+          "sha256": "dd4cb087018fa21df1c28dae35b0d7eaf0e9add80028145babd1c9eda199e813",
+          "git_blob_sha": "0a642260986c102b6542804e28e38ebe21bbd943"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/storm-inventor-workshop/theme-manifest.json",
+          "bytes": 7080,
+          "sha256": "24dee49a0e33574dd08448df2d790a617693e1b53d36c223f7551d5d75fb37cf",
+          "git_blob_sha": "4f36bef69988f2a46ee125e91a99935075bd1152"
+        }
+      ]
+    }
+  ]
+}

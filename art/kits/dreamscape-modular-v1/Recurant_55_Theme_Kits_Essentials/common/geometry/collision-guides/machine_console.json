@@ -1,0 +1,20 @@
+{
+  "asset": "machine_console",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.745,
+        0.0
+      ],
+      "size": [
+        1.4,
+        1.49,
+        0.8
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/machine_console__GUIDE.glb"
+}

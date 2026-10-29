@@ -1,0 +1,20 @@
+{
+  "asset": "railing_iron_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.6,
+        0.0
+      ],
+      "size": [
+        2.0,
+        1.2,
+        0.12
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/railing_iron_2m__GUIDE.glb"
+}

@@ -1,0 +1,296 @@
+{
+  "theme": "onebit-spiritual-landscape",
+  "generation_mode": "builtin image_gen",
+  "user_requested_palette": [
+    "#000000",
+    "#FFFFFF"
+  ],
+  "alpha_policy": "RGB opaque, no alpha",
+  "originals_preserved": [
+    {
+      "path": "concept/source.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "unique_rgb_color_count": 30116,
+      "palette": null,
+      "black_fraction": 0.03331768973271064,
+      "sha256": "0096f3fd5e9dbaa2ebe9b6bf287a3d05fdfc8b31bcae7f9aebcb37c9b6e30f03"
+    },
+    {
+      "path": "art_sources/material-atlas-master.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "unique_rgb_color_count": 33795,
+      "palette": null,
+      "black_fraction": 0.052923467869325336,
+      "sha256": "38ac632aaec1811c1161d8f6167911d0d7dd8d7fec1755a4f49c4bd2ecd0f12d"
+    }
+  ],
+  "delivery_processing_authority": "User explicitly requested 1bit; threshold/palette conversion enforces this requirement.",
+  "concept_derivation": "No crop. BOX downsample to 320x240, luminance threshold at 160, RGB conversion; exact 4x NEAREST preview.",
+  "material_derivation": "Four exact atlas quadrant crops, NEAREST to 256x256, luminance threshold at 128, RGB; NEAREST 256->128.",
+  "pixel_replication_verified": true,
+  "delivered_files": [
+    {
+      "path": "concept/reference_native_320x240.png",
+      "size": [
+        320,
+        240
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "unique_rgb_color_count": 2,
+      "palette": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "black_fraction": 0.16200520833333334,
+      "sha256": "f857939f5c97e243f7f1ac7c0d2c272b8f4a7dcce9b4e3fe84a2946cddc986ee"
+    },
+    {
+      "path": "concept/preview_4x.png",
+      "size": [
+        1280,
+        960
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "unique_rgb_color_count": 2,
+      "palette": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "black_fraction": 0.16200520833333334,
+      "sha256": "9b9e15c8981de592955c4d014a2672c0aa29c5397953101dbbdda93545576f06"
+    },
+    {
+      "path": "materials/wall_diffuse_256.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "unique_rgb_color_count": 2,
+      "palette": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "black_fraction": 0.0963592529296875,
+      "sha256": "677ec07e19c1991810db660c964cae73a207a236a1444bd020220c7d94cef4ba"
+    },
+    {
+      "path": "materials/wall_diffuse_128.png",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "unique_rgb_color_count": 2,
+      "palette": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "black_fraction": 0.09857177734375,
+      "sha256": "0b3927fc3b414a83d9519b4486f86e581881f30e8bb7cf997ce4ebfe5c4de9d5"
+    },
+    {
+      "path": "materials/ground_diffuse_256.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "unique_rgb_color_count": 2,
+      "palette": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "black_fraction": 0.1648101806640625,
+      "sha256": "053884e63909b98b37a95ec376e2d413fe802abfd4cf52e8b841bddcbdde2f79"
+    },
+    {
+      "path": "materials/ground_diffuse_128.png",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "unique_rgb_color_count": 2,
+      "palette": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "black_fraction": 0.1634521484375,
+      "sha256": "c782eb371a3012cc09d0ab6c24568d5fbedcfdda2fef90603ef1c1466f89a244"
+    },
+    {
+      "path": "materials/structure_diffuse_256.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "unique_rgb_color_count": 2,
+      "palette": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "black_fraction": 0.1783905029296875,
+      "sha256": "b0aca3e1e2b943098dcc153d49f484db5bb1567e0b5878643bb67e69dcc45c9a"
+    },
+    {
+      "path": "materials/structure_diffuse_128.png",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "unique_rgb_color_count": 2,
+      "palette": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "black_fraction": 0.17816162109375,
+      "sha256": "0bea6af987137dc9099c9ddc2d1385a07b549a99b549e12490a825eb443b8e76"
+    },
+    {
+      "path": "materials/detail_diffuse_256.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "unique_rgb_color_count": 2,
+      "palette": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "black_fraction": 0.7776641845703125,
+      "sha256": "432b11120259cef76eb934974c2b3bcc2782652ed791ad9fd4399853ab2ffe15"
+    },
+    {
+      "path": "materials/detail_diffuse_128.png",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "unique_rgb_color_count": 2,
+      "palette": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "black_fraction": 0.77886962890625,
+      "sha256": "611320b1982a0d72536d9ea211c428dce72faa808c80e0759ab0196a7de97cec"
+    }
+  ],
+  "palette_verified": true,
+  "visual_qa": "Reviewed 4x concept: clear stepping-stone path, monolith silhouettes and empty ring in white void, no people/text/UI/religious symbols. Reviewed four-role material contact and actual 2x2/3x3 wall-ground repeats: no conspicuous hard seams; density repetitions visible. Not certified seamless. Fine pattern motion shimmer remains untested.",
+  "runtime_integration_verified": false,
+  "seamless_certified": false,
+  "camera_motion_shimmer_tested": false,
+  "material_visual_notes": {
+    "wall": "Actual 2x2 and 3x3 repeats visually inspected: continuous pale pitted surface, no strong hard seam; repeated vertical density clusters remain. Not mathematically seamless.",
+    "ground": "Actual 2x2 and 3x3 repeats visually inspected: continuous granular field, no strong hard seam; repeated grain density patches remain. Not mathematically seamless.",
+    "structure": "Distinct broad vertical cracks read clearly at 256 and 128; clamp panel, no repeat claim.",
+    "detail": "Dark stipple/broken hatch field differs clearly from other roles; clamp panel, no repeat claim. Fine marks may shimmer in motion."
+  },
+  "manifest_base": "theme_root",
+  "source_files_status": "optional source bundle; restore before running derive_assets.py"
+}

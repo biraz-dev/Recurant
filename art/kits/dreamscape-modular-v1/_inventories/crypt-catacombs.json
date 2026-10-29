@@ -1,0 +1,150 @@
+{
+  "id": "crypt-catacombs",
+  "title": "Crypt Catacombs",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "crypt-catacombs-001",
+      "bytes": 1802006,
+      "sha256": "dd37386b2f24b4ceebd7a22745c8a8b11607c4a1860074f635d8b3eece4fe68e",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/crypt-catacombs.volume-001.zip",
+          "bytes": 1802006,
+          "sha256": "dd37386b2f24b4ceebd7a22745c8a8b11607c4a1860074f635d8b3eece4fe68e",
+          "git_blob_sha": "f43b2b3d2c48f69e238035993be45320d39b1a0e"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/CLAUDE_README.md",
+          "bytes": 7705,
+          "sha256": "95bc6f95e9812597dbe247e45ef24fb065ab5896b8917bb23912efd911363a7f",
+          "git_blob_sha": "e7b9b608b45c640c22854bfd7ea78d45b57d0285"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "17492f3b67351c16d8f2b3d09d8961557114619a9221523abe2ed2cfe92bd088",
+          "git_blob_sha": "f18324cac409bd9163676fac3548ee935471dda2"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/assembly/collision-navigation.json",
+          "bytes": 10378,
+          "sha256": "c76639a3c7501b94ceae4eeee6bd00771b055f80d352034a424ef46f32635f49",
+          "git_blob_sha": "cdad29567da3455721674c22932a7b0244bceb35"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/assembly/layout.json",
+          "bytes": 13545,
+          "sha256": "e8178cb194101b9ecdb200ef3c1244cd304c33154e6c2ef57d812f197960e45b",
+          "git_blob_sha": "446b23abb4f3c146b945a9a8a4514e312e5788e9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/assembly/native_320x240.png",
+          "bytes": 155528,
+          "sha256": "46bc95b34259364c25928ac51a0ac50415720c2c083c37856f61d9e49cce0946",
+          "git_blob_sha": "7149498198d56985806ac11b613f1e8054b9da09"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/assembly/showcase.glb",
+          "bytes": 946440,
+          "sha256": "9f8b997acff0341c3753605af26382cb519bcff7786113ef2a05bb9a5db0a124",
+          "git_blob_sha": "926df6e716f09727cc8617c19d67a7415582a508"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/concept/reference_native_320x240.png",
+          "bytes": 152804,
+          "sha256": "2bdb11a8e221bdca6f965112f8c7bc007ba4dfb8d0560a81c21e042a05e17526",
+          "git_blob_sha": "7304e9340bc7a3abc3a7f1b82569e477ef700e0a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "f72d0ea94daae29fe3064db41cd43a9122cbd61444d2a3606af0822f72e8a072",
+          "git_blob_sha": "c76d68dae40431a3fa5aeef217d456146649ce43"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/material-manifest.json",
+          "bytes": 7398,
+          "sha256": "a2e6bcf49e1a5119a1bb54bf2f2747a85050aae95db00e4528f6b249f267e7fe",
+          "git_blob_sha": "4e713ac3e9f97a86899e0766249dd4859608c867"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/materials/detail_diffuse_128.png",
+          "bytes": 42048,
+          "sha256": "42e726e3e5a3125e55044f3d4adb2be43d6852db6ed26f46f67d326fc46fbeb0",
+          "git_blob_sha": "1af82ff8db9deceb154439a94d6656920e85b915"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/materials/detail_diffuse_256.png",
+          "bytes": 153424,
+          "sha256": "afceb401d95ae0c587c0b6dece48e78ee3bef47d3b5f55a61f65ed965087b8f8",
+          "git_blob_sha": "f907e64964bae4dd8def7af99b980d022d83cc7d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/materials/ground_diffuse_128.png",
+          "bytes": 40672,
+          "sha256": "2a52cb68c8663e3dfed1a24e6a2c7367ab6bf48fed984acfbe3edc58c480b863",
+          "git_blob_sha": "6e9f65d56c6ea3c3176dcdb6a3d92e16292a2271"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/materials/ground_diffuse_256.png",
+          "bytes": 157673,
+          "sha256": "69123b02197e8319e871388f9ef4874860b6c2ee9922c374d8fc58d5306c8829",
+          "git_blob_sha": "84897df271d26e4c2b19529be7fcf7f59b59d978"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/materials/structure_diffuse_128.png",
+          "bytes": 41377,
+          "sha256": "1b7c074bde86261481deacf071bd5349c1bd9b7a49b501d5a6d0134b1934ae1a",
+          "git_blob_sha": "e0952bb90486a3a64bee7c8bb506de721654a235"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/materials/structure_diffuse_256.png",
+          "bytes": 152456,
+          "sha256": "3c2f924261afc208285084b24053b3efa7de6b326e27aea2fb6934edc600163c",
+          "git_blob_sha": "8d671312a25ebe154862c9b56615dd025b0b9841"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/materials/wall_diffuse_128.png",
+          "bytes": 42159,
+          "sha256": "e41b85a378bed0156d21c4dd482c0476d11f860a0527385b10f1a3abeb708acd",
+          "git_blob_sha": "b792e99608097b096ba155707d62737e1dac602f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/materials/wall_diffuse_256.png",
+          "bytes": 162909,
+          "sha256": "f624a0789eac2c8a315da24cc672c1b3e6767677871f972de81507ba2922c8e9",
+          "git_blob_sha": "d77ec567cc2b9f61ae564b3bfe68323227f8bf39"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/prompts/material-atlas.txt",
+          "bytes": 2343,
+          "sha256": "6a8cf9041c71a219d20b9bc739e205bae107164ccdea12afdb2b4a1709dfe283",
+          "git_blob_sha": "458082bf4743efb1f849158ae69207bad7ca012b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/prompts/seam-repair.txt",
+          "bytes": 1698,
+          "sha256": "052391ff81978abf5220289090bded2470b343bd714ea1bd6f2f38c6e96b17a2",
+          "git_blob_sha": "a46d14d754fb826d87648efc3b4dd1b6b9f48066"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/crypt-catacombs/theme-manifest.json",
+          "bytes": 7026,
+          "sha256": "4d9633f121b070d6d65716bb1656fe1ed54198ce1180445f6b50ff2b876c3c88",
+          "git_blob_sha": "05d5137e29c3f555f8a75caab80a0d11a3d4de50"
+        }
+      ]
+    }
+  ]
+}

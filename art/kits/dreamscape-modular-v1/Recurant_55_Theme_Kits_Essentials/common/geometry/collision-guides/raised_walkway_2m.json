@@ -1,0 +1,44 @@
+{
+  "asset": "raised_walkway_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0,
+        -0.1,
+        0
+      ],
+      "size": [
+        2,
+        0.2,
+        2
+      ]
+    },
+    {
+      "center": [
+        -0.95,
+        0.2,
+        0
+      ],
+      "size": [
+        0.1,
+        0.4,
+        2
+      ]
+    },
+    {
+      "center": [
+        0.95,
+        0.2,
+        0
+      ],
+      "size": [
+        0.1,
+        0.4,
+        2
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/raised_walkway_2m__GUIDE.glb"
+}

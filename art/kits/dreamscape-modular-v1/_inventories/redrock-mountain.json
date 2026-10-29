@@ -1,0 +1,156 @@
+{
+  "id": "redrock-mountain",
+  "title": "Redrock Mountain",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 22,
+  "archives": [
+    {
+      "id": "redrock-mountain-001",
+      "bytes": 1638438,
+      "sha256": "28d8e9fdc4b6c61624e2066c95a8321b6a9a8e4f0b41dfc89a88e1ec966b975d",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/redrock-mountain.volume-001.zip",
+          "bytes": 1638438,
+          "sha256": "28d8e9fdc4b6c61624e2066c95a8321b6a9a8e4f0b41dfc89a88e1ec966b975d",
+          "git_blob_sha": "6a5a6fb56a7e14cfb8cbe3da104a36e2f6b03145"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/CLAUDE_README.md",
+          "bytes": 7224,
+          "sha256": "bcbc9ce45955f17cbaa868ff395ce7be94fb6d0cf87b2958cfa16e14baadd567",
+          "git_blob_sha": "e95944e031c53cf37944c90aba3e33e4e6e84ad9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/MATERIAL_NOTES.md",
+          "bytes": 4254,
+          "sha256": "9709c0909de505e60d4610de51b16edcecd8d46ccf0a54380193cf3b67e56d50",
+          "git_blob_sha": "e6488592ec177652940a2d9198a355a35c291926"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "ba7a19351f3f2dda713dabb3859096e09587453e33b767e4f14e5e5e90baf91c",
+          "git_blob_sha": "363547a4f0613ef87340549f3550e65e446fc4ee"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/assembly/collision-navigation.json",
+          "bytes": 10234,
+          "sha256": "2144d550f0243abc3e8e9b065926e9d4417aeb02a6ec201d853d5bfc13857bce",
+          "git_blob_sha": "3c08ec424b693e6989627b288aff1191a5d93972"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/assembly/layout.json",
+          "bytes": 14684,
+          "sha256": "c2a0323064ec59aca668ed7ab9801d88a22006503951ced578bddd0ef1f1512f",
+          "git_blob_sha": "c6cc2498cc9a7241ee6c13b942b467832c03d84b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/assembly/native_320x240.png",
+          "bytes": 147902,
+          "sha256": "fc295fb4ee3845fc5bef152cffffb7f6859a948be88766242342f36fb5009b68",
+          "git_blob_sha": "50c8a2eab78b61a96f2e9adc0bbc65608041f22a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/assembly/showcase.glb",
+          "bytes": 649180,
+          "sha256": "16d4f4e1328623871574a4902b4eabc3423c409e63b61bb03a7e8481e2ea191d",
+          "git_blob_sha": "109b2f23f95be8503d7638800dcffb23bcf4510f"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/concept/reference_native_320x240.png",
+          "bytes": 171490,
+          "sha256": "c2ec54ec750eb7af563a79475bbb6d4e2be32725c42cd74b14112f35a5247009",
+          "git_blob_sha": "a7514c78aae449b3c0a59274dfac04474d699499"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "d1533eb7b48bc6dc934aa467822f0b5d30a488d418ae061f05b429da95010a18",
+          "git_blob_sha": "dde57f03796462ed6a1cd3c594a0217aaf487cc9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/material-manifest.json",
+          "bytes": 7909,
+          "sha256": "b261625047956f2731a431ec7973b169dfd28049e69e43d55a8f562b8b8fb167",
+          "git_blob_sha": "16b72d26a6892283635c7518c85a292aa215d60b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/materials/detail_diffuse_128.png",
+          "bytes": 36533,
+          "sha256": "2956a506484875d95f160ca610c2d9f5bb0c2e9ed3503a9c02bab948d38d2d79",
+          "git_blob_sha": "356d4dfef0831849c94558e591181ce62c983cbb"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/materials/detail_diffuse_256.png",
+          "bytes": 147433,
+          "sha256": "714b0c9436ad9e3d602993db6421c406cb6266e3c2726cf88f63583727d71a91",
+          "git_blob_sha": "d5abc17f5831c444ee60cf2d66ad57898c212d96"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/materials/ground_diffuse_128.png",
+          "bytes": 38060,
+          "sha256": "bbd44559c3ab3634ad394a87b2fdd5f69bfab086d75c95ef27d27f04cb2b7137",
+          "git_blob_sha": "62cc5b3bccf80f1987d3724e28ef29e67cc01811"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/materials/ground_diffuse_256.png",
+          "bytes": 152821,
+          "sha256": "28eba970407fb5778ae6c0271c41be3901ac39fcac82ca42cae4941480279b66",
+          "git_blob_sha": "d51eb2160007daa94d817b4d5d073b43f44d1808"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/materials/structure_diffuse_128.png",
+          "bytes": 33434,
+          "sha256": "423116538ec625831b2a481bff53f49e35e481bf30c749ace826619f27945c8f",
+          "git_blob_sha": "042d829118fa41652edae118560a919563703062"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/materials/structure_diffuse_256.png",
+          "bytes": 136030,
+          "sha256": "1b803f5351b229bbf7e8a9dc6a7d64243dd274b888585cf15b02d1aac2d88f31",
+          "git_blob_sha": "d5aa5f1c739e884134444e3174dc89aaabd93f14"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/materials/wall_diffuse_128.png",
+          "bytes": 32219,
+          "sha256": "5b5bd5ded0b523686f001d66570e15018cd0c3f62b4ec2cf1291f6c6d9c0dd76",
+          "git_blob_sha": "637436742db5f7907b1084a84096dea3698e30df"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/materials/wall_diffuse_256.png",
+          "bytes": 131005,
+          "sha256": "ff1bbdc65ea915651a117d1e84b5b9a0ec715dfd13d0724b8aed59316cae7d0f",
+          "git_blob_sha": "36df0e693c912131a7df239896c9292cca7e1e76"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/prompts/material_atlas_v1.txt",
+          "bytes": 1671,
+          "sha256": "1d5169e50f27435adf9eddaff070b8ae82783eea9ffb18dafa7009ee1089f46c",
+          "git_blob_sha": "5f0920594c39836fb951a11708fbf6a6d296604a"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/qa/material-qa.json",
+          "bytes": 2182,
+          "sha256": "dbc1fc82aa07a996b7cb9110eb9a74f73e487baa5690d0e022ef51d17412d425",
+          "git_blob_sha": "f32585e11d98da13c82f1bdb435130aa785f2852"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/redrock-mountain/theme-manifest.json",
+          "bytes": 6825,
+          "sha256": "f27e0aba3e123f334b5bf192ff00823af2924f701a6987ce9ed89d1c48182bee",
+          "git_blob_sha": "04c2f06cfc9a6c9e2eaafe7aa8ddd6c0be336ce9"
+        }
+      ]
+    }
+  ]
+}

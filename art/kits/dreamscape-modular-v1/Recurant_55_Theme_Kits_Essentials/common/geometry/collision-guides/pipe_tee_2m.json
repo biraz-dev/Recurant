@@ -1,0 +1,20 @@
+{
+  "asset": "pipe_tee_2m",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        0.16,
+        0.42
+      ],
+      "size": [
+        2.0,
+        0.304338,
+        1.16
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/pipe_tee_2m__GUIDE.glb"
+}

@@ -1,0 +1,20 @@
+{
+  "asset": "boulder_large",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.008331,
+        0.92,
+        0.093384
+      ],
+      "size": [
+        2.05824,
+        1.84,
+        2.072641
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/boulder_large__GUIDE.glb"
+}

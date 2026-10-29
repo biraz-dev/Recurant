@@ -1,0 +1,150 @@
+{
+  "id": "forge",
+  "title": "Forge",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "forge-001",
+      "bytes": 1734106,
+      "sha256": "e95baa81b6d17044b1a914bc1ed0ab70c370685e665cc603eccdf18406df483b",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/forge.volume-001.zip",
+          "bytes": 1734106,
+          "sha256": "e95baa81b6d17044b1a914bc1ed0ab70c370685e665cc603eccdf18406df483b",
+          "git_blob_sha": "77da4bc3fd66adccecc15d4996fab3a001b62344"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/CLAUDE_README.md",
+          "bytes": 7207,
+          "sha256": "b6b58e408ec26253f48e9f67b8604dedf2a4afdb06ee99ca7ec6b31a3426486a",
+          "git_blob_sha": "12063ff035c4466f197ca7801bb200092391c72e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/MATERIAL_NOTES.md",
+          "bytes": 2707,
+          "sha256": "3389dcd1b59a841a9651eb92718087738390c73dc03867670a274bf7e0d47dbf",
+          "git_blob_sha": "2dd7cf1ff1f6ce4acddb6ee1648edbf24366da9c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "bcd920bc76455471c914a156d3cfbfccb23b9937f9c4aa8c816669298fbd2432",
+          "git_blob_sha": "89a60c88dfe3a35a16ce7e0e5f7948a7dfab8d2e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/assembly/collision-navigation.json",
+          "bytes": 10404,
+          "sha256": "1fd32b1040374731977353fcb12de52e230c83d73bf9c99ff5bc73e5fda3e144",
+          "git_blob_sha": "25f1c83c7498d50c5ddd09dbac222dbdd80f4590"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/assembly/layout.json",
+          "bytes": 13556,
+          "sha256": "962e4a6403d8c581d6e6ef7bcf6bd2037aa27d73795214460acb6070a9a657b6",
+          "git_blob_sha": "9aacd08081b30cc8bdf071ee514672088f7ec32c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/assembly/native_320x240.png",
+          "bytes": 131043,
+          "sha256": "c44fc664547a41742daa2b34fc848c24c0da0bd385dc65739c2db0edc1c633fe",
+          "git_blob_sha": "a5faf20416bccb7874d88c3de38ccc06eac8d0f3"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/assembly/showcase.glb",
+          "bytes": 815192,
+          "sha256": "2be5f7078511be1f5ad774213dec452bc94fdcb7daa2da1b4dc8a4aae80465ff",
+          "git_blob_sha": "702a2b5f7baf0cf90bdc960395549cbf06da9550"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/concept/reference_native_320x240.png",
+          "bytes": 148277,
+          "sha256": "62545575ec3508b6cac93e09bd985d20a0079f0c014302c9772a6a4711f5543b",
+          "git_blob_sha": "e2721047413ad7de0a26c8c413ca7173114122b5"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "22a60e814e29acc4dfb6636a40d1d4ccadb055281599f4ea0b327b262d93a0e6",
+          "git_blob_sha": "a2d949e154208206b9df98bafe05eaa2050df12c"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/material-manifest.json",
+          "bytes": 7225,
+          "sha256": "8888b6a3bd3158323ce49eaf6d26165e02adee2a570ed6f7993e8cf574dee03e",
+          "git_blob_sha": "bb1ab1d3efb6d87703a83fc3f2765988bf242f90"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/materials/detail_diffuse_128.png",
+          "bytes": 39878,
+          "sha256": "c04cd1d8f989d105fec1d0ed23ecf742eb369b834283f8acf70eb6a368fa4998",
+          "git_blob_sha": "1d9b1a4bad33f30bbc7a9f09d843b650137a8741"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/materials/detail_diffuse_256.png",
+          "bytes": 153294,
+          "sha256": "0858d07132015174aee4e68b48401ffae6f06e2e129c31c51168e0ac67e89bd9",
+          "git_blob_sha": "9ff1f48cf08cd28fc6b45fa4d6e1f69bde42d10b"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/materials/ground_diffuse_128.png",
+          "bytes": 42132,
+          "sha256": "df22030726edac51d9b121e85c3c29a92b3e0a64b3bf20e420d62e56c0f5ffe2",
+          "git_blob_sha": "fcd6692e202482a629c7b8fc1ed412e2d8d97272"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/materials/ground_diffuse_256.png",
+          "bytes": 161519,
+          "sha256": "fbf090d6a7dcc8cebc0710870e563bc29ed0b6123fa8468e9af996718aa84010",
+          "git_blob_sha": "a72c64340fa12a0e463065b5aee8f9d9df88da76"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/materials/structure_diffuse_128.png",
+          "bytes": 40671,
+          "sha256": "2037c30b24be9db4a882df1f003722105e878c213b6fff8468b021f13bd14ddf",
+          "git_blob_sha": "de8172789e0b1e8ba3a201aad26664736b0f380e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/materials/structure_diffuse_256.png",
+          "bytes": 154741,
+          "sha256": "869d1472eea9fef3b56545371fce3e7d3dd85fa27ec2e4aa1885ea307cf416fe",
+          "git_blob_sha": "3431c5a5a0b8c99ce0581393206a4b1f155dc199"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/materials/wall_diffuse_128.png",
+          "bytes": 39401,
+          "sha256": "2c8dd72f8df2158476fb12f084c62614adab9539483aa9e4edd180fc7f167182",
+          "git_blob_sha": "e204fe65d02d6ccafaa107251efa0bb61e862ba1"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/materials/wall_diffuse_256.png",
+          "bytes": 149939,
+          "sha256": "cc11eaae0346032d9d0710c329bb279fba5501a00e4351bb09333e70b8380432",
+          "git_blob_sha": "3f97cf5d787100dea5b20b56d9d14aea2f929974"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/prompts/material_atlas_v1.txt",
+          "bytes": 2396,
+          "sha256": "3c9b5ce5c9936e97ebc5ae44ae316eaa21a3a0242e8267161ad6b2a2a151d592",
+          "git_blob_sha": "51fd0707560f3added19e06976753d02dfdcdd50"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/forge/theme-manifest.json",
+          "bytes": 6798,
+          "sha256": "3d9b8f97ffca64c2b08bce322985ace91cd91e0dab74d712c4d6731897a4bdfa",
+          "git_blob_sha": "ec03d4214d88ca6aa82ab60feedc4216e1721977"
+        }
+      ]
+    }
+  ]
+}

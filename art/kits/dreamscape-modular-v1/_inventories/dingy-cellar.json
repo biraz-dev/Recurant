@@ -1,0 +1,150 @@
+{
+  "id": "dingy-cellar",
+  "title": "Dingy Cellar",
+  "content_root": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials",
+  "file_count": 21,
+  "archives": [
+    {
+      "id": "dingy-cellar-001",
+      "bytes": 1689409,
+      "sha256": "9e0d846686c6dce873273a55bc459a8fd87ec8af6bbbdaadee3d6f710475b710",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/dingy-cellar.volume-001.zip",
+          "bytes": 1689409,
+          "sha256": "9e0d846686c6dce873273a55bc459a8fd87ec8af6bbbdaadee3d6f710475b710",
+          "git_blob_sha": "60948fe20f6db2a32986e3bd4585c6f8bc7c81a1"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/CLAUDE_README.md",
+          "bytes": 7651,
+          "sha256": "32399e3ed08164e5287fc0d242cc579f67b1d22d911a12e5641472a816c7a114",
+          "git_blob_sha": "16c7df1ed0e6763489ff27992d7647235814f571"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/assembly/asset-validation.json",
+          "bytes": 2036,
+          "sha256": "e190163d0911105883d2fcf2f92f40a2def7baca293f797804dd5d1dbe12c90d",
+          "git_blob_sha": "d433c0f6a392ab3469c029d3f32a5f1885a5e020"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/assembly/collision-navigation.json",
+          "bytes": 10376,
+          "sha256": "03e2527fe4ec0b89b9b403448e23c0e8c835d5ba77af656792f90ecdb437e03c",
+          "git_blob_sha": "b8186eb28164542af07012ed34b9a068522679cc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/assembly/layout.json",
+          "bytes": 13444,
+          "sha256": "5d2e92efa379848d80c2c73c7497f138773ac43261da83210fd07f4e3778ef65",
+          "git_blob_sha": "9be7e0584404339ca65ad9f265bf5b900cbf9b12"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/assembly/native_320x240.png",
+          "bytes": 138523,
+          "sha256": "05fa9f6949ed75ab328b869a70c973b2ce94d1d597899bcb23c804b9d1a418ff",
+          "git_blob_sha": "76565923a0961efb6d9c385da85bcc41948946e4"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/assembly/showcase.glb",
+          "bytes": 779540,
+          "sha256": "f00605daab3545c1574f4458bbee07107c72fd1b4d1043a47def63bd375365c4",
+          "git_blob_sha": "fe8fb1b78a5d7b33f9c571d630674e76587cc1ca"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/concept/README.md",
+          "bytes": 236,
+          "sha256": "7470bd5de3520841594eb6925659e926727616decad2dbb066efb479b3d52cbc",
+          "git_blob_sha": "d12b7bf43689a6480027732595aeff69f8b8b523"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/concept/reference_native_320x240.png",
+          "bytes": 132800,
+          "sha256": "b8b676021f2e4f4534c05832f9f0d1d970e4e64228b01e7af08e680c3ab8dab8",
+          "git_blob_sha": "5cde997594341ebd465b4e42f4777f3e272dc039"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/concept/source-index.json",
+          "bytes": 410,
+          "sha256": "a0e09c9414e905c05d96496ebe56c3e3084c636d75b11183afe24855926d4eb0",
+          "git_blob_sha": "c08e1f2232848da9e0839bc5546aa7ef99ae3118"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/material-manifest.json",
+          "bytes": 7379,
+          "sha256": "566ddfe1d4ae10733f85f43483d28d50b7a8c8e3a3c20719a713038a18cdd200",
+          "git_blob_sha": "7fa789100e998a46e02755aaeac59359ae597195"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/materials/detail_diffuse_128.png",
+          "bytes": 44716,
+          "sha256": "657038e6aebd57c57faa244faaa0ef670bcdd1eb59eb608e373529a8ac450b4d",
+          "git_blob_sha": "3b9e9ee3dfc25201e634318ddf24cf1a3353c2ff"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/materials/detail_diffuse_256.png",
+          "bytes": 162325,
+          "sha256": "7d850850e70afe7793ecc35522222fef2db7538548154b51396a7a26bf0e0c18",
+          "git_blob_sha": "70987463691e5e9396a8f93461f7628344d65e64"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/materials/ground_diffuse_128.png",
+          "bytes": 41406,
+          "sha256": "aeed092c5efdfa2ccf5cda5adb67dd602d7e82ec86fb8fd722b1fd83b610a811",
+          "git_blob_sha": "6ad0b06367ff66daee0b91baa7fc27a752861dcc"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/materials/ground_diffuse_256.png",
+          "bytes": 158983,
+          "sha256": "74d953e7241a76a1e1852e8bb3652feb9935115e0fa5173ef670bf137cba3768",
+          "git_blob_sha": "8ef35083f32bf9299d444f0b941ef907443a8f1e"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/materials/structure_diffuse_128.png",
+          "bytes": 32367,
+          "sha256": "6614a613009445afc649633e3ca9c8669151aa0730c0f4618f05afdc4443f959",
+          "git_blob_sha": "1c94eda9e2b425af1914d1d05489ff0a334df4bd"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/materials/structure_diffuse_256.png",
+          "bytes": 117486,
+          "sha256": "a3e00ac411474e7f55da887d2ca4ecb56426fde272bd9d17f2caad89ea60e20e",
+          "git_blob_sha": "f5a94a4768c3b16aab87fbe9dafa69950ccb7b58"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/materials/wall_diffuse_128.png",
+          "bytes": 42767,
+          "sha256": "0a44b212f8fddb7970724f17a5eaae8cc0b9507508a9fe90c3b013def0bd1863",
+          "git_blob_sha": "9800a6e9066f2581166f813809df67820d8b699d"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/materials/wall_diffuse_256.png",
+          "bytes": 164063,
+          "sha256": "0f9a84785b8b1b7523948fcd11bf23b108d6f008d352ea2f6879f08b601dd7c5",
+          "git_blob_sha": "17be4e00cb0cc039fe42e08de9dd031a1bf726d0"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/prompts/material-atlas.txt",
+          "bytes": 2321,
+          "sha256": "518fbc8dcb8edcf9f6fae0315a1686634148c433720ca38406b63b803fcd67bc",
+          "git_blob_sha": "56c69b9358ae2ed46a8d9b7d37eb746c79fb1bb9"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/prompts/seam-repair.txt",
+          "bytes": 1698,
+          "sha256": "052391ff81978abf5220289090bded2470b343bd714ea1bd6f2f38c6e96b17a2",
+          "git_blob_sha": "a46d14d754fb826d87648efc3b4dd1b6b9f48066"
+        },
+        {
+          "path": "art/kits/dreamscape-modular-v1/Recurant_55_Theme_Kits_Essentials/themes/dingy-cellar/theme-manifest.json",
+          "bytes": 6956,
+          "sha256": "0d1f2bd7ee89681bc4a24a3be242bc89ba21fec38093ab63f77de23d278c36cc",
+          "git_blob_sha": "09f8314dc796ddc45f50a594a1a2822c44972414"
+        }
+      ]
+    }
+  ]
+}

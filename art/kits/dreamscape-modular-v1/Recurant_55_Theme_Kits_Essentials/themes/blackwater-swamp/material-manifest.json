@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "theme": "blackwater-swamp",
+  "public_title": "Blackwater Swamp",
+  "manifest_base": "this theme directory",
+  "atlas_source": "art_sources/material_atlas_v1.png",
+  "atlas_source_dimensions": [
+    1254,
+    1254
+  ],
+  "atlas_source_sha256": "a331492e59dbaa5d835fbca1abaf753e280698b381f28347f5e1b4bb922f3799",
+  "full_prompt": "prompts/material_atlas_v1.txt",
+  "generator": "built-in image_gen",
+  "input_reference": "Original scene concept describes palette only; no external art supplied to generator.",
+  "processing": "Exact quadrant crop; Lanczos resize to 256 then 128. QA images duplicate finished tiles 2x2 without alteration. No painting, seam synthesis, color edits, or fake PBR map generation.",
+  "palette": "inky blue-black water, muted jade moss, aubergine shadows, pale sulfur-gold mist",
+  "materials": [
+    {
+      "id": "blackwater-swamp__wall",
+      "role": "wall",
+      "description": "flat dark peat-stained gray rock with small patches of jade moss",
+      "base_color_texture": "materials/wall_diffuse_256.png",
+      "low_res_texture": "materials/wall_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_repeat_candidate",
+      "recommended_wrap": "REPEAT_WITH_QA_CAUTION",
+      "nominal_meters_per_repeat": 2,
+      "uv_policy": "1 repeat per 2 authoring metres, only after seam acceptance",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/wall_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 14.557,
+          "top_bottom": 17.582
+        },
+        "interior_adjacent_MAE_rgb255": 13.006,
+        "visual_findings": "Small lichen clusters repeat visibly, but no strong brightness stripe.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sha256": "e5a33c5ecacc49d47413c1abddec18b3d2dbc4a66e4ae89c389c26b5b6dc3a63",
+      "low_res_sha256": "544ed03fb90e4881bdf68a917d1ca677231d579054c5be2819d7bb4027ae877a"
+    },
+    {
+      "id": "blackwater-swamp__ground",
+      "role": "ground",
+      "description": "flat damp umber mud with fine root fibers and scattered tiny pebbles",
+      "base_color_texture": "materials/ground_diffuse_256.png",
+      "low_res_texture": "materials/ground_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "two_axis_repeat_candidate",
+      "recommended_wrap": "REPEAT_WITH_QA_CAUTION",
+      "nominal_meters_per_repeat": 2,
+      "uv_policy": "1 repeat per 2 authoring metres, only after seam acceptance",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/ground_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 12.495,
+          "top_bottom": 14.878
+        },
+        "interior_adjacent_MAE_rgb255": 13.036,
+        "visual_findings": "Root fragments terminate at borders; distributed mud value remains consistent.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sha256": "9803bc59556aacaaea9aa9679686a9be766378ffbb0e54face678eee8ff34c80",
+      "low_res_sha256": "2de13c7ad4a7dba078540488035b4c158e630b5958031c6fc1ed1ca8b50879b6"
+    },
+    {
+      "id": "blackwater-swamp__structure",
+      "role": "structure",
+      "description": "flat nearly black teal still-water ripples with restrained turquoise glints, no reflections of objects",
+      "base_color_texture": "materials/structure_diffuse_256.png",
+      "low_res_texture": "materials/structure_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_component_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "uv_policy": "0-1 per component",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/structure_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 5.264,
+          "top_bottom": 5.561
+        },
+        "interior_adjacent_MAE_rgb255": 5.592,
+        "visual_findings": "Water ripples repeat quietly; this remains an opaque painted water panel, not simulated water.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sha256": "ab933299a070503e0b59bcbe5f6f2936c49ac163cd47e246356efc73221d560d",
+      "low_res_sha256": "bd7f0a86077ad95434c5a1013841876d66ce6f4f4569092b2eb1a2b98d0f82d0"
+    },
+    {
+      "id": "blackwater-swamp__detail",
+      "role": "detail",
+      "description": "flat deeply furrowed gray cypress bark with muted green lichen",
+      "base_color_texture": "materials/detail_diffuse_256.png",
+      "low_res_texture": "materials/detail_diffuse_128.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "low_res_dimensions": [
+        128,
+        128
+      ],
+      "color_space": "sRGB",
+      "channels": "RGB",
+      "alpha": "opaque",
+      "maps_provided": [
+        "base_color_diffuse_only"
+      ],
+      "repeat_intent": "nonrepeat_component_panel",
+      "recommended_wrap": "CLAMP_TO_EDGE",
+      "nominal_meters_per_repeat": null,
+      "uv_policy": "0-1 per component",
+      "seamless_certified": false,
+      "tile_qa": {
+        "preview": "qa/detail_repeat_2x2.png",
+        "status": "visually_reviewed_with_limitations",
+        "edge_MAE_rgb255": {
+          "left_right": 22.311,
+          "top_bottom": 15.378
+        },
+        "interior_adjacent_MAE_rgb255": 16.003,
+        "visual_findings": "Vertical bark bands repeat conspicuously; clamp to individual trunk/root components.",
+        "opposing_edges_identical": false
+      },
+      "source_crop_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sha256": "eb0951b175cfe8d94beb2ec4a2c50fa8e66712eabb5730f602c196b41217409d",
+      "low_res_sha256": "2a68faabb6b69916fc4eea41cc72a1fde9202d18fd02c4fa2bc897503092ee80"
+    }
+  ],
+  "import_defaults": {
+    "filter": "nearest at runtime for pixel aesthetic; test motion shimmer",
+    "roughness": 0.85,
+    "metallic": 0,
+    "blend_mode": "opaque",
+    "default_emission": 0
+  },
+  "status": "production-authorized generated material candidates, asset-level QA complete; engine acceptance remains",
+  "known_limitations": [
+    "No mathematically seamless certification. Use the actual repeat diagnostics before enabling broad repeats.",
+    "Structure and detail are clamp panels, not unrestricted tiled fields.",
+    "No normal, roughness, AO, metallic, height, emission or alpha-cutout maps supplied.",
+    "No engine import, movement, collision or target performance validation is implied by these textures."
+  ],
+  "support_notes": "MATERIAL_NOTES.md",
+  "package_scope": "Runtime textures, selected native previews and JSON QA are included. Original masters are in the optional lossless source-art bundle. Historical per-theme repeat/contact PNGs are retained locally, not shipped; regenerate diagnostics from runtime PNGs with assembly-src/render_material_qa.py."
+}

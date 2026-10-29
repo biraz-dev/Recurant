@@ -1,0 +1,254 @@
+{
+  "id": "seven-slot-equipment-v1",
+  "title": "Seven-slot equipment UI source kit",
+  "content_root": "art/kits/seven-slot-equipment-v1",
+  "file_count": 33,
+  "archives": [
+    {
+      "id": "seven-slot-equipment-v1-001",
+      "bytes": 2470512,
+      "sha256": "319c79ef5b6ae23652c3b9a5f226a3e54a2ed3fa0a4cb0b555086513acbefb37",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/seven-slot-equipment-v1.volume-001.zip",
+          "bytes": 2470512,
+          "sha256": "319c79ef5b6ae23652c3b9a5f226a3e54a2ed3fa0a4cb0b555086513acbefb37",
+          "git_blob_sha": "2c6ab724006c02c0aac64ffdf900d456f60e2265"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/seven-slot-equipment-v1/QA.json",
+          "bytes": 986,
+          "sha256": "b858ac58ea5a61f927d65b47bcd89d52ebf40729a22852abd47c5c2fcdb07ab2",
+          "git_blob_sha": "125ea15100bff218cc2560fea97e0e9ba09afd84"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/README-CLAUDE.md",
+          "bytes": 5988,
+          "sha256": "d665d85b285528ee505598f177afa18e5bd08fad3fb5d7b7bb0534fe5bbf182b",
+          "git_blob_sha": "047b20e5c5364bfcedbf7aabcc2995b528bb1308"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/REBUILD_VERIFICATION.json",
+          "bytes": 4795,
+          "sha256": "507a053cab932a663d08fbbdbbed4976e5b215d12d1ab704e52c324b1d4171bf",
+          "git_blob_sha": "dd9806c3ab3ca3316d23bf32face400c82bbe5ed"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/label-amulet.png",
+          "bytes": 789,
+          "sha256": "cb3beebffe9feedd0b0c98a291d4e670da8d52c384122a067e175b38236ea32d",
+          "git_blob_sha": "6f5bc791898b177dbd166ff7b4da56b10b0ffde1"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/label-body.png",
+          "bytes": 582,
+          "sha256": "626aecd4f572540dbd5ff7a46253c7c1ca11cc64864161d37bb9a8369f49cb68",
+          "git_blob_sha": "40a234f693ac0ed586d1e11bf04026ad25a02c03"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/label-head.png",
+          "bytes": 589,
+          "sha256": "4ca7079dfb7da7348c6445f499aadf739e071eb0131c8934cc0e013b1159d5ba",
+          "git_blob_sha": "990d240d0fe3dbde670402b9f7185e781f5c1e11"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/label-left_hand.png",
+          "bytes": 1036,
+          "sha256": "857c8c2a716fd90bb8f652b8a9883fde276368db3d1a505ef821f5aad05295db",
+          "git_blob_sha": "1444a84a4d8f77e3eb26e8fa91273763bb8ca257"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/label-right_hand.png",
+          "bytes": 1122,
+          "sha256": "8bad2164186d6ac9be0670e1f670d70003291f6fda9105b8ca3481928f0a1ad5",
+          "git_blob_sha": "2358d9acb159c3e7283422be83dc5b67551a649f"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/label-ring_1.png",
+          "bytes": 746,
+          "sha256": "f80eb212598cb932c2c7ae0de57759c6fe2d209989a76f23730345da48f4dff4",
+          "git_blob_sha": "f3aef68b99581c59dd01bae724d4b70ac0e74775"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/label-ring_2.png",
+          "bytes": 750,
+          "sha256": "379479b156530e94386bc2e662e9d68cee1b78228fce848dbc6005c0d5aceb01",
+          "git_blob_sha": "cb6c1ce00c29a6e31ac2bde7a1adf51da5de79bb"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/panel-320x240.png",
+          "bytes": 100371,
+          "sha256": "9e194b70b4a1e4fc83227f4a719a770b6619ece81511919c8c27fa3cb27cf2b5",
+          "git_blob_sha": "d1276ec5163df55d501857332fcaf0673293044f"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/silhouette-54x124.png",
+          "bytes": 4588,
+          "sha256": "70433cde00668faff6d73b3b0526717cf28dbb48cfb4ae77bafa34e35773127d",
+          "git_blob_sha": "eb8e7a97e908ab71d1162b770e60438563b715cf"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/slot-20x20-compat.png",
+          "bytes": 913,
+          "sha256": "0c38c28ce5228155d2342957310e43cb51894977363393d09c4234ffa0584990",
+          "git_blob_sha": "7f91b3fdbb556d1c60e0f61caae703d73a58e41b"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/slot-amulet.png",
+          "bytes": 2364,
+          "sha256": "48e545ecaf2e5fda23ffc24d9036f769bf7317536cad9543e6229fbaf722a0b1",
+          "git_blob_sha": "9f2a084c8135f1fcbd9bb6b0c47412fbfeedbac9"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/slot-body.png",
+          "bytes": 2539,
+          "sha256": "a06bdf125e1a07a53fb52d9e513ccaf8220ac6893c0b68adda5cc857576affff",
+          "git_blob_sha": "8c2dbca902dbd4a0d625e0150f7302a26dbb5731"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/slot-head.png",
+          "bytes": 2192,
+          "sha256": "4b3c27cbcd77037fa0ff2c3c6b79063c4efdd4676293c101860e589bcb7b0d5c",
+          "git_blob_sha": "7347826e63d3f4ce9334d0e6525f68b8fd98a2ce"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/slot-left_hand.png",
+          "bytes": 2560,
+          "sha256": "8d083986acfc317c44df4aa750e63495c60460508bd2ea5c75bfe8f5ac2bc750",
+          "git_blob_sha": "4789d5989d7d89786356e2fb65da65cef2424925"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/slot-right_hand.png",
+          "bytes": 2578,
+          "sha256": "a255d8c7c194942eb0411a901a246c649ac6a42f0ccd8fd10f6ae6f02098d503",
+          "git_blob_sha": "f5ea8559ca328b51e80d1244f471fad6189ef9c7"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/slot-ring_1.png",
+          "bytes": 1690,
+          "sha256": "6bfff96a55a5fedbdbd1bdff94d104cf587cc266d9a062bfb2e03a31707adf1a",
+          "git_blob_sha": "6f09d44113e46230ba6f591daab9be83777ccae7"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/slot-ring_2.png",
+          "bytes": 1680,
+          "sha256": "18e071a3e558375df496b96474eb6e38a54d1e61fb67041f375bd9d220d1db69",
+          "git_blob_sha": "60ee7e631786a951b822526b18d3fece667cb641"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/assets/title-equipment.png",
+          "bytes": 2372,
+          "sha256": "c5e8517443ae190590599a3fa2911219933637db6a558540863b3d9edc35a0ab",
+          "git_blob_sha": "33590bf3684f08bff11fd619a0217f2219e43328"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/build_kit.py",
+          "bytes": 5593,
+          "sha256": "2a98ab2b28f55eeca53de3b0692d6afd771c9827245c7bdbc293d487b333dde3",
+          "git_blob_sha": "b4096e6d9a9b56fa4ba1b60229e13b811de6358c"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/layout.json",
+          "bytes": 5163,
+          "sha256": "4891b304440d6c9fa875eb4f75cc1433a3fe5de6e0405aff28b9c63a22603b98",
+          "git_blob_sha": "9219b5babf4d317548123e7c2f85649caafcb529"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/previews/equipment-320x240.png",
+          "bytes": 103939,
+          "sha256": "c687ddef894e11d628d3ddf4897cc0622e01bd4850350ba851892054938e8831",
+          "git_blob_sha": "c7c2daf47f15c023efedf5711acda1ba7bdd867d"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/previews/equipment-preview-4x.png",
+          "bytes": 153695,
+          "sha256": "95101b7c2861ef65e9dbe2b9c6a1d68094ffab8f03d34de1758c0f904a63c62c",
+          "git_blob_sha": "47d2fa7ffa3d602b0c921d9d91ba249e5c92eb40"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/previews/silhouette-alpha-4x.png",
+          "bytes": 8639,
+          "sha256": "61599bff279881b3eeedb31f8fa1a61d02feb67656a8c240bef0ec4cd54adb32",
+          "git_blob_sha": "92df0c0ead320600a8001c8b068be1df040f528c"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/requirements-assets.txt",
+          "bytes": 15,
+          "sha256": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35",
+          "git_blob_sha": "e7cc6c178b542946a555ad07fa55b5dde3fca566"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/source/equipment-generated.png",
+          "bytes": 2178923,
+          "sha256": "3ad341516a6b5238a20244c7ad489c4db41daec214e9ff05bb0dc8efb3b6a81a",
+          "git_blob_sha": "be9e37df99f3355bbc8fcf03f345c610b7959057"
+        }
+      ]
+    },
+    {
+      "id": "seven-slot-equipment-v1-002",
+      "bytes": 2282075,
+      "sha256": "75c7d43ba4564f6b8e64575484509a4720e5404e3b30885197f717060c9f683b",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/seven-slot-equipment-v1.volume-002.zip",
+          "bytes": 2282075,
+          "sha256": "75c7d43ba4564f6b8e64575484509a4720e5404e3b30885197f717060c9f683b",
+          "git_blob_sha": "b7f67a9b99c0716d3469b139c320c7a5c73902ce"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/seven-slot-equipment-v1/source/equipment-pixel-refined.png",
+          "bytes": 1316416,
+          "sha256": "5ac42448c5531bdf501aa7cdeb56a7efec94c2a2125e9447e21b87c2fd6ee2dc",
+          "git_blob_sha": "f2760143c25f0bdc456da285a0512c53f8b00529"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/source/generation-prompts.json",
+          "bytes": 5076,
+          "sha256": "026bc1ce8780bdf034ac70f3135e613e2baa887f3983bcac9d8ba40b71616884",
+          "git_blob_sha": "bba6064428c975419a58cf804d7f1d83489fe843"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/source/panel-generated.png",
+          "bytes": 1411766,
+          "sha256": "e47a69191f6039822540bed9bd0ff0f42b35ce0dcd8a698f26e487044b3e8c26",
+          "git_blob_sha": "f5777418149490749955d07bbea869038ba371e5"
+        }
+      ]
+    },
+    {
+      "id": "seven-slot-equipment-v1-003",
+      "bytes": 657443,
+      "sha256": "9a15777170c135cd28565313899c17f3b75bccfc83bae36a84f5c389167f084a",
+      "parts": [
+        {
+          "number": 1,
+          "path": "art/kits/dreamscape-modular-v1/_archives/seven-slot-equipment-v1.volume-003.zip",
+          "bytes": 657443,
+          "sha256": "9a15777170c135cd28565313899c17f3b75bccfc83bae36a84f5c389167f084a",
+          "git_blob_sha": "02ee5840bf569eb75867a3488cbcad0a84a3ff87"
+        }
+      ],
+      "files": [
+        {
+          "path": "art/kits/seven-slot-equipment-v1/source/silhouette-clean-generated.png",
+          "bytes": 417111,
+          "sha256": "4e31c170ce95b51d1d6e2b50428f53a64a7941ad96818473aca4afc3e861bb47",
+          "git_blob_sha": "a8615a688c8d02f1b9f8838193962a90f40fba4f"
+        },
+        {
+          "path": "art/kits/seven-slot-equipment-v1/source/silhouette-generated.png",
+          "bytes": 426922,
+          "sha256": "770cc53041ae8a37780db36a7cf0d598dd885d9dc521e5beb3297e3df8fda38f",
+          "git_blob_sha": "76009a92d1e864435e2ba6035e35750652bd0924"
+        }
+      ]
+    }
+  ]
+}

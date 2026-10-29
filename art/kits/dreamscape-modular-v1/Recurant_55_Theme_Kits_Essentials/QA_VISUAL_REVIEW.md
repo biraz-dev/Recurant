@@ -1,0 +1,9 @@
+# Final static asset visual review
+
+All **54 new themes** have actual geometry renders at800×600 overview and320×240 native first-person resolution. All54 overview/native contact cells were inspected, with independent corroborating review; the pilot and strict one-bit theme were also inspected individually at full size. Current file hashes and per-theme review scope are recorded in `qa/visual-review-summary.json` and each `assembly/asset-validation.json`.
+
+Previously detected UV-role clamp streaks, coplanar floor/frame black bands and tiny doorway trim intrusions were repaired before this delivery. The final one-bit image pipeline preserves a visible paver route, doorway void, monoliths, pedestal and ring using actual geometry-derived contours plus binary Bayer conversion. Its GLB is unlit with binary textures, but contours/dithering are separate presentation passes and are not implemented in Recurant; ordinary viewers may look different.
+
+**Known visual limits:** these are deliberately small reusable diagnostic galleries, not complete concept-art worlds. Some pale/crystal themes lose fine detail under bright studio light; dense organic or engraved surfaces may shimmer during movement. Shared low-poly forms and composition remain apparent. Texture repeats are visually reviewed candidates, not pixel-edge-identical seamless certification. Camera-motion and target-device performance checks were not run.
+
+Asset tests cover actual buffer validity, normals/winding, uint16 indexing, identity nodes, embedded/external texture byte equality, exact relative references, explicit connected cardinal navigation and clear authoring lane guides. Independent review additionally checks actual triangle lane clearance and nine declared shared apertures. These are not a physics controller, a runtime import test or engine acceptance. Existing sandstone remains an explicit external preserved kit dependency, not a new copied asset collection.

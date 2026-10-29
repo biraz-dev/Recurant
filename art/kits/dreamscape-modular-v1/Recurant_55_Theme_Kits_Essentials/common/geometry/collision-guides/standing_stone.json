@@ -1,0 +1,20 @@
+{
+  "asset": "standing_stone",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        1.61,
+        0.0
+      ],
+      "size": [
+        0.9,
+        3.22,
+        0.8
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/standing_stone__GUIDE.glb"
+}

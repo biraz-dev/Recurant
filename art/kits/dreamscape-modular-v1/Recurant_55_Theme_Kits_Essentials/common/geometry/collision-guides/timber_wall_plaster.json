@@ -1,0 +1,20 @@
+{
+  "asset": "timber_wall_plaster",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        0.0,
+        2.0,
+        -0.0575
+      ],
+      "size": [
+        2.0,
+        4.0,
+        0.295
+      ]
+    }
+  ],
+  "clear_openings": [],
+  "preview_glb": "collision-guides/timber_wall_plaster__GUIDE.glb"
+}

@@ -1,0 +1,55 @@
+{
+  "asset": "masonry_doorway_pointed",
+  "mode": "authoring_guides_only",
+  "boxes": [
+    {
+      "center": [
+        -0.85,
+        2,
+        0
+      ],
+      "size": [
+        0.3,
+        4,
+        0.28
+      ]
+    },
+    {
+      "center": [
+        0.85,
+        2,
+        0
+      ],
+      "size": [
+        0.3,
+        4,
+        0.28
+      ]
+    },
+    {
+      "center": [
+        0,
+        3.75,
+        0
+      ],
+      "size": [
+        1.4,
+        0.5,
+        0.2
+      ]
+    }
+  ],
+  "clear_openings": [
+    {
+      "width_m": 1.4,
+      "height_m": 2.4,
+      "through_axis": "Z",
+      "center": [
+        0,
+        1.2,
+        0
+      ]
+    }
+  ],
+  "preview_glb": "collision-guides/masonry_doorway_pointed__GUIDE.glb"
+}
