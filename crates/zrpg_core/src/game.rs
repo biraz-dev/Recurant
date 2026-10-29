@@ -1168,8 +1168,11 @@ fn spawn_enemies(floor: &Floor, run_seed: u64, depth: u32) -> Vec<Enemy> {
 /// every kind that has turned up by that depth, so deeper floors mix the
 /// old with the new.
 fn kind_for(place: Place, depth: u32, roll: u64) -> EnemyKind {
-    if place == Place::Ruins {
-        return EnemyKind::Undead;
+    match place {
+        Place::Ruins => return EnemyKind::Undead,
+        // Pale things drift through the sanctum.
+        Place::Dream => return EnemyKind::Wraith,
+        Place::Dungeon => {}
     }
     let pool: Vec<EnemyKind> = EnemyKind::ALL
         .into_iter()
@@ -1626,11 +1629,12 @@ mod tests {
     #[test]
     fn randomized_runs_bring_stages_and_crowds() {
         let mut g = Game::new(5);
-        for _ in 0..13 {
+        // Floor 15: the dreamscape on floor 2 pushes the stages down one.
+        for _ in 0..14 {
             g.player.pos = g.floor.stairs;
             g.apply(Command::Descend, &mut Vec::new());
         }
-        assert_eq!(g.depth, 14);
+        assert_eq!(g.depth, 15);
         let stage = g.floor.stage.expect("generated floors belong to a stage");
         assert_eq!(stage.number, 4);
         assert!(g.enemies.len() >= 2, "deeper floors hold more enemies");
@@ -1897,6 +1901,13 @@ mod stairs_tests {
         assert_eq!(out, [Event::Descended { depth: 2 }]);
         assert_eq!(g.depth, 2);
         assert_eq!(g.player.pos, g.floor.start);
+        // Floor 2 is the dreamscape, with its two sentries; floor 3 is the
+        // first generated floor.
+        assert_eq!(g.floor.place, Place::Dream);
+        assert_eq!(g.enemies.len(), 2);
+        g.player.pos = g.floor.stairs;
+        g.apply(Command::Descend, &mut out);
+        assert_eq!(g.floor.place, Place::Dungeon);
         assert_eq!(g.enemies.len(), 1);
     }
 

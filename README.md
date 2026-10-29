@@ -138,6 +138,25 @@ The rules are in `zrpg_core::archery`; the arrow in the air is drawn from
 simple shapes in `crates/zrpg/src/archery.rs`; the bow, quiver and lying
 arrows are placeholder art from `tools/make_archery_art.py`.
 
+## Dreamscapes (in progress)
+
+The long-term world is surreal: contrasting places, assembled like a dream,
+from Bodai's Dreamscape modular kits (`art/kits/dreamscape-modular-v1`, 54
+themes plus the sandstone; read `MODULAR_ASSET_HANDOFF.md`, then extract
+with `python3 tools/extract_dreamscape_assets.py --with-sources`).
+
+The first, a vertical slice, is the **Mindglass Sanctum** on floor 2,
+between the sunlit ruins and the dungeon: dark violet stone and crystal, a
+corridor through a crystal arch, a colonnaded hall with exhibit alcoves,
+and a reliquary where an astral ring stands over the way down.
+`tools/make_dreamscape.py` lays it out from the kit's modules and writes
+the level, its four role textures and its map; it refuses to write unless
+the kit contract's checks pass (1.2 m lane and 2.4 m headroom clear on
+every walkable edge, doorways open, symmetric edges, every cell reachable,
+transforms baked, roles bound by name). `cargo run -p zrpg --example visit
+-- --depth 2 --calm` starts a run there. Runs saved before it keep their
+floor numbers (they have no dreamscape).
+
 ## The ruins and what lives below
 
 A run starts in sunlit sandstone ruins: a roofed corridor, an open junction,
@@ -243,6 +262,8 @@ ZRPG_SCRIPT="w e shot quit" cargo run        # scripted input + screenshot (zrpg
 cargo run -p zrpg --example sfx              # write every sound effect to target/sfx/
 cargo run -p zrpg --example bestiary         # parade every creature (--shots DIR saves stills)
 cargo run -p zrpg --example spellbook        # cast every spell at a row of creatures
+cargo run -p zrpg --example visit -- --depth 2  # start a run on any floor (the sanctum is 2)
+python3 tools/make_dreamscape.py             # Dreamscape kit -> assets/dream + zrpg_core/src/dream
 python3 tools/make_spell_art.py              # placeholder spell and potion art
 python3 tools/make_equipment_art.py          # placeholder equipment screen art
 python3 tools/make_archery_art.py            # placeholder bow, quiver and arrows

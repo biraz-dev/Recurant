@@ -102,11 +102,32 @@ impl Look {
         torch: crate::lighting::TORCH_COLOR,
     };
 
-    /// How a floor looks: the ruins, or a dungeon stage's own take on the
-    /// dark.
+    /// The Mindglass Sanctum: violet dusk indoors. Its crystals give most
+    /// of the light; the haze deepens to violet-black, colours drain toward
+    /// amethyst, and the eye is at the kit's tall-profile height (its
+    /// doorways need 2.4 m; a dungeon's 2 m would not do).
+    pub const SANCTUM: Look = Look {
+        sky: Color::srgb(0.045, 0.03, 0.075),
+        fog: FogFalloff::ExponentialSquared { density: 0.085 },
+        grade: DepthGradeUniform {
+            params: Vec4::new(3.0, 13.0, 0.5, 0.55),
+            tint: Vec4::new(0.95, 0.82, 1.18, 1.0),
+            dream: Vec4::ZERO,
+        },
+        ambient_color: Color::srgb(0.72, 0.62, 0.98),
+        ambient_brightness: 60.0,
+        view_distance: 18.0,
+        eye_height: 1.5 * crate::ruins::SCALE,
+        // The hand torch burns a little cooler here.
+        torch: Color::srgb(1.0, 0.86, 0.92),
+    };
+
+    /// How a floor looks: the ruins, the sanctum, or a dungeon stage's own
+    /// take on the dark.
     pub fn of(floor: &Floor) -> Look {
         match (floor.place, floor.stage) {
             (Place::Ruins, _) => Look::RUINS,
+            (Place::Dream, _) => Look::SANCTUM,
             (Place::Dungeon, Some(stage)) => Look::stage(stage.theme),
             (Place::Dungeon, None) => Look::DUNGEON,
         }

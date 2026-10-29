@@ -7,9 +7,10 @@
 //! or comes from an unknown version, is ignored rather than trusted.
 //! Version 2 added gold, version 3 six creature items, version 4 kept only
 //! the Health Potion, version 5 arrows (in the quiver, lying about and in
-//! the air), version 6 the psionic blade and spell missiles in the air;
-//! older saves still load, with what they lack left empty (and a full
-//! starting quiver).
+//! the air), version 6 the psionic blade and spell missiles in the air,
+//! version 7 whether the run passes through a dreamscape; older saves still
+//! load, with what they lack left empty (a full starting quiver, and no
+//! dreamscape, so their floors keep their numbers).
 
 use alloc::vec::Vec;
 
@@ -22,7 +23,8 @@ use crate::items::{Bag, Item};
 use crate::progression::{MAX_LEVEL, Perk, Perks};
 use crate::rng::Rng;
 
-const MAGIC: &[u8; 4] = b"ZRS6";
+const MAGIC: &[u8; 4] = b"ZRS7";
+const MAGIC_V6: &[u8; 4] = b"ZRS6";
 const MAGIC_V5: &[u8; 4] = b"ZRS5";
 const MAGIC_V4: &[u8; 4] = b"ZRS4";
 const MAGIC_V3: &[u8; 4] = b"ZRS3";
@@ -41,6 +43,7 @@ impl Game {
         put_u32(&mut w, self.depth);
         w.push(self.params.ruins_entrance as u8);
         w.push(self.params.randomize as u8);
+        w.push(self.params.dreams as u8);
         put_u64(&mut w, self.rng.state());
 
         let p = &self.player;
@@ -115,7 +118,8 @@ impl Game {
     pub fn load(bytes: &[u8]) -> Option<Game> {
         let mut r = Reader { bytes, at: 0 };
         let version = match r.take(4)? {
-            m if m == MAGIC => 6,
+            m if m == MAGIC => 7,
+            m if m == MAGIC_V6 => 6,
             m if m == MAGIC_V5 => 5,
             m if m == MAGIC_V4 => 4,
             m if m == MAGIC_V3 => 3,
@@ -131,6 +135,7 @@ impl Game {
         let mut game = Game::new(run_seed);
         game.params.ruins_entrance = r.u8()? != 0;
         game.params.randomize = r.u8()? != 0;
+        game.params.dreams = version >= 7 && r.u8()? != 0;
         game.depth = depth;
         game.floor = Floor::for_depth(run_seed, depth, &game.params);
         game.rng = Rng::new(r.u64()?);
@@ -327,7 +332,10 @@ mod tests {
 
     /// Play a while with the bot, banking level-ups.
     fn played(seed: u64, ticks: usize) -> Game {
-        let mut g = Game::new(seed);
+        played_from(Game::new(seed), ticks)
+    }
+
+    fn played_from(mut g: Game, ticks: usize) -> Game {
         let mut out = Vec::new();
         for _ in 0..ticks {
             if let Some(cmd) = crate::auto::next_command(&g) {
@@ -396,10 +404,17 @@ mod tests {
 
     #[test]
     fn version_1_saves_still_load() {
-        let g = played(5, 3000);
+        // A run from before dreamscapes.
+        let old = crate::GenParams {
+            dreams: false,
+            ..Default::default()
+        };
+        let g = played_from(Game::with_params(5, old), 3000);
         let mut v1 = g.save();
-        // Rewrite as version 1: old magic, no gold or drops after the perks.
+        // Rewrite as version 1: old magic, no dreamscape flag after the
+        // other two, no gold or drops after the perks.
         v1[..4].copy_from_slice(MAGIC_V1);
+        v1.remove(4 + 8 + 4 + 2);
         let perks_end = 4 + 8 + 4 + 2 + 8 + 4 * 2 + 1 + 4 * 5 + 4 * 2 + 4 + Perk::ALL.len();
         // Gold, the bag and the quiver, then the drops with their items
         // and arrows, then the arrows in the air.
@@ -411,5 +426,7 @@ mod tests {
         assert_eq!(back.player.gold, 0);
         assert!(back.drops.is_empty());
         assert_eq!(back.player.level, g.player.level);
+        // Saved before dreamscapes: its floors keep their numbers.
+        assert!(!back.params.dreams);
     }
 }

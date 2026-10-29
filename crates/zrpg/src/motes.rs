@@ -60,6 +60,16 @@ impl Air {
             twinkle: 1.5,
         };
         match (place, theme) {
+            // Slow violet sparkles hanging in the sanctum's dusk.
+            (Place::Dream, _) => Air {
+                count: 30,
+                color: [1.1, 0.75, 1.6],
+                opacity: 0.75,
+                size: 0.016,
+                flow: Vec3::new(0.0, 0.02, 0.0),
+                wander: 0.05,
+                twinkle: 1.2,
+            },
             (Place::Ruins, _) => Air {
                 count: 40,
                 color: [1.2, 1.15, 1.0],

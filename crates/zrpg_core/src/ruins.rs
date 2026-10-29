@@ -63,13 +63,35 @@ pub fn ground(p: GridPos) -> Ground {
 }
 
 pub fn floor() -> Floor {
-    let (w, h, lines) = rows();
+    let (map, start, stairs) = parse_map(MAP);
+    Floor {
+        map,
+        start,
+        start_facing: Facing::North,
+        stairs,
+        // Walking up to the statue: the steps lead down beneath it.
+        stairs_dir: Facing::North,
+        enemy_spawns: SENTRIES.to_vec(),
+        place: Place::Ruins,
+        stage: None,
+    }
+}
+
+/// A hand-built floor's map, in the format `tools/make_ruins.py` and
+/// `tools/make_dreamscape.py` write: comment lines, a size line, one row of
+/// cells per line, then one row of hex edge masks per line. Returns the map,
+/// the start and the way down.
+pub(crate) fn parse_map(text: &str) -> (Map, GridPos, GridPos) {
+    // Comments come first; map rows start with '#' too, so stop at the size.
+    let mut lines = text.lines().skip_while(|l| l.starts_with('#'));
+    let mut size = lines
+        .next()
+        .expect("map has a size line")
+        .split(' ')
+        .map(|n| n.parse::<i32>().expect("map size"));
+    let (w, h) = (size.next().unwrap(), size.next().unwrap());
     let lines: Vec<&str> = lines.collect();
-    assert_eq!(
-        lines.len(),
-        2 * h as usize,
-        "ruins.map: map then edge masks"
-    );
+    assert_eq!(lines.len(), 2 * h as usize, "map then edge masks");
     let mut map = Map::filled(w, h, Tile::Wall);
     let (mut start, mut stairs) = (None, None);
     for (y, row) in lines[..h as usize].iter().enumerate() {
@@ -93,7 +115,7 @@ pub fn floor() -> Floor {
     }
     for (y, row) in lines[h as usize..].iter().enumerate() {
         for (x, c) in row.chars().enumerate() {
-            let mask = c.to_digit(16).expect("ruins.map: hex edge mask");
+            let mask = c.to_digit(16).expect("hex edge mask");
             for dir in Facing::ALL {
                 if mask & (1 << dir as u8) != 0 {
                     map.block(GridPos::new(x as i32, y as i32), dir);
@@ -101,17 +123,11 @@ pub fn floor() -> Floor {
             }
         }
     }
-    Floor {
+    (
         map,
-        start: start.expect("ruins.map has a start"),
-        start_facing: Facing::North,
-        stairs: stairs.expect("ruins.map has a way down"),
-        // Walking up to the statue: the steps lead down beneath it.
-        stairs_dir: Facing::North,
-        enemy_spawns: SENTRIES.to_vec(),
-        place: Place::Ruins,
-        stage: None,
-    }
+        start.expect("map has a start"),
+        stairs.expect("map has a way down"),
+    )
 }
 
 #[cfg(test)]

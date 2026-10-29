@@ -18,22 +18,21 @@
 //! cards, no collision, clear of the cell centres you walk through); the
 //! pools drift; and a sky dome fades from the haze at the horizon to blue.
 
-use bevy::asset::RenderAssetUsages;
 use bevy::image::{ImageAddressMode, ImageFilterMode, ImageSampler, ImageSamplerDescriptor};
 use bevy::light::{CascadeShadowConfigBuilder, NotShadowCaster};
-use bevy::mesh::{Indices, PrimitiveTopology};
 use bevy::prelude::*;
 use zrpg_core::rng::mix64;
 use zrpg_core::ruins::{Ground, ground};
 use zrpg_core::{Facing, GridPos};
 
 use crate::atmosphere::{GradedMaterial, Look, untonemapped};
+use crate::kit_level::{self, MeshData};
 use crate::level::{cell_center, grid_dir};
 use crate::textures;
 use crate::view::PlayerCamera;
 
 /// Kit metres to game units: one 2 m kit cell is one game cell.
-pub const SCALE: f32 = 0.5;
+pub use crate::kit_level::SCALE;
 
 const LEVEL: &[u8] = include_bytes!("../assets/ruins/level.bin");
 const SANDSTONE: &[u8] = include_bytes!("../assets/ruins/sandstone.png");
@@ -359,70 +358,6 @@ impl Cards {
     }
 }
 
-/// Little-endian reader for `level.bin`.
-struct Reader<'a> {
-    bytes: &'a [u8],
-    at: usize,
-}
-
-impl Reader<'_> {
-    fn take(&mut self, n: usize) -> &[u8] {
-        let s = &self.bytes[self.at..self.at + n];
-        self.at += n;
-        s
-    }
-
-    fn u32(&mut self) -> u32 {
-        u32::from_le_bytes(self.take(4).try_into().unwrap())
-    }
-
-    fn f32s<const N: usize>(&mut self, count: usize) -> Vec<[f32; N]> {
-        (0..count)
-            .map(|_| core::array::from_fn(|_| f32::from_le_bytes(self.take(4).try_into().unwrap())))
-            .collect()
-    }
-
-    fn u16s(&mut self, count: usize) -> Vec<u16> {
-        let v = (0..count)
-            .map(|_| u16::from_le_bytes(self.take(2).try_into().unwrap()))
-            .collect();
-        // Index lists are padded to four bytes.
-        if count % 2 == 1 {
-            self.take(2);
-        }
-        v
-    }
-}
-
-struct Primitive {
-    slot: usize,
-    positions: Vec<[f32; 3]>,
-    normals: Vec<[f32; 3]>,
-    uvs: Vec<[f32; 2]>,
-    indices: Vec<u16>,
-}
-
-#[derive(Default)]
-struct MeshData {
-    positions: Vec<[f32; 3]>,
-    normals: Vec<[f32; 3]>,
-    uvs: Vec<[f32; 2]>,
-    indices: Vec<u32>,
-}
-
-impl MeshData {
-    fn into_mesh(self) -> Mesh {
-        Mesh::new(
-            PrimitiveTopology::TriangleList,
-            RenderAssetUsages::RENDER_WORLD,
-        )
-        .with_inserted_attribute(Mesh::ATTRIBUTE_POSITION, self.positions)
-        .with_inserted_attribute(Mesh::ATTRIBUTE_NORMAL, self.normals)
-        .with_inserted_attribute(Mesh::ATTRIBUTE_UV_0, self.uvs)
-        .with_inserted_indices(Indices::U32(self.indices))
-    }
-}
-
 /// What `level.bin` holds, ready to use.
 struct Parsed {
     /// One merged mesh per material.
@@ -431,67 +366,16 @@ struct Parsed {
     wall_faces: Vec<(GridPos, Facing)>,
 }
 
-/// Place every module instance and merge the lot by material.
+/// Place every module instance and merge the lot by material; some walls
+/// and columns, picked by a hash, are mossy.
 fn parse(bytes: &[u8]) -> Parsed {
-    let mut r = Reader { bytes, at: 0 };
-    assert_eq!(r.take(4), b"ZRL1", "ruins level.bin header");
-    let modules: Vec<Vec<Primitive>> = (0..r.u32())
-        .map(|_| {
-            (0..r.u32())
-                .map(|_| {
-                    let slot = r.u32() as usize;
-                    let n = r.u32() as usize;
-                    let positions = r.f32s::<3>(n);
-                    let normals = r.f32s::<3>(n);
-                    let uvs = r.f32s::<2>(n);
-                    let count = r.u32() as usize;
-                    Primitive {
-                        slot,
-                        positions,
-                        normals,
-                        uvs,
-                        indices: r.u16s(count),
-                    }
-                })
-                .collect()
-        })
-        .collect();
-
-    let mut out: Vec<MeshData> = (0..MESHES).map(|_| MeshData::default()).collect();
-    for i in 0..r.u32() {
-        let module = r.u32() as usize;
-        let mossy = (mix64(i as u64 ^ 0x6d05) % 1000) as f32 / 1000.0 < MOSSY_SHARE;
-        let [m] = r.f32s::<12>(1).try_into().unwrap();
-        let linear = Mat3::from_cols_slice(&m[..9]);
-        let translation = Vec3::from_slice(&m[9..]);
-        let normal_matrix = linear.inverse().transpose();
-        // A mirroring transform would turn faces inside out.
-        let flip = linear.determinant() < 0.0;
-        for prim in &modules[module] {
-            let slot_mesh = SLOT_MESH[prim.slot];
-            let mesh = &mut out[if mossy && slot_mesh == 0 {
-                MOSSY_MESH
-            } else {
-                slot_mesh
-            }];
-            let base = mesh.positions.len() as u32;
-            for ((p, n), uv) in prim.positions.iter().zip(&prim.normals).zip(&prim.uvs) {
-                let world = (linear * Vec3::from_array(*p) + translation) * SCALE;
-                mesh.positions.push(world.to_array());
-                mesh.normals.push(
-                    (normal_matrix * Vec3::from_array(*n))
-                        .normalize()
-                        .to_array(),
-                );
-                mesh.uvs.push(*uv);
-            }
-            for tri in prim.indices.chunks_exact(3) {
-                let [a, b, c] = [tri[0], tri[1], tri[2]].map(|i| base + i as u32);
-                mesh.indices
-                    .extend_from_slice(&if flip { [a, c, b] } else { [a, b, c] });
-            }
+    let (meshes, mut r) = kit_level::parse(bytes, MESHES, |slot, instance| {
+        let mossy = (mix64(instance as u64 ^ 0x6d05) % 1000) as f32 / 1000.0 < MOSSY_SHARE;
+        match SLOT_MESH[slot] {
+            0 if mossy => MOSSY_MESH,
+            mesh => mesh,
         }
-    }
+    });
     let wall_faces = (0..r.u32())
         .map(|_| {
             let x = r.u32() as i32;
@@ -499,9 +383,9 @@ fn parse(bytes: &[u8]) -> Parsed {
             (GridPos::new(x, y), Facing::ALL[r.u32() as usize])
         })
         .collect();
-    assert_eq!(r.at, bytes.len(), "ruins level.bin has trailing data");
+    assert!(r.is_done(), "ruins level.bin has trailing data");
     Parsed {
-        meshes: out.into_iter().map(MeshData::into_mesh).collect(),
+        meshes: meshes.into_iter().map(MeshData::into_mesh).collect(),
         wall_faces,
     }
 }

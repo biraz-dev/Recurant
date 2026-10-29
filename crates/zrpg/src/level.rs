@@ -20,6 +20,7 @@ use zrpg_core::{Facing, GridPos, Map, Place, Theme, Tile};
 
 use crate::Run;
 use crate::atmosphere::{GradedMaterial, graded};
+use crate::dreamscape::{self, DreamAssets};
 use crate::lighting::{self, TorchAssets};
 use crate::ruins::{self, RuinsAssets};
 use crate::textures::{self, Maps, env};
@@ -181,12 +182,13 @@ pub struct LevelPlugin;
 impl Plugin for LevelPlugin {
     fn build(&self, app: &mut App) {
         app.init_resource::<GroundHeights>()
-            .add_systems(Startup, (load_materials, ruins::load))
+            .add_systems(Startup, (load_materials, ruins::load, dreamscape::load))
             .add_systems(
                 Update,
                 (
                     rebuild_level,
-                    (ruins::animate_water, ruins::follow_sky).in_set(crate::Frame::Present),
+                    (ruins::animate_water, ruins::follow_sky, dreamscape::breathe)
+                        .in_set(crate::Frame::Present),
                 ),
             );
     }
@@ -303,6 +305,7 @@ fn rebuild_level(
     mats: Res<LevelMaterials>,
     torch_assets: Res<TorchAssets>,
     ruins_assets: Res<RuinsAssets>,
+    dream_assets: Res<DreamAssets>,
     mut ground: ResMut<GroundHeights>,
     mut meshes: ResMut<Assets<Mesh>>,
 ) {
@@ -334,6 +337,14 @@ fn rebuild_level(
             geo.add_stairs(run.floor.stairs, run.floor.stairs_dir);
             geo
         }
+        Place::Dream => {
+            // Level floors; the way down sinks into the reliquary floor, as
+            // in the ruins.
+            *ground = GroundHeights::default();
+            let mut geo = LevelGeometry::default();
+            geo.add_stairs(run.floor.stairs, run.floor.stairs_dir);
+            geo
+        }
     };
     commands
         .spawn((
@@ -345,8 +356,10 @@ fn rebuild_level(
             Visibility::default(),
         ))
         .with_children(|parent| {
-            if place == Place::Ruins {
-                ruins::spawn(parent, &ruins_assets);
+            match place {
+                Place::Ruins => ruins::spawn(parent, &ruins_assets),
+                Place::Dream => dreamscape::spawn(parent, &dream_assets),
+                Place::Dungeon => {}
             }
             let parts = geo
                 .walls

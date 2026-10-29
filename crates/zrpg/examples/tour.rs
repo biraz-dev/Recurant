@@ -1,4 +1,5 @@
-//! Visit the first floor of every stage, to see how each one looks:
+//! Visit the ruins, the dreamscape and the first floor of every stage, to
+//! see how each one looks:
 //! `cargo run -p zrpg --example tour`. On each floor you stand at the start
 //! looking down the longest open line; two pictures a second apart show
 //! what moves. With `--shots DIR`,
@@ -10,8 +11,9 @@ use bevy::render::view::screenshot::{Screenshot, save_to_disk};
 use zrpg::{Frame, GameEvent, Run};
 use zrpg_core::{Command, Facing, Tile};
 
-/// The floors to visit: the ruins, then the first floor of each stage.
-const DEPTHS: [u32; 7] = [1, 2, 6, 10, 14, 18, 22];
+/// The floors to visit: the ruins, the dreamscape, then the first floor of
+/// each stage.
+const DEPTHS: [u32; 8] = [1, 2, 3, 7, 11, 15, 19, 23];
 /// Seconds per floor, and when on each to take its two pictures.
 const STAY: f32 = 4.0;
 const SHOTS: [f32; 2] = [2.6, 3.6];

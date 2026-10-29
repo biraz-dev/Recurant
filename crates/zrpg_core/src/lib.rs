@@ -15,6 +15,7 @@ extern crate std;
 
 pub mod archery;
 pub mod auto;
+pub mod dream;
 pub mod dungeon;
 pub mod enemy;
 pub mod equipment;
