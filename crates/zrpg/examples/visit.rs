@@ -2,7 +2,8 @@
 //! visit -- --depth 2`. You arrive at the floor's start as if you had taken
 //! the stairs down to it; then it plays as usual (with `ZRPG_SCRIPT`, the
 //! scripted input drives it; see `script.rs`). `--calm` keeps the floor's
-//! residents asleep, for pictures. Never saves.
+//! residents asleep, for pictures. `--dream N` picks a run whose floor 2 is
+//! dream N (0 the sanctum, then the patchworks). Never saves.
 
 use bevy::prelude::*;
 use zrpg::{Frame, GameEvent, Run};
@@ -24,6 +25,13 @@ fn main() {
     };
     let depth = value("--depth").and_then(|d| d.parse().ok()).unwrap_or(2);
     let calm = args.iter().any(|a| a == "--calm");
+    if let Some(dream) = value("--dream").and_then(|d| d.parse::<u8>().ok()) {
+        let seed = (0..100_000u64)
+            .find(|&s| zrpg_core::dream::pick(s, 0) == dream)
+            .expect("some run dreams it first");
+        // Safety: nothing else is running yet.
+        unsafe { std::env::set_var("ZRPG_SEED", seed.to_string()) };
+    }
     let mut app = zrpg::app_unsaved();
     app.insert_resource(Visit {
         depth,

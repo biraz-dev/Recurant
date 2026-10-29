@@ -8,14 +8,15 @@
 //! Version 2 added gold, version 3 six creature items, version 4 kept only
 //! the Health Potion, version 5 arrows (in the quiver, lying about and in
 //! the air), version 6 the psionic blade and spell missiles in the air,
-//! version 7 whether the run passes through a dreamscape; older saves still
-//! load, with what they lack left empty (a full starting quiver, and no
-//! dreamscape, so their floors keep their numbers).
+//! version 7 which dream floors the run passes through (0 none, 1 the
+//! sanctum on floor 2, 2 interludes); older saves still load, with what they
+//! lack left empty (a full starting quiver, and no dreams, so their floors
+//! keep their numbers).
 
 use alloc::vec::Vec;
 
 use crate::archery::{Flight, Missile, tuning as arrow_tuning};
-use crate::dungeon::Floor;
+use crate::dungeon::{Dreams, Floor};
 use crate::enemy::{Enemy, EnemyKind, EnemyState};
 use crate::game::{Drop, Game, Player};
 use crate::grid::{Facing, GridPos};
@@ -43,7 +44,7 @@ impl Game {
         put_u32(&mut w, self.depth);
         w.push(self.params.ruins_entrance as u8);
         w.push(self.params.randomize as u8);
-        w.push(self.params.dreams as u8);
+        w.push(self.params.dreams.to_byte());
         put_u64(&mut w, self.rng.state());
 
         let p = &self.player;
@@ -135,7 +136,11 @@ impl Game {
         let mut game = Game::new(run_seed);
         game.params.ruins_entrance = r.u8()? != 0;
         game.params.randomize = r.u8()? != 0;
-        game.params.dreams = version >= 7 && r.u8()? != 0;
+        game.params.dreams = if version >= 7 {
+            Dreams::from_byte(r.u8()?)?
+        } else {
+            Dreams::Off
+        };
         game.depth = depth;
         game.floor = Floor::for_depth(run_seed, depth, &game.params);
         game.rng = Rng::new(r.u64()?);
@@ -406,7 +411,7 @@ mod tests {
     fn version_1_saves_still_load() {
         // A run from before dreamscapes.
         let old = crate::GenParams {
-            dreams: false,
+            dreams: crate::Dreams::Off,
             ..Default::default()
         };
         let g = played_from(Game::with_params(5, old), 3000);
@@ -427,6 +432,6 @@ mod tests {
         assert!(back.drops.is_empty());
         assert_eq!(back.player.level, g.player.level);
         // Saved before dreamscapes: its floors keep their numbers.
-        assert!(!back.params.dreams);
+        assert_eq!(back.params.dreams, crate::Dreams::Off);
     }
 }

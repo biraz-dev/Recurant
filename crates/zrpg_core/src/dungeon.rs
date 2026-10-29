@@ -21,10 +21,8 @@ pub struct GenParams {
     /// Start the run in the sandstone ruins (see `ruins.rs`) instead of a
     /// generated floor.
     pub ruins_entrance: bool,
-    /// Floor 2 is a dreamscape (see `dream.rs`); generated floors follow.
-    /// Off for runs saved before dreamscapes, so their floors keep their
-    /// numbers.
-    pub dreams: bool,
+    /// Which dream floors the run passes through (see `dream.rs`).
+    pub dreams: Dreams,
     /// Vary each floor's size and population with depth, and group floors
     /// into themed stages (see `stage.rs`).
     pub randomize: bool,
@@ -40,7 +38,7 @@ impl Default for GenParams {
             room_max: 4,
             enemies: 1,
             ruins_entrance: true,
-            dreams: true,
+            dreams: Dreams::Interludes,
             randomize: true,
         }
     }
@@ -68,14 +66,78 @@ impl Room {
     }
 }
 
+/// Which dream floors a run passes through. Runs keep the arrangement they
+/// were saved with, so their floors keep their numbers.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Dreams {
+    /// None: runs saved before dreamscapes.
+    Off,
+    /// The Mindglass Sanctum on floor 2, and no other: runs saved while it
+    /// was the only one.
+    Sanctum,
+    /// A dream on floor 2 and between every two stages, each drawn for the
+    /// run.
+    Interludes,
+}
+
+impl Dreams {
+    pub fn to_byte(self) -> u8 {
+        match self {
+            Dreams::Off => 0,
+            Dreams::Sanctum => 1,
+            Dreams::Interludes => 2,
+        }
+    }
+
+    pub fn from_byte(b: u8) -> Option<Dreams> {
+        [Dreams::Off, Dreams::Sanctum, Dreams::Interludes]
+            .get(b as usize)
+            .copied()
+    }
+}
+
+/// What floor `depth` of a run is.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Slot {
+    Ruins,
+    /// A run's `n`th dream (0 on floor 2).
+    Dream(u32),
+    /// A generated floor, numbered as it would be with no dreams.
+    Generated(u32),
+}
+
+/// How a run's floors fall: the ruins first (with `ruins_entrance`); then,
+/// with interludes, a dream every fifth floor from 2, one between every two
+/// four-floor stages; generated floors fill the rest, keeping the numbers
+/// (and so the stages) they would have had without the dreams.
+pub fn slot(depth: u32, params: &GenParams) -> Slot {
+    if depth == 1 && params.ruins_entrance {
+        return Slot::Ruins;
+    }
+    match params.dreams {
+        Dreams::Off => Slot::Generated(depth),
+        Dreams::Sanctum if depth == 2 => Slot::Dream(0),
+        Dreams::Sanctum => Slot::Generated(if depth > 2 { depth - 1 } else { depth }),
+        Dreams::Interludes if depth < 2 => Slot::Generated(depth),
+        Dreams::Interludes => {
+            let k = depth - 2;
+            if k.is_multiple_of(stage::FLOORS_PER_STAGE + 1) {
+                Slot::Dream(k / (stage::FLOORS_PER_STAGE + 1))
+            } else {
+                Slot::Generated(depth - (k / (stage::FLOORS_PER_STAGE + 1) + 1))
+            }
+        }
+    }
+}
+
 /// Where a floor is: the front-end dresses each differently.
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
 pub enum Place {
     #[default]
     Dungeon,
     Ruins,
-    /// A dreamscape (see `dream.rs`).
-    Dream,
+    /// A dream floor (see `dream.rs`).
+    Dream(crate::dream::DreamId),
 }
 
 /// One dungeon floor.
@@ -97,20 +159,13 @@ pub struct Floor {
 
 impl Floor {
     /// Floor `depth` of the run identified by `run_seed`. Same inputs, same
-    /// floor. With `ruins_entrance`, floor 1 is the ruins; with `dreams`,
-    /// floor 2 is the dreamscape, and the generated floors after it are
-    /// the ones the run would otherwise have had from floor 2 on.
+    /// floor. See [`slot`] for which floors are the ruins and the dreams.
     pub fn for_depth(run_seed: u64, depth: u32, params: &GenParams) -> Floor {
-        if depth == 1 && params.ruins_entrance {
-            return crate::ruins::floor();
-        }
-        if depth == 2 && params.dreams {
-            return crate::dream::floor();
-        }
-        let depth = if params.dreams && depth > 2 {
-            depth - 1
-        } else {
-            depth
+        let depth = match slot(depth, params) {
+            Slot::Ruins => return crate::ruins::floor(),
+            Slot::Dream(_) if params.dreams == Dreams::Sanctum => return crate::dream::sanctum(),
+            Slot::Dream(n) => return crate::dream::floor(crate::dream::pick(run_seed, n)),
+            Slot::Generated(d) => d,
         };
         let seed = mix64(run_seed ^ mix64(depth as u64 + 1));
         if !params.randomize {

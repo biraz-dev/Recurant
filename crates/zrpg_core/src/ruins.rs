@@ -63,7 +63,7 @@ pub fn ground(p: GridPos) -> Ground {
 }
 
 pub fn floor() -> Floor {
-    let (map, start, stairs) = parse_map(MAP);
+    let (map, start, stairs, _) = parse_map(MAP);
     Floor {
         map,
         start,
@@ -78,10 +78,11 @@ pub fn floor() -> Floor {
 }
 
 /// A hand-built floor's map, in the format `tools/make_ruins.py` and
-/// `tools/make_dreamscape.py` write: comment lines, a size line, one row of
-/// cells per line, then one row of hex edge masks per line. Returns the map,
-/// the start and the way down.
-pub(crate) fn parse_map(text: &str) -> (Map, GridPos, GridPos) {
+/// `tools/make_dreamscape.py` and `tools/make_patchwork.py` write: comment
+/// lines, a size line, one row of cells per line, then one row of hex edge
+/// masks per line. Returns the map, the start, the way down, and where
+/// sentries wait (`e` cells, if any).
+pub(crate) fn parse_map(text: &str) -> (Map, GridPos, GridPos, Vec<GridPos>) {
     // Comments come first; map rows start with '#' too, so stop at the size.
     let mut lines = text.lines().skip_while(|l| l.starts_with('#'));
     let mut size = lines
@@ -93,7 +94,7 @@ pub(crate) fn parse_map(text: &str) -> (Map, GridPos, GridPos) {
     let lines: Vec<&str> = lines.collect();
     assert_eq!(lines.len(), 2 * h as usize, "map then edge masks");
     let mut map = Map::filled(w, h, Tile::Wall);
-    let (mut start, mut stairs) = (None, None);
+    let (mut start, mut stairs, mut sentries) = (None, None, Vec::new());
     for (y, row) in lines[..h as usize].iter().enumerate() {
         for (x, c) in row.chars().enumerate() {
             let p = GridPos::new(x as i32, y as i32);
@@ -101,6 +102,7 @@ pub(crate) fn parse_map(text: &str) -> (Map, GridPos, GridPos) {
                 '#' => continue,
                 'S' => start = Some(p),
                 '>' => stairs = Some(p),
+                'e' => sentries.push(p),
                 _ => {}
             }
             map.set(
@@ -127,6 +129,7 @@ pub(crate) fn parse_map(text: &str) -> (Map, GridPos, GridPos) {
         map,
         start.expect("map has a start"),
         stairs.expect("map has a way down"),
+        sentries,
     )
 }
 

@@ -187,7 +187,12 @@ impl Plugin for LevelPlugin {
                 Update,
                 (
                     rebuild_level,
-                    (ruins::animate_water, ruins::follow_sky, dreamscape::breathe)
+                    (
+                        ruins::animate_water,
+                        ruins::follow_sky,
+                        dreamscape::breathe,
+                        dreamscape::thresholds.after(crate::atmosphere::apply_look),
+                    )
                         .in_set(crate::Frame::Present),
                 ),
             );
@@ -337,7 +342,7 @@ fn rebuild_level(
             geo.add_stairs(run.floor.stairs, run.floor.stairs_dir);
             geo
         }
-        Place::Dream => {
+        Place::Dream(_) => {
             // Level floors; the way down sinks into the reliquary floor, as
             // in the ruins.
             *ground = GroundHeights::default();
@@ -346,6 +351,15 @@ fn rebuild_level(
             geo
         }
     };
+    let mut dream = match place {
+        Place::Dream(id) => Some(dreamscape::build(id, &dream_assets, &mut meshes)),
+        _ => None,
+    };
+    // A patchwork tells the thresholds which room every cell is in.
+    match dream.as_mut().and_then(|d| d.cells.take()) {
+        Some(cells) => commands.insert_resource(cells),
+        None => commands.remove_resource::<dreamscape::DreamCells>(),
+    }
     commands
         .spawn((
             LevelRoot {
@@ -356,10 +370,10 @@ fn rebuild_level(
             Visibility::default(),
         ))
         .with_children(|parent| {
-            match place {
-                Place::Ruins => ruins::spawn(parent, &ruins_assets),
-                Place::Dream => dreamscape::spawn(parent, &dream_assets),
-                Place::Dungeon => {}
+            match (&place, &dream) {
+                (Place::Ruins, _) => ruins::spawn(parent, &ruins_assets),
+                (Place::Dream(_), Some(built)) => dreamscape::spawn(parent, built),
+                _ => {}
             }
             let parts = geo
                 .walls

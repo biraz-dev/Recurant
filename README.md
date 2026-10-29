@@ -138,24 +138,40 @@ The rules are in `zrpg_core::archery`; the arrow in the air is drawn from
 simple shapes in `crates/zrpg/src/archery.rs`; the bow, quiver and lying
 arrows are placeholder art from `tools/make_archery_art.py`.
 
-## Dreamscapes (in progress)
+## Dreams
 
-The long-term world is surreal: contrasting places, assembled like a dream,
-from Bodai's Dreamscape modular kits (`art/kits/dreamscape-modular-v1`, 54
-themes plus the sandstone; read `MODULAR_ASSET_HANDOFF.md`, then extract
-with `python3 tools/extract_dreamscape_assets.py --with-sources`).
+The run passes through dreams: floor 2, and one between every two stages
+(floors 7, 12, 17...). Each is built from Bodai's Dreamscape modular kits
+(`art/kits/dreamscape-modular-v1`, 54 themes plus the sandstone; read
+`MODULAR_ASSET_HANDOFF.md`, then extract with
+`python3 tools/extract_dreamscape_assets.py --with-sources`).
 
-The first, a vertical slice, is the **Mindglass Sanctum** on floor 2,
-between the sunlit ruins and the dungeon: dark violet stone and crystal, a
-corridor through a crystal arch, a colonnaded hall with exhibit alcoves,
-and a reliquary where an astral ring stands over the way down.
-`tools/make_dreamscape.py` lays it out from the kit's modules and writes
-the level, its four role textures and its map; it refuses to write unless
-the kit contract's checks pass (1.2 m lane and 2.4 m headroom clear on
-every walkable edge, doorways open, symmetric edges, every cell reachable,
-transforms baked, roles bound by name). `cargo run -p zrpg --example visit
--- --depth 2 --calm` starts a run there. Runs saved before it keep their
-floor numbers (they have no dreamscape).
+Most are **patchworks**: rooms from contrasting kits (tatami house, toy
+world, clockwork, sunflower sanctuary, aquatic laboratory, golden plains,
+the mindglass sanctum and more) chained through ordinary doorways.
+
+- Crossing a threshold, the haze, the sky colour and the light ease into
+  the next room's own.
+- Now and then an exhibit has strayed in from another kit entirely: a
+  clockwork console in the crypt, a crystal obelisk on the plains.
+- On longer floors a room you passed comes back later, the same, but with
+  one thing changed.
+- Each run shuffles every dream and takes them in turn, so no two runs
+  dream alike and none repeats until a run has seen them all.
+
+One is hand-laid from a single kit: the **Mindglass Sanctum**, dark violet
+stone and crystal, where an astral ring stands over the way down.
+
+`tools/make_patchwork.py` builds the patchworks (and `make_dreamscape.py`
+the sanctum) from the kits' modules, following their contract: metres and
+pivots as authored, materials bound by role name (organic modules take
+the stone, bark or leaf surface that fits, with their UVs rebound), and
+walkability from the layout, never the meshes. Nothing is written unless
+every floor passes: the 1.2 m lane with 2.4 m headroom clear on every
+walkable edge (doorways open), every cell reachable, symmetric edges, and
+no more than 45k triangles. `cargo run -p zrpg --example visit -- --depth 2
+--dream N` starts a run in dream N (0 is the sanctum). Runs saved before
+the dreams keep their floor numbers.
 
 ## The ruins and what lives below
 
@@ -263,7 +279,8 @@ cargo run -p zrpg --example sfx              # write every sound effect to targe
 cargo run -p zrpg --example bestiary         # parade every creature (--shots DIR saves stills)
 cargo run -p zrpg --example spellbook        # cast every spell at a row of creatures
 cargo run -p zrpg --example visit -- --depth 2  # start a run on any floor (the sanctum is 2)
-python3 tools/make_dreamscape.py             # Dreamscape kit -> assets/dream + zrpg_core/src/dream
+python3 tools/make_dreamscape.py             # Dreamscape kit -> the Mindglass Sanctum
+python3 tools/make_patchwork.py              # Dreamscape kits -> the patchwork dreams
 python3 tools/make_spell_art.py              # placeholder spell and potion art
 python3 tools/make_equipment_art.py          # placeholder equipment screen art
 python3 tools/make_archery_art.py            # placeholder bow, quiver and arrows

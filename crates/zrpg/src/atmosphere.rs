@@ -127,7 +127,9 @@ impl Look {
     pub fn of(floor: &Floor) -> Look {
         match (floor.place, floor.stage) {
             (Place::Ruins, _) => Look::RUINS,
-            (Place::Dream, _) => Look::SANCTUM,
+            // Patchworks start from the sanctum's look; their rooms' own air
+            // is blended in as you walk (`dreamscape::thresholds`).
+            (Place::Dream(_), _) => Look::SANCTUM,
             (Place::Dungeon, Some(stage)) => Look::stage(stage.theme),
             (Place::Dungeon, None) => Look::DUNGEON,
         }
@@ -196,6 +198,11 @@ impl Look {
         untonemapped(self.sky)
     }
 
+    /// Set the colour distance drains toward.
+    pub fn set_tint(&mut self, tint: Vec3) {
+        self.grade.tint = tint.extend(1.0);
+    }
+
     /// Wrap a standard material in this place's depth grading.
     pub fn graded(&self, base: StandardMaterial) -> GradedMaterial {
         GradedMaterial {
@@ -226,7 +233,7 @@ impl Plugin for AtmospherePlugin {
 }
 
 /// Dress the camera for the place the player is in, whenever that changes.
-fn apply_look(
+pub(crate) fn apply_look(
     run: Res<Run>,
     mut current: Local<Option<(Place, Option<Theme>)>>,
     mut cams: Query<

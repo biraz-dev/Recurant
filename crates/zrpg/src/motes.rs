@@ -61,7 +61,7 @@ impl Air {
         };
         match (place, theme) {
             // Slow violet sparkles hanging in the sanctum's dusk.
-            (Place::Dream, _) => Air {
+            (Place::Dream(_), _) => Air {
                 count: 30,
                 color: [1.1, 0.75, 1.6],
                 opacity: 0.75,

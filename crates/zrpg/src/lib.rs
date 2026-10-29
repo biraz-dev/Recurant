@@ -10,6 +10,7 @@ mod atmosphere;
 mod audio;
 mod auto;
 mod automap;
+mod dream_pool;
 mod dreamscape;
 mod enemies;
 mod equipment;

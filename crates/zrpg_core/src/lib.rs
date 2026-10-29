@@ -31,7 +31,7 @@ pub mod spells;
 pub mod stage;
 
 pub use archery::Flight;
-pub use dungeon::{Floor, GenParams, Place};
+pub use dungeon::{Dreams, Floor, GenParams, Place};
 pub use enemy::{Enemy, EnemyId, EnemyKind, EnemyState};
 pub use equipment::{Equipment, Gear, Slot};
 pub use game::{Command, Drop, Event, Game, Player};

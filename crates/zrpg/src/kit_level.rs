@@ -84,49 +84,57 @@ impl MeshData {
     }
 }
 
-/// Read the modules and place every instance, merging into `meshes` meshes:
-/// `pick(slot, instance)` says which one each primitive joins. Returns them
-/// and the reader, at the caller's trailing section.
-pub fn parse(
-    bytes: &[u8],
-    meshes: usize,
-    pick: impl Fn(usize, u32) -> usize,
-) -> (Vec<MeshData>, Reader<'_>) {
-    let mut r = Reader { bytes, at: 0 };
-    assert_eq!(r.take(4), b"ZRL1", "level.bin header");
-    let modules: Vec<Vec<Primitive>> = (0..r.u32())
-        .map(|_| {
-            (0..r.u32())
-                .map(|_| {
-                    let slot = r.u32() as usize;
-                    let n = r.u32() as usize;
-                    let positions = r.f32s::<3>(n);
-                    let normals = r.f32s::<3>(n);
-                    let uvs = r.f32s::<2>(n);
-                    let count = r.u32() as usize;
-                    Primitive {
-                        slot,
-                        positions,
-                        normals,
-                        uvs,
-                        indices: r.u16s(count),
-                    }
-                })
-                .collect()
-        })
-        .collect();
+/// A module's primitives, ready to place.
+pub struct Module(Vec<Primitive>);
 
-    let mut out: Vec<MeshData> = (0..meshes).map(|_| MeshData::default()).collect();
-    for i in 0..r.u32() {
-        let module = r.u32() as usize;
-        let [m] = r.f32s::<12>(1).try_into().unwrap();
-        let linear = Mat3::from_cols_slice(&m[..9]);
-        let translation = Vec3::from_slice(&m[9..]);
+fn read_modules(r: &mut Reader) -> Vec<Module> {
+    (0..r.u32())
+        .map(|_| {
+            Module(
+                (0..r.u32())
+                    .map(|_| {
+                        let slot = r.u32() as usize;
+                        let n = r.u32() as usize;
+                        let positions = r.f32s::<3>(n);
+                        let normals = r.f32s::<3>(n);
+                        let uvs = r.f32s::<2>(n);
+                        let count = r.u32() as usize;
+                        Primitive {
+                            slot,
+                            positions,
+                            normals,
+                            uvs,
+                            indices: r.u16s(count),
+                        }
+                    })
+                    .collect(),
+            )
+        })
+        .collect()
+}
+
+/// Read one placement: the module, then its 3x3 linear part by columns
+/// and its translation, in kit metres.
+fn read_placement(r: &mut Reader) -> (Mat3, Vec3) {
+    let [m] = r.f32s::<12>(1).try_into().unwrap();
+    (Mat3::from_cols_slice(&m[..9]), Vec3::from_slice(&m[9..]))
+}
+
+impl Module {
+    /// Bake this module, placed by `linear` and `translation`, into the
+    /// meshes `pick(slot)` chooses.
+    fn bake(
+        &self,
+        linear: Mat3,
+        translation: Vec3,
+        out: &mut [MeshData],
+        pick: impl Fn(usize) -> usize,
+    ) {
         let normal_matrix = linear.inverse().transpose();
         // A mirroring transform would turn faces inside out.
         let flip = linear.determinant() < 0.0;
-        for prim in &modules[module] {
-            let mesh = &mut out[pick(prim.slot, i)];
+        for prim in &self.0 {
+            let mesh = &mut out[pick(prim.slot)];
             let base = mesh.positions.len() as u32;
             for ((p, n), uv) in prim.positions.iter().zip(&prim.normals).zip(&prim.uvs) {
                 let world = (linear * Vec3::from_array(*p) + translation) * SCALE;
@@ -145,5 +153,65 @@ pub fn parse(
             }
         }
     }
+}
+
+/// Read the modules and place every instance, merging into `meshes` meshes:
+/// `pick(slot, instance)` says which one each primitive joins. Returns them
+/// and the reader, at the caller's trailing section.
+pub fn parse(
+    bytes: &[u8],
+    meshes: usize,
+    pick: impl Fn(usize, u32) -> usize,
+) -> (Vec<MeshData>, Reader<'_>) {
+    let mut r = Reader { bytes, at: 0 };
+    assert_eq!(r.take(4), b"ZRL1", "level.bin header");
+    let modules = read_modules(&mut r);
+    let mut out: Vec<MeshData> = (0..meshes).map(|_| MeshData::default()).collect();
+    for i in 0..r.u32() {
+        let module = r.u32() as usize;
+        let (linear, translation) = read_placement(&mut r);
+        modules[module].bake(linear, translation, &mut out, |slot| pick(slot, i));
+    }
     (out, r)
+}
+
+/// A library of modules shared by several floors (`modules.bin`, written by
+/// `tools/make_patchwork.py`): each module once per material remap.
+pub struct Library(Vec<Module>);
+
+impl Library {
+    pub fn parse(bytes: &[u8]) -> Library {
+        let mut r = Reader { bytes, at: 0 };
+        assert_eq!(r.take(4), b"ZRM1", "modules.bin header");
+        let modules = read_modules(&mut r);
+        assert!(r.is_done(), "modules.bin has trailing data");
+        Library(modules)
+    }
+
+    /// Place a floor's instances (a `floor_NN.bin`: each a library module,
+    /// its theme, and its placement), merging into `themes` x 4 meshes, one
+    /// per theme and role. Returns them and the reader, at the floor's
+    /// lights.
+    pub fn place<'a>(&self, floor: &'a [u8], themes: usize) -> (Vec<MeshData>, Reader<'a>) {
+        let mut r = Reader {
+            bytes: floor,
+            at: 0,
+        };
+        assert_eq!(r.take(4), b"ZRV1", "dream floor header");
+        let mut out: Vec<MeshData> = (0..themes * 4).map(|_| MeshData::default()).collect();
+        for _ in 0..r.u32() {
+            let module = r.u32() as usize;
+            let theme = r.u32() as usize;
+            let (linear, translation) = read_placement(&mut r);
+            self.0[module].bake(linear, translation, &mut out, |slot| theme * 4 + slot);
+        }
+        (out, r)
+    }
+}
+
+/// Read bytes as they come: for the caller's trailing sections.
+impl Reader<'_> {
+    pub fn bytes(&mut self, n: usize) -> &[u8] {
+        self.take(n)
+    }
 }
